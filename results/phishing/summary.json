@@ -1,0 +1,177 @@
+{
+  "n": 2000,
+  "metrics": {
+    "jev": {
+      "correct": 1251,
+      "n": 2000,
+      "accuracy": 0.6255,
+      "phishing_recall": 0.428,
+      "false_positive_rate": 0.177
+    },
+    "qwen": {
+      "correct": 1320,
+      "n": 2000,
+      "accuracy": 0.66,
+      "phishing_recall": 0.369,
+      "false_positive_rate": 0.049
+    },
+    "qwen_rotated": {
+      "correct": 1330,
+      "n": 2000,
+      "accuracy": 0.665,
+      "phishing_recall": 0.376,
+      "false_positive_rate": 0.046
+    },
+    "clm_2k": {
+      "correct": 1212,
+      "n": 2000,
+      "accuracy": 0.606,
+      "phishing_recall": 0.947,
+      "false_positive_rate": 0.735
+    },
+    "url_host_rule": {
+      "correct": 1833,
+      "n": 2000,
+      "accuracy": 0.9165,
+      "phishing_recall": 0.835,
+      "false_positive_rate": 0.002
+    }
+  },
+  "paired": {
+    "jev_vs_qwen_rotated": {
+      "jev_only": 160,
+      "qwen_rotated_only": 239
+    },
+    "jev_vs_clm_2k": {
+      "jev_only": 630,
+      "clm_2k_only": 591
+    },
+    "qwen_rotated_vs_clm_2k": {
+      "qwen_rotated_only": 712,
+      "clm_2k_only": 594
+    }
+  },
+  "by_url_category": {
+    "cross_domain_legitimate": {
+      "n": 333,
+      "phishing": 0,
+      "correct": {
+        "jev": 186,
+        "qwen": 331,
+        "qwen_rotated": 333,
+        "clm_2k": 109,
+        "url_host_rule": 333
+      }
+    },
+    "firebase": {
+      "n": 101,
+      "phishing": 101,
+      "correct": {
+        "jev": 45,
+        "qwen": 52,
+        "qwen_rotated": 56,
+        "clm_2k": 92,
+        "url_host_rule": 101
+      }
+    },
+    "github_pages": {
+      "n": 227,
+      "phishing": 227,
+      "correct": {
+        "jev": 37,
+        "qwen": 40,
+        "qwen_rotated": 42,
+        "clm_2k": 214,
+        "url_host_rule": 227
+      }
+    },
+    "google_docs": {
+      "n": 196,
+      "phishing": 196,
+      "correct": {
+        "jev": 3,
+        "qwen": 6,
+        "qwen_rotated": 4,
+        "clm_2k": 192,
+        "url_host_rule": 196
+      }
+    },
+    "hosting_platform": {
+      "n": 17,
+      "phishing": 17,
+      "correct": {
+        "jev": 17,
+        "qwen": 16,
+        "qwen_rotated": 16,
+        "clm_2k": 17,
+        "url_host_rule": 17
+      }
+    },
+    "ipfs": {
+      "n": 102,
+      "phishing": 102,
+      "correct": {
+        "jev": 58,
+        "qwen": 69,
+        "qwen_rotated": 70,
+        "clm_2k": 101,
+        "url_host_rule": 88
+      }
+    },
+    "legitimate": {
+      "n": 667,
+      "phishing": 0,
+      "correct": {
+        "jev": 637,
+        "qwen": 620,
+        "qwen_rotated": 621,
+        "clm_2k": 156,
+        "url_host_rule": 665
+      }
+    },
+    "other_https": {
+      "n": 13,
+      "phishing": 13,
+      "correct": {
+        "jev": 7,
+        "qwen": 7,
+        "qwen_rotated": 7,
+        "clm_2k": 6,
+        "url_host_rule": 11
+      }
+    },
+    "short_clean_https": {
+      "n": 190,
+      "phishing": 190,
+      "correct": {
+        "jev": 161,
+        "qwen": 84,
+        "qwen_rotated": 87,
+        "clm_2k": 184,
+        "url_host_rule": 91
+      }
+    },
+    "url_shortener": {
+      "n": 154,
+      "phishing": 154,
+      "correct": {
+        "jev": 100,
+        "qwen": 95,
+        "qwen_rotated": 94,
+        "clm_2k": 141,
+        "url_host_rule": 104
+      }
+    }
+  },
+  "model_versions": [
+    "jev-1.13.0"
+  ],
+  "latency_s": {
+    "jev_median": 0.336340120062232,
+    "qwen_median": 0.03348059020936489,
+    "qwen_rotated_median": 0.06683050654828548,
+    "clm_median": 0.10050950944423676
+  },
+  "jev_input_tokens": 1094888,
+  "clm_truncated_states": 0
+}
