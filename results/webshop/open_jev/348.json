@@ -1,0 +1,198 @@
+{
+  "task_id": 348,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i'd like to find a king-sized faux lather platform bed in the camel color, and price lower than 640.00 dollars",
+  "instruction_sha256": "14828f6b59d48011b110fecf090f7e14bfafaafb19ee358356ed9c292e8c7bd2",
+  "reward": 0.4,
+  "score": 40.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 0.7365113794803619,
+  "decision_seconds": 0.625195886939764,
+  "input_tokens": 13348,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'd like to find a king-sized faux lather platform bed in the camel color, and price lower than 640.00 dollars [SEP] Search",
+      "action": "search[i'd like to find a king-sized faux lather platform bed in the camel color, and price lower than 640.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.042408287525177
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i'd like to find a king-sized faux lather platform bed in the camel color, and price lower than 640.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09GR8JT1W [SEP] DHP Dakota Upholstered Platform Bed, King, Camel [SEP] $100.0 [SEP] B00KCWLELK [SEP] Global Furniture, King, White Upholstered Bed [SEP] $963.37 [SEP] B09GQS6QGZ [SEP] DHP Dakota Upholstered Platform Bed, King, Gray [SEP] $379.99 [SEP] B09GQQ9TN9 [SEP] DHP Dakota Upholstered Platform Bed, Twin, Camel [SEP] $170.0 [SEP] B08KHH7FYD [SEP] DynastyMattress DM1000C Adjustable Bed Base Individual Head & Foot Control, Platform Bed Compatible, Dual Massage, Wireless Remote, Zero Gravity (Split King, Adjustable Base Only) [SEP] $1198.0 [SEP] B08X9SG8VB [SEP] Boyd Sleep Charlat Upholstered Platform Bed with Headboard and Durable Mattress Foundation with Strong 4 Wood Slat Supports, Box Spring Required: Queen, Red [SEP] $209.6 [SEP] B07MGKBL28 [SEP] Best Price Mattress Clip2Lock 14 Inch Metal Platform Beds w/Heavy Duty Steel Slat Mattress Foundation (No Box Spring Needed), King, Black [SEP] $100.0 [SEP] B00ZSS3GXW [SEP] Dona Ivory Faux Leather Modern Platform Bed (Cal King) [SEP] $753.84 [SEP] B08KHG2ZNB [SEP] DynastyMattress DM1000C Adjustable Bed Base Individual Head & Foot Control, Platform Bed Compatible, Dual Massage, Wireless Remote, Zero Gravity (Twin XL, Adjustable Base Only) [SEP] $599.0 [SEP] B01HP2VGV2 [SEP] Zinus Gerard Faux Leather Upholstered Platform Bed Frame / Mattress Foundation / Wood Slat Support / No Box Spring Needed / Easy Assembly, Twin [SEP] $153.85",
+      "request": {
+        "state": "Shopping instruction:\ni'd like to find a king-sized faux lather platform bed in the camel color, and price lower than 640.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'd like to find a king-sized faux lather platform bed in the camel color, and price lower than 640.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09GR8JT1W [SEP] DHP Dakota Upholstered Platform Bed, King, Camel [SEP] $100.0 [SEP] B00KCWLELK [SEP] Global Furniture, King, White Upholstered Bed [SEP] $963.37 [SEP] B09GQS6QGZ [SEP] DHP Dakota Upholstered Platform Bed, King, Gray [SEP] $379.99 [SEP] B09GQQ9TN9 [SEP] DHP Dakota Upholstered Platform Bed, Twin, Camel [SEP] $170.0 [SEP] B08KHH7FYD [SEP] DynastyMattress DM1000C Adjustable Bed Base Individual Head & Foot Control, Platform Bed Compatible, Dual Massage, Wireless Remote, Zero Gravity (Split King, Adjustable Base Only) [SEP] $1198.0 [SEP] B08X9SG8VB [SEP] Boyd Sleep Charlat Upholstered Platform Bed with Headboard and Durable Mattress Foundation with Strong 4 Wood Slat Supports, Box Spring Required: Queen, Red [SEP] $209.6 [SEP] B07MGKBL28 [SEP] Best Price Mattress Clip2Lock 14 Inch Metal Platform Beds w/Heavy Duty Steel Slat Mattress Foundation (No Box Spring Needed), King, Black [SEP] $100.0 [SEP] B00ZSS3GXW [SEP] Dona Ivory Faux Leather Modern Platform Bed (Cal King) [SEP] $753.84 [SEP] B08KHG2ZNB [SEP] DynastyMattress DM1000C Adjustable Bed Base Individual Head & Foot Control, Platform Bed Compatible, Dual Massage, Wireless Remote, Zero Gravity (Twin XL, Adjustable Base Only) [SEP] $599.0 [SEP] B01HP2VGV2 [SEP] Zinus Gerard Faux Leather Upholstered Platform Bed Frame / Mattress Foundation / Wood Slat Support / No Box Spring Needed / Easy Assembly, Twin [SEP] $153.85\n\nRecent actions:\nsearch[i'd like to find a king-sized faux lather platform bed in the camel color, and price lower than 640.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09gr8jt1w]",
+              "3": "click[b00kcwlelk]",
+              "4": "click[b09gqs6qgz]",
+              "5": "click[b09gqq9tn9]",
+              "6": "click[b08khh7fyd]",
+              "7": "click[b08x9sg8vb]",
+              "8": "click[b07mgkbl28]",
+              "9": "click[b00zss3gxw]",
+              "10": "click[b08khg2znb]",
+              "11": "click[b01hp2vgv2]"
+            }
+          }
+        }
+      },
+      "request_sha256": "577b47448c80bf01e31cefd5e3ffba69f1519143a87ffeb2579e063083c772a9",
+      "attempts": [
+        {
+          "seconds": 0.37878327816724777,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37893323227763176,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.02686397642374848,
+              "1": 0.06246381253735595,
+              "2": 0.8346752339585923,
+              "3": 0.003927714915937357,
+              "4": 0.009895431129873346,
+              "5": 0.009359778549181796,
+              "6": 0.00525709304573824,
+              "7": 0.005844510393061505,
+              "8": 0.01200768438838232,
+              "9": 0.00991414461845507,
+              "10": 0.00913782884206128,
+              "11": 0.010652791197612262
+            },
+            "confidence": 0.8196457097730098
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8247,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.37307197973132133,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b09gr8jt1w]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.44763393327593803
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i'd like to find a king-sized faux lather platform bed in the camel color, and price lower than 640.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] style [SEP] bed with storage drawers [SEP] bed [SEP] size [SEP] twin [SEP] full [SEP] queen [SEP] king [SEP] color [SEP] black [SEP] white [SEP] camel [SEP] grey [SEP] DHP Dakota Upholstered Platform Bed, King, Camel [SEP] Price: $100.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'd like to find a king-sized faux lather platform bed in the camel color, and price lower than 640.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'd like to find a king-sized faux lather platform bed in the camel color, and price lower than 640.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] style [SEP] bed with storage drawers [SEP] bed [SEP] size [SEP] twin [SEP] full [SEP] queen [SEP] king [SEP] color [SEP] black [SEP] white [SEP] camel [SEP] grey [SEP] DHP Dakota Upholstered Platform Bed, King, Camel [SEP] Price: $100.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'd like to find a king-sized faux lather platform bed in the camel color, and price lower than 640.00 dollars]\nclick[b09gr8jt1w]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[bed with storage drawers]",
+              "7": "click[bed]",
+              "8": "click[twin]",
+              "9": "click[full]",
+              "10": "click[queen]",
+              "11": "click[king]",
+              "12": "click[black]",
+              "13": "click[white]",
+              "14": "click[camel]",
+              "15": "click[grey]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7ae8b3ec2296278e7ff76399b3a9626b3a0d77f4950edbda7fc0334e58e824f5",
+      "attempts": [
+        {
+          "seconds": 0.24617015197873116,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.24626265466213226,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.03536389487749512,
+              "1": 0.03803559388681923,
+              "2": 0.07213874464356307,
+              "3": 0.03848522718663932,
+              "4": 0.03951779034864933,
+              "5": 0.47654058096789453,
+              "6": 0.03857951157226567,
+              "7": 0.048803433540835287,
+              "8": 0.01829923654813178,
+              "9": 0.025225554533587477,
+              "10": 0.021118122469640517,
+              "11": 0.054560906365547335,
+              "12": 0.013052202367495212,
+              "13": 0.010677973044431814,
+              "14": 0.054466530984419614,
+              "15": 0.015134696662584712
+            },
+            "confidence": 0.4416432863657542
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 5101,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 16,
+          "inference_seconds": 0.23883288353681564,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.4,
+      "done": true,
+      "elapsed_seconds": 0.7365091145038605
+    }
+  ]
+}

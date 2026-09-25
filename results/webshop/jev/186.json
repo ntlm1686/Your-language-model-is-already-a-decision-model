@@ -1,0 +1,387 @@
+{
+  "task_id": 186,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars",
+  "instruction_sha256": "568b63d0e8ef82a7edb762bf446665a44f03ad14a7d6334d80a977f0b2b87811",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "repeated_state_action",
+  "steps": 7,
+  "elapsed_seconds": 2.3079743832349777,
+  "decision_seconds": 1.769524935632944,
+  "input_tokens": 6140,
+  "output_tokens": 531,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.08219841867685318
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B09C8TF2HZ [SEP] USYFAKGH Women's Fashion Long Sleeve Color Block Buttons Casual Loose Blouse Tops coats hoodie for kids [SEP] $11.99 to $15.99 [SEP] B09B1R9D71 [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] $11.99 to $14.99 [SEP] B09B9Y8GL7 [SEP] Women's Basic Tops,V-Neck Loose Solid Long-Sleeve Summer Shirt Blouse [SEP] $15.29 to $18.58 [SEP] B09BDR64YT [SEP] Women's Casual Long Sleeve T-Shirt Round Neck Loose Summer Blouse Top [SEP] $15.42 to $18.71 [SEP] B09C5DW7HF [SEP] Women's Casual O-Neck Blouse Long Sleeve Colorblock T Shirt Sweater Top [SEP] $15.99 to $19.99 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09BB14FMQ [SEP] T Shirt Long Sleeve Women's Fashion Casual Splice Collared Tied V Neck [SEP] $13.25 to $16.54",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B09C8TF2HZ [SEP] USYFAKGH Women's Fashion Long Sleeve Color Block Buttons Casual Loose Blouse Tops coats hoodie for kids [SEP] $11.99 to $15.99 [SEP] B09B1R9D71 [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] $11.99 to $14.99 [SEP] B09B9Y8GL7 [SEP] Women's Basic Tops,V-Neck Loose Solid Long-Sleeve Summer Shirt Blouse [SEP] $15.29 to $18.58 [SEP] B09BDR64YT [SEP] Women's Casual Long Sleeve T-Shirt Round Neck Loose Summer Blouse Top [SEP] $15.42 to $18.71 [SEP] B09C5DW7HF [SEP] Women's Casual O-Neck Blouse Long Sleeve Colorblock T Shirt Sweater Top [SEP] $15.99 to $19.99 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09BB14FMQ [SEP] T Shirt Long Sleeve Women's Fashion Casual Splice Collared Tied V Neck [SEP] $13.25 to $16.54\n\nRecent actions:\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09pggqzj2]",
+              "3": "click[b099z4t56c]",
+              "4": "click[b097h5cplc]",
+              "5": "click[b09c8tf2hz]",
+              "6": "click[b09b1r9d71]",
+              "7": "click[b09b9y8gl7]",
+              "8": "click[b09bdr64yt]",
+              "9": "click[b09c5dw7hf]",
+              "10": "click[b09b264ypl]",
+              "11": "click[b09bb14fmq]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "5c85a6efc1cf5dcc265667b377be0c7f243696f56edfe6285a5b78b669664a23",
+      "attempts": [
+        {
+          "seconds": 0.32315079867839813,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3232463151216507,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.4,
+            "probabilities": {
+              "2": 0.04,
+              "9": 0.0,
+              "4": 0.23,
+              "7": 0.0,
+              "5": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "3": 0.0,
+              "8": 0.0,
+              "6": 0.1,
+              "0": 0.17,
+              "1": 0.46
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1174,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4849696047604084
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B098DSK1PS [SEP] Tops Coat-Women's Print Puff Sleeve Cardigan Loose Cover Up Kimono Beach Blouse [SEP] $9.99 to $17.99 [SEP] B09BF719LV [SEP] Women Pullover Top BlouseLong Sleeve Tie-Dye Print Sweatshirt Crop Top Hoodies [SEP] $12.3 to $19.21 [SEP] B09B1Q7WBD [SEP] Womens Blouse Sexy V-neck Collar Zipper Solid Long Sleeve Fold Casual Tops [SEP] $8.03 to $20.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B098DQDDJY [SEP] Basic T-shirt-Women's Autumn O-Neck Loose Print Long-Sleeve Tops Blouse [SEP] $10.99 to $16.99 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B09DSHR1Q7 [SEP] USYFAKGH Women's Fashion Long Sleeve Autumn Winter Short Top Jacket Outwear oversized sweater [SEP] $16.99 to $21.99 [SEP] B09D755467 [SEP] USYFAKGH Women Fashion Long Sleeve Zip-Up Hoodie Jacket Printed Sweatshirt Coat sweater tank tops for women [SEP] $25.99 to $29.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B098DSK1PS [SEP] Tops Coat-Women's Print Puff Sleeve Cardigan Loose Cover Up Kimono Beach Blouse [SEP] $9.99 to $17.99 [SEP] B09BF719LV [SEP] Women Pullover Top BlouseLong Sleeve Tie-Dye Print Sweatshirt Crop Top Hoodies [SEP] $12.3 to $19.21 [SEP] B09B1Q7WBD [SEP] Womens Blouse Sexy V-neck Collar Zipper Solid Long Sleeve Fold Casual Tops [SEP] $8.03 to $20.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B098DQDDJY [SEP] Basic T-shirt-Women's Autumn O-Neck Loose Print Long-Sleeve Tops Blouse [SEP] $10.99 to $16.99 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B09DSHR1Q7 [SEP] USYFAKGH Women's Fashion Long Sleeve Autumn Winter Short Top Jacket Outwear oversized sweater [SEP] $16.99 to $21.99 [SEP] B09D755467 [SEP] USYFAKGH Women Fashion Long Sleeve Zip-Up Hoodie Jacket Printed Sweatshirt Coat sweater tank tops for women [SEP] $25.99 to $29.99\n\nRecent actions:\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b098dsk1ps]",
+              "4": "click[b09bf719lv]",
+              "5": "click[b09b1q7wbd]",
+              "6": "click[b09dsfsnp3]",
+              "7": "click[b09dkckd7z]",
+              "8": "click[b09dshw7mz]",
+              "9": "click[b098dqddjy]",
+              "10": "click[b09dycnyp4]",
+              "11": "click[b09dshr1q7]",
+              "12": "click[b09d755467]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "a803a77abf7858f74bce481161e002d75e22003cd7bf2b64ce307d64a271db11",
+      "attempts": [
+        {
+          "seconds": 0.3338560312986374,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33397774398326874,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.3,
+            "probabilities": {
+              "8": 0.0,
+              "4": 0.0,
+              "3": 0.03,
+              "6": 0.01,
+              "1": 0.25,
+              "12": 0.0,
+              "10": 0.0,
+              "7": 0.0,
+              "5": 0.0,
+              "9": 0.04,
+              "2": 0.3,
+              "0": 0.37,
+              "11": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1240,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.8359044753015041
+    },
+    {
+      "step": 3,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.909048568457365
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B09C8TF2HZ [SEP] USYFAKGH Women's Fashion Long Sleeve Color Block Buttons Casual Loose Blouse Tops coats hoodie for kids [SEP] $11.99 to $15.99 [SEP] B09B1R9D71 [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] $11.99 to $14.99 [SEP] B09B9Y8GL7 [SEP] Women's Basic Tops,V-Neck Loose Solid Long-Sleeve Summer Shirt Blouse [SEP] $15.29 to $18.58 [SEP] B09BDR64YT [SEP] Women's Casual Long Sleeve T-Shirt Round Neck Loose Summer Blouse Top [SEP] $15.42 to $18.71 [SEP] B09C5DW7HF [SEP] Women's Casual O-Neck Blouse Long Sleeve Colorblock T Shirt Sweater Top [SEP] $15.99 to $19.99 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09BB14FMQ [SEP] T Shirt Long Sleeve Women's Fashion Casual Splice Collared Tied V Neck [SEP] $13.25 to $16.54",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B09C8TF2HZ [SEP] USYFAKGH Women's Fashion Long Sleeve Color Block Buttons Casual Loose Blouse Tops coats hoodie for kids [SEP] $11.99 to $15.99 [SEP] B09B1R9D71 [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] $11.99 to $14.99 [SEP] B09B9Y8GL7 [SEP] Women's Basic Tops,V-Neck Loose Solid Long-Sleeve Summer Shirt Blouse [SEP] $15.29 to $18.58 [SEP] B09BDR64YT [SEP] Women's Casual Long Sleeve T-Shirt Round Neck Loose Summer Blouse Top [SEP] $15.42 to $18.71 [SEP] B09C5DW7HF [SEP] Women's Casual O-Neck Blouse Long Sleeve Colorblock T Shirt Sweater Top [SEP] $15.99 to $19.99 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09BB14FMQ [SEP] T Shirt Long Sleeve Women's Fashion Casual Splice Collared Tied V Neck [SEP] $13.25 to $16.54\n\nRecent actions:\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]\nclick[next >]\nclick[back to search]\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09pggqzj2]",
+              "3": "click[b099z4t56c]",
+              "4": "click[b097h5cplc]",
+              "5": "click[b09c8tf2hz]",
+              "6": "click[b09b1r9d71]",
+              "7": "click[b09b9y8gl7]",
+              "8": "click[b09bdr64yt]",
+              "9": "click[b09c5dw7hf]",
+              "10": "click[b09b264ypl]",
+              "11": "click[b09bb14fmq]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "d3af6df5d15977c5d45fb968fd5263d6216883e42daa7582ccd24d5c63ad0869",
+      "attempts": [
+        {
+          "seconds": 0.37911155819892883,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3792000748217106,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.33,
+            "probabilities": {
+              "1": 0.39,
+              "2": 0.08,
+              "5": 0.01,
+              "11": 0.0,
+              "3": 0.0,
+              "8": 0.0,
+              "7": 0.0,
+              "9": 0.0,
+              "0": 0.06,
+              "4": 0.28,
+              "10": 0.0,
+              "6": 0.18
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1217,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.4010335318744183
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B098DSK1PS [SEP] Tops Coat-Women's Print Puff Sleeve Cardigan Loose Cover Up Kimono Beach Blouse [SEP] $9.99 to $17.99 [SEP] B09BF719LV [SEP] Women Pullover Top BlouseLong Sleeve Tie-Dye Print Sweatshirt Crop Top Hoodies [SEP] $12.3 to $19.21 [SEP] B09B1Q7WBD [SEP] Womens Blouse Sexy V-neck Collar Zipper Solid Long Sleeve Fold Casual Tops [SEP] $8.03 to $20.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B098DQDDJY [SEP] Basic T-shirt-Women's Autumn O-Neck Loose Print Long-Sleeve Tops Blouse [SEP] $10.99 to $16.99 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B09DSHR1Q7 [SEP] USYFAKGH Women's Fashion Long Sleeve Autumn Winter Short Top Jacket Outwear oversized sweater [SEP] $16.99 to $21.99 [SEP] B09D755467 [SEP] USYFAKGH Women Fashion Long Sleeve Zip-Up Hoodie Jacket Printed Sweatshirt Coat sweater tank tops for women [SEP] $25.99 to $29.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B098DSK1PS [SEP] Tops Coat-Women's Print Puff Sleeve Cardigan Loose Cover Up Kimono Beach Blouse [SEP] $9.99 to $17.99 [SEP] B09BF719LV [SEP] Women Pullover Top BlouseLong Sleeve Tie-Dye Print Sweatshirt Crop Top Hoodies [SEP] $12.3 to $19.21 [SEP] B09B1Q7WBD [SEP] Womens Blouse Sexy V-neck Collar Zipper Solid Long Sleeve Fold Casual Tops [SEP] $8.03 to $20.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B098DQDDJY [SEP] Basic T-shirt-Women's Autumn O-Neck Loose Print Long-Sleeve Tops Blouse [SEP] $10.99 to $16.99 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B09DSHR1Q7 [SEP] USYFAKGH Women's Fashion Long Sleeve Autumn Winter Short Top Jacket Outwear oversized sweater [SEP] $16.99 to $21.99 [SEP] B09D755467 [SEP] USYFAKGH Women Fashion Long Sleeve Zip-Up Hoodie Jacket Printed Sweatshirt Coat sweater tank tops for women [SEP] $25.99 to $29.99\n\nRecent actions:\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]\nclick[next >]\nclick[back to search]\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b098dsk1ps]",
+              "4": "click[b09bf719lv]",
+              "5": "click[b09b1q7wbd]",
+              "6": "click[b09dsfsnp3]",
+              "7": "click[b09dkckd7z]",
+              "8": "click[b09dshw7mz]",
+              "9": "click[b098dqddjy]",
+              "10": "click[b09dycnyp4]",
+              "11": "click[b09dshr1q7]",
+              "12": "click[b09d755467]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "faff69dfdaa88b89dece7bd34faa7394ddbfbe7c806a6d0b15975c11b2549114",
+      "attempts": [
+        {
+          "seconds": 0.3482615537941456,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3483615145087242,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.49,
+            "probabilities": {
+              "10": 0.0,
+              "2": 0.22,
+              "3": 0.05,
+              "8": 0.0,
+              "6": 0.0,
+              "11": 0.0,
+              "1": 0.54,
+              "4": 0.0,
+              "0": 0.13,
+              "9": 0.06,
+              "5": 0.0,
+              "7": 0.0,
+              "12": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1283,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[< prev]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.8451147340238094
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B09C8TF2HZ [SEP] USYFAKGH Women's Fashion Long Sleeve Color Block Buttons Casual Loose Blouse Tops coats hoodie for kids [SEP] $11.99 to $15.99 [SEP] B09B1R9D71 [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] $11.99 to $14.99 [SEP] B09B9Y8GL7 [SEP] Women's Basic Tops,V-Neck Loose Solid Long-Sleeve Summer Shirt Blouse [SEP] $15.29 to $18.58 [SEP] B09BDR64YT [SEP] Women's Casual Long Sleeve T-Shirt Round Neck Loose Summer Blouse Top [SEP] $15.42 to $18.71 [SEP] B09C5DW7HF [SEP] Women's Casual O-Neck Blouse Long Sleeve Colorblock T Shirt Sweater Top [SEP] $15.99 to $19.99 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09BB14FMQ [SEP] T Shirt Long Sleeve Women's Fashion Casual Splice Collared Tied V Neck [SEP] $13.25 to $16.54",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B09C8TF2HZ [SEP] USYFAKGH Women's Fashion Long Sleeve Color Block Buttons Casual Loose Blouse Tops coats hoodie for kids [SEP] $11.99 to $15.99 [SEP] B09B1R9D71 [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] $11.99 to $14.99 [SEP] B09B9Y8GL7 [SEP] Women's Basic Tops,V-Neck Loose Solid Long-Sleeve Summer Shirt Blouse [SEP] $15.29 to $18.58 [SEP] B09BDR64YT [SEP] Women's Casual Long Sleeve T-Shirt Round Neck Loose Summer Blouse Top [SEP] $15.42 to $18.71 [SEP] B09C5DW7HF [SEP] Women's Casual O-Neck Blouse Long Sleeve Colorblock T Shirt Sweater Top [SEP] $15.99 to $19.99 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09BB14FMQ [SEP] T Shirt Long Sleeve Women's Fashion Casual Splice Collared Tied V Neck [SEP] $13.25 to $16.54\n\nRecent actions:\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]\nclick[next >]\nclick[back to search]\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]\nclick[next >]\nclick[< prev]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09pggqzj2]",
+              "3": "click[b099z4t56c]",
+              "4": "click[b097h5cplc]",
+              "5": "click[b09c8tf2hz]",
+              "6": "click[b09b1r9d71]",
+              "7": "click[b09b9y8gl7]",
+              "8": "click[b09bdr64yt]",
+              "9": "click[b09c5dw7hf]",
+              "10": "click[b09b264ypl]",
+              "11": "click[b09bb14fmq]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "daf96349d37945fda0669481e7ea77a640f2089220a448e6979d269ebc5fbb06",
+      "attempts": [
+        {
+          "seconds": 0.3846545107662678,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3847392871975899,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.3,
+            "probabilities": {
+              "9": 0.0,
+              "6": 0.12,
+              "3": 0.0,
+              "5": 0.01,
+              "1": 0.36,
+              "11": 0.0,
+              "2": 0.06,
+              "4": 0.28,
+              "7": 0.0,
+              "8": 0.0,
+              "0": 0.17,
+              "10": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1226,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.3079687170684338
+    }
+  ]
+}

@@ -1,0 +1,776 @@
+{
+  "task_id": 186,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars",
+  "instruction_sha256": "568b63d0e8ef82a7edb762bf446665a44f03ad14a7d6334d80a977f0b2b87811",
+  "reward": 0.75,
+  "score": 75.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 7,
+  "elapsed_seconds": 5.704301189631224,
+  "decision_seconds": 5.332046523690224,
+  "input_tokens": 121327,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.07503534108400345
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B09C8TF2HZ [SEP] USYFAKGH Women's Fashion Long Sleeve Color Block Buttons Casual Loose Blouse Tops coats hoodie for kids [SEP] $11.99 to $15.99 [SEP] B09B1R9D71 [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] $11.99 to $14.99 [SEP] B09B9Y8GL7 [SEP] Women's Basic Tops,V-Neck Loose Solid Long-Sleeve Summer Shirt Blouse [SEP] $15.29 to $18.58 [SEP] B09BDR64YT [SEP] Women's Casual Long Sleeve T-Shirt Round Neck Loose Summer Blouse Top [SEP] $15.42 to $18.71 [SEP] B09C5DW7HF [SEP] Women's Casual O-Neck Blouse Long Sleeve Colorblock T Shirt Sweater Top [SEP] $15.99 to $19.99 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09BB14FMQ [SEP] T Shirt Long Sleeve Women's Fashion Casual Splice Collared Tied V Neck [SEP] $13.25 to $16.54",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B09C8TF2HZ [SEP] USYFAKGH Women's Fashion Long Sleeve Color Block Buttons Casual Loose Blouse Tops coats hoodie for kids [SEP] $11.99 to $15.99 [SEP] B09B1R9D71 [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] $11.99 to $14.99 [SEP] B09B9Y8GL7 [SEP] Women's Basic Tops,V-Neck Loose Solid Long-Sleeve Summer Shirt Blouse [SEP] $15.29 to $18.58 [SEP] B09BDR64YT [SEP] Women's Casual Long Sleeve T-Shirt Round Neck Loose Summer Blouse Top [SEP] $15.42 to $18.71 [SEP] B09C5DW7HF [SEP] Women's Casual O-Neck Blouse Long Sleeve Colorblock T Shirt Sweater Top [SEP] $15.99 to $19.99 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09BB14FMQ [SEP] T Shirt Long Sleeve Women's Fashion Casual Splice Collared Tied V Neck [SEP] $13.25 to $16.54\n\nRecent actions:\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09pggqzj2]",
+              "3": "click[b099z4t56c]",
+              "4": "click[b097h5cplc]",
+              "5": "click[b09c8tf2hz]",
+              "6": "click[b09b1r9d71]",
+              "7": "click[b09b9y8gl7]",
+              "8": "click[b09bdr64yt]",
+              "9": "click[b09c5dw7hf]",
+              "10": "click[b09b264ypl]",
+              "11": "click[b09bb14fmq]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e83bc3b3ad6da5529da53bc9d41718259e900d659c6a41d153e31df91952ccd5",
+      "attempts": [
+        {
+          "seconds": 0.3716246001422405,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37174067273736,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.1190042740755846,
+              "1": 0.2883465427768667,
+              "2": 0.05392762319972318,
+              "3": 0.05540685974784718,
+              "4": 0.07284304300968476,
+              "5": 0.05418180041739799,
+              "6": 0.11592220584427786,
+              "7": 0.038741334103884334,
+              "8": 0.039712722519091304,
+              "9": 0.05239656242318227,
+              "10": 0.059325908752886326,
+              "11": 0.05019112312957352
+            },
+            "confidence": 0.22365077393840008
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8364,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3695104755461216,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5294537395238876
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B098DSK1PS [SEP] Tops Coat-Women's Print Puff Sleeve Cardigan Loose Cover Up Kimono Beach Blouse [SEP] $9.99 to $17.99 [SEP] B09BF719LV [SEP] Women Pullover Top BlouseLong Sleeve Tie-Dye Print Sweatshirt Crop Top Hoodies [SEP] $12.3 to $19.21 [SEP] B09B1Q7WBD [SEP] Womens Blouse Sexy V-neck Collar Zipper Solid Long Sleeve Fold Casual Tops [SEP] $8.03 to $20.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B098DQDDJY [SEP] Basic T-shirt-Women's Autumn O-Neck Loose Print Long-Sleeve Tops Blouse [SEP] $10.99 to $16.99 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B09DSHR1Q7 [SEP] USYFAKGH Women's Fashion Long Sleeve Autumn Winter Short Top Jacket Outwear oversized sweater [SEP] $16.99 to $21.99 [SEP] B09D755467 [SEP] USYFAKGH Women Fashion Long Sleeve Zip-Up Hoodie Jacket Printed Sweatshirt Coat sweater tank tops for women [SEP] $25.99 to $29.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B098DSK1PS [SEP] Tops Coat-Women's Print Puff Sleeve Cardigan Loose Cover Up Kimono Beach Blouse [SEP] $9.99 to $17.99 [SEP] B09BF719LV [SEP] Women Pullover Top BlouseLong Sleeve Tie-Dye Print Sweatshirt Crop Top Hoodies [SEP] $12.3 to $19.21 [SEP] B09B1Q7WBD [SEP] Womens Blouse Sexy V-neck Collar Zipper Solid Long Sleeve Fold Casual Tops [SEP] $8.03 to $20.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B098DQDDJY [SEP] Basic T-shirt-Women's Autumn O-Neck Loose Print Long-Sleeve Tops Blouse [SEP] $10.99 to $16.99 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B09DSHR1Q7 [SEP] USYFAKGH Women's Fashion Long Sleeve Autumn Winter Short Top Jacket Outwear oversized sweater [SEP] $16.99 to $21.99 [SEP] B09D755467 [SEP] USYFAKGH Women Fashion Long Sleeve Zip-Up Hoodie Jacket Printed Sweatshirt Coat sweater tank tops for women [SEP] $25.99 to $29.99\n\nRecent actions:\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b098dsk1ps]",
+              "4": "click[b09bf719lv]",
+              "5": "click[b09b1q7wbd]",
+              "6": "click[b09dsfsnp3]",
+              "7": "click[b09dkckd7z]",
+              "8": "click[b09dshw7mz]",
+              "9": "click[b098dqddjy]",
+              "10": "click[b09dycnyp4]",
+              "11": "click[b09dshr1q7]",
+              "12": "click[b09d755467]"
+            }
+          }
+        }
+      },
+      "request_sha256": "855fd4b282d65e946d361a41e9452041bf3c09c8686a8079b4c673c651c8ccd7",
+      "attempts": [
+        {
+          "seconds": 0.4248943440616131,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4250195622444153,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.11756944611325887,
+              "1": 0.10136205354290463,
+              "2": 0.18963616097560432,
+              "3": 0.0970803519406402,
+              "4": 0.05796404046412157,
+              "5": 0.05518498930446127,
+              "6": 0.05484011380945394,
+              "7": 0.0383329807952933,
+              "8": 0.04815333578955835,
+              "9": 0.1060906626700491,
+              "10": 0.045719992402909804,
+              "11": 0.03213809624303446,
+              "12": 0.05592777594871001
+            },
+            "confidence": 0.1221058410569047
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9663,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4228510893881321,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.0316191017627716
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09DSGY15L [SEP] USYFAKGH Women Plaid Long Sleeve Button Procket Down Collar Long Shirt Oversized Coat sweater tank [SEP] $20.99 to $24.99 [SEP] B09B1QPF9D [SEP] Women Blouse-Flower Prints Long Sleeve T-Shirts Tunic Button Round Neck Causal [SEP] $7.98 to $22.91 [SEP] B09DYCWSDJ [SEP] USYFAKGH Womens Casual BlouseWomen's Button Perforated Denim Jacket With Pocket Coat winter coats women [SEP] $18.99 to $41.99 [SEP] B097PGZ6P5 [SEP] Women's Fashion Sexy Lace Blouse Hollow Long-Sleeve V-Neck Top Blouses Loose Tops Tees tshirt [SEP] $9.11 to $15.59 [SEP] B097TDRLKQ [SEP] Women Fashion Loose Long Sleeve V-Neck Casual Solid T-Shirt Blouse Tops [SEP] $12.02 to $17.91 [SEP] B097H2JYBV [SEP] Woman's tops丨Print Lace V-Neck Tank Tops Sleeveless Off Shoulder Casual Loose T-Shirt-cami top Blouses tee Tanks [SEP] $11.92 to $12.37 [SEP] B097PHBT8P [SEP] Women's Summer Loose Chiffon Shirt Loose V-neck Casual Top T-shirt Shirts Blouses Tunic tshirt [SEP] $11.6 to $16.9 [SEP] B09B2CB8W2 [SEP] Women's Cute Hoodie for Teen Girl Brown Bear Tops Sweatshirt Splicing Hooded Shirt Personality Bag Hoodies [SEP] $24.99 to $27.99 [SEP] B09JPDP4ZR [SEP] RKSTN Hoodies for Women,Cute Sweatshirt for Teen Girls Bear Hoodie Autumn Winter Plus Size Jacket Personality Bag Pullover [SEP] $24.99 [SEP] B09Q52FB7G [SEP] Tops for women丨Casual Fashion Gradient O-Neck Button Loose Short Sleeve T-Shirt Top-cami top Blouses tee Tanks [SEP] $4.25 to $14.5",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09DSGY15L [SEP] USYFAKGH Women Plaid Long Sleeve Button Procket Down Collar Long Shirt Oversized Coat sweater tank [SEP] $20.99 to $24.99 [SEP] B09B1QPF9D [SEP] Women Blouse-Flower Prints Long Sleeve T-Shirts Tunic Button Round Neck Causal [SEP] $7.98 to $22.91 [SEP] B09DYCWSDJ [SEP] USYFAKGH Womens Casual BlouseWomen's Button Perforated Denim Jacket With Pocket Coat winter coats women [SEP] $18.99 to $41.99 [SEP] B097PGZ6P5 [SEP] Women's Fashion Sexy Lace Blouse Hollow Long-Sleeve V-Neck Top Blouses Loose Tops Tees tshirt [SEP] $9.11 to $15.59 [SEP] B097TDRLKQ [SEP] Women Fashion Loose Long Sleeve V-Neck Casual Solid T-Shirt Blouse Tops [SEP] $12.02 to $17.91 [SEP] B097H2JYBV [SEP] Woman's tops丨Print Lace V-Neck Tank Tops Sleeveless Off Shoulder Casual Loose T-Shirt-cami top Blouses tee Tanks [SEP] $11.92 to $12.37 [SEP] B097PHBT8P [SEP] Women's Summer Loose Chiffon Shirt Loose V-neck Casual Top T-shirt Shirts Blouses Tunic tshirt [SEP] $11.6 to $16.9 [SEP] B09B2CB8W2 [SEP] Women's Cute Hoodie for Teen Girl Brown Bear Tops Sweatshirt Splicing Hooded Shirt Personality Bag Hoodies [SEP] $24.99 to $27.99 [SEP] B09JPDP4ZR [SEP] RKSTN Hoodies for Women,Cute Sweatshirt for Teen Girls Bear Hoodie Autumn Winter Plus Size Jacket Personality Bag Pullover [SEP] $24.99 [SEP] B09Q52FB7G [SEP] Tops for women丨Casual Fashion Gradient O-Neck Button Loose Short Sleeve T-Shirt Top-cami top Blouses tee Tanks [SEP] $4.25 to $14.5\n\nRecent actions:\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09dsgy15l]",
+              "4": "click[b09b1qpf9d]",
+              "5": "click[b09dycwsdj]",
+              "6": "click[b097pgz6p5]",
+              "7": "click[b097tdrlkq]",
+              "8": "click[b097h2jybv]",
+              "9": "click[b097phbt8p]",
+              "10": "click[b09b2cb8w2]",
+              "11": "click[b09jpdp4zr]",
+              "12": "click[b09q52fb7g]"
+            }
+          }
+        }
+      },
+      "request_sha256": "15de8f0bb477c78bddfcf9fff86741b9732cdf4fbe3d378b59f5e73df029ccba",
+      "attempts": [
+        {
+          "seconds": 0.4334765002131462,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.43361569195985794,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "12",
+            "probabilities": {
+              "0": 0.048461355394760396,
+              "1": 0.04195843597431239,
+              "2": 0.1040357551573412,
+              "3": 0.018664456193894237,
+              "4": 0.13537101904543608,
+              "5": 0.03153891402289405,
+              "6": 0.06440412560738017,
+              "7": 0.04577794194516349,
+              "8": 0.05514166994536199,
+              "9": 0.06000483665898991,
+              "10": 0.03358185728433495,
+              "11": 0.028600771381626523,
+              "12": 0.3324588613885045
+            },
+            "confidence": 0.27683043317087985
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9873,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.43139199167490005,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b09q52fb7g]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.4981104619801044
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] blue r [SEP] brown o [SEP] gold o [SEP] gray r [SEP] green o [SEP] navy o [SEP] orange o [SEP] pink o [SEP] black r [SEP] white r [SEP] orange r [SEP] black u [SEP] black x [SEP] blue u [SEP] blue x [SEP] gray x [SEP] green x [SEP] hot pink t [SEP] pink t [SEP] pink x [SEP] purple q [SEP] sky blue t [SEP] white u [SEP] white x [SEP] gray q [SEP] black s [SEP] black w [SEP] blue 1 [SEP] blue w [SEP] brown q [SEP] green 1 [SEP] green q [SEP] khaki w [SEP] pink s [SEP] purple 1 [SEP] white w [SEP] coffee q [SEP] black p [SEP] red p [SEP] black v [SEP] blue q [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] 5x-large [SEP] Tops for women丨Casual Fashion Gradient O-Neck Button Loose Short Sleeve T-Shirt Top-cami top Blouses tee Tanks [SEP] Price: $4.25 to $14.5 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] blue r [SEP] brown o [SEP] gold o [SEP] gray r [SEP] green o [SEP] navy o [SEP] orange o [SEP] pink o [SEP] black r [SEP] white r [SEP] orange r [SEP] black u [SEP] black x [SEP] blue u [SEP] blue x [SEP] gray x [SEP] green x [SEP] hot pink t [SEP] pink t [SEP] pink x [SEP] purple q [SEP] sky blue t [SEP] white u [SEP] white x [SEP] gray q [SEP] black s [SEP] black w [SEP] blue 1 [SEP] blue w [SEP] brown q [SEP] green 1 [SEP] green q [SEP] khaki w [SEP] pink s [SEP] purple 1 [SEP] white w [SEP] coffee q [SEP] black p [SEP] red p [SEP] black v [SEP] blue q [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] 5x-large [SEP] Tops for women丨Casual Fashion Gradient O-Neck Button Loose Short Sleeve T-Shirt Top-cami top Blouses tee Tanks [SEP] Price: $4.25 to $14.5 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[b09q52fb7g]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[blue r]",
+              "7": "click[brown o]",
+              "8": "click[gold o]",
+              "9": "click[gray r]",
+              "10": "click[green o]",
+              "11": "click[navy o]",
+              "12": "click[orange o]",
+              "13": "click[pink o]",
+              "14": "click[black r]",
+              "15": "click[white r]",
+              "16": "click[orange r]",
+              "17": "click[black u]",
+              "18": "click[black x]",
+              "19": "click[blue u]",
+              "20": "click[blue x]",
+              "21": "click[gray x]",
+              "22": "click[green x]",
+              "23": "click[hot pink t]",
+              "24": "click[pink t]",
+              "25": "click[pink x]",
+              "26": "click[purple q]",
+              "27": "click[sky blue t]",
+              "28": "click[white u]",
+              "29": "click[white x]",
+              "30": "click[gray q]",
+              "31": "click[black s]",
+              "32": "click[black w]",
+              "33": "click[blue 1]",
+              "34": "click[blue w]",
+              "35": "click[brown q]",
+              "36": "click[green 1]",
+              "37": "click[green q]",
+              "38": "click[khaki w]",
+              "39": "click[pink s]",
+              "40": "click[purple 1]",
+              "41": "click[white w]",
+              "42": "click[coffee q]",
+              "43": "click[black p]",
+              "44": "click[red p]",
+              "45": "click[black v]",
+              "46": "click[blue q]",
+              "47": "click[small]",
+              "48": "click[medium]",
+              "49": "click[large]",
+              "50": "click[x-large]",
+              "51": "click[xx-large]",
+              "52": "click[3x-large]",
+              "53": "click[4x-large]",
+              "54": "click[5x-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "93a9943f22747c2618d82ac01de35ca9fb109ebe4304407bf908da778bf72686",
+      "attempts": [
+        {
+          "seconds": 1.3508985750377178,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.3510819599032402,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "51",
+            "probabilities": {
+              "0": 0.009288984245563379,
+              "1": 0.00819077675790276,
+              "2": 0.013501494778516164,
+              "3": 0.007838690706387185,
+              "4": 0.009059610653999982,
+              "5": 0.03554015893492966,
+              "6": 0.027366176527824044,
+              "7": 0.01916863126242577,
+              "8": 0.021058881463941064,
+              "9": 0.022375851434895788,
+              "10": 0.024210070302087303,
+              "11": 0.027382877406516865,
+              "12": 0.01966463693340139,
+              "13": 0.030140716975500813,
+              "14": 0.026607729999696447,
+              "15": 0.027677758303630815,
+              "16": 0.01544522845943892,
+              "17": 0.027854746852706027,
+              "18": 0.03705202946915204,
+              "19": 0.019102911096292374,
+              "20": 0.02727619369287191,
+              "21": 0.028119397443997787,
+              "22": 0.021159809796846,
+              "23": 0.03427941740114622,
+              "24": 0.02595331604896829,
+              "25": 0.03413161923448102,
+              "26": 0.01413834312789558,
+              "27": 0.025475250308068118,
+              "28": 0.018885671804725102,
+              "29": 0.03545697104610767,
+              "30": 0.010719760950180832,
+              "31": 0.01692721555711987,
+              "32": 0.0130408774276675,
+              "33": 0.017436332686559093,
+              "34": 0.013106949952256272,
+              "35": 0.015818599731146108,
+              "36": 0.01750622451449262,
+              "37": 0.011646144122987952,
+              "38": 0.013675989025804438,
+              "39": 0.013877979791749675,
+              "40": 0.012714593691517248,
+              "41": 0.016475697239438026,
+              "42": 0.01288727653013035,
+              "43": 0.01861648492671519,
+              "44": 0.009171454680878422,
+              "45": 0.012978639810743327,
+              "46": 0.014299919480556308,
+              "47": 0.0023689261278769668,
+              "48": 0.0042428095727333245,
+              "49": 0.0038387520218570942,
+              "50": 0.004699009562143686,
+              "51": 0.037234645344080164,
+              "52": 0.004898950574209554,
+              "53": 0.004131770770671199,
+              "54": 0.004281043436568569
+            },
+            "confidence": 0.019405657294896465
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 30794,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 55,
+          "inference_seconds": 1.3487209230661392,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[xx-large]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.880733221769333
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] blue r [SEP] brown o [SEP] gold o [SEP] gray r [SEP] green o [SEP] navy o [SEP] orange o [SEP] pink o [SEP] black r [SEP] white r [SEP] orange r [SEP] black u [SEP] black x [SEP] blue u [SEP] blue x [SEP] gray x [SEP] green x [SEP] hot pink t [SEP] pink t [SEP] pink x [SEP] purple q [SEP] sky blue t [SEP] white u [SEP] white x [SEP] gray q [SEP] black s [SEP] black w [SEP] blue 1 [SEP] blue w [SEP] brown q [SEP] green 1 [SEP] green q [SEP] khaki w [SEP] pink s [SEP] purple 1 [SEP] white w [SEP] coffee q [SEP] black p [SEP] red p [SEP] black v [SEP] blue q [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] 5x-large [SEP] Tops for women丨Casual Fashion Gradient O-Neck Button Loose Short Sleeve T-Shirt Top-cami top Blouses tee Tanks [SEP] Price: $4.25 to $14.5 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] blue r [SEP] brown o [SEP] gold o [SEP] gray r [SEP] green o [SEP] navy o [SEP] orange o [SEP] pink o [SEP] black r [SEP] white r [SEP] orange r [SEP] black u [SEP] black x [SEP] blue u [SEP] blue x [SEP] gray x [SEP] green x [SEP] hot pink t [SEP] pink t [SEP] pink x [SEP] purple q [SEP] sky blue t [SEP] white u [SEP] white x [SEP] gray q [SEP] black s [SEP] black w [SEP] blue 1 [SEP] blue w [SEP] brown q [SEP] green 1 [SEP] green q [SEP] khaki w [SEP] pink s [SEP] purple 1 [SEP] white w [SEP] coffee q [SEP] black p [SEP] red p [SEP] black v [SEP] blue q [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] 5x-large [SEP] Tops for women丨Casual Fashion Gradient O-Neck Button Loose Short Sleeve T-Shirt Top-cami top Blouses tee Tanks [SEP] Price: $4.25 to $14.5 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[b09q52fb7g]\nclick[xx-large]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[blue r]",
+              "7": "click[brown o]",
+              "8": "click[gold o]",
+              "9": "click[gray r]",
+              "10": "click[green o]",
+              "11": "click[navy o]",
+              "12": "click[orange o]",
+              "13": "click[pink o]",
+              "14": "click[black r]",
+              "15": "click[white r]",
+              "16": "click[orange r]",
+              "17": "click[black u]",
+              "18": "click[black x]",
+              "19": "click[blue u]",
+              "20": "click[blue x]",
+              "21": "click[gray x]",
+              "22": "click[green x]",
+              "23": "click[hot pink t]",
+              "24": "click[pink t]",
+              "25": "click[pink x]",
+              "26": "click[purple q]",
+              "27": "click[sky blue t]",
+              "28": "click[white u]",
+              "29": "click[white x]",
+              "30": "click[gray q]",
+              "31": "click[black s]",
+              "32": "click[black w]",
+              "33": "click[blue 1]",
+              "34": "click[blue w]",
+              "35": "click[brown q]",
+              "36": "click[green 1]",
+              "37": "click[green q]",
+              "38": "click[khaki w]",
+              "39": "click[pink s]",
+              "40": "click[purple 1]",
+              "41": "click[white w]",
+              "42": "click[coffee q]",
+              "43": "click[black p]",
+              "44": "click[red p]",
+              "45": "click[black v]",
+              "46": "click[blue q]",
+              "47": "click[small]",
+              "48": "click[medium]",
+              "49": "click[large]",
+              "50": "click[x-large]",
+              "51": "click[xx-large]",
+              "52": "click[3x-large]",
+              "53": "click[4x-large]",
+              "54": "click[5x-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b0fea3d8f0eb0b52d7f56d23c1ed4bc4d4462002e25fb985dfc39b63bd43fe31",
+      "attempts": [
+        {
+          "seconds": 1.3701055273413658,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.3702570647001266,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "23",
+            "probabilities": {
+              "0": 0.007877188491299545,
+              "1": 0.00691119318067443,
+              "2": 0.01237012075742629,
+              "3": 0.007383833994929705,
+              "4": 0.008357339964255396,
+              "5": 0.025909123696448343,
+              "6": 0.028749668290349965,
+              "7": 0.020316636825504778,
+              "8": 0.021838763791894845,
+              "9": 0.023133846968087995,
+              "10": 0.029090053781888933,
+              "11": 0.028361448460960566,
+              "12": 0.020813819018549784,
+              "13": 0.029660804276880868,
+              "14": 0.027311903369337708,
+              "15": 0.028041621994456783,
+              "16": 0.016244952949317177,
+              "17": 0.02864765684469938,
+              "18": 0.03744564811944572,
+              "19": 0.021010301533243778,
+              "20": 0.030967991204594286,
+              "21": 0.02906035997975998,
+              "22": 0.023182792111513282,
+              "23": 0.03879283961105059,
+              "24": 0.028713321598867355,
+              "25": 0.035084060698208325,
+              "26": 0.014396887816528267,
+              "27": 0.029871855516927674,
+              "28": 0.02012016508735166,
+              "29": 0.03665541252989051,
+              "30": 0.011355148315815461,
+              "31": 0.016974227916805935,
+              "32": 0.013978719620898642,
+              "33": 0.019773653689981175,
+              "34": 0.01578990892644792,
+              "35": 0.017822055543784132,
+              "36": 0.019609349353490117,
+              "37": 0.01267898974096197,
+              "38": 0.014648167466940403,
+              "39": 0.014257005270463745,
+              "40": 0.013156887048019395,
+              "41": 0.017782531826989495,
+              "42": 0.013724481520174043,
+              "43": 0.019665234786794168,
+              "44": 0.010980583439285338,
+              "45": 0.013391192167510571,
+              "46": 0.015160585615092285,
+              "47": 0.001856398849687286,
+              "48": 0.0029602742585487464,
+              "49": 0.0026459021734277816,
+              "50": 0.0021241297704656234,
+              "51": 0.004731792503294445,
+              "52": 0.0031055476166960733,
+              "53": 0.002744984028695554,
+              "54": 0.0027606360853855713
+            },
+            "confidence": 0.020992707011255236
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 31124,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 55,
+          "inference_seconds": 1.3678396753966808,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[hot pink t]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.282573789358139
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] blue r [SEP] brown o [SEP] gold o [SEP] gray r [SEP] green o [SEP] navy o [SEP] orange o [SEP] pink o [SEP] black r [SEP] white r [SEP] orange r [SEP] black u [SEP] black x [SEP] blue u [SEP] blue x [SEP] gray x [SEP] green x [SEP] hot pink t [SEP] pink t [SEP] pink x [SEP] purple q [SEP] sky blue t [SEP] white u [SEP] white x [SEP] gray q [SEP] black s [SEP] black w [SEP] blue 1 [SEP] blue w [SEP] brown q [SEP] green 1 [SEP] green q [SEP] khaki w [SEP] pink s [SEP] purple 1 [SEP] white w [SEP] coffee q [SEP] black p [SEP] red p [SEP] black v [SEP] blue q [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] 5x-large [SEP] Tops for women丨Casual Fashion Gradient O-Neck Button Loose Short Sleeve T-Shirt Top-cami top Blouses tee Tanks [SEP] Price: $4.25 to $14.5 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] blue r [SEP] brown o [SEP] gold o [SEP] gray r [SEP] green o [SEP] navy o [SEP] orange o [SEP] pink o [SEP] black r [SEP] white r [SEP] orange r [SEP] black u [SEP] black x [SEP] blue u [SEP] blue x [SEP] gray x [SEP] green x [SEP] hot pink t [SEP] pink t [SEP] pink x [SEP] purple q [SEP] sky blue t [SEP] white u [SEP] white x [SEP] gray q [SEP] black s [SEP] black w [SEP] blue 1 [SEP] blue w [SEP] brown q [SEP] green 1 [SEP] green q [SEP] khaki w [SEP] pink s [SEP] purple 1 [SEP] white w [SEP] coffee q [SEP] black p [SEP] red p [SEP] black v [SEP] blue q [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] 5x-large [SEP] Tops for women丨Casual Fashion Gradient O-Neck Button Loose Short Sleeve T-Shirt Top-cami top Blouses tee Tanks [SEP] Price: $4.25 to $14.5 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a short sleeve top for a teenage girl. it should in xx-large size, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[b09q52fb7g]\nclick[xx-large]\nclick[hot pink t]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[blue r]",
+              "7": "click[brown o]",
+              "8": "click[gold o]",
+              "9": "click[gray r]",
+              "10": "click[green o]",
+              "11": "click[navy o]",
+              "12": "click[orange o]",
+              "13": "click[pink o]",
+              "14": "click[black r]",
+              "15": "click[white r]",
+              "16": "click[orange r]",
+              "17": "click[black u]",
+              "18": "click[black x]",
+              "19": "click[blue u]",
+              "20": "click[blue x]",
+              "21": "click[gray x]",
+              "22": "click[green x]",
+              "23": "click[hot pink t]",
+              "24": "click[pink t]",
+              "25": "click[pink x]",
+              "26": "click[purple q]",
+              "27": "click[sky blue t]",
+              "28": "click[white u]",
+              "29": "click[white x]",
+              "30": "click[gray q]",
+              "31": "click[black s]",
+              "32": "click[black w]",
+              "33": "click[blue 1]",
+              "34": "click[blue w]",
+              "35": "click[brown q]",
+              "36": "click[green 1]",
+              "37": "click[green q]",
+              "38": "click[khaki w]",
+              "39": "click[pink s]",
+              "40": "click[purple 1]",
+              "41": "click[white w]",
+              "42": "click[coffee q]",
+              "43": "click[black p]",
+              "44": "click[red p]",
+              "45": "click[black v]",
+              "46": "click[blue q]",
+              "47": "click[small]",
+              "48": "click[medium]",
+              "49": "click[large]",
+              "50": "click[x-large]",
+              "51": "click[xx-large]",
+              "52": "click[3x-large]",
+              "53": "click[4x-large]",
+              "54": "click[5x-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "47990fb41774107f6a851e93e572318489485edb3a1939fa6536c94cea198af0",
+      "attempts": [
+        {
+          "seconds": 1.380125019699335,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.3803315721452236,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.017074835353399424,
+              "1": 0.014722070537967803,
+              "2": 0.024620961516964194,
+              "3": 0.014283212844651776,
+              "4": 0.015164036678940588,
+              "5": 0.11101875358294212,
+              "6": 0.01783116778713575,
+              "7": 0.019328532969857246,
+              "8": 0.022931002798729654,
+              "9": 0.020579502463482887,
+              "10": 0.020198331557683993,
+              "11": 0.02268828534710124,
+              "12": 0.020712717022281713,
+              "13": 0.020790627396466105,
+              "14": 0.02208011488560924,
+              "15": 0.024190546614567907,
+              "16": 0.01695804678530715,
+              "17": 0.02033539851773346,
+              "18": 0.021736037762155318,
+              "19": 0.016931978277866987,
+              "20": 0.015659022231334276,
+              "21": 0.01909385974986132,
+              "22": 0.014740723111323266,
+              "23": 0.017274305918175314,
+              "24": 0.020735756322054138,
+              "25": 0.022780889752829526,
+              "26": 0.01408690927199802,
+              "27": 0.019954883541626806,
+              "28": 0.020141395678908075,
+              "29": 0.022116827965679733,
+              "30": 0.015852266548759823,
+              "31": 0.01775304899106508,
+              "32": 0.016084136034483484,
+              "33": 0.01783484366722022,
+              "34": 0.013686597549960438,
+              "35": 0.019882456419162954,
+              "36": 0.016059503783404858,
+              "37": 0.013633540154873704,
+              "38": 0.015578997857099031,
+              "39": 0.015210540193919753,
+              "40": 0.014878558071953752,
+              "41": 0.022362978099798966,
+              "42": 0.016835866408860298,
+              "43": 0.020363213048360602,
+              "44": 0.011864448753867482,
+              "45": 0.01760103079668908,
+              "46": 0.016082917068652523,
+              "47": 0.004507011944789609,
+              "48": 0.0064792793580515555,
+              "49": 0.0058380923852976085,
+              "50": 0.004497456571674725,
+              "51": 0.00879276269705855,
+              "52": 0.006595852994301319,
+              "53": 0.005397172186460798,
+              "54": 0.005566694169598793
+            },
+            "confidence": 0.09455613790855215
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 31509,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 55,
+          "inference_seconds": 1.378087054938078,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.75,
+      "done": true,
+      "elapsed_seconds": 5.704298529773951
+    }
+  ]
+}

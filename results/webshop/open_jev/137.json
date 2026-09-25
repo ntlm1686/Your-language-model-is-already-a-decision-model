@@ -1,0 +1,484 @@
+{
+  "task_id": 137,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars",
+  "instruction_sha256": "95b99b6d9d3a6164baa7973ac7979b779f09e1912102da6ca1aa41cc2456bbc8",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 2.581635992974043,
+  "decision_seconds": 2.4045816361904144,
+  "input_tokens": 51431,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars [SEP] Search",
+      "action": "search[i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.05289914458990097
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B01MZ2CH6O [SEP] Levi's Women's Melanie Bomber Jacket (Standard & Plus Sizes) [SEP] $39.06 to $100.0 [SEP] B09P5WWF8M [SEP] Bomber Jacket Women Sweat Jacket Ladies College Sweat Jacket For Women Patchwork Jacket Vintage Baseball Coat [SEP] $97.57 [SEP] B09J1FRN6Q [SEP] Men's Trench Coat Fashion Easy Notch Lapel Business Casual Jacket Solid Long Pea Coat Windbreaker Overcoat Slim Fit Clothing [SEP] $13.96 to $18.99 [SEP] B09LHJYZW3 [SEP] Christmas Suit For Men Long Sleeve Blazer Button Down Clothes Slim Fit Jacket Lightweight Outerwear Xmas Holiday Tops [SEP] $13.76 [SEP] B09QWY4VJJ [SEP] Henley Shirt For Men Solid Color Band-Collar Tee Button Up Tops Short Sleeve Clothes Slim Fit Sweatshirt [SEP] $8.67 [SEP] B09HPPGNCJ [SEP] Men's Cardigan Casual Slim Fit Pink Trench Aztec Print Coat Button Down Long Jacket Lightweight Lapel Windbreaker Streetwear [SEP] $28.98 [SEP] B09HTTJSSL [SEP] Puffer Jacket For Men Slim Fit Coat Zip Down Jacket With Removable Hood Lightweight Outerwear Classic Winter Clothing [SEP] $26.96 [SEP] B09PTWYQM9 [SEP] Mens Cable Knit Cardigan Loose Fit Sweater Long Sleeve Button Down Outerwear Turndown Collar Casual Cardigans [SEP] $39.44 [SEP] B09QWY3MLQ [SEP] Hoodies For Men Patchwork Print Slim Fit Long Sleeve Knitted Sweater Casual Pullover Urban Tops Streetwear Hooded Clothes [SEP] $23.97 [SEP] B09PDVPMXY [SEP] Mens Casual Button Down Henley Shirts Long Sleeve Comfy Slim Fit Streetwear Solid Color Band-Collar Shirts [SEP] $12.91",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B01MZ2CH6O [SEP] Levi's Women's Melanie Bomber Jacket (Standard & Plus Sizes) [SEP] $39.06 to $100.0 [SEP] B09P5WWF8M [SEP] Bomber Jacket Women Sweat Jacket Ladies College Sweat Jacket For Women Patchwork Jacket Vintage Baseball Coat [SEP] $97.57 [SEP] B09J1FRN6Q [SEP] Men's Trench Coat Fashion Easy Notch Lapel Business Casual Jacket Solid Long Pea Coat Windbreaker Overcoat Slim Fit Clothing [SEP] $13.96 to $18.99 [SEP] B09LHJYZW3 [SEP] Christmas Suit For Men Long Sleeve Blazer Button Down Clothes Slim Fit Jacket Lightweight Outerwear Xmas Holiday Tops [SEP] $13.76 [SEP] B09QWY4VJJ [SEP] Henley Shirt For Men Solid Color Band-Collar Tee Button Up Tops Short Sleeve Clothes Slim Fit Sweatshirt [SEP] $8.67 [SEP] B09HPPGNCJ [SEP] Men's Cardigan Casual Slim Fit Pink Trench Aztec Print Coat Button Down Long Jacket Lightweight Lapel Windbreaker Streetwear [SEP] $28.98 [SEP] B09HTTJSSL [SEP] Puffer Jacket For Men Slim Fit Coat Zip Down Jacket With Removable Hood Lightweight Outerwear Classic Winter Clothing [SEP] $26.96 [SEP] B09PTWYQM9 [SEP] Mens Cable Knit Cardigan Loose Fit Sweater Long Sleeve Button Down Outerwear Turndown Collar Casual Cardigans [SEP] $39.44 [SEP] B09QWY3MLQ [SEP] Hoodies For Men Patchwork Print Slim Fit Long Sleeve Knitted Sweater Casual Pullover Urban Tops Streetwear Hooded Clothes [SEP] $23.97 [SEP] B09PDVPMXY [SEP] Mens Casual Button Down Henley Shirts Long Sleeve Comfy Slim Fit Streetwear Solid Color Band-Collar Shirts [SEP] $12.91\n\nRecent actions:\nsearch[i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b01mz2ch6o]",
+              "3": "click[b09p5wwf8m]",
+              "4": "click[b09j1frn6q]",
+              "5": "click[b09lhjyzw3]",
+              "6": "click[b09qwy4vjj]",
+              "7": "click[b09hppgncj]",
+              "8": "click[b09httjssl]",
+              "9": "click[b09ptwyqm9]",
+              "10": "click[b09qwy3mlq]",
+              "11": "click[b09pdvpmxy]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bb6f15e6af137909a597ead5003e73007f7c86bc1e8d89687b23a2989c528e94",
+      "attempts": [
+        {
+          "seconds": 0.36789312586188316,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.36801107972860336,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.1520868565197802,
+              "1": 0.27115505846508103,
+              "2": 0.32574815543638025,
+              "3": 0.06311143690312547,
+              "4": 0.01582538178102859,
+              "5": 0.015249144178716775,
+              "6": 0.027683813434929486,
+              "7": 0.029528974179799293,
+              "8": 0.02979057952502087,
+              "9": 0.02073131611084233,
+              "10": 0.03417823497326384,
+              "11": 0.01491104849203195
+            },
+            "confidence": 0.2644525332033239
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8138,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3655747286975384,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b01mz2ch6o]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4545414447784424
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size type [SEP] standard [SEP] plus size [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 1x [SEP] 2x [SEP] 3x [SEP] 4x [SEP] color [SEP] army green [SEP] black [SEP] navy [SEP] peach blush [SEP] bleached sand [SEP] cherry tomato [SEP] emerald [SEP] tie dye [SEP] white [SEP] lime punch [SEP] rose [SEP] dusty rose [SEP] love potion [SEP] fuchsia [SEP] thistle [SEP] rose bud [SEP] Levi's Women's Melanie Bomber Jacket (Standard & Plus Sizes) [SEP] Price: $39.06 to $100.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size type [SEP] standard [SEP] plus size [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 1x [SEP] 2x [SEP] 3x [SEP] 4x [SEP] color [SEP] army green [SEP] black [SEP] navy [SEP] peach blush [SEP] bleached sand [SEP] cherry tomato [SEP] emerald [SEP] tie dye [SEP] white [SEP] lime punch [SEP] rose [SEP] dusty rose [SEP] love potion [SEP] fuchsia [SEP] thistle [SEP] rose bud [SEP] Levi's Women's Melanie Bomber Jacket (Standard & Plus Sizes) [SEP] Price: $39.06 to $100.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars]\nclick[b01mz2ch6o]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[standard]",
+              "7": "click[plus size]",
+              "8": "click[x-small]",
+              "9": "click[small]",
+              "10": "click[medium]",
+              "11": "click[large]",
+              "12": "click[x-large]",
+              "13": "click[xx-large]",
+              "14": "click[1x]",
+              "15": "click[2x]",
+              "16": "click[3x]",
+              "17": "click[4x]",
+              "18": "click[army green]",
+              "19": "click[black]",
+              "20": "click[navy]",
+              "21": "click[peach blush]",
+              "22": "click[bleached sand]",
+              "23": "click[cherry tomato]",
+              "24": "click[emerald]",
+              "25": "click[tie dye]",
+              "26": "click[white]",
+              "27": "click[lime punch]",
+              "28": "click[rose]",
+              "29": "click[dusty rose]",
+              "30": "click[love potion]",
+              "31": "click[fuchsia]",
+              "32": "click[thistle]",
+              "33": "click[rose bud]"
+            }
+          }
+        }
+      },
+      "request_sha256": "47cfabec94e1ec79c0873f5d92a1fe44346ecf6328d425afe7140ad8752549b2",
+      "attempts": [
+        {
+          "seconds": 0.6828170008957386,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.6829492822289467,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "probabilities": {
+              "0": 0.030378257451268598,
+              "1": 0.026583791178303725,
+              "2": 0.03732189539283946,
+              "3": 0.022626333585343498,
+              "4": 0.023825753301535028,
+              "5": 0.06505044117725081,
+              "6": 0.09279253305724201,
+              "7": 0.03239574144299826,
+              "8": 0.04717128442185216,
+              "9": 0.05586877584811532,
+              "10": 0.06674310012374121,
+              "11": 0.056035104266906194,
+              "12": 0.04382002724155444,
+              "13": 0.04171321943194802,
+              "14": 0.024974859061794953,
+              "15": 0.01814160027071294,
+              "16": 0.013160782361333754,
+              "17": 0.018211196734170505,
+              "18": 0.006416243608984831,
+              "19": 0.006688821801812899,
+              "20": 0.007145626432181924,
+              "21": 0.012122780065746913,
+              "22": 0.008045941585888892,
+              "23": 0.019389178056351843,
+              "24": 0.007280695895772953,
+              "25": 0.018138180327822596,
+              "26": 0.01018107328407739,
+              "27": 0.010831744976333952,
+              "28": 0.021632643216070675,
+              "29": 0.015215906206719204,
+              "30": 0.02354041284674145,
+              "31": 0.08113151816287163,
+              "32": 0.014413639566926642,
+              "33": 0.021010897616785384
+            },
+            "confidence": 0.06530139769534021
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 14261,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 34,
+          "inference_seconds": 0.6687912829220295,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[standard]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.1704705730080605
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size type [SEP] standard [SEP] plus size [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 1x [SEP] 2x [SEP] 3x [SEP] 4x [SEP] color [SEP] army green [SEP] black [SEP] navy [SEP] peach blush [SEP] bleached sand [SEP] cherry tomato [SEP] emerald [SEP] tie dye [SEP] white [SEP] lime punch [SEP] rose [SEP] dusty rose [SEP] love potion [SEP] fuchsia [SEP] thistle [SEP] rose bud [SEP] Levi's Women's Melanie Bomber Jacket (Standard & Plus Sizes) [SEP] Price: $39.06 to $100.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size type [SEP] standard [SEP] plus size [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 1x [SEP] 2x [SEP] 3x [SEP] 4x [SEP] color [SEP] army green [SEP] black [SEP] navy [SEP] peach blush [SEP] bleached sand [SEP] cherry tomato [SEP] emerald [SEP] tie dye [SEP] white [SEP] lime punch [SEP] rose [SEP] dusty rose [SEP] love potion [SEP] fuchsia [SEP] thistle [SEP] rose bud [SEP] Levi's Women's Melanie Bomber Jacket (Standard & Plus Sizes) [SEP] Price: $39.06 to $100.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars]\nclick[b01mz2ch6o]\nclick[standard]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[standard]",
+              "7": "click[plus size]",
+              "8": "click[x-small]",
+              "9": "click[small]",
+              "10": "click[medium]",
+              "11": "click[large]",
+              "12": "click[x-large]",
+              "13": "click[xx-large]",
+              "14": "click[1x]",
+              "15": "click[2x]",
+              "16": "click[3x]",
+              "17": "click[4x]",
+              "18": "click[army green]",
+              "19": "click[black]",
+              "20": "click[navy]",
+              "21": "click[peach blush]",
+              "22": "click[bleached sand]",
+              "23": "click[cherry tomato]",
+              "24": "click[emerald]",
+              "25": "click[tie dye]",
+              "26": "click[white]",
+              "27": "click[lime punch]",
+              "28": "click[rose]",
+              "29": "click[dusty rose]",
+              "30": "click[love potion]",
+              "31": "click[fuchsia]",
+              "32": "click[thistle]",
+              "33": "click[rose bud]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6a41e5a4aeeaab488a8f701ce2063e9c8e54de871cb7463bda227f188cce9949",
+      "attempts": [
+        {
+          "seconds": 0.6745149865746498,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.6746685765683651,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "31",
+            "probabilities": {
+              "0": 0.03104898194332242,
+              "1": 0.02685613623197047,
+              "2": 0.03636762910264383,
+              "3": 0.020917731127421388,
+              "4": 0.025071555582375084,
+              "5": 0.05340537581044204,
+              "6": 0.017118472662754163,
+              "7": 0.024089266975924326,
+              "8": 0.03913391425383892,
+              "9": 0.049869148256758256,
+              "10": 0.06337694382632668,
+              "11": 0.045249761373542106,
+              "12": 0.034177239502557265,
+              "13": 0.032906690315663005,
+              "14": 0.02497432564872696,
+              "15": 0.017596665254149407,
+              "16": 0.014130357121532882,
+              "17": 0.020051551248932913,
+              "18": 0.005217982418210621,
+              "19": 0.007691912654001368,
+              "20": 0.005350718068306124,
+              "21": 0.00991022726612579,
+              "22": 0.005968885679173408,
+              "23": 0.01864481337831886,
+              "24": 0.005575478667787298,
+              "25": 0.019132756455441016,
+              "26": 0.011094851041309639,
+              "27": 0.009260874282652628,
+              "28": 0.017997532498343554,
+              "29": 0.01194493810489733,
+              "30": 0.024049866134195724,
+              "31": 0.24029409161174806,
+              "32": 0.012280031509089451,
+              "33": 0.019243293991517318
+            },
+            "confidence": 0.21727270044846764
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 14431,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 34,
+          "inference_seconds": 0.6726667657494545,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[fuchsia]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.872483678162098
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size type [SEP] standard [SEP] plus size [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 1x [SEP] 2x [SEP] 3x [SEP] 4x [SEP] color [SEP] army green [SEP] black [SEP] navy [SEP] peach blush [SEP] bleached sand [SEP] cherry tomato [SEP] emerald [SEP] tie dye [SEP] white [SEP] lime punch [SEP] rose [SEP] dusty rose [SEP] love potion [SEP] fuchsia [SEP] thistle [SEP] rose bud [SEP] Levi's Women's Melanie Bomber Jacket (Standard & Plus Sizes) [SEP] Price: $39.06 to $100.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size type [SEP] standard [SEP] plus size [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 1x [SEP] 2x [SEP] 3x [SEP] 4x [SEP] color [SEP] army green [SEP] black [SEP] navy [SEP] peach blush [SEP] bleached sand [SEP] cherry tomato [SEP] emerald [SEP] tie dye [SEP] white [SEP] lime punch [SEP] rose [SEP] dusty rose [SEP] love potion [SEP] fuchsia [SEP] thistle [SEP] rose bud [SEP] Levi's Women's Melanie Bomber Jacket (Standard & Plus Sizes) [SEP] Price: $39.06 to $100.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for fuchsia colored comfortable fit levi's bomber jacket for women, and price lower than 70.00 dollars]\nclick[b01mz2ch6o]\nclick[standard]\nclick[fuchsia]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[standard]",
+              "7": "click[plus size]",
+              "8": "click[x-small]",
+              "9": "click[small]",
+              "10": "click[medium]",
+              "11": "click[large]",
+              "12": "click[x-large]",
+              "13": "click[xx-large]",
+              "14": "click[1x]",
+              "15": "click[2x]",
+              "16": "click[3x]",
+              "17": "click[4x]",
+              "18": "click[army green]",
+              "19": "click[black]",
+              "20": "click[navy]",
+              "21": "click[peach blush]",
+              "22": "click[bleached sand]",
+              "23": "click[cherry tomato]",
+              "24": "click[emerald]",
+              "25": "click[tie dye]",
+              "26": "click[white]",
+              "27": "click[lime punch]",
+              "28": "click[rose]",
+              "29": "click[dusty rose]",
+              "30": "click[love potion]",
+              "31": "click[fuchsia]",
+              "32": "click[thistle]",
+              "33": "click[rose bud]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d51046aaacb7de6871506b12331afd04cf6d8e5f2a0f46905cb17e8e413847d4",
+      "attempts": [
+        {
+          "seconds": 0.6787860132753849,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.6789526976644993,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.032919347170924824,
+              "1": 0.03225792448122466,
+              "2": 0.04475131647657056,
+              "3": 0.026414707850802504,
+              "4": 0.03316034411146944,
+              "5": 0.11185654270538048,
+              "6": 0.024374288471248774,
+              "7": 0.03221551065961936,
+              "8": 0.05393435554798569,
+              "9": 0.0756773228591845,
+              "10": 0.09850634655990709,
+              "11": 0.07055311122752295,
+              "12": 0.048561454051441744,
+              "13": 0.04625173327053703,
+              "14": 0.03530730865505547,
+              "15": 0.02435183075230192,
+              "16": 0.018614220733150128,
+              "17": 0.026199104995201054,
+              "18": 0.005158291586621635,
+              "19": 0.006862259624797504,
+              "20": 0.00523452951575658,
+              "21": 0.0076395401652112945,
+              "22": 0.005871964537757167,
+              "23": 0.011237284871412439,
+              "24": 0.005850071083861755,
+              "25": 0.013733600989203181,
+              "26": 0.009766347836982376,
+              "27": 0.007481985020263583,
+              "28": 0.012557468163848718,
+              "29": 0.007897393784109799,
+              "30": 0.020215195434442963,
+              "31": 0.02045117475306544,
+              "32": 0.009844354205489748,
+              "33": 0.01429176784764769
+            },
+            "confidence": 0.08494310460554352
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 14601,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 34,
+          "inference_seconds": 0.6768180951476097,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 2.581631515175104
+    }
+  ]
+}

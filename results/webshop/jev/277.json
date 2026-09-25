@@ -1,0 +1,715 @@
+{
+  "task_id": 277,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars",
+  "instruction_sha256": "9fd7b3cef1de60656499140e5afec08b2524e77ced9b3ee8872ce5ba54b83efd",
+  "reward": 0.75,
+  "score": 75.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 11,
+  "elapsed_seconds": 3.7705334909260273,
+  "decision_seconds": 3.163662690669298,
+  "input_tokens": 10858,
+  "output_tokens": 1151,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Search",
+      "action": "search[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.0829872265458107
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GXJ9WP6 [SEP] Salon in a Bottle Root Concealer Touch Up Spray , Instantly Covers Gray Roots , Professional Salon Quality Cover Up Gray Hair Products for Women (BLONDE) [SEP] $26.3 [SEP] B007YLMFN8 [SEP] My Secret Correctives Root Touch-Up Natural Highlight Spray - 2oz each - (MEDIUM BROWN) - 3 Cans with FREE Hairline Optimizer Comb [SEP] $30.0 [SEP] B07N6XQ3GJ [SEP] Clairol Root Touch-Up by Nice'n Easy Permanent Hair Dye, 7 Dark Blonde Hair Color, 2 Count [SEP] $11.68 [SEP] B00GXK1BEU [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Light Brown [SEP] $26.3 [SEP] B00GXKM3FG [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Darkest Brown/Black [SEP] $26.3 [SEP] B084W2CYX6 [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 2 Black, 2 count [SEP] $13.94 [SEP] B084W3BXBX [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 6G Light Golden Brown, 2 count [SEP] $13.9 [SEP] B07Z8SPVC5 [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Light Brown [SEP] $15.98 [SEP] B07NSRHCHG [SEP] Garnier Hair Color Express retouch gray hair concealer, instant gray coverage, Black, 0.68 Fluid Ounce [SEP] $14.99 [SEP] B01648QP3W [SEP] L'Oreal Paris Magic Root Cover Up Gray Concealer Spray Dark Brown 2 oz. [SEP] $9.97",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GXJ9WP6 [SEP] Salon in a Bottle Root Concealer Touch Up Spray , Instantly Covers Gray Roots , Professional Salon Quality Cover Up Gray Hair Products for Women (BLONDE) [SEP] $26.3 [SEP] B007YLMFN8 [SEP] My Secret Correctives Root Touch-Up Natural Highlight Spray - 2oz each - (MEDIUM BROWN) - 3 Cans with FREE Hairline Optimizer Comb [SEP] $30.0 [SEP] B07N6XQ3GJ [SEP] Clairol Root Touch-Up by Nice'n Easy Permanent Hair Dye, 7 Dark Blonde Hair Color, 2 Count [SEP] $11.68 [SEP] B00GXK1BEU [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Light Brown [SEP] $26.3 [SEP] B00GXKM3FG [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Darkest Brown/Black [SEP] $26.3 [SEP] B084W2CYX6 [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 2 Black, 2 count [SEP] $13.94 [SEP] B084W3BXBX [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 6G Light Golden Brown, 2 count [SEP] $13.9 [SEP] B07Z8SPVC5 [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Light Brown [SEP] $15.98 [SEP] B07NSRHCHG [SEP] Garnier Hair Color Express retouch gray hair concealer, instant gray coverage, Black, 0.68 Fluid Ounce [SEP] $14.99 [SEP] B01648QP3W [SEP] L'Oreal Paris Magic Root Cover Up Gray Concealer Spray Dark Brown 2 oz. [SEP] $9.97\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b00gxj9wp6]",
+              "3": "click[b007ylmfn8]",
+              "4": "click[b07n6xq3gj]",
+              "5": "click[b00gxk1beu]",
+              "6": "click[b00gxkm3fg]",
+              "7": "click[b084w2cyx6]",
+              "8": "click[b084w3bxbx]",
+              "9": "click[b07z8spvc5]",
+              "10": "click[b07nsrhchg]",
+              "11": "click[b01648qp3w]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "e4439cada37840131158d07ec7c5974b4ba94976e2ccb60bccadda33b65f8d81",
+      "attempts": [
+        {
+          "seconds": 0.33191702514886856,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33205896243453026,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.59,
+            "probabilities": {
+              "6": 0.0,
+              "10": 0.0,
+              "3": 0.0,
+              "7": 0.0,
+              "4": 0.26,
+              "9": 0.0,
+              "5": 0.0,
+              "2": 0.05,
+              "8": 0.01,
+              "11": 0.0,
+              "0": 0.04,
+              "1": 0.64
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1236,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5141494050621986
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07P3Z4TJV [SEP] TRESemmé Root Touch-Up Black, White, 2.5 Fl Oz [SEP] $100.0 [SEP] B0114XY1OM [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Black [SEP] $11.5 [SEP] B0128VJ7R0 [SEP] Hair Loss Concealer Fibers 200 Grams 7 Oz. With Bottle By Finally Hair 50g*4 (Dark Brown w/touch of red) *** SEE PICTURES - We have 2 different dark brown shades *** [SEP] $48.88 [SEP] B07N33D4TH [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Medium Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07N34HVW3 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Light Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07CX11NK7 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Dark Brown 2 Ounce (Pack of 2) [SEP] $48.19 [SEP] B07YDWSKJK [SEP] Revlon Total Color Permanent Hair Color, Clean and Vegan, 100% Gray Coverage Hair Dye, 60 Light Natural Brown, 3.5 oz [SEP] $7.99 [SEP] B01DPWDWG8 [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Red 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $19.94 [SEP] B01A5UHGYW [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women (Platinum Blonde) [SEP] $47.0 [SEP] B07L1PNF8W [SEP] Clairol Root Touch-Up Temporary Spray, Light Brown Hair Color, 2 Count [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07P3Z4TJV [SEP] TRESemmé Root Touch-Up Black, White, 2.5 Fl Oz [SEP] $100.0 [SEP] B0114XY1OM [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Black [SEP] $11.5 [SEP] B0128VJ7R0 [SEP] Hair Loss Concealer Fibers 200 Grams 7 Oz. With Bottle By Finally Hair 50g*4 (Dark Brown w/touch of red) *** SEE PICTURES - We have 2 different dark brown shades *** [SEP] $48.88 [SEP] B07N33D4TH [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Medium Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07N34HVW3 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Light Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07CX11NK7 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Dark Brown 2 Ounce (Pack of 2) [SEP] $48.19 [SEP] B07YDWSKJK [SEP] Revlon Total Color Permanent Hair Color, Clean and Vegan, 100% Gray Coverage Hair Dye, 60 Light Natural Brown, 3.5 oz [SEP] $7.99 [SEP] B01DPWDWG8 [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Red 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $19.94 [SEP] B01A5UHGYW [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women (Platinum Blonde) [SEP] $47.0 [SEP] B07L1PNF8W [SEP] Clairol Root Touch-Up Temporary Spray, Light Brown Hair Color, 2 Count [SEP] $100.0\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07p3z4tjv]",
+              "4": "click[b0114xy1om]",
+              "5": "click[b0128vj7r0]",
+              "6": "click[b07n33d4th]",
+              "7": "click[b07n34hvw3]",
+              "8": "click[b07cx11nk7]",
+              "9": "click[b07ydwskjk]",
+              "10": "click[b01dpwdwg8]",
+              "11": "click[b01a5uhgyw]",
+              "12": "click[b07l1pnf8w]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "e771d865555ba8fda00b7b770de93c6e3e6aa491ec5d2076f0006252c0b22fac",
+      "attempts": [
+        {
+          "seconds": 0.3582935258746147,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3584314025938511,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.19,
+            "probabilities": {
+              "5": 0.0,
+              "3": 0.0,
+              "9": 0.0,
+              "8": 0.0,
+              "6": 0.15,
+              "0": 0.2,
+              "4": 0.01,
+              "10": 0.0,
+              "11": 0.01,
+              "12": 0.01,
+              "7": 0.18,
+              "1": 0.18,
+              "2": 0.26
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1306,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9523958116769791
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01DPWDXTE [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $18.3 [SEP] B08GS8ZDYX [SEP] Kreesi Short Blonde Wigs for Women Synthetic Straight Blonde Bob Wig with Dark Brown Roots Shoulder Length Blonde Ombre Wig Middle Part Heat Resistant Fiber Hair Party Cosplay Wigs [SEP] $19.99 [SEP] B01A5U7K7K [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women. (Dark Brown) [SEP] $47.0 [SEP] B09PYR6984 [SEP] Unisex Hair Fibers - 5 Seconds Conceals Loss Wig Head With Hair Stand Layered Real Hair Wig Lace Curly Wigs Human Hair Red High Ponytail Wig Human Hair With Frontal And Bundles [SEP] $0.59 [SEP] B07WK9BBMZ [SEP] Gray Riddance Hair Color Spray, All Natural, Brown (2 Fluid Ounce Spray Bottle) [SEP] $17.95 [SEP] B09GT9SHQH [SEP] Ready to Wear Quick Cover Root Touch Up - Dye Free Hair Growth Cover Up (Black) [SEP] $34.5 [SEP] B071XHWM4Z [SEP] REECHO 20\" 1-pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hair pieces for Women 5 Clips 4.5 Oz Per Piece - Jet Black [SEP] $9.99 [SEP] B000KOSF30 [SEP] L'Oreal Paris Superior Preference Fade-Defying + Shine Permanent Hair Color, 9GR Light Golden Reddish Blonde, Pack of 1, Hair Dye [SEP] $10.49 [SEP] B00QQKPIC8 [SEP] REECHO 20\" 1-Pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hairpieces for Women 5 Clips 4.5 Oz per Piece - Natural Black [SEP] $9.99 [SEP] B08QXB1BLF [SEP] Herbishh Hair Color Shampoo for Gray Hair – Magic Hair Dye Shampoo – Colors Hair in Minutes–Long Lasting–500 Ml–3-In-1 Hair Color–Ammonia-Free | Herbishh (Dark Brown) [SEP] $39.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01DPWDXTE [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $18.3 [SEP] B08GS8ZDYX [SEP] Kreesi Short Blonde Wigs for Women Synthetic Straight Blonde Bob Wig with Dark Brown Roots Shoulder Length Blonde Ombre Wig Middle Part Heat Resistant Fiber Hair Party Cosplay Wigs [SEP] $19.99 [SEP] B01A5U7K7K [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women. (Dark Brown) [SEP] $47.0 [SEP] B09PYR6984 [SEP] Unisex Hair Fibers - 5 Seconds Conceals Loss Wig Head With Hair Stand Layered Real Hair Wig Lace Curly Wigs Human Hair Red High Ponytail Wig Human Hair With Frontal And Bundles [SEP] $0.59 [SEP] B07WK9BBMZ [SEP] Gray Riddance Hair Color Spray, All Natural, Brown (2 Fluid Ounce Spray Bottle) [SEP] $17.95 [SEP] B09GT9SHQH [SEP] Ready to Wear Quick Cover Root Touch Up - Dye Free Hair Growth Cover Up (Black) [SEP] $34.5 [SEP] B071XHWM4Z [SEP] REECHO 20\" 1-pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hair pieces for Women 5 Clips 4.5 Oz Per Piece - Jet Black [SEP] $9.99 [SEP] B000KOSF30 [SEP] L'Oreal Paris Superior Preference Fade-Defying + Shine Permanent Hair Color, 9GR Light Golden Reddish Blonde, Pack of 1, Hair Dye [SEP] $10.49 [SEP] B00QQKPIC8 [SEP] REECHO 20\" 1-Pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hairpieces for Women 5 Clips 4.5 Oz per Piece - Natural Black [SEP] $9.99 [SEP] B08QXB1BLF [SEP] Herbishh Hair Color Shampoo for Gray Hair – Magic Hair Dye Shampoo – Colors Hair in Minutes–Long Lasting–500 Ml–3-In-1 Hair Color–Ammonia-Free | Herbishh (Dark Brown) [SEP] $39.99\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b01dpwdxte]",
+              "4": "click[b08gs8zdyx]",
+              "5": "click[b01a5u7k7k]",
+              "6": "click[b09pyr6984]",
+              "7": "click[b07wk9bbmz]",
+              "8": "click[b09gt9shqh]",
+              "9": "click[b071xhwm4z]",
+              "10": "click[b000kosf30]",
+              "11": "click[b00qqkpic8]",
+              "12": "click[b08qxb1blf]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "2f2cd091ce126236648ce26a0fb83d96a18946d9b4ea40df5afa19f8f9deadaa",
+      "attempts": [
+        {
+          "seconds": 0.3447466604411602,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.344910454005003,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "confidence": 0.5,
+            "probabilities": {
+              "12": 0.0,
+              "8": 0.0,
+              "10": 0.0,
+              "7": 0.0,
+              "2": 0.19,
+              "9": 0.0,
+              "3": 0.55,
+              "11": 0.0,
+              "5": 0.0,
+              "4": 0.0,
+              "1": 0.14,
+              "0": 0.12,
+              "6": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1293,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b01dpwdxte]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.324722271412611
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] dark blonde [SEP] dark brown [SEP] light blonde [SEP] light brown [SEP] light golden brown [SEP] light to medium blonde [SEP] light to medium [SEP] medium blonde [SEP] medium brown [SEP] red [SEP] size [SEP] 2 ounce (pack of 1) [SEP] 2 ounce (pack of 2) [SEP] 2 fl oz (pack of 1) [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] Price: $18.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] dark blonde [SEP] dark brown [SEP] light blonde [SEP] light brown [SEP] light golden brown [SEP] light to medium blonde [SEP] light to medium [SEP] medium blonde [SEP] medium brown [SEP] red [SEP] size [SEP] 2 ounce (pack of 1) [SEP] 2 ounce (pack of 2) [SEP] 2 fl oz (pack of 1) [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] Price: $18.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[b01dpwdxte]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[black]",
+              "7": "click[dark blonde]",
+              "8": "click[dark brown]",
+              "9": "click[light blonde]",
+              "10": "click[light brown]",
+              "11": "click[light golden brown]",
+              "12": "click[light to medium blonde]",
+              "13": "click[light to medium]",
+              "14": "click[medium blonde]",
+              "15": "click[medium brown]",
+              "16": "click[red]",
+              "17": "click[2 ounce (pack of 1)]",
+              "18": "click[2 ounce (pack of 2)]",
+              "19": "click[2 fl oz (pack of 1)]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "e795e4e4ac8864b22f4c870267a9d904bc14b759d6387610802d94a9aec895da",
+      "attempts": [
+        {
+          "seconds": 0.3505658693611622,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.35069505125284195,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.4,
+            "probabilities": {
+              "0": 0.44,
+              "2": 0.0,
+              "4": 0.0,
+              "11": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              "3": 0.0,
+              "15": 0.0,
+              "10": 0.0,
+              "5": 0.12,
+              "14": 0.0,
+              "13": 0.0,
+              "16": 0.0,
+              "17": 0.01,
+              "7": 0.3,
+              "1": 0.05,
+              "18": 0.08,
+              "19": 0.0,
+              "6": 0.0,
+              "12": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 971,
+          "output_tokens": 167
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.6865283772349358
+    },
+    {
+      "step": 5,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Search",
+      "action": "search[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.7573810629546642
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GXJ9WP6 [SEP] Salon in a Bottle Root Concealer Touch Up Spray , Instantly Covers Gray Roots , Professional Salon Quality Cover Up Gray Hair Products for Women (BLONDE) [SEP] $26.3 [SEP] B007YLMFN8 [SEP] My Secret Correctives Root Touch-Up Natural Highlight Spray - 2oz each - (MEDIUM BROWN) - 3 Cans with FREE Hairline Optimizer Comb [SEP] $30.0 [SEP] B07N6XQ3GJ [SEP] Clairol Root Touch-Up by Nice'n Easy Permanent Hair Dye, 7 Dark Blonde Hair Color, 2 Count [SEP] $11.68 [SEP] B00GXK1BEU [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Light Brown [SEP] $26.3 [SEP] B00GXKM3FG [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Darkest Brown/Black [SEP] $26.3 [SEP] B084W2CYX6 [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 2 Black, 2 count [SEP] $13.94 [SEP] B084W3BXBX [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 6G Light Golden Brown, 2 count [SEP] $13.9 [SEP] B07Z8SPVC5 [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Light Brown [SEP] $15.98 [SEP] B07NSRHCHG [SEP] Garnier Hair Color Express retouch gray hair concealer, instant gray coverage, Black, 0.68 Fluid Ounce [SEP] $14.99 [SEP] B01648QP3W [SEP] L'Oreal Paris Magic Root Cover Up Gray Concealer Spray Dark Brown 2 oz. [SEP] $9.97",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GXJ9WP6 [SEP] Salon in a Bottle Root Concealer Touch Up Spray , Instantly Covers Gray Roots , Professional Salon Quality Cover Up Gray Hair Products for Women (BLONDE) [SEP] $26.3 [SEP] B007YLMFN8 [SEP] My Secret Correctives Root Touch-Up Natural Highlight Spray - 2oz each - (MEDIUM BROWN) - 3 Cans with FREE Hairline Optimizer Comb [SEP] $30.0 [SEP] B07N6XQ3GJ [SEP] Clairol Root Touch-Up by Nice'n Easy Permanent Hair Dye, 7 Dark Blonde Hair Color, 2 Count [SEP] $11.68 [SEP] B00GXK1BEU [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Light Brown [SEP] $26.3 [SEP] B00GXKM3FG [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Darkest Brown/Black [SEP] $26.3 [SEP] B084W2CYX6 [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 2 Black, 2 count [SEP] $13.94 [SEP] B084W3BXBX [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 6G Light Golden Brown, 2 count [SEP] $13.9 [SEP] B07Z8SPVC5 [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Light Brown [SEP] $15.98 [SEP] B07NSRHCHG [SEP] Garnier Hair Color Express retouch gray hair concealer, instant gray coverage, Black, 0.68 Fluid Ounce [SEP] $14.99 [SEP] B01648QP3W [SEP] L'Oreal Paris Magic Root Cover Up Gray Concealer Spray Dark Brown 2 oz. [SEP] $9.97\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[b01dpwdxte]\nclick[back to search]\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b00gxj9wp6]",
+              "3": "click[b007ylmfn8]",
+              "4": "click[b07n6xq3gj]",
+              "5": "click[b00gxk1beu]",
+              "6": "click[b00gxkm3fg]",
+              "7": "click[b084w2cyx6]",
+              "8": "click[b084w3bxbx]",
+              "9": "click[b07z8spvc5]",
+              "10": "click[b07nsrhchg]",
+              "11": "click[b01648qp3w]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "018d1556b18c86bb2690920d93984878f32f85d2627fa45b24c737c87636c6a5",
+      "attempts": [
+        {
+          "seconds": 0.35889748483896255,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3590238243341446,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.38,
+            "probabilities": {
+              "8": 0.03,
+              "7": 0.0,
+              "3": 0.0,
+              "10": 0.0,
+              "1": 0.43,
+              "5": 0.01,
+              "4": 0.38,
+              "6": 0.0,
+              "9": 0.01,
+              "2": 0.13,
+              "11": 0.0,
+              "0": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1290,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.190894413739443
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07P3Z4TJV [SEP] TRESemmé Root Touch-Up Black, White, 2.5 Fl Oz [SEP] $100.0 [SEP] B0114XY1OM [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Black [SEP] $11.5 [SEP] B0128VJ7R0 [SEP] Hair Loss Concealer Fibers 200 Grams 7 Oz. With Bottle By Finally Hair 50g*4 (Dark Brown w/touch of red) *** SEE PICTURES - We have 2 different dark brown shades *** [SEP] $48.88 [SEP] B07N33D4TH [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Medium Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07N34HVW3 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Light Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07CX11NK7 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Dark Brown 2 Ounce (Pack of 2) [SEP] $48.19 [SEP] B07YDWSKJK [SEP] Revlon Total Color Permanent Hair Color, Clean and Vegan, 100% Gray Coverage Hair Dye, 60 Light Natural Brown, 3.5 oz [SEP] $7.99 [SEP] B01DPWDWG8 [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Red 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $19.94 [SEP] B01A5UHGYW [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women (Platinum Blonde) [SEP] $47.0 [SEP] B07L1PNF8W [SEP] Clairol Root Touch-Up Temporary Spray, Light Brown Hair Color, 2 Count [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07P3Z4TJV [SEP] TRESemmé Root Touch-Up Black, White, 2.5 Fl Oz [SEP] $100.0 [SEP] B0114XY1OM [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Black [SEP] $11.5 [SEP] B0128VJ7R0 [SEP] Hair Loss Concealer Fibers 200 Grams 7 Oz. With Bottle By Finally Hair 50g*4 (Dark Brown w/touch of red) *** SEE PICTURES - We have 2 different dark brown shades *** [SEP] $48.88 [SEP] B07N33D4TH [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Medium Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07N34HVW3 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Light Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07CX11NK7 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Dark Brown 2 Ounce (Pack of 2) [SEP] $48.19 [SEP] B07YDWSKJK [SEP] Revlon Total Color Permanent Hair Color, Clean and Vegan, 100% Gray Coverage Hair Dye, 60 Light Natural Brown, 3.5 oz [SEP] $7.99 [SEP] B01DPWDWG8 [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Red 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $19.94 [SEP] B01A5UHGYW [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women (Platinum Blonde) [SEP] $47.0 [SEP] B07L1PNF8W [SEP] Clairol Root Touch-Up Temporary Spray, Light Brown Hair Color, 2 Count [SEP] $100.0\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[b01dpwdxte]\nclick[back to search]\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07p3z4tjv]",
+              "4": "click[b0114xy1om]",
+              "5": "click[b0128vj7r0]",
+              "6": "click[b07n33d4th]",
+              "7": "click[b07n34hvw3]",
+              "8": "click[b07cx11nk7]",
+              "9": "click[b07ydwskjk]",
+              "10": "click[b01dpwdwg8]",
+              "11": "click[b01a5uhgyw]",
+              "12": "click[b07l1pnf8w]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "6bec1334b2129fd9ced19893e887f0f8903c3bf91a147d4aef8d381ebb72b4ee",
+      "attempts": [
+        {
+          "seconds": 0.4027947075664997,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4029570110142231,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.26,
+            "probabilities": {
+              "6": 0.09,
+              "10": 0.01,
+              "8": 0.0,
+              "3": 0.01,
+              "7": 0.29,
+              "5": 0.0,
+              "1": 0.22,
+              "4": 0.01,
+              "9": 0.01,
+              "0": 0.02,
+              "11": 0.01,
+              "12": 0.01,
+              "2": 0.32
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1360,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.6698700189590454
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01DPWDXTE [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $18.3 [SEP] B08GS8ZDYX [SEP] Kreesi Short Blonde Wigs for Women Synthetic Straight Blonde Bob Wig with Dark Brown Roots Shoulder Length Blonde Ombre Wig Middle Part Heat Resistant Fiber Hair Party Cosplay Wigs [SEP] $19.99 [SEP] B01A5U7K7K [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women. (Dark Brown) [SEP] $47.0 [SEP] B09PYR6984 [SEP] Unisex Hair Fibers - 5 Seconds Conceals Loss Wig Head With Hair Stand Layered Real Hair Wig Lace Curly Wigs Human Hair Red High Ponytail Wig Human Hair With Frontal And Bundles [SEP] $0.59 [SEP] B07WK9BBMZ [SEP] Gray Riddance Hair Color Spray, All Natural, Brown (2 Fluid Ounce Spray Bottle) [SEP] $17.95 [SEP] B09GT9SHQH [SEP] Ready to Wear Quick Cover Root Touch Up - Dye Free Hair Growth Cover Up (Black) [SEP] $34.5 [SEP] B071XHWM4Z [SEP] REECHO 20\" 1-pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hair pieces for Women 5 Clips 4.5 Oz Per Piece - Jet Black [SEP] $9.99 [SEP] B000KOSF30 [SEP] L'Oreal Paris Superior Preference Fade-Defying + Shine Permanent Hair Color, 9GR Light Golden Reddish Blonde, Pack of 1, Hair Dye [SEP] $10.49 [SEP] B00QQKPIC8 [SEP] REECHO 20\" 1-Pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hairpieces for Women 5 Clips 4.5 Oz per Piece - Natural Black [SEP] $9.99 [SEP] B08QXB1BLF [SEP] Herbishh Hair Color Shampoo for Gray Hair – Magic Hair Dye Shampoo – Colors Hair in Minutes–Long Lasting–500 Ml–3-In-1 Hair Color–Ammonia-Free | Herbishh (Dark Brown) [SEP] $39.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01DPWDXTE [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $18.3 [SEP] B08GS8ZDYX [SEP] Kreesi Short Blonde Wigs for Women Synthetic Straight Blonde Bob Wig with Dark Brown Roots Shoulder Length Blonde Ombre Wig Middle Part Heat Resistant Fiber Hair Party Cosplay Wigs [SEP] $19.99 [SEP] B01A5U7K7K [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women. (Dark Brown) [SEP] $47.0 [SEP] B09PYR6984 [SEP] Unisex Hair Fibers - 5 Seconds Conceals Loss Wig Head With Hair Stand Layered Real Hair Wig Lace Curly Wigs Human Hair Red High Ponytail Wig Human Hair With Frontal And Bundles [SEP] $0.59 [SEP] B07WK9BBMZ [SEP] Gray Riddance Hair Color Spray, All Natural, Brown (2 Fluid Ounce Spray Bottle) [SEP] $17.95 [SEP] B09GT9SHQH [SEP] Ready to Wear Quick Cover Root Touch Up - Dye Free Hair Growth Cover Up (Black) [SEP] $34.5 [SEP] B071XHWM4Z [SEP] REECHO 20\" 1-pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hair pieces for Women 5 Clips 4.5 Oz Per Piece - Jet Black [SEP] $9.99 [SEP] B000KOSF30 [SEP] L'Oreal Paris Superior Preference Fade-Defying + Shine Permanent Hair Color, 9GR Light Golden Reddish Blonde, Pack of 1, Hair Dye [SEP] $10.49 [SEP] B00QQKPIC8 [SEP] REECHO 20\" 1-Pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hairpieces for Women 5 Clips 4.5 Oz per Piece - Natural Black [SEP] $9.99 [SEP] B08QXB1BLF [SEP] Herbishh Hair Color Shampoo for Gray Hair – Magic Hair Dye Shampoo – Colors Hair in Minutes–Long Lasting–500 Ml–3-In-1 Hair Color–Ammonia-Free | Herbishh (Dark Brown) [SEP] $39.99\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[b01dpwdxte]\nclick[back to search]\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b01dpwdxte]",
+              "4": "click[b08gs8zdyx]",
+              "5": "click[b01a5u7k7k]",
+              "6": "click[b09pyr6984]",
+              "7": "click[b07wk9bbmz]",
+              "8": "click[b09gt9shqh]",
+              "9": "click[b071xhwm4z]",
+              "10": "click[b000kosf30]",
+              "11": "click[b00qqkpic8]",
+              "12": "click[b08qxb1blf]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "5f80da0c335b1e59445d6e5e18a7ee706ad63e9520195d99a54e815f1900b3e3",
+      "attempts": [
+        {
+          "seconds": 0.34625817835330963,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.346380565315485,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "confidence": 0.46,
+            "probabilities": {
+              "7": 0.0,
+              "8": 0.0,
+              "3": 0.52,
+              "10": 0.0,
+              "5": 0.0,
+              "1": 0.22,
+              "9": 0.0,
+              "12": 0.0,
+              "6": 0.0,
+              "2": 0.23,
+              "4": 0.0,
+              "11": 0.0,
+              "0": 0.03
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1347,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b01dpwdxte]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.0399392433464527
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] dark blonde [SEP] dark brown [SEP] light blonde [SEP] light brown [SEP] light golden brown [SEP] light to medium blonde [SEP] light to medium [SEP] medium blonde [SEP] medium brown [SEP] red [SEP] size [SEP] 2 ounce (pack of 1) [SEP] 2 ounce (pack of 2) [SEP] 2 fl oz (pack of 1) [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] Price: $18.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] dark blonde [SEP] dark brown [SEP] light blonde [SEP] light brown [SEP] light golden brown [SEP] light to medium blonde [SEP] light to medium [SEP] medium blonde [SEP] medium brown [SEP] red [SEP] size [SEP] 2 ounce (pack of 1) [SEP] 2 ounce (pack of 2) [SEP] 2 fl oz (pack of 1) [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] Price: $18.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[b01dpwdxte]\nclick[back to search]\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[b01dpwdxte]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[black]",
+              "7": "click[dark blonde]",
+              "8": "click[dark brown]",
+              "9": "click[light blonde]",
+              "10": "click[light brown]",
+              "11": "click[light golden brown]",
+              "12": "click[light to medium blonde]",
+              "13": "click[light to medium]",
+              "14": "click[medium blonde]",
+              "15": "click[medium brown]",
+              "16": "click[red]",
+              "17": "click[2 ounce (pack of 1)]",
+              "18": "click[2 ounce (pack of 2)]",
+              "19": "click[2 fl oz (pack of 1)]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "c2bc51f7d2f6a462563b9bf63a29ac7977c94df32d1e1daa935cd73ae693b613",
+      "attempts": [
+        {
+          "seconds": 0.34071630612015724,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.34082360938191414,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "7",
+            "confidence": 0.37,
+            "probabilities": {
+              "16": 0.0,
+              "17": 0.01,
+              "18": 0.13,
+              "11": 0.0,
+              "0": 0.17,
+              "4": 0.01,
+              "6": 0.0,
+              "7": 0.41000000000000003,
+              "8": 0.0,
+              "15": 0.0,
+              "2": 0.0,
+              "10": 0.0,
+              "3": 0.0,
+              "12": 0.0,
+              "14": 0.0,
+              "9": 0.0,
+              "13": 0.0,
+              "19": 0.0,
+              "1": 0.06,
+              "5": 0.2
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1025,
+          "output_tokens": 167
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[dark blonde]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.401501949876547
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] dark blonde [SEP] dark brown [SEP] light blonde [SEP] light brown [SEP] light golden brown [SEP] light to medium blonde [SEP] light to medium [SEP] medium blonde [SEP] medium brown [SEP] red [SEP] size [SEP] 2 ounce (pack of 1) [SEP] 2 ounce (pack of 2) [SEP] 2 fl oz (pack of 1) [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] Price: $18.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] dark blonde [SEP] dark brown [SEP] light blonde [SEP] light brown [SEP] light golden brown [SEP] light to medium blonde [SEP] light to medium [SEP] medium blonde [SEP] medium brown [SEP] red [SEP] size [SEP] 2 ounce (pack of 1) [SEP] 2 ounce (pack of 2) [SEP] 2 fl oz (pack of 1) [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] Price: $18.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[b01dpwdxte]\nclick[back to search]\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[b01dpwdxte]\nclick[dark blonde]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[black]",
+              "7": "click[dark blonde]",
+              "8": "click[dark brown]",
+              "9": "click[light blonde]",
+              "10": "click[light brown]",
+              "11": "click[light golden brown]",
+              "12": "click[light to medium blonde]",
+              "13": "click[light to medium]",
+              "14": "click[medium blonde]",
+              "15": "click[medium brown]",
+              "16": "click[red]",
+              "17": "click[2 ounce (pack of 1)]",
+              "18": "click[2 ounce (pack of 2)]",
+              "19": "click[2 fl oz (pack of 1)]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "179fa98f46ff65d4e7f4e7dfeb4ff6124e06bbf0460bc71a1fb1ef610a64b6cb",
+      "attempts": [
+        {
+          "seconds": 0.3282305523753166,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.32838181033730507,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.32,
+            "probabilities": {
+              "6": 0.0,
+              "13": 0.0,
+              "11": 0.0,
+              "5": 0.37,
+              "18": 0.29,
+              "1": 0.11,
+              "4": 0.01,
+              "17": 0.03,
+              "19": 0.01,
+              "8": 0.0,
+              "14": 0.0,
+              "15": 0.0,
+              "12": 0.0,
+              "3": 0.01,
+              "0": 0.13,
+              "7": 0.04,
+              "10": 0.0,
+              "2": 0.0,
+              "16": 0.0,
+              "9": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1030,
+          "output_tokens": 167
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.75,
+      "done": true,
+      "elapsed_seconds": 3.770529478788376
+    }
+  ]
+}

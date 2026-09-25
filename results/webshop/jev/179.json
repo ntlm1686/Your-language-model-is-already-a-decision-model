@@ -1,0 +1,154 @@
+{
+  "task_id": 179,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i want mitchum roll-on anti-perspirant, and price lower than 130.00 dollars",
+  "instruction_sha256": "774933b725eab7918fb549f3a117fb45497b27456a68befaadd3678bccf8774b",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 0.7730904780328274,
+  "decision_seconds": 0.6694427281618118,
+  "input_tokens": 1800,
+  "output_tokens": 162,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want mitchum roll-on anti-perspirant, and price lower than 130.00 dollars [SEP] Search",
+      "action": "search[i want mitchum roll-on anti-perspirant, and price lower than 130.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.03193274885416031
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i want mitchum roll-on anti-perspirant, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B01IC0YSXE [SEP] Mitchum Roll-On Antiperspirant and Deodorant for Men, Unscented, 3.4 Fluid Ounce (Pack of 3) [SEP] $18.99 [SEP] B0045ZQ1J0 [SEP] Mitchum Roll On Unperfumed Anti-Perspirant 100 ml [SEP] $12.08 [SEP] B00IMX6ZP6 [SEP] Mitchum Roll-On Anti-Perspirant and Deodorant for Men | Powerful Anti-Sweat | Unscented 3.4 Oz (Pack of 2) [SEP] $100.0 [SEP] B01KCJCFK6 [SEP] Mitchum Invisible Anti-Perspirant & Deodorant Roll-On, Unscented 3.4 oz (Pack of 2) [SEP] $11.94 [SEP] B078VKP9Y6 [SEP] PACK OF 6 - Mitchum Men Invisible Roll-On Anti-Perspirant & Deodorant Unscented, 3.4 FL OZ [SEP] $43.25 [SEP] B00JCG89AG [SEP] Mitchum Antiperspirant Deodorant Roll On for Men, 48 Hr Protection, Dermatologist Tested, Unscented, 3.4 oz [SEP] $100.0 [SEP] B01EA9Y3AE [SEP] Mitchum Men 48HR Protection Roll-On Deodorant & Anti-Perspirant, Sport, 100 ml [SEP] $11.49 [SEP] B00WTN1I16 [SEP] Mitchum Invisible Anti-Perspirant & Deodorant Roll-On, Unscented 3.4 oz (Pack of 4) [SEP] $20.95 [SEP] B00LHSIV14 [SEP] Mitchum Roll-On Anti-perspirant Powder Fresh, 3.38 Ounce [SEP] $9.99 [SEP] B01M7Z2493 [SEP] Mitchum Advanced Anti- Perspirant & Deodorant, Unscented, 3.4 oz by Mitchum - Pack of 4 [SEP] $27.99",
+      "request": {
+        "state": "Shopping instruction:\ni want mitchum roll-on anti-perspirant, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want mitchum roll-on anti-perspirant, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B01IC0YSXE [SEP] Mitchum Roll-On Antiperspirant and Deodorant for Men, Unscented, 3.4 Fluid Ounce (Pack of 3) [SEP] $18.99 [SEP] B0045ZQ1J0 [SEP] Mitchum Roll On Unperfumed Anti-Perspirant 100 ml [SEP] $12.08 [SEP] B00IMX6ZP6 [SEP] Mitchum Roll-On Anti-Perspirant and Deodorant for Men | Powerful Anti-Sweat | Unscented 3.4 Oz (Pack of 2) [SEP] $100.0 [SEP] B01KCJCFK6 [SEP] Mitchum Invisible Anti-Perspirant & Deodorant Roll-On, Unscented 3.4 oz (Pack of 2) [SEP] $11.94 [SEP] B078VKP9Y6 [SEP] PACK OF 6 - Mitchum Men Invisible Roll-On Anti-Perspirant & Deodorant Unscented, 3.4 FL OZ [SEP] $43.25 [SEP] B00JCG89AG [SEP] Mitchum Antiperspirant Deodorant Roll On for Men, 48 Hr Protection, Dermatologist Tested, Unscented, 3.4 oz [SEP] $100.0 [SEP] B01EA9Y3AE [SEP] Mitchum Men 48HR Protection Roll-On Deodorant & Anti-Perspirant, Sport, 100 ml [SEP] $11.49 [SEP] B00WTN1I16 [SEP] Mitchum Invisible Anti-Perspirant & Deodorant Roll-On, Unscented 3.4 oz (Pack of 4) [SEP] $20.95 [SEP] B00LHSIV14 [SEP] Mitchum Roll-On Anti-perspirant Powder Fresh, 3.38 Ounce [SEP] $9.99 [SEP] B01M7Z2493 [SEP] Mitchum Advanced Anti- Perspirant & Deodorant, Unscented, 3.4 oz by Mitchum - Pack of 4 [SEP] $27.99\n\nRecent actions:\nsearch[i want mitchum roll-on anti-perspirant, and price lower than 130.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b01ic0ysxe]",
+              "3": "click[b0045zq1j0]",
+              "4": "click[b00imx6zp6]",
+              "5": "click[b01kcjcfk6]",
+              "6": "click[b078vkp9y6]",
+              "7": "click[b00jcg89ag]",
+              "8": "click[b01ea9y3ae]",
+              "9": "click[b00wtn1i16]",
+              "10": "click[b00lhsiv14]",
+              "11": "click[b01m7z2493]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "ec28aa8fe0ce3e75ade02c0745d3b3661f34ab7aa9d932d9d6b9a6d8c0d9da6b",
+      "attempts": [
+        {
+          "seconds": 0.34452594071626663,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.34464217722415924,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.46,
+            "probabilities": {
+              "3": 0.17,
+              "9": 0.01,
+              "8": 0.03,
+              "6": 0.01,
+              "0": 0.01,
+              "4": 0.05,
+              "10": 0.09,
+              "11": 0.02,
+              "2": 0.52,
+              "7": 0.01,
+              "1": 0.01,
+              "5": 0.07
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1206,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b01ic0ysxe]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.39873993769288063
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i want mitchum roll-on anti-perspirant, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Mitchum Roll-On Antiperspirant and Deodorant for Men, Unscented, 3.4 Fluid Ounce (Pack of 3) [SEP] Price: $18.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want mitchum roll-on anti-perspirant, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want mitchum roll-on anti-perspirant, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Mitchum Roll-On Antiperspirant and Deodorant for Men, Unscented, 3.4 Fluid Ounce (Pack of 3) [SEP] Price: $18.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want mitchum roll-on anti-perspirant, and price lower than 130.00 dollars]\nclick[b01ic0ysxe]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "36dc421129faf42697df07918e1f7759fac6ac131213dfd9676defb134894149",
+      "attempts": [
+        {
+          "seconds": 0.3247000426054001,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3248005509376526,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.99,
+            "probabilities": {
+              "0": 0.0,
+              "2": 0.0,
+              "1": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "5": 1.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 594,
+          "output_tokens": 59
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 0.7730878330767155
+    }
+  ]
+}

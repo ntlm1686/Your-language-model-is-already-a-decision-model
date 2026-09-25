@@ -1,0 +1,362 @@
+{
+  "task_id": 157,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars",
+  "instruction_sha256": "019c4a16371afc61985dc52e747750bd5e5766d95cf8a40e1ef283c75c46d488",
+  "reward": 0.75,
+  "score": 75.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 1.550537422299385,
+  "decision_seconds": 1.257197517901659,
+  "input_tokens": 27116,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Search",
+      "action": "search[i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.0838615633547306
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09PJBQYXR [SEP] KkSLirnhs Women High Waisted Pants Wide Leg Denim Jeans Retro Straight Casual Loose Wide Leg Jeans [SEP] $27.41 to $28.3 [SEP] B07MK3Z1XN [SEP] Wrangler Men's Retro Premium Slim Fit Straight Leg Jean [SEP] $25.29 to $93.64 [SEP] B09CGSZHNW [SEP] Elneeya Women's Spaghetti Strap Jumpsuit Racerback Loose Fit Harem Pants Plus Size Print Overall Casual Suspender Rompers [SEP] $12.99 to $16.99 [SEP] B09HYNF2MN [SEP] Men's Casual Baggy Wide Leg Jeans Hip Hop Loose Straight Fit Denim Pants Relaxed Stylish Streetwear Cargo Jean [SEP] $22.67 to $23.87 [SEP] B09LD3823V [SEP] Mens Jeans Loose Fit Baggy Jeans Straight Wide Leg Denim Pants Plus Size Relaxed Fit Trousers Streetwear [SEP] $19.99 to $25.77 [SEP] B08QSBBPWM [SEP] xoxing Women Jeans Slim Plus Size Ripped Hole Long Skinny Stretch Solid Color Denim Regular Pants (B) [SEP] $18.68 to $28.98 [SEP] B07J5QCDYJ [SEP] Men’s Stretch Jean Style Chef Pant (XS-3X) [SEP] $29.98 to $32.98 [SEP] B073S71M8D [SEP] Wrangler Authentics Men's Premium Flex Straight Leg Stretch Jean [SEP] $39.99 [SEP] B09P58SPMF [SEP] Mens Jeans Relaxed Fit Ripped Distressed Destroyed Straight Fit Washed Denim Jeans [SEP] $27.57 to $35.05",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09PJBQYXR [SEP] KkSLirnhs Women High Waisted Pants Wide Leg Denim Jeans Retro Straight Casual Loose Wide Leg Jeans [SEP] $27.41 to $28.3 [SEP] B07MK3Z1XN [SEP] Wrangler Men's Retro Premium Slim Fit Straight Leg Jean [SEP] $25.29 to $93.64 [SEP] B09CGSZHNW [SEP] Elneeya Women's Spaghetti Strap Jumpsuit Racerback Loose Fit Harem Pants Plus Size Print Overall Casual Suspender Rompers [SEP] $12.99 to $16.99 [SEP] B09HYNF2MN [SEP] Men's Casual Baggy Wide Leg Jeans Hip Hop Loose Straight Fit Denim Pants Relaxed Stylish Streetwear Cargo Jean [SEP] $22.67 to $23.87 [SEP] B09LD3823V [SEP] Mens Jeans Loose Fit Baggy Jeans Straight Wide Leg Denim Pants Plus Size Relaxed Fit Trousers Streetwear [SEP] $19.99 to $25.77 [SEP] B08QSBBPWM [SEP] xoxing Women Jeans Slim Plus Size Ripped Hole Long Skinny Stretch Solid Color Denim Regular Pants (B) [SEP] $18.68 to $28.98 [SEP] B07J5QCDYJ [SEP] Men’s Stretch Jean Style Chef Pant (XS-3X) [SEP] $29.98 to $32.98 [SEP] B073S71M8D [SEP] Wrangler Authentics Men's Premium Flex Straight Leg Stretch Jean [SEP] $39.99 [SEP] B09P58SPMF [SEP] Mens Jeans Relaxed Fit Ripped Distressed Destroyed Straight Fit Washed Denim Jeans [SEP] $27.57 to $35.05\n\nRecent actions:\nsearch[i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b099z4t56c]",
+              "3": "click[b09pjbqyxr]",
+              "4": "click[b07mk3z1xn]",
+              "5": "click[b09cgszhnw]",
+              "6": "click[b09hynf2mn]",
+              "7": "click[b09ld3823v]",
+              "8": "click[b08qsbbpwm]",
+              "9": "click[b07j5qcdyj]",
+              "10": "click[b073s71m8d]",
+              "11": "click[b09p58spmf]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bde545617a72d6ef5d2bddfbf81208347d6ed08645841f4cb5e16f8743c8de69",
+      "attempts": [
+        {
+          "seconds": 0.37475384026765823,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3748778849840164,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.1260311155604593,
+              "1": 0.24144161990002605,
+              "2": 0.023931317112269465,
+              "3": 0.16677927423967892,
+              "4": 0.042151254019406496,
+              "5": 0.03971319165498044,
+              "6": 0.043810386980826795,
+              "7": 0.04636592928050619,
+              "8": 0.1812158046716335,
+              "9": 0.019509050510877122,
+              "10": 0.03601425887859167,
+              "11": 0.033036797190744066
+            },
+            "confidence": 0.1724817671636648
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8407,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3728710524737835,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5625863708555698
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09LD3GJLY [SEP] Men's Baggy Jeans Plus Size Loose Fit Hip Hop Pants Dance Straight Wide Leg Jeans Denim [SEP] $18.45 to $22.07 [SEP] B09PDM23MJ [SEP] VISALY Jeans for Men Elastic Waist Jeans Pants Casual Loose Relaxed Fit Straight Leg Denim Pants [SEP] $29.65 to $32.69 [SEP] B09P8KJQ3V [SEP] Gillberry Mens Cargo Pants with Pockets Straight Fit Sweatpants for Men Elastic Waist Trousers Business Golf Dress Pant [SEP] $14.79 [SEP] B09P8KR455 [SEP] Gillberry Men's Cargo Joggers Casual Loose Hiking Trousers Comfort Stretch Flat Front Drawstring Straight Fit Chino Pant [SEP] $13.09 [SEP] B09RH6WKW9 [SEP] Kcocoo Women Y2k Baggy Denim Jeans Cargo Pants High Waisted Wide Straight Leg Punk Grunge Hip Hop Boyfriend Jeans Streetwear [SEP] $22.68 [SEP] B08LL5B24D [SEP] Andongnywell Men's Slim Straight Leg Jeans Straight Stretch Denim Pocket Jean Trousers Fashion Denim Pants [SEP] $10.99 [SEP] B09JMV9DHX [SEP] Women's Straight Jeans,Ladies' Boot Cut Denim Pants with Hole,Stretch Comfy Loose Midi Rise Destroyed Boyfriend Jeans Trouser [SEP] $9.98 to $35.89 [SEP] B08LN1LK8C [SEP] Andongnywell Mens Skinny Stretch Elasticated Waist Jeans Workout Slim fit Jogger Trousers Stretchy Denim Pants [SEP] $13.09 [SEP] B09QSGWFM5 [SEP] Men's Denim Shorts Frayed Tassel Distressed Ripped Jeans Short Pants Casual Loose Zipper Front Wide Leg Bottoms [SEP] $23.39 [SEP] B09PBWD98K [SEP] Gillberry Men's Camo Cargo Pants Skinny Stretch Jeans Camouflage Print Drawstring Baggy Jogger Denim Pant Sweatpants [SEP] $19.19 to $26.19",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09LD3GJLY [SEP] Men's Baggy Jeans Plus Size Loose Fit Hip Hop Pants Dance Straight Wide Leg Jeans Denim [SEP] $18.45 to $22.07 [SEP] B09PDM23MJ [SEP] VISALY Jeans for Men Elastic Waist Jeans Pants Casual Loose Relaxed Fit Straight Leg Denim Pants [SEP] $29.65 to $32.69 [SEP] B09P8KJQ3V [SEP] Gillberry Mens Cargo Pants with Pockets Straight Fit Sweatpants for Men Elastic Waist Trousers Business Golf Dress Pant [SEP] $14.79 [SEP] B09P8KR455 [SEP] Gillberry Men's Cargo Joggers Casual Loose Hiking Trousers Comfort Stretch Flat Front Drawstring Straight Fit Chino Pant [SEP] $13.09 [SEP] B09RH6WKW9 [SEP] Kcocoo Women Y2k Baggy Denim Jeans Cargo Pants High Waisted Wide Straight Leg Punk Grunge Hip Hop Boyfriend Jeans Streetwear [SEP] $22.68 [SEP] B08LL5B24D [SEP] Andongnywell Men's Slim Straight Leg Jeans Straight Stretch Denim Pocket Jean Trousers Fashion Denim Pants [SEP] $10.99 [SEP] B09JMV9DHX [SEP] Women's Straight Jeans,Ladies' Boot Cut Denim Pants with Hole,Stretch Comfy Loose Midi Rise Destroyed Boyfriend Jeans Trouser [SEP] $9.98 to $35.89 [SEP] B08LN1LK8C [SEP] Andongnywell Mens Skinny Stretch Elasticated Waist Jeans Workout Slim fit Jogger Trousers Stretchy Denim Pants [SEP] $13.09 [SEP] B09QSGWFM5 [SEP] Men's Denim Shorts Frayed Tassel Distressed Ripped Jeans Short Pants Casual Loose Zipper Front Wide Leg Bottoms [SEP] $23.39 [SEP] B09PBWD98K [SEP] Gillberry Men's Camo Cargo Pants Skinny Stretch Jeans Camouflage Print Drawstring Baggy Jogger Denim Pant Sweatpants [SEP] $19.19 to $26.19\n\nRecent actions:\nsearch[i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09ld3gjly]",
+              "4": "click[b09pdm23mj]",
+              "5": "click[b09p8kjq3v]",
+              "6": "click[b09p8kr455]",
+              "7": "click[b09rh6wkw9]",
+              "8": "click[b08ll5b24d]",
+              "9": "click[b09jmv9dhx]",
+              "10": "click[b08ln1lk8c]",
+              "11": "click[b09qsgwfm5]",
+              "12": "click[b09pbwd98k]"
+            }
+          }
+        }
+      },
+      "request_sha256": "477ffbf976499ba89541aea2c8ab646cd1780df5bebeff4dc2778610ebac332f",
+      "attempts": [
+        {
+          "seconds": 0.4210795424878597,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.42118745669722557,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "7",
+            "probabilities": {
+              "0": 0.08306497196679843,
+              "1": 0.07408685134529587,
+              "2": 0.14378006414459685,
+              "3": 0.008342155185182432,
+              "4": 0.014601481654969559,
+              "5": 0.0051888351920545694,
+              "6": 0.007335120984060522,
+              "7": 0.3442927820406891,
+              "8": 0.015990173596329097,
+              "9": 0.26256867645926996,
+              "10": 0.015919854116275868,
+              "11": 0.013985110900281558,
+              "12": 0.010843922414196109
+            },
+            "confidence": 0.2896505138774132
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9493,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.41925202682614326,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b09rh6wkw9]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.0156665481626987
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] color [SEP] blue [SEP] brown [SEP] khaki [SEP] Kcocoo Women Y2k Baggy Denim Jeans Cargo Pants High Waisted Wide Straight Leg Punk Grunge Hip Hop Boyfriend Jeans Streetwear [SEP] Price: $22.68 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] color [SEP] blue [SEP] brown [SEP] khaki [SEP] Kcocoo Women Y2k Baggy Denim Jeans Cargo Pants High Waisted Wide Straight Leg Punk Grunge Hip Hop Boyfriend Jeans Streetwear [SEP] Price: $22.68 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars]\nclick[next >]\nclick[b09rh6wkw9]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[x-small]",
+              "7": "click[small]",
+              "8": "click[medium]",
+              "9": "click[large]",
+              "10": "click[x-large]",
+              "11": "click[blue]",
+              "12": "click[brown]",
+              "13": "click[khaki]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a2d1f23892eac54ff7a1a923722f03c0829114886d0a01f05468111b6fb57f42",
+      "attempts": [
+        {
+          "seconds": 0.24138397350907326,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.2414756715297699,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "9",
+            "probabilities": {
+              "0": 0.0861388300631654,
+              "1": 0.07640450182000637,
+              "2": 0.08810150141045535,
+              "3": 0.054788138885635676,
+              "4": 0.06444910674309415,
+              "5": 0.10905287274257107,
+              "6": 0.03591920086401676,
+              "7": 0.02478622414768071,
+              "8": 0.059915952561635115,
+              "9": 0.24809162775911534,
+              "10": 0.060657877118966815,
+              "11": 0.03658872197809643,
+              "12": 0.03370966532077873,
+              "13": 0.021395778584782237
+            },
+            "confidence": 0.1902525222021242
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 4573,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 14,
+          "inference_seconds": 0.22652583941817284,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[large]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.300892274826765
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] color [SEP] blue [SEP] brown [SEP] khaki [SEP] Kcocoo Women Y2k Baggy Denim Jeans Cargo Pants High Waisted Wide Straight Leg Punk Grunge Hip Hop Boyfriend Jeans Streetwear [SEP] Price: $22.68 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] color [SEP] blue [SEP] brown [SEP] khaki [SEP] Kcocoo Women Y2k Baggy Denim Jeans Cargo Pants High Waisted Wide Straight Leg Punk Grunge Hip Hop Boyfriend Jeans Streetwear [SEP] Price: $22.68 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars]\nclick[next >]\nclick[b09rh6wkw9]\nclick[large]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[x-small]",
+              "7": "click[small]",
+              "8": "click[medium]",
+              "9": "click[large]",
+              "10": "click[x-large]",
+              "11": "click[blue]",
+              "12": "click[brown]",
+              "13": "click[khaki]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2546f0abf81fe81add4693e65b7ab392170bea676829994314982987ef777844",
+      "attempts": [
+        {
+          "seconds": 0.2195388823747635,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.21965650469064713,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.11489045387571943,
+              "1": 0.10467538195071646,
+              "2": 0.1167293622529707,
+              "3": 0.07254509879617613,
+              "4": 0.0862924166094957,
+              "5": 0.15386199362652292,
+              "6": 0.03564795632663515,
+              "7": 0.025212138104196584,
+              "8": 0.038539457019622046,
+              "9": 0.06670090958093827,
+              "10": 0.05158406404302887,
+              "11": 0.05427960195781517,
+              "12": 0.04819835127287646,
+              "13": 0.03084281458328635
+            },
+            "confidence": 0.08877445467471697
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 4643,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 14,
+          "inference_seconds": 0.2174667902290821,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.75,
+      "done": true,
+      "elapsed_seconds": 1.5505341179668903
+    }
+  ]
+}

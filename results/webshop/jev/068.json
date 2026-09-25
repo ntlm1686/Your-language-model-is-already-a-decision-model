@@ -1,0 +1,330 @@
+{
+  "task_id": 68,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars",
+  "instruction_sha256": "bc4ed9b858bbf55b701b33e69c3d8d4f7458856a4f8059e9a8d553e27ace101b",
+  "reward": 0.5,
+  "score": 50.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 6,
+  "elapsed_seconds": 1.5732836425304413,
+  "decision_seconds": 1.3454423993825912,
+  "input_tokens": 4294,
+  "output_tokens": 492,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars [SEP] Search",
+      "action": "search[i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06606461107730865
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09G1P4TY5 [SEP] Nicokee House Slippers for Women Men Sandals,Warm Soft Furry Slippers Non-Slip Home Slippers House Shoes Men's House Slippers Rubber Sole for Halloween Xmas Christmas Vacation US Size 9-10,11-12 [SEP] $100.0 [SEP] B01I3OEPVY [SEP] Stick-on suede soles for high-heeled shoes, with industrial-strength adhesive backing. Resole old dance shoes or convert your favorite heels to perfect dance shoes [SUEDE-LA-r02] [SEP] $15.95 [SEP] B088QX6C51 [SEP] femflame Women's Vintage Lace Up Pu Leather Block Heel Oxfords Ankle Booties Cuban Brogues Dress Shoes Large Size [SEP] $34.99 to $37.69 [SEP] B001878N9Y [SEP] LifeStride Women's Status Slingback Sandal [SEP] $21.0 to $133.99 [SEP] B095HHWVB8 [SEP] FIEEIF Mens Boat Shoes Fit for Extra Wide Feet Genuine Crazy Horse Leather Outdoor Walking Slip On Loafers Classic Travel Casual Loafers for Men [SEP] $48.99 to $79.99 [SEP] B00802GYJ6 [SEP] Panoply Men's Toe Cap and Midsole Leather/Nubuck Work Safety Trainer Shoes [SEP] $119.95 [SEP] B07Q8RD54Y [SEP] Platforms Sandals for Men,Outdoor Beach Water Shoe Leather Casual Slippers Summer Thong Flip Flop Sandal [SEP] $1.98 to $8.99 [SEP] B09D7Z2DGF [SEP] onlymaker Women's Cosplay Mary Jane Platform Shoes [SEP] $51.99 to $55.99 [SEP] B09G3JRNRC [SEP] BnAnCuBuHu Men's Fashion Sneakers Dress Casual Formal Classic Leather Performance Personal Fashion British Soft Breathable Comfortable Running Shoes Outdoor Walking Shoes for Men [SEP] $100.0 [SEP] B0813JPG24 [SEP] mysoft Men's Comfort Memory Foam Slippers Moccasin House Shoes Sole Indoor Outdoor [SEP] $14.99",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09G1P4TY5 [SEP] Nicokee House Slippers for Women Men Sandals,Warm Soft Furry Slippers Non-Slip Home Slippers House Shoes Men's House Slippers Rubber Sole for Halloween Xmas Christmas Vacation US Size 9-10,11-12 [SEP] $100.0 [SEP] B01I3OEPVY [SEP] Stick-on suede soles for high-heeled shoes, with industrial-strength adhesive backing. Resole old dance shoes or convert your favorite heels to perfect dance shoes [SUEDE-LA-r02] [SEP] $15.95 [SEP] B088QX6C51 [SEP] femflame Women's Vintage Lace Up Pu Leather Block Heel Oxfords Ankle Booties Cuban Brogues Dress Shoes Large Size [SEP] $34.99 to $37.69 [SEP] B001878N9Y [SEP] LifeStride Women's Status Slingback Sandal [SEP] $21.0 to $133.99 [SEP] B095HHWVB8 [SEP] FIEEIF Mens Boat Shoes Fit for Extra Wide Feet Genuine Crazy Horse Leather Outdoor Walking Slip On Loafers Classic Travel Casual Loafers for Men [SEP] $48.99 to $79.99 [SEP] B00802GYJ6 [SEP] Panoply Men's Toe Cap and Midsole Leather/Nubuck Work Safety Trainer Shoes [SEP] $119.95 [SEP] B07Q8RD54Y [SEP] Platforms Sandals for Men,Outdoor Beach Water Shoe Leather Casual Slippers Summer Thong Flip Flop Sandal [SEP] $1.98 to $8.99 [SEP] B09D7Z2DGF [SEP] onlymaker Women's Cosplay Mary Jane Platform Shoes [SEP] $51.99 to $55.99 [SEP] B09G3JRNRC [SEP] BnAnCuBuHu Men's Fashion Sneakers Dress Casual Formal Classic Leather Performance Personal Fashion British Soft Breathable Comfortable Running Shoes Outdoor Walking Shoes for Men [SEP] $100.0 [SEP] B0813JPG24 [SEP] mysoft Men's Comfort Memory Foam Slippers Moccasin House Shoes Sole Indoor Outdoor [SEP] $14.99\n\nRecent actions:\nsearch[i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09g1p4ty5]",
+              "3": "click[b01i3oepvy]",
+              "4": "click[b088qx6c51]",
+              "5": "click[b001878n9y]",
+              "6": "click[b095hhwvb8]",
+              "7": "click[b00802gyj6]",
+              "8": "click[b07q8rd54y]",
+              "9": "click[b09d7z2dgf]",
+              "10": "click[b09g3jrnrc]",
+              "11": "click[b0813jpg24]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "1340e53ba79c06c1ab5ef2a265f475649b95979260a33f761e3be2f67b8103c2",
+      "attempts": [
+        {
+          "seconds": 0.32967187091708183,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.32980654016137123,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "confidence": 0.35,
+            "probabilities": {
+              "5": 0.05,
+              "9": 0.01,
+              "4": 0.11,
+              "3": 0.0,
+              "7": 0.0,
+              "0": 0.05,
+              "10": 0.01,
+              "1": 0.31,
+              "2": 0.0,
+              "8": 0.03,
+              "6": 0.41000000000000003,
+              "11": 0.02
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1232,
+          "output_tokens": 103
+        }
+      },
+      "action": "click[b095hhwvb8]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.42134812846779823
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] 12 [SEP] 13 [SEP] 14 [SEP] 15 [SEP] color [SEP] coffee-nubuck [SEP] brown-lace up [SEP] brown-slip ons [SEP] FIEEIF Mens Boat Shoes Fit for Extra Wide Feet Genuine Crazy Horse Leather Outdoor Walking Slip On Loafers Classic Travel Casual Loafers for Men [SEP] Price: $48.99 to $79.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] 12 [SEP] 13 [SEP] 14 [SEP] 15 [SEP] color [SEP] coffee-nubuck [SEP] brown-lace up [SEP] brown-slip ons [SEP] FIEEIF Mens Boat Shoes Fit for Extra Wide Feet Genuine Crazy Horse Leather Outdoor Walking Slip On Loafers Classic Travel Casual Loafers for Men [SEP] Price: $48.99 to $79.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars]\nclick[b095hhwvb8]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[8]",
+              "7": "click[9]",
+              "8": "click[10]",
+              "9": "click[11]",
+              "10": "click[12]",
+              "11": "click[13]",
+              "12": "click[14]",
+              "13": "click[15]",
+              "14": "click[coffee-nubuck]",
+              "15": "click[brown-lace up]",
+              "16": "click[brown-slip ons]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "791771e7f64531261e5adbbc1c4c9ffa58e234dc4c1d6cb4f2bd0dad6ae19407",
+      "attempts": [
+        {
+          "seconds": 0.3159673325717449,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.31608809158205986,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.52,
+            "probabilities": {
+              "8": 0.0,
+              "2": 0.01,
+              "5": 0.27,
+              "15": 0.04,
+              "16": 0.02,
+              "3": 0.01,
+              "13": 0.0,
+              "11": 0.0,
+              "9": 0.0,
+              "4": 0.0,
+              "7": 0.0,
+              "10": 0.0,
+              "14": 0.03,
+              "12": 0.0,
+              "6": 0.01,
+              "0": 0.55,
+              "1": 0.06
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 870,
+          "output_tokens": 143
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.7504508458077908
+    },
+    {
+      "step": 3,
+      "observation": "WebShop [SEP] Instruction: [SEP] i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars [SEP] Search",
+      "action": "search[i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.8155308030545712
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09G1P4TY5 [SEP] Nicokee House Slippers for Women Men Sandals,Warm Soft Furry Slippers Non-Slip Home Slippers House Shoes Men's House Slippers Rubber Sole for Halloween Xmas Christmas Vacation US Size 9-10,11-12 [SEP] $100.0 [SEP] B01I3OEPVY [SEP] Stick-on suede soles for high-heeled shoes, with industrial-strength adhesive backing. Resole old dance shoes or convert your favorite heels to perfect dance shoes [SUEDE-LA-r02] [SEP] $15.95 [SEP] B088QX6C51 [SEP] femflame Women's Vintage Lace Up Pu Leather Block Heel Oxfords Ankle Booties Cuban Brogues Dress Shoes Large Size [SEP] $34.99 to $37.69 [SEP] B001878N9Y [SEP] LifeStride Women's Status Slingback Sandal [SEP] $21.0 to $133.99 [SEP] B095HHWVB8 [SEP] FIEEIF Mens Boat Shoes Fit for Extra Wide Feet Genuine Crazy Horse Leather Outdoor Walking Slip On Loafers Classic Travel Casual Loafers for Men [SEP] $48.99 to $79.99 [SEP] B00802GYJ6 [SEP] Panoply Men's Toe Cap and Midsole Leather/Nubuck Work Safety Trainer Shoes [SEP] $119.95 [SEP] B07Q8RD54Y [SEP] Platforms Sandals for Men,Outdoor Beach Water Shoe Leather Casual Slippers Summer Thong Flip Flop Sandal [SEP] $1.98 to $8.99 [SEP] B09D7Z2DGF [SEP] onlymaker Women's Cosplay Mary Jane Platform Shoes [SEP] $51.99 to $55.99 [SEP] B09G3JRNRC [SEP] BnAnCuBuHu Men's Fashion Sneakers Dress Casual Formal Classic Leather Performance Personal Fashion British Soft Breathable Comfortable Running Shoes Outdoor Walking Shoes for Men [SEP] $100.0 [SEP] B0813JPG24 [SEP] mysoft Men's Comfort Memory Foam Slippers Moccasin House Shoes Sole Indoor Outdoor [SEP] $14.99",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09G1P4TY5 [SEP] Nicokee House Slippers for Women Men Sandals,Warm Soft Furry Slippers Non-Slip Home Slippers House Shoes Men's House Slippers Rubber Sole for Halloween Xmas Christmas Vacation US Size 9-10,11-12 [SEP] $100.0 [SEP] B01I3OEPVY [SEP] Stick-on suede soles for high-heeled shoes, with industrial-strength adhesive backing. Resole old dance shoes or convert your favorite heels to perfect dance shoes [SUEDE-LA-r02] [SEP] $15.95 [SEP] B088QX6C51 [SEP] femflame Women's Vintage Lace Up Pu Leather Block Heel Oxfords Ankle Booties Cuban Brogues Dress Shoes Large Size [SEP] $34.99 to $37.69 [SEP] B001878N9Y [SEP] LifeStride Women's Status Slingback Sandal [SEP] $21.0 to $133.99 [SEP] B095HHWVB8 [SEP] FIEEIF Mens Boat Shoes Fit for Extra Wide Feet Genuine Crazy Horse Leather Outdoor Walking Slip On Loafers Classic Travel Casual Loafers for Men [SEP] $48.99 to $79.99 [SEP] B00802GYJ6 [SEP] Panoply Men's Toe Cap and Midsole Leather/Nubuck Work Safety Trainer Shoes [SEP] $119.95 [SEP] B07Q8RD54Y [SEP] Platforms Sandals for Men,Outdoor Beach Water Shoe Leather Casual Slippers Summer Thong Flip Flop Sandal [SEP] $1.98 to $8.99 [SEP] B09D7Z2DGF [SEP] onlymaker Women's Cosplay Mary Jane Platform Shoes [SEP] $51.99 to $55.99 [SEP] B09G3JRNRC [SEP] BnAnCuBuHu Men's Fashion Sneakers Dress Casual Formal Classic Leather Performance Personal Fashion British Soft Breathable Comfortable Running Shoes Outdoor Walking Shoes for Men [SEP] $100.0 [SEP] B0813JPG24 [SEP] mysoft Men's Comfort Memory Foam Slippers Moccasin House Shoes Sole Indoor Outdoor [SEP] $14.99\n\nRecent actions:\nsearch[i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars]\nclick[b095hhwvb8]\nclick[back to search]\nsearch[i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09g1p4ty5]",
+              "3": "click[b01i3oepvy]",
+              "4": "click[b088qx6c51]",
+              "5": "click[b001878n9y]",
+              "6": "click[b095hhwvb8]",
+              "7": "click[b00802gyj6]",
+              "8": "click[b07q8rd54y]",
+              "9": "click[b09d7z2dgf]",
+              "10": "click[b09g3jrnrc]",
+              "11": "click[b0813jpg24]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "acf1e9138bc30b49b9e62e8a131ffa36695317f50260795707a428cc9453f5f7",
+      "attempts": [
+        {
+          "seconds": 0.3206268921494484,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.32076891139149666,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "confidence": 0.54,
+            "probabilities": {
+              "6": 0.59,
+              "1": 0.26,
+              "8": 0.03,
+              "3": 0.0,
+              "5": 0.02,
+              "7": 0.0,
+              "4": 0.08,
+              "10": 0.0,
+              "0": 0.0,
+              "9": 0.0,
+              "11": 0.02,
+              "2": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1277,
+          "output_tokens": 103
+        }
+      },
+      "action": "click[b095hhwvb8]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.1620406806468964
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] 12 [SEP] 13 [SEP] 14 [SEP] 15 [SEP] color [SEP] coffee-nubuck [SEP] brown-lace up [SEP] brown-slip ons [SEP] FIEEIF Mens Boat Shoes Fit for Extra Wide Feet Genuine Crazy Horse Leather Outdoor Walking Slip On Loafers Classic Travel Casual Loafers for Men [SEP] Price: $48.99 to $79.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] 12 [SEP] 13 [SEP] 14 [SEP] 15 [SEP] color [SEP] coffee-nubuck [SEP] brown-lace up [SEP] brown-slip ons [SEP] FIEEIF Mens Boat Shoes Fit for Extra Wide Feet Genuine Crazy Horse Leather Outdoor Walking Slip On Loafers Classic Travel Casual Loafers for Men [SEP] Price: $48.99 to $79.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars]\nclick[b095hhwvb8]\nclick[back to search]\nsearch[i would like a pair of brown size 7 shoes with a rubber sole, and price lower than 80.00 dollars]\nclick[b095hhwvb8]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[8]",
+              "7": "click[9]",
+              "8": "click[10]",
+              "9": "click[11]",
+              "10": "click[12]",
+              "11": "click[13]",
+              "12": "click[14]",
+              "13": "click[15]",
+              "14": "click[coffee-nubuck]",
+              "15": "click[brown-lace up]",
+              "16": "click[brown-slip ons]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "59004e5c142496ca79c087c100f336fcc716da86812fa28af92bd0269d9a87f2",
+      "attempts": [
+        {
+          "seconds": 0.378644622862339,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3787788562476635,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.32,
+            "probabilities": {
+              "6": 0.01,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "15": 0.05,
+              "13": 0.0,
+              "1": 0.16,
+              "8": 0.0,
+              "3": 0.02,
+              "5": 0.37,
+              "4": 0.0,
+              "14": 0.06,
+              "7": 0.0,
+              "0": 0.3,
+              "9": 0.0,
+              "16": 0.02,
+              "2": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 915,
+          "output_tokens": 143
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.5,
+      "done": true,
+      "elapsed_seconds": 1.5732798054814339
+    }
+  ]
+}

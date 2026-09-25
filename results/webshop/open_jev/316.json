@@ -1,0 +1,178 @@
+{
+  "task_id": 316,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i want degree men anti-perspirant, and price lower than 140.00 dollars",
+  "instruction_sha256": "1567d0675eb148aaf4b1bf3b3b2a8d175c446b61f6608c81a1bbf942b020c5f3",
+  "reward": 0.5,
+  "score": 50.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 0.5830603763461113,
+  "decision_seconds": 0.47647466138005257,
+  "input_tokens": 9829,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want degree men anti-perspirant, and price lower than 140.00 dollars [SEP] Search",
+      "action": "search[i want degree men anti-perspirant, and price lower than 140.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.05275152996182442
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i want degree men anti-perspirant, and price lower than 140.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B001F51QJ8 [SEP] Gillette Clinical Advanced Solid Ultimate Fresh Antiperspirant Deodorant, 1.7 Ounce [SEP] $14.76 [SEP] B001F51UC6 [SEP] Old Spice High Endurance Antiperspirant and Deodorant for Men, Pure Sport 3 Ounce (Pack of 6) [SEP] $20.94 [SEP] B0017WGHRU [SEP] Old Spice Antiperspirant and Deodorant, High Endurance, Original, 3 Ounce (Pack of 6) [SEP] $27.84 [SEP] B0017WKFQE [SEP] Old Spice Antiperspirant & Deodorant for Men, High Endurance, Long Lasting Fresh, 3 Oz, Pack of 6 (Packaging May Vary) [SEP] $20.94 [SEP] B0017WNFXE [SEP] Old Spice Aluminum Free Deodorant for Men Classic Original, Citrus & Clove Scent, 3.25 Oz (Pack of 6) [SEP] $17.97 [SEP] B0017WKFUU [SEP] Old Spice High Endurance Clear Gel Pure Sport Scent Men's Anti-Perspirant & Deodorant 2.850z(80g)Oz (Pack of 6) [SEP] $19.74 [SEP] B00A1232ZW [SEP] Degree Men MotionSense Antiperspirant Deodorant Adventure 2.7 oz [SEP] $4.99 [SEP] B00498IJ98 [SEP] Old Spice High Endurance Invisible Solid Playmaker Anti-perspirant and Deodorant, 3-Ounce (Pack of 3) [SEP] $19.92 [SEP] B008CC3NHK [SEP] Old Spice High Endurance Sport 2.25 oz [SEP] $100.0 [SEP] B00LI3SBU4 [SEP] Degree Men Anti-perspirant, Cool Comfort 2.7 Oz (Pack of 2) [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni want degree men anti-perspirant, and price lower than 140.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want degree men anti-perspirant, and price lower than 140.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B001F51QJ8 [SEP] Gillette Clinical Advanced Solid Ultimate Fresh Antiperspirant Deodorant, 1.7 Ounce [SEP] $14.76 [SEP] B001F51UC6 [SEP] Old Spice High Endurance Antiperspirant and Deodorant for Men, Pure Sport 3 Ounce (Pack of 6) [SEP] $20.94 [SEP] B0017WGHRU [SEP] Old Spice Antiperspirant and Deodorant, High Endurance, Original, 3 Ounce (Pack of 6) [SEP] $27.84 [SEP] B0017WKFQE [SEP] Old Spice Antiperspirant & Deodorant for Men, High Endurance, Long Lasting Fresh, 3 Oz, Pack of 6 (Packaging May Vary) [SEP] $20.94 [SEP] B0017WNFXE [SEP] Old Spice Aluminum Free Deodorant for Men Classic Original, Citrus & Clove Scent, 3.25 Oz (Pack of 6) [SEP] $17.97 [SEP] B0017WKFUU [SEP] Old Spice High Endurance Clear Gel Pure Sport Scent Men's Anti-Perspirant & Deodorant 2.850z(80g)Oz (Pack of 6) [SEP] $19.74 [SEP] B00A1232ZW [SEP] Degree Men MotionSense Antiperspirant Deodorant Adventure 2.7 oz [SEP] $4.99 [SEP] B00498IJ98 [SEP] Old Spice High Endurance Invisible Solid Playmaker Anti-perspirant and Deodorant, 3-Ounce (Pack of 3) [SEP] $19.92 [SEP] B008CC3NHK [SEP] Old Spice High Endurance Sport 2.25 oz [SEP] $100.0 [SEP] B00LI3SBU4 [SEP] Degree Men Anti-perspirant, Cool Comfort 2.7 Oz (Pack of 2) [SEP] $100.0\n\nRecent actions:\nsearch[i want degree men anti-perspirant, and price lower than 140.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b001f51qj8]",
+              "3": "click[b001f51uc6]",
+              "4": "click[b0017wghru]",
+              "5": "click[b0017wkfqe]",
+              "6": "click[b0017wnfxe]",
+              "7": "click[b0017wkfuu]",
+              "8": "click[b00a1232zw]",
+              "9": "click[b00498ij98]",
+              "10": "click[b008cc3nhk]",
+              "11": "click[b00li3sbu4]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b6686fd513c426b9cdcb4ec5958411793a03ba7df00c92f7f64cf500d3e169c8",
+      "attempts": [
+        {
+          "seconds": 0.37932131811976433,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3794429898262024,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "probabilities": {
+              "0": 0.017863993396213192,
+              "1": 0.04326224101090667,
+              "2": 0.0651448114111789,
+              "3": 0.03280128829657113,
+              "4": 0.02101004972748929,
+              "5": 0.010412872027377498,
+              "6": 0.014407033969562003,
+              "7": 0.010744057492228058,
+              "8": 0.5770908998752283,
+              "9": 0.03402772992158348,
+              "10": 0.041075260201115064,
+              "11": 0.1321597626705465
+            },
+            "confidence": 0.5386446180457036
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8361,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.37722957506775856,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b00a1232zw]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4599171504378319
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i want degree men anti-perspirant, and price lower than 140.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Degree Men MotionSense Antiperspirant Deodorant Adventure 2.7 oz [SEP] Price: $4.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want degree men anti-perspirant, and price lower than 140.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want degree men anti-perspirant, and price lower than 140.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Degree Men MotionSense Antiperspirant Deodorant Adventure 2.7 oz [SEP] Price: $4.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want degree men anti-perspirant, and price lower than 140.00 dollars]\nclick[b00a1232zw]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a26d9750db7945599b2506a3bee07315b95056b56dc1d7be0bff15154b7f063e",
+      "attempts": [
+        {
+          "seconds": 0.09694287925958633,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.09703167155385017,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.06070139352469335,
+              "1": 0.058110031134354895,
+              "2": 0.0752249690608929,
+              "3": 0.05655437522852755,
+              "4": 0.05743614016901006,
+              "5": 0.6919730908825212
+            },
+            "confidence": 0.6303677090590255
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 1468,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 6,
+          "inference_seconds": 0.08564475551247597,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.5,
+      "done": true,
+      "elapsed_seconds": 0.583057090640068
+    }
+  ]
+}

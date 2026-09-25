@@ -1,0 +1,588 @@
+{
+  "task_id": 17,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars",
+  "instruction_sha256": "64f18b196c41551693d19832331a836a385fbec60ccb098494c7460b7f5c0b7b",
+  "reward": 0.6666666666666666,
+  "score": 66.66666666666666,
+  "success": false,
+  "termination": "purchase",
+  "steps": 7,
+  "elapsed_seconds": 2.465886328369379,
+  "decision_seconds": 2.2438147850334644,
+  "input_tokens": 49129,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Search",
+      "action": "search[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.045317698270082474
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GLPHDVM [SEP] Blush by Sacha Cosmetics, Best Highlighter Makeup Blusher to Sculpt Face & Highlight Cheeks, 14 shades, 0.27 oz, Matte Brown [SEP] $15.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B0718WN37L [SEP] Christophe Robin Cleansing Purifying Scrub with Sea Salt, 2.53 Fl Oz [SEP] $18.36 [SEP] B08VDLN3SM [SEP] 5Pcs Makeup Sponge, Makeup Blender, Makeup Egg, Beauty Foundation Blending Sponge, Flawless for Liquid, Cream, and Powder, Multi-Colored. [SEP] $4.39 [SEP] B09LSSBS2C [SEP] Sealed Nib Compatible with Dish Network Satellite TV 145822 [SEP] $116.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09 [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GLPHDVM [SEP] Blush by Sacha Cosmetics, Best Highlighter Makeup Blusher to Sculpt Face & Highlight Cheeks, 14 shades, 0.27 oz, Matte Brown [SEP] $15.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B0718WN37L [SEP] Christophe Robin Cleansing Purifying Scrub with Sea Salt, 2.53 Fl Oz [SEP] $18.36 [SEP] B08VDLN3SM [SEP] 5Pcs Makeup Sponge, Makeup Blender, Makeup Egg, Beauty Foundation Blending Sponge, Flawless for Liquid, Cream, and Powder, Multi-Colored. [SEP] $4.39 [SEP] B09LSSBS2C [SEP] Sealed Nib Compatible with Dish Network Satellite TV 145822 [SEP] $116.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09 [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55\n\nRecent actions:\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b00glphdvm]",
+              "3": "click[b09kcl5gk5]",
+              "4": "click[b0718wn37l]",
+              "5": "click[b08vdln3sm]",
+              "6": "click[b09lssbs2c]",
+              "7": "click[b09lglp9hg]",
+              "8": "click[b09lspp1cj]",
+              "9": "click[b09lgy85yy]",
+              "10": "click[b09lh2mrh8]",
+              "11": "click[b09jp4xjsv]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c1dbcfaceaf97b6502d20c9a21969322a23aa04f22fb39162994df4030eae858",
+      "attempts": [
+        {
+          "seconds": 0.3720073215663433,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3721313215792179,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.1736466557497114,
+              "1": 0.5143066107722376,
+              "2": 0.056884100975913406,
+              "3": 0.021329265191484637,
+              "4": 0.0524390565423372,
+              "5": 0.08302927175276295,
+              "6": 0.022037417473969187,
+              "7": 0.016582586958557927,
+              "8": 0.014156531998646532,
+              "9": 0.0146072082938743,
+              "10": 0.013234008455411134,
+              "11": 0.01774728583509379
+            },
+            "confidence": 0.47015266629698654
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8271,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.364669531583786,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4751764051616192
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07BY7XN28 [SEP] Anita B Fresh Start Facial Cleanser Skincare - Makeup Remover, Light Cleansing Oil, Face Wash, PH Balancer - For Dry, Oily, and Sensitive Skin (100ml) [SEP] $35.0 [SEP] B077PR9TL4 [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] $7.59 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B092Z1GHG1 [SEP] MYSTCOVER No Drama Llama Cool Throw Blanket Super Soft Lightweight Luxurious Cozy Warm Fluffy Plush for Bed Couch Living Room [SEP] $29.99 [SEP] B07C51LVKG [SEP] Aunt Honey’s SPF Lip Balm Smooth Mint Flavored, Made with Beeswax, Aloe Vera, Coconut Oil—6 Tubes Chapstick [SEP] $22.99 [SEP] B07N495MB4 [SEP] Graftobian HD Glamour Creme Foundation Super Palette - Inclusion Collection [SEP] $75.6 [SEP] B09RMWTY6Q [SEP] New Wish Herb Shampoo Conditioner Serum Anti Hair Loss Stimulate Rampei Aroma Essence Shampoo For Dry Damaged Hair Body Express Shipping by DHL BY BEAUTY GOOD SHOPS [GET FREE FOR YOU BEAUTY GIFTS] [SEP] $165.67 [SEP] B0010NN9GS [SEP] NaturalCare RingStop | Ringing in the Ear Aid | Homeopathic Support For Tinnitus Relief, Ear Noise & Sensitivity to Sound | 0.5 oz [SEP] $16.57 [SEP] B07X9C8Z6L [SEP] Set of 6 Computer PC Laptop Cart Desk Height Adjustable Table Rolling Portable Mobile Smartphone Notebook Over Sofa Bed Stand Office Living Room School Home Furniture - Oak/2302 [SEP] $424.5 [SEP] B07QJQP74S [SEP] Annie's Deluxe Rich & Creamy Shells & Classic Cheddar Macaroni & Cheese Sauce Microcup, 2.6 oz [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07BY7XN28 [SEP] Anita B Fresh Start Facial Cleanser Skincare - Makeup Remover, Light Cleansing Oil, Face Wash, PH Balancer - For Dry, Oily, and Sensitive Skin (100ml) [SEP] $35.0 [SEP] B077PR9TL4 [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] $7.59 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B092Z1GHG1 [SEP] MYSTCOVER No Drama Llama Cool Throw Blanket Super Soft Lightweight Luxurious Cozy Warm Fluffy Plush for Bed Couch Living Room [SEP] $29.99 [SEP] B07C51LVKG [SEP] Aunt Honey’s SPF Lip Balm Smooth Mint Flavored, Made with Beeswax, Aloe Vera, Coconut Oil—6 Tubes Chapstick [SEP] $22.99 [SEP] B07N495MB4 [SEP] Graftobian HD Glamour Creme Foundation Super Palette - Inclusion Collection [SEP] $75.6 [SEP] B09RMWTY6Q [SEP] New Wish Herb Shampoo Conditioner Serum Anti Hair Loss Stimulate Rampei Aroma Essence Shampoo For Dry Damaged Hair Body Express Shipping by DHL BY BEAUTY GOOD SHOPS [GET FREE FOR YOU BEAUTY GIFTS] [SEP] $165.67 [SEP] B0010NN9GS [SEP] NaturalCare RingStop | Ringing in the Ear Aid | Homeopathic Support For Tinnitus Relief, Ear Noise & Sensitivity to Sound | 0.5 oz [SEP] $16.57 [SEP] B07X9C8Z6L [SEP] Set of 6 Computer PC Laptop Cart Desk Height Adjustable Table Rolling Portable Mobile Smartphone Notebook Over Sofa Bed Stand Office Living Room School Home Furniture - Oak/2302 [SEP] $424.5 [SEP] B07QJQP74S [SEP] Annie's Deluxe Rich & Creamy Shells & Classic Cheddar Macaroni & Cheese Sauce Microcup, 2.6 oz [SEP] $100.0\n\nRecent actions:\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07by7xn28]",
+              "4": "click[b077pr9tl4]",
+              "5": "click[b09g3fpp9s]",
+              "6": "click[b092z1ghg1]",
+              "7": "click[b07c51lvkg]",
+              "8": "click[b07n495mb4]",
+              "9": "click[b09rmwty6q]",
+              "10": "click[b0010nn9gs]",
+              "11": "click[b07x9c8z6l]",
+              "12": "click[b07qjqp74s]"
+            }
+          }
+        }
+      },
+      "request_sha256": "631f3d64159f89fe8ba549da5baab17daebca7322ea1eca85ac58213d99ca86a",
+      "attempts": [
+        {
+          "seconds": 0.4336349032819271,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4337606318295002,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "4",
+            "probabilities": {
+              "0": 0.11887573827244548,
+              "1": 0.12588821803641284,
+              "2": 0.1792631689523134,
+              "3": 0.020737238494067507,
+              "4": 0.39093818491133353,
+              "5": 0.01708548263539235,
+              "6": 0.029167941519097424,
+              "7": 0.022521466733224284,
+              "8": 0.03745514499918474,
+              "9": 0.014426481250447674,
+              "10": 0.016340438326165104,
+              "11": 0.00973855450938007,
+              "12": 0.017561941360535495
+            },
+            "confidence": 0.3401830336539447
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9887,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4297046549618244,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b077pr9tl4]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9332483634352684
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 1 [SEP] dc1 [SEP] dn3 [SEP] dn4 [SEP] lc1 [SEP] ln3 [SEP] ln4 [SEP] lw2 [SEP] mc1 [SEP] mn3 [SEP] mn4 [SEP] mw2 [SEP] size [SEP] 1 fl oz (pack of 1) [SEP] 1 ounce (pack of 1) [SEP] 1 fluid ounce [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] Price: $7.59 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 1 [SEP] dc1 [SEP] dn3 [SEP] dn4 [SEP] lc1 [SEP] ln3 [SEP] ln4 [SEP] lw2 [SEP] mc1 [SEP] mn3 [SEP] mn4 [SEP] mw2 [SEP] size [SEP] 1 fl oz (pack of 1) [SEP] 1 ounce (pack of 1) [SEP] 1 fluid ounce [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] Price: $7.59 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]\nclick[b077pr9tl4]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[1]",
+              "7": "click[dc1]",
+              "8": "click[dn3]",
+              "9": "click[dn4]",
+              "10": "click[lc1]",
+              "11": "click[ln3]",
+              "12": "click[ln4]",
+              "13": "click[lw2]",
+              "14": "click[mc1]",
+              "15": "click[mn3]",
+              "16": "click[mn4]",
+              "17": "click[mw2]",
+              "18": "click[1 fl oz (pack of 1)]",
+              "19": "click[1 ounce (pack of 1)]",
+              "20": "click[1 fluid ounce]"
+            }
+          }
+        }
+      },
+      "request_sha256": "10db99742f7f28165f30fcbdc1ee260c172063e7ececa42f5a8f6041b5ff8689",
+      "attempts": [
+        {
+          "seconds": 0.35199952125549316,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.35214151814579964,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "16",
+            "probabilities": {
+              "0": 0.04327415837996218,
+              "1": 0.04707540754613667,
+              "2": 0.05700407571401775,
+              "3": 0.04317831472047646,
+              "4": 0.04427825356878892,
+              "5": 0.04759455530438609,
+              "6": 0.052180401261345134,
+              "7": 0.02260464626076135,
+              "8": 0.026477798879083306,
+              "9": 0.03589742316904439,
+              "10": 0.029389278973371537,
+              "11": 0.028906611341345253,
+              "12": 0.04012088044646544,
+              "13": 0.027585204280712955,
+              "14": 0.041347956643884826,
+              "15": 0.03313850608430826,
+              "16": 0.10890702516755589,
+              "17": 0.04455901557277202,
+              "18": 0.08290683448137143,
+              "19": 0.08156050716435527,
+              "20": 0.062013145039855
+            },
+            "confidence": 0.0643523764259337
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 7496,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 21,
+          "inference_seconds": 0.350105918943882,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[mn4]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.3085073828697205
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 1 [SEP] dc1 [SEP] dn3 [SEP] dn4 [SEP] lc1 [SEP] ln3 [SEP] ln4 [SEP] lw2 [SEP] mc1 [SEP] mn3 [SEP] mn4 [SEP] mw2 [SEP] size [SEP] 1 fl oz (pack of 1) [SEP] 1 ounce (pack of 1) [SEP] 1 fluid ounce [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] Price: $7.59 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 1 [SEP] dc1 [SEP] dn3 [SEP] dn4 [SEP] lc1 [SEP] ln3 [SEP] ln4 [SEP] lw2 [SEP] mc1 [SEP] mn3 [SEP] mn4 [SEP] mw2 [SEP] size [SEP] 1 fl oz (pack of 1) [SEP] 1 ounce (pack of 1) [SEP] 1 fluid ounce [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] Price: $7.59 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]\nclick[b077pr9tl4]\nclick[mn4]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[1]",
+              "7": "click[dc1]",
+              "8": "click[dn3]",
+              "9": "click[dn4]",
+              "10": "click[lc1]",
+              "11": "click[ln3]",
+              "12": "click[ln4]",
+              "13": "click[lw2]",
+              "14": "click[mc1]",
+              "15": "click[mn3]",
+              "16": "click[mn4]",
+              "17": "click[mw2]",
+              "18": "click[1 fl oz (pack of 1)]",
+              "19": "click[1 ounce (pack of 1)]",
+              "20": "click[1 fluid ounce]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d340a7aaee856e4762d6f4348fd7bd108e322e5262ac00cbcaa007908f6513b9",
+      "attempts": [
+        {
+          "seconds": 0.3543962985277176,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3545127101242542,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "18",
+            "probabilities": {
+              "0": 0.0360906674076293,
+              "1": 0.039913037787206646,
+              "2": 0.06365817857916523,
+              "3": 0.04876423425909515,
+              "4": 0.049649912612974266,
+              "5": 0.060956562185340055,
+              "6": 0.05640388391216224,
+              "7": 0.016809970893720386,
+              "8": 0.020294282269030312,
+              "9": 0.02244153569692133,
+              "10": 0.022617541133554044,
+              "11": 0.019151249739611596,
+              "12": 0.02457990625205003,
+              "13": 0.03172177237339458,
+              "14": 0.03171328909088479,
+              "15": 0.019169711287761432,
+              "16": 0.04068123674172993,
+              "17": 0.03332028630657563,
+              "18": 0.15559669292309644,
+              "19": 0.1199539658108713,
+              "20": 0.08651208273722535
+            },
+            "confidence": 0.11337652756925128
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 7622,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 21,
+          "inference_seconds": 0.3521919250488281,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[1 fl oz (pack of 1)]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.6822620742022991
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 1 [SEP] dc1 [SEP] dn3 [SEP] dn4 [SEP] lc1 [SEP] ln3 [SEP] ln4 [SEP] lw2 [SEP] mc1 [SEP] mn3 [SEP] mn4 [SEP] mw2 [SEP] size [SEP] 1 fl oz (pack of 1) [SEP] 1 ounce (pack of 1) [SEP] 1 fluid ounce [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] Price: $7.59 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 1 [SEP] dc1 [SEP] dn3 [SEP] dn4 [SEP] lc1 [SEP] ln3 [SEP] ln4 [SEP] lw2 [SEP] mc1 [SEP] mn3 [SEP] mn4 [SEP] mw2 [SEP] size [SEP] 1 fl oz (pack of 1) [SEP] 1 ounce (pack of 1) [SEP] 1 fluid ounce [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] Price: $7.59 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]\nclick[b077pr9tl4]\nclick[mn4]\nclick[1 fl oz (pack of 1)]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[1]",
+              "7": "click[dc1]",
+              "8": "click[dn3]",
+              "9": "click[dn4]",
+              "10": "click[lc1]",
+              "11": "click[ln3]",
+              "12": "click[ln4]",
+              "13": "click[lw2]",
+              "14": "click[mc1]",
+              "15": "click[mn3]",
+              "16": "click[mn4]",
+              "17": "click[mw2]",
+              "18": "click[1 fl oz (pack of 1)]",
+              "19": "click[1 ounce (pack of 1)]",
+              "20": "click[1 fluid ounce]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5838b5067d7c6093da308d3f623541221ac76f42304ca4957c7e1f8b86fe74dc",
+      "attempts": [
+        {
+          "seconds": 0.3628537356853485,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3629915080964565,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "probabilities": {
+              "0": 0.04705760469014456,
+              "1": 0.0503954914501754,
+              "2": 0.07173816890936198,
+              "3": 0.056510552173104314,
+              "4": 0.061625400369902626,
+              "5": 0.08246197327083521,
+              "6": 0.0929637547097517,
+              "7": 0.021672185428917943,
+              "8": 0.027535342139508423,
+              "9": 0.03019093307769605,
+              "10": 0.03024345845354198,
+              "11": 0.025529444387939502,
+              "12": 0.03238195285200474,
+              "13": 0.043026066852695444,
+              "14": 0.04424465546090284,
+              "15": 0.022970066619289912,
+              "16": 0.04232209837270164,
+              "17": 0.044717003269339126,
+              "18": 0.0507582651134515,
+              "19": 0.06475194929653852,
+              "20": 0.0569036331021967
+            },
+            "confidence": 0.04761194244523929
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 7874,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 21,
+          "inference_seconds": 0.36094649136066437,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[1]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.064696989953518
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 1 [SEP] dc1 [SEP] dn3 [SEP] dn4 [SEP] lc1 [SEP] ln3 [SEP] ln4 [SEP] lw2 [SEP] mc1 [SEP] mn3 [SEP] mn4 [SEP] mw2 [SEP] size [SEP] 1 fl oz (pack of 1) [SEP] 1 ounce (pack of 1) [SEP] 1 fluid ounce [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] Price: $7.59 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 1 [SEP] dc1 [SEP] dn3 [SEP] dn4 [SEP] lc1 [SEP] ln3 [SEP] ln4 [SEP] lw2 [SEP] mc1 [SEP] mn3 [SEP] mn4 [SEP] mw2 [SEP] size [SEP] 1 fl oz (pack of 1) [SEP] 1 ounce (pack of 1) [SEP] 1 fluid ounce [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] Price: $7.59 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]\nclick[b077pr9tl4]\nclick[mn4]\nclick[1 fl oz (pack of 1)]\nclick[1]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[1]",
+              "7": "click[dc1]",
+              "8": "click[dn3]",
+              "9": "click[dn4]",
+              "10": "click[lc1]",
+              "11": "click[ln3]",
+              "12": "click[ln4]",
+              "13": "click[lw2]",
+              "14": "click[mc1]",
+              "15": "click[mn3]",
+              "16": "click[mn4]",
+              "17": "click[mw2]",
+              "18": "click[1 fl oz (pack of 1)]",
+              "19": "click[1 ounce (pack of 1)]",
+              "20": "click[1 fluid ounce]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3ba0ec8c73631a440f32a004d427e9d2d9fb945b1767811fb3560e18b2f6d60a",
+      "attempts": [
+        {
+          "seconds": 0.36814386025071144,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.36827709525823593,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.04834277786549267,
+              "1": 0.05354255289422644,
+              "2": 0.07055694712605635,
+              "3": 0.050687489455990685,
+              "4": 0.060057075368668125,
+              "5": 0.07400033542674192,
+              "6": 0.06572737720390133,
+              "7": 0.02668909586616227,
+              "8": 0.02998907012487409,
+              "9": 0.03343055106027939,
+              "10": 0.03496566575129472,
+              "11": 0.030208334039853808,
+              "12": 0.0372753354824364,
+              "13": 0.04418485586796973,
+              "14": 0.04943843188794542,
+              "15": 0.024704360021754575,
+              "16": 0.047163276600766794,
+              "17": 0.047250763732773524,
+              "18": 0.04663248354496271,
+              "19": 0.06546059831004014,
+              "20": 0.05969262236780887
+            },
+            "confidence": 0.02770035219807902
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 7979,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 21,
+          "inference_seconds": 0.36631863936781883,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.6666666666666666,
+      "done": true,
+      "elapsed_seconds": 2.465883184224367
+    }
+  ]
+}

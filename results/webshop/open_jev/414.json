@@ -1,0 +1,580 @@
+{
+  "task_id": 414,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars",
+  "instruction_sha256": "1c503dee7be6da77a9f2250f2ad0605ba341aa9e64c4a47c697cc8d47efd4313",
+  "reward": 0.8,
+  "score": 80.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 4.520477082580328,
+  "decision_seconds": 4.329498030245304,
+  "input_tokens": 97754,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars [SEP] Search",
+      "action": "search[i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.061329398304224014
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B085DP1X9F [SEP] CC Corso Como Women's Denice [SEP] $35.47 to $145.36 [SEP] B077G73K8P [SEP] CC Corso Como Women's irit Pump [SEP] $40.4 to $82.12 [SEP] B07GSF1JTW [SEP] CC Corso Como Women's Prysym High Heel Pump [SEP] $37.99 to $98.83 [SEP] B07TXRYQJP [SEP] CC Corso Como Women's CC-Ryanna Pump, Luggage, 8.5 Medium US [SEP] $98.42 [SEP] B077G8DLF9 [SEP] CC Corso Como Women's CC-Gwynn Pump, Black, 9 M US [SEP] $121.47 [SEP] B07RNDZHQB [SEP] CC Corso Como Women's Ryanna Pump [SEP] $15.39 to $118.54 [SEP] B07TXRYQJR [SEP] CC Corso Como Women's Ryanna Pump, Black, 5 Medium US [SEP] $61.89 [SEP] B08FZS9Q3B [SEP] NDB Women's Cozy Memory Foam Suede Slippers Fuzzy Wool-Like Plush Fleece Lined Slip On Indoor Outdoor House Shoes [SEP] $24.99 to $27.99 [SEP] B09L1K4YHX [SEP] Hundreds Of 100 Dollar Bills Mans Women'S Slipper Warm Step-In Furry Slippers Anti-Skid Winter Shoes [SEP] $12.98 [SEP] B0819SYZ2N [SEP] House Slippers for Women Memory Foam,Comfort Warm Fleece Lining Collar House Shoes Indoor Outdoor Anti-Skid Hard Rubber Sole [SEP] $1.19 to $8.19",
+      "request": {
+        "state": "Shopping instruction:\ni will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B085DP1X9F [SEP] CC Corso Como Women's Denice [SEP] $35.47 to $145.36 [SEP] B077G73K8P [SEP] CC Corso Como Women's irit Pump [SEP] $40.4 to $82.12 [SEP] B07GSF1JTW [SEP] CC Corso Como Women's Prysym High Heel Pump [SEP] $37.99 to $98.83 [SEP] B07TXRYQJP [SEP] CC Corso Como Women's CC-Ryanna Pump, Luggage, 8.5 Medium US [SEP] $98.42 [SEP] B077G8DLF9 [SEP] CC Corso Como Women's CC-Gwynn Pump, Black, 9 M US [SEP] $121.47 [SEP] B07RNDZHQB [SEP] CC Corso Como Women's Ryanna Pump [SEP] $15.39 to $118.54 [SEP] B07TXRYQJR [SEP] CC Corso Como Women's Ryanna Pump, Black, 5 Medium US [SEP] $61.89 [SEP] B08FZS9Q3B [SEP] NDB Women's Cozy Memory Foam Suede Slippers Fuzzy Wool-Like Plush Fleece Lined Slip On Indoor Outdoor House Shoes [SEP] $24.99 to $27.99 [SEP] B09L1K4YHX [SEP] Hundreds Of 100 Dollar Bills Mans Women'S Slipper Warm Step-In Furry Slippers Anti-Skid Winter Shoes [SEP] $12.98 [SEP] B0819SYZ2N [SEP] House Slippers for Women Memory Foam,Comfort Warm Fleece Lining Collar House Shoes Indoor Outdoor Anti-Skid Hard Rubber Sole [SEP] $1.19 to $8.19\n\nRecent actions:\nsearch[i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b085dp1x9f]",
+              "3": "click[b077g73k8p]",
+              "4": "click[b07gsf1jtw]",
+              "5": "click[b07txryqjp]",
+              "6": "click[b077g8dlf9]",
+              "7": "click[b07rndzhqb]",
+              "8": "click[b07txryqjr]",
+              "9": "click[b08fzs9q3b]",
+              "10": "click[b09l1k4yhx]",
+              "11": "click[b0819syz2n]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a3bf3fbf6439a84464b13aa07c1f7494009d5f398154942db764b6088d1bf074",
+      "attempts": [
+        {
+          "seconds": 0.3721190541982651,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37223459780216217,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.05249693743720138,
+              "1": 0.11308614986724873,
+              "2": 0.26825216542885577,
+              "3": 0.06217658159732867,
+              "4": 0.15597190400385222,
+              "5": 0.0757736121475814,
+              "6": 0.029999619267984716,
+              "7": 0.15277255251594937,
+              "8": 0.040275262378528846,
+              "9": 0.018557061035543818,
+              "10": 0.014933546961696444,
+              "11": 0.015704607358228793
+            },
+            "confidence": 0.20172963501329724
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8347,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.37022997066378593,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b085dp1x9f]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4638422541320324
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 5.5 wide [SEP] 6 [SEP] 6 wide [SEP] 6.5 [SEP] 6.5 wide [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8 wide [SEP] 8.5 [SEP] 9 [SEP] 9.5 [SEP] 9.5 wide [SEP] 10 [SEP] 10.5 [SEP] 11 [SEP] 11 wide [SEP] 11.5 [SEP] 12 [SEP] 12 wide [SEP] 13 [SEP] 11 medium us [SEP] 12 medium us [SEP] 5 medium us [SEP] 5.5 medium us [SEP] 6.5 medium us [SEP] 9.5 medium us [SEP] 6 wide us [SEP] color [SEP] tan [SEP] hot sauce [SEP] red crocco [SEP] black satin [SEP] peacoat [SEP] red trix [SEP] black leather [SEP] natural [SEP] port royale [SEP] tan | black [SEP] pewter 63 [SEP] champagne [SEP] black suede [SEP] nude [SEP] CC Corso Como Women's Denice [SEP] Price: $35.47 to $145.36 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 5.5 wide [SEP] 6 [SEP] 6 wide [SEP] 6.5 [SEP] 6.5 wide [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8 wide [SEP] 8.5 [SEP] 9 [SEP] 9.5 [SEP] 9.5 wide [SEP] 10 [SEP] 10.5 [SEP] 11 [SEP] 11 wide [SEP] 11.5 [SEP] 12 [SEP] 12 wide [SEP] 13 [SEP] 11 medium us [SEP] 12 medium us [SEP] 5 medium us [SEP] 5.5 medium us [SEP] 6.5 medium us [SEP] 9.5 medium us [SEP] 6 wide us [SEP] color [SEP] tan [SEP] hot sauce [SEP] red crocco [SEP] black satin [SEP] peacoat [SEP] red trix [SEP] black leather [SEP] natural [SEP] port royale [SEP] tan | black [SEP] pewter 63 [SEP] champagne [SEP] black suede [SEP] nude [SEP] CC Corso Como Women's Denice [SEP] Price: $35.47 to $145.36 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars]\nclick[b085dp1x9f]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[5]",
+              "7": "click[5.5]",
+              "8": "click[5.5 wide]",
+              "9": "click[6]",
+              "10": "click[6 wide]",
+              "11": "click[6.5]",
+              "12": "click[6.5 wide]",
+              "13": "click[7]",
+              "14": "click[7.5]",
+              "15": "click[8]",
+              "16": "click[8 wide]",
+              "17": "click[8.5]",
+              "18": "click[9]",
+              "19": "click[9.5]",
+              "20": "click[9.5 wide]",
+              "21": "click[10]",
+              "22": "click[10.5]",
+              "23": "click[11]",
+              "24": "click[11 wide]",
+              "25": "click[11.5]",
+              "26": "click[12]",
+              "27": "click[12 wide]",
+              "28": "click[13]",
+              "29": "click[11 medium us]",
+              "30": "click[12 medium us]",
+              "31": "click[5 medium us]",
+              "32": "click[5.5 medium us]",
+              "33": "click[6.5 medium us]",
+              "34": "click[9.5 medium us]",
+              "35": "click[6 wide us]",
+              "36": "click[tan]",
+              "37": "click[hot sauce]",
+              "38": "click[red crocco]",
+              "39": "click[black satin]",
+              "40": "click[peacoat]",
+              "41": "click[red trix]",
+              "42": "click[black leather]",
+              "43": "click[natural]",
+              "44": "click[port royale]",
+              "45": "click[tan | black]",
+              "46": "click[pewter 63]",
+              "47": "click[champagne]",
+              "48": "click[black suede]",
+              "49": "click[nude]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6194105997fff7c5e5a763037bc56c78f8b64042c7d311767970b0c97ab98263",
+      "attempts": [
+        {
+          "seconds": 1.2998602539300919,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.2999891489744186,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "45",
+            "probabilities": {
+              "0": 0.017948828686103615,
+              "1": 0.017306942365523433,
+              "2": 0.03028840095876768,
+              "3": 0.01752731371484247,
+              "4": 0.017607749661293314,
+              "5": 0.06479921569472129,
+              "6": 0.022995334640004292,
+              "7": 0.05662549349312785,
+              "8": 0.018096909760404713,
+              "9": 0.02036233662592116,
+              "10": 0.014180415777769195,
+              "11": 0.011701787241174693,
+              "12": 0.013580685985053399,
+              "13": 0.016430795086421444,
+              "14": 0.008030800094809477,
+              "15": 0.019578229366326434,
+              "16": 0.011626854128661874,
+              "17": 0.01139823785973891,
+              "18": 0.031215717126973422,
+              "19": 0.010699718918634435,
+              "20": 0.009390131760740304,
+              "21": 0.017672796809293307,
+              "22": 0.012262264098268368,
+              "23": 0.01674949430133627,
+              "24": 0.009551337687368579,
+              "25": 0.00880931069598814,
+              "26": 0.020781020000656715,
+              "27": 0.010967840503055838,
+              "28": 0.01969363499819742,
+              "29": 0.014336860521047216,
+              "30": 0.011269127815782053,
+              "31": 0.012558316643288384,
+              "32": 0.07097745452753515,
+              "33": 0.007799571518440199,
+              "34": 0.00906327436011043,
+              "35": 0.012476499830098202,
+              "36": 0.06952632162884795,
+              "37": 0.010319286547889465,
+              "38": 0.005873552681172664,
+              "39": 0.0034081132404959282,
+              "40": 0.010555562781819395,
+              "41": 0.005568916442519486,
+              "42": 0.005390415601286387,
+              "43": 0.023404177575671856,
+              "44": 0.015547575941918534,
+              "45": 0.12050467755688096,
+              "46": 0.007213065518203441,
+              "47": 0.009137716086207576,
+              "48": 0.006529082236390196,
+              "49": 0.010660832903216486
+            },
+            "confidence": 0.1025557934253887
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 29419,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 50,
+          "inference_seconds": 1.2978197447955608,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[tan | black]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.7963221445679665
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 5.5 wide [SEP] 6 [SEP] 6 wide [SEP] 6.5 [SEP] 6.5 wide [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8 wide [SEP] 8.5 [SEP] 9 [SEP] 9.5 [SEP] 9.5 wide [SEP] 10 [SEP] 10.5 [SEP] 11 [SEP] 11 wide [SEP] 11.5 [SEP] 12 [SEP] 12 wide [SEP] 13 [SEP] 11 medium us [SEP] 12 medium us [SEP] 5 medium us [SEP] 5.5 medium us [SEP] 6.5 medium us [SEP] 9.5 medium us [SEP] 6 wide us [SEP] color [SEP] tan [SEP] hot sauce [SEP] red crocco [SEP] black satin [SEP] peacoat [SEP] red trix [SEP] black leather [SEP] natural [SEP] port royale [SEP] tan | black [SEP] pewter 63 [SEP] champagne [SEP] black suede [SEP] nude [SEP] CC Corso Como Women's Denice [SEP] Price: $35.47 to $145.36 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 5.5 wide [SEP] 6 [SEP] 6 wide [SEP] 6.5 [SEP] 6.5 wide [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8 wide [SEP] 8.5 [SEP] 9 [SEP] 9.5 [SEP] 9.5 wide [SEP] 10 [SEP] 10.5 [SEP] 11 [SEP] 11 wide [SEP] 11.5 [SEP] 12 [SEP] 12 wide [SEP] 13 [SEP] 11 medium us [SEP] 12 medium us [SEP] 5 medium us [SEP] 5.5 medium us [SEP] 6.5 medium us [SEP] 9.5 medium us [SEP] 6 wide us [SEP] color [SEP] tan [SEP] hot sauce [SEP] red crocco [SEP] black satin [SEP] peacoat [SEP] red trix [SEP] black leather [SEP] natural [SEP] port royale [SEP] tan | black [SEP] pewter 63 [SEP] champagne [SEP] black suede [SEP] nude [SEP] CC Corso Como Women's Denice [SEP] Price: $35.47 to $145.36 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars]\nclick[b085dp1x9f]\nclick[tan | black]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[5]",
+              "7": "click[5.5]",
+              "8": "click[5.5 wide]",
+              "9": "click[6]",
+              "10": "click[6 wide]",
+              "11": "click[6.5]",
+              "12": "click[6.5 wide]",
+              "13": "click[7]",
+              "14": "click[7.5]",
+              "15": "click[8]",
+              "16": "click[8 wide]",
+              "17": "click[8.5]",
+              "18": "click[9]",
+              "19": "click[9.5]",
+              "20": "click[9.5 wide]",
+              "21": "click[10]",
+              "22": "click[10.5]",
+              "23": "click[11]",
+              "24": "click[11 wide]",
+              "25": "click[11.5]",
+              "26": "click[12]",
+              "27": "click[12 wide]",
+              "28": "click[13]",
+              "29": "click[11 medium us]",
+              "30": "click[12 medium us]",
+              "31": "click[5 medium us]",
+              "32": "click[5.5 medium us]",
+              "33": "click[6.5 medium us]",
+              "34": "click[9.5 medium us]",
+              "35": "click[6 wide us]",
+              "36": "click[tan]",
+              "37": "click[hot sauce]",
+              "38": "click[red crocco]",
+              "39": "click[black satin]",
+              "40": "click[peacoat]",
+              "41": "click[red trix]",
+              "42": "click[black leather]",
+              "43": "click[natural]",
+              "44": "click[port royale]",
+              "45": "click[tan | black]",
+              "46": "click[pewter 63]",
+              "47": "click[champagne]",
+              "48": "click[black suede]",
+              "49": "click[nude]"
+            }
+          }
+        }
+      },
+      "request_sha256": "68b217e9160d494f0e53cf1d3a6b9d21d5ffbdc55c246bca32516a4211b1cfd4",
+      "attempts": [
+        {
+          "seconds": 1.319170668721199,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.3193242512643337,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "32",
+            "probabilities": {
+              "0": 0.020762124836135015,
+              "1": 0.020624141218427587,
+              "2": 0.032968074272216916,
+              "3": 0.018868935992104627,
+              "4": 0.019215361197159244,
+              "5": 0.07397420914556779,
+              "6": 0.025862320109815616,
+              "7": 0.0814096159593292,
+              "8": 0.01918392497051673,
+              "9": 0.016163211917808708,
+              "10": 0.01526553813895775,
+              "11": 0.012558775189374179,
+              "12": 0.014533593573321435,
+              "13": 0.012367948875623903,
+              "14": 0.0074092385912455025,
+              "15": 0.022859832419873695,
+              "16": 0.012589011087105856,
+              "17": 0.012693381622607133,
+              "18": 0.03153474802170299,
+              "19": 0.011588953740164847,
+              "20": 0.009585493020887173,
+              "21": 0.016600363074794487,
+              "22": 0.013084996140415328,
+              "23": 0.013751070443561579,
+              "24": 0.009592584562562985,
+              "25": 0.009171950775357235,
+              "26": 0.017693025127254194,
+              "27": 0.012780166917018033,
+              "28": 0.01651101794544088,
+              "29": 0.012512714457236604,
+              "30": 0.012332259413056506,
+              "31": 0.012847132133539422,
+              "32": 0.12464193698153177,
+              "33": 0.007941644640781183,
+              "34": 0.0097315365439741,
+              "35": 0.014029649569979874,
+              "36": 0.05839271549116985,
+              "37": 0.009984435556354778,
+              "38": 0.005134535785668022,
+              "39": 0.006613642848434416,
+              "40": 0.012320069931881205,
+              "41": 0.004666064162791836,
+              "42": 0.010606818699403572,
+              "43": 0.02030288540462964,
+              "44": 0.01397126327915404,
+              "45": 0.02899979833089894,
+              "46": 0.007215164137899129,
+              "47": 0.008244602510507206,
+              "48": 0.010147007295616602,
+              "49": 0.008160513939140598
+            },
+            "confidence": 0.10677748671584876
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 29769,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 50,
+          "inference_seconds": 1.3171817027032375,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[5.5 medium us]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.148311648517847
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 5.5 wide [SEP] 6 [SEP] 6 wide [SEP] 6.5 [SEP] 6.5 wide [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8 wide [SEP] 8.5 [SEP] 9 [SEP] 9.5 [SEP] 9.5 wide [SEP] 10 [SEP] 10.5 [SEP] 11 [SEP] 11 wide [SEP] 11.5 [SEP] 12 [SEP] 12 wide [SEP] 13 [SEP] 11 medium us [SEP] 12 medium us [SEP] 5 medium us [SEP] 5.5 medium us [SEP] 6.5 medium us [SEP] 9.5 medium us [SEP] 6 wide us [SEP] color [SEP] tan [SEP] hot sauce [SEP] red crocco [SEP] black satin [SEP] peacoat [SEP] red trix [SEP] black leather [SEP] natural [SEP] port royale [SEP] tan | black [SEP] pewter 63 [SEP] champagne [SEP] black suede [SEP] nude [SEP] CC Corso Como Women's Denice [SEP] Price: $35.47 to $145.36 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 5.5 wide [SEP] 6 [SEP] 6 wide [SEP] 6.5 [SEP] 6.5 wide [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8 wide [SEP] 8.5 [SEP] 9 [SEP] 9.5 [SEP] 9.5 wide [SEP] 10 [SEP] 10.5 [SEP] 11 [SEP] 11 wide [SEP] 11.5 [SEP] 12 [SEP] 12 wide [SEP] 13 [SEP] 11 medium us [SEP] 12 medium us [SEP] 5 medium us [SEP] 5.5 medium us [SEP] 6.5 medium us [SEP] 9.5 medium us [SEP] 6 wide us [SEP] color [SEP] tan [SEP] hot sauce [SEP] red crocco [SEP] black satin [SEP] peacoat [SEP] red trix [SEP] black leather [SEP] natural [SEP] port royale [SEP] tan | black [SEP] pewter 63 [SEP] champagne [SEP] black suede [SEP] nude [SEP] CC Corso Como Women's Denice [SEP] Price: $35.47 to $145.36 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i will like to have a synthetic sole, memory foam cc corso como women's denice, size 5.5 and tan color, and price lower than 120.00 dollars]\nclick[b085dp1x9f]\nclick[tan | black]\nclick[5.5 medium us]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[5]",
+              "7": "click[5.5]",
+              "8": "click[5.5 wide]",
+              "9": "click[6]",
+              "10": "click[6 wide]",
+              "11": "click[6.5]",
+              "12": "click[6.5 wide]",
+              "13": "click[7]",
+              "14": "click[7.5]",
+              "15": "click[8]",
+              "16": "click[8 wide]",
+              "17": "click[8.5]",
+              "18": "click[9]",
+              "19": "click[9.5]",
+              "20": "click[9.5 wide]",
+              "21": "click[10]",
+              "22": "click[10.5]",
+              "23": "click[11]",
+              "24": "click[11 wide]",
+              "25": "click[11.5]",
+              "26": "click[12]",
+              "27": "click[12 wide]",
+              "28": "click[13]",
+              "29": "click[11 medium us]",
+              "30": "click[12 medium us]",
+              "31": "click[5 medium us]",
+              "32": "click[5.5 medium us]",
+              "33": "click[6.5 medium us]",
+              "34": "click[9.5 medium us]",
+              "35": "click[6 wide us]",
+              "36": "click[tan]",
+              "37": "click[hot sauce]",
+              "38": "click[red crocco]",
+              "39": "click[black satin]",
+              "40": "click[peacoat]",
+              "41": "click[red trix]",
+              "42": "click[black leather]",
+              "43": "click[natural]",
+              "44": "click[port royale]",
+              "45": "click[tan | black]",
+              "46": "click[pewter 63]",
+              "47": "click[champagne]",
+              "48": "click[black suede]",
+              "49": "click[nude]"
+            }
+          }
+        }
+      },
+      "request_sha256": "272fc396f1db4a95b98e3041bf429b172086db898e668510b50ee4c21a07d800",
+      "attempts": [
+        {
+          "seconds": 1.3378076255321503,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.3379500322043896,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.026624849006810353,
+              "1": 0.02688680514735225,
+              "2": 0.03908738978002358,
+              "3": 0.023984559045883255,
+              "4": 0.02532057328441871,
+              "5": 0.14298895079616242,
+              "6": 0.021508366317505696,
+              "7": 0.04963002224733524,
+              "8": 0.024219110244224122,
+              "9": 0.015358606517990838,
+              "10": 0.016030582756948526,
+              "11": 0.015156260523672378,
+              "12": 0.01724280926001612,
+              "13": 0.013352230930768007,
+              "14": 0.007883403490075255,
+              "15": 0.016849266373236773,
+              "16": 0.014435389323230727,
+              "17": 0.013602510198118761,
+              "18": 0.02183669393933534,
+              "19": 0.01220699374530391,
+              "20": 0.009853332524458346,
+              "21": 0.02047454327847477,
+              "22": 0.01764727842847265,
+              "23": 0.014853208655621048,
+              "24": 0.0109902414949724,
+              "25": 0.010444447741261848,
+              "26": 0.017898810648747567,
+              "27": 0.0158248643466062,
+              "28": 0.01727688541943847,
+              "29": 0.010527452140069296,
+              "30": 0.010631610727187844,
+              "31": 0.009502757237450626,
+              "32": 0.01803188896227954,
+              "33": 0.008037544954024372,
+              "34": 0.007153624744971609,
+              "35": 0.013525805860791992,
+              "36": 0.06924132244761103,
+              "37": 0.012315652778307578,
+              "38": 0.006162447891353611,
+              "39": 0.00796358358328653,
+              "40": 0.013936440894044605,
+              "41": 0.005385190082611453,
+              "42": 0.011970746209439801,
+              "43": 0.024899709809071358,
+              "44": 0.018289215782338622,
+              "45": 0.0322628509314513,
+              "46": 0.008105470720876175,
+              "47": 0.01038266988430312,
+              "48": 0.012576480757902964,
+              "49": 0.00962854813416106
+            },
+            "confidence": 0.12549892938383916
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 30219,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 50,
+          "inference_seconds": 1.3359049148857594,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.8,
+      "done": true,
+      "elapsed_seconds": 4.520474251359701
+    }
+  ]
+}

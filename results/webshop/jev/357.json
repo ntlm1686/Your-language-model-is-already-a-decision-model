@@ -1,0 +1,154 @@
+{
+  "task_id": 357,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i like  traditional , old  and individually wrapped albert's chocolate ice cubes 60 count tray chocolate, and price lower than 50.00 dollars",
+  "instruction_sha256": "eead5bd51f0ff21f08b5213b7b52b7c2ef8045c89f92d2f56adf74330690d2c1",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 0.7226810455322266,
+  "decision_seconds": 0.6315175034105778,
+  "input_tokens": 1720,
+  "output_tokens": 162,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i like  traditional , old  and individually wrapped albert's chocolate ice cubes 60 count tray chocolate, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[i like  traditional , old  and individually wrapped albert's chocolate ice cubes 60 count tray chocolate, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.04751186817884445
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i like  traditional , old  and individually wrapped albert's chocolate ice cubes 60 count tray chocolate, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00T7JEX44 [SEP] Albert's Chocolate Ice Cubes 60 Count Tray [SEP] $29.88 [SEP] B00QOX3I6U [SEP] Albert's Chocolate Ice Cubes 50 Count [SEP] $19.91 [SEP] B00A4BRAE4 [SEP] Albert's Chocolate Ice Cubes 100 Count Tray [SEP] $29.62 [SEP] B08P63JFQG [SEP] Albert's Ice Cubes Chocolate Candy, 5 Pack - 12 Count Pack [SEP] $29.99 [SEP] B00W6ZIDLU [SEP] Dovebar Minis Variety Mix, Vanilla and Chocolate Ice Cream With Dark Chocolate, 14 Count (Frozen) [SEP] $100.0 [SEP] B09QBCPVT1 [SEP] Albert's Ice Cubes - 1 lb of Fresh Delicious Bulk Chocolate Candy with Refrigerator Magnet [SEP] $14.99 [SEP] B07F3GJCFL [SEP] DOVE Miniatures 14-Count Milk Chocolate Variety Pack (4 Count) [SEP] $40.96 [SEP] B07DWFSBYR [SEP] DOVEBAR Singles - Almond/Milk Chocolate (12 Count) [SEP] $44.83 [SEP] B000PNCYCY [SEP] Skinny Cow, The Dynamic Duo: Vanilla & Chocolate Low Fat Ice Cream Sandwiches, 6 Count (Frozen) [SEP] $100.0 [SEP] B081P3RJH1 [SEP] Candy Cane Spoons Peppermint Flavored - Edible Hot Chocolate Coffee Party Favor Spoons - Individually Wrapped - 12 Count [SEP] $7.99",
+      "request": {
+        "state": "Shopping instruction:\ni like  traditional , old  and individually wrapped albert's chocolate ice cubes 60 count tray chocolate, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i like  traditional , old  and individually wrapped albert's chocolate ice cubes 60 count tray chocolate, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00T7JEX44 [SEP] Albert's Chocolate Ice Cubes 60 Count Tray [SEP] $29.88 [SEP] B00QOX3I6U [SEP] Albert's Chocolate Ice Cubes 50 Count [SEP] $19.91 [SEP] B00A4BRAE4 [SEP] Albert's Chocolate Ice Cubes 100 Count Tray [SEP] $29.62 [SEP] B08P63JFQG [SEP] Albert's Ice Cubes Chocolate Candy, 5 Pack - 12 Count Pack [SEP] $29.99 [SEP] B00W6ZIDLU [SEP] Dovebar Minis Variety Mix, Vanilla and Chocolate Ice Cream With Dark Chocolate, 14 Count (Frozen) [SEP] $100.0 [SEP] B09QBCPVT1 [SEP] Albert's Ice Cubes - 1 lb of Fresh Delicious Bulk Chocolate Candy with Refrigerator Magnet [SEP] $14.99 [SEP] B07F3GJCFL [SEP] DOVE Miniatures 14-Count Milk Chocolate Variety Pack (4 Count) [SEP] $40.96 [SEP] B07DWFSBYR [SEP] DOVEBAR Singles - Almond/Milk Chocolate (12 Count) [SEP] $44.83 [SEP] B000PNCYCY [SEP] Skinny Cow, The Dynamic Duo: Vanilla & Chocolate Low Fat Ice Cream Sandwiches, 6 Count (Frozen) [SEP] $100.0 [SEP] B081P3RJH1 [SEP] Candy Cane Spoons Peppermint Flavored - Edible Hot Chocolate Coffee Party Favor Spoons - Individually Wrapped - 12 Count [SEP] $7.99\n\nRecent actions:\nsearch[i like  traditional , old  and individually wrapped albert's chocolate ice cubes 60 count tray chocolate, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b00t7jex44]",
+              "3": "click[b00qox3i6u]",
+              "4": "click[b00a4brae4]",
+              "5": "click[b08p63jfqg]",
+              "6": "click[b00w6zidlu]",
+              "7": "click[b09qbcpvt1]",
+              "8": "click[b07f3gjcfl]",
+              "9": "click[b07dwfsbyr]",
+              "10": "click[b000pncycy]",
+              "11": "click[b081p3rjh1]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "fcaaaccb057a751b0fda70de028f4f80757957526d19b4ffeb63f570070450ae",
+      "attempts": [
+        {
+          "seconds": 0.31447693705558777,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3145940341055393,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.99,
+            "probabilities": {
+              "6": 0.0,
+              "3": 0.0,
+              "8": 0.0,
+              "5": 0.0,
+              "4": 0.0,
+              "2": 1.0,
+              "0": 0.0,
+              "7": 0.0,
+              "9": 0.0,
+              "1": 0.0,
+              "10": 0.0,
+              "11": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1117,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b00t7jex44]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.383965328335762
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i like  traditional , old  and individually wrapped albert's chocolate ice cubes 60 count tray chocolate, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Albert's Chocolate Ice Cubes 60 Count Tray [SEP] Price: $29.88 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni like  traditional , old  and individually wrapped albert's chocolate ice cubes 60 count tray chocolate, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i like  traditional , old  and individually wrapped albert's chocolate ice cubes 60 count tray chocolate, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Albert's Chocolate Ice Cubes 60 Count Tray [SEP] Price: $29.88 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i like  traditional , old  and individually wrapped albert's chocolate ice cubes 60 count tray chocolate, and price lower than 50.00 dollars]\nclick[b00t7jex44]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "7637d5df859a994b1e11361b383bf36623b09af815b820416528f19ce66ecf51",
+      "attempts": [
+        {
+          "seconds": 0.31683141738176346,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.31692346930503845,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.9,
+            "probabilities": {
+              "4": 0.0,
+              "3": 0.04,
+              "1": 0.0,
+              "0": 0.0,
+              "2": 0.04,
+              "5": 0.92
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 603,
+          "output_tokens": 59
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 0.7226785160601139
+    }
+  ]
+}

@@ -1,0 +1,1819 @@
+{
+  "task_id": 40,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars",
+  "instruction_sha256": "3fd91bcde8208d5fab5f49364655f2563fee312d7c6ca826a762473eb2ee4fac",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "repeated_state_action",
+  "steps": 28,
+  "elapsed_seconds": 7.784814398735762,
+  "decision_seconds": 5.932943310588598,
+  "input_tokens": 121794,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Search",
+      "action": "search[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06163736805319786
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B005FKMUHQ [SEP] DHP Emily Futon With Chrome Legs, Black Faux Leather [SEP] $100.0 [SEP] B06W54LLXW [SEP] DHP Emily Rectangular Storage Ottoman, Grey Linen [SEP] $124.99 [SEP] B07G5ZK2GG [SEP] DHP Emily Futon With Chrome Legs, Green Velvet [SEP] $380.0 [SEP] B091PMMDB5 [SEP] Yaheetech Faux Leather Futon Sofa Bed Sectional Futon Couch Sleeper with Armrest Home Convertible Recliner Couch with Chaise Lounge Black [SEP] $469.99 [SEP] B09BR3L4QP [SEP] Allora Small Space Sectional Sofa Futon in Blue [SEP] $100.0 [SEP] B071KLJGVN [SEP] Novogratz Brittany Sofa Futon - Premium Upholstery and Wooden Legs - Green [SEP] $100.0 [SEP] B071XJNDVG [SEP] Novogratz Brittany Sofa Futon - Premium Upholstery and Wooden Legs - Mustard [SEP] $389.56 [SEP] B08ML4R5DL [SEP] Yaheetech Faux Leather Sectional Sofa Couch Sectional Living Room Furniture Set Convertible Futon Sofa Beds with Chaise Lounge Black [SEP] $485.99 [SEP] B08MKQZNNK [SEP] Topeakmart Living Room Sofa Couch Modern Sectional Sofa Bed Couch Faux Leather Upholstery Futon Sofa Bed with Convertible Chaise Lounge Reclining Living Room Sofa Black [SEP] $529.99 [SEP] B09PY2Y144 [SEP] Houjud Convertible Folding Sleeper Sofa Bed, Faux Leather Upholstered Convertible Sofa Bed Futon w/Storage Footrest, Mini Couch for Compact Living Space, Sleeper Sofas, Accent Chairs [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B005FKMUHQ [SEP] DHP Emily Futon With Chrome Legs, Black Faux Leather [SEP] $100.0 [SEP] B06W54LLXW [SEP] DHP Emily Rectangular Storage Ottoman, Grey Linen [SEP] $124.99 [SEP] B07G5ZK2GG [SEP] DHP Emily Futon With Chrome Legs, Green Velvet [SEP] $380.0 [SEP] B091PMMDB5 [SEP] Yaheetech Faux Leather Futon Sofa Bed Sectional Futon Couch Sleeper with Armrest Home Convertible Recliner Couch with Chaise Lounge Black [SEP] $469.99 [SEP] B09BR3L4QP [SEP] Allora Small Space Sectional Sofa Futon in Blue [SEP] $100.0 [SEP] B071KLJGVN [SEP] Novogratz Brittany Sofa Futon - Premium Upholstery and Wooden Legs - Green [SEP] $100.0 [SEP] B071XJNDVG [SEP] Novogratz Brittany Sofa Futon - Premium Upholstery and Wooden Legs - Mustard [SEP] $389.56 [SEP] B08ML4R5DL [SEP] Yaheetech Faux Leather Sectional Sofa Couch Sectional Living Room Furniture Set Convertible Futon Sofa Beds with Chaise Lounge Black [SEP] $485.99 [SEP] B08MKQZNNK [SEP] Topeakmart Living Room Sofa Couch Modern Sectional Sofa Bed Couch Faux Leather Upholstery Futon Sofa Bed with Convertible Chaise Lounge Reclining Living Room Sofa Black [SEP] $529.99 [SEP] B09PY2Y144 [SEP] Houjud Convertible Folding Sleeper Sofa Bed, Faux Leather Upholstered Convertible Sofa Bed Futon w/Storage Footrest, Mini Couch for Compact Living Space, Sleeper Sofas, Accent Chairs [SEP] $100.0\n\nRecent actions:\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b005fkmuhq]",
+              "3": "click[b06w54llxw]",
+              "4": "click[b07g5zk2gg]",
+              "5": "click[b091pmmdb5]",
+              "6": "click[b09br3l4qp]",
+              "7": "click[b071kljgvn]",
+              "8": "click[b071xjndvg]",
+              "9": "click[b08ml4r5dl]",
+              "10": "click[b08mkqznnk]",
+              "11": "click[b09py2y144]"
+            }
+          }
+        }
+      },
+      "request_sha256": "263a5e63f8d8055c3a78892073ea6b00821373646322cbbc105e4fc20f167654",
+      "attempts": [
+        {
+          "seconds": 0.3744496814906597,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3745638206601143,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.14750468670003491,
+              "1": 0.4114226738346881,
+              "2": 0.05013918023362734,
+              "3": 0.036144777256216065,
+              "4": 0.0150633231074876,
+              "5": 0.053874589584744094,
+              "6": 0.07939389412574278,
+              "7": 0.019558501836699042,
+              "8": 0.023697771346751773,
+              "9": 0.04613369806432899,
+              "10": 0.03285480513849448,
+              "11": 0.08421209877118484
+            },
+            "confidence": 0.35791564418329613
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8369,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.37085647135972977,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5071211010217667
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B098XKW5M2 [SEP] Giantex 3 Pieces Convertible Sectional Sofa Set, 3 Seat Sofa and Couch with Cup Holders and Ottoman, Tufted PU Leather Chaise Modern Reversible Living Room Furniture for Apartment Office (Black) [SEP] $629.99 [SEP] B07ZDL9QM4 [SEP] Contemporary Sectional Sofa Couch w/Chaise & Storage Ottoman|3PCs L-Shaped Sectionals Living Room Furniture|Faux Leather Upholstery w/Cup Holders Drop-Down Table|Memory Foam Cushion(WhiteLeftFacing) [SEP] $1099.0 [SEP] B08LB1QJ81 [SEP] Topeakmart Sectional Sofa Couch Bed Convertible L-Shaped Faux Leather Couch Foldable Futon Sofa Sleeper with Reversible Chaise Lounge for Living Room Black [SEP] $529.99 [SEP] B07WG47QRB [SEP] DHP Haven Small Space Sectional Sofa, Dark Gray Linen Futon, [SEP] $438.75 [SEP] B08NPPBW5G [SEP] Yaheetech Living Room Sets Sectional Sofa Faux Leather 2 Pieces Living Room Futon Bed Sectional Furniture Set Modern Futon Couch Sets for Living Room Futon Bed w/Chaise Lounge Black [SEP] $465.99 [SEP] B09BJX6D2F [SEP] VUYUYU Futon Sofa Bed, Multifunctional Couches for Living Room, Small Convertible Futon Sofa with Ottoman/Coffee Table, Folding Recliner Sleeper, Linen Sectional Couch Set for Compact Space (Gray) [SEP] $419.99 [SEP] B09MQWXFP3 [SEP] Faux Leather Chaise Lounge Convertible Chaise Futon Chaise for Living Room White HilariousM Sofa Sofa Bed Sleeper Sofa Couches for Living Room Sofas for Living Room Living Room Furniture Couch Bed [SEP] $483.98 [SEP] B084D5WBZ8 [SEP] Memory Foam Faux Leather Pillowtop Futon with Cupholder, Black Faux Leather Colors Ideal for Small Living Spaces [SEP] $281.5 [SEP] B09NR2YY1X [SEP] Mjkone Sectional Sofas for Living Room, Couches for Living Room, Sectional Sofa with Chaise Lounge, Living Room Furniture Sets with Two Materials (Breathable Linen Fabric + Faux Leather Sofa) [SEP] $899.99 [SEP] B09MMYXY54 [SEP] VUYUYU Futon Sofa Bed, Multifunctional Couches for Living Room, Small Convertible Futon Sofa with Ottoman/Coffee Table, Folding Recliner Sleeper, PU Leather Sectional Couch Set for Compact Space [SEP] $459.99",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B098XKW5M2 [SEP] Giantex 3 Pieces Convertible Sectional Sofa Set, 3 Seat Sofa and Couch with Cup Holders and Ottoman, Tufted PU Leather Chaise Modern Reversible Living Room Furniture for Apartment Office (Black) [SEP] $629.99 [SEP] B07ZDL9QM4 [SEP] Contemporary Sectional Sofa Couch w/Chaise & Storage Ottoman|3PCs L-Shaped Sectionals Living Room Furniture|Faux Leather Upholstery w/Cup Holders Drop-Down Table|Memory Foam Cushion(WhiteLeftFacing) [SEP] $1099.0 [SEP] B08LB1QJ81 [SEP] Topeakmart Sectional Sofa Couch Bed Convertible L-Shaped Faux Leather Couch Foldable Futon Sofa Sleeper with Reversible Chaise Lounge for Living Room Black [SEP] $529.99 [SEP] B07WG47QRB [SEP] DHP Haven Small Space Sectional Sofa, Dark Gray Linen Futon, [SEP] $438.75 [SEP] B08NPPBW5G [SEP] Yaheetech Living Room Sets Sectional Sofa Faux Leather 2 Pieces Living Room Futon Bed Sectional Furniture Set Modern Futon Couch Sets for Living Room Futon Bed w/Chaise Lounge Black [SEP] $465.99 [SEP] B09BJX6D2F [SEP] VUYUYU Futon Sofa Bed, Multifunctional Couches for Living Room, Small Convertible Futon Sofa with Ottoman/Coffee Table, Folding Recliner Sleeper, Linen Sectional Couch Set for Compact Space (Gray) [SEP] $419.99 [SEP] B09MQWXFP3 [SEP] Faux Leather Chaise Lounge Convertible Chaise Futon Chaise for Living Room White HilariousM Sofa Sofa Bed Sleeper Sofa Couches for Living Room Sofas for Living Room Living Room Furniture Couch Bed [SEP] $483.98 [SEP] B084D5WBZ8 [SEP] Memory Foam Faux Leather Pillowtop Futon with Cupholder, Black Faux Leather Colors Ideal for Small Living Spaces [SEP] $281.5 [SEP] B09NR2YY1X [SEP] Mjkone Sectional Sofas for Living Room, Couches for Living Room, Sectional Sofa with Chaise Lounge, Living Room Furniture Sets with Two Materials (Breathable Linen Fabric + Faux Leather Sofa) [SEP] $899.99 [SEP] B09MMYXY54 [SEP] VUYUYU Futon Sofa Bed, Multifunctional Couches for Living Room, Small Convertible Futon Sofa with Ottoman/Coffee Table, Folding Recliner Sleeper, PU Leather Sectional Couch Set for Compact Space [SEP] $459.99\n\nRecent actions:\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b098xkw5m2]",
+              "4": "click[b07zdl9qm4]",
+              "5": "click[b08lb1qj81]",
+              "6": "click[b07wg47qrb]",
+              "7": "click[b08nppbw5g]",
+              "8": "click[b09bjx6d2f]",
+              "9": "click[b09mqwxfp3]",
+              "10": "click[b084d5wbz8]",
+              "11": "click[b09nr2yy1x]",
+              "12": "click[b09mmyxy54]"
+            }
+          }
+        }
+      },
+      "request_sha256": "123a872299c622f12f3b885aaa3f64924e89fea91afd7e5b6bc3fcf6e3e78ee4",
+      "attempts": [
+        {
+          "seconds": 0.5024289898574352,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.502573948353529,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.19433727849819477,
+              "1": 0.1852960873426527,
+              "2": 0.22735875084548604,
+              "3": 0.02320235110089354,
+              "4": 0.021903702709020898,
+              "5": 0.03579437007297482,
+              "6": 0.038615140187505066,
+              "7": 0.034514824775001195,
+              "8": 0.04568753238653659,
+              "9": 0.04964068606315513,
+              "10": 0.061108919791255135,
+              "11": 0.03603393454061367,
+              "12": 0.04650642168671065
+            },
+            "confidence": 0.1629719800826098
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11497,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.5004677809774876,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.083139792084694
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B01N3YJNS3 [SEP] Jerry Sales Mattress and Frame Set ONLY Wooden Futon Monterey Arms Style Sofa Bed Couch Innerspring Mattress Cover Choices Buy Futons (Barbados Frame - Charcoal Linen Fabric) [SEP] $599.95 [SEP] B076JGF64N [SEP] Toronto Futon Set Frame and Mattress Full Size Wood Finish w/ 8 Inch Innerspring Matt Includes Choice to add Drawers Sofa Bed Couch Sleeper (Frame and Matt Only, Twilight) [SEP] $599.95 [SEP] B07H5ZWHJ2 [SEP] DHP Marley Sofa Sleeper with Cupholder and 2 Pillows, Black Faux Leather [SEP] $253.1 [SEP] B08LZ9TDZJ [SEP] Lifestyle Futon Sofa Bed, Modern Convertible Couch with Chrome Legs Converts Sofa, Faux Leather Black & White [SEP] $100.0 [SEP] B09QXKCNDR [SEP] Yoglad 77\" Inch Premium Loveseat, Sofa with 2 Throw Pillows, Couch with 4 Wooden Legs, Futon for Living Room, Bedroom, Dorm (Faux Leather, White) [SEP] $459.99 [SEP] B081ZFVRXV [SEP] Contemporary Sectional Sofa w/Chaise and Storage Ottoman|3-Piece L-Shape Living Room Furniture|Faux Leather Upholstery|High-Density Memory Foam Cushions|(2) Toss Pillows (Ginger Right Facing) [SEP] $1099.0 [SEP] B08QRN1WTH [SEP] Novogratz Perry Sectional Storage, Convertible Sleeper, Camel Faux Leather Futon [SEP] $751.52 [SEP] B08L9869XK [SEP] Yaheetech Faux Leather Chaise Lounge Indoor Convertible Chaise Futon Tufted Chaise Daybed with Chrome Metal Legs Converts to Recliner/Bed [SEP] $289.99 [SEP] B08L39JWQB [SEP] Yaheetech Convertible Sectional Sofa Couch L-Shaped Couch Faux Leather Sofa Bed Sleeper for Living Room Small Space Black [SEP] $469.99",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B01N3YJNS3 [SEP] Jerry Sales Mattress and Frame Set ONLY Wooden Futon Monterey Arms Style Sofa Bed Couch Innerspring Mattress Cover Choices Buy Futons (Barbados Frame - Charcoal Linen Fabric) [SEP] $599.95 [SEP] B076JGF64N [SEP] Toronto Futon Set Frame and Mattress Full Size Wood Finish w/ 8 Inch Innerspring Matt Includes Choice to add Drawers Sofa Bed Couch Sleeper (Frame and Matt Only, Twilight) [SEP] $599.95 [SEP] B07H5ZWHJ2 [SEP] DHP Marley Sofa Sleeper with Cupholder and 2 Pillows, Black Faux Leather [SEP] $253.1 [SEP] B08LZ9TDZJ [SEP] Lifestyle Futon Sofa Bed, Modern Convertible Couch with Chrome Legs Converts Sofa, Faux Leather Black & White [SEP] $100.0 [SEP] B09QXKCNDR [SEP] Yoglad 77\" Inch Premium Loveseat, Sofa with 2 Throw Pillows, Couch with 4 Wooden Legs, Futon for Living Room, Bedroom, Dorm (Faux Leather, White) [SEP] $459.99 [SEP] B081ZFVRXV [SEP] Contemporary Sectional Sofa w/Chaise and Storage Ottoman|3-Piece L-Shape Living Room Furniture|Faux Leather Upholstery|High-Density Memory Foam Cushions|(2) Toss Pillows (Ginger Right Facing) [SEP] $1099.0 [SEP] B08QRN1WTH [SEP] Novogratz Perry Sectional Storage, Convertible Sleeper, Camel Faux Leather Futon [SEP] $751.52 [SEP] B08L9869XK [SEP] Yaheetech Faux Leather Chaise Lounge Indoor Convertible Chaise Futon Tufted Chaise Daybed with Chrome Metal Legs Converts to Recliner/Bed [SEP] $289.99 [SEP] B08L39JWQB [SEP] Yaheetech Convertible Sectional Sofa Couch L-Shaped Couch Faux Leather Sofa Bed Sleeper for Living Room Small Space Black [SEP] $469.99\n\nRecent actions:\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09g3fpp9s]",
+              "4": "click[b01n3yjns3]",
+              "5": "click[b076jgf64n]",
+              "6": "click[b07h5zwhj2]",
+              "7": "click[b08lz9tdzj]",
+              "8": "click[b09qxkcndr]",
+              "9": "click[b081zfvrxv]",
+              "10": "click[b08qrn1wth]",
+              "11": "click[b08l9869xk]",
+              "12": "click[b08l39jwqb]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3d380ccab7796a081df3f11c19c40674dd1146337ea61f7be4c8f06260ccbeee",
+      "attempts": [
+        {
+          "seconds": 0.4792603738605976,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4794027581810951,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.22017897385085436,
+              "1": 0.21642098898166878,
+              "2": 0.2461905611375219,
+              "3": 0.01569557295970092,
+              "4": 0.023975467373474182,
+              "5": 0.020499563020403483,
+              "6": 0.04909377809296675,
+              "7": 0.053112768554460135,
+              "8": 0.02393078384780622,
+              "9": 0.02050259325994941,
+              "10": 0.019080795748534475,
+              "11": 0.0544595860172736,
+              "12": 0.03685856715538573
+            },
+            "confidence": 0.18337310789898206
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10873,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4771285690367222,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.6347577013075352
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07GR6Z6X3 [SEP] Contemporary Executive High Back Computer Desk Task Chair Hydraulic Adjustable Height 360-Degree Swivel Seat Home Office Dining Room Furniture - Set of 2 Black #2002a [SEP] $418.5 [SEP] B076TC9YBZ [SEP] SIMPLIHOME Andover Parson Dining Chair (Set of 2), Stone Grey Faux Leather and SOLID WOOD, Square, Upholstered, For the Dining Room, Contemporary Modern [SEP] $209.99 [SEP] B091GY58SC [SEP] Women's Linen Capri Pants Loose Cropped Wide Leg Pants Floral Comfy Elastic Waist Lightweight Trousers with Pockets [SEP] $16.15 to $20.39 [SEP] B07KKFDGSG [SEP] Hofdeco Decorative Throw Pillow Cover ONLY Premium Cotton Linen Tropical Leaf Tropical Banana Leaf 20\"x20\" Set of 2 [SEP] $39.99 [SEP] B07P6YH7DP [SEP] Best Choice Products Faux Leather Upholstery 3-Piece Modular Modern Living Room Sofa Sectional Furniture Set w/Convertible Single & Double Seat Futon Beds, Ottoman, Reclining Backrests - Black [SEP] $100.0 [SEP] B09LPFQVRY [SEP] Modern Life Style Living Room Sectional Sofa with Ottoman & Cup Holder (Ginger Faux Leather, Right-Hand Facing) [SEP] $769.0 [SEP] B07ZL24X2Y [SEP] 3-Piece Contemporary L-Shape Sectional Sofa with Chaise and Storage Ottoman | Living Room Furniture | Faux Leather Upholstery | High-Density Memory Foam Cushions | Pillows Included (Red Left-Facing) [SEP] $1099.0 [SEP] B09M9X7VD1 [SEP] Yoglad 3 Piece Modular Sectional Sofa with Lounge Chaise, Faux Leather Recliner Set with Storage Ottoman and Cup Holder, Reversible and Adjustable Futon Couch Set, for Living Room, Office (Black) [SEP] $599.99 [SEP] B08M5RLBWJ [SEP] Adjustable Floor Sofa Bed Fabric Folding Sleeper Couch Lazy Sofa Chaise Lounge with 2 Pillows for Living Room Bedroom, 5 Reclining Position Futon Loveseat Gaming Sofa Mattress No Need Assembly (Navy) [SEP] $100.0 [SEP] B09LVDBK7X [SEP] Sectional Sofa Couch Chaise Set Leather Brown Living Room Sectional Ottoman Furniture Set L Shape 6 Seater Corner Sofa with Cupholder, Left Facing Couch [SEP] $1138.99",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07GR6Z6X3 [SEP] Contemporary Executive High Back Computer Desk Task Chair Hydraulic Adjustable Height 360-Degree Swivel Seat Home Office Dining Room Furniture - Set of 2 Black #2002a [SEP] $418.5 [SEP] B076TC9YBZ [SEP] SIMPLIHOME Andover Parson Dining Chair (Set of 2), Stone Grey Faux Leather and SOLID WOOD, Square, Upholstered, For the Dining Room, Contemporary Modern [SEP] $209.99 [SEP] B091GY58SC [SEP] Women's Linen Capri Pants Loose Cropped Wide Leg Pants Floral Comfy Elastic Waist Lightweight Trousers with Pockets [SEP] $16.15 to $20.39 [SEP] B07KKFDGSG [SEP] Hofdeco Decorative Throw Pillow Cover ONLY Premium Cotton Linen Tropical Leaf Tropical Banana Leaf 20\"x20\" Set of 2 [SEP] $39.99 [SEP] B07P6YH7DP [SEP] Best Choice Products Faux Leather Upholstery 3-Piece Modular Modern Living Room Sofa Sectional Furniture Set w/Convertible Single & Double Seat Futon Beds, Ottoman, Reclining Backrests - Black [SEP] $100.0 [SEP] B09LPFQVRY [SEP] Modern Life Style Living Room Sectional Sofa with Ottoman & Cup Holder (Ginger Faux Leather, Right-Hand Facing) [SEP] $769.0 [SEP] B07ZL24X2Y [SEP] 3-Piece Contemporary L-Shape Sectional Sofa with Chaise and Storage Ottoman | Living Room Furniture | Faux Leather Upholstery | High-Density Memory Foam Cushions | Pillows Included (Red Left-Facing) [SEP] $1099.0 [SEP] B09M9X7VD1 [SEP] Yoglad 3 Piece Modular Sectional Sofa with Lounge Chaise, Faux Leather Recliner Set with Storage Ottoman and Cup Holder, Reversible and Adjustable Futon Couch Set, for Living Room, Office (Black) [SEP] $599.99 [SEP] B08M5RLBWJ [SEP] Adjustable Floor Sofa Bed Fabric Folding Sleeper Couch Lazy Sofa Chaise Lounge with 2 Pillows for Living Room Bedroom, 5 Reclining Position Futon Loveseat Gaming Sofa Mattress No Need Assembly (Navy) [SEP] $100.0 [SEP] B09LVDBK7X [SEP] Sectional Sofa Couch Chaise Set Leather Brown Living Room Sectional Ottoman Furniture Set L Shape 6 Seater Corner Sofa with Cupholder, Left Facing Couch [SEP] $1138.99\n\nRecent actions:\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07gr6z6x3]",
+              "4": "click[b076tc9ybz]",
+              "5": "click[b091gy58sc]",
+              "6": "click[b07kkfdgsg]",
+              "7": "click[b07p6yh7dp]",
+              "8": "click[b09lpfqvry]",
+              "9": "click[b07zl24x2y]",
+              "10": "click[b09m9x7vd1]",
+              "11": "click[b08m5rlbwj]",
+              "12": "click[b09lvdbk7x]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5f8cfd84142f4079b9bf26b9b04ddae8a7fc24d06056de071aba2d247d2d4a8c",
+      "attempts": [
+        {
+          "seconds": 0.49677518010139465,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.49693315476179123,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.21393088856631504,
+              "1": 0.22830259313968027,
+              "2": 0.22313624284502662,
+              "3": 0.018239093941145194,
+              "4": 0.028910311197124568,
+              "5": 0.021349883070526973,
+              "6": 0.02034725605146004,
+              "7": 0.032877588117101196,
+              "8": 0.026095471705560702,
+              "9": 0.03214150106306335,
+              "10": 0.021614381123280058,
+              "11": 0.11461110768795407,
+              "12": 0.018443681491761812
+            },
+            "confidence": 0.1639944759013203
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11377,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.49469655379652977,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[< prev]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.208575088530779
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B01N3YJNS3 [SEP] Jerry Sales Mattress and Frame Set ONLY Wooden Futon Monterey Arms Style Sofa Bed Couch Innerspring Mattress Cover Choices Buy Futons (Barbados Frame - Charcoal Linen Fabric) [SEP] $599.95 [SEP] B076JGF64N [SEP] Toronto Futon Set Frame and Mattress Full Size Wood Finish w/ 8 Inch Innerspring Matt Includes Choice to add Drawers Sofa Bed Couch Sleeper (Frame and Matt Only, Twilight) [SEP] $599.95 [SEP] B07H5ZWHJ2 [SEP] DHP Marley Sofa Sleeper with Cupholder and 2 Pillows, Black Faux Leather [SEP] $253.1 [SEP] B08LZ9TDZJ [SEP] Lifestyle Futon Sofa Bed, Modern Convertible Couch with Chrome Legs Converts Sofa, Faux Leather Black & White [SEP] $100.0 [SEP] B09QXKCNDR [SEP] Yoglad 77\" Inch Premium Loveseat, Sofa with 2 Throw Pillows, Couch with 4 Wooden Legs, Futon for Living Room, Bedroom, Dorm (Faux Leather, White) [SEP] $459.99 [SEP] B081ZFVRXV [SEP] Contemporary Sectional Sofa w/Chaise and Storage Ottoman|3-Piece L-Shape Living Room Furniture|Faux Leather Upholstery|High-Density Memory Foam Cushions|(2) Toss Pillows (Ginger Right Facing) [SEP] $1099.0 [SEP] B08QRN1WTH [SEP] Novogratz Perry Sectional Storage, Convertible Sleeper, Camel Faux Leather Futon [SEP] $751.52 [SEP] B08L9869XK [SEP] Yaheetech Faux Leather Chaise Lounge Indoor Convertible Chaise Futon Tufted Chaise Daybed with Chrome Metal Legs Converts to Recliner/Bed [SEP] $289.99 [SEP] B08L39JWQB [SEP] Yaheetech Convertible Sectional Sofa Couch L-Shaped Couch Faux Leather Sofa Bed Sleeper for Living Room Small Space Black [SEP] $469.99",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B01N3YJNS3 [SEP] Jerry Sales Mattress and Frame Set ONLY Wooden Futon Monterey Arms Style Sofa Bed Couch Innerspring Mattress Cover Choices Buy Futons (Barbados Frame - Charcoal Linen Fabric) [SEP] $599.95 [SEP] B076JGF64N [SEP] Toronto Futon Set Frame and Mattress Full Size Wood Finish w/ 8 Inch Innerspring Matt Includes Choice to add Drawers Sofa Bed Couch Sleeper (Frame and Matt Only, Twilight) [SEP] $599.95 [SEP] B07H5ZWHJ2 [SEP] DHP Marley Sofa Sleeper with Cupholder and 2 Pillows, Black Faux Leather [SEP] $253.1 [SEP] B08LZ9TDZJ [SEP] Lifestyle Futon Sofa Bed, Modern Convertible Couch with Chrome Legs Converts Sofa, Faux Leather Black & White [SEP] $100.0 [SEP] B09QXKCNDR [SEP] Yoglad 77\" Inch Premium Loveseat, Sofa with 2 Throw Pillows, Couch with 4 Wooden Legs, Futon for Living Room, Bedroom, Dorm (Faux Leather, White) [SEP] $459.99 [SEP] B081ZFVRXV [SEP] Contemporary Sectional Sofa w/Chaise and Storage Ottoman|3-Piece L-Shape Living Room Furniture|Faux Leather Upholstery|High-Density Memory Foam Cushions|(2) Toss Pillows (Ginger Right Facing) [SEP] $1099.0 [SEP] B08QRN1WTH [SEP] Novogratz Perry Sectional Storage, Convertible Sleeper, Camel Faux Leather Futon [SEP] $751.52 [SEP] B08L9869XK [SEP] Yaheetech Faux Leather Chaise Lounge Indoor Convertible Chaise Futon Tufted Chaise Daybed with Chrome Metal Legs Converts to Recliner/Bed [SEP] $289.99 [SEP] B08L39JWQB [SEP] Yaheetech Convertible Sectional Sofa Couch L-Shaped Couch Faux Leather Sofa Bed Sleeper for Living Room Small Space Black [SEP] $469.99\n\nRecent actions:\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09g3fpp9s]",
+              "4": "click[b01n3yjns3]",
+              "5": "click[b076jgf64n]",
+              "6": "click[b07h5zwhj2]",
+              "7": "click[b08lz9tdzj]",
+              "8": "click[b09qxkcndr]",
+              "9": "click[b081zfvrxv]",
+              "10": "click[b08qrn1wth]",
+              "11": "click[b08l9869xk]",
+              "12": "click[b08l39jwqb]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a81c04fdac3dad57b97f540a22924d1fe7f0d0560e3ebdac66e92f6a2ec9e8c1",
+      "attempts": [
+        {
+          "seconds": 0.48437610268592834,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4845532365143299,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.23421128374822683,
+              "1": 0.1746003085162196,
+              "2": 0.22891864646583324,
+              "3": 0.016502839537526924,
+              "4": 0.026708305812591246,
+              "5": 0.022584144043887772,
+              "6": 0.054241688723314446,
+              "7": 0.06493291714326904,
+              "8": 0.026690627480984597,
+              "9": 0.022917711680694786,
+              "10": 0.022402490340698914,
+              "11": 0.06121217181836274,
+              "12": 0.04407686468838975
+            },
+            "confidence": 0.1703955573939124
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11016,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4824325107038021,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.7087387368083
+    },
+    {
+      "step": 6,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Search",
+      "action": "search[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.770391386002302
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B005FKMUHQ [SEP] DHP Emily Futon With Chrome Legs, Black Faux Leather [SEP] $100.0 [SEP] B06W54LLXW [SEP] DHP Emily Rectangular Storage Ottoman, Grey Linen [SEP] $124.99 [SEP] B07G5ZK2GG [SEP] DHP Emily Futon With Chrome Legs, Green Velvet [SEP] $380.0 [SEP] B091PMMDB5 [SEP] Yaheetech Faux Leather Futon Sofa Bed Sectional Futon Couch Sleeper with Armrest Home Convertible Recliner Couch with Chaise Lounge Black [SEP] $469.99 [SEP] B09BR3L4QP [SEP] Allora Small Space Sectional Sofa Futon in Blue [SEP] $100.0 [SEP] B071KLJGVN [SEP] Novogratz Brittany Sofa Futon - Premium Upholstery and Wooden Legs - Green [SEP] $100.0 [SEP] B071XJNDVG [SEP] Novogratz Brittany Sofa Futon - Premium Upholstery and Wooden Legs - Mustard [SEP] $389.56 [SEP] B08ML4R5DL [SEP] Yaheetech Faux Leather Sectional Sofa Couch Sectional Living Room Furniture Set Convertible Futon Sofa Beds with Chaise Lounge Black [SEP] $485.99 [SEP] B08MKQZNNK [SEP] Topeakmart Living Room Sofa Couch Modern Sectional Sofa Bed Couch Faux Leather Upholstery Futon Sofa Bed with Convertible Chaise Lounge Reclining Living Room Sofa Black [SEP] $529.99 [SEP] B09PY2Y144 [SEP] Houjud Convertible Folding Sleeper Sofa Bed, Faux Leather Upholstered Convertible Sofa Bed Futon w/Storage Footrest, Mini Couch for Compact Living Space, Sleeper Sofas, Accent Chairs [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B005FKMUHQ [SEP] DHP Emily Futon With Chrome Legs, Black Faux Leather [SEP] $100.0 [SEP] B06W54LLXW [SEP] DHP Emily Rectangular Storage Ottoman, Grey Linen [SEP] $124.99 [SEP] B07G5ZK2GG [SEP] DHP Emily Futon With Chrome Legs, Green Velvet [SEP] $380.0 [SEP] B091PMMDB5 [SEP] Yaheetech Faux Leather Futon Sofa Bed Sectional Futon Couch Sleeper with Armrest Home Convertible Recliner Couch with Chaise Lounge Black [SEP] $469.99 [SEP] B09BR3L4QP [SEP] Allora Small Space Sectional Sofa Futon in Blue [SEP] $100.0 [SEP] B071KLJGVN [SEP] Novogratz Brittany Sofa Futon - Premium Upholstery and Wooden Legs - Green [SEP] $100.0 [SEP] B071XJNDVG [SEP] Novogratz Brittany Sofa Futon - Premium Upholstery and Wooden Legs - Mustard [SEP] $389.56 [SEP] B08ML4R5DL [SEP] Yaheetech Faux Leather Sectional Sofa Couch Sectional Living Room Furniture Set Convertible Futon Sofa Beds with Chaise Lounge Black [SEP] $485.99 [SEP] B08MKQZNNK [SEP] Topeakmart Living Room Sofa Couch Modern Sectional Sofa Bed Couch Faux Leather Upholstery Futon Sofa Bed with Convertible Chaise Lounge Reclining Living Room Sofa Black [SEP] $529.99 [SEP] B09PY2Y144 [SEP] Houjud Convertible Folding Sleeper Sofa Bed, Faux Leather Upholstered Convertible Sofa Bed Futon w/Storage Footrest, Mini Couch for Compact Living Space, Sleeper Sofas, Accent Chairs [SEP] $100.0\n\nRecent actions:\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b005fkmuhq]",
+              "3": "click[b06w54llxw]",
+              "4": "click[b07g5zk2gg]",
+              "5": "click[b091pmmdb5]",
+              "6": "click[b09br3l4qp]",
+              "7": "click[b071kljgvn]",
+              "8": "click[b071xjndvg]",
+              "9": "click[b08ml4r5dl]",
+              "10": "click[b08mkqznnk]",
+              "11": "click[b09py2y144]"
+            }
+          }
+        }
+      },
+      "request_sha256": "886a0bba9d0a53e1f630124f1be761b0efa2e8c000f58dbd3acb742d0f56d86e",
+      "attempts": [
+        {
+          "seconds": 0.4151081256568432,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.41520947962999344,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.11662349683922064,
+              "1": 0.40554060594489116,
+              "2": 0.05394203199464078,
+              "3": 0.03788428473565808,
+              "4": 0.017174841898998452,
+              "5": 0.05465456783813576,
+              "6": 0.08661621938354118,
+              "7": 0.018888381824880444,
+              "8": 0.023517006044628967,
+              "9": 0.051767098981527274,
+              "10": 0.03328040879742049,
+              "11": 0.10011105571645694
+            },
+            "confidence": 0.3514988428489722
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9185,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.4034856706857681,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.285712815821171
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B098XKW5M2 [SEP] Giantex 3 Pieces Convertible Sectional Sofa Set, 3 Seat Sofa and Couch with Cup Holders and Ottoman, Tufted PU Leather Chaise Modern Reversible Living Room Furniture for Apartment Office (Black) [SEP] $629.99 [SEP] B07ZDL9QM4 [SEP] Contemporary Sectional Sofa Couch w/Chaise & Storage Ottoman|3PCs L-Shaped Sectionals Living Room Furniture|Faux Leather Upholstery w/Cup Holders Drop-Down Table|Memory Foam Cushion(WhiteLeftFacing) [SEP] $1099.0 [SEP] B08LB1QJ81 [SEP] Topeakmart Sectional Sofa Couch Bed Convertible L-Shaped Faux Leather Couch Foldable Futon Sofa Sleeper with Reversible Chaise Lounge for Living Room Black [SEP] $529.99 [SEP] B07WG47QRB [SEP] DHP Haven Small Space Sectional Sofa, Dark Gray Linen Futon, [SEP] $438.75 [SEP] B08NPPBW5G [SEP] Yaheetech Living Room Sets Sectional Sofa Faux Leather 2 Pieces Living Room Futon Bed Sectional Furniture Set Modern Futon Couch Sets for Living Room Futon Bed w/Chaise Lounge Black [SEP] $465.99 [SEP] B09BJX6D2F [SEP] VUYUYU Futon Sofa Bed, Multifunctional Couches for Living Room, Small Convertible Futon Sofa with Ottoman/Coffee Table, Folding Recliner Sleeper, Linen Sectional Couch Set for Compact Space (Gray) [SEP] $419.99 [SEP] B09MQWXFP3 [SEP] Faux Leather Chaise Lounge Convertible Chaise Futon Chaise for Living Room White HilariousM Sofa Sofa Bed Sleeper Sofa Couches for Living Room Sofas for Living Room Living Room Furniture Couch Bed [SEP] $483.98 [SEP] B084D5WBZ8 [SEP] Memory Foam Faux Leather Pillowtop Futon with Cupholder, Black Faux Leather Colors Ideal for Small Living Spaces [SEP] $281.5 [SEP] B09NR2YY1X [SEP] Mjkone Sectional Sofas for Living Room, Couches for Living Room, Sectional Sofa with Chaise Lounge, Living Room Furniture Sets with Two Materials (Breathable Linen Fabric + Faux Leather Sofa) [SEP] $899.99 [SEP] B09MMYXY54 [SEP] VUYUYU Futon Sofa Bed, Multifunctional Couches for Living Room, Small Convertible Futon Sofa with Ottoman/Coffee Table, Folding Recliner Sleeper, PU Leather Sectional Couch Set for Compact Space [SEP] $459.99",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B098XKW5M2 [SEP] Giantex 3 Pieces Convertible Sectional Sofa Set, 3 Seat Sofa and Couch with Cup Holders and Ottoman, Tufted PU Leather Chaise Modern Reversible Living Room Furniture for Apartment Office (Black) [SEP] $629.99 [SEP] B07ZDL9QM4 [SEP] Contemporary Sectional Sofa Couch w/Chaise & Storage Ottoman|3PCs L-Shaped Sectionals Living Room Furniture|Faux Leather Upholstery w/Cup Holders Drop-Down Table|Memory Foam Cushion(WhiteLeftFacing) [SEP] $1099.0 [SEP] B08LB1QJ81 [SEP] Topeakmart Sectional Sofa Couch Bed Convertible L-Shaped Faux Leather Couch Foldable Futon Sofa Sleeper with Reversible Chaise Lounge for Living Room Black [SEP] $529.99 [SEP] B07WG47QRB [SEP] DHP Haven Small Space Sectional Sofa, Dark Gray Linen Futon, [SEP] $438.75 [SEP] B08NPPBW5G [SEP] Yaheetech Living Room Sets Sectional Sofa Faux Leather 2 Pieces Living Room Futon Bed Sectional Furniture Set Modern Futon Couch Sets for Living Room Futon Bed w/Chaise Lounge Black [SEP] $465.99 [SEP] B09BJX6D2F [SEP] VUYUYU Futon Sofa Bed, Multifunctional Couches for Living Room, Small Convertible Futon Sofa with Ottoman/Coffee Table, Folding Recliner Sleeper, Linen Sectional Couch Set for Compact Space (Gray) [SEP] $419.99 [SEP] B09MQWXFP3 [SEP] Faux Leather Chaise Lounge Convertible Chaise Futon Chaise for Living Room White HilariousM Sofa Sofa Bed Sleeper Sofa Couches for Living Room Sofas for Living Room Living Room Furniture Couch Bed [SEP] $483.98 [SEP] B084D5WBZ8 [SEP] Memory Foam Faux Leather Pillowtop Futon with Cupholder, Black Faux Leather Colors Ideal for Small Living Spaces [SEP] $281.5 [SEP] B09NR2YY1X [SEP] Mjkone Sectional Sofas for Living Room, Couches for Living Room, Sectional Sofa with Chaise Lounge, Living Room Furniture Sets with Two Materials (Breathable Linen Fabric + Faux Leather Sofa) [SEP] $899.99 [SEP] B09MMYXY54 [SEP] VUYUYU Futon Sofa Bed, Multifunctional Couches for Living Room, Small Convertible Futon Sofa with Ottoman/Coffee Table, Folding Recliner Sleeper, PU Leather Sectional Couch Set for Compact Space [SEP] $459.99\n\nRecent actions:\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b098xkw5m2]",
+              "4": "click[b07zdl9qm4]",
+              "5": "click[b08lb1qj81]",
+              "6": "click[b07wg47qrb]",
+              "7": "click[b08nppbw5g]",
+              "8": "click[b09bjx6d2f]",
+              "9": "click[b09mqwxfp3]",
+              "10": "click[b084d5wbz8]",
+              "11": "click[b09nr2yy1x]",
+              "12": "click[b09mmyxy54]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ffcaeff2688c219f79bed9ab7e5daf3bb632728d98e7980b5955d43cb4379749",
+      "attempts": [
+        {
+          "seconds": 0.545758206397295,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5459156930446625,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.1289914139823174,
+              "1": 0.1147896508833103,
+              "2": 0.39324675340445464,
+              "3": 0.020859022258164734,
+              "4": 0.01912639506561033,
+              "5": 0.03538135200072128,
+              "6": 0.03604212525595379,
+              "7": 0.032663460825462266,
+              "8": 0.04172831781731913,
+              "9": 0.0477096752271621,
+              "10": 0.0642097275503739,
+              "11": 0.025916321510511167,
+              "12": 0.03933578421863921
+            },
+            "confidence": 0.3426839828548258
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 12381,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.53553356975317,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.9136291667819023
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B01N3YJNS3 [SEP] Jerry Sales Mattress and Frame Set ONLY Wooden Futon Monterey Arms Style Sofa Bed Couch Innerspring Mattress Cover Choices Buy Futons (Barbados Frame - Charcoal Linen Fabric) [SEP] $599.95 [SEP] B076JGF64N [SEP] Toronto Futon Set Frame and Mattress Full Size Wood Finish w/ 8 Inch Innerspring Matt Includes Choice to add Drawers Sofa Bed Couch Sleeper (Frame and Matt Only, Twilight) [SEP] $599.95 [SEP] B07H5ZWHJ2 [SEP] DHP Marley Sofa Sleeper with Cupholder and 2 Pillows, Black Faux Leather [SEP] $253.1 [SEP] B08LZ9TDZJ [SEP] Lifestyle Futon Sofa Bed, Modern Convertible Couch with Chrome Legs Converts Sofa, Faux Leather Black & White [SEP] $100.0 [SEP] B09QXKCNDR [SEP] Yoglad 77\" Inch Premium Loveseat, Sofa with 2 Throw Pillows, Couch with 4 Wooden Legs, Futon for Living Room, Bedroom, Dorm (Faux Leather, White) [SEP] $459.99 [SEP] B081ZFVRXV [SEP] Contemporary Sectional Sofa w/Chaise and Storage Ottoman|3-Piece L-Shape Living Room Furniture|Faux Leather Upholstery|High-Density Memory Foam Cushions|(2) Toss Pillows (Ginger Right Facing) [SEP] $1099.0 [SEP] B08QRN1WTH [SEP] Novogratz Perry Sectional Storage, Convertible Sleeper, Camel Faux Leather Futon [SEP] $751.52 [SEP] B08L9869XK [SEP] Yaheetech Faux Leather Chaise Lounge Indoor Convertible Chaise Futon Tufted Chaise Daybed with Chrome Metal Legs Converts to Recliner/Bed [SEP] $289.99 [SEP] B08L39JWQB [SEP] Yaheetech Convertible Sectional Sofa Couch L-Shaped Couch Faux Leather Sofa Bed Sleeper for Living Room Small Space Black [SEP] $469.99",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B01N3YJNS3 [SEP] Jerry Sales Mattress and Frame Set ONLY Wooden Futon Monterey Arms Style Sofa Bed Couch Innerspring Mattress Cover Choices Buy Futons (Barbados Frame - Charcoal Linen Fabric) [SEP] $599.95 [SEP] B076JGF64N [SEP] Toronto Futon Set Frame and Mattress Full Size Wood Finish w/ 8 Inch Innerspring Matt Includes Choice to add Drawers Sofa Bed Couch Sleeper (Frame and Matt Only, Twilight) [SEP] $599.95 [SEP] B07H5ZWHJ2 [SEP] DHP Marley Sofa Sleeper with Cupholder and 2 Pillows, Black Faux Leather [SEP] $253.1 [SEP] B08LZ9TDZJ [SEP] Lifestyle Futon Sofa Bed, Modern Convertible Couch with Chrome Legs Converts Sofa, Faux Leather Black & White [SEP] $100.0 [SEP] B09QXKCNDR [SEP] Yoglad 77\" Inch Premium Loveseat, Sofa with 2 Throw Pillows, Couch with 4 Wooden Legs, Futon for Living Room, Bedroom, Dorm (Faux Leather, White) [SEP] $459.99 [SEP] B081ZFVRXV [SEP] Contemporary Sectional Sofa w/Chaise and Storage Ottoman|3-Piece L-Shape Living Room Furniture|Faux Leather Upholstery|High-Density Memory Foam Cushions|(2) Toss Pillows (Ginger Right Facing) [SEP] $1099.0 [SEP] B08QRN1WTH [SEP] Novogratz Perry Sectional Storage, Convertible Sleeper, Camel Faux Leather Futon [SEP] $751.52 [SEP] B08L9869XK [SEP] Yaheetech Faux Leather Chaise Lounge Indoor Convertible Chaise Futon Tufted Chaise Daybed with Chrome Metal Legs Converts to Recliner/Bed [SEP] $289.99 [SEP] B08L39JWQB [SEP] Yaheetech Convertible Sectional Sofa Couch L-Shaped Couch Faux Leather Sofa Bed Sleeper for Living Room Small Space Black [SEP] $469.99\n\nRecent actions:\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09g3fpp9s]",
+              "4": "click[b01n3yjns3]",
+              "5": "click[b076jgf64n]",
+              "6": "click[b07h5zwhj2]",
+              "7": "click[b08lz9tdzj]",
+              "8": "click[b09qxkcndr]",
+              "9": "click[b081zfvrxv]",
+              "10": "click[b08qrn1wth]",
+              "11": "click[b08l9869xk]",
+              "12": "click[b08l39jwqb]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5bef1aecd009cf4613e8188eb9172947a65f1012db779c11f5ebb0ea1c41a184",
+      "attempts": [
+        {
+          "seconds": 0.5151642747223377,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5153277218341827,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.14723227041536194,
+              "1": 0.15375900949771673,
+              "2": 0.3109642384259342,
+              "3": 0.01535361389283189,
+              "4": 0.026260263749292006,
+              "5": 0.021041576939969924,
+              "6": 0.0597940365166732,
+              "7": 0.06919698940755155,
+              "8": 0.027966964094627286,
+              "9": 0.03520423077001057,
+              "10": 0.0212237802452714,
+              "11": 0.06483899260051357,
+              "12": 0.04716403344424581
+            },
+            "confidence": 0.25354459162809534
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11757,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.5129140391945839,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.502095241099596
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07GR6Z6X3 [SEP] Contemporary Executive High Back Computer Desk Task Chair Hydraulic Adjustable Height 360-Degree Swivel Seat Home Office Dining Room Furniture - Set of 2 Black #2002a [SEP] $418.5 [SEP] B076TC9YBZ [SEP] SIMPLIHOME Andover Parson Dining Chair (Set of 2), Stone Grey Faux Leather and SOLID WOOD, Square, Upholstered, For the Dining Room, Contemporary Modern [SEP] $209.99 [SEP] B091GY58SC [SEP] Women's Linen Capri Pants Loose Cropped Wide Leg Pants Floral Comfy Elastic Waist Lightweight Trousers with Pockets [SEP] $16.15 to $20.39 [SEP] B07KKFDGSG [SEP] Hofdeco Decorative Throw Pillow Cover ONLY Premium Cotton Linen Tropical Leaf Tropical Banana Leaf 20\"x20\" Set of 2 [SEP] $39.99 [SEP] B07P6YH7DP [SEP] Best Choice Products Faux Leather Upholstery 3-Piece Modular Modern Living Room Sofa Sectional Furniture Set w/Convertible Single & Double Seat Futon Beds, Ottoman, Reclining Backrests - Black [SEP] $100.0 [SEP] B09LPFQVRY [SEP] Modern Life Style Living Room Sectional Sofa with Ottoman & Cup Holder (Ginger Faux Leather, Right-Hand Facing) [SEP] $769.0 [SEP] B07ZL24X2Y [SEP] 3-Piece Contemporary L-Shape Sectional Sofa with Chaise and Storage Ottoman | Living Room Furniture | Faux Leather Upholstery | High-Density Memory Foam Cushions | Pillows Included (Red Left-Facing) [SEP] $1099.0 [SEP] B09M9X7VD1 [SEP] Yoglad 3 Piece Modular Sectional Sofa with Lounge Chaise, Faux Leather Recliner Set with Storage Ottoman and Cup Holder, Reversible and Adjustable Futon Couch Set, for Living Room, Office (Black) [SEP] $599.99 [SEP] B08M5RLBWJ [SEP] Adjustable Floor Sofa Bed Fabric Folding Sleeper Couch Lazy Sofa Chaise Lounge with 2 Pillows for Living Room Bedroom, 5 Reclining Position Futon Loveseat Gaming Sofa Mattress No Need Assembly (Navy) [SEP] $100.0 [SEP] B09LVDBK7X [SEP] Sectional Sofa Couch Chaise Set Leather Brown Living Room Sectional Ottoman Furniture Set L Shape 6 Seater Corner Sofa with Cupholder, Left Facing Couch [SEP] $1138.99",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07GR6Z6X3 [SEP] Contemporary Executive High Back Computer Desk Task Chair Hydraulic Adjustable Height 360-Degree Swivel Seat Home Office Dining Room Furniture - Set of 2 Black #2002a [SEP] $418.5 [SEP] B076TC9YBZ [SEP] SIMPLIHOME Andover Parson Dining Chair (Set of 2), Stone Grey Faux Leather and SOLID WOOD, Square, Upholstered, For the Dining Room, Contemporary Modern [SEP] $209.99 [SEP] B091GY58SC [SEP] Women's Linen Capri Pants Loose Cropped Wide Leg Pants Floral Comfy Elastic Waist Lightweight Trousers with Pockets [SEP] $16.15 to $20.39 [SEP] B07KKFDGSG [SEP] Hofdeco Decorative Throw Pillow Cover ONLY Premium Cotton Linen Tropical Leaf Tropical Banana Leaf 20\"x20\" Set of 2 [SEP] $39.99 [SEP] B07P6YH7DP [SEP] Best Choice Products Faux Leather Upholstery 3-Piece Modular Modern Living Room Sofa Sectional Furniture Set w/Convertible Single & Double Seat Futon Beds, Ottoman, Reclining Backrests - Black [SEP] $100.0 [SEP] B09LPFQVRY [SEP] Modern Life Style Living Room Sectional Sofa with Ottoman & Cup Holder (Ginger Faux Leather, Right-Hand Facing) [SEP] $769.0 [SEP] B07ZL24X2Y [SEP] 3-Piece Contemporary L-Shape Sectional Sofa with Chaise and Storage Ottoman | Living Room Furniture | Faux Leather Upholstery | High-Density Memory Foam Cushions | Pillows Included (Red Left-Facing) [SEP] $1099.0 [SEP] B09M9X7VD1 [SEP] Yoglad 3 Piece Modular Sectional Sofa with Lounge Chaise, Faux Leather Recliner Set with Storage Ottoman and Cup Holder, Reversible and Adjustable Futon Couch Set, for Living Room, Office (Black) [SEP] $599.99 [SEP] B08M5RLBWJ [SEP] Adjustable Floor Sofa Bed Fabric Folding Sleeper Couch Lazy Sofa Chaise Lounge with 2 Pillows for Living Room Bedroom, 5 Reclining Position Futon Loveseat Gaming Sofa Mattress No Need Assembly (Navy) [SEP] $100.0 [SEP] B09LVDBK7X [SEP] Sectional Sofa Couch Chaise Set Leather Brown Living Room Sectional Ottoman Furniture Set L Shape 6 Seater Corner Sofa with Cupholder, Left Facing Couch [SEP] $1138.99\n\nRecent actions:\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07gr6z6x3]",
+              "4": "click[b076tc9ybz]",
+              "5": "click[b091gy58sc]",
+              "6": "click[b07kkfdgsg]",
+              "7": "click[b07p6yh7dp]",
+              "8": "click[b09lpfqvry]",
+              "9": "click[b07zl24x2y]",
+              "10": "click[b09m9x7vd1]",
+              "11": "click[b08m5rlbwj]",
+              "12": "click[b09lvdbk7x]"
+            }
+          }
+        }
+      },
+      "request_sha256": "042523c59564095ff3d0854527c09488a61ea0f97e95d12e3308049c3e15eaf4",
+      "attempts": [
+        {
+          "seconds": 0.5338130779564381,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.533962782472372,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.1433958351142834,
+              "1": 0.17745552238132528,
+              "2": 0.27196407010763685,
+              "3": 0.021255413302388435,
+              "4": 0.03551021195679224,
+              "5": 0.021645424632262336,
+              "6": 0.02288859319623524,
+              "7": 0.04801517758349535,
+              "8": 0.029286382592646223,
+              "9": 0.03756473959983736,
+              "10": 0.022881321761415642,
+              "11": 0.14553530032186274,
+              "12": 0.022602007449818842
+            },
+            "confidence": 0.21129440928327323
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 12261,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.5316514819860458,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.111400429159403
+    },
+    {
+      "step": 11,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B078Y7J2RY [SEP] Queen Size Montreal Espresso Futon Frame Innerspring Mattress Sofa Bed Wood Futons (Grey Mattress, Frame, Drawers (Queen Size)) [SEP] $799.95 [SEP] B00YZ5S54E [SEP] Container Furniture Direct Delia Bonded Leather Modern Facing-Left Chaise Sectional Sofa Set (Grey) [SEP] $100.0 [SEP] B07CV531V6 [SEP] Atlin Designs Mid Century Tufted Linen Multi-Functional Convertible Sleeper Sofa in Navy Blue [SEP] $100.0 [SEP] B004JQXBNY [SEP] Puroast Low Acid Ground Coffee, Half Caff House Blend, High Antioxidant, 2.5 Pound Bag [SEP] $26.14 [SEP] B08TJJDD54 [SEP] Puroast Low Acid Coffee Single-Serve Pods, House Blend, High Antioxidant, Compatible with Keurig 2.0 Coffee Makers (96 Count) [SEP] $66.36 [SEP] B07KWWM8W6 [SEP] Novogratz Brittany Sleeper Sofa with Memory Foam Mattress - Queen - Dark Gray [SEP] $719.8 [SEP] B09MRXD44D [SEP] BINGTOO Futon Sofa Bed- Convertible Futon Sofa Bed Sleeper Couches Loveseat with Storage Shoe Bench Ottoman or Coffee Table and 2 Lumbar Pillows, Small, Tufted (Black*2) [SEP] $100.0 [SEP] B07V69LW4B [SEP] Set of 8 Contemporary Style High Back Dining Chair Tufted Accent Design Faux Leather Upholstered Solid Wood Construction Frame Home Office Dining Room Furniture - White/2276 [SEP] $974.5 [SEP] B076T5SWZ2 [SEP] SIMPLIHOME Cosmopolitan 34 inch Wide Rectangle Lift Top Storage Ottoman in Upholstered Chocolate Brown Tufted Faux Leather, Footrest Stool, Coffee Table for the Living Room, Bedroom and Kids Room [SEP] $138.98 [SEP] B08GY3KC86 [SEP] Modern Faux Leather Throw Pillow Covers, Set of 2 Thick Cognac Leather Decorative Throw Pillows Couch Cushion Covers for Farmhouse Room Bedroom Sofa Chair Car, Brown, 18 x 18 Inch [SEP] $12.51",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B078Y7J2RY [SEP] Queen Size Montreal Espresso Futon Frame Innerspring Mattress Sofa Bed Wood Futons (Grey Mattress, Frame, Drawers (Queen Size)) [SEP] $799.95 [SEP] B00YZ5S54E [SEP] Container Furniture Direct Delia Bonded Leather Modern Facing-Left Chaise Sectional Sofa Set (Grey) [SEP] $100.0 [SEP] B07CV531V6 [SEP] Atlin Designs Mid Century Tufted Linen Multi-Functional Convertible Sleeper Sofa in Navy Blue [SEP] $100.0 [SEP] B004JQXBNY [SEP] Puroast Low Acid Ground Coffee, Half Caff House Blend, High Antioxidant, 2.5 Pound Bag [SEP] $26.14 [SEP] B08TJJDD54 [SEP] Puroast Low Acid Coffee Single-Serve Pods, House Blend, High Antioxidant, Compatible with Keurig 2.0 Coffee Makers (96 Count) [SEP] $66.36 [SEP] B07KWWM8W6 [SEP] Novogratz Brittany Sleeper Sofa with Memory Foam Mattress - Queen - Dark Gray [SEP] $719.8 [SEP] B09MRXD44D [SEP] BINGTOO Futon Sofa Bed- Convertible Futon Sofa Bed Sleeper Couches Loveseat with Storage Shoe Bench Ottoman or Coffee Table and 2 Lumbar Pillows, Small, Tufted (Black*2) [SEP] $100.0 [SEP] B07V69LW4B [SEP] Set of 8 Contemporary Style High Back Dining Chair Tufted Accent Design Faux Leather Upholstered Solid Wood Construction Frame Home Office Dining Room Furniture - White/2276 [SEP] $974.5 [SEP] B076T5SWZ2 [SEP] SIMPLIHOME Cosmopolitan 34 inch Wide Rectangle Lift Top Storage Ottoman in Upholstered Chocolate Brown Tufted Faux Leather, Footrest Stool, Coffee Table for the Living Room, Bedroom and Kids Room [SEP] $138.98 [SEP] B08GY3KC86 [SEP] Modern Faux Leather Throw Pillow Covers, Set of 2 Thick Cognac Leather Decorative Throw Pillows Couch Cushion Covers for Farmhouse Room Bedroom Sofa Chair Car, Brown, 18 x 18 Inch [SEP] $12.51\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b078y7j2ry]",
+              "4": "click[b00yz5s54e]",
+              "5": "click[b07cv531v6]",
+              "6": "click[b004jqxbny]",
+              "7": "click[b08tjjdd54]",
+              "8": "click[b07kwwm8w6]",
+              "9": "click[b09mrxd44d]",
+              "10": "click[b07v69lw4b]",
+              "11": "click[b076t5swz2]",
+              "12": "click[b08gy3kc86]"
+            }
+          }
+        }
+      },
+      "request_sha256": "8ff34a9cebfb982a8128aa5be5b3355a7ac0f38a1fa04e29d0630f372b50e6b8",
+      "attempts": [
+        {
+          "seconds": 0.49251243844628334,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4926738627254963,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.1451919527172007,
+              "1": 0.1454432010254666,
+              "2": 0.2614579282431557,
+              "3": 0.019101618268540767,
+              "4": 0.06538241449319122,
+              "5": 0.0828922640511564,
+              "6": 0.02011549771856607,
+              "7": 0.03846540586664522,
+              "8": 0.03898091372020026,
+              "9": 0.06174884122508062,
+              "10": 0.03784838471338577,
+              "11": 0.0478626671876435,
+              "12": 0.03550891076976704
+            },
+            "confidence": 0.199912755596752
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11147,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4878580719232559,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.693769592791796
+    },
+    {
+      "step": 12,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b5460ee7bf0a3b18f9fa26f09ab68929e5a98866baa530fc23b84c08891dd9d1",
+      "attempts": [
+        {
+          "seconds": 0.07713037729263306,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07722535356879234,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.22910828596084074,
+              "1": 0.3209653045330368,
+              "2": 0.44992640950612256
+            },
+            "confidence": 0.17488961425918384
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 870,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0750071294605732,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.844756964594126
+    },
+    {
+      "step": 13,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "88ba130f615137446a553349b0c04a42693b3def9a0adaa9d4417af71e87ab98",
+      "attempts": [
+        {
+          "seconds": 0.07092469930648804,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07104580849409103,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2436130441909669,
+              "1": 0.30720868132536255,
+              "2": 0.4491782744836705
+            },
+            "confidence": 0.17376741172550572
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 870,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06932318210601807,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.990214925259352
+    },
+    {
+      "step": 14,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[< prev]\nclick[back to search]\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7d29e7f517065ef60a6c19158cc7c7e305e6719a596a70f0aa64427c6b7347ee",
+      "attempts": [
+        {
+          "seconds": 0.07155929878354073,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07165956869721413,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.27122729482685676,
+              "1": 0.2937093548605763,
+              "2": 0.435063350312567
+            },
+            "confidence": 0.15259502546885048
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 870,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06989897042512894,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.130354270339012
+    },
+    {
+      "step": 15,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[back to search]\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b13406e00fe1ef4eced5b37524cd41d35700e909b508c5d7956152dfc03da70b",
+      "attempts": [
+        {
+          "seconds": 0.08685338124632835,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.08692178502678871,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2892362099943759,
+              "1": 0.31123454585184507,
+              "2": 0.39952924415377894
+            },
+            "confidence": 0.09929386623066842
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 867,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0703938752412796,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.297595169395208
+    },
+    {
+      "step": 16,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "96494c5da72260aa724e16b600ffd2375076a8e0706c96ab55dae03933166667",
+      "attempts": [
+        {
+          "seconds": 0.07097214832901955,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07105866074562073,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3405635404570637,
+              "1": 0.284661940514876,
+              "2": 0.37477451902806036
+            },
+            "confidence": 0.06216177854209056
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 864,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06938748434185982,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.437016639858484
+    },
+    {
+      "step": 17,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e6295ab895964e96468492fc7b139d732f38f16606d81ab8ea48f95bf41d57eb",
+      "attempts": [
+        {
+          "seconds": 0.07137914374470711,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07146690413355827,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3458023034813417,
+              "1": 0.2748384231253105,
+              "2": 0.37935927339334785
+            },
+            "confidence": 0.06903891009002179
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06948882341384888,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.566188048571348
+    },
+    {
+      "step": 18,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "81a745e0108552353003d952cff2c3bfcfad89e18dc32d0f74344840ae2900d6",
+      "attempts": [
+        {
+          "seconds": 0.06830483302474022,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06839876994490623,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3477252726107161,
+              "1": 0.2748540422893643,
+              "2": 0.37742068509991966
+            },
+            "confidence": 0.0661310276498795
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06648031622171402,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.6950861774384975
+    },
+    {
+      "step": 19,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c9c43843e85c9ff518c6d403dd23b32e7beac88c23b5d69ce323947660d7e6c1",
+      "attempts": [
+        {
+          "seconds": 0.06783497333526611,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06791993230581284,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.35496861818144004,
+              "1": 0.25567442818278374,
+              "2": 0.38935695363577627
+            },
+            "confidence": 0.08403543045366442
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0663277618587017,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.8244888707995415
+    },
+    {
+      "step": 20,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "fefec7e34018aa65e27072c14d12395222c876f98ce64e0aec68bc338d850eb5",
+      "attempts": [
+        {
+          "seconds": 0.07361957803368568,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07370121404528618,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3449900028899924,
+              "1": 0.26254087270714294,
+              "2": 0.39246912440286463
+            },
+            "confidence": 0.08870368660429696
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06547993794083595,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.961967710405588
+    },
+    {
+      "step": 21,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ed841daa1e149c3420763de78716b7d41da2eab318b3f7bba4a8c3fcd3b346b9",
+      "attempts": [
+        {
+          "seconds": 0.08218619227409363,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.08227166160941124,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33745122492014834,
+              "1": 0.2639343587642088,
+              "2": 0.3986144163156429
+            },
+            "confidence": 0.0979216244734644
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0689740888774395,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.105514355003834
+    },
+    {
+      "step": 22,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ea06d53d071976f2c021598508871ccca4a712e8d6650840a52ce3a8e29716f3",
+      "attempts": [
+        {
+          "seconds": 0.07008327171206474,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07016696035861969,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3389411037078761,
+              "1": 0.26771001493297625,
+              "2": 0.3933488813591477
+            },
+            "confidence": 0.09002332203872156
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06819575652480125,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.247863505035639
+    },
+    {
+      "step": 23,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5281209f7fcef2a25784317e6b3dd4b10bec7f8b4055d2c67768c48af1c8ea12",
+      "attempts": [
+        {
+          "seconds": 0.06837594509124756,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0684562437236309,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33188130073751404,
+              "1": 0.26104568513712123,
+              "2": 0.40707301412536484
+            },
+            "confidence": 0.11060952118804711
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06667234376072884,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.387390110641718
+    },
+    {
+      "step": 24,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0d5c116a1f515786d0e157ac6ed93af1b5549b5b97fab0cfd667baeab8132a75",
+      "attempts": [
+        {
+          "seconds": 0.07003680244088173,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07011612132191658,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3396438764232009,
+              "1": 0.2592349325638361,
+              "2": 0.401121191012963
+            },
+            "confidence": 0.10168178651944453
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06830160692334175,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.516011074185371
+    },
+    {
+      "step": 25,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "eed91a8d5c182311c30b1f5a350a45ef14744b30927c588af44952771bcc718e",
+      "attempts": [
+        {
+          "seconds": 0.07105401158332825,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07113277539610863,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33217222228680965,
+              "1": 0.26248205987321366,
+              "2": 0.40534571783997664
+            },
+            "confidence": 0.10801857675996497
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06963272020220757,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.644999463111162
+    },
+    {
+      "step": 26,
+      "observation": "Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "9f6d200d73180cea87b9fe6a9913621c9efc97000f06818f9ccba5127083dee5",
+      "attempts": [
+        {
+          "seconds": 0.07019957527518272,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07028509303927422,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.37579017424605426,
+              "1": 0.27775295051679255,
+              "2": 0.34645687523715324
+            },
+            "confidence": 0.06368526136908141
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0684400126338005,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.721086360514164
+    },
+    {
+      "step": 27,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars [SEP] Search",
+      "action": "search[i need a futon and chaise set that is made with faux leather. and i would prefer the navy linen color, and price lower than 130.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.784810293465853
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "task_id": 198,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i'm looking for rubber stole shoes for light wearing it was brown in color, and price lower than 80.00 dollars",
+  "instruction_sha256": "b45737bd96bfc50363f3640a1781390b107c4cf68fc6a46352932e2553610ae5",
+  "reward": 0.6666666666666666,
+  "score": 66.66666666666666,
+  "success": false,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 0.8373704850673676,
+  "decision_seconds": 0.6956819780170918,
+  "input_tokens": 2101,
+  "output_tokens": 247,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for rubber stole shoes for light wearing it was brown in color, and price lower than 80.00 dollars [SEP] Search",
+      "action": "search[i'm looking for rubber stole shoes for light wearing it was brown in color, and price lower than 80.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06449486315250397
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i'm looking for rubber stole shoes for light wearing it was brown in color, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B001878N9Y [SEP] LifeStride Women's Status Slingback Sandal [SEP] $21.0 to $133.99 [SEP] B001EWEWBG [SEP] Diesel Men's I'm Pression Mid Fashion Sneaker [SEP] $120.42 to $120.56 [SEP] B085WR7626 [SEP] iinfinize Cotton Scarf Bathing Tunic Towel Hand Block Print Sarong Swimwear Suit Women Bikini Cover Up Summer Dress Light Weight Scarves Stole Wrap Skirt Ladies Beach Pareo [SEP] $39.49 [SEP] B098T3FTCX [SEP] Fullwei Wedges Sandals for Women,Women Platform Dressy Sandals Casual Cute Buckle Strap Roman Open Toe Summer Walking Beach Sandals Shoe [SEP] $20.98 [SEP] B002ONB2N0 [SEP] Vans Unisex Zapato Del Barco Comfort Boat Shoes [SEP] $45.0 to $86.89 [SEP] B09KPJ4FT8 [SEP] Rustic Floating Shelves, Set of 4, Wooden Wall Shelves with Bars, Storage Shelves for Bathroom, Kitchen, Living Rooms, Bedroom (Dark Brown) [SEP] $28.99 [SEP] B0848QHDTH [SEP] Sandals for Women Heels,Womens Ankle Strap Chunky Block Low Heel Zipper Closure Party Dress Open Toe Pumps Sandals [SEP] $7.84 to $37.3 [SEP] B0834V2NFD [SEP] Espadrilles Wedges for Women,Casual Espadrille Slide On Platform Sandals Comfort Open Toe Ankle Elastic Strappy Studded Flatform Sandal Shoes [SEP] $3.42 to $15.52 [SEP] B01D4PTM9W [SEP] CHAMARIPA Fisherman Sandals Elevator Shoes Mens Leather Height Increasing Casual H81D15D192D [SEP] $159.0 [SEP] B095HHWVB8 [SEP] FIEEIF Mens Boat Shoes Fit for Extra Wide Feet Genuine Crazy Horse Leather Outdoor Walking Slip On Loafers Classic Travel Casual Loafers for Men [SEP] $48.99 to $79.99",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for rubber stole shoes for light wearing it was brown in color, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for rubber stole shoes for light wearing it was brown in color, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B001878N9Y [SEP] LifeStride Women's Status Slingback Sandal [SEP] $21.0 to $133.99 [SEP] B001EWEWBG [SEP] Diesel Men's I'm Pression Mid Fashion Sneaker [SEP] $120.42 to $120.56 [SEP] B085WR7626 [SEP] iinfinize Cotton Scarf Bathing Tunic Towel Hand Block Print Sarong Swimwear Suit Women Bikini Cover Up Summer Dress Light Weight Scarves Stole Wrap Skirt Ladies Beach Pareo [SEP] $39.49 [SEP] B098T3FTCX [SEP] Fullwei Wedges Sandals for Women,Women Platform Dressy Sandals Casual Cute Buckle Strap Roman Open Toe Summer Walking Beach Sandals Shoe [SEP] $20.98 [SEP] B002ONB2N0 [SEP] Vans Unisex Zapato Del Barco Comfort Boat Shoes [SEP] $45.0 to $86.89 [SEP] B09KPJ4FT8 [SEP] Rustic Floating Shelves, Set of 4, Wooden Wall Shelves with Bars, Storage Shelves for Bathroom, Kitchen, Living Rooms, Bedroom (Dark Brown) [SEP] $28.99 [SEP] B0848QHDTH [SEP] Sandals for Women Heels,Womens Ankle Strap Chunky Block Low Heel Zipper Closure Party Dress Open Toe Pumps Sandals [SEP] $7.84 to $37.3 [SEP] B0834V2NFD [SEP] Espadrilles Wedges for Women,Casual Espadrille Slide On Platform Sandals Comfort Open Toe Ankle Elastic Strappy Studded Flatform Sandal Shoes [SEP] $3.42 to $15.52 [SEP] B01D4PTM9W [SEP] CHAMARIPA Fisherman Sandals Elevator Shoes Mens Leather Height Increasing Casual H81D15D192D [SEP] $159.0 [SEP] B095HHWVB8 [SEP] FIEEIF Mens Boat Shoes Fit for Extra Wide Feet Genuine Crazy Horse Leather Outdoor Walking Slip On Loafers Classic Travel Casual Loafers for Men [SEP] $48.99 to $79.99\n\nRecent actions:\nsearch[i'm looking for rubber stole shoes for light wearing it was brown in color, and price lower than 80.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b001878n9y]",
+              "3": "click[b001ewewbg]",
+              "4": "click[b085wr7626]",
+              "5": "click[b098t3ftcx]",
+              "6": "click[b002onb2n0]",
+              "7": "click[b09kpj4ft8]",
+              "8": "click[b0848qhdth]",
+              "9": "click[b0834v2nfd]",
+              "10": "click[b01d4ptm9w]",
+              "11": "click[b095hhwvb8]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "1bb41a49c9b9c8b260fc75ac377e2db2c9e2593960158deb6dce0570ff005dcb",
+      "attempts": [
+        {
+          "seconds": 0.3565250560641289,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.35661886259913445,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "11",
+            "confidence": 0.22,
+            "probabilities": {
+              "6": 0.1,
+              "10": 0.0,
+              "8": 0.02,
+              "3": 0.0,
+              "5": 0.04,
+              "7": 0.0,
+              "4": 0.08,
+              "1": 0.27,
+              "9": 0.03,
+              "0": 0.09,
+              "11": 0.28,
+              "2": 0.08
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1231,
+          "output_tokens": 104
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b095hhwvb8]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.44619373604655266
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i'm looking for rubber stole shoes for light wearing it was brown in color, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] 12 [SEP] 13 [SEP] 14 [SEP] 15 [SEP] color [SEP] coffee-nubuck [SEP] brown-lace up [SEP] brown-slip ons [SEP] FIEEIF Mens Boat Shoes Fit for Extra Wide Feet Genuine Crazy Horse Leather Outdoor Walking Slip On Loafers Classic Travel Casual Loafers for Men [SEP] Price: $48.99 to $79.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for rubber stole shoes for light wearing it was brown in color, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for rubber stole shoes for light wearing it was brown in color, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] 12 [SEP] 13 [SEP] 14 [SEP] 15 [SEP] color [SEP] coffee-nubuck [SEP] brown-lace up [SEP] brown-slip ons [SEP] FIEEIF Mens Boat Shoes Fit for Extra Wide Feet Genuine Crazy Horse Leather Outdoor Walking Slip On Loafers Classic Travel Casual Loafers for Men [SEP] Price: $48.99 to $79.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm looking for rubber stole shoes for light wearing it was brown in color, and price lower than 80.00 dollars]\nclick[b095hhwvb8]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[8]",
+              "7": "click[9]",
+              "8": "click[10]",
+              "9": "click[11]",
+              "10": "click[12]",
+              "11": "click[13]",
+              "12": "click[14]",
+              "13": "click[15]",
+              "14": "click[coffee-nubuck]",
+              "15": "click[brown-lace up]",
+              "16": "click[brown-slip ons]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "0c91a04d442d0b6fa4ecdb06b60eec33f779a347e79a4d153a6b55069de087cc",
+      "attempts": [
+        {
+          "seconds": 0.3389833904802799,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3390631154179573,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.31,
+            "probabilities": {
+              "3": 0.01,
+              "12": 0.0,
+              "11": 0.0,
+              "14": 0.04,
+              "10": 0.01,
+              "16": 0.32,
+              "1": 0.01,
+              "2": 0.01,
+              "5": 0.36,
+              "8": 0.01,
+              "15": 0.09,
+              "7": 0.0,
+              "13": 0.0,
+              "0": 0.13,
+              "9": 0.0,
+              "4": 0.0,
+              "6": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 870,
+          "output_tokens": 143
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.6666666666666666,
+      "done": true,
+      "elapsed_seconds": 0.8373678848147392
+    }
+  ]
+}

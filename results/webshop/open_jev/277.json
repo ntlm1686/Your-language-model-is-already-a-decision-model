@@ -1,0 +1,1916 @@
+{
+  "task_id": 277,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars",
+  "instruction_sha256": "9fd7b3cef1de60656499140e5afec08b2524e77ced9b3ee8872ce5ba54b83efd",
+  "reward": 0.75,
+  "score": 75.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 28,
+  "elapsed_seconds": 7.852179501205683,
+  "decision_seconds": 6.045319948345423,
+  "input_tokens": 122802,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Search",
+      "action": "search[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.07359903678297997
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GXJ9WP6 [SEP] Salon in a Bottle Root Concealer Touch Up Spray , Instantly Covers Gray Roots , Professional Salon Quality Cover Up Gray Hair Products for Women (BLONDE) [SEP] $26.3 [SEP] B007YLMFN8 [SEP] My Secret Correctives Root Touch-Up Natural Highlight Spray - 2oz each - (MEDIUM BROWN) - 3 Cans with FREE Hairline Optimizer Comb [SEP] $30.0 [SEP] B07N6XQ3GJ [SEP] Clairol Root Touch-Up by Nice'n Easy Permanent Hair Dye, 7 Dark Blonde Hair Color, 2 Count [SEP] $11.68 [SEP] B00GXK1BEU [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Light Brown [SEP] $26.3 [SEP] B00GXKM3FG [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Darkest Brown/Black [SEP] $26.3 [SEP] B084W2CYX6 [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 2 Black, 2 count [SEP] $13.94 [SEP] B084W3BXBX [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 6G Light Golden Brown, 2 count [SEP] $13.9 [SEP] B07Z8SPVC5 [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Light Brown [SEP] $15.98 [SEP] B07NSRHCHG [SEP] Garnier Hair Color Express retouch gray hair concealer, instant gray coverage, Black, 0.68 Fluid Ounce [SEP] $14.99 [SEP] B01648QP3W [SEP] L'Oreal Paris Magic Root Cover Up Gray Concealer Spray Dark Brown 2 oz. [SEP] $9.97",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GXJ9WP6 [SEP] Salon in a Bottle Root Concealer Touch Up Spray , Instantly Covers Gray Roots , Professional Salon Quality Cover Up Gray Hair Products for Women (BLONDE) [SEP] $26.3 [SEP] B007YLMFN8 [SEP] My Secret Correctives Root Touch-Up Natural Highlight Spray - 2oz each - (MEDIUM BROWN) - 3 Cans with FREE Hairline Optimizer Comb [SEP] $30.0 [SEP] B07N6XQ3GJ [SEP] Clairol Root Touch-Up by Nice'n Easy Permanent Hair Dye, 7 Dark Blonde Hair Color, 2 Count [SEP] $11.68 [SEP] B00GXK1BEU [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Light Brown [SEP] $26.3 [SEP] B00GXKM3FG [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Darkest Brown/Black [SEP] $26.3 [SEP] B084W2CYX6 [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 2 Black, 2 count [SEP] $13.94 [SEP] B084W3BXBX [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 6G Light Golden Brown, 2 count [SEP] $13.9 [SEP] B07Z8SPVC5 [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Light Brown [SEP] $15.98 [SEP] B07NSRHCHG [SEP] Garnier Hair Color Express retouch gray hair concealer, instant gray coverage, Black, 0.68 Fluid Ounce [SEP] $14.99 [SEP] B01648QP3W [SEP] L'Oreal Paris Magic Root Cover Up Gray Concealer Spray Dark Brown 2 oz. [SEP] $9.97\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b00gxj9wp6]",
+              "3": "click[b007ylmfn8]",
+              "4": "click[b07n6xq3gj]",
+              "5": "click[b00gxk1beu]",
+              "6": "click[b00gxkm3fg]",
+              "7": "click[b084w2cyx6]",
+              "8": "click[b084w3bxbx]",
+              "9": "click[b07z8spvc5]",
+              "10": "click[b07nsrhchg]",
+              "11": "click[b01648qp3w]"
+            }
+          }
+        }
+      },
+      "request_sha256": "537fdc2804d38d3d1369cbc1dffa5395e6847a50d200c3afcea1696a97028bd1",
+      "attempts": [
+        {
+          "seconds": 0.4030138812959194,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.40312952548265457,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.12472367338718496,
+              "1": 0.28363434945210547,
+              "2": 0.06806353396736123,
+              "3": 0.04921953666610684,
+              "4": 0.10859756257174703,
+              "5": 0.04434957078465798,
+              "6": 0.04035624780440502,
+              "7": 0.037300364591555266,
+              "8": 0.05938397360524502,
+              "9": 0.07745811440578665,
+              "10": 0.04924343392778149,
+              "11": 0.05766963883606306
+            },
+            "confidence": 0.2185101994022969
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9053,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.4008200541138649,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5616582706570625
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07P3Z4TJV [SEP] TRESemmé Root Touch-Up Black, White, 2.5 Fl Oz [SEP] $100.0 [SEP] B0114XY1OM [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Black [SEP] $11.5 [SEP] B0128VJ7R0 [SEP] Hair Loss Concealer Fibers 200 Grams 7 Oz. With Bottle By Finally Hair 50g*4 (Dark Brown w/touch of red) *** SEE PICTURES - We have 2 different dark brown shades *** [SEP] $48.88 [SEP] B07N33D4TH [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Medium Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07N34HVW3 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Light Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07CX11NK7 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Dark Brown 2 Ounce (Pack of 2) [SEP] $48.19 [SEP] B07YDWSKJK [SEP] Revlon Total Color Permanent Hair Color, Clean and Vegan, 100% Gray Coverage Hair Dye, 60 Light Natural Brown, 3.5 oz [SEP] $7.99 [SEP] B01DPWDWG8 [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Red 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $19.94 [SEP] B01A5UHGYW [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women (Platinum Blonde) [SEP] $47.0 [SEP] B07L1PNF8W [SEP] Clairol Root Touch-Up Temporary Spray, Light Brown Hair Color, 2 Count [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07P3Z4TJV [SEP] TRESemmé Root Touch-Up Black, White, 2.5 Fl Oz [SEP] $100.0 [SEP] B0114XY1OM [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Black [SEP] $11.5 [SEP] B0128VJ7R0 [SEP] Hair Loss Concealer Fibers 200 Grams 7 Oz. With Bottle By Finally Hair 50g*4 (Dark Brown w/touch of red) *** SEE PICTURES - We have 2 different dark brown shades *** [SEP] $48.88 [SEP] B07N33D4TH [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Medium Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07N34HVW3 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Light Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07CX11NK7 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Dark Brown 2 Ounce (Pack of 2) [SEP] $48.19 [SEP] B07YDWSKJK [SEP] Revlon Total Color Permanent Hair Color, Clean and Vegan, 100% Gray Coverage Hair Dye, 60 Light Natural Brown, 3.5 oz [SEP] $7.99 [SEP] B01DPWDWG8 [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Red 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $19.94 [SEP] B01A5UHGYW [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women (Platinum Blonde) [SEP] $47.0 [SEP] B07L1PNF8W [SEP] Clairol Root Touch-Up Temporary Spray, Light Brown Hair Color, 2 Count [SEP] $100.0\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07p3z4tjv]",
+              "4": "click[b0114xy1om]",
+              "5": "click[b0128vj7r0]",
+              "6": "click[b07n33d4th]",
+              "7": "click[b07n34hvw3]",
+              "8": "click[b07cx11nk7]",
+              "9": "click[b07ydwskjk]",
+              "10": "click[b01dpwdwg8]",
+              "11": "click[b01a5uhgyw]",
+              "12": "click[b07l1pnf8w]"
+            }
+          }
+        }
+      },
+      "request_sha256": "8d6ac9755939c31eed9baf3fde3d38a5be081caa2fca58331b993a922d521186",
+      "attempts": [
+        {
+          "seconds": 0.4601503163576126,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.46028103306889534,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.15163920476081227,
+              "1": 0.14337650651702713,
+              "2": 0.22446895663957878,
+              "3": 0.037493996654654194,
+              "4": 0.04156999008917813,
+              "5": 0.031352995813710434,
+              "6": 0.0750591205600788,
+              "7": 0.046756739052868444,
+              "8": 0.055119428489679156,
+              "9": 0.04112977286962054,
+              "10": 0.052016146189234065,
+              "11": 0.039980272856604916,
+              "12": 0.060036869506953035
+            },
+            "confidence": 0.159841369692877
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10431,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4580722749233246,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.1130841821432114
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01DPWDXTE [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $18.3 [SEP] B08GS8ZDYX [SEP] Kreesi Short Blonde Wigs for Women Synthetic Straight Blonde Bob Wig with Dark Brown Roots Shoulder Length Blonde Ombre Wig Middle Part Heat Resistant Fiber Hair Party Cosplay Wigs [SEP] $19.99 [SEP] B01A5U7K7K [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women. (Dark Brown) [SEP] $47.0 [SEP] B09PYR6984 [SEP] Unisex Hair Fibers - 5 Seconds Conceals Loss Wig Head With Hair Stand Layered Real Hair Wig Lace Curly Wigs Human Hair Red High Ponytail Wig Human Hair With Frontal And Bundles [SEP] $0.59 [SEP] B07WK9BBMZ [SEP] Gray Riddance Hair Color Spray, All Natural, Brown (2 Fluid Ounce Spray Bottle) [SEP] $17.95 [SEP] B09GT9SHQH [SEP] Ready to Wear Quick Cover Root Touch Up - Dye Free Hair Growth Cover Up (Black) [SEP] $34.5 [SEP] B071XHWM4Z [SEP] REECHO 20\" 1-pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hair pieces for Women 5 Clips 4.5 Oz Per Piece - Jet Black [SEP] $9.99 [SEP] B000KOSF30 [SEP] L'Oreal Paris Superior Preference Fade-Defying + Shine Permanent Hair Color, 9GR Light Golden Reddish Blonde, Pack of 1, Hair Dye [SEP] $10.49 [SEP] B00QQKPIC8 [SEP] REECHO 20\" 1-Pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hairpieces for Women 5 Clips 4.5 Oz per Piece - Natural Black [SEP] $9.99 [SEP] B08QXB1BLF [SEP] Herbishh Hair Color Shampoo for Gray Hair – Magic Hair Dye Shampoo – Colors Hair in Minutes–Long Lasting–500 Ml–3-In-1 Hair Color–Ammonia-Free | Herbishh (Dark Brown) [SEP] $39.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01DPWDXTE [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $18.3 [SEP] B08GS8ZDYX [SEP] Kreesi Short Blonde Wigs for Women Synthetic Straight Blonde Bob Wig with Dark Brown Roots Shoulder Length Blonde Ombre Wig Middle Part Heat Resistant Fiber Hair Party Cosplay Wigs [SEP] $19.99 [SEP] B01A5U7K7K [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women. (Dark Brown) [SEP] $47.0 [SEP] B09PYR6984 [SEP] Unisex Hair Fibers - 5 Seconds Conceals Loss Wig Head With Hair Stand Layered Real Hair Wig Lace Curly Wigs Human Hair Red High Ponytail Wig Human Hair With Frontal And Bundles [SEP] $0.59 [SEP] B07WK9BBMZ [SEP] Gray Riddance Hair Color Spray, All Natural, Brown (2 Fluid Ounce Spray Bottle) [SEP] $17.95 [SEP] B09GT9SHQH [SEP] Ready to Wear Quick Cover Root Touch Up - Dye Free Hair Growth Cover Up (Black) [SEP] $34.5 [SEP] B071XHWM4Z [SEP] REECHO 20\" 1-pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hair pieces for Women 5 Clips 4.5 Oz Per Piece - Jet Black [SEP] $9.99 [SEP] B000KOSF30 [SEP] L'Oreal Paris Superior Preference Fade-Defying + Shine Permanent Hair Color, 9GR Light Golden Reddish Blonde, Pack of 1, Hair Dye [SEP] $10.49 [SEP] B00QQKPIC8 [SEP] REECHO 20\" 1-Pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hairpieces for Women 5 Clips 4.5 Oz per Piece - Natural Black [SEP] $9.99 [SEP] B08QXB1BLF [SEP] Herbishh Hair Color Shampoo for Gray Hair – Magic Hair Dye Shampoo – Colors Hair in Minutes–Long Lasting–500 Ml–3-In-1 Hair Color–Ammonia-Free | Herbishh (Dark Brown) [SEP] $39.99\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b01dpwdxte]",
+              "4": "click[b08gs8zdyx]",
+              "5": "click[b01a5u7k7k]",
+              "6": "click[b09pyr6984]",
+              "7": "click[b07wk9bbmz]",
+              "8": "click[b09gt9shqh]",
+              "9": "click[b071xhwm4z]",
+              "10": "click[b000kosf30]",
+              "11": "click[b00qqkpic8]",
+              "12": "click[b08qxb1blf]"
+            }
+          }
+        }
+      },
+      "request_sha256": "405d06ba461c4bc13307c9a5536bb655fe1c14ad693c79844cbae22b50c12ec1",
+      "attempts": [
+        {
+          "seconds": 0.46735987067222595,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.46748917177319527,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.1916671619564326,
+              "1": 0.17789376181265992,
+              "2": 0.27987072684699266,
+              "3": 0.04662308024613725,
+              "4": 0.029520783883851893,
+              "5": 0.024144746176715484,
+              "6": 0.03416940792085058,
+              "7": 0.02939030372787864,
+              "8": 0.044002431815880094,
+              "9": 0.025599419531526165,
+              "10": 0.04187756840192732,
+              "11": 0.025134246830136375,
+              "12": 0.05010636084901094
+            },
+            "confidence": 0.21985995408424203
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10362,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.458314411342144,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.6739632561802864
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07JPBYGHX [SEP] Revlon Root Erase Permanent Hair Color, At-Home Root Touchup Hair Dye with Applicator Brush for Multiple Use, 100% Gray Coverage, Dark Blonde (7), 3.2 oz [SEP] $11.99 [SEP] B07MV5B2XB [SEP] REECHO 20\" 1-pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hair pieces for Women 5 Clips 4.5 Oz Per Piece - Warm Light Brown [SEP] $9.99 [SEP] B009VNVKL0 [SEP] Jerome Russell Temporary Hair Color Spray, Green - Intense Spray-On Temporary Hair Color, Fast-Drying, Non-Sticky, Travel Size Hair Dye for Instant Vivid Hair Color, 2.2 oz [SEP] $9.59 [SEP] B001B2S32S [SEP] Permanent Hair Color by Revlon, Permanent Hair Dye, Colorsilk with 100% Gray Coverage, Ammonia-Free, Keratin and Amino Acids, 41 Medium Brown, 4.4 Oz (Pack of 1) [SEP] $2.99 [SEP] B073H81HHP [SEP] Crazy Color Instant Temporary Hair Color Pastel Pigment Spray - 100% Vegan & Cruelty-Free Ready to Use - For Blonde or Pre-Lightened Hair | Ammonia and Peroxide free – Gentle Formula 250ml (8.45 oz) (PEACHY CORAL) [SEP] $11.96 [SEP] B086ZZJN3C [SEP] COLOR TOUCH Demi-Permanent Haircolor Dye, Ammonia-Free 2 oz (w/Sleek Tint Brush) Last 24 Shampoos, Vibrant High Shine Hair Color (2/0 Darkest brown/Natural) [SEP] $14.99 [SEP] B07YTWQYW6 [SEP] Hebelin 2pcs Messy Hair Bun Extensions Scrunchy Updo Elastic Wavy Curly Donut Chignon Hairpiece [SEP] $13.98 [SEP] B000VWKILI [SEP] L'Oreal Paris Excellence Creme Permanent Hair Color, 7 Dark Blonde, 100 percent Gray Coverage Hair Dye, Pack of 1 [SEP] $8.72 [SEP] B07S724YBD [SEP] Hair Extensions Clip in Human Hair 18inch 7pcs 120g Aison Natural Black Ombre Balayage Grade Brazilian Hair [SEP] $98.99 [SEP] B092JF12TF [SEP] Mane Hair Thickening Spray Silver x 5 [SEP] $137.95",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07JPBYGHX [SEP] Revlon Root Erase Permanent Hair Color, At-Home Root Touchup Hair Dye with Applicator Brush for Multiple Use, 100% Gray Coverage, Dark Blonde (7), 3.2 oz [SEP] $11.99 [SEP] B07MV5B2XB [SEP] REECHO 20\" 1-pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hair pieces for Women 5 Clips 4.5 Oz Per Piece - Warm Light Brown [SEP] $9.99 [SEP] B009VNVKL0 [SEP] Jerome Russell Temporary Hair Color Spray, Green - Intense Spray-On Temporary Hair Color, Fast-Drying, Non-Sticky, Travel Size Hair Dye for Instant Vivid Hair Color, 2.2 oz [SEP] $9.59 [SEP] B001B2S32S [SEP] Permanent Hair Color by Revlon, Permanent Hair Dye, Colorsilk with 100% Gray Coverage, Ammonia-Free, Keratin and Amino Acids, 41 Medium Brown, 4.4 Oz (Pack of 1) [SEP] $2.99 [SEP] B073H81HHP [SEP] Crazy Color Instant Temporary Hair Color Pastel Pigment Spray - 100% Vegan & Cruelty-Free Ready to Use - For Blonde or Pre-Lightened Hair | Ammonia and Peroxide free – Gentle Formula 250ml (8.45 oz) (PEACHY CORAL) [SEP] $11.96 [SEP] B086ZZJN3C [SEP] COLOR TOUCH Demi-Permanent Haircolor Dye, Ammonia-Free 2 oz (w/Sleek Tint Brush) Last 24 Shampoos, Vibrant High Shine Hair Color (2/0 Darkest brown/Natural) [SEP] $14.99 [SEP] B07YTWQYW6 [SEP] Hebelin 2pcs Messy Hair Bun Extensions Scrunchy Updo Elastic Wavy Curly Donut Chignon Hairpiece [SEP] $13.98 [SEP] B000VWKILI [SEP] L'Oreal Paris Excellence Creme Permanent Hair Color, 7 Dark Blonde, 100 percent Gray Coverage Hair Dye, Pack of 1 [SEP] $8.72 [SEP] B07S724YBD [SEP] Hair Extensions Clip in Human Hair 18inch 7pcs 120g Aison Natural Black Ombre Balayage Grade Brazilian Hair [SEP] $98.99 [SEP] B092JF12TF [SEP] Mane Hair Thickening Spray Silver x 5 [SEP] $137.95\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07jpbyghx]",
+              "4": "click[b07mv5b2xb]",
+              "5": "click[b009vnvkl0]",
+              "6": "click[b001b2s32s]",
+              "7": "click[b073h81hhp]",
+              "8": "click[b086zzjn3c]",
+              "9": "click[b07ytwqyw6]",
+              "10": "click[b000vwkili]",
+              "11": "click[b07s724ybd]",
+              "12": "click[b092jf12tf]"
+            }
+          }
+        }
+      },
+      "request_sha256": "608fd9c4d8bd44bb92eb27d26e58f68ff7ca7b3661bd30fcfdf299b125ea038c",
+      "attempts": [
+        {
+          "seconds": 0.4919961281120777,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.49214210733771324,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.15793534679139745,
+              "1": 0.1696731637482971,
+              "2": 0.18978974491964623,
+              "3": 0.13958039310862416,
+              "4": 0.019330586087024725,
+              "5": 0.026603380695970312,
+              "6": 0.053385193357686,
+              "7": 0.027797708803945442,
+              "8": 0.04259214233208114,
+              "9": 0.036439939016886115,
+              "10": 0.0664288746191271,
+              "11": 0.03755839122027128,
+              "12": 0.03288513529904276
+            },
+            "confidence": 0.1222722236629501
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11222,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4896690472960472,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.2432277500629425
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B073KMSKN3 [SEP] Jerome Russell Spray-on Color Dark Brown Hair Thickener, for Fine and Thinning Hair, Conceals Bald Spots, Grey Hair, Hides Root Re-growth, and Cover Hair Extension Tracks, Works for Men and Women, 3.5 oz - 2 Pack [SEP] $14.99 [SEP] B07PFFXSWT [SEP] Garnier Nutrisse and Express Retouch Kit, Sweet Cola, Dark Brown, 3 count [SEP] $23.95 [SEP] B001B2KXIA [SEP] Revlon Colorsilk Beautiful Color, Permanent Hair Dye with Keratin, 100% Gray Coverage, Ammonia Free, 20 Brown/Black [SEP] $4.99 [SEP] B001B2N3QE [SEP] Revlon Colorsilk Beautiful Color, Permanent Hair Dye with Keratin, 100% Gray Coverage, Ammonia Free, 10 Black [SEP] $2.99 [SEP] B01LTHLD9Y [SEP] Revlon Colorsilk Beautiful Color, Permanent Hair Dye with Keratin, 100% Gray Coverage, Ammonia Free, 50 Light Ash Brown [SEP] $2.99 [SEP] B000YJR5DM [SEP] L'Oreal Paris Excellence Creme Permanent Hair Color, 8.5A Champagne Blonde, 100 percent Gray Coverage Hair Dye, Pack of 1 [SEP] $8.97 [SEP] B000YJY2YM [SEP] L'Oreal Paris Excellence Creme Permanent Hair Color, 9A Light Ash Blonde, 100 percent Gray Coverage Hair Dye, Pack of 1 [SEP] $8.59 [SEP] B086ZZPGHK [SEP] COLOR TOUCH PLUS Demi-Permanent Haircolor Dye, Ammonia-Free 2 oz (w/Sleek Tint Brush) Last 24 Shampoos, Vibrant High Shine Hair Color (88/07 Intense Light Blonde/Natural Brown) [SEP] $8.99 [SEP] B07CF3CV2Q [SEP] Clairol Nice'n Easy Permanent Hair Dye, 7C Dark Cool Blonde Hair Color, 1 Count [SEP] $6.99 [SEP] B09SLNLY3C [SEP] Magic Paste Human Hair Ponytail Extensions 18 Inch #2 Dark Brown Binding Ponytail Hairpieces for Women Long Wrap Up Pony Tail with Comb [SEP] $63.9",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B073KMSKN3 [SEP] Jerome Russell Spray-on Color Dark Brown Hair Thickener, for Fine and Thinning Hair, Conceals Bald Spots, Grey Hair, Hides Root Re-growth, and Cover Hair Extension Tracks, Works for Men and Women, 3.5 oz - 2 Pack [SEP] $14.99 [SEP] B07PFFXSWT [SEP] Garnier Nutrisse and Express Retouch Kit, Sweet Cola, Dark Brown, 3 count [SEP] $23.95 [SEP] B001B2KXIA [SEP] Revlon Colorsilk Beautiful Color, Permanent Hair Dye with Keratin, 100% Gray Coverage, Ammonia Free, 20 Brown/Black [SEP] $4.99 [SEP] B001B2N3QE [SEP] Revlon Colorsilk Beautiful Color, Permanent Hair Dye with Keratin, 100% Gray Coverage, Ammonia Free, 10 Black [SEP] $2.99 [SEP] B01LTHLD9Y [SEP] Revlon Colorsilk Beautiful Color, Permanent Hair Dye with Keratin, 100% Gray Coverage, Ammonia Free, 50 Light Ash Brown [SEP] $2.99 [SEP] B000YJR5DM [SEP] L'Oreal Paris Excellence Creme Permanent Hair Color, 8.5A Champagne Blonde, 100 percent Gray Coverage Hair Dye, Pack of 1 [SEP] $8.97 [SEP] B000YJY2YM [SEP] L'Oreal Paris Excellence Creme Permanent Hair Color, 9A Light Ash Blonde, 100 percent Gray Coverage Hair Dye, Pack of 1 [SEP] $8.59 [SEP] B086ZZPGHK [SEP] COLOR TOUCH PLUS Demi-Permanent Haircolor Dye, Ammonia-Free 2 oz (w/Sleek Tint Brush) Last 24 Shampoos, Vibrant High Shine Hair Color (88/07 Intense Light Blonde/Natural Brown) [SEP] $8.99 [SEP] B07CF3CV2Q [SEP] Clairol Nice'n Easy Permanent Hair Dye, 7C Dark Cool Blonde Hair Color, 1 Count [SEP] $6.99 [SEP] B09SLNLY3C [SEP] Magic Paste Human Hair Ponytail Extensions 18 Inch #2 Dark Brown Binding Ponytail Hairpieces for Women Long Wrap Up Pony Tail with Comb [SEP] $63.9\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b073kmskn3]",
+              "4": "click[b07pffxswt]",
+              "5": "click[b001b2kxia]",
+              "6": "click[b001b2n3qe]",
+              "7": "click[b01lthld9y]",
+              "8": "click[b000yjr5dm]",
+              "9": "click[b000yjy2ym]",
+              "10": "click[b086zzpghk]",
+              "11": "click[b07cf3cv2q]",
+              "12": "click[b09slnly3c]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bb4c160c35a4422c34f50ffa905cef6defcad472ac299d64700a38bdb58c09a3",
+      "attempts": [
+        {
+          "seconds": 0.46373627707362175,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4638628363609314,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.20536703004368997,
+              "1": 0.17799322725491828,
+              "2": 0.24396966554222208,
+              "3": 0.021862525975844992,
+              "4": 0.052027262109618305,
+              "5": 0.03663901365527449,
+              "6": 0.028579567515058732,
+              "7": 0.032786668711487325,
+              "8": 0.039529724153105454,
+              "9": 0.03285823577636997,
+              "10": 0.06253729821314599,
+              "11": 0.05054878219716163,
+              "12": 0.015300998852102945
+            },
+            "confidence": 0.18096713767074057
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10571,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4609212763607502,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.8047112859785557
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "290d2ec296256be080b5a142061c6d50e8a7dc387e51e9dba20fac9afbfb8b5f",
+      "attempts": [
+        {
+          "seconds": 0.07507020980119705,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07513633370399475,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.31387184794307893,
+              "1": 0.25334186720960494,
+              "2": 0.4327862848473162
+            },
+            "confidence": 0.14917942727097427
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 729,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07322922348976135,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.942556630820036
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "abec6a9075267fb84c59d67d0729f9c7cdf59a8e596234c9f266e5c4fad04dfa",
+      "attempts": [
+        {
+          "seconds": 0.06791448965668678,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06798269599676132,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.31858376473742256,
+              "1": 0.2611171401824431,
+              "2": 0.4202990950801343
+            },
+            "confidence": 0.13044864262020153
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 744,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06643416360020638,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.0700453147292137
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bf598812f87b2d768ebe7d9d36e2c6412787c60a602d7f58303646770f75bb98",
+      "attempts": [
+        {
+          "seconds": 0.0696934200823307,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0697566382586956,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.329134569490581,
+              "1": 0.25773502103815005,
+              "2": 0.413130409471269
+            },
+            "confidence": 0.11969561420690351
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06820489466190338,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.198504701256752
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0dd09347e0ae8afa279bf8426455822e9fced3f573c907416d530790651e17ac",
+      "attempts": [
+        {
+          "seconds": 0.07305033877491951,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07313835993409157,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33969606696573074,
+              "1": 0.27201240685846034,
+              "2": 0.38829152617580903
+            },
+            "confidence": 0.0824372892637134
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 774,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06931119039654732,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.3320149295032024
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4c6a905c61065d9e0de2704bdda999aa33c73320ec092aebbad1bd6237b280fe",
+      "attempts": [
+        {
+          "seconds": 0.07170915231108665,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07182086631655693,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.341555913858359,
+              "1": 0.28050191910863664,
+              "2": 0.3779421670330044
+            },
+            "confidence": 0.06691325054950657
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 792,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06994136422872543,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.4731678441166878
+    },
+    {
+      "step": 11,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bc05e734a91019fd978bb7b1c65bf0fbb3fbf64dcaaacd3106b24ce2ba227999",
+      "attempts": [
+        {
+          "seconds": 0.07151414453983307,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07159740850329399,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33234917818803433,
+              "1": 0.27646822702129387,
+              "2": 0.39118259479067174
+            },
+            "confidence": 0.08677389218600763
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 711,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06977789103984833,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.6038838550448418
+    },
+    {
+      "step": 12,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "aef495860923b004176429aab87a44f6f1b7fcd87bfa4abb6c7ae8051a0c725e",
+      "attempts": [
+        {
+          "seconds": 0.07040310278534889,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07048536837100983,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3521601901001855,
+              "1": 0.2599535577902053,
+              "2": 0.38788625210960914
+            },
+            "confidence": 0.08182937816441373
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 711,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06793937087059021,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.733070597052574
+    },
+    {
+      "step": 13,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b198e6f33538adc3a8407d44f2fcd78cf059e8ccc7797356cbbacd1ddbcf95a9",
+      "attempts": [
+        {
+          "seconds": 0.06817421317100525,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06825149059295654,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3319899086572564,
+              "1": 0.26591917900812334,
+              "2": 0.4020909123346203
+            },
+            "confidence": 0.10313636850193046
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 711,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0663197822868824,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.862238507717848
+    },
+    {
+      "step": 14,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e4524f3c49c80a288799de1290fc31e0356ead44156a2985579693292bdd3763",
+      "attempts": [
+        {
+          "seconds": 0.06749320402741432,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06757909432053566,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3289385129100814,
+              "1": 0.2654052115802673,
+              "2": 0.40565627550965133
+            },
+            "confidence": 0.10848441326447701
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 711,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06563340499997139,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.001154139637947
+    },
+    {
+      "step": 15,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f6283142a3cd971c306b45056f748898c82c8da8563c98b2065ac28366ab20f4",
+      "attempts": [
+        {
+          "seconds": 0.0706217773258686,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07070367783308029,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.32977833717588606,
+              "1": 0.2727303388950949,
+              "2": 0.39749132392901915
+            },
+            "confidence": 0.09623698589352857
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 711,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06885568425059319,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.136927891522646
+    },
+    {
+      "step": 16,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "81aa56e3aeea594df4c8e015c408c9ecca06a91d38467da8e8b6ed671b87a241",
+      "attempts": [
+        {
+          "seconds": 0.06745583936572075,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06754013895988464,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.32782767699936666,
+              "1": 0.2656133515599417,
+              "2": 0.4065589714406917
+            },
+            "confidence": 0.10983845716103756
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 711,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0654340609908104,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.266501873731613
+    },
+    {
+      "step": 17,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "9356790c09893357c9b51b0f5eeb8970156c706404a5daa0347d55f975746a47",
+      "attempts": [
+        {
+          "seconds": 0.06857430934906006,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06865708902478218,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3200514187444222,
+              "1": 0.26349186295654936,
+              "2": 0.4164567182990285
+            },
+            "confidence": 0.1246850774485428
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 711,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0651199221611023,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.399106565862894
+    },
+    {
+      "step": 18,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a5b37069f1f48a7c00539f986a81b7b0429704c9fd6774d18b6cd506e9c4b7b4",
+      "attempts": [
+        {
+          "seconds": 0.07519865408539772,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07528460025787354,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3230774530677992,
+              "1": 0.2584705490860528,
+              "2": 0.418451997846148
+            },
+            "confidence": 0.127677996769222
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 711,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06615329906344414,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.549901768565178
+    },
+    {
+      "step": 19,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1df566467ac47122b6653edc06de5cb86376817d4ae63e1788a3ff687c31616b",
+      "attempts": [
+        {
+          "seconds": 0.06564363837242126,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06570950523018837,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.32147754114876714,
+              "1": 0.26765107905418495,
+              "2": 0.41087137979704796
+            },
+            "confidence": 0.11630706969557196
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 711,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06402895599603653,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.6732078194618225
+    },
+    {
+      "step": 20,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a2f79240acb3610666b348a0c72a1d3a1ce26d580761510126e388dbbc891e38",
+      "attempts": [
+        {
+          "seconds": 0.06618120148777962,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06625789403915405,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.36398146591034874,
+              "1": 0.27791888294881556,
+              "2": 0.3580996511408357
+            },
+            "confidence": 0.04597219886552314
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 711,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06467994302511215,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.7482644729316235
+    },
+    {
+      "step": 21,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Search",
+      "action": "search[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.810666508972645
+    },
+    {
+      "step": 22,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GXJ9WP6 [SEP] Salon in a Bottle Root Concealer Touch Up Spray , Instantly Covers Gray Roots , Professional Salon Quality Cover Up Gray Hair Products for Women (BLONDE) [SEP] $26.3 [SEP] B007YLMFN8 [SEP] My Secret Correctives Root Touch-Up Natural Highlight Spray - 2oz each - (MEDIUM BROWN) - 3 Cans with FREE Hairline Optimizer Comb [SEP] $30.0 [SEP] B07N6XQ3GJ [SEP] Clairol Root Touch-Up by Nice'n Easy Permanent Hair Dye, 7 Dark Blonde Hair Color, 2 Count [SEP] $11.68 [SEP] B00GXK1BEU [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Light Brown [SEP] $26.3 [SEP] B00GXKM3FG [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Darkest Brown/Black [SEP] $26.3 [SEP] B084W2CYX6 [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 2 Black, 2 count [SEP] $13.94 [SEP] B084W3BXBX [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 6G Light Golden Brown, 2 count [SEP] $13.9 [SEP] B07Z8SPVC5 [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Light Brown [SEP] $15.98 [SEP] B07NSRHCHG [SEP] Garnier Hair Color Express retouch gray hair concealer, instant gray coverage, Black, 0.68 Fluid Ounce [SEP] $14.99 [SEP] B01648QP3W [SEP] L'Oreal Paris Magic Root Cover Up Gray Concealer Spray Dark Brown 2 oz. [SEP] $9.97",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GXJ9WP6 [SEP] Salon in a Bottle Root Concealer Touch Up Spray , Instantly Covers Gray Roots , Professional Salon Quality Cover Up Gray Hair Products for Women (BLONDE) [SEP] $26.3 [SEP] B007YLMFN8 [SEP] My Secret Correctives Root Touch-Up Natural Highlight Spray - 2oz each - (MEDIUM BROWN) - 3 Cans with FREE Hairline Optimizer Comb [SEP] $30.0 [SEP] B07N6XQ3GJ [SEP] Clairol Root Touch-Up by Nice'n Easy Permanent Hair Dye, 7 Dark Blonde Hair Color, 2 Count [SEP] $11.68 [SEP] B00GXK1BEU [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Light Brown [SEP] $26.3 [SEP] B00GXKM3FG [SEP] Salon In A Bottle - Instant Temporary Root Concealer Spray To Cover Up Roots And Gray Between Salon Trips - Professional Quality Spray Bottle For Hair Products For Women And Men - Darkest Brown/Black [SEP] $26.3 [SEP] B084W2CYX6 [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 2 Black, 2 count [SEP] $13.94 [SEP] B084W3BXBX [SEP] L'Oreal Paris Magic Root Rescue 10 Minute Root Hair Coloring Kit, Permanent Hair Color with Quick Precision Applicator, 100% Gray Coverage, 6G Light Golden Brown, 2 count [SEP] $13.9 [SEP] B07Z8SPVC5 [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Light Brown [SEP] $15.98 [SEP] B07NSRHCHG [SEP] Garnier Hair Color Express retouch gray hair concealer, instant gray coverage, Black, 0.68 Fluid Ounce [SEP] $14.99 [SEP] B01648QP3W [SEP] L'Oreal Paris Magic Root Cover Up Gray Concealer Spray Dark Brown 2 oz. [SEP] $9.97\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b00gxj9wp6]",
+              "3": "click[b007ylmfn8]",
+              "4": "click[b07n6xq3gj]",
+              "5": "click[b00gxk1beu]",
+              "6": "click[b00gxkm3fg]",
+              "7": "click[b084w2cyx6]",
+              "8": "click[b084w3bxbx]",
+              "9": "click[b07z8spvc5]",
+              "10": "click[b07nsrhchg]",
+              "11": "click[b01648qp3w]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d493e6dde87cdf7f78757a3b6743964dac229ee8c55fa1b026bc7326869b5c8e",
+      "attempts": [
+        {
+          "seconds": 0.4302566684782505,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4303875155746937,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.11205231086131939,
+              "1": 0.26630613349597493,
+              "2": 0.07302952464965587,
+              "3": 0.053660771815172606,
+              "4": 0.10155309132115382,
+              "5": 0.049155321506061195,
+              "6": 0.047220274822606045,
+              "7": 0.042248403642537125,
+              "8": 0.0623746922666797,
+              "9": 0.07554398247895983,
+              "10": 0.05651320784686205,
+              "11": 0.060342285293017335
+            },
+            "confidence": 0.19960669108651818
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9617,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.4266463667154312,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.315662916749716
+    },
+    {
+      "step": 23,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07P3Z4TJV [SEP] TRESemmé Root Touch-Up Black, White, 2.5 Fl Oz [SEP] $100.0 [SEP] B0114XY1OM [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Black [SEP] $11.5 [SEP] B0128VJ7R0 [SEP] Hair Loss Concealer Fibers 200 Grams 7 Oz. With Bottle By Finally Hair 50g*4 (Dark Brown w/touch of red) *** SEE PICTURES - We have 2 different dark brown shades *** [SEP] $48.88 [SEP] B07N33D4TH [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Medium Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07N34HVW3 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Light Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07CX11NK7 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Dark Brown 2 Ounce (Pack of 2) [SEP] $48.19 [SEP] B07YDWSKJK [SEP] Revlon Total Color Permanent Hair Color, Clean and Vegan, 100% Gray Coverage Hair Dye, 60 Light Natural Brown, 3.5 oz [SEP] $7.99 [SEP] B01DPWDWG8 [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Red 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $19.94 [SEP] B01A5UHGYW [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women (Platinum Blonde) [SEP] $47.0 [SEP] B07L1PNF8W [SEP] Clairol Root Touch-Up Temporary Spray, Light Brown Hair Color, 2 Count [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07P3Z4TJV [SEP] TRESemmé Root Touch-Up Black, White, 2.5 Fl Oz [SEP] $100.0 [SEP] B0114XY1OM [SEP] AGEbeautiful Root Touch-Up Spray Temporary Hair Color, Cover Up Gray Concealer, Black [SEP] $11.5 [SEP] B0128VJ7R0 [SEP] Hair Loss Concealer Fibers 200 Grams 7 Oz. With Bottle By Finally Hair 50g*4 (Dark Brown w/touch of red) *** SEE PICTURES - We have 2 different dark brown shades *** [SEP] $48.88 [SEP] B07N33D4TH [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Medium Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07N34HVW3 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Light Brown 2 Ounce PACK OF 4 PLUS 1 FREE (Total Of 5) [SEP] $99.49 [SEP] B07CX11NK7 [SEP] Style Edit Root Concealer Touch Up Spray (Multiple Colors Available) - Instantly Covers Greys And Roots - Professional Salon Quality Grays Cover Up Hair Products for Women Dark Brown 2 Ounce (Pack of 2) [SEP] $48.19 [SEP] B07YDWSKJK [SEP] Revlon Total Color Permanent Hair Color, Clean and Vegan, 100% Gray Coverage Hair Dye, 60 Light Natural Brown, 3.5 oz [SEP] $7.99 [SEP] B01DPWDWG8 [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Red 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $19.94 [SEP] B01A5UHGYW [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women (Platinum Blonde) [SEP] $47.0 [SEP] B07L1PNF8W [SEP] Clairol Root Touch-Up Temporary Spray, Light Brown Hair Color, 2 Count [SEP] $100.0\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07p3z4tjv]",
+              "4": "click[b0114xy1om]",
+              "5": "click[b0128vj7r0]",
+              "6": "click[b07n33d4th]",
+              "7": "click[b07n34hvw3]",
+              "8": "click[b07cx11nk7]",
+              "9": "click[b07ydwskjk]",
+              "10": "click[b01dpwdwg8]",
+              "11": "click[b01a5uhgyw]",
+              "12": "click[b07l1pnf8w]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bbe978cfb9a5aa94fa205938973fc2da63a9f8f1c5ca9a0f11e250db8b0f5318",
+      "attempts": [
+        {
+          "seconds": 0.4816085919737816,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4817323535680771,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.10689701259427803,
+              "1": 0.14077893003618655,
+              "2": 0.2833323169085948,
+              "3": 0.03374429147389871,
+              "4": 0.05141808169505606,
+              "5": 0.027616813540187433,
+              "6": 0.0792313920614729,
+              "7": 0.04396140432351905,
+              "8": 0.04873187302026783,
+              "9": 0.03511181343384025,
+              "10": 0.05225490340235197,
+              "11": 0.037235869417481235,
+              "12": 0.05968529809286522
+            },
+            "confidence": 0.223610009984311
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10977,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4799993634223938,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.872061099857092
+    },
+    {
+      "step": 24,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01DPWDXTE [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $18.3 [SEP] B08GS8ZDYX [SEP] Kreesi Short Blonde Wigs for Women Synthetic Straight Blonde Bob Wig with Dark Brown Roots Shoulder Length Blonde Ombre Wig Middle Part Heat Resistant Fiber Hair Party Cosplay Wigs [SEP] $19.99 [SEP] B01A5U7K7K [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women. (Dark Brown) [SEP] $47.0 [SEP] B09PYR6984 [SEP] Unisex Hair Fibers - 5 Seconds Conceals Loss Wig Head With Hair Stand Layered Real Hair Wig Lace Curly Wigs Human Hair Red High Ponytail Wig Human Hair With Frontal And Bundles [SEP] $0.59 [SEP] B07WK9BBMZ [SEP] Gray Riddance Hair Color Spray, All Natural, Brown (2 Fluid Ounce Spray Bottle) [SEP] $17.95 [SEP] B09GT9SHQH [SEP] Ready to Wear Quick Cover Root Touch Up - Dye Free Hair Growth Cover Up (Black) [SEP] $34.5 [SEP] B071XHWM4Z [SEP] REECHO 20\" 1-pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hair pieces for Women 5 Clips 4.5 Oz Per Piece - Jet Black [SEP] $9.99 [SEP] B000KOSF30 [SEP] L'Oreal Paris Superior Preference Fade-Defying + Shine Permanent Hair Color, 9GR Light Golden Reddish Blonde, Pack of 1, Hair Dye [SEP] $10.49 [SEP] B00QQKPIC8 [SEP] REECHO 20\" 1-Pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hairpieces for Women 5 Clips 4.5 Oz per Piece - Natural Black [SEP] $9.99 [SEP] B08QXB1BLF [SEP] Herbishh Hair Color Shampoo for Gray Hair – Magic Hair Dye Shampoo – Colors Hair in Minutes–Long Lasting–500 Ml–3-In-1 Hair Color–Ammonia-Free | Herbishh (Dark Brown) [SEP] $39.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01DPWDXTE [SEP] L'Oreal Paris Hair Color Root Cover Up Hair Dye Dark Blonde 2 Ounce (Pack of 2) (Packaging May Vary) [SEP] $18.3 [SEP] B08GS8ZDYX [SEP] Kreesi Short Blonde Wigs for Women Synthetic Straight Blonde Bob Wig with Dark Brown Roots Shoulder Length Blonde Ombre Wig Middle Part Heat Resistant Fiber Hair Party Cosplay Wigs [SEP] $19.99 [SEP] B01A5U7K7K [SEP] DermMatch: Thickest Looking Hair On Earth. The Better Hair Loss Concealer For Men & Women. (Dark Brown) [SEP] $47.0 [SEP] B09PYR6984 [SEP] Unisex Hair Fibers - 5 Seconds Conceals Loss Wig Head With Hair Stand Layered Real Hair Wig Lace Curly Wigs Human Hair Red High Ponytail Wig Human Hair With Frontal And Bundles [SEP] $0.59 [SEP] B07WK9BBMZ [SEP] Gray Riddance Hair Color Spray, All Natural, Brown (2 Fluid Ounce Spray Bottle) [SEP] $17.95 [SEP] B09GT9SHQH [SEP] Ready to Wear Quick Cover Root Touch Up - Dye Free Hair Growth Cover Up (Black) [SEP] $34.5 [SEP] B071XHWM4Z [SEP] REECHO 20\" 1-pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hair pieces for Women 5 Clips 4.5 Oz Per Piece - Jet Black [SEP] $9.99 [SEP] B000KOSF30 [SEP] L'Oreal Paris Superior Preference Fade-Defying + Shine Permanent Hair Color, 9GR Light Golden Reddish Blonde, Pack of 1, Hair Dye [SEP] $10.49 [SEP] B00QQKPIC8 [SEP] REECHO 20\" 1-Pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hairpieces for Women 5 Clips 4.5 Oz per Piece - Natural Black [SEP] $9.99 [SEP] B08QXB1BLF [SEP] Herbishh Hair Color Shampoo for Gray Hair – Magic Hair Dye Shampoo – Colors Hair in Minutes–Long Lasting–500 Ml–3-In-1 Hair Color–Ammonia-Free | Herbishh (Dark Brown) [SEP] $39.99\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b01dpwdxte]",
+              "4": "click[b08gs8zdyx]",
+              "5": "click[b01a5u7k7k]",
+              "6": "click[b09pyr6984]",
+              "7": "click[b07wk9bbmz]",
+              "8": "click[b09gt9shqh]",
+              "9": "click[b071xhwm4z]",
+              "10": "click[b000kosf30]",
+              "11": "click[b00qqkpic8]",
+              "12": "click[b08qxb1blf]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d09ea6bf857c7d9fb7aa89e3a3c8d63748ad66cd7fc13d0b08c6b670bbe6e0bc",
+      "attempts": [
+        {
+          "seconds": 0.4787927344441414,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4789637438952923,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.12652514185237598,
+              "1": 0.17629562924653794,
+              "2": 0.3500979024531508,
+              "3": 0.04072483037034982,
+              "4": 0.03278191718682768,
+              "5": 0.023969780929437332,
+              "6": 0.032160058457700175,
+              "7": 0.03129569923082581,
+              "8": 0.040987274422271264,
+              "9": 0.03088853333821767,
+              "10": 0.04078799178716372,
+              "11": 0.024499667717924084,
+              "12": 0.048985573007217856
+            },
+            "confidence": 0.2959393943242467
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10843,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.47669706493616104,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.429691273719072
+    },
+    {
+      "step": 25,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07JPBYGHX [SEP] Revlon Root Erase Permanent Hair Color, At-Home Root Touchup Hair Dye with Applicator Brush for Multiple Use, 100% Gray Coverage, Dark Blonde (7), 3.2 oz [SEP] $11.99 [SEP] B07MV5B2XB [SEP] REECHO 20\" 1-pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hair pieces for Women 5 Clips 4.5 Oz Per Piece - Warm Light Brown [SEP] $9.99 [SEP] B009VNVKL0 [SEP] Jerome Russell Temporary Hair Color Spray, Green - Intense Spray-On Temporary Hair Color, Fast-Drying, Non-Sticky, Travel Size Hair Dye for Instant Vivid Hair Color, 2.2 oz [SEP] $9.59 [SEP] B001B2S32S [SEP] Permanent Hair Color by Revlon, Permanent Hair Dye, Colorsilk with 100% Gray Coverage, Ammonia-Free, Keratin and Amino Acids, 41 Medium Brown, 4.4 Oz (Pack of 1) [SEP] $2.99 [SEP] B073H81HHP [SEP] Crazy Color Instant Temporary Hair Color Pastel Pigment Spray - 100% Vegan & Cruelty-Free Ready to Use - For Blonde or Pre-Lightened Hair | Ammonia and Peroxide free – Gentle Formula 250ml (8.45 oz) (PEACHY CORAL) [SEP] $11.96 [SEP] B086ZZJN3C [SEP] COLOR TOUCH Demi-Permanent Haircolor Dye, Ammonia-Free 2 oz (w/Sleek Tint Brush) Last 24 Shampoos, Vibrant High Shine Hair Color (2/0 Darkest brown/Natural) [SEP] $14.99 [SEP] B07YTWQYW6 [SEP] Hebelin 2pcs Messy Hair Bun Extensions Scrunchy Updo Elastic Wavy Curly Donut Chignon Hairpiece [SEP] $13.98 [SEP] B000VWKILI [SEP] L'Oreal Paris Excellence Creme Permanent Hair Color, 7 Dark Blonde, 100 percent Gray Coverage Hair Dye, Pack of 1 [SEP] $8.72 [SEP] B07S724YBD [SEP] Hair Extensions Clip in Human Hair 18inch 7pcs 120g Aison Natural Black Ombre Balayage Grade Brazilian Hair [SEP] $98.99 [SEP] B092JF12TF [SEP] Mane Hair Thickening Spray Silver x 5 [SEP] $137.95",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07JPBYGHX [SEP] Revlon Root Erase Permanent Hair Color, At-Home Root Touchup Hair Dye with Applicator Brush for Multiple Use, 100% Gray Coverage, Dark Blonde (7), 3.2 oz [SEP] $11.99 [SEP] B07MV5B2XB [SEP] REECHO 20\" 1-pack 3/4 Full Head Curly Wave Clips in on Synthetic Hair Extensions Hair pieces for Women 5 Clips 4.5 Oz Per Piece - Warm Light Brown [SEP] $9.99 [SEP] B009VNVKL0 [SEP] Jerome Russell Temporary Hair Color Spray, Green - Intense Spray-On Temporary Hair Color, Fast-Drying, Non-Sticky, Travel Size Hair Dye for Instant Vivid Hair Color, 2.2 oz [SEP] $9.59 [SEP] B001B2S32S [SEP] Permanent Hair Color by Revlon, Permanent Hair Dye, Colorsilk with 100% Gray Coverage, Ammonia-Free, Keratin and Amino Acids, 41 Medium Brown, 4.4 Oz (Pack of 1) [SEP] $2.99 [SEP] B073H81HHP [SEP] Crazy Color Instant Temporary Hair Color Pastel Pigment Spray - 100% Vegan & Cruelty-Free Ready to Use - For Blonde or Pre-Lightened Hair | Ammonia and Peroxide free – Gentle Formula 250ml (8.45 oz) (PEACHY CORAL) [SEP] $11.96 [SEP] B086ZZJN3C [SEP] COLOR TOUCH Demi-Permanent Haircolor Dye, Ammonia-Free 2 oz (w/Sleek Tint Brush) Last 24 Shampoos, Vibrant High Shine Hair Color (2/0 Darkest brown/Natural) [SEP] $14.99 [SEP] B07YTWQYW6 [SEP] Hebelin 2pcs Messy Hair Bun Extensions Scrunchy Updo Elastic Wavy Curly Donut Chignon Hairpiece [SEP] $13.98 [SEP] B000VWKILI [SEP] L'Oreal Paris Excellence Creme Permanent Hair Color, 7 Dark Blonde, 100 percent Gray Coverage Hair Dye, Pack of 1 [SEP] $8.72 [SEP] B07S724YBD [SEP] Hair Extensions Clip in Human Hair 18inch 7pcs 120g Aison Natural Black Ombre Balayage Grade Brazilian Hair [SEP] $98.99 [SEP] B092JF12TF [SEP] Mane Hair Thickening Spray Silver x 5 [SEP] $137.95\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07jpbyghx]",
+              "4": "click[b07mv5b2xb]",
+              "5": "click[b009vnvkl0]",
+              "6": "click[b001b2s32s]",
+              "7": "click[b073h81hhp]",
+              "8": "click[b086zzjn3c]",
+              "9": "click[b07ytwqyw6]",
+              "10": "click[b000vwkili]",
+              "11": "click[b07s724ybd]",
+              "12": "click[b092jf12tf]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d3698881428bc82720636546d58cce4dab35bfc6d934d90a609d6f679701acf4",
+      "attempts": [
+        {
+          "seconds": 0.5175166539847851,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5177004411816597,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "probabilities": {
+              "0": 0.09269575343702632,
+              "1": 0.1276451834427068,
+              "2": 0.20636673382199403,
+              "3": 0.2698518305159657,
+              "4": 0.016123646522137255,
+              "5": 0.024004980633519742,
+              "6": 0.041675750397905956,
+              "7": 0.022688853987222517,
+              "8": 0.03693843699971902,
+              "9": 0.02973030953875472,
+              "10": 0.06764961257950346,
+              "11": 0.03190234068052923,
+              "12": 0.032726567443015386
+            },
+            "confidence": 0.20900614972562948
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11638,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.5110314711928368,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b07jpbyghx]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.976286292076111
+    },
+    {
+      "step": 26,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 3 black [SEP] 4 dark brown [SEP] 4b burgundy [SEP] 4r dark auburn | reddish brown [SEP] 5 medium brown [SEP] 5a medium ash brown [SEP] 5g medium golden brown [SEP] 5r medium auburn | reddish brown [SEP] 6 light brown [SEP] 6g light golden brown [SEP] 7 dark blonde [SEP] 8 medium blonde [SEP] 9 light blonde [SEP] Revlon Root Erase Permanent Hair Color, At-Home Root Touchup Hair Dye with Applicator Brush for Multiple Use, 100% Gray Coverage, Dark Blonde (7), 3.2 oz [SEP] Price: $11.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 3 black [SEP] 4 dark brown [SEP] 4b burgundy [SEP] 4r dark auburn | reddish brown [SEP] 5 medium brown [SEP] 5a medium ash brown [SEP] 5g medium golden brown [SEP] 5r medium auburn | reddish brown [SEP] 6 light brown [SEP] 6g light golden brown [SEP] 7 dark blonde [SEP] 8 medium blonde [SEP] 9 light blonde [SEP] Revlon Root Erase Permanent Hair Color, At-Home Root Touchup Hair Dye with Applicator Brush for Multiple Use, 100% Gray Coverage, Dark Blonde (7), 3.2 oz [SEP] Price: $11.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b07jpbyghx]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[3 black]",
+              "7": "click[4 dark brown]",
+              "8": "click[4b burgundy]",
+              "9": "click[4r dark auburn | reddish brown]",
+              "10": "click[5 medium brown]",
+              "11": "click[5a medium ash brown]",
+              "12": "click[5g medium golden brown]",
+              "13": "click[5r medium auburn | reddish brown]",
+              "14": "click[6 light brown]",
+              "15": "click[6g light golden brown]",
+              "16": "click[7 dark blonde]",
+              "17": "click[8 medium blonde]",
+              "18": "click[9 light blonde]"
+            }
+          }
+        }
+      },
+      "request_sha256": "8c4146e9f7179eca23277969df597629f9a3df66367e54041b3639faf082d774",
+      "attempts": [
+        {
+          "seconds": 0.3978481814265251,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.397986751049757,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "16",
+            "probabilities": {
+              "0": 0.0587829938453038,
+              "1": 0.06744764852494294,
+              "2": 0.07211040666864357,
+              "3": 0.046837612719122776,
+              "4": 0.06211671932993327,
+              "5": 0.0933359195246311,
+              "6": 0.025694267440979142,
+              "7": 0.028220078673265068,
+              "8": 0.021059255489805334,
+              "9": 0.022533637212757945,
+              "10": 0.0376181213061307,
+              "11": 0.036743853627208584,
+              "12": 0.061580816249294804,
+              "13": 0.026735036449192576,
+              "14": 0.04735260252668454,
+              "15": 0.04934527831014843,
+              "16": 0.13152997681567205,
+              "17": 0.0636427227492336,
+              "18": 0.04731305253704955
+            },
+            "confidence": 0.08328164219432052
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8571,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 19,
+          "inference_seconds": 0.39590486884117126,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[7 dark blonde]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.393645957112312
+    },
+    {
+      "step": 27,
+      "observation": "Instruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 3 black [SEP] 4 dark brown [SEP] 4b burgundy [SEP] 4r dark auburn | reddish brown [SEP] 5 medium brown [SEP] 5a medium ash brown [SEP] 5g medium golden brown [SEP] 5r medium auburn | reddish brown [SEP] 6 light brown [SEP] 6g light golden brown [SEP] 7 dark blonde [SEP] 8 medium blonde [SEP] 9 light blonde [SEP] Revlon Root Erase Permanent Hair Color, At-Home Root Touchup Hair Dye with Applicator Brush for Multiple Use, 100% Gray Coverage, Dark Blonde (7), 3.2 oz [SEP] Price: $11.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 3 black [SEP] 4 dark brown [SEP] 4b burgundy [SEP] 4r dark auburn | reddish brown [SEP] 5 medium brown [SEP] 5a medium ash brown [SEP] 5g medium golden brown [SEP] 5r medium auburn | reddish brown [SEP] 6 light brown [SEP] 6g light golden brown [SEP] 7 dark blonde [SEP] 8 medium blonde [SEP] 9 light blonde [SEP] Revlon Root Erase Permanent Hair Color, At-Home Root Touchup Hair Dye with Applicator Brush for Multiple Use, 100% Gray Coverage, Dark Blonde (7), 3.2 oz [SEP] Price: $11.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i am looking for a pack of 5 dark blonde hair dye touch up spray, and price lower than 120.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b07jpbyghx]\nclick[7 dark blonde]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[3 black]",
+              "7": "click[4 dark brown]",
+              "8": "click[4b burgundy]",
+              "9": "click[4r dark auburn | reddish brown]",
+              "10": "click[5 medium brown]",
+              "11": "click[5a medium ash brown]",
+              "12": "click[5g medium golden brown]",
+              "13": "click[5r medium auburn | reddish brown]",
+              "14": "click[6 light brown]",
+              "15": "click[6g light golden brown]",
+              "16": "click[7 dark blonde]",
+              "17": "click[8 medium blonde]",
+              "18": "click[9 light blonde]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1fc5256ed1ca18b3b6c149d5ff882f7280da886ad3414f3609c7150766096ac3",
+      "attempts": [
+        {
+          "seconds": 0.4016263969242573,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4017433077096939,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.0683253595729662,
+              "1": 0.08567959611624046,
+              "2": 0.09373571822649038,
+              "3": 0.06533030997726971,
+              "4": 0.074819633936486,
+              "5": 0.1387053415725422,
+              "6": 0.026883247822991535,
+              "7": 0.028075259233698514,
+              "8": 0.021718626470767333,
+              "9": 0.025164551690765365,
+              "10": 0.029354357978208623,
+              "11": 0.030657041166665098,
+              "12": 0.04451742655905889,
+              "13": 0.02610498619698418,
+              "14": 0.03898502456259041,
+              "15": 0.04245737848404799,
+              "16": 0.07480898006371056,
+              "17": 0.04742914423783954,
+              "18": 0.03724801613067701
+            },
+            "confidence": 0.09085563832657234
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8609,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 19,
+          "inference_seconds": 0.39395110309123993,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.75,
+      "done": true,
+      "elapsed_seconds": 7.852176032960415
+    }
+  ]
+}

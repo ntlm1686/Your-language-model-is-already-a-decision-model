@@ -1,0 +1,334 @@
+{
+  "task_id": 157,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars",
+  "instruction_sha256": "019c4a16371afc61985dc52e747750bd5e5766d95cf8a40e1ef283c75c46d488",
+  "reward": 0.75,
+  "score": 75.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 1.5558011196553707,
+  "decision_seconds": 1.3950693719089031,
+  "input_tokens": 3729,
+  "output_tokens": 533,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Search",
+      "action": "search[i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06891302764415741
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09PJBQYXR [SEP] KkSLirnhs Women High Waisted Pants Wide Leg Denim Jeans Retro Straight Casual Loose Wide Leg Jeans [SEP] $27.41 to $28.3 [SEP] B07MK3Z1XN [SEP] Wrangler Men's Retro Premium Slim Fit Straight Leg Jean [SEP] $25.29 to $93.64 [SEP] B09CGSZHNW [SEP] Elneeya Women's Spaghetti Strap Jumpsuit Racerback Loose Fit Harem Pants Plus Size Print Overall Casual Suspender Rompers [SEP] $12.99 to $16.99 [SEP] B09HYNF2MN [SEP] Men's Casual Baggy Wide Leg Jeans Hip Hop Loose Straight Fit Denim Pants Relaxed Stylish Streetwear Cargo Jean [SEP] $22.67 to $23.87 [SEP] B09LD3823V [SEP] Mens Jeans Loose Fit Baggy Jeans Straight Wide Leg Denim Pants Plus Size Relaxed Fit Trousers Streetwear [SEP] $19.99 to $25.77 [SEP] B08QSBBPWM [SEP] xoxing Women Jeans Slim Plus Size Ripped Hole Long Skinny Stretch Solid Color Denim Regular Pants (B) [SEP] $18.68 to $28.98 [SEP] B07J5QCDYJ [SEP] Men’s Stretch Jean Style Chef Pant (XS-3X) [SEP] $29.98 to $32.98 [SEP] B073S71M8D [SEP] Wrangler Authentics Men's Premium Flex Straight Leg Stretch Jean [SEP] $39.99 [SEP] B09P58SPMF [SEP] Mens Jeans Relaxed Fit Ripped Distressed Destroyed Straight Fit Washed Denim Jeans [SEP] $27.57 to $35.05",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09PJBQYXR [SEP] KkSLirnhs Women High Waisted Pants Wide Leg Denim Jeans Retro Straight Casual Loose Wide Leg Jeans [SEP] $27.41 to $28.3 [SEP] B07MK3Z1XN [SEP] Wrangler Men's Retro Premium Slim Fit Straight Leg Jean [SEP] $25.29 to $93.64 [SEP] B09CGSZHNW [SEP] Elneeya Women's Spaghetti Strap Jumpsuit Racerback Loose Fit Harem Pants Plus Size Print Overall Casual Suspender Rompers [SEP] $12.99 to $16.99 [SEP] B09HYNF2MN [SEP] Men's Casual Baggy Wide Leg Jeans Hip Hop Loose Straight Fit Denim Pants Relaxed Stylish Streetwear Cargo Jean [SEP] $22.67 to $23.87 [SEP] B09LD3823V [SEP] Mens Jeans Loose Fit Baggy Jeans Straight Wide Leg Denim Pants Plus Size Relaxed Fit Trousers Streetwear [SEP] $19.99 to $25.77 [SEP] B08QSBBPWM [SEP] xoxing Women Jeans Slim Plus Size Ripped Hole Long Skinny Stretch Solid Color Denim Regular Pants (B) [SEP] $18.68 to $28.98 [SEP] B07J5QCDYJ [SEP] Men’s Stretch Jean Style Chef Pant (XS-3X) [SEP] $29.98 to $32.98 [SEP] B073S71M8D [SEP] Wrangler Authentics Men's Premium Flex Straight Leg Stretch Jean [SEP] $39.99 [SEP] B09P58SPMF [SEP] Mens Jeans Relaxed Fit Ripped Distressed Destroyed Straight Fit Washed Denim Jeans [SEP] $27.57 to $35.05\n\nRecent actions:\nsearch[i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b099z4t56c]",
+              "3": "click[b09pjbqyxr]",
+              "4": "click[b07mk3z1xn]",
+              "5": "click[b09cgszhnw]",
+              "6": "click[b09hynf2mn]",
+              "7": "click[b09ld3823v]",
+              "8": "click[b08qsbbpwm]",
+              "9": "click[b07j5qcdyj]",
+              "10": "click[b073s71m8d]",
+              "11": "click[b09p58spmf]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "ccf1c5df2929d6888c7544041a2c2ad812a83d4eac3872bfcc84c0f93271a21d",
+      "attempts": [
+        {
+          "seconds": 0.3342157192528248,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3343353867530823,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "confidence": 0.49,
+            "probabilities": {
+              "7": 0.0,
+              "6": 0.0,
+              "1": 0.22,
+              "5": 0.0,
+              "9": 0.0,
+              "8": 0.1,
+              "11": 0.0,
+              "3": 0.54,
+              "2": 0.0,
+              "10": 0.0,
+              "0": 0.14,
+              "4": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1185,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b09pjbqyxr]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.42696795612573624
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] a-black [SEP] a-blue [SEP] a-brown [SEP] b-black [SEP] b-blue [SEP] b-brown [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] KkSLirnhs Women High Waisted Pants Wide Leg Denim Jeans Retro Straight Casual Loose Wide Leg Jeans [SEP] Price: $27.41 to $28.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] a-black [SEP] a-blue [SEP] a-brown [SEP] b-black [SEP] b-blue [SEP] b-brown [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] KkSLirnhs Women High Waisted Pants Wide Leg Denim Jeans Retro Straight Casual Loose Wide Leg Jeans [SEP] Price: $27.41 to $28.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars]\nclick[b09pjbqyxr]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[a-black]",
+              "7": "click[a-blue]",
+              "8": "click[a-brown]",
+              "9": "click[b-black]",
+              "10": "click[b-blue]",
+              "11": "click[b-brown]",
+              "12": "click[small]",
+              "13": "click[medium]",
+              "14": "click[large]",
+              "15": "click[x-large]",
+              "16": "click[xx-large]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "ba162e75e951aefbf28213615e3536f4df70c760317d11b1359dc97ffb16b457",
+      "attempts": [
+        {
+          "seconds": 0.3383835032582283,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3385050408542156,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "14",
+            "confidence": 0.48,
+            "probabilities": {
+              "15": 0.0,
+              "16": 0.0,
+              "2": 0.01,
+              "0": 0.05,
+              "14": 0.52,
+              "6": 0.17,
+              "13": 0.0,
+              "12": 0.0,
+              "9": 0.1,
+              "1": 0.01,
+              "4": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "5": 0.13,
+              "3": 0.01,
+              "8": 0.0,
+              "7": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 844,
+          "output_tokens": 144
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[large]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.7829781286418438
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] a-black [SEP] a-blue [SEP] a-brown [SEP] b-black [SEP] b-blue [SEP] b-brown [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] KkSLirnhs Women High Waisted Pants Wide Leg Denim Jeans Retro Straight Casual Loose Wide Leg Jeans [SEP] Price: $27.41 to $28.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] a-black [SEP] a-blue [SEP] a-brown [SEP] b-black [SEP] b-blue [SEP] b-brown [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] KkSLirnhs Women High Waisted Pants Wide Leg Denim Jeans Retro Straight Casual Loose Wide Leg Jeans [SEP] Price: $27.41 to $28.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars]\nclick[b09pjbqyxr]\nclick[large]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[a-black]",
+              "7": "click[a-blue]",
+              "8": "click[a-brown]",
+              "9": "click[b-black]",
+              "10": "click[b-blue]",
+              "11": "click[b-brown]",
+              "12": "click[small]",
+              "13": "click[medium]",
+              "14": "click[large]",
+              "15": "click[x-large]",
+              "16": "click[xx-large]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "20e5a90d7524cd910265d91d65466db59cbe930ccb348faac195cb7f57f40398",
+      "attempts": [
+        {
+          "seconds": 0.3932499289512634,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3933636099100113,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "confidence": 0.41,
+            "probabilities": {
+              "10": 0.0,
+              "5": 0.26,
+              "3": 0.0,
+              "11": 0.0,
+              "2": 0.01,
+              "12": 0.0,
+              "16": 0.0,
+              "1": 0.01,
+              "7": 0.0,
+              "13": 0.0,
+              "14": 0.01,
+              "6": 0.45,
+              "9": 0.23,
+              "0": 0.03,
+              "8": 0.0,
+              "15": 0.0,
+              "4": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 848,
+          "output_tokens": 143
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[a-black]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.194544941186905
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] a-black [SEP] a-blue [SEP] a-brown [SEP] b-black [SEP] b-blue [SEP] b-brown [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] KkSLirnhs Women High Waisted Pants Wide Leg Denim Jeans Retro Straight Casual Loose Wide Leg Jeans [SEP] Price: $27.41 to $28.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] a-black [SEP] a-blue [SEP] a-brown [SEP] b-black [SEP] b-blue [SEP] b-brown [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] KkSLirnhs Women High Waisted Pants Wide Leg Denim Jeans Retro Straight Casual Loose Wide Leg Jeans [SEP] Price: $27.41 to $28.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for ladies large size black06 colored jeans with straight leg fit, and price lower than 130.00 dollars]\nclick[b09pjbqyxr]\nclick[large]\nclick[a-black]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[a-black]",
+              "7": "click[a-blue]",
+              "8": "click[a-brown]",
+              "9": "click[b-black]",
+              "10": "click[b-blue]",
+              "11": "click[b-brown]",
+              "12": "click[small]",
+              "13": "click[medium]",
+              "14": "click[large]",
+              "15": "click[x-large]",
+              "16": "click[xx-large]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "4af944b3eac0a05fdfab29d24c14c40d117b8adc66390c21846158bae211c4ba",
+      "attempts": [
+        {
+          "seconds": 0.3287893123924732,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.32886533439159393,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.74,
+            "probabilities": {
+              "16": 0.0,
+              "8": 0.0,
+              "12": 0.0,
+              "3": 0.02,
+              "15": 0.0,
+              "4": 0.0,
+              "13": 0.0,
+              "6": 0.0,
+              "14": 0.0,
+              "0": 0.06,
+              "5": 0.76,
+              "11": 0.0,
+              "7": 0.0,
+              "1": 0.03,
+              "10": 0.0,
+              "9": 0.09999999999999999,
+              "2": 0.03
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 852,
+          "output_tokens": 143
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.75,
+      "done": true,
+      "elapsed_seconds": 1.5557972006499767
+    }
+  ]
+}

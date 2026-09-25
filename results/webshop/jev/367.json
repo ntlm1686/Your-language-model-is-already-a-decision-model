@@ -1,0 +1,413 @@
+{
+  "task_id": 367,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars",
+  "instruction_sha256": "d27bafdb9e3451203ec90082e1a07490d1a27d194ec073e731b8e48e1deb5053",
+  "reward": 0.75,
+  "score": 75.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 6,
+  "elapsed_seconds": 2.2387804575264454,
+  "decision_seconds": 1.9843492284417152,
+  "input_tokens": 4996,
+  "output_tokens": 676,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars [SEP] Search",
+      "action": "search[i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.053489651530981064
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B092RL6G6G [SEP] DC Comics Men's Batman Pajama Pants Classic Bat Logo Loungewear Sleep Pants [SEP] $24.99 to $26.99 [SEP] B092RM1QZB [SEP] DC Comics Men's Batman Pajama Pants Classic Bat Logo Loungewear Sleep Pants [SEP] $24.99 to $26.99 [SEP] B092RRLRZQ [SEP] DC Comics Men's Batman Pajama Pants Classic Bat Logo Loungewear Sleep Pants [SEP] $24.99 to $26.99 [SEP] B08CZ3CSZ9 [SEP] Batman Aztec Bat Logo T-Shirt [SEP] $23.99 [SEP] B08CZRH7D7 [SEP] Batman Batgirl Halftone T-Shirt [SEP] $23.99 [SEP] B0865LG9V3 [SEP] Batman Who Laughs Head T-Shirt [SEP] $23.99 [SEP] B08YT6T5Z4 [SEP] Batman Harley and Joker Premium T-Shirt [SEP] $25.99 [SEP] B0866TBTT4 [SEP] Batman Joker This is My Happy Face Tank Top [SEP] $25.99 [SEP] B017JM2Z36 [SEP] DC Comics Batman Bat Fly Charcoal Tee Shirt T-Shirt [SEP] $9.99 to $19.99 [SEP] B07WBTLDJ7 [SEP] Disney Pixar Toy Story 4 Forky Be Careful I'm Homemade T-Shirt [SEP] $22.99",
+      "request": {
+        "state": "Shopping instruction:\ni'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B092RL6G6G [SEP] DC Comics Men's Batman Pajama Pants Classic Bat Logo Loungewear Sleep Pants [SEP] $24.99 to $26.99 [SEP] B092RM1QZB [SEP] DC Comics Men's Batman Pajama Pants Classic Bat Logo Loungewear Sleep Pants [SEP] $24.99 to $26.99 [SEP] B092RRLRZQ [SEP] DC Comics Men's Batman Pajama Pants Classic Bat Logo Loungewear Sleep Pants [SEP] $24.99 to $26.99 [SEP] B08CZ3CSZ9 [SEP] Batman Aztec Bat Logo T-Shirt [SEP] $23.99 [SEP] B08CZRH7D7 [SEP] Batman Batgirl Halftone T-Shirt [SEP] $23.99 [SEP] B0865LG9V3 [SEP] Batman Who Laughs Head T-Shirt [SEP] $23.99 [SEP] B08YT6T5Z4 [SEP] Batman Harley and Joker Premium T-Shirt [SEP] $25.99 [SEP] B0866TBTT4 [SEP] Batman Joker This is My Happy Face Tank Top [SEP] $25.99 [SEP] B017JM2Z36 [SEP] DC Comics Batman Bat Fly Charcoal Tee Shirt T-Shirt [SEP] $9.99 to $19.99 [SEP] B07WBTLDJ7 [SEP] Disney Pixar Toy Story 4 Forky Be Careful I'm Homemade T-Shirt [SEP] $22.99\n\nRecent actions:\nsearch[i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b092rl6g6g]",
+              "3": "click[b092rm1qzb]",
+              "4": "click[b092rrlrzq]",
+              "5": "click[b08cz3csz9]",
+              "6": "click[b08czrh7d7]",
+              "7": "click[b0865lg9v3]",
+              "8": "click[b08yt6t5z4]",
+              "9": "click[b0866tbtt4]",
+              "10": "click[b017jm2z36]",
+              "11": "click[b07wbtldj7]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "c95ad9894e773acd9eadee2d64181fe50d3f2be848310fe867f676effe917e60",
+      "attempts": [
+        {
+          "seconds": 0.34462832659482956,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3447880484163761,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.44,
+            "probabilities": {
+              "4": 0.0,
+              "7": 0.02,
+              "8": 0.02,
+              "0": 0.23,
+              "2": 0.0,
+              "9": 0.0,
+              "11": 0.0,
+              "6": 0.02,
+              "1": 0.49,
+              "5": 0.14,
+              "10": 0.08,
+              "3": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1070,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4491048753261566
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01MR5180K [SEP] Popfunk Classic Pink Batman Logo T Shirt & Stickers [SEP] $19.99 to $29.99 [SEP] B07KPVHDR7 [SEP] Batman Knight Lights T-Shirt [SEP] $23.99 [SEP] B07KT7J5H2 [SEP] Batman Dark Knight Joker Stranger T-Shirt [SEP] $23.99 [SEP] B07KWLWWH8 [SEP] Batman Through The Night T-Shirt [SEP] $23.99 [SEP] B07P765HVR [SEP] Batman Poison Ivy T-Shirt [SEP] $23.99 [SEP] B07P767Q3P [SEP] Batman Moonlight Catwoman T-Shirt [SEP] $23.99 [SEP] B07P9G13D1 [SEP] Batman Two-Face T-Shirt [SEP] $23.99 [SEP] B07P9G1ZGB [SEP] Batman Bane Mask T-Shirt [SEP] $23.99 [SEP] B07P9FYWVS [SEP] Batman Joker Leaves Arkham T-Shirt [SEP] $23.99 [SEP] B07KWFXDZB [SEP] Batman Joker & Harley Quinn T Shirt T-Shirt [SEP] $23.99",
+      "request": {
+        "state": "Shopping instruction:\ni'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01MR5180K [SEP] Popfunk Classic Pink Batman Logo T Shirt & Stickers [SEP] $19.99 to $29.99 [SEP] B07KPVHDR7 [SEP] Batman Knight Lights T-Shirt [SEP] $23.99 [SEP] B07KT7J5H2 [SEP] Batman Dark Knight Joker Stranger T-Shirt [SEP] $23.99 [SEP] B07KWLWWH8 [SEP] Batman Through The Night T-Shirt [SEP] $23.99 [SEP] B07P765HVR [SEP] Batman Poison Ivy T-Shirt [SEP] $23.99 [SEP] B07P767Q3P [SEP] Batman Moonlight Catwoman T-Shirt [SEP] $23.99 [SEP] B07P9G13D1 [SEP] Batman Two-Face T-Shirt [SEP] $23.99 [SEP] B07P9G1ZGB [SEP] Batman Bane Mask T-Shirt [SEP] $23.99 [SEP] B07P9FYWVS [SEP] Batman Joker Leaves Arkham T-Shirt [SEP] $23.99 [SEP] B07KWFXDZB [SEP] Batman Joker & Harley Quinn T Shirt T-Shirt [SEP] $23.99\n\nRecent actions:\nsearch[i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b01mr5180k]",
+              "4": "click[b07kpvhdr7]",
+              "5": "click[b07kt7j5h2]",
+              "6": "click[b07kwlwwh8]",
+              "7": "click[b07p765hvr]",
+              "8": "click[b07p767q3p]",
+              "9": "click[b07p9g13d1]",
+              "10": "click[b07p9g1zgb]",
+              "11": "click[b07p9fywvs]",
+              "12": "click[b07kwfxdzb]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "09b436153b91090134edef57f0ab6bc446d3bc731964c03ea5da29e350c6e649",
+      "attempts": [
+        {
+          "seconds": 0.35621459782123566,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.35638025775551796,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.21,
+            "probabilities": {
+              "7": 0.05,
+              "4": 0.09,
+              "3": 0.1,
+              "6": 0.05,
+              "12": 0.0,
+              "8": 0.01,
+              "10": 0.01,
+              "1": 0.2,
+              "5": 0.02,
+              "9": 0.01,
+              "2": 0.27,
+              "0": 0.18,
+              "11": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1032,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.8687991201877594
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07P8BJC5D [SEP] Batman #251 Distressed T-Shirt [SEP] $23.99 [SEP] B07KT8BKSW [SEP] Batman Dark Knight Joker T-Shirt [SEP] $23.99 [SEP] B07PK97QW1 [SEP] Disney Monsters Inc. I'm Your Boo Graphic T-Shirt [SEP] $22.99 [SEP] B07P765HTD [SEP] Batman Stormy Knight T-Shirt [SEP] $23.99 [SEP] B07KTCDGFD [SEP] Batman Dark Knight Rises Bane T-Shirt [SEP] $23.99 [SEP] B07KTBGF99 [SEP] Batman Dark Knight Rises Bane Rain Poster T-Shirt [SEP] $23.99 [SEP] B07PCMCQ64 [SEP] Batman Classic TV Series In Color T-Shirt [SEP] $23.99 [SEP] B09PLB8QS4 [SEP] The Batman And Catwoman T-Shirt [SEP] $21.99 [SEP] B07WCQN78V [SEP] Batman 80 Years Bat Panels Dark T-Shirt [SEP] $23.99 [SEP] B09PLDTW3Y [SEP] The Batman Shadowed Headshot T-Shirt [SEP] $21.99",
+      "request": {
+        "state": "Shopping instruction:\ni'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07P8BJC5D [SEP] Batman #251 Distressed T-Shirt [SEP] $23.99 [SEP] B07KT8BKSW [SEP] Batman Dark Knight Joker T-Shirt [SEP] $23.99 [SEP] B07PK97QW1 [SEP] Disney Monsters Inc. I'm Your Boo Graphic T-Shirt [SEP] $22.99 [SEP] B07P765HTD [SEP] Batman Stormy Knight T-Shirt [SEP] $23.99 [SEP] B07KTCDGFD [SEP] Batman Dark Knight Rises Bane T-Shirt [SEP] $23.99 [SEP] B07KTBGF99 [SEP] Batman Dark Knight Rises Bane Rain Poster T-Shirt [SEP] $23.99 [SEP] B07PCMCQ64 [SEP] Batman Classic TV Series In Color T-Shirt [SEP] $23.99 [SEP] B09PLB8QS4 [SEP] The Batman And Catwoman T-Shirt [SEP] $21.99 [SEP] B07WCQN78V [SEP] Batman 80 Years Bat Panels Dark T-Shirt [SEP] $23.99 [SEP] B09PLDTW3Y [SEP] The Batman Shadowed Headshot T-Shirt [SEP] $21.99\n\nRecent actions:\nsearch[i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07p8bjc5d]",
+              "4": "click[b07kt8bksw]",
+              "5": "click[b07pk97qw1]",
+              "6": "click[b07p765htd]",
+              "7": "click[b07ktcdgfd]",
+              "8": "click[b07ktbgf99]",
+              "9": "click[b07pcmcq64]",
+              "10": "click[b09plb8qs4]",
+              "11": "click[b07wcqn78v]",
+              "12": "click[b09pldtw3y]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "ce6751914e1b2b7360648874519a91ed5241225b242163efa5e5da4171928682",
+      "attempts": [
+        {
+          "seconds": 0.5166276842355728,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5167270787060261,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "confidence": 0.24,
+            "probabilities": {
+              "1": 0.15,
+              "2": 0.13,
+              "12": 0.02,
+              "5": 0.0,
+              "10": 0.03,
+              "7": 0.01,
+              "6": 0.03,
+              "9": 0.02,
+              "11": 0.03,
+              "4": 0.02,
+              "8": 0.01,
+              "0": 0.26,
+              "3": 0.29
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1039,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b07p8bjc5d]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.4103804714977741
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] fit type [SEP] men [SEP] women [SEP] youth [SEP] color [SEP] navy [SEP] slate [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 2t [SEP] 3t [SEP] 4t [SEP] x-small [SEP] Batman #251 Distressed T-Shirt [SEP] Price: $23.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] fit type [SEP] men [SEP] women [SEP] youth [SEP] color [SEP] navy [SEP] slate [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 2t [SEP] 3t [SEP] 4t [SEP] x-small [SEP] Batman #251 Distressed T-Shirt [SEP] Price: $23.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars]\nclick[next >]\nclick[next >]\nclick[b07p8bjc5d]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[men]",
+              "7": "click[women]",
+              "8": "click[youth]",
+              "9": "click[navy]",
+              "10": "click[slate]",
+              "11": "click[small]",
+              "12": "click[medium]",
+              "13": "click[large]",
+              "14": "click[x-large]",
+              "15": "click[xx-large]",
+              "16": "click[3x-large]",
+              "17": "click[2t]",
+              "18": "click[3t]",
+              "19": "click[4t]",
+              "20": "click[x-small]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "ed3feb8f8c08a40783ab4d3eb0fa24fb759e68e94579dc8a7b94b438e9c42ba9",
+      "attempts": [
+        {
+          "seconds": 0.42735422402620316,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.42745741084218025,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "15",
+            "confidence": 0.47,
+            "probabilities": {
+              "18": 0.0,
+              "16": 0.0,
+              "8": 0.0,
+              "12": 0.0,
+              "17": 0.0,
+              "15": 0.5,
+              "3": 0.01,
+              "4": 0.0,
+              "13": 0.0,
+              "6": 0.01,
+              "14": 0.01,
+              "11": 0.0,
+              "5": 0.17,
+              "0": 0.24000000000000002,
+              "7": 0.0,
+              "1": 0.01,
+              "20": 0.0,
+              "9": 0.02,
+              "10": 0.01,
+              "19": 0.0,
+              "2": 0.02
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 925,
+          "output_tokens": 176
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[xx-large]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.8682999722659588
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] fit type [SEP] men [SEP] women [SEP] youth [SEP] color [SEP] navy [SEP] slate [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 2t [SEP] 3t [SEP] 4t [SEP] x-small [SEP] Batman #251 Distressed T-Shirt [SEP] Price: $23.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] fit type [SEP] men [SEP] women [SEP] youth [SEP] color [SEP] navy [SEP] slate [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 2t [SEP] 3t [SEP] 4t [SEP] x-small [SEP] Batman #251 Distressed T-Shirt [SEP] Price: $23.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm hoping to find a purple, xx-large batman shirt that's officially licensed, and price lower than 60.00 dollars]\nclick[next >]\nclick[next >]\nclick[b07p8bjc5d]\nclick[xx-large]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[men]",
+              "7": "click[women]",
+              "8": "click[youth]",
+              "9": "click[navy]",
+              "10": "click[slate]",
+              "11": "click[small]",
+              "12": "click[medium]",
+              "13": "click[large]",
+              "14": "click[x-large]",
+              "15": "click[xx-large]",
+              "16": "click[3x-large]",
+              "17": "click[2t]",
+              "18": "click[3t]",
+              "19": "click[4t]",
+              "20": "click[x-small]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "3ae26dde8a9966cc254b5358b17d420158f35d5ab5b1960788a09f19be9b4b80",
+      "attempts": [
+        {
+          "seconds": 0.338855117559433,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33899643272161484,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.41,
+            "probabilities": {
+              "16": 0.0,
+              "19": 0.0,
+              "12": 0.0,
+              "13": 0.0,
+              "20": 0.0,
+              "1": 0.02,
+              "5": 0.45,
+              "15": 0.0,
+              "11": 0.0,
+              "0": 0.32,
+              "2": 0.03,
+              "6": 0.01,
+              "14": 0.0,
+              "10": 0.06,
+              "17": 0.0,
+              "4": 0.0,
+              "3": 0.01,
+              "7": 0.0,
+              "9": 0.09999999999999999,
+              "8": 0.0,
+              "18": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 930,
+          "output_tokens": 175
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.75,
+      "done": true,
+      "elapsed_seconds": 2.2387779392302036
+    }
+  ]
+}

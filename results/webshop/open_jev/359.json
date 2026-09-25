@@ -1,0 +1,556 @@
+{
+  "task_id": 359,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars",
+  "instruction_sha256": "051a9331050973d3b921ba844e6996d167aae232d8d0a581dc5a997da0f734f9",
+  "reward": 0.6666666666666666,
+  "score": 66.66666666666666,
+  "success": false,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 3.682836089283228,
+  "decision_seconds": 3.5125258043408394,
+  "input_tokens": 79269,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars [SEP] Search",
+      "action": "search[i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.05143740400671959
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08QTQGVGK [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] $19.99 to $22.99 [SEP] B09CYFPFTQ [SEP] Vintage Sleeveless Strap Goth Punk Dress Halloween Skull Print Party Dress Lace Mesh Patchwork Camisole Mini Dresses [SEP] $12.99 to $14.99 [SEP] B0971BTPFD [SEP] Kingloo Mens Elastic Waist Drawstring Casual Sweat Workout Joggers 3/4 Shorts with Zipper Pockets [SEP] $15.99 to $16.99 [SEP] B09Q63CF96 [SEP] Womens Quick-Dry Running Shorts Side Split Elastic Waist Active Workout Yoga Shorts with Pockets [SEP] $7.08 to $11.99 [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B08V8PLHRJ [SEP] HYWJSZ Loose Fit Pants for Women's Cotton Linen Pants Casual Drawstring Wide Leg Elastic Waist Beach Trousers [SEP] $5.29 to $16.96 [SEP] B09P3ZZZVP [SEP] Sinzelimin Midi Dresses for Womens Fashion Pullover Dress Summer Round-Neck 3/4 Sleeves Holiday Casual Long Beach Dress [SEP] $6.99 to $22.99 [SEP] B09PVCXSCH [SEP] SRTUMEY Running Athletic Shorts Yoga Short Pants Women Gym Dance Workout Elastic Waist Summer Shorts [SEP] $7.88 to $8.88 [SEP] B09PBWV6CD [SEP] SRTUMEY Women's Casual Cotton Linen Pants Loose Elastic Waist Cropped Harem Pants Tapered Pants with Pockets [SEP] $12.88 to $22.88 [SEP] B083TZF5L5 [SEP] Womens Juniors Shorts High Waisted Front Button Retro Vintage Pin up Sailor Shorts Elegant Workwear Shorts Pockets [SEP] $6.73",
+      "request": {
+        "state": "Shopping instruction:\ni would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08QTQGVGK [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] $19.99 to $22.99 [SEP] B09CYFPFTQ [SEP] Vintage Sleeveless Strap Goth Punk Dress Halloween Skull Print Party Dress Lace Mesh Patchwork Camisole Mini Dresses [SEP] $12.99 to $14.99 [SEP] B0971BTPFD [SEP] Kingloo Mens Elastic Waist Drawstring Casual Sweat Workout Joggers 3/4 Shorts with Zipper Pockets [SEP] $15.99 to $16.99 [SEP] B09Q63CF96 [SEP] Womens Quick-Dry Running Shorts Side Split Elastic Waist Active Workout Yoga Shorts with Pockets [SEP] $7.08 to $11.99 [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B08V8PLHRJ [SEP] HYWJSZ Loose Fit Pants for Women's Cotton Linen Pants Casual Drawstring Wide Leg Elastic Waist Beach Trousers [SEP] $5.29 to $16.96 [SEP] B09P3ZZZVP [SEP] Sinzelimin Midi Dresses for Womens Fashion Pullover Dress Summer Round-Neck 3/4 Sleeves Holiday Casual Long Beach Dress [SEP] $6.99 to $22.99 [SEP] B09PVCXSCH [SEP] SRTUMEY Running Athletic Shorts Yoga Short Pants Women Gym Dance Workout Elastic Waist Summer Shorts [SEP] $7.88 to $8.88 [SEP] B09PBWV6CD [SEP] SRTUMEY Women's Casual Cotton Linen Pants Loose Elastic Waist Cropped Harem Pants Tapered Pants with Pockets [SEP] $12.88 to $22.88 [SEP] B083TZF5L5 [SEP] Womens Juniors Shorts High Waisted Front Button Retro Vintage Pin up Sailor Shorts Elegant Workwear Shorts Pockets [SEP] $6.73\n\nRecent actions:\nsearch[i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b08qtqgvgk]",
+              "3": "click[b09cyfpftq]",
+              "4": "click[b0971btpfd]",
+              "5": "click[b09q63cf96]",
+              "6": "click[b09pggqzj2]",
+              "7": "click[b08v8plhrj]",
+              "8": "click[b09p3zzzvp]",
+              "9": "click[b09pvcxsch]",
+              "10": "click[b09pbwv6cd]",
+              "11": "click[b083tzf5l5]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ba8996272aeb40939027369f55c4ef827453933574b77c15ec1555ad3628c060",
+      "attempts": [
+        {
+          "seconds": 0.376950241625309,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37703510001301765,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "probabilities": {
+              "0": 0.042325084680486666,
+              "1": 0.08475218926265876,
+              "2": 0.003511610130069028,
+              "3": 0.05168429379873991,
+              "4": 0.010028820735533815,
+              "5": 0.012822367573081988,
+              "6": 0.025473200722065735,
+              "7": 0.03548781730637035,
+              "8": 0.6325489895402159,
+              "9": 0.037860818597710524,
+              "10": 0.03709677687221742,
+              "11": 0.026408030780849967
+            },
+            "confidence": 0.5991443522256901
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8453,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3751878887414932,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b09p3zzzvp]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4545988216996193
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 2-blue [SEP] 2-green [SEP] 2-navy [SEP] 2-orange [SEP] 2-red [SEP] 3-blue [SEP] 3-purple [SEP] 3-red [SEP] 4-blue [SEP] 4-pink [SEP] 4-white [SEP] 5-navy [SEP] 5-red [SEP] 5-white [SEP] 6-black [SEP] 6-blue [SEP] 6-green [SEP] 6-pink [SEP] 7-blue [SEP] 7-green [SEP] 7-purple [SEP] 7-white [SEP] 8-black [SEP] 8-blue [SEP] 8-dark blue [SEP] army green [SEP] gray [SEP] green [SEP] purple [SEP] 1-gray [SEP] 1-navy [SEP] 1-wine [SEP] 9-coffee [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] Sinzelimin Midi Dresses for Womens Fashion Pullover Dress Summer Round-Neck 3/4 Sleeves Holiday Casual Long Beach Dress [SEP] Price: $6.99 to $22.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 2-blue [SEP] 2-green [SEP] 2-navy [SEP] 2-orange [SEP] 2-red [SEP] 3-blue [SEP] 3-purple [SEP] 3-red [SEP] 4-blue [SEP] 4-pink [SEP] 4-white [SEP] 5-navy [SEP] 5-red [SEP] 5-white [SEP] 6-black [SEP] 6-blue [SEP] 6-green [SEP] 6-pink [SEP] 7-blue [SEP] 7-green [SEP] 7-purple [SEP] 7-white [SEP] 8-black [SEP] 8-blue [SEP] 8-dark blue [SEP] army green [SEP] gray [SEP] green [SEP] purple [SEP] 1-gray [SEP] 1-navy [SEP] 1-wine [SEP] 9-coffee [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] Sinzelimin Midi Dresses for Womens Fashion Pullover Dress Summer Round-Neck 3/4 Sleeves Holiday Casual Long Beach Dress [SEP] Price: $6.99 to $22.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars]\nclick[b09p3zzzvp]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[2-blue]",
+              "7": "click[2-green]",
+              "8": "click[2-navy]",
+              "9": "click[2-orange]",
+              "10": "click[2-red]",
+              "11": "click[3-blue]",
+              "12": "click[3-purple]",
+              "13": "click[3-red]",
+              "14": "click[4-blue]",
+              "15": "click[4-pink]",
+              "16": "click[4-white]",
+              "17": "click[5-navy]",
+              "18": "click[5-red]",
+              "19": "click[5-white]",
+              "20": "click[6-black]",
+              "21": "click[6-blue]",
+              "22": "click[6-green]",
+              "23": "click[6-pink]",
+              "24": "click[7-blue]",
+              "25": "click[7-green]",
+              "26": "click[7-purple]",
+              "27": "click[7-white]",
+              "28": "click[8-black]",
+              "29": "click[8-blue]",
+              "30": "click[8-dark blue]",
+              "31": "click[army green]",
+              "32": "click[gray]",
+              "33": "click[green]",
+              "34": "click[purple]",
+              "35": "click[1-gray]",
+              "36": "click[1-navy]",
+              "37": "click[1-wine]",
+              "38": "click[9-coffee]",
+              "39": "click[small]",
+              "40": "click[medium]",
+              "41": "click[large]",
+              "42": "click[x-large]",
+              "43": "click[xx-large]",
+              "44": "click[3x-large]",
+              "45": "click[4x-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "8c9b6df354856f8ff41b89b873cabacb02ccd9b01428df09309e5835dbfd0d14",
+      "attempts": [
+        {
+          "seconds": 1.0295047610998154,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.029648944735527,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "40",
+            "probabilities": {
+              "0": 0.011534056214603718,
+              "1": 0.010772965333353715,
+              "2": 0.017113193572137836,
+              "3": 0.011826676011063924,
+              "4": 0.009638627571617339,
+              "5": 0.039972912618229224,
+              "6": 0.03771402193963087,
+              "7": 0.02726349387851092,
+              "8": 0.0328593945397582,
+              "9": 0.02852593421869964,
+              "10": 0.025478566802836153,
+              "11": 0.024654611228723814,
+              "12": 0.018718528272691024,
+              "13": 0.01780333959652187,
+              "14": 0.03094893971294226,
+              "15": 0.028534866749690663,
+              "16": 0.03154564114738092,
+              "17": 0.021603393709864704,
+              "18": 0.01723980240118894,
+              "19": 0.026766383936756503,
+              "20": 0.031365739236088486,
+              "21": 0.02410089938779279,
+              "22": 0.025818401076977537,
+              "23": 0.024799154565733016,
+              "24": 0.019683854915507327,
+              "25": 0.018773530109309513,
+              "26": 0.018210572109817694,
+              "27": 0.02071195276917204,
+              "28": 0.03066575137449944,
+              "29": 0.019385818006083536,
+              "30": 0.02189278721463394,
+              "31": 0.02251526203116148,
+              "32": 0.021230473425481313,
+              "33": 0.024850556395040194,
+              "34": 0.02097207161775002,
+              "35": 0.01627416317626808,
+              "36": 0.02070161528579186,
+              "37": 0.01638705956011905,
+              "38": 0.015255501627367904,
+              "39": 0.00678282374954018,
+              "40": 0.08131532074182656,
+              "41": 0.0064846917991325855,
+              "42": 0.005933666859239847,
+              "43": 0.005723260005628544,
+              "44": 0.005052882592132208,
+              "45": 0.004596840911702608
+            },
+            "confidence": 0.06090010564720049
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 23360,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 46,
+          "inference_seconds": 1.0228945650160313,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[medium]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.5138831585645676
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 2-blue [SEP] 2-green [SEP] 2-navy [SEP] 2-orange [SEP] 2-red [SEP] 3-blue [SEP] 3-purple [SEP] 3-red [SEP] 4-blue [SEP] 4-pink [SEP] 4-white [SEP] 5-navy [SEP] 5-red [SEP] 5-white [SEP] 6-black [SEP] 6-blue [SEP] 6-green [SEP] 6-pink [SEP] 7-blue [SEP] 7-green [SEP] 7-purple [SEP] 7-white [SEP] 8-black [SEP] 8-blue [SEP] 8-dark blue [SEP] army green [SEP] gray [SEP] green [SEP] purple [SEP] 1-gray [SEP] 1-navy [SEP] 1-wine [SEP] 9-coffee [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] Sinzelimin Midi Dresses for Womens Fashion Pullover Dress Summer Round-Neck 3/4 Sleeves Holiday Casual Long Beach Dress [SEP] Price: $6.99 to $22.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 2-blue [SEP] 2-green [SEP] 2-navy [SEP] 2-orange [SEP] 2-red [SEP] 3-blue [SEP] 3-purple [SEP] 3-red [SEP] 4-blue [SEP] 4-pink [SEP] 4-white [SEP] 5-navy [SEP] 5-red [SEP] 5-white [SEP] 6-black [SEP] 6-blue [SEP] 6-green [SEP] 6-pink [SEP] 7-blue [SEP] 7-green [SEP] 7-purple [SEP] 7-white [SEP] 8-black [SEP] 8-blue [SEP] 8-dark blue [SEP] army green [SEP] gray [SEP] green [SEP] purple [SEP] 1-gray [SEP] 1-navy [SEP] 1-wine [SEP] 9-coffee [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] Sinzelimin Midi Dresses for Womens Fashion Pullover Dress Summer Round-Neck 3/4 Sleeves Holiday Casual Long Beach Dress [SEP] Price: $6.99 to $22.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars]\nclick[b09p3zzzvp]\nclick[medium]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[2-blue]",
+              "7": "click[2-green]",
+              "8": "click[2-navy]",
+              "9": "click[2-orange]",
+              "10": "click[2-red]",
+              "11": "click[3-blue]",
+              "12": "click[3-purple]",
+              "13": "click[3-red]",
+              "14": "click[4-blue]",
+              "15": "click[4-pink]",
+              "16": "click[4-white]",
+              "17": "click[5-navy]",
+              "18": "click[5-red]",
+              "19": "click[5-white]",
+              "20": "click[6-black]",
+              "21": "click[6-blue]",
+              "22": "click[6-green]",
+              "23": "click[6-pink]",
+              "24": "click[7-blue]",
+              "25": "click[7-green]",
+              "26": "click[7-purple]",
+              "27": "click[7-white]",
+              "28": "click[8-black]",
+              "29": "click[8-blue]",
+              "30": "click[8-dark blue]",
+              "31": "click[army green]",
+              "32": "click[gray]",
+              "33": "click[green]",
+              "34": "click[purple]",
+              "35": "click[1-gray]",
+              "36": "click[1-navy]",
+              "37": "click[1-wine]",
+              "38": "click[9-coffee]",
+              "39": "click[small]",
+              "40": "click[medium]",
+              "41": "click[large]",
+              "42": "click[x-large]",
+              "43": "click[xx-large]",
+              "44": "click[3x-large]",
+              "45": "click[4x-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "eef9d77d1f6a5eb19485e4e07fceaadebec7cbbb4201c1c0abc86abbc95148f0",
+      "attempts": [
+        {
+          "seconds": 1.050999365746975,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.0511476323008537,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "probabilities": {
+              "0": 0.010889325934851089,
+              "1": 0.011019369876775905,
+              "2": 0.01583249431027377,
+              "3": 0.010345435645800476,
+              "4": 0.009391535852701102,
+              "5": 0.047843272797160344,
+              "6": 0.04849263409079138,
+              "7": 0.02996021751965632,
+              "8": 0.04336101988209535,
+              "9": 0.03343903811043406,
+              "10": 0.028310400217617222,
+              "11": 0.02830976329437933,
+              "12": 0.01859486647471239,
+              "13": 0.01857303632432823,
+              "14": 0.03194241804958171,
+              "15": 0.031713871733185225,
+              "16": 0.03422354267174358,
+              "17": 0.02229750673415088,
+              "18": 0.016271869814053326,
+              "19": 0.025769277881642322,
+              "20": 0.033955770430213854,
+              "21": 0.02724871764466208,
+              "22": 0.02642310102460426,
+              "23": 0.026648251318363514,
+              "24": 0.02222808582263356,
+              "25": 0.0200844717432334,
+              "26": 0.01783017308500199,
+              "27": 0.021632311048040472,
+              "28": 0.0330665759631553,
+              "29": 0.02551524632864106,
+              "30": 0.026673631439329316,
+              "31": 0.025625797933485583,
+              "32": 0.02540156368367625,
+              "33": 0.028714844797591132,
+              "34": 0.021795692875840322,
+              "35": 0.017039091263954868,
+              "36": 0.021481847178118026,
+              "37": 0.016901036059037065,
+              "38": 0.01512144401348598,
+              "39": 0.003968358642850257,
+              "40": 0.009020994441339232,
+              "41": 0.003971902517646938,
+              "42": 0.0035659831947961276,
+              "43": 0.003685364715137629,
+              "44": 0.0030946959711415467,
+              "45": 0.002724149648086592
+            },
+            "confidence": 0.02734802595947561
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 23590,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 46,
+          "inference_seconds": 1.041011307388544,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[2-blue]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.5931998193264008
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 2-blue [SEP] 2-green [SEP] 2-navy [SEP] 2-orange [SEP] 2-red [SEP] 3-blue [SEP] 3-purple [SEP] 3-red [SEP] 4-blue [SEP] 4-pink [SEP] 4-white [SEP] 5-navy [SEP] 5-red [SEP] 5-white [SEP] 6-black [SEP] 6-blue [SEP] 6-green [SEP] 6-pink [SEP] 7-blue [SEP] 7-green [SEP] 7-purple [SEP] 7-white [SEP] 8-black [SEP] 8-blue [SEP] 8-dark blue [SEP] army green [SEP] gray [SEP] green [SEP] purple [SEP] 1-gray [SEP] 1-navy [SEP] 1-wine [SEP] 9-coffee [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] Sinzelimin Midi Dresses for Womens Fashion Pullover Dress Summer Round-Neck 3/4 Sleeves Holiday Casual Long Beach Dress [SEP] Price: $6.99 to $22.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 2-blue [SEP] 2-green [SEP] 2-navy [SEP] 2-orange [SEP] 2-red [SEP] 3-blue [SEP] 3-purple [SEP] 3-red [SEP] 4-blue [SEP] 4-pink [SEP] 4-white [SEP] 5-navy [SEP] 5-red [SEP] 5-white [SEP] 6-black [SEP] 6-blue [SEP] 6-green [SEP] 6-pink [SEP] 7-blue [SEP] 7-green [SEP] 7-purple [SEP] 7-white [SEP] 8-black [SEP] 8-blue [SEP] 8-dark blue [SEP] army green [SEP] gray [SEP] green [SEP] purple [SEP] 1-gray [SEP] 1-navy [SEP] 1-wine [SEP] 9-coffee [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] Sinzelimin Midi Dresses for Womens Fashion Pullover Dress Summer Round-Neck 3/4 Sleeves Holiday Casual Long Beach Dress [SEP] Price: $6.99 to $22.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a medium sized dress with a elastic waist, and price lower than 80.00 dollars]\nclick[b09p3zzzvp]\nclick[medium]\nclick[2-blue]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[2-blue]",
+              "7": "click[2-green]",
+              "8": "click[2-navy]",
+              "9": "click[2-orange]",
+              "10": "click[2-red]",
+              "11": "click[3-blue]",
+              "12": "click[3-purple]",
+              "13": "click[3-red]",
+              "14": "click[4-blue]",
+              "15": "click[4-pink]",
+              "16": "click[4-white]",
+              "17": "click[5-navy]",
+              "18": "click[5-red]",
+              "19": "click[5-white]",
+              "20": "click[6-black]",
+              "21": "click[6-blue]",
+              "22": "click[6-green]",
+              "23": "click[6-pink]",
+              "24": "click[7-blue]",
+              "25": "click[7-green]",
+              "26": "click[7-purple]",
+              "27": "click[7-white]",
+              "28": "click[8-black]",
+              "29": "click[8-blue]",
+              "30": "click[8-dark blue]",
+              "31": "click[army green]",
+              "32": "click[gray]",
+              "33": "click[green]",
+              "34": "click[purple]",
+              "35": "click[1-gray]",
+              "36": "click[1-navy]",
+              "37": "click[1-wine]",
+              "38": "click[9-coffee]",
+              "39": "click[small]",
+              "40": "click[medium]",
+              "41": "click[large]",
+              "42": "click[x-large]",
+              "43": "click[xx-large]",
+              "44": "click[3x-large]",
+              "45": "click[4x-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b3df33d283bb3b901717c47021c02125be918236f174747ed0d507fbb93a1869",
+      "attempts": [
+        {
+          "seconds": 1.0545828603208065,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.054694127291441,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.021815329141613573,
+              "1": 0.02261691545374288,
+              "2": 0.0361766613301772,
+              "3": 0.02145097788836592,
+              "4": 0.02003789746676625,
+              "5": 0.14533393339721914,
+              "6": 0.020613062061632246,
+              "7": 0.018537775363693724,
+              "8": 0.021225945494627158,
+              "9": 0.02064469937089521,
+              "10": 0.019688225643356497,
+              "11": 0.02535134719575153,
+              "12": 0.016185996843614166,
+              "13": 0.018036775729912437,
+              "14": 0.02885883515087617,
+              "15": 0.019455233985659744,
+              "16": 0.024839503400526357,
+              "17": 0.018448712491341262,
+              "18": 0.01667868908392303,
+              "19": 0.02152942454053834,
+              "20": 0.024735950112848095,
+              "21": 0.02357722929562909,
+              "22": 0.01909653790321119,
+              "23": 0.017396682960657075,
+              "24": 0.021172019672610058,
+              "25": 0.017602767225158283,
+              "26": 0.016097038641430722,
+              "27": 0.018255141073395535,
+              "28": 0.024266472832964132,
+              "29": 0.02794079111265402,
+              "30": 0.023430220438969723,
+              "31": 0.0157573807461154,
+              "32": 0.021369604497066753,
+              "33": 0.017722472252034636,
+              "34": 0.015082044570959513,
+              "35": 0.01865095531225883,
+              "36": 0.016133262255855155,
+              "37": 0.01616189111627729,
+              "38": 0.017449588101483948,
+              "39": 0.008111362201454577,
+              "40": 0.021644608743463994,
+              "41": 0.00992961331149303,
+              "42": 0.009094701071626068,
+              "43": 0.00840980495487569,
+              "44": 0.0068755359086143004,
+              "45": 0.006510382652660188
+            },
+            "confidence": 0.12634135413937958
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 23866,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 46,
+          "inference_seconds": 1.052170392125845,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.6666666666666666,
+      "done": true,
+      "elapsed_seconds": 3.682832945138216
+    }
+  ]
+}

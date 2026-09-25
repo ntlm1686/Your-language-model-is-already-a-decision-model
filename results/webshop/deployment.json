@@ -1,0 +1,35 @@
+{
+  "hardware": "4 x NVIDIA H100 80GB",
+  "qwen": {
+    "checkpoint": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "dtype": "bfloat16",
+    "attention": "sdpa",
+    "fla": true,
+    "fallback_margin": 0,
+    "max_length": 8192,
+    "workers": 4,
+    "large_candidate_batch_size": 8
+  },
+  "open_jev": {
+    "checkpoint": "ZefanCai/Open-Jev-9B",
+    "revision": "47e966881e489511c0c7f5633a9e1960a676a551",
+    "max_length": 4096,
+    "batch_size": 8,
+    "prefix_cache": false,
+    "workers_initial": 2,
+    "workers_final": 4
+  },
+  "jev": {
+    "model": "jev-1.13.0",
+    "endpoint": "https://api.typesafe.ai/v1/systemone",
+    "workers_initial": 1,
+    "workers_final": 4,
+    "selection": "API choice field"
+  },
+  "script_sha256": {
+    "scripts/eval_webshop.py": "8b1494b7e2f3d3b4c215c832f7a68a377139bfef86e835cf4bdb5646594e006a",
+    "scripts/serve_qwen35_jev.py": "fee9304814219cee4fe1b0dc8e8fc6e5c4acd6891253bdceb4fb8e2254a0a937",
+    "scripts/qwen_jev_api.py": "cca61bfb5af56bd27eeaaf2c6ba90e9c48858b412db594bdf77eea48d1b7ed81"
+  }
+}

@@ -1,0 +1,560 @@
+{
+  "task_id": 356,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars",
+  "instruction_sha256": "ad0e18b70bddf6fe478198fd5f2efff8b509764d69b1a0cec6a4f4bb5ac17047",
+  "reward": 0.3333333333333333,
+  "score": 33.33333333333333,
+  "success": false,
+  "termination": "purchase",
+  "steps": 7,
+  "elapsed_seconds": 3.207902744412422,
+  "decision_seconds": 2.6585260927677155,
+  "input_tokens": 59226,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars [SEP] Search",
+      "action": "search[i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.08287949487566948
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07PXLBV6L [SEP] I Could Stop Gaming But I Am Not A Quitter Gamer Pullover Hoodie [SEP] $34.99 [SEP] B07KRV15TR [SEP] I'm So Cold Sweater Weather Hoodie Hooded Sweatshirt Pullover Hoodie [SEP] $39.99 [SEP] B08VW251CG [SEP] Black History Month Sweater for Women Men Black Lives Matter Hoodie Black Pride Outfits [SEP] $26.95 to $33.95 [SEP] B07PZ8733G [SEP] Ice Fishing Funny I Am Surrounded by Ice Holes Hoodie Shirt [SEP] $31.98 [SEP] B00O3X41N2 [SEP] Star Trek - Mens Live Long Hand Hoodie [SEP] $34.57 to $75.93 [SEP] B07J41CKD5 [SEP] NEWCOSPLAY Unisex Novelty Hooded Sweatshirts 3D Printed Hoodies Colorful Pattern [SEP] $16.99 to $32.99 [SEP] B07PYYWMYX [SEP] Isaiah 41:10 Bible Verse Scripture Christian Pullover Hoodie Pullover Hoodie [SEP] $41.8 [SEP] B07FK3M82H [SEP] Croatia Football Jersey - Croatian National Soccer Unisex Hoodie Sweatshirt [SEP] $28.95 to $40.95 [SEP] B07MLNS27P [SEP] Just a Girl Who Loves Anime Hoodie Sweatshirt Pullover Hoodie [SEP] $39.95 [SEP] B07KK6MW17 [SEP] I Still Play With Tractors Hoodie | Cute Bulldozer Farm Gift [SEP] $31.98",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07PXLBV6L [SEP] I Could Stop Gaming But I Am Not A Quitter Gamer Pullover Hoodie [SEP] $34.99 [SEP] B07KRV15TR [SEP] I'm So Cold Sweater Weather Hoodie Hooded Sweatshirt Pullover Hoodie [SEP] $39.99 [SEP] B08VW251CG [SEP] Black History Month Sweater for Women Men Black Lives Matter Hoodie Black Pride Outfits [SEP] $26.95 to $33.95 [SEP] B07PZ8733G [SEP] Ice Fishing Funny I Am Surrounded by Ice Holes Hoodie Shirt [SEP] $31.98 [SEP] B00O3X41N2 [SEP] Star Trek - Mens Live Long Hand Hoodie [SEP] $34.57 to $75.93 [SEP] B07J41CKD5 [SEP] NEWCOSPLAY Unisex Novelty Hooded Sweatshirts 3D Printed Hoodies Colorful Pattern [SEP] $16.99 to $32.99 [SEP] B07PYYWMYX [SEP] Isaiah 41:10 Bible Verse Scripture Christian Pullover Hoodie Pullover Hoodie [SEP] $41.8 [SEP] B07FK3M82H [SEP] Croatia Football Jersey - Croatian National Soccer Unisex Hoodie Sweatshirt [SEP] $28.95 to $40.95 [SEP] B07MLNS27P [SEP] Just a Girl Who Loves Anime Hoodie Sweatshirt Pullover Hoodie [SEP] $39.95 [SEP] B07KK6MW17 [SEP] I Still Play With Tractors Hoodie | Cute Bulldozer Farm Gift [SEP] $31.98\n\nRecent actions:\nsearch[i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07pxlbv6l]",
+              "3": "click[b07krv15tr]",
+              "4": "click[b08vw251cg]",
+              "5": "click[b07pz8733g]",
+              "6": "click[b00o3x41n2]",
+              "7": "click[b07j41ckd5]",
+              "8": "click[b07pyywmyx]",
+              "9": "click[b07fk3m82h]",
+              "10": "click[b07mlns27p]",
+              "11": "click[b07kk6mw17]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1555422cd839035710979ab4512bd5356f8e47072d57a35134e67f5ce6c82fe7",
+      "attempts": [
+        {
+          "seconds": 0.35229364037513733,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.35240310057997704,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.06864090167770281,
+              "1": 0.11525808471694286,
+              "2": 0.10197010501584715,
+              "3": 0.09940344924201099,
+              "4": 0.05639408270845424,
+              "5": 0.06949682208754214,
+              "6": 0.10806423327125723,
+              "7": 0.07166044394265464,
+              "8": 0.06384519204581093,
+              "9": 0.11187882601240558,
+              "10": 0.06880530202610476,
+              "11": 0.06458255725326655
+            },
+            "confidence": 0.03482700150939222
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 7820,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.35020190104842186,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5410515516996384
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09GTTJGRT [SEP] Rick and Morty Misc Character Unisex Adult Pull-Over Hoodie Collection [SEP] $39.99 to $43.99 [SEP] B07NNNVL4V [SEP] Chess Player Gifts - I Play Chess and I Know Things Funny Pullover Hoodie [SEP] $32.99 [SEP] B0814NZ5LR [SEP] Adventure Time Mathematical Unisex Adult Pull-Over Hoodie [SEP] $34.99 to $42.99 [SEP] B08T6MRCJ1 [SEP] Curious George Flight Unisex Adult Pull-Over Hoodie [SEP] $34.99 to $42.99 [SEP] B07PVLPDXP [SEP] I Am The Storm Hoodie Breast Cancer Warrior Survivor Mom Tee [SEP] $31.03 [SEP] B09QNBH9S3 [SEP] I Have A Dream Meaning Quote Shirt, Unisex Tshirt, Sweater, Hoodie for Martin Luther King Fans, Tribute Shirt for Dr.King [SEP] $18.99 [SEP] B01JF4Y3MC [SEP] Expression Tees I Love My Dog Paw Print Unisex Adult Hoodie [SEP] $36.99 to $48.99 [SEP] B08NW66T5G [SEP] Looney Tunes Tweety Swirl Unisex Adult Pull-Over Hoodie [SEP] $35.99 to $43.99 [SEP] B08T6NYSRZ [SEP] Curious George Who Me Unisex Adult Pull-Over Hoodie [SEP] $34.99 to $42.99 [SEP] B07GWVWHNR [SEP] Roller Derby Shirts For Women - I Hit Like A Girl Hoodie Pullover Hoodie [SEP] $39.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09GTTJGRT [SEP] Rick and Morty Misc Character Unisex Adult Pull-Over Hoodie Collection [SEP] $39.99 to $43.99 [SEP] B07NNNVL4V [SEP] Chess Player Gifts - I Play Chess and I Know Things Funny Pullover Hoodie [SEP] $32.99 [SEP] B0814NZ5LR [SEP] Adventure Time Mathematical Unisex Adult Pull-Over Hoodie [SEP] $34.99 to $42.99 [SEP] B08T6MRCJ1 [SEP] Curious George Flight Unisex Adult Pull-Over Hoodie [SEP] $34.99 to $42.99 [SEP] B07PVLPDXP [SEP] I Am The Storm Hoodie Breast Cancer Warrior Survivor Mom Tee [SEP] $31.03 [SEP] B09QNBH9S3 [SEP] I Have A Dream Meaning Quote Shirt, Unisex Tshirt, Sweater, Hoodie for Martin Luther King Fans, Tribute Shirt for Dr.King [SEP] $18.99 [SEP] B01JF4Y3MC [SEP] Expression Tees I Love My Dog Paw Print Unisex Adult Hoodie [SEP] $36.99 to $48.99 [SEP] B08NW66T5G [SEP] Looney Tunes Tweety Swirl Unisex Adult Pull-Over Hoodie [SEP] $35.99 to $43.99 [SEP] B08T6NYSRZ [SEP] Curious George Who Me Unisex Adult Pull-Over Hoodie [SEP] $34.99 to $42.99 [SEP] B07GWVWHNR [SEP] Roller Derby Shirts For Women - I Hit Like A Girl Hoodie Pullover Hoodie [SEP] $39.99\n\nRecent actions:\nsearch[i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09gttjgrt]",
+              "4": "click[b07nnnvl4v]",
+              "5": "click[b0814nz5lr]",
+              "6": "click[b08t6mrcj1]",
+              "7": "click[b07pvlpdxp]",
+              "8": "click[b09qnbh9s3]",
+              "9": "click[b01jf4y3mc]",
+              "10": "click[b08nw66t5g]",
+              "11": "click[b08t6nysrz]",
+              "12": "click[b07gwvwhnr]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b4bc0f677ede1153261b6b4c01cd50c683cc4b2f1a3482b2519ca66e347ed1aa",
+      "attempts": [
+        {
+          "seconds": 0.39439429342746735,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.39450884610414505,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.09960608019827134,
+              "1": 0.1032244464038615,
+              "2": 0.15926314674031242,
+              "3": 0.10111044999779059,
+              "4": 0.05881266771668544,
+              "5": 0.06140497082309616,
+              "6": 0.06552947304965691,
+              "7": 0.034956177822913506,
+              "8": 0.05162689229456723,
+              "9": 0.0594271171690987,
+              "10": 0.0832575707844685,
+              "11": 0.06990739130276598,
+              "12": 0.05187361569651159
+            },
+            "confidence": 0.08920174230200514
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8764,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.39264343678951263,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.043556086719036
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09R7WDJYW [SEP] Dress Shirts for Men Wrinkle Free, Men's Dress Shirt Regular Fit Solid Color Business Shirt Button Down Shirts Party Tops [SEP] $9.19 to $12.99 [SEP] B07T757557 [SEP] My Little Pony Retro Unicorn Fist Bump Unisex Adult Pull-Over Hoodie [SEP] $34.99 to $42.99 [SEP] B09RB2LSZP [SEP] Dress Shirts for Men Wrinkle Free, Men's Business Dress Shirt Solid Color Long Sleeve Slim Fit Cotton Button Down Dress Shirt [SEP] $8.24 to $10.49 [SEP] B07PY49WW9 [SEP] I Just Really Like Koalas OK? Funny Koala Hoodie Sweatshirt [SEP] $31.03 [SEP] B07JVSJS4H [SEP] I Love Anime Hoodie Cute Anime Girl Japanese Gift Sweatshirt Pullover Hoodie [SEP] $39.95 [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B09QQ4JDGV [SEP] Dress Shirts for Men Slim Fit, Men's Formal Dress Shirts Slim Fit Long Sleeve Solid Color Collar Button-Down Dress Shirt [SEP] $9.19 to $11.49 [SEP] B07X6154XC [SEP] VOWUA Womens Tops Long Sleeve Leopard Print Patchwork T-Shirt Blouse Ladies T-Shirt Oversize Tops [SEP] $5.99 [SEP] B07Q39H6BP [SEP] Star Wars Vader I Am Your Father Text Art Graphic Hoodie [SEP] $47.99 [SEP] B09QSQX3CV [SEP] Dress Shirts for Men Regular Fit, Men's Dress Shirts Business Shirt Button Down Shirts Non-Iron Wrinkle Resistant Dress Shirt [SEP] $9.19 to $11.89",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09R7WDJYW [SEP] Dress Shirts for Men Wrinkle Free, Men's Dress Shirt Regular Fit Solid Color Business Shirt Button Down Shirts Party Tops [SEP] $9.19 to $12.99 [SEP] B07T757557 [SEP] My Little Pony Retro Unicorn Fist Bump Unisex Adult Pull-Over Hoodie [SEP] $34.99 to $42.99 [SEP] B09RB2LSZP [SEP] Dress Shirts for Men Wrinkle Free, Men's Business Dress Shirt Solid Color Long Sleeve Slim Fit Cotton Button Down Dress Shirt [SEP] $8.24 to $10.49 [SEP] B07PY49WW9 [SEP] I Just Really Like Koalas OK? Funny Koala Hoodie Sweatshirt [SEP] $31.03 [SEP] B07JVSJS4H [SEP] I Love Anime Hoodie Cute Anime Girl Japanese Gift Sweatshirt Pullover Hoodie [SEP] $39.95 [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B09QQ4JDGV [SEP] Dress Shirts for Men Slim Fit, Men's Formal Dress Shirts Slim Fit Long Sleeve Solid Color Collar Button-Down Dress Shirt [SEP] $9.19 to $11.49 [SEP] B07X6154XC [SEP] VOWUA Womens Tops Long Sleeve Leopard Print Patchwork T-Shirt Blouse Ladies T-Shirt Oversize Tops [SEP] $5.99 [SEP] B07Q39H6BP [SEP] Star Wars Vader I Am Your Father Text Art Graphic Hoodie [SEP] $47.99 [SEP] B09QSQX3CV [SEP] Dress Shirts for Men Regular Fit, Men's Dress Shirts Business Shirt Button Down Shirts Non-Iron Wrinkle Resistant Dress Shirt [SEP] $9.19 to $11.89\n\nRecent actions:\nsearch[i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09r7wdjyw]",
+              "4": "click[b07t757557]",
+              "5": "click[b09rb2lszp]",
+              "6": "click[b07py49ww9]",
+              "7": "click[b07jvsjs4h]",
+              "8": "click[b09pggqzj2]",
+              "9": "click[b09qq4jdgv]",
+              "10": "click[b07x6154xc]",
+              "11": "click[b07q39h6bp]",
+              "12": "click[b09qsqx3cv]"
+            }
+          }
+        }
+      },
+      "request_sha256": "9eaa25e31f593cbc37e8a2c0436929f815d0158a9aa46bd692c24d289b643c54",
+      "attempts": [
+        {
+          "seconds": 0.41452307626605034,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4146530516445637,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.1387285893170012,
+              "1": 0.143665133851377,
+              "2": 0.22339336412521518,
+              "3": 0.01900570481123552,
+              "4": 0.1944576694693279,
+              "5": 0.033854605348827733,
+              "6": 0.03268439695377585,
+              "7": 0.04908324708343948,
+              "8": 0.04070394362672143,
+              "9": 0.029850618227914707,
+              "10": 0.03085249705136821,
+              "11": 0.01773698756813215,
+              "12": 0.04598324256566361
+            },
+            "confidence": 0.1586761444689831
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9337,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4123111069202423,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.5554371811449528
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07H9MY6ST [SEP] Tess Maltz Custom Cotton Hoodies Sweatshirt Personalized Sweater Sport Comfortable Men [SEP] $24.66 [SEP] B0999PC2LV [SEP] Cute Sweatshirt for Women Teens Girls Crop Stripe Patchwork Hoody Tops Anime Hoodie Kawaii Jumper Comfy Sweater Pullover [SEP] $15.99 [SEP] B08HQ2919Q [SEP] As A Taurus I Have Three Sides Long Sleeve Hoodie, Adult Unisex Hoodie [SEP] $39.99 to $42.99 [SEP] B00ED39A7E [SEP] Go All Out Adult I Am The One Who Knocks Sweatshirt Hoodie [SEP] $27.95 to $43.99 [SEP] B07PWYH29H [SEP] I Love Giraffes Distressed Giraffe Head Hoodie Pullover Hoodie [SEP] $31.99 [SEP] B07VRM1RSZ [SEP] Haddonfield High School 31 Jersey - Myers Halloween Unisex Hoodie Sweatshirt [SEP] $22.95 to $40.95 [SEP] B09SQBH3P8 [SEP] Dress Shirts for Men Slim Fit, Mens Dress Shirts Big & Tall, Men's Business Dress Shirt Solid Color Long Sleeve Slim Fit Tops [SEP] $8.49 to $11.89 [SEP] B0973CV5MD [SEP] Men’s Women’s 3D Zip Up Hoodie Jacket Casual Full Zip Hooded Sweatshirt for Adults [SEP] $32.95 [SEP] B09QKXVT7V [SEP] I Am Strong I Am Unique Hoodie I Choose Hoodie trendy Hoodies Aesthetic Gifts For Her Matching Hoodies Oversize Sweatshirt [SEP] $19.99 [SEP] B092LCDF2Z [SEP] Rick and Morty Pickle Rick Collection Unisex Adult Pull-Over Hoodie [SEP] $35.99 to $51.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07H9MY6ST [SEP] Tess Maltz Custom Cotton Hoodies Sweatshirt Personalized Sweater Sport Comfortable Men [SEP] $24.66 [SEP] B0999PC2LV [SEP] Cute Sweatshirt for Women Teens Girls Crop Stripe Patchwork Hoody Tops Anime Hoodie Kawaii Jumper Comfy Sweater Pullover [SEP] $15.99 [SEP] B08HQ2919Q [SEP] As A Taurus I Have Three Sides Long Sleeve Hoodie, Adult Unisex Hoodie [SEP] $39.99 to $42.99 [SEP] B00ED39A7E [SEP] Go All Out Adult I Am The One Who Knocks Sweatshirt Hoodie [SEP] $27.95 to $43.99 [SEP] B07PWYH29H [SEP] I Love Giraffes Distressed Giraffe Head Hoodie Pullover Hoodie [SEP] $31.99 [SEP] B07VRM1RSZ [SEP] Haddonfield High School 31 Jersey - Myers Halloween Unisex Hoodie Sweatshirt [SEP] $22.95 to $40.95 [SEP] B09SQBH3P8 [SEP] Dress Shirts for Men Slim Fit, Mens Dress Shirts Big & Tall, Men's Business Dress Shirt Solid Color Long Sleeve Slim Fit Tops [SEP] $8.49 to $11.89 [SEP] B0973CV5MD [SEP] Men’s Women’s 3D Zip Up Hoodie Jacket Casual Full Zip Hooded Sweatshirt for Adults [SEP] $32.95 [SEP] B09QKXVT7V [SEP] I Am Strong I Am Unique Hoodie I Choose Hoodie trendy Hoodies Aesthetic Gifts For Her Matching Hoodies Oversize Sweatshirt [SEP] $19.99 [SEP] B092LCDF2Z [SEP] Rick and Morty Pickle Rick Collection Unisex Adult Pull-Over Hoodie [SEP] $35.99 to $51.99\n\nRecent actions:\nsearch[i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07h9my6st]",
+              "4": "click[b0999pc2lv]",
+              "5": "click[b08hq2919q]",
+              "6": "click[b00ed39a7e]",
+              "7": "click[b07pwyh29h]",
+              "8": "click[b07vrm1rsz]",
+              "9": "click[b09sqbh3p8]",
+              "10": "click[b0973cv5md]",
+              "11": "click[b09qkxvt7v]",
+              "12": "click[b092lcdf2z]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0b936be45edd452a2656c6435f3e92600768b7fdc90c8abc95658473471762e2",
+      "attempts": [
+        {
+          "seconds": 0.41853372380137444,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4186643175780773,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.0847181724312372,
+              "1": 0.08760307586953298,
+              "2": 0.15792862712226977,
+              "3": 0.045846229052698605,
+              "4": 0.026200825814826356,
+              "5": 0.10082341095631865,
+              "6": 0.08913581968760738,
+              "7": 0.052689249358243734,
+              "8": 0.05759501786678515,
+              "9": 0.05155533222023159,
+              "10": 0.08502150172325082,
+              "11": 0.07131186728823691,
+              "12": 0.08957087060876097
+            },
+            "confidence": 0.08775601271579224
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9430,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.41634225472807884,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.0750012435019016
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07YQBLFXL [SEP] No New Friends Fun Birthday Humorous Gift Best Friends Unisex Pullover Hoodie [SEP] $38.0 [SEP] B09CYDK63R [SEP] Soft Bible Verse Throw Blanket Be Still and Know That I am God Warm Fluffy Flannel Blankets Lightweight Summer Quilts Thoughtful Verse Gifts for Blessings Prayer 40\"x30\"Extra Small for Pets [SEP] $14.99 [SEP] B09QG3BGYT [SEP] Valentines Day Gifts, Men's Casual Dress Shirt Button Down Shirts Long-Sleeve Regular Fit Stretch Solid Color Business Shirts [SEP] $8.69 to $11.99 [SEP] B07ML5F9MH [SEP] BODOAO Womens Long Sleeve Hoodie Dress Casual Long Sweatershirt Dresses with Pockets [SEP] $13.99 to $19.99 [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B08NXK2RF5 [SEP] Go All Out Adult I Am Literally Freezing Cold Sweatshirt Hoodie [SEP] $19.57 to $43.99 [SEP] B09P8NP2Y3 [SEP] I Got Five Fouls and Not Afraid to Use Them Shirt, Basketball Lover, Hooper Gift, Basketball, T-Shirt, Sweater, Hoodie for Men, Women, Kids [SEP] $18.99 [SEP] B09PD3SNNZ [SEP] I Wanna Dunk It Up Shirt, Basketball Lover, Hooper Gift, Basketball, T-Shirt, Sweater, Hoodie for Men, Women, Kids [SEP] $18.99 [SEP] B09PDKL1GJ [SEP] I Can Dribble My Dream High Shirt, Basketball Lover, Hooper Gift, Basketball, T-Shirt, Sweater, Hoodie for Men, Women, Kids [SEP] $18.99 [SEP] B09PPR3CKK [SEP] Best Uncle Funny Golf T-shirt, Sweater, Hoodie for Golf Lover, Golfing Gift for Men, Women, Kids, Golf The Way I Do [SEP] $18.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07YQBLFXL [SEP] No New Friends Fun Birthday Humorous Gift Best Friends Unisex Pullover Hoodie [SEP] $38.0 [SEP] B09CYDK63R [SEP] Soft Bible Verse Throw Blanket Be Still and Know That I am God Warm Fluffy Flannel Blankets Lightweight Summer Quilts Thoughtful Verse Gifts for Blessings Prayer 40\"x30\"Extra Small for Pets [SEP] $14.99 [SEP] B09QG3BGYT [SEP] Valentines Day Gifts, Men's Casual Dress Shirt Button Down Shirts Long-Sleeve Regular Fit Stretch Solid Color Business Shirts [SEP] $8.69 to $11.99 [SEP] B07ML5F9MH [SEP] BODOAO Womens Long Sleeve Hoodie Dress Casual Long Sweatershirt Dresses with Pockets [SEP] $13.99 to $19.99 [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B08NXK2RF5 [SEP] Go All Out Adult I Am Literally Freezing Cold Sweatshirt Hoodie [SEP] $19.57 to $43.99 [SEP] B09P8NP2Y3 [SEP] I Got Five Fouls and Not Afraid to Use Them Shirt, Basketball Lover, Hooper Gift, Basketball, T-Shirt, Sweater, Hoodie for Men, Women, Kids [SEP] $18.99 [SEP] B09PD3SNNZ [SEP] I Wanna Dunk It Up Shirt, Basketball Lover, Hooper Gift, Basketball, T-Shirt, Sweater, Hoodie for Men, Women, Kids [SEP] $18.99 [SEP] B09PDKL1GJ [SEP] I Can Dribble My Dream High Shirt, Basketball Lover, Hooper Gift, Basketball, T-Shirt, Sweater, Hoodie for Men, Women, Kids [SEP] $18.99 [SEP] B09PPR3CKK [SEP] Best Uncle Funny Golf T-shirt, Sweater, Hoodie for Golf Lover, Golfing Gift for Men, Women, Kids, Golf The Way I Do [SEP] $18.99\n\nRecent actions:\nsearch[i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07yqblfxl]",
+              "4": "click[b09cydk63r]",
+              "5": "click[b09qg3bgyt]",
+              "6": "click[b07ml5f9mh]",
+              "7": "click[b097h5cplc]",
+              "8": "click[b08nxk2rf5]",
+              "9": "click[b09p8np2y3]",
+              "10": "click[b09pd3snnz]",
+              "11": "click[b09pdkl1gj]",
+              "12": "click[b09ppr3ckk]"
+            }
+          }
+        }
+      },
+      "request_sha256": "163ebd7aae63efcf0be91a3fce21f2402417ef1027b0a0c3e48d999b1d25a7d3",
+      "attempts": [
+        {
+          "seconds": 0.455899678170681,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4560166373848915,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "probabilities": {
+              "0": 0.11764347296884063,
+              "1": 0.12764044506470945,
+              "2": 0.18336008323594785,
+              "3": 0.09028807239127186,
+              "4": 0.011005128685337257,
+              "5": 0.009854202038532144,
+              "6": 0.04457761556379265,
+              "7": 0.01272308600903156,
+              "8": 0.25644877780534764,
+              "9": 0.04257393410987308,
+              "10": 0.03433396693338502,
+              "11": 0.030166061398146458,
+              "12": 0.03938515379578429
+            },
+            "confidence": 0.19448617595579326
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10248,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4538780264556408,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b08nxk2rf5]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.5569572001695633
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] color [SEP] black [SEP] black heather [SEP] chocolate [SEP] classic pink [SEP] forest green [SEP] gold [SEP] navy blue [SEP] orange [SEP] oxford [SEP] purple [SEP] royal blue [SEP] vintage heather navy [SEP] white [SEP] maroon [SEP] red [SEP] safety green [SEP] irish green [SEP] vintage heather red [SEP] Go All Out Adult I Am Literally Freezing Cold Sweatshirt Hoodie [SEP] Price: $19.57 to $43.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] color [SEP] black [SEP] black heather [SEP] chocolate [SEP] classic pink [SEP] forest green [SEP] gold [SEP] navy blue [SEP] orange [SEP] oxford [SEP] purple [SEP] royal blue [SEP] vintage heather navy [SEP] white [SEP] maroon [SEP] red [SEP] safety green [SEP] irish green [SEP] vintage heather red [SEP] Go All Out Adult I Am Literally Freezing Cold Sweatshirt Hoodie [SEP] Price: $19.57 to $43.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a medium adult sized unisex hoodie which is machine washable. pick the navy blue one, and price lower than 60.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b08nxk2rf5]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[small]",
+              "7": "click[medium]",
+              "8": "click[large]",
+              "9": "click[x-large]",
+              "10": "click[xx-large]",
+              "11": "click[3x-large]",
+              "12": "click[4x-large]",
+              "13": "click[black]",
+              "14": "click[black heather]",
+              "15": "click[chocolate]",
+              "16": "click[classic pink]",
+              "17": "click[forest green]",
+              "18": "click[gold]",
+              "19": "click[navy blue]",
+              "20": "click[orange]",
+              "21": "click[oxford]",
+              "22": "click[purple]",
+              "23": "click[royal blue]",
+              "24": "click[vintage heather navy]",
+              "25": "click[white]",
+              "26": "click[maroon]",
+              "27": "click[red]",
+              "28": "click[safety green]",
+              "29": "click[irish green]",
+              "30": "click[vintage heather red]"
+            }
+          }
+        }
+      },
+      "request_sha256": "69f93d44ec90fc31c268e084564f9e9d97f7014c101f2941e6291910553a6422",
+      "attempts": [
+        {
+          "seconds": 0.622168779373169,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.6222801394760609,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.03808935037515026,
+              "1": 0.03580048680119569,
+              "2": 0.048799948073023396,
+              "3": 0.027207485334126612,
+              "4": 0.03074300168238553,
+              "5": 0.22323570535021567,
+              "6": 0.01945225811886374,
+              "7": 0.1543723265974355,
+              "8": 0.018530574647029733,
+              "9": 0.017697490503434856,
+              "10": 0.019711477852673194,
+              "11": 0.014413542618546112,
+              "12": 0.0188852423914342,
+              "13": 0.00884752080131433,
+              "14": 0.007315490573571775,
+              "15": 0.005241736557989343,
+              "16": 0.004554028752449325,
+              "17": 0.0057247631849542385,
+              "18": 0.007606967738918523,
+              "19": 0.19304451463006397,
+              "20": 0.00937198477407463,
+              "21": 0.01362650058778872,
+              "22": 0.007528023711655043,
+              "23": 0.010566348092444548,
+              "24": 0.023151412028578965,
+              "25": 0.0072692246134540405,
+              "26": 0.005930162222632949,
+              "27": 0.005704780744457873,
+              "28": 0.006078689802765134,
+              "29": 0.006823680789067933,
+              "30": 0.00467528004830404
+            },
+            "confidence": 0.19734356219522287
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 13627,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 31,
+          "inference_seconds": 0.6203967593610287,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.3333333333333333,
+      "done": true,
+      "elapsed_seconds": 3.207899861037731
+    }
+  ]
+}

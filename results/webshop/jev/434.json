@@ -1,0 +1,387 @@
+{
+  "task_id": 434,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars",
+  "instruction_sha256": "650cca9e3466caa5eb267a8fb05c1dd88e5ae844f22fc895fd7c0f0848fba07f",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "repeated_state_action",
+  "steps": 7,
+  "elapsed_seconds": 2.272699724882841,
+  "decision_seconds": 1.8938962556421757,
+  "input_tokens": 6013,
+  "output_tokens": 531,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars [SEP] Search",
+      "action": "search[i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.04956722632050514
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B073WZXBZJ [SEP] SIMPLIHOME Lowell Bentwood Dining Chair, Charcoal Grey Linen Look Fabric and SOLID WOOD, Rounded, Upholstered, For the Dining Room, Mid Century Modern [SEP] $154.18 [SEP] B01N22WDF0 [SEP] Christopher Knight Home Issaic Grey Fabric with Oak Finish Dining Chairs (Set of 2) [SEP] $199.99 [SEP] B09KXSN8WW [SEP] ANJHOME Mid Century Modern Accent Chair, Single Fabric Lounge Reading Armchair with Solid Wood Frame, Easy Assembly Arm Chairs for Living Room, Beige [SEP] $189.99 [SEP] B07VXTT5JW [SEP] SIMPLIHOME Warren 28 inch Wide Mid Century Modern Accent Chair in Woven Fabric in Mocha, with Removable Slip Cover, Metal Hairpin Legs, Simple Assembly, Just Attach Legs [SEP] $314.98 [SEP] B093K58KZJ [SEP] Container Furniture Direct Arul Mid Century Modern Leather Air Upholstered Living Room, Sofa, Midnight Black [SEP] $442.93 [SEP] B07P6JTVZV [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Leather Accent Chair, 32.7\"W, Caramel [SEP] $675.48 [SEP] B0914MSTVF [SEP] Manhattan Comfort Cronkite Mid Century Modern Living Room Tulip Style Twill Weave Accent Chair, 28.7\", Single, Grey [SEP] $427.87 [SEP] B00M5EABOE [SEP] Mod Made Mid Century Modern Chrome Wire Counter Stool for Kitchen or Bar, Black [SEP] $185.0 [SEP] B00M5EAF68 [SEP] Mod Made Mid Century Modern Chrome Wire Counter Stool for Kitchen or Bar, White [SEP] $100.0 [SEP] B096FYLW5X [SEP] Dining Chairs Set of 4, Modern Dining Room Chairs Set Mid Century Kitchen Chairs Upholstered Accent Chairs Side Chairs with Metal Legs - Light Grey [SEP] $184.99",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B073WZXBZJ [SEP] SIMPLIHOME Lowell Bentwood Dining Chair, Charcoal Grey Linen Look Fabric and SOLID WOOD, Rounded, Upholstered, For the Dining Room, Mid Century Modern [SEP] $154.18 [SEP] B01N22WDF0 [SEP] Christopher Knight Home Issaic Grey Fabric with Oak Finish Dining Chairs (Set of 2) [SEP] $199.99 [SEP] B09KXSN8WW [SEP] ANJHOME Mid Century Modern Accent Chair, Single Fabric Lounge Reading Armchair with Solid Wood Frame, Easy Assembly Arm Chairs for Living Room, Beige [SEP] $189.99 [SEP] B07VXTT5JW [SEP] SIMPLIHOME Warren 28 inch Wide Mid Century Modern Accent Chair in Woven Fabric in Mocha, with Removable Slip Cover, Metal Hairpin Legs, Simple Assembly, Just Attach Legs [SEP] $314.98 [SEP] B093K58KZJ [SEP] Container Furniture Direct Arul Mid Century Modern Leather Air Upholstered Living Room, Sofa, Midnight Black [SEP] $442.93 [SEP] B07P6JTVZV [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Leather Accent Chair, 32.7\"W, Caramel [SEP] $675.48 [SEP] B0914MSTVF [SEP] Manhattan Comfort Cronkite Mid Century Modern Living Room Tulip Style Twill Weave Accent Chair, 28.7\", Single, Grey [SEP] $427.87 [SEP] B00M5EABOE [SEP] Mod Made Mid Century Modern Chrome Wire Counter Stool for Kitchen or Bar, Black [SEP] $185.0 [SEP] B00M5EAF68 [SEP] Mod Made Mid Century Modern Chrome Wire Counter Stool for Kitchen or Bar, White [SEP] $100.0 [SEP] B096FYLW5X [SEP] Dining Chairs Set of 4, Modern Dining Room Chairs Set Mid Century Kitchen Chairs Upholstered Accent Chairs Side Chairs with Metal Legs - Light Grey [SEP] $184.99\n\nRecent actions:\nsearch[i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b073wzxbzj]",
+              "3": "click[b01n22wdf0]",
+              "4": "click[b09kxsn8ww]",
+              "5": "click[b07vxtt5jw]",
+              "6": "click[b093k58kzj]",
+              "7": "click[b07p6jtvzv]",
+              "8": "click[b0914mstvf]",
+              "9": "click[b00m5eaboe]",
+              "10": "click[b00m5eaf68]",
+              "11": "click[b096fylw5x]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "701e27b4a70adcf41ac0844cf8466ead834074075847c4dd3da65c36e4af4c44",
+      "attempts": [
+        {
+          "seconds": 0.3804829530417919,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3805914521217346,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.72,
+            "probabilities": {
+              "6": 0.0,
+              "8": 0.0,
+              "11": 0.01,
+              "3": 0.0,
+              "0": 0.05,
+              "10": 0.11,
+              "7": 0.0,
+              "1": 0.75,
+              "2": 0.08,
+              "4": 0.0,
+              "5": 0.0,
+              "9": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1183,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4821711331605911
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09LLVRST7 [SEP] Mid Century Single Sofa for Living Room, Modern Upholstered Accent Chair, Club Chair, TV Armchair for Small Space Home, Office, Coffee Chair, Aqua Blue [SEP] $239.0 [SEP] B072FVHRZ5 [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Apartment Sofa, 72\"W, Light Grey [SEP] $761.58 [SEP] B096FZ5FKC [SEP] Dining Chairs Set of 4 - Mid Century Dining Room Chairs Modern Accent Chairs for Kitchen Living Room - Light Grey [SEP] $184.99 [SEP] B07LGFG59K [SEP] Modway Empress Mid-Century Modern Upholstered Fabric Side Armless Lounge Accent Chair in Gray [SEP] $364.2 [SEP] B07VLYMCLH [SEP] Top Space Accent Chair Living Room Chairs Arm Chair Single Sofa Upholstered Comfy Fabric Mid-Century Modern Furniture for Bedroom Office Club (1PCS-1, Beige) [SEP] $254.99 [SEP] B07CDZ1SH5 [SEP] Christopher Knight Home Aurla Fabric Accent Chair, Beige [SEP] $247.15 [SEP] B07PC1PDXG [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Leather Apartment Sofa, 72\"W, Caramel [SEP] $1433.98 [SEP] B09M2ZJWPD [SEP] Altrobene Mid-Century Accent Chairs Set of 2, Velvet Dinging Chair, Living Room Bedroom Chair Set, Golden Finished, Grey [SEP] $199.99 [SEP] B09NSPM63H [SEP] Minimalist Nightstand, Mid Century Modern Side End Table with Drawers, Bedside Tables with Solid Wood Legs, Bedside Table with Storage Accent Table for Living Room Bedroom, White [SEP] $64.99 [SEP] B01MRBR1KR [SEP] Tolle Mid-Century Modern Upholstered Barstools (Set of 2), Gray and Natural Oak [SEP] $162.64",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09LLVRST7 [SEP] Mid Century Single Sofa for Living Room, Modern Upholstered Accent Chair, Club Chair, TV Armchair for Small Space Home, Office, Coffee Chair, Aqua Blue [SEP] $239.0 [SEP] B072FVHRZ5 [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Apartment Sofa, 72\"W, Light Grey [SEP] $761.58 [SEP] B096FZ5FKC [SEP] Dining Chairs Set of 4 - Mid Century Dining Room Chairs Modern Accent Chairs for Kitchen Living Room - Light Grey [SEP] $184.99 [SEP] B07LGFG59K [SEP] Modway Empress Mid-Century Modern Upholstered Fabric Side Armless Lounge Accent Chair in Gray [SEP] $364.2 [SEP] B07VLYMCLH [SEP] Top Space Accent Chair Living Room Chairs Arm Chair Single Sofa Upholstered Comfy Fabric Mid-Century Modern Furniture for Bedroom Office Club (1PCS-1, Beige) [SEP] $254.99 [SEP] B07CDZ1SH5 [SEP] Christopher Knight Home Aurla Fabric Accent Chair, Beige [SEP] $247.15 [SEP] B07PC1PDXG [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Leather Apartment Sofa, 72\"W, Caramel [SEP] $1433.98 [SEP] B09M2ZJWPD [SEP] Altrobene Mid-Century Accent Chairs Set of 2, Velvet Dinging Chair, Living Room Bedroom Chair Set, Golden Finished, Grey [SEP] $199.99 [SEP] B09NSPM63H [SEP] Minimalist Nightstand, Mid Century Modern Side End Table with Drawers, Bedside Tables with Solid Wood Legs, Bedside Table with Storage Accent Table for Living Room Bedroom, White [SEP] $64.99 [SEP] B01MRBR1KR [SEP] Tolle Mid-Century Modern Upholstered Barstools (Set of 2), Gray and Natural Oak [SEP] $162.64\n\nRecent actions:\nsearch[i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09llvrst7]",
+              "4": "click[b072fvhrz5]",
+              "5": "click[b096fz5fkc]",
+              "6": "click[b07lgfg59k]",
+              "7": "click[b07vlymclh]",
+              "8": "click[b07cdz1sh5]",
+              "9": "click[b07pc1pdxg]",
+              "10": "click[b09m2zjwpd]",
+              "11": "click[b09nspm63h]",
+              "12": "click[b01mrbr1kr]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "8e4ac43b3964688b782994bd309a5d01d335fc656b5cf0e8b3045787f52f65fe",
+      "attempts": [
+        {
+          "seconds": 0.3751709721982479,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37528830021619797,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.51,
+            "probabilities": {
+              "2": 0.25,
+              "3": 0.0,
+              "9": 0.0,
+              "8": 0.0,
+              "6": 0.01,
+              "4": 0.01,
+              "0": 0.08,
+              "10": 0.03,
+              "11": 0.0,
+              "12": 0.01,
+              "1": 0.56,
+              "5": 0.04,
+              "7": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1201,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[< prev]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9248727113008499
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B073WZXBZJ [SEP] SIMPLIHOME Lowell Bentwood Dining Chair, Charcoal Grey Linen Look Fabric and SOLID WOOD, Rounded, Upholstered, For the Dining Room, Mid Century Modern [SEP] $154.18 [SEP] B01N22WDF0 [SEP] Christopher Knight Home Issaic Grey Fabric with Oak Finish Dining Chairs (Set of 2) [SEP] $199.99 [SEP] B09KXSN8WW [SEP] ANJHOME Mid Century Modern Accent Chair, Single Fabric Lounge Reading Armchair with Solid Wood Frame, Easy Assembly Arm Chairs for Living Room, Beige [SEP] $189.99 [SEP] B07VXTT5JW [SEP] SIMPLIHOME Warren 28 inch Wide Mid Century Modern Accent Chair in Woven Fabric in Mocha, with Removable Slip Cover, Metal Hairpin Legs, Simple Assembly, Just Attach Legs [SEP] $314.98 [SEP] B093K58KZJ [SEP] Container Furniture Direct Arul Mid Century Modern Leather Air Upholstered Living Room, Sofa, Midnight Black [SEP] $442.93 [SEP] B07P6JTVZV [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Leather Accent Chair, 32.7\"W, Caramel [SEP] $675.48 [SEP] B0914MSTVF [SEP] Manhattan Comfort Cronkite Mid Century Modern Living Room Tulip Style Twill Weave Accent Chair, 28.7\", Single, Grey [SEP] $427.87 [SEP] B00M5EABOE [SEP] Mod Made Mid Century Modern Chrome Wire Counter Stool for Kitchen or Bar, Black [SEP] $185.0 [SEP] B00M5EAF68 [SEP] Mod Made Mid Century Modern Chrome Wire Counter Stool for Kitchen or Bar, White [SEP] $100.0 [SEP] B096FYLW5X [SEP] Dining Chairs Set of 4, Modern Dining Room Chairs Set Mid Century Kitchen Chairs Upholstered Accent Chairs Side Chairs with Metal Legs - Light Grey [SEP] $184.99",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B073WZXBZJ [SEP] SIMPLIHOME Lowell Bentwood Dining Chair, Charcoal Grey Linen Look Fabric and SOLID WOOD, Rounded, Upholstered, For the Dining Room, Mid Century Modern [SEP] $154.18 [SEP] B01N22WDF0 [SEP] Christopher Knight Home Issaic Grey Fabric with Oak Finish Dining Chairs (Set of 2) [SEP] $199.99 [SEP] B09KXSN8WW [SEP] ANJHOME Mid Century Modern Accent Chair, Single Fabric Lounge Reading Armchair with Solid Wood Frame, Easy Assembly Arm Chairs for Living Room, Beige [SEP] $189.99 [SEP] B07VXTT5JW [SEP] SIMPLIHOME Warren 28 inch Wide Mid Century Modern Accent Chair in Woven Fabric in Mocha, with Removable Slip Cover, Metal Hairpin Legs, Simple Assembly, Just Attach Legs [SEP] $314.98 [SEP] B093K58KZJ [SEP] Container Furniture Direct Arul Mid Century Modern Leather Air Upholstered Living Room, Sofa, Midnight Black [SEP] $442.93 [SEP] B07P6JTVZV [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Leather Accent Chair, 32.7\"W, Caramel [SEP] $675.48 [SEP] B0914MSTVF [SEP] Manhattan Comfort Cronkite Mid Century Modern Living Room Tulip Style Twill Weave Accent Chair, 28.7\", Single, Grey [SEP] $427.87 [SEP] B00M5EABOE [SEP] Mod Made Mid Century Modern Chrome Wire Counter Stool for Kitchen or Bar, Black [SEP] $185.0 [SEP] B00M5EAF68 [SEP] Mod Made Mid Century Modern Chrome Wire Counter Stool for Kitchen or Bar, White [SEP] $100.0 [SEP] B096FYLW5X [SEP] Dining Chairs Set of 4, Modern Dining Room Chairs Set Mid Century Kitchen Chairs Upholstered Accent Chairs Side Chairs with Metal Legs - Light Grey [SEP] $184.99\n\nRecent actions:\nsearch[i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars]\nclick[next >]\nclick[< prev]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b073wzxbzj]",
+              "3": "click[b01n22wdf0]",
+              "4": "click[b09kxsn8ww]",
+              "5": "click[b07vxtt5jw]",
+              "6": "click[b093k58kzj]",
+              "7": "click[b07p6jtvzv]",
+              "8": "click[b0914mstvf]",
+              "9": "click[b00m5eaboe]",
+              "10": "click[b00m5eaf68]",
+              "11": "click[b096fylw5x]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "bd6fda5c848d2f1b07da83aa5139a27cbe9c1ec34894fb36ede84da27f0f9c09",
+      "attempts": [
+        {
+          "seconds": 0.3732600696384907,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37340619415044785,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.54,
+            "probabilities": {
+              "1": 0.58,
+              "2": 0.13,
+              "5": 0.0,
+              "8": 0.01,
+              "11": 0.04,
+              "3": 0.01,
+              "7": 0.0,
+              "9": 0.01,
+              "0": 0.12,
+              "4": 0.0,
+              "10": 0.1,
+              "6": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1192,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.3673277981579304
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09LLVRST7 [SEP] Mid Century Single Sofa for Living Room, Modern Upholstered Accent Chair, Club Chair, TV Armchair for Small Space Home, Office, Coffee Chair, Aqua Blue [SEP] $239.0 [SEP] B072FVHRZ5 [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Apartment Sofa, 72\"W, Light Grey [SEP] $761.58 [SEP] B096FZ5FKC [SEP] Dining Chairs Set of 4 - Mid Century Dining Room Chairs Modern Accent Chairs for Kitchen Living Room - Light Grey [SEP] $184.99 [SEP] B07LGFG59K [SEP] Modway Empress Mid-Century Modern Upholstered Fabric Side Armless Lounge Accent Chair in Gray [SEP] $364.2 [SEP] B07VLYMCLH [SEP] Top Space Accent Chair Living Room Chairs Arm Chair Single Sofa Upholstered Comfy Fabric Mid-Century Modern Furniture for Bedroom Office Club (1PCS-1, Beige) [SEP] $254.99 [SEP] B07CDZ1SH5 [SEP] Christopher Knight Home Aurla Fabric Accent Chair, Beige [SEP] $247.15 [SEP] B07PC1PDXG [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Leather Apartment Sofa, 72\"W, Caramel [SEP] $1433.98 [SEP] B09M2ZJWPD [SEP] Altrobene Mid-Century Accent Chairs Set of 2, Velvet Dinging Chair, Living Room Bedroom Chair Set, Golden Finished, Grey [SEP] $199.99 [SEP] B09NSPM63H [SEP] Minimalist Nightstand, Mid Century Modern Side End Table with Drawers, Bedside Tables with Solid Wood Legs, Bedside Table with Storage Accent Table for Living Room Bedroom, White [SEP] $64.99 [SEP] B01MRBR1KR [SEP] Tolle Mid-Century Modern Upholstered Barstools (Set of 2), Gray and Natural Oak [SEP] $162.64",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09LLVRST7 [SEP] Mid Century Single Sofa for Living Room, Modern Upholstered Accent Chair, Club Chair, TV Armchair for Small Space Home, Office, Coffee Chair, Aqua Blue [SEP] $239.0 [SEP] B072FVHRZ5 [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Apartment Sofa, 72\"W, Light Grey [SEP] $761.58 [SEP] B096FZ5FKC [SEP] Dining Chairs Set of 4 - Mid Century Dining Room Chairs Modern Accent Chairs for Kitchen Living Room - Light Grey [SEP] $184.99 [SEP] B07LGFG59K [SEP] Modway Empress Mid-Century Modern Upholstered Fabric Side Armless Lounge Accent Chair in Gray [SEP] $364.2 [SEP] B07VLYMCLH [SEP] Top Space Accent Chair Living Room Chairs Arm Chair Single Sofa Upholstered Comfy Fabric Mid-Century Modern Furniture for Bedroom Office Club (1PCS-1, Beige) [SEP] $254.99 [SEP] B07CDZ1SH5 [SEP] Christopher Knight Home Aurla Fabric Accent Chair, Beige [SEP] $247.15 [SEP] B07PC1PDXG [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Leather Apartment Sofa, 72\"W, Caramel [SEP] $1433.98 [SEP] B09M2ZJWPD [SEP] Altrobene Mid-Century Accent Chairs Set of 2, Velvet Dinging Chair, Living Room Bedroom Chair Set, Golden Finished, Grey [SEP] $199.99 [SEP] B09NSPM63H [SEP] Minimalist Nightstand, Mid Century Modern Side End Table with Drawers, Bedside Tables with Solid Wood Legs, Bedside Table with Storage Accent Table for Living Room Bedroom, White [SEP] $64.99 [SEP] B01MRBR1KR [SEP] Tolle Mid-Century Modern Upholstered Barstools (Set of 2), Gray and Natural Oak [SEP] $162.64\n\nRecent actions:\nsearch[i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars]\nclick[next >]\nclick[< prev]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09llvrst7]",
+              "4": "click[b072fvhrz5]",
+              "5": "click[b096fz5fkc]",
+              "6": "click[b07lgfg59k]",
+              "7": "click[b07vlymclh]",
+              "8": "click[b07cdz1sh5]",
+              "9": "click[b07pc1pdxg]",
+              "10": "click[b09m2zjwpd]",
+              "11": "click[b09nspm63h]",
+              "12": "click[b01mrbr1kr]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "577045fbbe23ae3e02c1a2c1bb504f0f5eefb1e13bfba11913dbad04802a1435",
+      "attempts": [
+        {
+          "seconds": 0.3984661027789116,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3985946699976921,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.38,
+            "probabilities": {
+              "12": 0.01,
+              "5": 0.05,
+              "9": 0.0,
+              "4": 0.01,
+              "7": 0.0,
+              "2": 0.12,
+              "0": 0.42,
+              "10": 0.05,
+              "1": 0.31,
+              "3": 0.01,
+              "8": 0.0,
+              "6": 0.02,
+              "11": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1210,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.7881868593394756
+    },
+    {
+      "step": 5,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars [SEP] Search",
+      "action": "search[i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.8319929465651512
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B073WZXBZJ [SEP] SIMPLIHOME Lowell Bentwood Dining Chair, Charcoal Grey Linen Look Fabric and SOLID WOOD, Rounded, Upholstered, For the Dining Room, Mid Century Modern [SEP] $154.18 [SEP] B01N22WDF0 [SEP] Christopher Knight Home Issaic Grey Fabric with Oak Finish Dining Chairs (Set of 2) [SEP] $199.99 [SEP] B09KXSN8WW [SEP] ANJHOME Mid Century Modern Accent Chair, Single Fabric Lounge Reading Armchair with Solid Wood Frame, Easy Assembly Arm Chairs for Living Room, Beige [SEP] $189.99 [SEP] B07VXTT5JW [SEP] SIMPLIHOME Warren 28 inch Wide Mid Century Modern Accent Chair in Woven Fabric in Mocha, with Removable Slip Cover, Metal Hairpin Legs, Simple Assembly, Just Attach Legs [SEP] $314.98 [SEP] B093K58KZJ [SEP] Container Furniture Direct Arul Mid Century Modern Leather Air Upholstered Living Room, Sofa, Midnight Black [SEP] $442.93 [SEP] B07P6JTVZV [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Leather Accent Chair, 32.7\"W, Caramel [SEP] $675.48 [SEP] B0914MSTVF [SEP] Manhattan Comfort Cronkite Mid Century Modern Living Room Tulip Style Twill Weave Accent Chair, 28.7\", Single, Grey [SEP] $427.87 [SEP] B00M5EABOE [SEP] Mod Made Mid Century Modern Chrome Wire Counter Stool for Kitchen or Bar, Black [SEP] $185.0 [SEP] B00M5EAF68 [SEP] Mod Made Mid Century Modern Chrome Wire Counter Stool for Kitchen or Bar, White [SEP] $100.0 [SEP] B096FYLW5X [SEP] Dining Chairs Set of 4, Modern Dining Room Chairs Set Mid Century Kitchen Chairs Upholstered Accent Chairs Side Chairs with Metal Legs - Light Grey [SEP] $184.99",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B073WZXBZJ [SEP] SIMPLIHOME Lowell Bentwood Dining Chair, Charcoal Grey Linen Look Fabric and SOLID WOOD, Rounded, Upholstered, For the Dining Room, Mid Century Modern [SEP] $154.18 [SEP] B01N22WDF0 [SEP] Christopher Knight Home Issaic Grey Fabric with Oak Finish Dining Chairs (Set of 2) [SEP] $199.99 [SEP] B09KXSN8WW [SEP] ANJHOME Mid Century Modern Accent Chair, Single Fabric Lounge Reading Armchair with Solid Wood Frame, Easy Assembly Arm Chairs for Living Room, Beige [SEP] $189.99 [SEP] B07VXTT5JW [SEP] SIMPLIHOME Warren 28 inch Wide Mid Century Modern Accent Chair in Woven Fabric in Mocha, with Removable Slip Cover, Metal Hairpin Legs, Simple Assembly, Just Attach Legs [SEP] $314.98 [SEP] B093K58KZJ [SEP] Container Furniture Direct Arul Mid Century Modern Leather Air Upholstered Living Room, Sofa, Midnight Black [SEP] $442.93 [SEP] B07P6JTVZV [SEP] Amazon Brand – Rivet Cove Mid-Century Modern Tufted Leather Accent Chair, 32.7\"W, Caramel [SEP] $675.48 [SEP] B0914MSTVF [SEP] Manhattan Comfort Cronkite Mid Century Modern Living Room Tulip Style Twill Weave Accent Chair, 28.7\", Single, Grey [SEP] $427.87 [SEP] B00M5EABOE [SEP] Mod Made Mid Century Modern Chrome Wire Counter Stool for Kitchen or Bar, Black [SEP] $185.0 [SEP] B00M5EAF68 [SEP] Mod Made Mid Century Modern Chrome Wire Counter Stool for Kitchen or Bar, White [SEP] $100.0 [SEP] B096FYLW5X [SEP] Dining Chairs Set of 4, Modern Dining Room Chairs Set Mid Century Kitchen Chairs Upholstered Accent Chairs Side Chairs with Metal Legs - Light Grey [SEP] $184.99\n\nRecent actions:\nsearch[i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[back to search]\nsearch[i'm looking for some mid-century style grey chairs, and price lower than 150.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b073wzxbzj]",
+              "3": "click[b01n22wdf0]",
+              "4": "click[b09kxsn8ww]",
+              "5": "click[b07vxtt5jw]",
+              "6": "click[b093k58kzj]",
+              "7": "click[b07p6jtvzv]",
+              "8": "click[b0914mstvf]",
+              "9": "click[b00m5eaboe]",
+              "10": "click[b00m5eaf68]",
+              "11": "click[b096fylw5x]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "d110d3b7b81bd377032368b11ba4bff1e65f986011b553361e8aa64f52a699fc",
+      "attempts": [
+        {
+          "seconds": 0.3658807575702667,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.36601563915610313,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.67,
+            "probabilities": {
+              "5": 0.0,
+              "9": 0.0,
+              "4": 0.0,
+              "3": 0.01,
+              "7": 0.0,
+              "1": 0.71,
+              "10": 0.07,
+              "2": 0.16,
+              "0": 0.01,
+              "8": 0.0,
+              "6": 0.0,
+              "11": 0.04
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1227,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.272694982588291
+    }
+  ]
+}

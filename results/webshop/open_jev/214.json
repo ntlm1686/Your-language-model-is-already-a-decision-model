@@ -1,0 +1,2764 @@
+{
+  "task_id": 214,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars",
+  "instruction_sha256": "03c52dfc48401a68eb9f167d8ff0b9ab64c719976ba8fd1f0bbacaf4df51bf22",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "repeated_state_action",
+  "steps": 43,
+  "elapsed_seconds": 8.829043067991734,
+  "decision_seconds": 6.458009775727987,
+  "input_tokens": 116476,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.05310259759426117
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07SXVF814 [SEP] Men’s Chalk Stripe Red Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07DGQ1Y53 [SEP] Women’s Houndstooth Chef Pant (XS-3X, 2 Colors) [SEP] $28.98 to $31.98 [SEP] B07VFY5PC7 [SEP] Men's Performance Stretch Jogger Chef Pant (2 Colors, S-3X) [SEP] $43.98 [SEP] B07CZ2GN56 [SEP] Men’s Calavera Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QCJGXMW [SEP] Men’s Chalkboard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B005LWIBEY [SEP] Propper Women's Tactical Pant [SEP] $29.98 to $49.87 [SEP] B07J4XVR46 [SEP] Women’s Stretch Drawstring Chef Pant (XS-3X) [SEP] $29.98 to $31.98 [SEP] B09HMDR23X [SEP] Men Business Dress Pants Skinny Fit Plaid Flat-Front Stretch Pencil Tapered Pants Fashion Dress Trousers with Pockets [SEP] $21.99 to $22.29 [SEP] B07KG623WS [SEP] 100 Pairs Eye Gel Pads, Lint Free Under Eye Patches for Eyelash Extensions, Premium Eye Mask Beauty Tool Kit [SEP] $12.99 [SEP] B00PX65LU0 [SEP] Rawik Womens Insulated Water-Resistant Storm Pant [SEP] $39.99 to $75.0",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07SXVF814 [SEP] Men’s Chalk Stripe Red Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07DGQ1Y53 [SEP] Women’s Houndstooth Chef Pant (XS-3X, 2 Colors) [SEP] $28.98 to $31.98 [SEP] B07VFY5PC7 [SEP] Men's Performance Stretch Jogger Chef Pant (2 Colors, S-3X) [SEP] $43.98 [SEP] B07CZ2GN56 [SEP] Men’s Calavera Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QCJGXMW [SEP] Men’s Chalkboard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B005LWIBEY [SEP] Propper Women's Tactical Pant [SEP] $29.98 to $49.87 [SEP] B07J4XVR46 [SEP] Women’s Stretch Drawstring Chef Pant (XS-3X) [SEP] $29.98 to $31.98 [SEP] B09HMDR23X [SEP] Men Business Dress Pants Skinny Fit Plaid Flat-Front Stretch Pencil Tapered Pants Fashion Dress Trousers with Pockets [SEP] $21.99 to $22.29 [SEP] B07KG623WS [SEP] 100 Pairs Eye Gel Pads, Lint Free Under Eye Patches for Eyelash Extensions, Premium Eye Mask Beauty Tool Kit [SEP] $12.99 [SEP] B00PX65LU0 [SEP] Rawik Womens Insulated Water-Resistant Storm Pant [SEP] $39.99 to $75.0\n\nRecent actions:\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07sxvf814]",
+              "3": "click[b07dgq1y53]",
+              "4": "click[b07vfy5pc7]",
+              "5": "click[b07cz2gn56]",
+              "6": "click[b07qcjgxmw]",
+              "7": "click[b005lwibey]",
+              "8": "click[b07j4xvr46]",
+              "9": "click[b09hmdr23x]",
+              "10": "click[b07kg623ws]",
+              "11": "click[b00px65lu0]"
+            }
+          }
+        }
+      },
+      "request_sha256": "9983313c865f3d138ce8110e28899e927fcda92864883de5b8b3aa2f8d26a91b",
+      "attempts": [
+        {
+          "seconds": 0.37001828476786613,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3701506480574608,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.12909916166063662,
+              "1": 0.2558393967898646,
+              "2": 0.03539932748732976,
+              "3": 0.03705792115907449,
+              "4": 0.06467882971427887,
+              "5": 0.03282424956706223,
+              "6": 0.03025066853042515,
+              "7": 0.1318716129895694,
+              "8": 0.06105580375494255,
+              "9": 0.030187558123164853,
+              "10": 0.019170344393704537,
+              "11": 0.17256512582994696
+            },
+            "confidence": 0.18818843286167053
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8357,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3679847866296768,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4996524341404438
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00XD06YY0 [SEP] I'm A Mushroom and I Hate This Game Graphic Novelty Sarcastic Funny T Shirt [SEP] $14.99 to $18.99 [SEP] B07J5QCDYJ [SEP] Men’s Stretch Jean Style Chef Pant (XS-3X) [SEP] $29.98 to $32.98 [SEP] B08256585Q [SEP] Rustic Storage Furniture Lift Top Cabinet Convertible Coffee Table Lower Shelf Hidden Compartment Home Decor Useful Solid Wood Bedroom Living Room Office Home Condo Apartment Book Shelves Laptop Vase [SEP] $199.99 [SEP] B073RX9ZJ3 [SEP] Titan01 Men's Spectator Tweed Plaid Two Tone Wingtips Oxfords Perforated Lace Up Dress Shoes [SEP] $41.99 [SEP] B07HM93W4P [SEP] Men’s Stretch Cargo Chef Pant (XS-3X, Black) [SEP] $30.98 to $35.98 [SEP] B07BS3HGMH [SEP] Men’s Boneyard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07D5JS3KW [SEP] Men’s Donut Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QYCMRQW [SEP] Men’s Knives Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07VBPXCGS [SEP] Men’s Piggin Out Print Baggy Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $33.98 [SEP] B07VCVS7YJ [SEP] Men’s Graffiti Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00XD06YY0 [SEP] I'm A Mushroom and I Hate This Game Graphic Novelty Sarcastic Funny T Shirt [SEP] $14.99 to $18.99 [SEP] B07J5QCDYJ [SEP] Men’s Stretch Jean Style Chef Pant (XS-3X) [SEP] $29.98 to $32.98 [SEP] B08256585Q [SEP] Rustic Storage Furniture Lift Top Cabinet Convertible Coffee Table Lower Shelf Hidden Compartment Home Decor Useful Solid Wood Bedroom Living Room Office Home Condo Apartment Book Shelves Laptop Vase [SEP] $199.99 [SEP] B073RX9ZJ3 [SEP] Titan01 Men's Spectator Tweed Plaid Two Tone Wingtips Oxfords Perforated Lace Up Dress Shoes [SEP] $41.99 [SEP] B07HM93W4P [SEP] Men’s Stretch Cargo Chef Pant (XS-3X, Black) [SEP] $30.98 to $35.98 [SEP] B07BS3HGMH [SEP] Men’s Boneyard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07D5JS3KW [SEP] Men’s Donut Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QYCMRQW [SEP] Men’s Knives Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07VBPXCGS [SEP] Men’s Piggin Out Print Baggy Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $33.98 [SEP] B07VCVS7YJ [SEP] Men’s Graffiti Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98\n\nRecent actions:\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b00xd06yy0]",
+              "4": "click[b07j5qcdyj]",
+              "5": "click[b08256585q]",
+              "6": "click[b073rx9zj3]",
+              "7": "click[b07hm93w4p]",
+              "8": "click[b07bs3hgmh]",
+              "9": "click[b07d5js3kw]",
+              "10": "click[b07qycmrqw]",
+              "11": "click[b07vbpxcgs]",
+              "12": "click[b07vcvs7yj]"
+            }
+          }
+        }
+      },
+      "request_sha256": "68385f5dc902f2a107dce1100d33f1de447a9a29005b988a254d6ef053e3bcf9",
+      "attempts": [
+        {
+          "seconds": 0.42239102721214294,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4225514233112335,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.14092821336593805,
+              "1": 0.11738668715973313,
+              "2": 0.22229156582692816,
+              "3": 0.03507164780771363,
+              "4": 0.11379455740797356,
+              "5": 0.024356917170085795,
+              "6": 0.04073757987004803,
+              "7": 0.03760468460026133,
+              "8": 0.04823544813478726,
+              "9": 0.043422598943935686,
+              "10": 0.041845029532544216,
+              "11": 0.08458232832578279,
+              "12": 0.04974274185426829
+            },
+            "confidence": 0.15748252964583884
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9674,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.42001989111304283,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9874631799757481
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00RKNWG34 [SEP] Townforst Women's Slip and Oil Resistant Non Slip Work Shoes Jess PU Leather Slip-On Flat [SEP] $18.98 to $34.98 [SEP] B07VDVDF5K [SEP] Men's Performance Stretch Chef Coat with Zipper Closure (S-3X, 2 Colors) [SEP] $42.98 [SEP] B07YTWQYW6 [SEP] Hebelin 2pcs Messy Hair Bun Extensions Scrunchy Updo Elastic Wavy Curly Donut Chignon Hairpiece [SEP] $13.98 [SEP] B09BNHCCPQ [SEP] Women Boho Print Vintage Casual Summer Fall Racerback Sleeveless Spaghetti Straps Long Harem Pants Jumpsuit Rompers Overall [SEP] $7.1 to $10.7 [SEP] B00G6HSHMO [SEP] Swix Women's Standard Lillehammer Insulated Windproof Water-Resistant Breathable Stretchy Active Pants [SEP] $100.0 [SEP] B09KPJ4FT8 [SEP] Rustic Floating Shelves, Set of 4, Wooden Wall Shelves with Bars, Storage Shelves for Bathroom, Kitchen, Living Rooms, Bedroom (Dark Brown) [SEP] $28.99 [SEP] B09SHYD3PZ [SEP] Men's 2 Piece Tracksuits Floral Hawaiian Paisley Printed Suit Summer Casual Short Sleeve Shirt and Shorts Beach Outfit [SEP] $23.99 to $27.99 [SEP] B099SK9JR3 [SEP] Asset Tactical Jeans [SEP] $75.0 [SEP] B07X92R51T [SEP] Asibeiul Men's High Visibility Road Work Casual Pants Relaxed Waterproof Rain Over Trousers Pocket High Vis Weather Watch [SEP] $8.99 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00RKNWG34 [SEP] Townforst Women's Slip and Oil Resistant Non Slip Work Shoes Jess PU Leather Slip-On Flat [SEP] $18.98 to $34.98 [SEP] B07VDVDF5K [SEP] Men's Performance Stretch Chef Coat with Zipper Closure (S-3X, 2 Colors) [SEP] $42.98 [SEP] B07YTWQYW6 [SEP] Hebelin 2pcs Messy Hair Bun Extensions Scrunchy Updo Elastic Wavy Curly Donut Chignon Hairpiece [SEP] $13.98 [SEP] B09BNHCCPQ [SEP] Women Boho Print Vintage Casual Summer Fall Racerback Sleeveless Spaghetti Straps Long Harem Pants Jumpsuit Rompers Overall [SEP] $7.1 to $10.7 [SEP] B00G6HSHMO [SEP] Swix Women's Standard Lillehammer Insulated Windproof Water-Resistant Breathable Stretchy Active Pants [SEP] $100.0 [SEP] B09KPJ4FT8 [SEP] Rustic Floating Shelves, Set of 4, Wooden Wall Shelves with Bars, Storage Shelves for Bathroom, Kitchen, Living Rooms, Bedroom (Dark Brown) [SEP] $28.99 [SEP] B09SHYD3PZ [SEP] Men's 2 Piece Tracksuits Floral Hawaiian Paisley Printed Suit Summer Casual Short Sleeve Shirt and Shorts Beach Outfit [SEP] $23.99 to $27.99 [SEP] B099SK9JR3 [SEP] Asset Tactical Jeans [SEP] $75.0 [SEP] B07X92R51T [SEP] Asibeiul Men's High Visibility Road Work Casual Pants Relaxed Waterproof Rain Over Trousers Pocket High Vis Weather Watch [SEP] $8.99 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95\n\nRecent actions:\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b00rknwg34]",
+              "4": "click[b07vdvdf5k]",
+              "5": "click[b07ytwqyw6]",
+              "6": "click[b09bnhccpq]",
+              "7": "click[b00g6hshmo]",
+              "8": "click[b09kpj4ft8]",
+              "9": "click[b09shyd3pz]",
+              "10": "click[b099sk9jr3]",
+              "11": "click[b07x92r51t]",
+              "12": "click[b00004rg7m]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b6a8bdb84e25704b1e266dda1d5e262c328d6b8ce25329125734d88c2f65b130",
+      "attempts": [
+        {
+          "seconds": 0.3897326849400997,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.38990847393870354,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.14855524635656844,
+              "1": 0.13823295662241955,
+              "2": 0.22687479647670675,
+              "3": 0.029137921080307088,
+              "4": 0.02071483286784113,
+              "5": 0.029163964195555635,
+              "6": 0.08915154085869459,
+              "7": 0.038455759380619924,
+              "8": 0.040505534877509616,
+              "9": 0.049578727947540195,
+              "10": 0.0649547242546159,
+              "11": 0.11320756893828919,
+              "12": 0.011466426143331994
+            },
+            "confidence": 0.16244769618309896
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8816,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.38763244077563286,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.4431523941457272
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07DGKC4BR [SEP] Women’s Stretch Yoga Cargo Chef Pant (XS-3X) [SEP] $29.98 to $31.98 [SEP] B09MRXZ6PH [SEP] Lightweight Quilted Puffer Down Vest for Women Fashion Shiny Water-Resistant Full-Zip Down Puffer Jacket with Hood [SEP] $31.48 to $33.98 [SEP] B09MF8VTL9 [SEP] 24Pcs Dollar Pattern Gold Dreadlock Hair Clips- Gold Dreadlock Charms Accessories- Dreadlock Hair Clips with Shiny Rhinestones- Gold Hair Accessories for Women Girls Braids Party [SEP] $4.99 [SEP] B09FX4MJV9 [SEP] DIYAGO MEN Strap Cuffs Ankle Renaissance Pants Casual Regular Fit Vintage Trouser Pant Streetwear Trendy Pant with Pockets [SEP] $12.99 to $16.99 [SEP] B000GIPOKW [SEP] Double H 12 Inch DH1552 Mens Gel ICE Work Western Boot [SEP] $218.95 [SEP] B084GBWF2B [SEP] Rugged Bluetooth Headphones for Working Out and Staying Active - The Mini Rhinos Bluetooth Headphones [SEP] $49.95 [SEP] B09DCL6C9C [SEP] Ombre Blonde Headband Wig Brown to Blonde ombre headband Wigs for Women Water Wave Blonde Hair Resistant Fiber with Headband Attached for Daily Party 150% density(ombre blonde wig 22\") [SEP] $22.69 [SEP] B097BQZZN6 [SEP] SITKA Gear Back Forty Pant [SEP] $139.0 [SEP] B00B0479W2 [SEP] Land O Lakes European Style Creamy Blend Butter - Whipped, 5 Pound -- 2 per case. [SEP] $68.27 [SEP] B08XMXP16Q [SEP] 2 Memphis Audio SRXP62WT SRX Pro 6.5\" 250 Watt Car Speakers Bundle with Rockville RPB27 20w Rugged Portable Waterproof Bluetooth Speaker w Bumping Bass! [SEP] $139.9",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07DGKC4BR [SEP] Women’s Stretch Yoga Cargo Chef Pant (XS-3X) [SEP] $29.98 to $31.98 [SEP] B09MRXZ6PH [SEP] Lightweight Quilted Puffer Down Vest for Women Fashion Shiny Water-Resistant Full-Zip Down Puffer Jacket with Hood [SEP] $31.48 to $33.98 [SEP] B09MF8VTL9 [SEP] 24Pcs Dollar Pattern Gold Dreadlock Hair Clips- Gold Dreadlock Charms Accessories- Dreadlock Hair Clips with Shiny Rhinestones- Gold Hair Accessories for Women Girls Braids Party [SEP] $4.99 [SEP] B09FX4MJV9 [SEP] DIYAGO MEN Strap Cuffs Ankle Renaissance Pants Casual Regular Fit Vintage Trouser Pant Streetwear Trendy Pant with Pockets [SEP] $12.99 to $16.99 [SEP] B000GIPOKW [SEP] Double H 12 Inch DH1552 Mens Gel ICE Work Western Boot [SEP] $218.95 [SEP] B084GBWF2B [SEP] Rugged Bluetooth Headphones for Working Out and Staying Active - The Mini Rhinos Bluetooth Headphones [SEP] $49.95 [SEP] B09DCL6C9C [SEP] Ombre Blonde Headband Wig Brown to Blonde ombre headband Wigs for Women Water Wave Blonde Hair Resistant Fiber with Headband Attached for Daily Party 150% density(ombre blonde wig 22\") [SEP] $22.69 [SEP] B097BQZZN6 [SEP] SITKA Gear Back Forty Pant [SEP] $139.0 [SEP] B00B0479W2 [SEP] Land O Lakes European Style Creamy Blend Butter - Whipped, 5 Pound -- 2 per case. [SEP] $68.27 [SEP] B08XMXP16Q [SEP] 2 Memphis Audio SRXP62WT SRX Pro 6.5\" 250 Watt Car Speakers Bundle with Rockville RPB27 20w Rugged Portable Waterproof Bluetooth Speaker w Bumping Bass! [SEP] $139.9\n\nRecent actions:\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07dgkc4br]",
+              "4": "click[b09mrxz6ph]",
+              "5": "click[b09mf8vtl9]",
+              "6": "click[b09fx4mjv9]",
+              "7": "click[b000gipokw]",
+              "8": "click[b084gbwf2b]",
+              "9": "click[b09dcl6c9c]",
+              "10": "click[b097bqzzn6]",
+              "11": "click[b00b0479w2]",
+              "12": "click[b08xmxp16q]"
+            }
+          }
+        }
+      },
+      "request_sha256": "cbb34747b5a1bba3e6aa90fa43e676de6d4308ab663b8012e6444761d056278d",
+      "attempts": [
+        {
+          "seconds": 0.42297743260860443,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4231387600302696,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.15175941560040876,
+              "1": 0.1666034996425943,
+              "2": 0.21914950190105206,
+              "3": 0.14962773528145848,
+              "4": 0.024422774477987522,
+              "5": 0.028691373068764025,
+              "6": 0.10002990102439109,
+              "7": 0.018770457188234647,
+              "8": 0.03991968046492465,
+              "9": 0.028128507786126748,
+              "10": 0.03452206882032374,
+              "11": 0.012031776459391356,
+              "12": 0.026343308284342542
+            },
+            "confidence": 0.15407862705947306
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9560,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.42093295603990555,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.9546888880431652
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B088FSC5SL [SEP] DAGEDA Black 40 Pairs 4 PC 4D Eyebrow Transfers Stickers, Long Lasting Natural Waterproof Bionic Eyebrow Water Transfer Tattoo Eyebrow Sticker For Woman Man Makeup Tool（# Fall） [SEP] $6.99 [SEP] B08Y66JJT3 [SEP] Men’s Asymmetrical Premium Denim Chef Coat with Mesh Side Panels (S-3X) [SEP] $42.98 [SEP] B00PIG2EKK [SEP] ARTLAND Modern 100% Hand Painted Framed Wall Art \"Colorful City\" 3-Piece Gallery-Wrapped Abstract Oil Painting on Canvas Ready to Hang for Living Room for Wall Decor Home Decoration 24x36inches [SEP] $49.66 [SEP] B01LBRNWPK [SEP] Townforst Sandy Slip Resistant Black Sunbrella Water Resistant Non Slip Waitress Shoes [SEP] $30.99 to $41.95 [SEP] B09K1PLBR5 [SEP] Jacobsen Hall Tree Brown [SEP] $263.08 [SEP] B0778TZKXR [SEP] OSD Audio ICE600WRS 6.5\" in-Ceiling/in-Wall 300W Water-Resistant Outdoor Speaker Set of 4 Speakers [SEP] $103.99 [SEP] B08MQQPR73 [SEP] Columbia Women's Sweet View Ii Insulated Pant [SEP] $54.9 to $109.98 [SEP] B095M4L6JF [SEP] Denim Cargo Pants for Women,Kcocoo Plus Size Casual Mid Waist Wide Leg Baggy Pants Outdoor Lounge Pants Trousers Sweatpants [SEP] $19.99 to $36.68 [SEP] B0834V2NFD [SEP] Espadrilles Wedges for Women,Casual Espadrille Slide On Platform Sandals Comfort Open Toe Ankle Elastic Strappy Studded Flatform Sandal Shoes [SEP] $3.42 to $15.52 [SEP] B08V4T9X3S [SEP] Black Gold Rugs 100 Dollar Bill Area Runner Money Rugs Nonslip Rubber Backed Laundry Room Rug Runner Floor Mat for Living Room Dining Room Washroom Bathroom Mudroom Kitchen Doormat Hallway 23.5\"X59\" [SEP] $44.99",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B088FSC5SL [SEP] DAGEDA Black 40 Pairs 4 PC 4D Eyebrow Transfers Stickers, Long Lasting Natural Waterproof Bionic Eyebrow Water Transfer Tattoo Eyebrow Sticker For Woman Man Makeup Tool（# Fall） [SEP] $6.99 [SEP] B08Y66JJT3 [SEP] Men’s Asymmetrical Premium Denim Chef Coat with Mesh Side Panels (S-3X) [SEP] $42.98 [SEP] B00PIG2EKK [SEP] ARTLAND Modern 100% Hand Painted Framed Wall Art \"Colorful City\" 3-Piece Gallery-Wrapped Abstract Oil Painting on Canvas Ready to Hang for Living Room for Wall Decor Home Decoration 24x36inches [SEP] $49.66 [SEP] B01LBRNWPK [SEP] Townforst Sandy Slip Resistant Black Sunbrella Water Resistant Non Slip Waitress Shoes [SEP] $30.99 to $41.95 [SEP] B09K1PLBR5 [SEP] Jacobsen Hall Tree Brown [SEP] $263.08 [SEP] B0778TZKXR [SEP] OSD Audio ICE600WRS 6.5\" in-Ceiling/in-Wall 300W Water-Resistant Outdoor Speaker Set of 4 Speakers [SEP] $103.99 [SEP] B08MQQPR73 [SEP] Columbia Women's Sweet View Ii Insulated Pant [SEP] $54.9 to $109.98 [SEP] B095M4L6JF [SEP] Denim Cargo Pants for Women,Kcocoo Plus Size Casual Mid Waist Wide Leg Baggy Pants Outdoor Lounge Pants Trousers Sweatpants [SEP] $19.99 to $36.68 [SEP] B0834V2NFD [SEP] Espadrilles Wedges for Women,Casual Espadrille Slide On Platform Sandals Comfort Open Toe Ankle Elastic Strappy Studded Flatform Sandal Shoes [SEP] $3.42 to $15.52 [SEP] B08V4T9X3S [SEP] Black Gold Rugs 100 Dollar Bill Area Runner Money Rugs Nonslip Rubber Backed Laundry Room Rug Runner Floor Mat for Living Room Dining Room Washroom Bathroom Mudroom Kitchen Doormat Hallway 23.5\"X59\" [SEP] $44.99\n\nRecent actions:\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b088fsc5sl]",
+              "4": "click[b08y66jjt3]",
+              "5": "click[b00pig2ekk]",
+              "6": "click[b01lbrnwpk]",
+              "7": "click[b09k1plbr5]",
+              "8": "click[b0778tzkxr]",
+              "9": "click[b08mqqpr73]",
+              "10": "click[b095m4l6jf]",
+              "11": "click[b0834v2nfd]",
+              "12": "click[b08v4t9x3s]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0351bd3d3bb091c0f4c86e23eaf6b4e3c06d85501c7aae64286d040372d58d12",
+      "attempts": [
+        {
+          "seconds": 0.4533243477344513,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4534844122827053,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.17459985816536552,
+              "1": 0.17210090285163596,
+              "2": 0.23528069365614368,
+              "3": 0.021282244042648932,
+              "4": 0.03108650042621626,
+              "5": 0.034038288418586776,
+              "6": 0.032893839126351514,
+              "7": 0.03135238236690798,
+              "8": 0.04661622790042024,
+              "9": 0.06464222443391161,
+              "10": 0.06944546487360749,
+              "11": 0.05354918907891959,
+              "12": 0.03311218465928457
+            },
+            "confidence": 0.17155408479415557
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10287,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.45067792758345604,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.4755426570773125
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "8ad451b207aa6fd9efc4da13bddf5996cc4340e1548428f272f8abc57f66631c",
+      "attempts": [
+        {
+          "seconds": 0.06799933314323425,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06810257956385612,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.31520840961578983,
+              "1": 0.25444664094201275,
+              "2": 0.43034494944219753
+            },
+            "confidence": 0.14551742416329613
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.065949697047472,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.5947745591402054
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "025801b1113dca332b6ea82ad5fba0cc5053a904b69a4e26e153ac09c88cbf14",
+      "attempts": [
+        {
+          "seconds": 0.07530691102147102,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07538942620158195,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.31205052283496426,
+              "1": 0.2588357067133181,
+              "2": 0.4291137704517177
+            },
+            "confidence": 0.1436706556775766
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 690,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06637438759207726,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.7196810953319073
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3628c18e81e93a172ee700d4e941463bf35fc1f78e13a5acb701ecc08a7e184f",
+      "attempts": [
+        {
+          "seconds": 0.06824811547994614,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06832181662321091,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3324406063879716,
+              "1": 0.2605387677742914,
+              "2": 0.40702062583773696
+            },
+            "confidence": 0.11053093875660545
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06675762310624123,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.8360042050480843
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "86e8b62102ac914c3ba99580d0ff6d79247e8ee8f7334814b3579ff200f6ad5c",
+      "attempts": [
+        {
+          "seconds": 0.06745212897658348,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06752587482333183,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.34052141756327314,
+              "1": 0.27309775045660867,
+              "2": 0.38638083198011824
+            },
+            "confidence": 0.07957124797017738
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 720,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0659312792122364,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.9775609746575356
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6b98c8dcc8593d250442235350d19b4f13c61e08ca0646092a8beee924922ea8",
+      "attempts": [
+        {
+          "seconds": 0.08598117157816887,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.08607357740402222,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3387926640611802,
+              "1": 0.28347626418932026,
+              "2": 0.37773107174949966
+            },
+            "confidence": 0.06659660762424933
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 738,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06573833897709846,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.113467015326023
+    },
+    {
+      "step": 11,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "fe463de5b62b0f99c118af2c0c7506ef8dc6198fb1d383029d6bce3ac9d39dca",
+      "attempts": [
+        {
+          "seconds": 0.06727195158600807,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06736285611987114,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.34623819767569614,
+              "1": 0.27361224401303536,
+              "2": 0.38014955831126857
+            },
+            "confidence": 0.07022433746690286
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06554553657770157,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.2497241012752056
+    },
+    {
+      "step": 12,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d62f124fca9a85ab6a1619379f5f26df43658e69a13f2c3bd7dde68a0409fb45",
+      "attempts": [
+        {
+          "seconds": 0.0663648284971714,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06645458564162254,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3453877250711326,
+              "1": 0.2832203314656082,
+              "2": 0.3713919434632592
+            },
+            "confidence": 0.05708791519488884
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06460976600646973,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.36549786478281
+    },
+    {
+      "step": 13,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "07f61a7db90c3ed5ec3f6e3fd12f68953b86f2052a02cf1cfe5ed56cb249cefa",
+      "attempts": [
+        {
+          "seconds": 0.06628807261586189,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0663747489452362,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3388594772906909,
+              "1": 0.2693888241739044,
+              "2": 0.3917516985354047
+            },
+            "confidence": 0.08762754780310707
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06477774307131767,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.4805655740201473
+    },
+    {
+      "step": 14,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6bc0f0417c32d866dcb8ca1a833157b1957015958866e068ca790e3b16b81875",
+      "attempts": [
+        {
+          "seconds": 0.06618509814143181,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0662635937333107,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3401011371187264,
+              "1": 0.27104949129885814,
+              "2": 0.38884937158241545
+            },
+            "confidence": 0.08327405737362319
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06478704139590263,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.5995153598487377
+    },
+    {
+      "step": 15,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "21480914b727a02b794495dc535b2c89ec93bdefb5ad1fb803b48de27dee8d2d",
+      "attempts": [
+        {
+          "seconds": 0.07569339126348495,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07578395307064056,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3272858987856562,
+              "1": 0.27016587013468185,
+              "2": 0.4025482310796619
+            },
+            "confidence": 0.1038223466194929
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0655938982963562,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.724867895245552
+    },
+    {
+      "step": 16,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a4ee09a4ad98ee8f60907144069ca7a3bc530b36a43d923003908a4021362128",
+      "attempts": [
+        {
+          "seconds": 0.0720600038766861,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07214118912816048,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33270217723824763,
+              "1": 0.2712901451777369,
+              "2": 0.3960076775840155
+            },
+            "confidence": 0.09401151637602327
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07026604935526848,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.8457185328006744
+    },
+    {
+      "step": 17,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a9db7cc4399d32b179f2ba8a94875baea4ae5faa543d22e787dad464fe325e44",
+      "attempts": [
+        {
+          "seconds": 0.07078762724995613,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07087140157818794,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.321993020461046,
+              "1": 0.2647512447655929,
+              "2": 0.41325573477336114
+            },
+            "confidence": 0.11988360216004172
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0687120370566845,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.9649636447429657
+    },
+    {
+      "step": 18,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4e5695d39413eaa4afd562e58a46b6994649be05aef9a49b0f90367e16ab3f0a",
+      "attempts": [
+        {
+          "seconds": 0.06978501006960869,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06986835226416588,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3233172636282789,
+              "1": 0.261486897854467,
+              "2": 0.4151958385172542
+            },
+            "confidence": 0.12279375777588118
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06836674734950066,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.102045688778162
+    },
+    {
+      "step": 19,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0cc4fe76e18168997809dc81b36ebc6efb5cb7d2e8ef17d33641adeaf5f8de6a",
+      "attempts": [
+        {
+          "seconds": 0.07542440667748451,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07548833638429642,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.31659098537027913,
+              "1": 0.26217805629398583,
+              "2": 0.42123095833573515
+            },
+            "confidence": 0.13184643750360256
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06981846317648888,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.225992739200592
+    },
+    {
+      "step": 20,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7909ef3122cf68b508766d223b9217facfe7f2e14a269d4c6d0065211e7e41be",
+      "attempts": [
+        {
+          "seconds": 0.07636826112866402,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07646774873137474,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.3819474983733248,
+              "1": 0.284475126036402,
+              "2": 0.33357737559027323
+            },
+            "confidence": 0.07292124755998723
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07257647067308426,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.30830841511488
+    },
+    {
+      "step": 21,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.359764117747545
+    },
+    {
+      "step": 22,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07SXVF814 [SEP] Men’s Chalk Stripe Red Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07DGQ1Y53 [SEP] Women’s Houndstooth Chef Pant (XS-3X, 2 Colors) [SEP] $28.98 to $31.98 [SEP] B07VFY5PC7 [SEP] Men's Performance Stretch Jogger Chef Pant (2 Colors, S-3X) [SEP] $43.98 [SEP] B07CZ2GN56 [SEP] Men’s Calavera Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QCJGXMW [SEP] Men’s Chalkboard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B005LWIBEY [SEP] Propper Women's Tactical Pant [SEP] $29.98 to $49.87 [SEP] B07J4XVR46 [SEP] Women’s Stretch Drawstring Chef Pant (XS-3X) [SEP] $29.98 to $31.98 [SEP] B09HMDR23X [SEP] Men Business Dress Pants Skinny Fit Plaid Flat-Front Stretch Pencil Tapered Pants Fashion Dress Trousers with Pockets [SEP] $21.99 to $22.29 [SEP] B07KG623WS [SEP] 100 Pairs Eye Gel Pads, Lint Free Under Eye Patches for Eyelash Extensions, Premium Eye Mask Beauty Tool Kit [SEP] $12.99 [SEP] B00PX65LU0 [SEP] Rawik Womens Insulated Water-Resistant Storm Pant [SEP] $39.99 to $75.0",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07SXVF814 [SEP] Men’s Chalk Stripe Red Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07DGQ1Y53 [SEP] Women’s Houndstooth Chef Pant (XS-3X, 2 Colors) [SEP] $28.98 to $31.98 [SEP] B07VFY5PC7 [SEP] Men's Performance Stretch Jogger Chef Pant (2 Colors, S-3X) [SEP] $43.98 [SEP] B07CZ2GN56 [SEP] Men’s Calavera Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QCJGXMW [SEP] Men’s Chalkboard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B005LWIBEY [SEP] Propper Women's Tactical Pant [SEP] $29.98 to $49.87 [SEP] B07J4XVR46 [SEP] Women’s Stretch Drawstring Chef Pant (XS-3X) [SEP] $29.98 to $31.98 [SEP] B09HMDR23X [SEP] Men Business Dress Pants Skinny Fit Plaid Flat-Front Stretch Pencil Tapered Pants Fashion Dress Trousers with Pockets [SEP] $21.99 to $22.29 [SEP] B07KG623WS [SEP] 100 Pairs Eye Gel Pads, Lint Free Under Eye Patches for Eyelash Extensions, Premium Eye Mask Beauty Tool Kit [SEP] $12.99 [SEP] B00PX65LU0 [SEP] Rawik Womens Insulated Water-Resistant Storm Pant [SEP] $39.99 to $75.0\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07sxvf814]",
+              "3": "click[b07dgq1y53]",
+              "4": "click[b07vfy5pc7]",
+              "5": "click[b07cz2gn56]",
+              "6": "click[b07qcjgxmw]",
+              "7": "click[b005lwibey]",
+              "8": "click[b07j4xvr46]",
+              "9": "click[b09hmdr23x]",
+              "10": "click[b07kg623ws]",
+              "11": "click[b00px65lu0]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c2d47bbac47258d981175673aca28cc14b4044803e5c55a0a9b5c74e3fc0e4d4",
+      "attempts": [
+        {
+          "seconds": 0.488687377423048,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.48882727697491646,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.0861466564200213,
+              "1": 0.2918930536259557,
+              "2": 0.029251118320521262,
+              "3": 0.031652544502238665,
+              "4": 0.060870598030323755,
+              "5": 0.03074391734444967,
+              "6": 0.02638838596403486,
+              "7": 0.0986742312697637,
+              "8": 0.04796085779073185,
+              "9": 0.028627732959292447,
+              "10": 0.016168181187433975,
+              "11": 0.25162272258523294
+            },
+            "confidence": 0.22751969486467896
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8921,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3889322839677334,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.912524197250605
+    },
+    {
+      "step": 23,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00XD06YY0 [SEP] I'm A Mushroom and I Hate This Game Graphic Novelty Sarcastic Funny T Shirt [SEP] $14.99 to $18.99 [SEP] B07J5QCDYJ [SEP] Men’s Stretch Jean Style Chef Pant (XS-3X) [SEP] $29.98 to $32.98 [SEP] B08256585Q [SEP] Rustic Storage Furniture Lift Top Cabinet Convertible Coffee Table Lower Shelf Hidden Compartment Home Decor Useful Solid Wood Bedroom Living Room Office Home Condo Apartment Book Shelves Laptop Vase [SEP] $199.99 [SEP] B073RX9ZJ3 [SEP] Titan01 Men's Spectator Tweed Plaid Two Tone Wingtips Oxfords Perforated Lace Up Dress Shoes [SEP] $41.99 [SEP] B07HM93W4P [SEP] Men’s Stretch Cargo Chef Pant (XS-3X, Black) [SEP] $30.98 to $35.98 [SEP] B07BS3HGMH [SEP] Men’s Boneyard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07D5JS3KW [SEP] Men’s Donut Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QYCMRQW [SEP] Men’s Knives Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07VBPXCGS [SEP] Men’s Piggin Out Print Baggy Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $33.98 [SEP] B07VCVS7YJ [SEP] Men’s Graffiti Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00XD06YY0 [SEP] I'm A Mushroom and I Hate This Game Graphic Novelty Sarcastic Funny T Shirt [SEP] $14.99 to $18.99 [SEP] B07J5QCDYJ [SEP] Men’s Stretch Jean Style Chef Pant (XS-3X) [SEP] $29.98 to $32.98 [SEP] B08256585Q [SEP] Rustic Storage Furniture Lift Top Cabinet Convertible Coffee Table Lower Shelf Hidden Compartment Home Decor Useful Solid Wood Bedroom Living Room Office Home Condo Apartment Book Shelves Laptop Vase [SEP] $199.99 [SEP] B073RX9ZJ3 [SEP] Titan01 Men's Spectator Tweed Plaid Two Tone Wingtips Oxfords Perforated Lace Up Dress Shoes [SEP] $41.99 [SEP] B07HM93W4P [SEP] Men’s Stretch Cargo Chef Pant (XS-3X, Black) [SEP] $30.98 to $35.98 [SEP] B07BS3HGMH [SEP] Men’s Boneyard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07D5JS3KW [SEP] Men’s Donut Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QYCMRQW [SEP] Men’s Knives Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07VBPXCGS [SEP] Men’s Piggin Out Print Baggy Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $33.98 [SEP] B07VCVS7YJ [SEP] Men’s Graffiti Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b00xd06yy0]",
+              "4": "click[b07j5qcdyj]",
+              "5": "click[b08256585q]",
+              "6": "click[b073rx9zj3]",
+              "7": "click[b07hm93w4p]",
+              "8": "click[b07bs3hgmh]",
+              "9": "click[b07d5js3kw]",
+              "10": "click[b07qycmrqw]",
+              "11": "click[b07vbpxcgs]",
+              "12": "click[b07vcvs7yj]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3eae36d1b00fec453ed3068656862f8334c32bccbca8f33420cf920ed36df609",
+      "attempts": [
+        {
+          "seconds": 0.4460373967885971,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4461768977344036,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.09386640917209713,
+              "1": 0.12466594151738726,
+              "2": 0.288965004512144,
+              "3": 0.02623260696936251,
+              "4": 0.10087769983427215,
+              "5": 0.019564945657252353,
+              "6": 0.03417701220743005,
+              "7": 0.030249975543627572,
+              "8": 0.03923021725124231,
+              "9": 0.03597558078354617,
+              "10": 0.03600270305356525,
+              "11": 0.13109750007488202,
+              "12": 0.03909440342319106
+            },
+            "confidence": 0.2297120882214894
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10220,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4441440738737583,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.422755520790815
+    },
+    {
+      "step": 24,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00RKNWG34 [SEP] Townforst Women's Slip and Oil Resistant Non Slip Work Shoes Jess PU Leather Slip-On Flat [SEP] $18.98 to $34.98 [SEP] B07VDVDF5K [SEP] Men's Performance Stretch Chef Coat with Zipper Closure (S-3X, 2 Colors) [SEP] $42.98 [SEP] B07YTWQYW6 [SEP] Hebelin 2pcs Messy Hair Bun Extensions Scrunchy Updo Elastic Wavy Curly Donut Chignon Hairpiece [SEP] $13.98 [SEP] B09BNHCCPQ [SEP] Women Boho Print Vintage Casual Summer Fall Racerback Sleeveless Spaghetti Straps Long Harem Pants Jumpsuit Rompers Overall [SEP] $7.1 to $10.7 [SEP] B00G6HSHMO [SEP] Swix Women's Standard Lillehammer Insulated Windproof Water-Resistant Breathable Stretchy Active Pants [SEP] $100.0 [SEP] B09KPJ4FT8 [SEP] Rustic Floating Shelves, Set of 4, Wooden Wall Shelves with Bars, Storage Shelves for Bathroom, Kitchen, Living Rooms, Bedroom (Dark Brown) [SEP] $28.99 [SEP] B09SHYD3PZ [SEP] Men's 2 Piece Tracksuits Floral Hawaiian Paisley Printed Suit Summer Casual Short Sleeve Shirt and Shorts Beach Outfit [SEP] $23.99 to $27.99 [SEP] B099SK9JR3 [SEP] Asset Tactical Jeans [SEP] $75.0 [SEP] B07X92R51T [SEP] Asibeiul Men's High Visibility Road Work Casual Pants Relaxed Waterproof Rain Over Trousers Pocket High Vis Weather Watch [SEP] $8.99 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00RKNWG34 [SEP] Townforst Women's Slip and Oil Resistant Non Slip Work Shoes Jess PU Leather Slip-On Flat [SEP] $18.98 to $34.98 [SEP] B07VDVDF5K [SEP] Men's Performance Stretch Chef Coat with Zipper Closure (S-3X, 2 Colors) [SEP] $42.98 [SEP] B07YTWQYW6 [SEP] Hebelin 2pcs Messy Hair Bun Extensions Scrunchy Updo Elastic Wavy Curly Donut Chignon Hairpiece [SEP] $13.98 [SEP] B09BNHCCPQ [SEP] Women Boho Print Vintage Casual Summer Fall Racerback Sleeveless Spaghetti Straps Long Harem Pants Jumpsuit Rompers Overall [SEP] $7.1 to $10.7 [SEP] B00G6HSHMO [SEP] Swix Women's Standard Lillehammer Insulated Windproof Water-Resistant Breathable Stretchy Active Pants [SEP] $100.0 [SEP] B09KPJ4FT8 [SEP] Rustic Floating Shelves, Set of 4, Wooden Wall Shelves with Bars, Storage Shelves for Bathroom, Kitchen, Living Rooms, Bedroom (Dark Brown) [SEP] $28.99 [SEP] B09SHYD3PZ [SEP] Men's 2 Piece Tracksuits Floral Hawaiian Paisley Printed Suit Summer Casual Short Sleeve Shirt and Shorts Beach Outfit [SEP] $23.99 to $27.99 [SEP] B099SK9JR3 [SEP] Asset Tactical Jeans [SEP] $75.0 [SEP] B07X92R51T [SEP] Asibeiul Men's High Visibility Road Work Casual Pants Relaxed Waterproof Rain Over Trousers Pocket High Vis Weather Watch [SEP] $8.99 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b00rknwg34]",
+              "4": "click[b07vdvdf5k]",
+              "5": "click[b07ytwqyw6]",
+              "6": "click[b09bnhccpq]",
+              "7": "click[b00g6hshmo]",
+              "8": "click[b09kpj4ft8]",
+              "9": "click[b09shyd3pz]",
+              "10": "click[b099sk9jr3]",
+              "11": "click[b07x92r51t]",
+              "12": "click[b00004rg7m]"
+            }
+          }
+        }
+      },
+      "request_sha256": "98580b818056e9bfe50fee84f4934dbce2d27695ca963c2e2fed6affc229caf1",
+      "attempts": [
+        {
+          "seconds": 0.41227028518915176,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4123736806213856,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.09743712177488459,
+              "1": 0.154011266921561,
+              "2": 0.3083360506450645,
+              "3": 0.025918412581217323,
+              "4": 0.015846791359184556,
+              "5": 0.02450273583832664,
+              "6": 0.08266398879466759,
+              "7": 0.034571023654944515,
+              "8": 0.032163584614885124,
+              "9": 0.03905086813090346,
+              "10": 0.06964534469953415,
+              "11": 0.10614116491978658,
+              "12": 0.009711646065040177
+            },
+            "confidence": 0.2506973881988198
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9297,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.41054680943489075,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.899187456816435
+    },
+    {
+      "step": 25,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07DGKC4BR [SEP] Women’s Stretch Yoga Cargo Chef Pant (XS-3X) [SEP] $29.98 to $31.98 [SEP] B09MRXZ6PH [SEP] Lightweight Quilted Puffer Down Vest for Women Fashion Shiny Water-Resistant Full-Zip Down Puffer Jacket with Hood [SEP] $31.48 to $33.98 [SEP] B09MF8VTL9 [SEP] 24Pcs Dollar Pattern Gold Dreadlock Hair Clips- Gold Dreadlock Charms Accessories- Dreadlock Hair Clips with Shiny Rhinestones- Gold Hair Accessories for Women Girls Braids Party [SEP] $4.99 [SEP] B09FX4MJV9 [SEP] DIYAGO MEN Strap Cuffs Ankle Renaissance Pants Casual Regular Fit Vintage Trouser Pant Streetwear Trendy Pant with Pockets [SEP] $12.99 to $16.99 [SEP] B000GIPOKW [SEP] Double H 12 Inch DH1552 Mens Gel ICE Work Western Boot [SEP] $218.95 [SEP] B084GBWF2B [SEP] Rugged Bluetooth Headphones for Working Out and Staying Active - The Mini Rhinos Bluetooth Headphones [SEP] $49.95 [SEP] B09DCL6C9C [SEP] Ombre Blonde Headband Wig Brown to Blonde ombre headband Wigs for Women Water Wave Blonde Hair Resistant Fiber with Headband Attached for Daily Party 150% density(ombre blonde wig 22\") [SEP] $22.69 [SEP] B097BQZZN6 [SEP] SITKA Gear Back Forty Pant [SEP] $139.0 [SEP] B00B0479W2 [SEP] Land O Lakes European Style Creamy Blend Butter - Whipped, 5 Pound -- 2 per case. [SEP] $68.27 [SEP] B08XMXP16Q [SEP] 2 Memphis Audio SRXP62WT SRX Pro 6.5\" 250 Watt Car Speakers Bundle with Rockville RPB27 20w Rugged Portable Waterproof Bluetooth Speaker w Bumping Bass! [SEP] $139.9",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07DGKC4BR [SEP] Women’s Stretch Yoga Cargo Chef Pant (XS-3X) [SEP] $29.98 to $31.98 [SEP] B09MRXZ6PH [SEP] Lightweight Quilted Puffer Down Vest for Women Fashion Shiny Water-Resistant Full-Zip Down Puffer Jacket with Hood [SEP] $31.48 to $33.98 [SEP] B09MF8VTL9 [SEP] 24Pcs Dollar Pattern Gold Dreadlock Hair Clips- Gold Dreadlock Charms Accessories- Dreadlock Hair Clips with Shiny Rhinestones- Gold Hair Accessories for Women Girls Braids Party [SEP] $4.99 [SEP] B09FX4MJV9 [SEP] DIYAGO MEN Strap Cuffs Ankle Renaissance Pants Casual Regular Fit Vintage Trouser Pant Streetwear Trendy Pant with Pockets [SEP] $12.99 to $16.99 [SEP] B000GIPOKW [SEP] Double H 12 Inch DH1552 Mens Gel ICE Work Western Boot [SEP] $218.95 [SEP] B084GBWF2B [SEP] Rugged Bluetooth Headphones for Working Out and Staying Active - The Mini Rhinos Bluetooth Headphones [SEP] $49.95 [SEP] B09DCL6C9C [SEP] Ombre Blonde Headband Wig Brown to Blonde ombre headband Wigs for Women Water Wave Blonde Hair Resistant Fiber with Headband Attached for Daily Party 150% density(ombre blonde wig 22\") [SEP] $22.69 [SEP] B097BQZZN6 [SEP] SITKA Gear Back Forty Pant [SEP] $139.0 [SEP] B00B0479W2 [SEP] Land O Lakes European Style Creamy Blend Butter - Whipped, 5 Pound -- 2 per case. [SEP] $68.27 [SEP] B08XMXP16Q [SEP] 2 Memphis Audio SRXP62WT SRX Pro 6.5\" 250 Watt Car Speakers Bundle with Rockville RPB27 20w Rugged Portable Waterproof Bluetooth Speaker w Bumping Bass! [SEP] $139.9\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07dgkc4br]",
+              "4": "click[b09mrxz6ph]",
+              "5": "click[b09mf8vtl9]",
+              "6": "click[b09fx4mjv9]",
+              "7": "click[b000gipokw]",
+              "8": "click[b084gbwf2b]",
+              "9": "click[b09dcl6c9c]",
+              "10": "click[b097bqzzn6]",
+              "11": "click[b00b0479w2]",
+              "12": "click[b08xmxp16q]"
+            }
+          }
+        }
+      },
+      "request_sha256": "81727dd3cc026d7cd1988c9575f7b1ed0d9269c6d0c62c4bcd45c4568aba506c",
+      "attempts": [
+        {
+          "seconds": 0.443995863199234,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4441358856856823,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.09936027838844334,
+              "1": 0.16632224425032283,
+              "2": 0.25989952206645545,
+              "3": 0.1483278604843026,
+              "4": 0.03189009242717626,
+              "5": 0.028202176552272324,
+              "6": 0.0817744784388233,
+              "7": 0.0223788903359859,
+              "8": 0.04728932036598583,
+              "9": 0.031083369291990143,
+              "10": 0.04008308081324934,
+              "11": 0.012178055272625605,
+              "12": 0.031210631312367048
+            },
+            "confidence": 0.19822448223866004
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9976,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4389854073524475,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.413382209837437
+    },
+    {
+      "step": 26,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B088FSC5SL [SEP] DAGEDA Black 40 Pairs 4 PC 4D Eyebrow Transfers Stickers, Long Lasting Natural Waterproof Bionic Eyebrow Water Transfer Tattoo Eyebrow Sticker For Woman Man Makeup Tool（# Fall） [SEP] $6.99 [SEP] B08Y66JJT3 [SEP] Men’s Asymmetrical Premium Denim Chef Coat with Mesh Side Panels (S-3X) [SEP] $42.98 [SEP] B00PIG2EKK [SEP] ARTLAND Modern 100% Hand Painted Framed Wall Art \"Colorful City\" 3-Piece Gallery-Wrapped Abstract Oil Painting on Canvas Ready to Hang for Living Room for Wall Decor Home Decoration 24x36inches [SEP] $49.66 [SEP] B01LBRNWPK [SEP] Townforst Sandy Slip Resistant Black Sunbrella Water Resistant Non Slip Waitress Shoes [SEP] $30.99 to $41.95 [SEP] B09K1PLBR5 [SEP] Jacobsen Hall Tree Brown [SEP] $263.08 [SEP] B0778TZKXR [SEP] OSD Audio ICE600WRS 6.5\" in-Ceiling/in-Wall 300W Water-Resistant Outdoor Speaker Set of 4 Speakers [SEP] $103.99 [SEP] B08MQQPR73 [SEP] Columbia Women's Sweet View Ii Insulated Pant [SEP] $54.9 to $109.98 [SEP] B095M4L6JF [SEP] Denim Cargo Pants for Women,Kcocoo Plus Size Casual Mid Waist Wide Leg Baggy Pants Outdoor Lounge Pants Trousers Sweatpants [SEP] $19.99 to $36.68 [SEP] B0834V2NFD [SEP] Espadrilles Wedges for Women,Casual Espadrille Slide On Platform Sandals Comfort Open Toe Ankle Elastic Strappy Studded Flatform Sandal Shoes [SEP] $3.42 to $15.52 [SEP] B08V4T9X3S [SEP] Black Gold Rugs 100 Dollar Bill Area Runner Money Rugs Nonslip Rubber Backed Laundry Room Rug Runner Floor Mat for Living Room Dining Room Washroom Bathroom Mudroom Kitchen Doormat Hallway 23.5\"X59\" [SEP] $44.99",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B088FSC5SL [SEP] DAGEDA Black 40 Pairs 4 PC 4D Eyebrow Transfers Stickers, Long Lasting Natural Waterproof Bionic Eyebrow Water Transfer Tattoo Eyebrow Sticker For Woman Man Makeup Tool（# Fall） [SEP] $6.99 [SEP] B08Y66JJT3 [SEP] Men’s Asymmetrical Premium Denim Chef Coat with Mesh Side Panels (S-3X) [SEP] $42.98 [SEP] B00PIG2EKK [SEP] ARTLAND Modern 100% Hand Painted Framed Wall Art \"Colorful City\" 3-Piece Gallery-Wrapped Abstract Oil Painting on Canvas Ready to Hang for Living Room for Wall Decor Home Decoration 24x36inches [SEP] $49.66 [SEP] B01LBRNWPK [SEP] Townforst Sandy Slip Resistant Black Sunbrella Water Resistant Non Slip Waitress Shoes [SEP] $30.99 to $41.95 [SEP] B09K1PLBR5 [SEP] Jacobsen Hall Tree Brown [SEP] $263.08 [SEP] B0778TZKXR [SEP] OSD Audio ICE600WRS 6.5\" in-Ceiling/in-Wall 300W Water-Resistant Outdoor Speaker Set of 4 Speakers [SEP] $103.99 [SEP] B08MQQPR73 [SEP] Columbia Women's Sweet View Ii Insulated Pant [SEP] $54.9 to $109.98 [SEP] B095M4L6JF [SEP] Denim Cargo Pants for Women,Kcocoo Plus Size Casual Mid Waist Wide Leg Baggy Pants Outdoor Lounge Pants Trousers Sweatpants [SEP] $19.99 to $36.68 [SEP] B0834V2NFD [SEP] Espadrilles Wedges for Women,Casual Espadrille Slide On Platform Sandals Comfort Open Toe Ankle Elastic Strappy Studded Flatform Sandal Shoes [SEP] $3.42 to $15.52 [SEP] B08V4T9X3S [SEP] Black Gold Rugs 100 Dollar Bill Area Runner Money Rugs Nonslip Rubber Backed Laundry Room Rug Runner Floor Mat for Living Room Dining Room Washroom Bathroom Mudroom Kitchen Doormat Hallway 23.5\"X59\" [SEP] $44.99\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b088fsc5sl]",
+              "4": "click[b08y66jjt3]",
+              "5": "click[b00pig2ekk]",
+              "6": "click[b01lbrnwpk]",
+              "7": "click[b09k1plbr5]",
+              "8": "click[b0778tzkxr]",
+              "9": "click[b08mqqpr73]",
+              "10": "click[b095m4l6jf]",
+              "11": "click[b0834v2nfd]",
+              "12": "click[b08v4t9x3s]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a26920d3ada44916c2fdbf9ca2ceb64dd8bffa83e07ede31c5af626ed3422ed0",
+      "attempts": [
+        {
+          "seconds": 0.46565646678209305,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4657737873494625,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.11491160058164147,
+              "1": 0.1578410162398372,
+              "2": 0.28104997810361926,
+              "3": 0.02140776952465552,
+              "4": 0.03134006256300005,
+              "5": 0.03463134387391115,
+              "6": 0.031024332884141147,
+              "7": 0.03197470696397699,
+              "8": 0.04684968008761328,
+              "9": 0.06579328500136522,
+              "10": 0.08400206969670318,
+              "11": 0.06347760848622898,
+              "12": 0.03569654599330661
+            },
+            "confidence": 0.22113747627892086
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10638,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4634494483470917,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.937503792345524
+    },
+    {
+      "step": 27,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "282b5096df05ada0b0243e7645591140fcc45042fa72579f85c12b8e15a30852",
+      "attempts": [
+        {
+          "seconds": 0.07138209789991379,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07144283130764961,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2081346452865181,
+              "1": 0.334976204771013,
+              "2": 0.456889149942469
+            },
+            "confidence": 0.18533372491370348
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 741,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06989873945713043,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.085677798837423
+    },
+    {
+      "step": 28,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "44a4c418aa82e013824a53fb984dbc377e7ed11e62680e48d2cb5c0543762f4c",
+      "attempts": [
+        {
+          "seconds": 0.06900278106331825,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06908251717686653,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.21429628935650852,
+              "1": 0.3202554909010135,
+              "2": 0.465448219742478
+            },
+            "confidence": 0.19817232961371703
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 741,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06736952438950539,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.211836647242308
+    },
+    {
+      "step": 29,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[back to search]\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "fa29748619f0596e5cfbe4df21718e48a3d212bfbedb302ff529565b2be7d68b",
+      "attempts": [
+        {
+          "seconds": 0.08069179952144623,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.08077704533934593,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.22651276245583662,
+              "1": 0.3231775927114098,
+              "2": 0.45030964483275365
+            },
+            "confidence": 0.17546446724913048
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 741,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06885899230837822,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.355069153010845
+    },
+    {
+      "step": 30,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[back to search]\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1dd1d2dcd5f4868b3d9590d2203a5e97dce7d3d554c171ab1eaef39ca8a68fb7",
+      "attempts": [
+        {
+          "seconds": 0.07133407890796661,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07141435146331787,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24363191370966966,
+              "1": 0.30085084467338663,
+              "2": 0.4555172416169438
+            },
+            "confidence": 0.1832758624254157
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 741,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06975758448243141,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.476128779351711
+    },
+    {
+      "step": 31,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6b98c8dcc8593d250442235350d19b4f13c61e08ca0646092a8beee924922ea8",
+      "attempts": [
+        {
+          "seconds": 0.0720754824578762,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07216541096568108,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3387926640611802,
+              "1": 0.28347626418932026,
+              "2": 0.37773107174949966
+            },
+            "confidence": 0.06659660762424933
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 738,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07056829333305359,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.597369372844696
+    },
+    {
+      "step": 32,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "fe463de5b62b0f99c118af2c0c7506ef8dc6198fb1d383029d6bce3ac9d39dca",
+      "attempts": [
+        {
+          "seconds": 0.07018199563026428,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07028847932815552,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.34623819767569614,
+              "1": 0.27361224401303536,
+              "2": 0.38014955831126857
+            },
+            "confidence": 0.07022433746690286
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06833895295858383,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.720640730112791
+    },
+    {
+      "step": 33,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d62f124fca9a85ab6a1619379f5f26df43658e69a13f2c3bd7dde68a0409fb45",
+      "attempts": [
+        {
+          "seconds": 0.07078788056969643,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07086003199219704,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3453877250711326,
+              "1": 0.2832203314656082,
+              "2": 0.3713919434632592
+            },
+            "confidence": 0.05708791519488884
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06925606727600098,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.839793503284454
+    },
+    {
+      "step": 34,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "07f61a7db90c3ed5ec3f6e3fd12f68953b86f2052a02cf1cfe5ed56cb249cefa",
+      "attempts": [
+        {
+          "seconds": 0.07183117792010307,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07190725952386856,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3388594772906909,
+              "1": 0.2693888241739044,
+              "2": 0.3917516985354047
+            },
+            "confidence": 0.08762754780310707
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06739214807748795,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.961839955300093
+    },
+    {
+      "step": 35,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6bc0f0417c32d866dcb8ca1a833157b1957015958866e068ca790e3b16b81875",
+      "attempts": [
+        {
+          "seconds": 0.06851594150066376,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06858941540122032,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3401011371187264,
+              "1": 0.27104949129885814,
+              "2": 0.38884937158241545
+            },
+            "confidence": 0.08327405737362319
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06700072437524796,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.078935284167528
+    },
+    {
+      "step": 36,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "21480914b727a02b794495dc535b2c89ec93bdefb5ad1fb803b48de27dee8d2d",
+      "attempts": [
+        {
+          "seconds": 0.06983829662203789,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06991710886359215,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3272858987856562,
+              "1": 0.27016587013468185,
+              "2": 0.4025482310796619
+            },
+            "confidence": 0.1038223466194929
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06823191791772842,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.219993453472853
+    },
+    {
+      "step": 37,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a4ee09a4ad98ee8f60907144069ca7a3bc530b36a43d923003908a4021362128",
+      "attempts": [
+        {
+          "seconds": 0.07114577293395996,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07123535871505737,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33270217723824763,
+              "1": 0.2712901451777369,
+              "2": 0.3960076775840155
+            },
+            "confidence": 0.09401151637602327
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06961078941822052,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.340919107198715
+    },
+    {
+      "step": 38,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a9db7cc4399d32b179f2ba8a94875baea4ae5faa543d22e787dad464fe325e44",
+      "attempts": [
+        {
+          "seconds": 0.07079937681555748,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07088826969265938,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.321993020461046,
+              "1": 0.2647512447655929,
+              "2": 0.41325573477336114
+            },
+            "confidence": 0.11988360216004172
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0690130740404129,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.461654305458069
+    },
+    {
+      "step": 39,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4e5695d39413eaa4afd562e58a46b6994649be05aef9a49b0f90367e16ab3f0a",
+      "attempts": [
+        {
+          "seconds": 0.06976580992341042,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0698416493833065,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3233172636282789,
+              "1": 0.261486897854467,
+              "2": 0.4151958385172542
+            },
+            "confidence": 0.12279375777588118
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06833973154425621,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.579834695905447
+    },
+    {
+      "step": 40,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0cc4fe76e18168997809dc81b36ebc6efb5cb7d2e8ef17d33641adeaf5f8de6a",
+      "attempts": [
+        {
+          "seconds": 0.0705065056681633,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07058632001280785,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.31659098537027913,
+              "1": 0.26217805629398583,
+              "2": 0.42123095833573515
+            },
+            "confidence": 0.13184643750360256
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06906283274292946,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.701970476657152
+    },
+    {
+      "step": 41,
+      "observation": "Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7909ef3122cf68b508766d223b9217facfe7f2e14a269d4c6d0065211e7e41be",
+      "attempts": [
+        {
+          "seconds": 0.06992242112755775,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07000244036316872,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.3819474983733248,
+              "1": 0.284475126036402,
+              "2": 0.33357737559027323
+            },
+            "confidence": 0.07292124755998723
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06818873062729836,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.777716025710106
+    },
+    {
+      "step": 42,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[i'm looking for a pair of water resistant brown pants, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.829039424657822
+    }
+  ]
+}

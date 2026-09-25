@@ -1,0 +1,331 @@
+{
+  "task_id": 257,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars",
+  "instruction_sha256": "56732b64c533434f8a9b59049ae0ea164fe0cfb113c22d724fdcd39cf1866c0d",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 4,
+  "elapsed_seconds": 1.5755410231649876,
+  "decision_seconds": 1.4243190288543701,
+  "input_tokens": 30578,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.060837987810373306
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B09QM94NJ3 [SEP] Short Sleeve Shirts for Men,Men's Casual Summer Tops Fashion Printed Crewneck Sweatshirts Funny Workout Tees Blouses [SEP] $5.59 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B08RJ1678V [SEP] Sousuoty Oversized T Shirts for Women Casual V Neck Short Sleeve Tops Loose [SEP] $21.99 [SEP] B09DSHR1Q7 [SEP] USYFAKGH Women's Fashion Long Sleeve Autumn Winter Short Top Jacket Outwear oversized sweater [SEP] $16.99 to $21.99",
+      "request": {
+        "state": "Shopping instruction:\ni want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B09QM94NJ3 [SEP] Short Sleeve Shirts for Men,Men's Casual Summer Tops Fashion Printed Crewneck Sweatshirts Funny Workout Tees Blouses [SEP] $5.59 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B08RJ1678V [SEP] Sousuoty Oversized T Shirts for Women Casual V Neck Short Sleeve Tops Loose [SEP] $21.99 [SEP] B09DSHR1Q7 [SEP] USYFAKGH Women's Fashion Long Sleeve Autumn Winter Short Top Jacket Outwear oversized sweater [SEP] $16.99 to $21.99\n\nRecent actions:\nsearch[i want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b099z4t56c]",
+              "3": "click[b09pggqzj2]",
+              "4": "click[b09qm94nj3]",
+              "5": "click[b09dsfsnp3]",
+              "6": "click[b09dkckd7z]",
+              "7": "click[b09dshw7mz]",
+              "8": "click[b09b264ypl]",
+              "9": "click[b09dycnyp4]",
+              "10": "click[b08rj1678v]",
+              "11": "click[b09dshr1q7]"
+            }
+          }
+        }
+      },
+      "request_sha256": "706194793b3c3e296e57e90178cab4fc351d1833244264b09c7d544e9614308f",
+      "attempts": [
+        {
+          "seconds": 0.37696849182248116,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37710605934262276,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "10",
+            "probabilities": {
+              "0": 0.046276002643866394,
+              "1": 0.09935474032436625,
+              "2": 0.021507808725631287,
+              "3": 0.03424763756510512,
+              "4": 0.10830642487732817,
+              "5": 0.042142952673954064,
+              "6": 0.014703309836671084,
+              "7": 0.013849505575028424,
+              "8": 0.024614837287201225,
+              "9": 0.025428711252798875,
+              "10": 0.5457351505765077,
+              "11": 0.023832918661541438
+            },
+            "confidence": 0.5044383460834629
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8242,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.37422048673033714,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b08rj1678v]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.46347862109541893
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 00-black [SEP] 00-white [SEP] 01-coral [SEP] 01-deep blue [SEP] 01-green [SEP] 01-green blue [SEP] 01-grey [SEP] 01-light green [SEP] 01-moss green [SEP] 01-pink [SEP] 01-purple [SEP] 01-rose pink [SEP] 01-royal blue [SEP] 01-wine [SEP] 01-deep grey [SEP] 01-light blue [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Sousuoty Oversized T Shirts for Women Casual V Neck Short Sleeve Tops Loose [SEP] Price: $21.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 00-black [SEP] 00-white [SEP] 01-coral [SEP] 01-deep blue [SEP] 01-green [SEP] 01-green blue [SEP] 01-grey [SEP] 01-light green [SEP] 01-moss green [SEP] 01-pink [SEP] 01-purple [SEP] 01-rose pink [SEP] 01-royal blue [SEP] 01-wine [SEP] 01-deep grey [SEP] 01-light blue [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Sousuoty Oversized T Shirts for Women Casual V Neck Short Sleeve Tops Loose [SEP] Price: $21.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars]\nclick[b08rj1678v]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[00-black]",
+              "7": "click[00-white]",
+              "8": "click[01-coral]",
+              "9": "click[01-deep blue]",
+              "10": "click[01-green]",
+              "11": "click[01-green blue]",
+              "12": "click[01-grey]",
+              "13": "click[01-light green]",
+              "14": "click[01-moss green]",
+              "15": "click[01-pink]",
+              "16": "click[01-purple]",
+              "17": "click[01-rose pink]",
+              "18": "click[01-royal blue]",
+              "19": "click[01-wine]",
+              "20": "click[01-deep grey]",
+              "21": "click[01-light blue]",
+              "22": "click[small]",
+              "23": "click[medium]",
+              "24": "click[large]",
+              "25": "click[x-large]",
+              "26": "click[xx-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "858ba616fb7b95376bf49658d35b11871a3effa1cfdc2c8df6a64cf95c499f9a",
+      "attempts": [
+        {
+          "seconds": 0.5197840817272663,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.519935417920351,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "26",
+            "probabilities": {
+              "0": 0.011927902558395587,
+              "1": 0.011905447846498787,
+              "2": 0.013076654434283769,
+              "3": 0.008759772514405503,
+              "4": 0.009879649051419335,
+              "5": 0.11414458803131611,
+              "6": 0.05519017285642566,
+              "7": 0.041417696946153736,
+              "8": 0.04520476248364318,
+              "9": 0.052144553430631395,
+              "10": 0.04214047711121586,
+              "11": 0.027787041591766027,
+              "12": 0.039969136741413364,
+              "13": 0.03541845601264095,
+              "14": 0.041036850428381726,
+              "15": 0.041052876353409366,
+              "16": 0.03837075456279165,
+              "17": 0.03554824338550725,
+              "18": 0.053998145935264585,
+              "19": 0.03736616632788573,
+              "20": 0.03374994371301341,
+              "21": 0.046849360451948485,
+              "22": 0.005139630287227923,
+              "23": 0.007785971560653687,
+              "24": 0.009292996244516034,
+              "25": 0.01041409330702806,
+              "26": 0.13042865583216307
+            },
+            "confidence": 0.09698360413340007
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11087,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 27,
+          "inference_seconds": 0.5175470672547817,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[xx-large]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.005856603384018
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 00-black [SEP] 00-white [SEP] 01-coral [SEP] 01-deep blue [SEP] 01-green [SEP] 01-green blue [SEP] 01-grey [SEP] 01-light green [SEP] 01-moss green [SEP] 01-pink [SEP] 01-purple [SEP] 01-rose pink [SEP] 01-royal blue [SEP] 01-wine [SEP] 01-deep grey [SEP] 01-light blue [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Sousuoty Oversized T Shirts for Women Casual V Neck Short Sleeve Tops Loose [SEP] Price: $21.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] 00-black [SEP] 00-white [SEP] 01-coral [SEP] 01-deep blue [SEP] 01-green [SEP] 01-green blue [SEP] 01-grey [SEP] 01-light green [SEP] 01-moss green [SEP] 01-pink [SEP] 01-purple [SEP] 01-rose pink [SEP] 01-royal blue [SEP] 01-wine [SEP] 01-deep grey [SEP] 01-light blue [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Sousuoty Oversized T Shirts for Women Casual V Neck Short Sleeve Tops Loose [SEP] Price: $21.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want a xx-large sousuoty short sleeve shirt, and price lower than 40.00 dollars]\nclick[b08rj1678v]\nclick[xx-large]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[00-black]",
+              "7": "click[00-white]",
+              "8": "click[01-coral]",
+              "9": "click[01-deep blue]",
+              "10": "click[01-green]",
+              "11": "click[01-green blue]",
+              "12": "click[01-grey]",
+              "13": "click[01-light green]",
+              "14": "click[01-moss green]",
+              "15": "click[01-pink]",
+              "16": "click[01-purple]",
+              "17": "click[01-rose pink]",
+              "18": "click[01-royal blue]",
+              "19": "click[01-wine]",
+              "20": "click[01-deep grey]",
+              "21": "click[01-light blue]",
+              "22": "click[small]",
+              "23": "click[medium]",
+              "24": "click[large]",
+              "25": "click[x-large]",
+              "26": "click[xx-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6924992944ae45f6f849b19d8472cf94133832965294ca8cc063e7dd022bf346",
+      "attempts": [
+        {
+          "seconds": 0.5271162651479244,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5272775515913963,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.010934871903503496,
+              "1": 0.012405540208220578,
+              "2": 0.012947821163957795,
+              "3": 0.007738221261531806,
+              "4": 0.009169794823918848,
+              "5": 0.155911788238382,
+              "6": 0.06367356988886627,
+              "7": 0.048763135194939265,
+              "8": 0.05445382575460772,
+              "9": 0.05967472081290315,
+              "10": 0.0493730444532318,
+              "11": 0.03046490573792543,
+              "12": 0.044777474240583426,
+              "13": 0.04104930496814259,
+              "14": 0.04489802716080171,
+              "15": 0.04470282229256161,
+              "16": 0.04240237168616838,
+              "17": 0.04102895104472639,
+              "18": 0.06811686649147174,
+              "19": 0.043743682680281025,
+              "20": 0.035681196255889364,
+              "21": 0.0513743912401184,
+              "22": 0.003430161635986223,
+              "23": 0.006760755842315549,
+              "24": 0.003933385261325308,
+              "25": 0.0027801251162860845,
+              "26": 0.009809244641353972
+            },
+            "confidence": 0.1234468570167813
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11249,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 27,
+          "inference_seconds": 0.5240530334413052,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 1.575538333505392
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "task_id": 152,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "find cookies made with high fructose, and price lower than 50.00 dollars",
+  "instruction_sha256": "98ab3f31536ec29ce317e3b53707d0cd838190fbe1d1f88f7fc7c557d553eeca",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 0.49875330179929733,
+  "decision_seconds": 0.3998457007110119,
+  "input_tokens": 8554,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[find cookies made with high fructose, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.035743240267038345
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B0153UHHUM [SEP] Annie's Chocolate Chip Cookie Bites, Certified Organic, 6.5 oz [SEP] $3.29 [SEP] B00MYRXWOS [SEP] SnackWell's Devil's Food Cookie Cakes, 6.75 Ounce [SEP] $9.16 [SEP] B00Z4Z95ZM [SEP] SnackWell's Devil's Food Cookie Cakes, 1.1 Ounce, 8 Count [SEP] $10.53 [SEP] B06XDG16VC [SEP] Annie's Organic Chocolate Chip Cookie Bites, 10 ct [SEP] $100.0 [SEP] B07VHWCV85 [SEP] STOLICHNAYA GINGER BEER COCKTAIL MIX, 4 CT, 12 OZ C [SEP] $19.95 [SEP] B09SBQN3Y4 [SEP] Voortman Bakery #1 Sugar Free Shortbread Cookies (Pack of 2) Really delicious! [SEP] $19.24 [SEP] B01LF70X2G [SEP] Newtons Soft & Fruit Chewy Strawberry Cookies, 10 oz Pack [SEP] $100.0 [SEP] B01LF70OL6 [SEP] Newtons Fat Free Soft & Fruit Chewy Fig Cookies, 10 oz Pack [SEP] $100.0 [SEP] B07QCFG13J [SEP] Cookie Crisp Breakfast Cereal, Chocolate Chip Cookie, 10.6 oz [SEP] $8.99 [SEP] B08X719R3Y [SEP] Cookie Crisp Breakfast Cereal, Chocolate Chip Cookie, 18.3 oz [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\nfind cookies made with high fructose, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B0153UHHUM [SEP] Annie's Chocolate Chip Cookie Bites, Certified Organic, 6.5 oz [SEP] $3.29 [SEP] B00MYRXWOS [SEP] SnackWell's Devil's Food Cookie Cakes, 6.75 Ounce [SEP] $9.16 [SEP] B00Z4Z95ZM [SEP] SnackWell's Devil's Food Cookie Cakes, 1.1 Ounce, 8 Count [SEP] $10.53 [SEP] B06XDG16VC [SEP] Annie's Organic Chocolate Chip Cookie Bites, 10 ct [SEP] $100.0 [SEP] B07VHWCV85 [SEP] STOLICHNAYA GINGER BEER COCKTAIL MIX, 4 CT, 12 OZ C [SEP] $19.95 [SEP] B09SBQN3Y4 [SEP] Voortman Bakery #1 Sugar Free Shortbread Cookies (Pack of 2) Really delicious! [SEP] $19.24 [SEP] B01LF70X2G [SEP] Newtons Soft & Fruit Chewy Strawberry Cookies, 10 oz Pack [SEP] $100.0 [SEP] B01LF70OL6 [SEP] Newtons Fat Free Soft & Fruit Chewy Fig Cookies, 10 oz Pack [SEP] $100.0 [SEP] B07QCFG13J [SEP] Cookie Crisp Breakfast Cereal, Chocolate Chip Cookie, 10.6 oz [SEP] $8.99 [SEP] B08X719R3Y [SEP] Cookie Crisp Breakfast Cereal, Chocolate Chip Cookie, 18.3 oz [SEP] $100.0\n\nRecent actions:\nsearch[find cookies made with high fructose, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b0153uhhum]",
+              "3": "click[b00myrxwos]",
+              "4": "click[b00z4z95zm]",
+              "5": "click[b06xdg16vc]",
+              "6": "click[b07vhwcv85]",
+              "7": "click[b09sbqn3y4]",
+              "8": "click[b01lf70x2g]",
+              "9": "click[b01lf70ol6]",
+              "10": "click[b07qcfg13j]",
+              "11": "click[b08x719r3y]"
+            }
+          }
+        }
+      },
+      "request_sha256": "9a2d6e7dbdd800a45af1955ce1c35648515b10fd9325602bb6ef4214b5a68e3a",
+      "attempts": [
+        {
+          "seconds": 0.32076843082904816,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3209337443113327,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "probabilities": {
+              "0": 0.035902659414317015,
+              "1": 0.07274053078929868,
+              "2": 0.21104674279899738,
+              "3": 0.24477713329507597,
+              "4": 0.16348657441746944,
+              "5": 0.012663283448567653,
+              "6": 0.019892610107675113,
+              "7": 0.035443315062973144,
+              "8": 0.008919218753237323,
+              "9": 0.0028391599415949513,
+              "10": 0.15236414865706863,
+              "11": 0.039924623313724865
+            },
+            "confidence": 0.17612050904917373
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 7146,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3185616731643677,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b00myrxwos]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.3886244148015976
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] SnackWell's Devil's Food Cookie Cakes, 6.75 Ounce [SEP] Price: $9.16 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\nfind cookies made with high fructose, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] SnackWell's Devil's Food Cookie Cakes, 6.75 Ounce [SEP] Price: $9.16 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[find cookies made with high fructose, and price lower than 50.00 dollars]\nclick[b00myrxwos]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a61a45e8911eaec8cb6b27cd94fd9df1a77c62beae086430af59fa8de54b31dd",
+      "attempts": [
+        {
+          "seconds": 0.07881299778819084,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07891195639967918,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.09148227408719996,
+              "1": 0.08838718745744226,
+              "2": 0.12651548201394475,
+              "3": 0.09850544620525462,
+              "4": 0.08240839170061193,
+              "5": 0.5127012185355465
+            },
+            "confidence": 0.41524146224265585
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 1408,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 6,
+          "inference_seconds": 0.07711414247751236,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.0,
+      "done": true,
+      "elapsed_seconds": 0.49875061959028244
+    }
+  ]
+}

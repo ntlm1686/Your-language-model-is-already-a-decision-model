@@ -1,0 +1,393 @@
+{
+  "task_id": 486,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars",
+  "instruction_sha256": "43fbb71d16c2337a6fcc97f8e0631716515645c36a5c91d7f0c8e41a8fc1165c",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 6,
+  "elapsed_seconds": 1.981504637748003,
+  "decision_seconds": 1.758905079215765,
+  "input_tokens": 4851,
+  "output_tokens": 596,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars [SEP] Search",
+      "action": "search[i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.060200612992048264
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07RSPDG39 [SEP] Slenderer Women Classic Block Mid Heels Oxford Shoes [SEP] $100.0 [SEP] B07NVCYQDW [SEP] Slenderer Women Shoes Casual Brogue Shoes [SEP] $100.0 [SEP] B073X4PKLN [SEP] Foot-EEZ Brown & Black Unisex Diabetic & Pain-Relief Adjustable Sandals (Mens [SEP] $34.95 [SEP] B09G1P4TY5 [SEP] Nicokee House Slippers for Women Men Sandals,Warm Soft Furry Slippers Non-Slip Home Slippers House Shoes Men's House Slippers Rubber Sole for Halloween Xmas Christmas Vacation US Size 9-10,11-12 [SEP] $100.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B09RHC83FM [SEP] Women's Block Heeled Sandals Lace up Round Open Toe High Heel Summer Dance Party Pump Sandals [SEP] $16.99 to $29.99 [SEP] B088QX6C51 [SEP] femflame Women's Vintage Lace Up Pu Leather Block Heel Oxfords Ankle Booties Cuban Brogues Dress Shoes Large Size [SEP] $34.99 to $37.69 [SEP] B073X4RWRX [SEP] Foot-EEZ Brown & Black Unisex Diabetic & Pain-Relief Adjustable Sandals (Mens 10 / Ladies 11) [SEP] $34.95 [SEP] B07PHDMLZ1 [SEP] Gracemee Women Elegant Slingback Pumps Mid Heels [SEP] $21.86 to $23.86 [SEP] B07J4PT8TH [SEP] Lotta From Stockholm Swedish Low Peep Toe Clogs in Brown Oiled on Brown Base [SEP] $99.5",
+      "request": {
+        "state": "Shopping instruction:\ni would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07RSPDG39 [SEP] Slenderer Women Classic Block Mid Heels Oxford Shoes [SEP] $100.0 [SEP] B07NVCYQDW [SEP] Slenderer Women Shoes Casual Brogue Shoes [SEP] $100.0 [SEP] B073X4PKLN [SEP] Foot-EEZ Brown & Black Unisex Diabetic & Pain-Relief Adjustable Sandals (Mens [SEP] $34.95 [SEP] B09G1P4TY5 [SEP] Nicokee House Slippers for Women Men Sandals,Warm Soft Furry Slippers Non-Slip Home Slippers House Shoes Men's House Slippers Rubber Sole for Halloween Xmas Christmas Vacation US Size 9-10,11-12 [SEP] $100.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B09RHC83FM [SEP] Women's Block Heeled Sandals Lace up Round Open Toe High Heel Summer Dance Party Pump Sandals [SEP] $16.99 to $29.99 [SEP] B088QX6C51 [SEP] femflame Women's Vintage Lace Up Pu Leather Block Heel Oxfords Ankle Booties Cuban Brogues Dress Shoes Large Size [SEP] $34.99 to $37.69 [SEP] B073X4RWRX [SEP] Foot-EEZ Brown & Black Unisex Diabetic & Pain-Relief Adjustable Sandals (Mens 10 / Ladies 11) [SEP] $34.95 [SEP] B07PHDMLZ1 [SEP] Gracemee Women Elegant Slingback Pumps Mid Heels [SEP] $21.86 to $23.86 [SEP] B07J4PT8TH [SEP] Lotta From Stockholm Swedish Low Peep Toe Clogs in Brown Oiled on Brown Base [SEP] $99.5\n\nRecent actions:\nsearch[i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07rspdg39]",
+              "3": "click[b07nvcyqdw]",
+              "4": "click[b073x4pkln]",
+              "5": "click[b09g1p4ty5]",
+              "6": "click[b09kcl5gk5]",
+              "7": "click[b09rhc83fm]",
+              "8": "click[b088qx6c51]",
+              "9": "click[b073x4rwrx]",
+              "10": "click[b07phdmlz1]",
+              "11": "click[b07j4pt8th]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "63575c61bc06fc0c90c235c8ba8c347bd2edb15f6a4a20fcd4a88c75d0ff5aca",
+      "attempts": [
+        {
+          "seconds": 0.31883758306503296,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.31897690519690514,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.88,
+            "probabilities": {
+              "1": 0.9,
+              "4": 0.02,
+              "6": 0.0,
+              "3": 0.0,
+              "7": 0.0,
+              "2": 0.0,
+              "9": 0.0,
+              "11": 0.04,
+              "10": 0.0,
+              "8": 0.01,
+              "0": 0.03,
+              "5": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1196,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4512670822441578
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07NTL1NNM [SEP] Lydee Women Shoes Sweet Bow Pumps Stiletto High Heels [SEP] $100.0 [SEP] B07SX7973V [SEP] Lotta From Stockholm Swedish Cross Over Clogs in Black with Brown Sole [SEP] $99.5 [SEP] B087C8ZCCW [SEP] HAFLINGER Men's Shetland Lambskin Indoor/Outdoor Clogs Shoes [SEP] $85.88 to $148.95 [SEP] B07NV81FB9 [SEP] Slenderer Women Fashion Open Toe Sandals Stiletto Heels Ankle Strap [SEP] $100.0 [SEP] B07PLZHV2W [SEP] Lydee Women Fashion Pumps Block Mid Heels [SEP] $100.0 [SEP] B078XKX258 [SEP] Therafit Dallas Women’s Suede Clog Slip On Shoe - for Plantar Fasciitis/Foot Pain [SEP] $124.99 to $139.95 [SEP] B09GNDJK7N [SEP] Nicokee Pink Flamingos House Slippers for Women Men,Warm Soft Furry Slippers Home Slippers House Shoes Light Grey Geometric Abstract Men's House Slippers Size 12 for Halloween Xmas,9-10 [SEP] $100.0 [SEP] B09GNFJ557 [SEP] Nicokee Cute Cat House Slippers for Women Men,Warm Soft Furry Slippers Home Slippers House Shoes Little Kitty With Glasses Bow Meow Home Slippers For Girls for Halloween Xmas,9-10 [SEP] $100.0 [SEP] B09RWQGYQQ [SEP] Auimank Gifts for Women Men Women's Rhinestone Sandals Slip Resistant Slope Heel Clip Toe Flip Flops Pump Sandals Platform [SEP] $28.49 to $35.89 [SEP] B0894QSWQK [SEP] Garden Clog Shoes for Women Men Classic Clogs Slippers Comfortable Slip on Lightweight Indoor Outdoor Beach Pool Water Summer Mesh Sandals [SEP] $12.59 to $17.99",
+      "request": {
+        "state": "Shopping instruction:\ni would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07NTL1NNM [SEP] Lydee Women Shoes Sweet Bow Pumps Stiletto High Heels [SEP] $100.0 [SEP] B07SX7973V [SEP] Lotta From Stockholm Swedish Cross Over Clogs in Black with Brown Sole [SEP] $99.5 [SEP] B087C8ZCCW [SEP] HAFLINGER Men's Shetland Lambskin Indoor/Outdoor Clogs Shoes [SEP] $85.88 to $148.95 [SEP] B07NV81FB9 [SEP] Slenderer Women Fashion Open Toe Sandals Stiletto Heels Ankle Strap [SEP] $100.0 [SEP] B07PLZHV2W [SEP] Lydee Women Fashion Pumps Block Mid Heels [SEP] $100.0 [SEP] B078XKX258 [SEP] Therafit Dallas Women’s Suede Clog Slip On Shoe - for Plantar Fasciitis/Foot Pain [SEP] $124.99 to $139.95 [SEP] B09GNDJK7N [SEP] Nicokee Pink Flamingos House Slippers for Women Men,Warm Soft Furry Slippers Home Slippers House Shoes Light Grey Geometric Abstract Men's House Slippers Size 12 for Halloween Xmas,9-10 [SEP] $100.0 [SEP] B09GNFJ557 [SEP] Nicokee Cute Cat House Slippers for Women Men,Warm Soft Furry Slippers Home Slippers House Shoes Little Kitty With Glasses Bow Meow Home Slippers For Girls for Halloween Xmas,9-10 [SEP] $100.0 [SEP] B09RWQGYQQ [SEP] Auimank Gifts for Women Men Women's Rhinestone Sandals Slip Resistant Slope Heel Clip Toe Flip Flops Pump Sandals Platform [SEP] $28.49 to $35.89 [SEP] B0894QSWQK [SEP] Garden Clog Shoes for Women Men Classic Clogs Slippers Comfortable Slip on Lightweight Indoor Outdoor Beach Pool Water Summer Mesh Sandals [SEP] $12.59 to $17.99\n\nRecent actions:\nsearch[i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07ntl1nnm]",
+              "4": "click[b07sx7973v]",
+              "5": "click[b087c8zccw]",
+              "6": "click[b07nv81fb9]",
+              "7": "click[b07plzhv2w]",
+              "8": "click[b078xkx258]",
+              "9": "click[b09gndjk7n]",
+              "10": "click[b09gnfj557]",
+              "11": "click[b09rwqgyqq]",
+              "12": "click[b0894qswqk]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "eb6402118546a17fb7ab40ca0550e6bbe7dd2384782a9f4f2a1e82d3c6da4bd4",
+      "attempts": [
+        {
+          "seconds": 0.3369874879717827,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33710362389683723,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.45,
+            "probabilities": {
+              "0": 0.02,
+              "5": 0.49,
+              "11": 0.0,
+              "7": 0.0,
+              "1": 0.28,
+              "12": 0.08,
+              "9": 0.0,
+              "10": 0.0,
+              "8": 0.01,
+              "3": 0.0,
+              "4": 0.02,
+              "2": 0.1,
+              "6": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1228,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b087c8zccw]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.8144941553473473
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] color [SEP] brown [SEP] navy [SEP] HAFLINGER Men's Shetland Lambskin Indoor/Outdoor Clogs Shoes [SEP] Price: $85.88 to $148.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] color [SEP] brown [SEP] navy [SEP] HAFLINGER Men's Shetland Lambskin Indoor/Outdoor Clogs Shoes [SEP] Price: $85.88 to $148.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars]\nclick[next >]\nclick[b087c8zccw]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[5]",
+              "7": "click[6]",
+              "8": "click[7]",
+              "9": "click[8]",
+              "10": "click[9]",
+              "11": "click[10]",
+              "12": "click[11]",
+              "13": "click[brown]",
+              "14": "click[navy]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "3d491d2172ef7ccc28c1ce403494c39f2ef2eced891ece502b51caf2ecf0a1c8",
+      "attempts": [
+        {
+          "seconds": 0.3273495174944401,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3274550586938858,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "9",
+            "confidence": 0.68,
+            "probabilities": {
+              "13": 0.11,
+              "12": 0.0,
+              "9": 0.7,
+              "3": 0.02,
+              "1": 0.01,
+              "6": 0.0,
+              "10": 0.0,
+              "7": 0.0,
+              "8": 0.01,
+              "0": 0.03,
+              "2": 0.02,
+              "4": 0.0,
+              "11": 0.0,
+              "14": 0.0,
+              "5": 0.1
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 805,
+          "output_tokens": 127
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[8]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.1588583923876286
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] color [SEP] brown [SEP] navy [SEP] HAFLINGER Men's Shetland Lambskin Indoor/Outdoor Clogs Shoes [SEP] Price: $85.88 to $148.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] color [SEP] brown [SEP] navy [SEP] HAFLINGER Men's Shetland Lambskin Indoor/Outdoor Clogs Shoes [SEP] Price: $85.88 to $148.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars]\nclick[next >]\nclick[b087c8zccw]\nclick[8]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[5]",
+              "7": "click[6]",
+              "8": "click[7]",
+              "9": "click[8]",
+              "10": "click[9]",
+              "11": "click[10]",
+              "12": "click[11]",
+              "13": "click[brown]",
+              "14": "click[navy]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "3a8add180ba0523c5142ee1a8cfffd941a9615aa5c76837d76f1946f87f15676",
+      "attempts": [
+        {
+          "seconds": 0.3578738123178482,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.35798342898488045,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "13",
+            "confidence": 0.63,
+            "probabilities": {
+              "13": 0.66,
+              "1": 0.01,
+              "5": 0.27,
+              "11": 0.0,
+              "0": 0.02,
+              "2": 0.01,
+              "6": 0.0,
+              "14": 0.0,
+              "10": 0.0,
+              "4": 0.0,
+              "3": 0.03,
+              "7": 0.0,
+              "9": 0.0,
+              "8": 0.0,
+              "12": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 809,
+          "output_tokens": 128
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[brown]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.5349644720554352
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] color [SEP] brown [SEP] navy [SEP] HAFLINGER Men's Shetland Lambskin Indoor/Outdoor Clogs Shoes [SEP] Price: $85.88 to $148.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] color [SEP] brown [SEP] navy [SEP] HAFLINGER Men's Shetland Lambskin Indoor/Outdoor Clogs Shoes [SEP] Price: $85.88 to $148.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a deep brown clog with a rubber sole for my size 8 foot, and price lower than 90.00 dollars]\nclick[next >]\nclick[b087c8zccw]\nclick[8]\nclick[brown]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[5]",
+              "7": "click[6]",
+              "8": "click[7]",
+              "9": "click[8]",
+              "10": "click[9]",
+              "11": "click[10]",
+              "12": "click[11]",
+              "13": "click[brown]",
+              "14": "click[navy]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "f87da303bc2323673566c083725620db77ff81ff8115dc9b131cfc816b4cb8ca",
+      "attempts": [
+        {
+          "seconds": 0.417220376431942,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4173860624432564,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.66,
+            "probabilities": {
+              "2": 0.04,
+              "10": 0.0,
+              "12": 0.0,
+              "14": 0.0,
+              "3": 0.17,
+              "1": 0.05,
+              "8": 0.01,
+              "9": 0.0,
+              "0": 0.03,
+              "13": 0.0,
+              "4": 0.01,
+              "7": 0.0,
+              "6": 0.0,
+              "11": 0.0,
+              "5": 0.68
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 813,
+          "output_tokens": 127
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.0,
+      "done": true,
+      "elapsed_seconds": 1.9815009199082851
+    }
+  ]
+}

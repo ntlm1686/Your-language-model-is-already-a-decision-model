@@ -1,0 +1,619 @@
+{
+  "task_id": 270,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i need white walking shoes with arch support, and price lower than 40.00 dollars",
+  "instruction_sha256": "6cdfa0a92fb22fac1df5bcacf9c819695e6e2e1ce56157ca69cb9b0d74c4116f",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 8,
+  "elapsed_seconds": 2.7861986830830574,
+  "decision_seconds": 2.4148668833076954,
+  "input_tokens": 53501,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i need white walking shoes with arch support, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.07678002864122391
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09NSMP3P5 [SEP] Gibobby Sandals for Women Dressy, Womens 2022 Fashion Flower Beaded Flat Sandals Summer Beach Travel Slippers Flip Flops [SEP] $10.41 to $15.85 [SEP] B09NPZGQXH [SEP] Gibobby Sandals for Women Dressy Summer Womens Sandals Dressy Comfy T-Strap Flat Sandals Ankle Strap Beach Sandals [SEP] $8.99 to $9.99 [SEP] B09NRCW6QN [SEP] Gibobby Beach Sandals for Women Womens Sandals Dressy Comfy T-Strap Flat Sandals Ankle Strap Beach Sandals [SEP] $8.99 to $9.99 [SEP] B09PRNSYHW [SEP] Gibobby Sandals for Women Casual Dressy Summer Beach Sandals Womens Sandals Flip Flops Shoes Studded Flat Strappy Sandals [SEP] $5.33 to $10.41 [SEP] B09MMJT95R [SEP] Gibobby Sandals for Women Summer Flat Sandals Buckle Ankle Strap Platform Sandals T Strap Beach Sandals [SEP] $8.39 to $14.67 [SEP] B09FL7VNWB [SEP] ZiSUGP Wedge Loafer for Women Slip On Comfortable Sneakers [SEP] $17.29 to $33.79 [SEP] B08D3Q77QJ [SEP] Gibobby Womens Sandals Walking Shoes for Women,Casual Comfortable Breathable Loafers Sneakers Lightweight Running Shoe [SEP] $7.07 to $12.88 [SEP] B09MW1G4GW [SEP] Summer Sandals for Women Espadrilles Sandals Ankle Strap Beach Boho Open Toe Sandals Roman Shoes [SEP] $13.88 to $16.06 [SEP] B09MZ3FYXF [SEP] Womens Sandals Wedge Espadrilles Sandals Ankle Strap Open Toe Beach Boho Sandals Roman Shoes [SEP] $13.88 to $16.06 [SEP] B09NPZMB9T [SEP] Summer Sandals for Women Platform Espadrilles Sandals Ankle Strap Open Toe Beach Boho Sandals Roman Shoes [SEP] $9.99 to $14.99",
+      "request": {
+        "state": "Shopping instruction:\ni need white walking shoes with arch support, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09NSMP3P5 [SEP] Gibobby Sandals for Women Dressy, Womens 2022 Fashion Flower Beaded Flat Sandals Summer Beach Travel Slippers Flip Flops [SEP] $10.41 to $15.85 [SEP] B09NPZGQXH [SEP] Gibobby Sandals for Women Dressy Summer Womens Sandals Dressy Comfy T-Strap Flat Sandals Ankle Strap Beach Sandals [SEP] $8.99 to $9.99 [SEP] B09NRCW6QN [SEP] Gibobby Beach Sandals for Women Womens Sandals Dressy Comfy T-Strap Flat Sandals Ankle Strap Beach Sandals [SEP] $8.99 to $9.99 [SEP] B09PRNSYHW [SEP] Gibobby Sandals for Women Casual Dressy Summer Beach Sandals Womens Sandals Flip Flops Shoes Studded Flat Strappy Sandals [SEP] $5.33 to $10.41 [SEP] B09MMJT95R [SEP] Gibobby Sandals for Women Summer Flat Sandals Buckle Ankle Strap Platform Sandals T Strap Beach Sandals [SEP] $8.39 to $14.67 [SEP] B09FL7VNWB [SEP] ZiSUGP Wedge Loafer for Women Slip On Comfortable Sneakers [SEP] $17.29 to $33.79 [SEP] B08D3Q77QJ [SEP] Gibobby Womens Sandals Walking Shoes for Women,Casual Comfortable Breathable Loafers Sneakers Lightweight Running Shoe [SEP] $7.07 to $12.88 [SEP] B09MW1G4GW [SEP] Summer Sandals for Women Espadrilles Sandals Ankle Strap Beach Boho Open Toe Sandals Roman Shoes [SEP] $13.88 to $16.06 [SEP] B09MZ3FYXF [SEP] Womens Sandals Wedge Espadrilles Sandals Ankle Strap Open Toe Beach Boho Sandals Roman Shoes [SEP] $13.88 to $16.06 [SEP] B09NPZMB9T [SEP] Summer Sandals for Women Platform Espadrilles Sandals Ankle Strap Open Toe Beach Boho Sandals Roman Shoes [SEP] $9.99 to $14.99\n\nRecent actions:\nsearch[i need white walking shoes with arch support, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09nsmp3p5]",
+              "3": "click[b09npzgqxh]",
+              "4": "click[b09nrcw6qn]",
+              "5": "click[b09prnsyhw]",
+              "6": "click[b09mmjt95r]",
+              "7": "click[b09fl7vnwb]",
+              "8": "click[b08d3q77qj]",
+              "9": "click[b09mw1g4gw]",
+              "10": "click[b09mz3fyxf]",
+              "11": "click[b09npzmb9t]"
+            }
+          }
+        }
+      },
+      "request_sha256": "709f5fd8abf127a270183c1d0891935127dfd867dd32a633a79c5811c3af6854",
+      "attempts": [
+        {
+          "seconds": 0.3866301402449608,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3867912255227566,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.13931534732725778,
+              "1": 0.26536365200735496,
+              "2": 0.027339213521998265,
+              "3": 0.04691200471691178,
+              "4": 0.037148774627328886,
+              "5": 0.04600445371748943,
+              "6": 0.06417678649862704,
+              "7": 0.08048220587351348,
+              "8": 0.15530045535808287,
+              "9": 0.052399993906821984,
+              "10": 0.03791849562952661,
+              "11": 0.047638616815086965
+            },
+            "confidence": 0.19857852946256907
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8691,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3843391463160515,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5274707600474358
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09PY357HK [SEP] Gibobby Womens Sandals Summer Boho Casual Ankle Thong Elastic Travel Flat Flip Flops Beach Shoes Sandal [SEP] $9.99 to $12.99 [SEP] B09PYH8W2W [SEP] Gibobby Beach Sandals for Women Summer Boho Casual Ankle Thong Elastic Travel Flat Flip Flops Beach Shoes Sandal [SEP] $10.65 to $13.38 [SEP] B09Q122WBH [SEP] Gibobby Summer Sandals for Women Summer Boho Casual Ankle Thong Elastic Travel Flat Flip Flops Beach Shoes Sandal [SEP] $9.99 to $12.99 [SEP] B09QSMS9K3 [SEP] Gibobby Sandals for Women Summer Beach Wedge Sandals Boho Flip-Flop Ankle Strap Causal Gladiator Outdoor Shoes [SEP] $10.01 to $13.43 [SEP] B09NNKJWD7 [SEP] Sandals for Women Dressy Summer Gladiator Sandals Strappy Butterfly Crystal Open Toe Flat Knee High Flat Sandal [SEP] $10.15 to $15.58 [SEP] B09NPZ39NV [SEP] Sandals for Women Dressy Summer Womens Sandals Low Wedges Peep Toe Wrapped Sexy Cute Diamond Dressy Sandalias Sandals for Women [SEP] $7.99 to $9.99 [SEP] B09P1BSL5J [SEP] Gibobby Sandals for Women Dressy Summer Gladiator Sandals Flat Strappy Lace Up Open Toe Knee High Flat Sandal [SEP] $10.02 to $13.83 [SEP] B09P33L995 [SEP] Summer Sandals for Women Gladiator Sandals Lace Up Summer Beach Platform Strappy Criss Cross Open Toe Knee High Flat Sandal [SEP] $9.69 to $12.27 [SEP] B09P4YV1VV [SEP] Gibobby Beach Sandals for Women Summer Gladiator Sandals Flat Strappy Lace Up Open Toe Knee High Flat Sandal [SEP] $9.99 to $12.99 [SEP] B09PFZH58R [SEP] Summer Sandals for Women Roman Sandals Slip-On Ankle Strap Flip Flop Open Toe Casual Summer Beach Gladiator Flat Sandal [SEP] $4.8 to $10.09",
+      "request": {
+        "state": "Shopping instruction:\ni need white walking shoes with arch support, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09PY357HK [SEP] Gibobby Womens Sandals Summer Boho Casual Ankle Thong Elastic Travel Flat Flip Flops Beach Shoes Sandal [SEP] $9.99 to $12.99 [SEP] B09PYH8W2W [SEP] Gibobby Beach Sandals for Women Summer Boho Casual Ankle Thong Elastic Travel Flat Flip Flops Beach Shoes Sandal [SEP] $10.65 to $13.38 [SEP] B09Q122WBH [SEP] Gibobby Summer Sandals for Women Summer Boho Casual Ankle Thong Elastic Travel Flat Flip Flops Beach Shoes Sandal [SEP] $9.99 to $12.99 [SEP] B09QSMS9K3 [SEP] Gibobby Sandals for Women Summer Beach Wedge Sandals Boho Flip-Flop Ankle Strap Causal Gladiator Outdoor Shoes [SEP] $10.01 to $13.43 [SEP] B09NNKJWD7 [SEP] Sandals for Women Dressy Summer Gladiator Sandals Strappy Butterfly Crystal Open Toe Flat Knee High Flat Sandal [SEP] $10.15 to $15.58 [SEP] B09NPZ39NV [SEP] Sandals for Women Dressy Summer Womens Sandals Low Wedges Peep Toe Wrapped Sexy Cute Diamond Dressy Sandalias Sandals for Women [SEP] $7.99 to $9.99 [SEP] B09P1BSL5J [SEP] Gibobby Sandals for Women Dressy Summer Gladiator Sandals Flat Strappy Lace Up Open Toe Knee High Flat Sandal [SEP] $10.02 to $13.83 [SEP] B09P33L995 [SEP] Summer Sandals for Women Gladiator Sandals Lace Up Summer Beach Platform Strappy Criss Cross Open Toe Knee High Flat Sandal [SEP] $9.69 to $12.27 [SEP] B09P4YV1VV [SEP] Gibobby Beach Sandals for Women Summer Gladiator Sandals Flat Strappy Lace Up Open Toe Knee High Flat Sandal [SEP] $9.99 to $12.99 [SEP] B09PFZH58R [SEP] Summer Sandals for Women Roman Sandals Slip-On Ankle Strap Flip Flop Open Toe Casual Summer Beach Gladiator Flat Sandal [SEP] $4.8 to $10.09\n\nRecent actions:\nsearch[i need white walking shoes with arch support, and price lower than 40.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09py357hk]",
+              "4": "click[b09pyh8w2w]",
+              "5": "click[b09q122wbh]",
+              "6": "click[b09qsms9k3]",
+              "7": "click[b09nnkjwd7]",
+              "8": "click[b09npz39nv]",
+              "9": "click[b09p1bsl5j]",
+              "10": "click[b09p33l995]",
+              "11": "click[b09p4yv1vv]",
+              "12": "click[b09pfzh58r]"
+            }
+          }
+        }
+      },
+      "request_sha256": "547b55809d0b9ad4f3d80f87147f68204acf6a81db10efb6c8d5c1fb1e5229eb",
+      "attempts": [
+        {
+          "seconds": 0.4252934865653515,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4254709854722023,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.22546472062009176,
+              "1": 0.12297944095238163,
+              "2": 0.24583219871108838,
+              "3": 0.019309262541904442,
+              "4": 0.020752658711077218,
+              "5": 0.03351170729881423,
+              "6": 0.03499192627976229,
+              "7": 0.04147346089651153,
+              "8": 0.058287577700922855,
+              "9": 0.04486358384428983,
+              "10": 0.0479463923150309,
+              "11": 0.04194921155334231,
+              "12": 0.06263785857478253
+            },
+            "confidence": 0.1829848819370124
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9664,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.42335597425699234,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.0137450657784939
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09PJ8JJ36 [SEP] Womens Sandals Dressy Roman Sandals Slip-On Ankle Strap Flip Flop Open Toe Casual Summer Beach Gladiator Flat Sandal [SEP] $3.99 to $9.99 [SEP] B09MMKH3NF [SEP] Gibobby Sandals for Women Summer Dressy Bohemia Crystal Flat Sandals Cute Beach Slippers Flip Flops [SEP] $3.53 to $9.85 [SEP] B0834V2NFD [SEP] Espadrilles Wedges for Women,Casual Espadrille Slide On Platform Sandals Comfort Open Toe Ankle Elastic Strappy Studded Flatform Sandal Shoes [SEP] $3.42 to $15.52 [SEP] B09DK3LG2B [SEP] Women's Loafers & Slip-Ons Womens Slip On Casual Lightweight Moccasin Style Boat Deck Shoe with Tassell Design [SEP] $100.0 [SEP] B08R9ZRTYS [SEP] Walking Shoes for Women Wide Width Gibobby Women’s Fashion Sneakers Classic Slip on Flats Comfortable Walking Sports Casual Shoes [SEP] $14.79 [SEP] B08V87GV93 [SEP] AIRAVATA Women's Walking Shoes Sock Sneakers Black Breathe Platform Resistant Ladies Trainers Running Shoes 230mm-275mm [SEP] $22.99 to $26.99 [SEP] B0843QRBHT [SEP] Sandals for Women Platform, Pointed Toe Breathable Wedges Loafers Bowknot Hollow Out Walking Shoes Beach Casual Sandals [SEP] $9.66 to $18.01 [SEP] B08JLYSMC2 [SEP] Skechers Women's Skechers GOwalk Arch Fit Grateful Sneaker [SEP] $63.89 to $182.31 [SEP] B099X485FS [SEP] Mens Flip Flops for Plantar Fasciitis Orthotic Sandal, Recovery Flat Feet Arch Support for Mens Thong Shoes, Foot Pain/Stress Relief Non Slip Flip Flop Sandals for Men for Indoor and Outdoor Beach [SEP] $19.99 [SEP] B09R3N221M [SEP] Yaiewey Summer Sandals for Women,Womens Sandals Casual Crystal Rhinestone Boho Roman Flip Flops Flat Beach Sandals Shoes [SEP] $6.99 to $17.79",
+      "request": {
+        "state": "Shopping instruction:\ni need white walking shoes with arch support, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09PJ8JJ36 [SEP] Womens Sandals Dressy Roman Sandals Slip-On Ankle Strap Flip Flop Open Toe Casual Summer Beach Gladiator Flat Sandal [SEP] $3.99 to $9.99 [SEP] B09MMKH3NF [SEP] Gibobby Sandals for Women Summer Dressy Bohemia Crystal Flat Sandals Cute Beach Slippers Flip Flops [SEP] $3.53 to $9.85 [SEP] B0834V2NFD [SEP] Espadrilles Wedges for Women,Casual Espadrille Slide On Platform Sandals Comfort Open Toe Ankle Elastic Strappy Studded Flatform Sandal Shoes [SEP] $3.42 to $15.52 [SEP] B09DK3LG2B [SEP] Women's Loafers & Slip-Ons Womens Slip On Casual Lightweight Moccasin Style Boat Deck Shoe with Tassell Design [SEP] $100.0 [SEP] B08R9ZRTYS [SEP] Walking Shoes for Women Wide Width Gibobby Women’s Fashion Sneakers Classic Slip on Flats Comfortable Walking Sports Casual Shoes [SEP] $14.79 [SEP] B08V87GV93 [SEP] AIRAVATA Women's Walking Shoes Sock Sneakers Black Breathe Platform Resistant Ladies Trainers Running Shoes 230mm-275mm [SEP] $22.99 to $26.99 [SEP] B0843QRBHT [SEP] Sandals for Women Platform, Pointed Toe Breathable Wedges Loafers Bowknot Hollow Out Walking Shoes Beach Casual Sandals [SEP] $9.66 to $18.01 [SEP] B08JLYSMC2 [SEP] Skechers Women's Skechers GOwalk Arch Fit Grateful Sneaker [SEP] $63.89 to $182.31 [SEP] B099X485FS [SEP] Mens Flip Flops for Plantar Fasciitis Orthotic Sandal, Recovery Flat Feet Arch Support for Mens Thong Shoes, Foot Pain/Stress Relief Non Slip Flip Flop Sandals for Men for Indoor and Outdoor Beach [SEP] $19.99 [SEP] B09R3N221M [SEP] Yaiewey Summer Sandals for Women,Womens Sandals Casual Crystal Rhinestone Boho Roman Flip Flops Flat Beach Sandals Shoes [SEP] $6.99 to $17.79\n\nRecent actions:\nsearch[i need white walking shoes with arch support, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09pj8jj36]",
+              "4": "click[b09mmkh3nf]",
+              "5": "click[b0834v2nfd]",
+              "6": "click[b09dk3lg2b]",
+              "7": "click[b08r9zrtys]",
+              "8": "click[b08v87gv93]",
+              "9": "click[b0843qrbht]",
+              "10": "click[b08jlysmc2]",
+              "11": "click[b099x485fs]",
+              "12": "click[b09r3n221m]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d8fa6e2db2ac85148e8cd1fd27f73c611f5b5bf478c16ea08196ec0474830f4d",
+      "attempts": [
+        {
+          "seconds": 0.43650461733341217,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.43667107447981834,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.11246424642571781,
+              "1": 0.10653915647358624,
+              "2": 0.18233236803168942,
+              "3": 0.0142018395497982,
+              "4": 0.03650198588975433,
+              "5": 0.052485259621941,
+              "6": 0.056675564659976356,
+              "7": 0.15451540436217842,
+              "8": 0.05719228843013622,
+              "9": 0.07073510387791573,
+              "10": 0.06981990979206107,
+              "11": 0.04932619028377346,
+              "12": 0.03721068260147169
+            },
+            "confidence": 0.11419339870099686
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9872,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.43266837671399117,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.5254816934466362
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09D2XXR3N [SEP] BGFIIPAJG Flats for Women with Arch Support Leisure Womens Round Toe Suede Slip-On Shoes Flat Single Shoes Casual Shoes Fall Walking Shoe Sneaker [SEP] $1.47 to $11.43 [SEP] B09S3THWQ6 [SEP] Orthotic Sandals For Women With Arch Support Trendy Solid Color Square Heel Buckle Vintage Roman Walking Sandals Shoes [SEP] $179.9 [SEP] B084WY28ZD [SEP] Sandals for Women Thong,Women's Bohemia Bling Rhinestone Pearl Flat Sandals Flat Gladiator Sandals Open Toe Dress Shoes [SEP] $0.01 to $12.16 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B09S9VL4J7 [SEP] Slippers For Women With Arch Support Open Toe,Women Fashion Solid Color Fish Mouth Platform Thick High Heel Buckle Sandals,Valentines Day Gifts For Mom [SEP] $17.84 to $26.87 [SEP] B08C543HDX [SEP] Sandals for Women Flat,Gladiator Sandals Summer Strappy Lace Up Open Toe Fashion Knee High Flat Sandal Gladiator Sandals [SEP] $8.03 to $13.62 [SEP] B09BL1JP89 [SEP] WSVVMQY Ladies Sandals With Arch Support Women's Ladies Summer Hollow Out Wedge Buckle Sandals Casual Shoes [SEP] $100.0 [SEP] B08418165H [SEP] Sandals for Women Platform, Crystal Comfy Platform Sandal Shoes Summer Beach Travel Shoes Sandal Ladies Flip Flops [SEP] $4.66 to $9.48 [SEP] B09Q6F9P9F [SEP] Yaiewey Girls Sandals Women's Platform & Wedge Sandals,Women's Casual Summer Rhinestone Flats Sandals Flip-Flops Slip-on Sandals Open Toe Walking Shoes 4 White [SEP] $12.99 [SEP] B09Q94MMQT [SEP] Yaiewey Girls Sandals Womens Platform & Wedge Sandals,Womens Dressy Summer Rhinestone Flats Sandals Flip-Flops Slip-on Sandals Open Toe Walking Shoes 4 White [SEP] $12.99",
+      "request": {
+        "state": "Shopping instruction:\ni need white walking shoes with arch support, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09D2XXR3N [SEP] BGFIIPAJG Flats for Women with Arch Support Leisure Womens Round Toe Suede Slip-On Shoes Flat Single Shoes Casual Shoes Fall Walking Shoe Sneaker [SEP] $1.47 to $11.43 [SEP] B09S3THWQ6 [SEP] Orthotic Sandals For Women With Arch Support Trendy Solid Color Square Heel Buckle Vintage Roman Walking Sandals Shoes [SEP] $179.9 [SEP] B084WY28ZD [SEP] Sandals for Women Thong,Women's Bohemia Bling Rhinestone Pearl Flat Sandals Flat Gladiator Sandals Open Toe Dress Shoes [SEP] $0.01 to $12.16 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B09S9VL4J7 [SEP] Slippers For Women With Arch Support Open Toe,Women Fashion Solid Color Fish Mouth Platform Thick High Heel Buckle Sandals,Valentines Day Gifts For Mom [SEP] $17.84 to $26.87 [SEP] B08C543HDX [SEP] Sandals for Women Flat,Gladiator Sandals Summer Strappy Lace Up Open Toe Fashion Knee High Flat Sandal Gladiator Sandals [SEP] $8.03 to $13.62 [SEP] B09BL1JP89 [SEP] WSVVMQY Ladies Sandals With Arch Support Women's Ladies Summer Hollow Out Wedge Buckle Sandals Casual Shoes [SEP] $100.0 [SEP] B08418165H [SEP] Sandals for Women Platform, Crystal Comfy Platform Sandal Shoes Summer Beach Travel Shoes Sandal Ladies Flip Flops [SEP] $4.66 to $9.48 [SEP] B09Q6F9P9F [SEP] Yaiewey Girls Sandals Women's Platform & Wedge Sandals,Women's Casual Summer Rhinestone Flats Sandals Flip-Flops Slip-on Sandals Open Toe Walking Shoes 4 White [SEP] $12.99 [SEP] B09Q94MMQT [SEP] Yaiewey Girls Sandals Womens Platform & Wedge Sandals,Womens Dressy Summer Rhinestone Flats Sandals Flip-Flops Slip-on Sandals Open Toe Walking Shoes 4 White [SEP] $12.99\n\nRecent actions:\nsearch[i need white walking shoes with arch support, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09d2xxr3n]",
+              "4": "click[b09s3thwq6]",
+              "5": "click[b084wy28zd]",
+              "6": "click[b08pyvwm7b]",
+              "7": "click[b09s9vl4j7]",
+              "8": "click[b08c543hdx]",
+              "9": "click[b09bl1jp89]",
+              "10": "click[b08418165h]",
+              "11": "click[b09q6f9p9f]",
+              "12": "click[b09q94mmqt]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4e98b1ca9c6c3d5d0e0118898837c7b90df0799d12dfeaa83301ac2c3bf1dc38",
+      "attempts": [
+        {
+          "seconds": 0.44535109028220177,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4454558752477169,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "11",
+            "probabilities": {
+              "0": 0.08169015831574226,
+              "1": 0.08174003228070283,
+              "2": 0.13733438407103374,
+              "3": 0.17015334210953287,
+              "4": 0.017705714186922714,
+              "5": 0.011859205386212587,
+              "6": 0.010080022006182476,
+              "7": 0.02484103065020679,
+              "8": 0.019307615491708913,
+              "9": 0.017901965112520513,
+              "10": 0.03773236086418144,
+              "11": 0.29484437147811615,
+              "12": 0.09480979804693673
+            },
+            "confidence": 0.2360814024346258
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10019,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4436062127351761,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b09q6f9p9f]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.9975941330194473
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] khaki [SEP] multicolor [SEP] white [SEP] size [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] Yaiewey Girls Sandals Women's Platform & Wedge Sandals,Women's Casual Summer Rhinestone Flats Sandals Flip-Flops Slip-on Sandals Open Toe Walking Shoes 4 White [SEP] Price: $12.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need white walking shoes with arch support, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] khaki [SEP] multicolor [SEP] white [SEP] size [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] Yaiewey Girls Sandals Women's Platform & Wedge Sandals,Women's Casual Summer Rhinestone Flats Sandals Flip-Flops Slip-on Sandals Open Toe Walking Shoes 4 White [SEP] Price: $12.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need white walking shoes with arch support, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b09q6f9p9f]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[black]",
+              "7": "click[khaki]",
+              "8": "click[multicolor]",
+              "9": "click[white]",
+              "10": "click[7]",
+              "11": "click[7.5]",
+              "12": "click[8]",
+              "13": "click[8.5]",
+              "14": "click[9]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b85e88433613bf50fd3bbbb87a6417f2720e406496510de23948926ae5940a40",
+      "attempts": [
+        {
+          "seconds": 0.23651087284088135,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.23663193359971046,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "9",
+            "probabilities": {
+              "0": 0.0688379353386691,
+              "1": 0.05764246278459984,
+              "2": 0.07029962402686145,
+              "3": 0.052435307656422084,
+              "4": 0.05094238920968616,
+              "5": 0.08352277025416527,
+              "6": 0.014222521632702087,
+              "7": 0.015656932090429333,
+              "8": 0.032146276601734115,
+              "9": 0.11934622113556412,
+              "10": 0.08137274116585484,
+              "11": 0.07677127722790542,
+              "12": 0.10626175819266508,
+              "13": 0.09465447430021894,
+              "14": 0.07588730838252193
+            },
+            "confidence": 0.05644237978810446
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 5010,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 15,
+          "inference_seconds": 0.2348649874329567,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[white]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.2522835098206997
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] khaki [SEP] multicolor [SEP] white [SEP] size [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] Yaiewey Girls Sandals Women's Platform & Wedge Sandals,Women's Casual Summer Rhinestone Flats Sandals Flip-Flops Slip-on Sandals Open Toe Walking Shoes 4 White [SEP] Price: $12.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need white walking shoes with arch support, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] khaki [SEP] multicolor [SEP] white [SEP] size [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] Yaiewey Girls Sandals Women's Platform & Wedge Sandals,Women's Casual Summer Rhinestone Flats Sandals Flip-Flops Slip-on Sandals Open Toe Walking Shoes 4 White [SEP] Price: $12.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need white walking shoes with arch support, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b09q6f9p9f]\nclick[white]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[black]",
+              "7": "click[khaki]",
+              "8": "click[multicolor]",
+              "9": "click[white]",
+              "10": "click[7]",
+              "11": "click[7.5]",
+              "12": "click[8]",
+              "13": "click[8.5]",
+              "14": "click[9]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c2cd963d0f3a5cce00602abd0c450bbb3fbe364d6ee17fc6657377f77956ac4c",
+      "attempts": [
+        {
+          "seconds": 0.24236639589071274,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.2424742877483368,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "12",
+            "probabilities": {
+              "0": 0.06003319573071152,
+              "1": 0.0549954844530019,
+              "2": 0.06837851347627873,
+              "3": 0.050665883369586114,
+              "4": 0.050417438866297994,
+              "5": 0.08518064820591721,
+              "6": 0.014326133538612706,
+              "7": 0.013065157858971424,
+              "8": 0.024879067542051058,
+              "9": 0.04614443677528381,
+              "10": 0.0935793461689238,
+              "11": 0.0903554525158195,
+              "12": 0.13276709592633656,
+              "13": 0.1264132552749626,
+              "14": 0.08879889029724489
+            },
+            "confidence": 0.07082188849250352
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 5085,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 15,
+          "inference_seconds": 0.23778747767210007,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[8]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.512913268059492
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] khaki [SEP] multicolor [SEP] white [SEP] size [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] Yaiewey Girls Sandals Women's Platform & Wedge Sandals,Women's Casual Summer Rhinestone Flats Sandals Flip-Flops Slip-on Sandals Open Toe Walking Shoes 4 White [SEP] Price: $12.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need white walking shoes with arch support, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need white walking shoes with arch support, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] khaki [SEP] multicolor [SEP] white [SEP] size [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] Yaiewey Girls Sandals Women's Platform & Wedge Sandals,Women's Casual Summer Rhinestone Flats Sandals Flip-Flops Slip-on Sandals Open Toe Walking Shoes 4 White [SEP] Price: $12.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need white walking shoes with arch support, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b09q6f9p9f]\nclick[white]\nclick[8]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[black]",
+              "7": "click[khaki]",
+              "8": "click[multicolor]",
+              "9": "click[white]",
+              "10": "click[7]",
+              "11": "click[7.5]",
+              "12": "click[8]",
+              "13": "click[8.5]",
+              "14": "click[9]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c9a813fa5766eab94a12613b1ef9d92d7405bdb0144dca49207de2a1b0bec9cf",
+      "attempts": [
+        {
+          "seconds": 0.2412240356206894,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.241371501237154,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.08418020998728919,
+              "1": 0.07598346855941034,
+              "2": 0.09346485471499587,
+              "3": 0.07162177834439835,
+              "4": 0.07124318700851319,
+              "5": 0.10693118465210973,
+              "6": 0.019282147253019896,
+              "7": 0.015714512343720708,
+              "8": 0.03136192262817234,
+              "9": 0.06618800243495261,
+              "10": 0.06647377699514667,
+              "11": 0.06015398252889678,
+              "12": 0.06689030030256672,
+              "13": 0.08650094101096639,
+              "14": 0.08400973123584125
+            },
+            "confidence": 0.04314055498440328
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 5160,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 15,
+          "inference_seconds": 0.23865178599953651,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 2.786195233464241
+    }
+  ]
+}

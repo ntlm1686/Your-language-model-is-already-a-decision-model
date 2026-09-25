@@ -1,0 +1,328 @@
+{
+  "task_id": 461,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars",
+  "instruction_sha256": "e90639251858046bf49a2846c593283b8f8b45d7efd8518f2d0d44cc90c94d45",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "repeated_state_action",
+  "steps": 7,
+  "elapsed_seconds": 1.7238167896866798,
+  "decision_seconds": 1.3920895121991634,
+  "input_tokens": 5053,
+  "output_tokens": 428,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Search",
+      "action": "search[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06488123536109924
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B076MMY8T8 [SEP] PrimaSleep Wave Gel Infused Memory Foam Mattress, 10'' H, Twin, Blue [SEP] $202.01 [SEP] B016WJWC0S [SEP] Olee Sleep Aquarius 10-Inch Memory Foam Mattress in Blue, Queen [SEP] $306.27 [SEP] B09SB352V4 [SEP] KIMIN 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (Twin) (Queen) [SEP] $277.05 [SEP] B07QJY3HFN [SEP] PrimaSleep 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (King) [SEP] $272.04 [SEP] B07JNMBTCY [SEP] Travel Happy (Custom Size Requests) with A 10 INCH Any King Size New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover Made in The USA [SEP] $799.99 [SEP] B07ZXL7J4Q [SEP] Set of 6 Contemporary Metal Frame Dining Chair Vertical Back Design Commercial Home Office Furniture, Burgundy Vinyl/2349 [SEP] $784.5 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B073VLQ5JR [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Full [SEP] $238.92 [SEP] B073VMTFCC [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Twin [SEP] $146.88",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B076MMY8T8 [SEP] PrimaSleep Wave Gel Infused Memory Foam Mattress, 10'' H, Twin, Blue [SEP] $202.01 [SEP] B016WJWC0S [SEP] Olee Sleep Aquarius 10-Inch Memory Foam Mattress in Blue, Queen [SEP] $306.27 [SEP] B09SB352V4 [SEP] KIMIN 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (Twin) (Queen) [SEP] $277.05 [SEP] B07QJY3HFN [SEP] PrimaSleep 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (King) [SEP] $272.04 [SEP] B07JNMBTCY [SEP] Travel Happy (Custom Size Requests) with A 10 INCH Any King Size New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover Made in The USA [SEP] $799.99 [SEP] B07ZXL7J4Q [SEP] Set of 6 Contemporary Metal Frame Dining Chair Vertical Back Design Commercial Home Office Furniture, Burgundy Vinyl/2349 [SEP] $784.5 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B073VLQ5JR [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Full [SEP] $238.92 [SEP] B073VMTFCC [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Twin [SEP] $146.88\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09r8s9t2k]",
+              "3": "click[b076mmy8t8]",
+              "4": "click[b016wjwc0s]",
+              "5": "click[b09sb352v4]",
+              "6": "click[b07qjy3hfn]",
+              "7": "click[b07jnmbtcy]",
+              "8": "click[b07zxl7j4q]",
+              "9": "click[b01730lx9q]",
+              "10": "click[b073vlq5jr]",
+              "11": "click[b073vmtfcc]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "803294586367c365c630c94a37877a384d4d3461c5e6afd4850f5a44f2b45d8e",
+      "attempts": [
+        {
+          "seconds": 0.33708851784467697,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33721284940838814,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.86,
+            "probabilities": {
+              "6": 0.0,
+              "4": 0.0,
+              "10": 0.0,
+              "9": 0.0,
+              "1": 0.12,
+              "5": 0.0,
+              "11": 0.0,
+              "3": 0.0,
+              "7": 0.0,
+              "0": 0.88,
+              "8": 0.0,
+              "2": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1180,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.41875462979078293
+    },
+    {
+      "step": 2,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Search",
+      "action": "search[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4701627679169178
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B076MMY8T8 [SEP] PrimaSleep Wave Gel Infused Memory Foam Mattress, 10'' H, Twin, Blue [SEP] $202.01 [SEP] B016WJWC0S [SEP] Olee Sleep Aquarius 10-Inch Memory Foam Mattress in Blue, Queen [SEP] $306.27 [SEP] B09SB352V4 [SEP] KIMIN 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (Twin) (Queen) [SEP] $277.05 [SEP] B07QJY3HFN [SEP] PrimaSleep 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (King) [SEP] $272.04 [SEP] B07JNMBTCY [SEP] Travel Happy (Custom Size Requests) with A 10 INCH Any King Size New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover Made in The USA [SEP] $799.99 [SEP] B07ZXL7J4Q [SEP] Set of 6 Contemporary Metal Frame Dining Chair Vertical Back Design Commercial Home Office Furniture, Burgundy Vinyl/2349 [SEP] $784.5 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B073VLQ5JR [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Full [SEP] $238.92 [SEP] B073VMTFCC [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Twin [SEP] $146.88",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B076MMY8T8 [SEP] PrimaSleep Wave Gel Infused Memory Foam Mattress, 10'' H, Twin, Blue [SEP] $202.01 [SEP] B016WJWC0S [SEP] Olee Sleep Aquarius 10-Inch Memory Foam Mattress in Blue, Queen [SEP] $306.27 [SEP] B09SB352V4 [SEP] KIMIN 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (Twin) (Queen) [SEP] $277.05 [SEP] B07QJY3HFN [SEP] PrimaSleep 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (King) [SEP] $272.04 [SEP] B07JNMBTCY [SEP] Travel Happy (Custom Size Requests) with A 10 INCH Any King Size New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover Made in The USA [SEP] $799.99 [SEP] B07ZXL7J4Q [SEP] Set of 6 Contemporary Metal Frame Dining Chair Vertical Back Design Commercial Home Office Furniture, Burgundy Vinyl/2349 [SEP] $784.5 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B073VLQ5JR [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Full [SEP] $238.92 [SEP] B073VMTFCC [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Twin [SEP] $146.88\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[back to search]\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09r8s9t2k]",
+              "3": "click[b076mmy8t8]",
+              "4": "click[b016wjwc0s]",
+              "5": "click[b09sb352v4]",
+              "6": "click[b07qjy3hfn]",
+              "7": "click[b07jnmbtcy]",
+              "8": "click[b07zxl7j4q]",
+              "9": "click[b01730lx9q]",
+              "10": "click[b073vlq5jr]",
+              "11": "click[b073vmtfcc]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "019d5cc3802f2388ae36d89e2c27a7b051344a703c9872d4e890762ad1eb4e80",
+      "attempts": [
+        {
+          "seconds": 0.35970230400562286,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3598485477268696,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.63,
+            "probabilities": {
+              "11": 0.01,
+              "2": 0.0,
+              "4": 0.0,
+              "8": 0.01,
+              "10": 0.0,
+              "7": 0.0,
+              "6": 0.0,
+              "5": 0.0,
+              "0": 0.31,
+              "3": 0.0,
+              "9": 0.0,
+              "1": 0.67
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1219,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.893758662045002
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B086SLVQGX [SEP] Olee Sleep 10 Inch Gel Infused Layer Top Memory Foam Mattress, King, Blue [SEP] $453.7 [SEP] B008LTBJFW [SEP] Crucial RAM 16GB Kit (2x8GB) DDR3 1600 MHz CL11 Memory for Mac CT2K8G3S160BM [SEP] $94.99 [SEP] B07Y9FMBDX [SEP] Zinus Green Tea 8 Inch Memory Foam Mattress and Jared Adjustable Bed Frame Set with Remote / Whisper-Quiet Motorized Movement / Ergonomic Positioning for Better Health and Relaxation, Queen [SEP] $100.0 [SEP] B07JNLQPHQ [SEP] Travel Happy (Custom Size Requests) with A 12 INCH Any King Size New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover Made in The USA [SEP] $999.99 [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B09LSSBS2C [SEP] Sealed Nib Compatible with Dish Network Satellite TV 145822 [SEP] $116.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B00MW20QB2 [SEP] MyContour mattress 10” California King size [SEP] $100.0 [SEP] B09L1K4YHX [SEP] Hundreds Of 100 Dollar Bills Mans Women'S Slipper Warm Step-In Furry Slippers Anti-Skid Winter Shoes [SEP] $12.98",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B086SLVQGX [SEP] Olee Sleep 10 Inch Gel Infused Layer Top Memory Foam Mattress, King, Blue [SEP] $453.7 [SEP] B008LTBJFW [SEP] Crucial RAM 16GB Kit (2x8GB) DDR3 1600 MHz CL11 Memory for Mac CT2K8G3S160BM [SEP] $94.99 [SEP] B07Y9FMBDX [SEP] Zinus Green Tea 8 Inch Memory Foam Mattress and Jared Adjustable Bed Frame Set with Remote / Whisper-Quiet Motorized Movement / Ergonomic Positioning for Better Health and Relaxation, Queen [SEP] $100.0 [SEP] B07JNLQPHQ [SEP] Travel Happy (Custom Size Requests) with A 12 INCH Any King Size New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover Made in The USA [SEP] $999.99 [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B09LSSBS2C [SEP] Sealed Nib Compatible with Dish Network Satellite TV 145822 [SEP] $116.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B00MW20QB2 [SEP] MyContour mattress 10” California King size [SEP] $100.0 [SEP] B09L1K4YHX [SEP] Hundreds Of 100 Dollar Bills Mans Women'S Slipper Warm Step-In Furry Slippers Anti-Skid Winter Shoes [SEP] $12.98\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[back to search]\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b086slvqgx]",
+              "4": "click[b008ltbjfw]",
+              "5": "click[b07y9fmbdx]",
+              "6": "click[b07jnlqphq]",
+              "7": "click[b09lspp1cj]",
+              "8": "click[b09lssbs2c]",
+              "9": "click[b09lglp9hg]",
+              "10": "click[b09lgy85yy]",
+              "11": "click[b00mw20qb2]",
+              "12": "click[b09l1k4yhx]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "601e5d1edd192a57d8e1a76af937b3dab44ab857bd2f50b7a5813e6cd47dc6c6",
+      "attempts": [
+        {
+          "seconds": 0.3406568169593811,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.34078411757946014,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.3,
+            "probabilities": {
+              "7": 0.0,
+              "9": 0.0,
+              "3": 0.0,
+              "5": 0.0,
+              "11": 0.0,
+              "1": 0.15,
+              "10": 0.0,
+              "12": 0.13,
+              "2": 0.36,
+              "0": 0.35,
+              "6": 0.0,
+              "8": 0.0,
+              "4": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1224,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.297489833086729
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B085DY3K9P [SEP] King Size Mattress Memory Foam Mattress 10 INCH Gel Infused Layer TOP Memory Foam Mattress Healthy and Breathable 10 Years Warranty King Mattress (King, White/Blue) [SEP] $598.98 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B09J48RWH1 [SEP] occ3506 Skin Sticker for Oculus Quest 2 VR Headset Virtual Reality Cartoon Decals Protetcive PVC Skin for Oculus Quest 2 Accessories [SEP] $100.0 [SEP] B07998RBRM [SEP] Best Price Mattress 3 Inch Ventilated Memory Foam Mattress Topper, Cooling Gel Infusion, CertiPUR-US Certified, Cal King [SEP] $93.25 [SEP] B073T4R3JS [SEP] TRAVEL HAPPY with A 8 INCH Narrow King (72 inch x 80 inches) New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's and Trailers Made in The USA [SEP] $649.99 [SEP] B07VDBK6HW [SEP] TRAVEL HAPPY with A 8 INCH Short King (72\" x 75\" Inches) New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's and Trailers Made in The USA [SEP] $649.99 [SEP] B073T4G91Y [SEP] TRAVEL HAPPY with A 10 INCH Narrow King (72 inch x 80 inches) New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's & Trailers Made in The USA [SEP] $749.99 [SEP] B07ZHGLBKG [SEP] TRAVEL HAPPY with A 8\" RV BUNK Bed Twin 34\" x 75\" Now with 2\" of Gel Memory Foam for a Medium Feel Cooler Sleep Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's and Trailers USA [SEP] $369.99 [SEP] B08267L1GC [SEP] KLS14 Set of 2 Contemporary Ladder Back Design Metal Bar Stools, Clear Coated Frame Finish, Burgundy Vinyl Seat/2373 [SEP] $334.5 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B085DY3K9P [SEP] King Size Mattress Memory Foam Mattress 10 INCH Gel Infused Layer TOP Memory Foam Mattress Healthy and Breathable 10 Years Warranty King Mattress (King, White/Blue) [SEP] $598.98 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B09J48RWH1 [SEP] occ3506 Skin Sticker for Oculus Quest 2 VR Headset Virtual Reality Cartoon Decals Protetcive PVC Skin for Oculus Quest 2 Accessories [SEP] $100.0 [SEP] B07998RBRM [SEP] Best Price Mattress 3 Inch Ventilated Memory Foam Mattress Topper, Cooling Gel Infusion, CertiPUR-US Certified, Cal King [SEP] $93.25 [SEP] B073T4R3JS [SEP] TRAVEL HAPPY with A 8 INCH Narrow King (72 inch x 80 inches) New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's and Trailers Made in The USA [SEP] $649.99 [SEP] B07VDBK6HW [SEP] TRAVEL HAPPY with A 8 INCH Short King (72\" x 75\" Inches) New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's and Trailers Made in The USA [SEP] $649.99 [SEP] B073T4G91Y [SEP] TRAVEL HAPPY with A 10 INCH Narrow King (72 inch x 80 inches) New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's & Trailers Made in The USA [SEP] $749.99 [SEP] B07ZHGLBKG [SEP] TRAVEL HAPPY with A 8\" RV BUNK Bed Twin 34\" x 75\" Now with 2\" of Gel Memory Foam for a Medium Feel Cooler Sleep Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's and Trailers USA [SEP] $369.99 [SEP] B08267L1GC [SEP] KLS14 Set of 2 Contemporary Ladder Back Design Metal Bar Stools, Clear Coated Frame Finish, Burgundy Vinyl Seat/2373 [SEP] $334.5 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[back to search]\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b085dy3k9p]",
+              "4": "click[b09lh2mrh8]",
+              "5": "click[b09j48rwh1]",
+              "6": "click[b07998rbrm]",
+              "7": "click[b073t4r3js]",
+              "8": "click[b07vdbk6hw]",
+              "9": "click[b073t4g91y]",
+              "10": "click[b07zhglbkg]",
+              "11": "click[b08267l1gc]",
+              "12": "click[b00004rg7m]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "bd24c4919bc68893f075112d5e46667042cf14c05a97f658e577e1485294f254",
+      "attempts": [
+        {
+          "seconds": 0.354073204100132,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.35424399748444557,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.4,
+            "probabilities": {
+              "1": 0.22,
+              "2": 0.24,
+              "12": 0.0,
+              "11": 0.01,
+              "5": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              "7": 0.0,
+              "0": 0.46,
+              "3": 0.0,
+              "4": 0.0,
+              "10": 0.0,
+              "6": 0.07
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1430,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.6681471057236195
+    },
+    {
+      "step": 6,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Search",
+      "action": "search[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.723812136799097
+    }
+  ]
+}

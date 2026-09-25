@@ -1,0 +1,1087 @@
+{
+  "task_id": 74,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars",
+  "instruction_sha256": "e3111ad0f1339a84701127175da767cee33a02f44f5e52fed65199b669ae0e91",
+  "reward": 0.5,
+  "score": 50.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 15,
+  "elapsed_seconds": 5.715927995741367,
+  "decision_seconds": 5.008386567234993,
+  "input_tokens": 110639,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Search",
+      "action": "search[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.055036511272192
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08R9K2YNN [SEP] Hagan Tufted Storage Ottoman, Weight Capacity: 265, Overall Width: 41.5 '' [SEP] $366.85 [SEP] B01FRO2DWG [SEP] Premium Modern Pavilion Ottoman - Top Grain White Italian Leather [SEP] $299.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B08F2Z6875 [SEP] Rio Top Grain Leather Ottoman [SEP] $505.33 [SEP] B09J99N9MC [SEP] Pimlico Contemporary 100% Top Grain Leather Ottoman [SEP] $502.33 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95 [SEP] B09H4R77YD [SEP] Ivory Cream Cocktail Ottoman Stool Classic Traditional Pouf Seat Antique Style Wooden Lower Shelf Elegant Linen Tufted Nail-Head Foam Top Square Shaped Solid Color Rigid Legs Fabric Decor Seating [SEP] $435.24 [SEP] B09H4TQRGH [SEP] Natural Beige Cocktail Ottoman Stool Classic Traditional Pouf Seat Antique Style Wooden Lower Shelf Elegant Linen Tufted Nail-Head Foam Top Square Shaped Solid Color Rigid Legs Fabric Decor Seating [SEP] $435.25 [SEP] B09HGW9446 [SEP] Upholstered Full Bed with Bedside Storage Ottoman Contemporary Upholstered Platform Bed Frame with Headboard and Wooden Slats Support, No Box Spring Required, Gray [SEP] $176.99 [SEP] B07MZDWN6D [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 2 Mahogany Wood Seat/Mahogany Wood Frame #2175 [SEP] $364.5",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08R9K2YNN [SEP] Hagan Tufted Storage Ottoman, Weight Capacity: 265, Overall Width: 41.5 '' [SEP] $366.85 [SEP] B01FRO2DWG [SEP] Premium Modern Pavilion Ottoman - Top Grain White Italian Leather [SEP] $299.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B08F2Z6875 [SEP] Rio Top Grain Leather Ottoman [SEP] $505.33 [SEP] B09J99N9MC [SEP] Pimlico Contemporary 100% Top Grain Leather Ottoman [SEP] $502.33 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95 [SEP] B09H4R77YD [SEP] Ivory Cream Cocktail Ottoman Stool Classic Traditional Pouf Seat Antique Style Wooden Lower Shelf Elegant Linen Tufted Nail-Head Foam Top Square Shaped Solid Color Rigid Legs Fabric Decor Seating [SEP] $435.24 [SEP] B09H4TQRGH [SEP] Natural Beige Cocktail Ottoman Stool Classic Traditional Pouf Seat Antique Style Wooden Lower Shelf Elegant Linen Tufted Nail-Head Foam Top Square Shaped Solid Color Rigid Legs Fabric Decor Seating [SEP] $435.25 [SEP] B09HGW9446 [SEP] Upholstered Full Bed with Bedside Storage Ottoman Contemporary Upholstered Platform Bed Frame with Headboard and Wooden Slats Support, No Box Spring Required, Gray [SEP] $176.99 [SEP] B07MZDWN6D [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 2 Mahogany Wood Seat/Mahogany Wood Frame #2175 [SEP] $364.5\n\nRecent actions:\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b08r9k2ynn]",
+              "3": "click[b01fro2dwg]",
+              "4": "click[b09kcl5gk5]",
+              "5": "click[b08f2z6875]",
+              "6": "click[b09j99n9mc]",
+              "7": "click[b00004rg7m]",
+              "8": "click[b09h4r77yd]",
+              "9": "click[b09h4tqrgh]",
+              "10": "click[b09hgw9446]",
+              "11": "click[b07mzdwn6d]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ee9b45724e8954ff79586ba50bb7d9460d26622bdad2bfc47249ab5c0b341daa",
+      "attempts": [
+        {
+          "seconds": 0.38140769302845,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.38157282769680023,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.15824311043479491,
+              "1": 0.4992935305813489,
+              "2": 0.045535782997791895,
+              "3": 0.038549430546951764,
+              "4": 0.03780917245836265,
+              "5": 0.014989597134255616,
+              "6": 0.017416561649078052,
+              "7": 0.01473577908488245,
+              "8": 0.04162794654997032,
+              "9": 0.026746917691120444,
+              "10": 0.053243936349187684,
+              "11": 0.05180823452225542
+            },
+            "confidence": 0.4537747606341987
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8518,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3795420601963997,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5069718062877655
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07N93CSJW [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 2 Cherry Wood Seat/Cherry Wood Frame #2175 [SEP] $364.5 [SEP] B08FG6F8R1 [SEP] JJZXPJ Footstool Foot Rest Small Seat Foot Stool PU Leather Seat with Wooden Round Ottoman 4 Legs Dressing Makeup Stool Available,Pink (Color : Yellow) [SEP] $59.51 [SEP] B09NTDNHYH [SEP] Storage Low Stool, Bench with Storage Space, Chest, Storage Box, Foldable, Maximum Static Load 400 Kg(881lbs), Leather, Multi-Color Optional(Colour: White,Size: 40x40x40cm) [SEP] $148.64 [SEP] B09D7BZ1L6 [SEP] Storage Ottoman Chair Stool Desk Stool Upholstered Footstool Bench Dressing Table Stool Pouf Couch Stool Cover Storage Ottoman Padded Seat Shoe Changing Stool (Color : Pink, Size : 100X40X43cm) [SEP] $524.85 [SEP] B083WM69GQ [SEP] Amazonas Honey Pine Finish Twin Bed & Trundle Solid Pine Wooden Trundle Bed Hardwood Slats Support Suitable for Boys Girls Kids Bedroom Wooden Bed Frame [SEP] $239.99 [SEP] B08M5L49JL [SEP] LIXIONG Ottoman, Square Flannelette Upholstered Footstool with Removable Cover and Anti-Slip Pad Footrest Stool for Bedroom Living Room, 5 Colour (Color : White, Size : 33x27x33cm) [SEP] $77.46 [SEP] B07Q5VGZWV [SEP] Industrial Filing Cabinet, Modern Industrial File Drawer, Vintage Industrial Office File Cabinet, Lingerie Chest, Dresser [SEP] $3150.0 [SEP] B09GLX4MXJ [SEP] Upholstered Queen Bed with Bedside Storage Ottoman Contemporary Upholstered Velvet Platform Bed Frame with Headboard and Wooden Slats Support, Light Gray [SEP] $217.99 [SEP] B07N964YPC [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 4 Burgundy Vinyl Seat/Cherry Wood Frame #2175 [SEP] $704.5 [SEP] B08K3NJQ1M [SEP] Twin Trundle Bed White Finish Solid Pine Wooden Arizona Trundle Bed Wooden Slats Support Unfinished Bedroom Single Wooden Bed Frame Hand Finished [SEP] $249.99",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07N93CSJW [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 2 Cherry Wood Seat/Cherry Wood Frame #2175 [SEP] $364.5 [SEP] B08FG6F8R1 [SEP] JJZXPJ Footstool Foot Rest Small Seat Foot Stool PU Leather Seat with Wooden Round Ottoman 4 Legs Dressing Makeup Stool Available,Pink (Color : Yellow) [SEP] $59.51 [SEP] B09NTDNHYH [SEP] Storage Low Stool, Bench with Storage Space, Chest, Storage Box, Foldable, Maximum Static Load 400 Kg(881lbs), Leather, Multi-Color Optional(Colour: White,Size: 40x40x40cm) [SEP] $148.64 [SEP] B09D7BZ1L6 [SEP] Storage Ottoman Chair Stool Desk Stool Upholstered Footstool Bench Dressing Table Stool Pouf Couch Stool Cover Storage Ottoman Padded Seat Shoe Changing Stool (Color : Pink, Size : 100X40X43cm) [SEP] $524.85 [SEP] B083WM69GQ [SEP] Amazonas Honey Pine Finish Twin Bed & Trundle Solid Pine Wooden Trundle Bed Hardwood Slats Support Suitable for Boys Girls Kids Bedroom Wooden Bed Frame [SEP] $239.99 [SEP] B08M5L49JL [SEP] LIXIONG Ottoman, Square Flannelette Upholstered Footstool with Removable Cover and Anti-Slip Pad Footrest Stool for Bedroom Living Room, 5 Colour (Color : White, Size : 33x27x33cm) [SEP] $77.46 [SEP] B07Q5VGZWV [SEP] Industrial Filing Cabinet, Modern Industrial File Drawer, Vintage Industrial Office File Cabinet, Lingerie Chest, Dresser [SEP] $3150.0 [SEP] B09GLX4MXJ [SEP] Upholstered Queen Bed with Bedside Storage Ottoman Contemporary Upholstered Velvet Platform Bed Frame with Headboard and Wooden Slats Support, Light Gray [SEP] $217.99 [SEP] B07N964YPC [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 4 Burgundy Vinyl Seat/Cherry Wood Frame #2175 [SEP] $704.5 [SEP] B08K3NJQ1M [SEP] Twin Trundle Bed White Finish Solid Pine Wooden Arizona Trundle Bed Wooden Slats Support Unfinished Bedroom Single Wooden Bed Frame Hand Finished [SEP] $249.99\n\nRecent actions:\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07n93csjw]",
+              "4": "click[b08fg6f8r1]",
+              "5": "click[b09ntdnhyh]",
+              "6": "click[b09d7bz1l6]",
+              "7": "click[b083wm69gq]",
+              "8": "click[b08m5l49jl]",
+              "9": "click[b07q5vgzwv]",
+              "10": "click[b09glx4mxj]",
+              "11": "click[b07n964ypc]",
+              "12": "click[b08k3njq1m]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f7dc88fbae10feb4fa37e5c0682367d93323f593e744850e68100666465497ca",
+      "attempts": [
+        {
+          "seconds": 0.49153754115104675,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4917036406695843,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.14983091853734934,
+              "1": 0.14983082437782638,
+              "2": 0.20705016224135153,
+              "3": 0.03137000199869275,
+              "4": 0.1261787863321504,
+              "5": 0.07809360997286653,
+              "6": 0.07118820493298797,
+              "7": 0.02146366626966152,
+              "8": 0.047353231157438766,
+              "9": 0.013366213830792716,
+              "10": 0.044675063726009594,
+              "11": 0.02983564085035118,
+              "12": 0.02976367577252143
+            },
+            "confidence": 0.14097100909479748
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11070,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.48301539197564125,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.0678775943815708
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09NTPLGYG [SEP] Modern Queen Size Upholstered Platform Bed with Storage Cushioned Ottoman and Tufted Headboard,Wooden Bed Frame with Wooden Slat Support,Mattress Foundation,No Box Spring Needed (Queen Size,Beige) [SEP] $219.99 [SEP] B07KM2838G [SEP] K & B Furniture Blue Faux Leather Square Ottoman [SEP] $79.99 [SEP] B084HMBJ7Q [SEP] Arizona Twin Bed with Trundle Solid Pine Wooden Trundle Bed Hardwood Slats Support Unfinished Suitable for Boys Girls Kids Bedroom Single Wooden Bed Frame [SEP] $199.99 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B08X71CZJ2 [SEP] Harper & Bright Designs Twin Over Twin Bunk Bed Frame for Kids, Pine Wood Twin Bunk Bed for Boys and Girls, Low Bunk Bed, 13 Slats (Pink) [SEP] $285.99 [SEP] B09NK7YM1R [SEP] Solid Wood Platform Bed, Queen Size Upholstered Platform Bed with Storage Ottoman Bench and Headboard, Upholstered Platform Bed for Kids Teens Adults (Beige) [SEP] $288.0 [SEP] B08X8WXZNQ [SEP] Figured Maple Epoxy River Coffee Table with Waterfall Leg [SEP] $14500.0 [SEP] B08MQ1ZVMH [SEP] LIXIONG Ottoman, Faux Leather Padded Storage Seat with Metal Hinge and Plastic Legs Shoes Bench for Bedroom Hallway, 6 Colour (Color : Red, Size : 30x30x35cm) [SEP] $77.15 [SEP] B08MQ6GZVY [SEP] LIXIONG Ottoman, Square Padded Storage Seat with Hinged Lid and Faux Leather Cover Footrest Stool for Hallway Living Room, 6 Colour (Color : Brown, Size : 30x30x35cm) [SEP] $77.15 [SEP] B08267L1GC [SEP] KLS14 Set of 2 Contemporary Ladder Back Design Metal Bar Stools, Clear Coated Frame Finish, Burgundy Vinyl Seat/2373 [SEP] $334.5",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09NTPLGYG [SEP] Modern Queen Size Upholstered Platform Bed with Storage Cushioned Ottoman and Tufted Headboard,Wooden Bed Frame with Wooden Slat Support,Mattress Foundation,No Box Spring Needed (Queen Size,Beige) [SEP] $219.99 [SEP] B07KM2838G [SEP] K & B Furniture Blue Faux Leather Square Ottoman [SEP] $79.99 [SEP] B084HMBJ7Q [SEP] Arizona Twin Bed with Trundle Solid Pine Wooden Trundle Bed Hardwood Slats Support Unfinished Suitable for Boys Girls Kids Bedroom Single Wooden Bed Frame [SEP] $199.99 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B08X71CZJ2 [SEP] Harper & Bright Designs Twin Over Twin Bunk Bed Frame for Kids, Pine Wood Twin Bunk Bed for Boys and Girls, Low Bunk Bed, 13 Slats (Pink) [SEP] $285.99 [SEP] B09NK7YM1R [SEP] Solid Wood Platform Bed, Queen Size Upholstered Platform Bed with Storage Ottoman Bench and Headboard, Upholstered Platform Bed for Kids Teens Adults (Beige) [SEP] $288.0 [SEP] B08X8WXZNQ [SEP] Figured Maple Epoxy River Coffee Table with Waterfall Leg [SEP] $14500.0 [SEP] B08MQ1ZVMH [SEP] LIXIONG Ottoman, Faux Leather Padded Storage Seat with Metal Hinge and Plastic Legs Shoes Bench for Bedroom Hallway, 6 Colour (Color : Red, Size : 30x30x35cm) [SEP] $77.15 [SEP] B08MQ6GZVY [SEP] LIXIONG Ottoman, Square Padded Storage Seat with Hinged Lid and Faux Leather Cover Footrest Stool for Hallway Living Room, 6 Colour (Color : Brown, Size : 30x30x35cm) [SEP] $77.15 [SEP] B08267L1GC [SEP] KLS14 Set of 2 Contemporary Ladder Back Design Metal Bar Stools, Clear Coated Frame Finish, Burgundy Vinyl Seat/2373 [SEP] $334.5\n\nRecent actions:\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09ntplgyg]",
+              "4": "click[b07km2838g]",
+              "5": "click[b084hmbj7q]",
+              "6": "click[b07jmgsdwt]",
+              "7": "click[b08x71czj2]",
+              "8": "click[b09nk7ym1r]",
+              "9": "click[b08x8wxznq]",
+              "10": "click[b08mq1zvmh]",
+              "11": "click[b08mq6gzvy]",
+              "12": "click[b08267l1gc]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ac3c9756cd762d009aa2fc508fcf9eea20445fa41bc452efac5d26490955cc2e",
+      "attempts": [
+        {
+          "seconds": 0.4539680667221546,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4541044682264328,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.1733625160834933,
+              "1": 0.16796236963847241,
+              "2": 0.2719084766600929,
+              "3": 0.03740512462285358,
+              "4": 0.045680411992006946,
+              "5": 0.03908498389301636,
+              "6": 0.03888937768478687,
+              "7": 0.0461506188598569,
+              "8": 0.04689909609129998,
+              "9": 0.028765728012273912,
+              "10": 0.041480694225912614,
+              "11": 0.03684541621257068,
+              "12": 0.025565186023363603
+            },
+            "confidence": 0.21123418304843394
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10324,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.451928973197937,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.5973564833402634
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08K3MTFG7 [SEP] Twin Trundle Bed Wooden Bed Solid Pine Wood with Slats Support Unfinished Single Wooden Bed Frame Suitable for Bedroom and Wheeled Trundle Bed [SEP] $189.99 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B08KT9V3RG [SEP] Twin Over Twin Bunk Bed Frame for Kids, Pine Wood Twin Bunk Bed for Boys and Girls, Low Bunk Bed, 13 Slats, Grey [SEP] $265.99 [SEP] B09NPY4W4Y [SEP] 40cm Cube Ottoman, Storage Seat Storage Box PU Leather Upholstered Footrest Pouffe Chair with Lid Suitable for Living Room Dressing Table Fitting Room-40x40x40cm(16x16x16inch) [SEP] $231.99 [SEP] B085B3MPV8 [SEP] ZZFF Vintage Wood Storage Ottoman Trunk with Faux Leather Seat,flip Top Bed End Stool Bench,Industrial Rustic Pu Leather Footrest Stool A 53.5x31x42cm(21x12x17inch) [SEP] $257.0 [SEP] B07MF33FMR [SEP] Modern Style Metal Dining Bar Stools Pub Lounge Diner Restaurant Commercial Seats Vertical Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 4 Natural Wood Seat #2157 [SEP] $644.5 [SEP] B08TG6NV5T [SEP] Monarch Specialties I 9007 Round Foot Stool with Padded Seat and Wooden Legs and Footrests - Small Upholstered Ottoman, 16\" H, Dark Pink Velvet/Natural [SEP] $55.65 [SEP] B07JJK49HH [SEP] Contemporary Folding Chairs Upholstered Padded Seat Triple Braced Double Hinged Powder Coated Frame with Hand Grip Indoor-Outdoor Home Office Furniture - Set of 4 Navy Fabric/Grey Frame #2054 [SEP] $384.5 [SEP] B08DD4HMY3 [SEP] Twin Over Twin Bunk Beds, Convertible Into Two Individual Solid Wood Beds, Children Twin Sleeping Bedroom Furniture Ladder and Safety Rail for Kids Boys & Girl, Easy Assembly (Espresso) [SEP] $298.88 [SEP] B09NTFLKXR [SEP] Folding Storage Ottoman Bench,Storage Chest Footrest Padded Seat,Faux Leather Ottoman Foot Rest Stool for Bedroom(Colour: Black,Size: 40x40x40cm/15.7x15.7x15.7in) (Color : Black, Size : 60X40X40cm) [SEP] $181.34",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08K3MTFG7 [SEP] Twin Trundle Bed Wooden Bed Solid Pine Wood with Slats Support Unfinished Single Wooden Bed Frame Suitable for Bedroom and Wheeled Trundle Bed [SEP] $189.99 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B08KT9V3RG [SEP] Twin Over Twin Bunk Bed Frame for Kids, Pine Wood Twin Bunk Bed for Boys and Girls, Low Bunk Bed, 13 Slats, Grey [SEP] $265.99 [SEP] B09NPY4W4Y [SEP] 40cm Cube Ottoman, Storage Seat Storage Box PU Leather Upholstered Footrest Pouffe Chair with Lid Suitable for Living Room Dressing Table Fitting Room-40x40x40cm(16x16x16inch) [SEP] $231.99 [SEP] B085B3MPV8 [SEP] ZZFF Vintage Wood Storage Ottoman Trunk with Faux Leather Seat,flip Top Bed End Stool Bench,Industrial Rustic Pu Leather Footrest Stool A 53.5x31x42cm(21x12x17inch) [SEP] $257.0 [SEP] B07MF33FMR [SEP] Modern Style Metal Dining Bar Stools Pub Lounge Diner Restaurant Commercial Seats Vertical Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 4 Natural Wood Seat #2157 [SEP] $644.5 [SEP] B08TG6NV5T [SEP] Monarch Specialties I 9007 Round Foot Stool with Padded Seat and Wooden Legs and Footrests - Small Upholstered Ottoman, 16\" H, Dark Pink Velvet/Natural [SEP] $55.65 [SEP] B07JJK49HH [SEP] Contemporary Folding Chairs Upholstered Padded Seat Triple Braced Double Hinged Powder Coated Frame with Hand Grip Indoor-Outdoor Home Office Furniture - Set of 4 Navy Fabric/Grey Frame #2054 [SEP] $384.5 [SEP] B08DD4HMY3 [SEP] Twin Over Twin Bunk Beds, Convertible Into Two Individual Solid Wood Beds, Children Twin Sleeping Bedroom Furniture Ladder and Safety Rail for Kids Boys & Girl, Easy Assembly (Espresso) [SEP] $298.88 [SEP] B09NTFLKXR [SEP] Folding Storage Ottoman Bench,Storage Chest Footrest Padded Seat,Faux Leather Ottoman Foot Rest Stool for Bedroom(Colour: Black,Size: 40x40x40cm/15.7x15.7x15.7in) (Color : Black, Size : 60X40X40cm) [SEP] $181.34\n\nRecent actions:\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b08k3mtfg7]",
+              "4": "click[b09g3fpp9s]",
+              "5": "click[b08kt9v3rg]",
+              "6": "click[b09npy4w4y]",
+              "7": "click[b085b3mpv8]",
+              "8": "click[b07mf33fmr]",
+              "9": "click[b08tg6nv5t]",
+              "10": "click[b07jjk49hh]",
+              "11": "click[b08dd4hmy3]",
+              "12": "click[b09ntflkxr]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b7f630a0911d7e4c6521991f904b459c396a235c37976d3bd8899a3c89d68328",
+      "attempts": [
+        {
+          "seconds": 0.5197040289640427,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5198450870811939,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.1488114507310571,
+              "1": 0.17514289546577677,
+              "2": 0.22407946843251716,
+              "3": 0.01580902902064342,
+              "4": 0.014981917000270534,
+              "5": 0.015722324433239128,
+              "6": 0.05785286660190649,
+              "7": 0.03989278862959771,
+              "8": 0.0197722269562898,
+              "9": 0.2185335944942137,
+              "10": 0.01817558204082719,
+              "11": 0.017664579969613334,
+              "12": 0.03356127622404761
+            },
+            "confidence": 0.15941942413522697
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11859,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.5175070092082024,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.1795650012791157
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B0758BDVC8 [SEP] Meridian Furniture Casey Collection Modern | Contemporary Velvet Upholstered Ottoman/Bench with Deep Button Tufting and a Solid Wood Frame, 52\" W x 22.5\" D x 18\" H, Cream [SEP] $401.25 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B09NZWR8T2 [SEP] Best Bed Frame, 38'' Metal Bed Frame with Headboard, 14'' High Bed Frame with Wooden Slats - Solid Construction, Convenient, Perfect Storage and Easy Assemble (King) [SEP] $100.0 [SEP] B09C5Z324R [SEP] Folding Storage Ottoman Storage Bench for Bedroom and Hallway Faux Leather Footrest Cube Footstool Padded Seat Comfortable Seat Colorful Entryway Bench (Color : Orange, Size : 40X40X120cm) [SEP] $407.75 [SEP] B07NDG7C9P [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Vertical Slat Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 2 Black Vinyl Seat/Walnut Wood Frame #2179 [SEP] $354.5 [SEP] B09GXG8HXK [SEP] ZHONGHUA Upholstered Footstool Decorative Pouf Sofa Ottoman Bean Bag Chair Foot Stool Foot Rest Solid Wood Frame Leather Pier Seat for Gift Upholstered Footstool with high Elastic Foam [SEP] $157.47 [SEP] B09NXRK5MX [SEP] Storage stool Faux Leather Folding Organizer Storage Ottoman Bench Cube Foot Stool, Footrest Step Stool for Living Room, Bedroom, Office, Garden, Traveling, Fishing, Camping 15.7\"x15.7\"x15.7\" (Purple) [SEP] $150.01 [SEP] B09NXSRVSK [SEP] Storage stool Folding Ottoman Storage Bench Cube Hold up 881lbs Faux Leather Long Chest with Memory Foam Seat Footrest Padded Upholstered Stool for Bedroom Box Bed Coffee Table Rectangular Brown (Size [SEP] $408.25 [SEP] B07GT8RVZ1 [SEP] Meridian Furniture Casey Collection Modern | Contemporary Velvet Upholstered Ottoman/Bench with Deep Button Tufting and a Solid Wood Frame, 52\" W x 22.5\" D x 18\" H, Sky Blue [SEP] $401.4",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B0758BDVC8 [SEP] Meridian Furniture Casey Collection Modern | Contemporary Velvet Upholstered Ottoman/Bench with Deep Button Tufting and a Solid Wood Frame, 52\" W x 22.5\" D x 18\" H, Cream [SEP] $401.25 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B09NZWR8T2 [SEP] Best Bed Frame, 38'' Metal Bed Frame with Headboard, 14'' High Bed Frame with Wooden Slats - Solid Construction, Convenient, Perfect Storage and Easy Assemble (King) [SEP] $100.0 [SEP] B09C5Z324R [SEP] Folding Storage Ottoman Storage Bench for Bedroom and Hallway Faux Leather Footrest Cube Footstool Padded Seat Comfortable Seat Colorful Entryway Bench (Color : Orange, Size : 40X40X120cm) [SEP] $407.75 [SEP] B07NDG7C9P [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Vertical Slat Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 2 Black Vinyl Seat/Walnut Wood Frame #2179 [SEP] $354.5 [SEP] B09GXG8HXK [SEP] ZHONGHUA Upholstered Footstool Decorative Pouf Sofa Ottoman Bean Bag Chair Foot Stool Foot Rest Solid Wood Frame Leather Pier Seat for Gift Upholstered Footstool with high Elastic Foam [SEP] $157.47 [SEP] B09NXRK5MX [SEP] Storage stool Faux Leather Folding Organizer Storage Ottoman Bench Cube Foot Stool, Footrest Step Stool for Living Room, Bedroom, Office, Garden, Traveling, Fishing, Camping 15.7\"x15.7\"x15.7\" (Purple) [SEP] $150.01 [SEP] B09NXSRVSK [SEP] Storage stool Folding Ottoman Storage Bench Cube Hold up 881lbs Faux Leather Long Chest with Memory Foam Seat Footrest Padded Upholstered Stool for Bedroom Box Bed Coffee Table Rectangular Brown (Size [SEP] $408.25 [SEP] B07GT8RVZ1 [SEP] Meridian Furniture Casey Collection Modern | Contemporary Velvet Upholstered Ottoman/Bench with Deep Button Tufting and a Solid Wood Frame, 52\" W x 22.5\" D x 18\" H, Sky Blue [SEP] $401.4\n\nRecent actions:\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b0758bdvc8]",
+              "4": "click[b08pyvwm7b]",
+              "5": "click[b09cd5rzr4]",
+              "6": "click[b09nzwr8t2]",
+              "7": "click[b09c5z324r]",
+              "8": "click[b07ndg7c9p]",
+              "9": "click[b09gxg8hxk]",
+              "10": "click[b09nxrk5mx]",
+              "11": "click[b09nxsrvsk]",
+              "12": "click[b07gt8rvz1]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e2a2ba34ac8a840753ea18404f05f17c0f2f6ab69b6db363246d474cb9c08b94",
+      "attempts": [
+        {
+          "seconds": 0.4991222657263279,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4992400147020817,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "9",
+            "probabilities": {
+              "0": 0.07661417394870675,
+              "1": 0.09080887774100939,
+              "2": 0.12081669643541319,
+              "3": 0.008920897889557876,
+              "4": 0.009117834529863039,
+              "5": 0.00977100342082209,
+              "6": 0.005876485850785524,
+              "7": 0.013529598839083843,
+              "8": 0.010127354942042586,
+              "9": 0.5995219841935167,
+              "10": 0.02823206899740846,
+              "11": 0.014942527182065204,
+              "12": 0.01172049602972546
+            },
+            "confidence": 0.5661488162096431
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11351,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4973541982471943,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b09gxg8hxk]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.701738815754652
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] large [SEP] small [SEP] color [SEP] blue-white [SEP] brown-white [SEP] pink-white [SEP] ZHONGHUA Upholstered Footstool Decorative Pouf Sofa Ottoman Bean Bag Chair Foot Stool Foot Rest Solid Wood Frame Leather Pier Seat for Gift Upholstered Footstool with high Elastic Foam [SEP] Price: $157.47 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] large [SEP] small [SEP] color [SEP] blue-white [SEP] brown-white [SEP] pink-white [SEP] ZHONGHUA Upholstered Footstool Decorative Pouf Sofa Ottoman Bean Bag Chair Foot Stool Foot Rest Solid Wood Frame Leather Pier Seat for Gift Upholstered Footstool with high Elastic Foam [SEP] Price: $157.47 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b09gxg8hxk]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[large]",
+              "7": "click[small]",
+              "8": "click[blue-white]",
+              "9": "click[brown-white]",
+              "10": "click[pink-white]"
+            }
+          }
+        }
+      },
+      "request_sha256": "de364d8eafd14567f46d81d835313ef6901c12eb6c559a5d34b194310e93c6b8",
+      "attempts": [
+        {
+          "seconds": 0.19961266219615936,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.19971854612231255,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "10",
+            "probabilities": {
+              "0": 0.11081844760981856,
+              "1": 0.08780690668474016,
+              "2": 0.10428693649780356,
+              "3": 0.06367941095725763,
+              "4": 0.07212234609187461,
+              "5": 0.062389512330728515,
+              "6": 0.14452149154637714,
+              "7": 0.096239456805131,
+              "8": 0.033282788632599807,
+              "9": 0.03281602205512004,
+              "10": 0.19203668078854902
+            },
+            "confidence": 0.11124034886740392
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 3649,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 11,
+          "inference_seconds": 0.19800221174955368,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[pink-white]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.9176588281989098
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] large [SEP] small [SEP] color [SEP] blue-white [SEP] brown-white [SEP] pink-white [SEP] ZHONGHUA Upholstered Footstool Decorative Pouf Sofa Ottoman Bean Bag Chair Foot Stool Foot Rest Solid Wood Frame Leather Pier Seat for Gift Upholstered Footstool with high Elastic Foam [SEP] Price: $157.47 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] large [SEP] small [SEP] color [SEP] blue-white [SEP] brown-white [SEP] pink-white [SEP] ZHONGHUA Upholstered Footstool Decorative Pouf Sofa Ottoman Bean Bag Chair Foot Stool Foot Rest Solid Wood Frame Leather Pier Seat for Gift Upholstered Footstool with high Elastic Foam [SEP] Price: $157.47 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b09gxg8hxk]\nclick[pink-white]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[large]",
+              "7": "click[small]",
+              "8": "click[blue-white]",
+              "9": "click[brown-white]",
+              "10": "click[pink-white]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0296d238cdff6970fe9914518958b78d9a4207cc1894d94379f03252311f68b0",
+      "attempts": [
+        {
+          "seconds": 0.201723400503397,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.2018352411687374,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "probabilities": {
+              "0": 0.10787392465963215,
+              "1": 0.09845053640352674,
+              "2": 0.112810639695931,
+              "3": 0.06807610558435052,
+              "4": 0.08074462413498949,
+              "5": 0.09168741009547984,
+              "6": 0.18493636310561828,
+              "7": 0.11932087414049537,
+              "8": 0.027926507381211434,
+              "9": 0.026576642465022175,
+              "10": 0.08159637233374285
+            },
+            "confidence": 0.10342999941618014
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 3715,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 11,
+          "inference_seconds": 0.199965700507164,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[large]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.135828696191311
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] large [SEP] small [SEP] color [SEP] blue-white [SEP] brown-white [SEP] pink-white [SEP] ZHONGHUA Upholstered Footstool Decorative Pouf Sofa Ottoman Bean Bag Chair Foot Stool Foot Rest Solid Wood Frame Leather Pier Seat for Gift Upholstered Footstool with high Elastic Foam [SEP] Price: $157.47 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] large [SEP] small [SEP] color [SEP] blue-white [SEP] brown-white [SEP] pink-white [SEP] ZHONGHUA Upholstered Footstool Decorative Pouf Sofa Ottoman Bean Bag Chair Foot Stool Foot Rest Solid Wood Frame Leather Pier Seat for Gift Upholstered Footstool with high Elastic Foam [SEP] Price: $157.47 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b09gxg8hxk]\nclick[pink-white]\nclick[large]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[large]",
+              "7": "click[small]",
+              "8": "click[blue-white]",
+              "9": "click[brown-white]",
+              "10": "click[pink-white]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1789fd7a36fdc1635fb1e8979cf39830daa4144d9d930bb6ac01b8e9d31b1e64",
+      "attempts": [
+        {
+          "seconds": 0.20839133486151695,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.20850297063589096,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.13245849589685144,
+              "1": 0.12066971537042949,
+              "2": 0.13100633262208683,
+              "3": 0.07952437513857198,
+              "4": 0.09802431220622218,
+              "5": 0.09490420651971317,
+              "6": 0.09327413583890552,
+              "7": 0.10212320059148941,
+              "8": 0.031472888877746345,
+              "9": 0.031124149670573076,
+              "10": 0.08541818726741067
+            },
+            "confidence": 0.045704345486536575
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 3770,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 11,
+          "inference_seconds": 0.20076030120253563,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.3526892475783825
+    },
+    {
+      "step": 9,
+      "observation": "WebShop [SEP] Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Search",
+      "action": "search[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.403664231300354
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08R9K2YNN [SEP] Hagan Tufted Storage Ottoman, Weight Capacity: 265, Overall Width: 41.5 '' [SEP] $366.85 [SEP] B01FRO2DWG [SEP] Premium Modern Pavilion Ottoman - Top Grain White Italian Leather [SEP] $299.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B08F2Z6875 [SEP] Rio Top Grain Leather Ottoman [SEP] $505.33 [SEP] B09J99N9MC [SEP] Pimlico Contemporary 100% Top Grain Leather Ottoman [SEP] $502.33 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95 [SEP] B09H4R77YD [SEP] Ivory Cream Cocktail Ottoman Stool Classic Traditional Pouf Seat Antique Style Wooden Lower Shelf Elegant Linen Tufted Nail-Head Foam Top Square Shaped Solid Color Rigid Legs Fabric Decor Seating [SEP] $435.24 [SEP] B09H4TQRGH [SEP] Natural Beige Cocktail Ottoman Stool Classic Traditional Pouf Seat Antique Style Wooden Lower Shelf Elegant Linen Tufted Nail-Head Foam Top Square Shaped Solid Color Rigid Legs Fabric Decor Seating [SEP] $435.25 [SEP] B09HGW9446 [SEP] Upholstered Full Bed with Bedside Storage Ottoman Contemporary Upholstered Platform Bed Frame with Headboard and Wooden Slats Support, No Box Spring Required, Gray [SEP] $176.99 [SEP] B07MZDWN6D [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 2 Mahogany Wood Seat/Mahogany Wood Frame #2175 [SEP] $364.5",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08R9K2YNN [SEP] Hagan Tufted Storage Ottoman, Weight Capacity: 265, Overall Width: 41.5 '' [SEP] $366.85 [SEP] B01FRO2DWG [SEP] Premium Modern Pavilion Ottoman - Top Grain White Italian Leather [SEP] $299.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B08F2Z6875 [SEP] Rio Top Grain Leather Ottoman [SEP] $505.33 [SEP] B09J99N9MC [SEP] Pimlico Contemporary 100% Top Grain Leather Ottoman [SEP] $502.33 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95 [SEP] B09H4R77YD [SEP] Ivory Cream Cocktail Ottoman Stool Classic Traditional Pouf Seat Antique Style Wooden Lower Shelf Elegant Linen Tufted Nail-Head Foam Top Square Shaped Solid Color Rigid Legs Fabric Decor Seating [SEP] $435.24 [SEP] B09H4TQRGH [SEP] Natural Beige Cocktail Ottoman Stool Classic Traditional Pouf Seat Antique Style Wooden Lower Shelf Elegant Linen Tufted Nail-Head Foam Top Square Shaped Solid Color Rigid Legs Fabric Decor Seating [SEP] $435.25 [SEP] B09HGW9446 [SEP] Upholstered Full Bed with Bedside Storage Ottoman Contemporary Upholstered Platform Bed Frame with Headboard and Wooden Slats Support, No Box Spring Required, Gray [SEP] $176.99 [SEP] B07MZDWN6D [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 2 Mahogany Wood Seat/Mahogany Wood Frame #2175 [SEP] $364.5\n\nRecent actions:\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b09gxg8hxk]\nclick[pink-white]\nclick[large]\nclick[back to search]\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b08r9k2ynn]",
+              "3": "click[b01fro2dwg]",
+              "4": "click[b09kcl5gk5]",
+              "5": "click[b08f2z6875]",
+              "6": "click[b09j99n9mc]",
+              "7": "click[b00004rg7m]",
+              "8": "click[b09h4r77yd]",
+              "9": "click[b09h4tqrgh]",
+              "10": "click[b09hgw9446]",
+              "11": "click[b07mzdwn6d]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ce949d8a6f0bd240b2fc9c092a15a8d83f3ac0caf9731e7c797c60228d5e8f9d",
+      "attempts": [
+        {
+          "seconds": 0.41702578216791153,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4171787388622761,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.13381659959578965,
+              "1": 0.42852867334902045,
+              "2": 0.05006189848080757,
+              "3": 0.04785706464824117,
+              "4": 0.05504206148034565,
+              "5": 0.021162293043681817,
+              "6": 0.026868606437099034,
+              "7": 0.018352461569818585,
+              "8": 0.06341984956213081,
+              "9": 0.034588770945542004,
+              "10": 0.05716942048460378,
+              "11": 0.06313230040291962
+            },
+            "confidence": 0.3765767345625678
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9442,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.41490209102630615,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.896919619292021
+    },
+    {
+      "step": 11,
+      "observation": "Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07N93CSJW [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 2 Cherry Wood Seat/Cherry Wood Frame #2175 [SEP] $364.5 [SEP] B08FG6F8R1 [SEP] JJZXPJ Footstool Foot Rest Small Seat Foot Stool PU Leather Seat with Wooden Round Ottoman 4 Legs Dressing Makeup Stool Available,Pink (Color : Yellow) [SEP] $59.51 [SEP] B09NTDNHYH [SEP] Storage Low Stool, Bench with Storage Space, Chest, Storage Box, Foldable, Maximum Static Load 400 Kg(881lbs), Leather, Multi-Color Optional(Colour: White,Size: 40x40x40cm) [SEP] $148.64 [SEP] B09D7BZ1L6 [SEP] Storage Ottoman Chair Stool Desk Stool Upholstered Footstool Bench Dressing Table Stool Pouf Couch Stool Cover Storage Ottoman Padded Seat Shoe Changing Stool (Color : Pink, Size : 100X40X43cm) [SEP] $524.85 [SEP] B083WM69GQ [SEP] Amazonas Honey Pine Finish Twin Bed & Trundle Solid Pine Wooden Trundle Bed Hardwood Slats Support Suitable for Boys Girls Kids Bedroom Wooden Bed Frame [SEP] $239.99 [SEP] B08M5L49JL [SEP] LIXIONG Ottoman, Square Flannelette Upholstered Footstool with Removable Cover and Anti-Slip Pad Footrest Stool for Bedroom Living Room, 5 Colour (Color : White, Size : 33x27x33cm) [SEP] $77.46 [SEP] B07Q5VGZWV [SEP] Industrial Filing Cabinet, Modern Industrial File Drawer, Vintage Industrial Office File Cabinet, Lingerie Chest, Dresser [SEP] $3150.0 [SEP] B09GLX4MXJ [SEP] Upholstered Queen Bed with Bedside Storage Ottoman Contemporary Upholstered Velvet Platform Bed Frame with Headboard and Wooden Slats Support, Light Gray [SEP] $217.99 [SEP] B07N964YPC [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 4 Burgundy Vinyl Seat/Cherry Wood Frame #2175 [SEP] $704.5 [SEP] B08K3NJQ1M [SEP] Twin Trundle Bed White Finish Solid Pine Wooden Arizona Trundle Bed Wooden Slats Support Unfinished Bedroom Single Wooden Bed Frame Hand Finished [SEP] $249.99",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07N93CSJW [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 2 Cherry Wood Seat/Cherry Wood Frame #2175 [SEP] $364.5 [SEP] B08FG6F8R1 [SEP] JJZXPJ Footstool Foot Rest Small Seat Foot Stool PU Leather Seat with Wooden Round Ottoman 4 Legs Dressing Makeup Stool Available,Pink (Color : Yellow) [SEP] $59.51 [SEP] B09NTDNHYH [SEP] Storage Low Stool, Bench with Storage Space, Chest, Storage Box, Foldable, Maximum Static Load 400 Kg(881lbs), Leather, Multi-Color Optional(Colour: White,Size: 40x40x40cm) [SEP] $148.64 [SEP] B09D7BZ1L6 [SEP] Storage Ottoman Chair Stool Desk Stool Upholstered Footstool Bench Dressing Table Stool Pouf Couch Stool Cover Storage Ottoman Padded Seat Shoe Changing Stool (Color : Pink, Size : 100X40X43cm) [SEP] $524.85 [SEP] B083WM69GQ [SEP] Amazonas Honey Pine Finish Twin Bed & Trundle Solid Pine Wooden Trundle Bed Hardwood Slats Support Suitable for Boys Girls Kids Bedroom Wooden Bed Frame [SEP] $239.99 [SEP] B08M5L49JL [SEP] LIXIONG Ottoman, Square Flannelette Upholstered Footstool with Removable Cover and Anti-Slip Pad Footrest Stool for Bedroom Living Room, 5 Colour (Color : White, Size : 33x27x33cm) [SEP] $77.46 [SEP] B07Q5VGZWV [SEP] Industrial Filing Cabinet, Modern Industrial File Drawer, Vintage Industrial Office File Cabinet, Lingerie Chest, Dresser [SEP] $3150.0 [SEP] B09GLX4MXJ [SEP] Upholstered Queen Bed with Bedside Storage Ottoman Contemporary Upholstered Velvet Platform Bed Frame with Headboard and Wooden Slats Support, Light Gray [SEP] $217.99 [SEP] B07N964YPC [SEP] Modern Style Wood Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Solid Beech Hardwood Frame Home Office Furniture - Set of 4 Burgundy Vinyl Seat/Cherry Wood Frame #2175 [SEP] $704.5 [SEP] B08K3NJQ1M [SEP] Twin Trundle Bed White Finish Solid Pine Wooden Arizona Trundle Bed Wooden Slats Support Unfinished Bedroom Single Wooden Bed Frame Hand Finished [SEP] $249.99\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b09gxg8hxk]\nclick[pink-white]\nclick[large]\nclick[back to search]\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07n93csjw]",
+              "4": "click[b08fg6f8r1]",
+              "5": "click[b09ntdnhyh]",
+              "6": "click[b09d7bz1l6]",
+              "7": "click[b083wm69gq]",
+              "8": "click[b08m5l49jl]",
+              "9": "click[b07q5vgzwv]",
+              "10": "click[b09glx4mxj]",
+              "11": "click[b07n964ypc]",
+              "12": "click[b08k3njq1m]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bf6e3ef54800a6b3f79087760580661b309bfb3809d42a59ade49a4bdbf5455a",
+      "attempts": [
+        {
+          "seconds": 0.5130689963698387,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5132409706711769,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.09219490561326696,
+              "1": 0.16186835332974067,
+              "2": 0.29394302706058395,
+              "3": 0.0277104102316699,
+              "4": 0.10015894394045327,
+              "5": 0.058072673994856536,
+              "6": 0.0756522758446308,
+              "7": 0.020248480086769556,
+              "8": 0.04476225380479398,
+              "9": 0.01105030025639339,
+              "10": 0.05103376480027976,
+              "11": 0.0319849632752552,
+              "12": 0.031319647761305996
+            },
+            "confidence": 0.23510494598229933
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11707,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.5108739994466305,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.47505634650588
+    },
+    {
+      "step": 12,
+      "observation": "Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09NTPLGYG [SEP] Modern Queen Size Upholstered Platform Bed with Storage Cushioned Ottoman and Tufted Headboard,Wooden Bed Frame with Wooden Slat Support,Mattress Foundation,No Box Spring Needed (Queen Size,Beige) [SEP] $219.99 [SEP] B07KM2838G [SEP] K & B Furniture Blue Faux Leather Square Ottoman [SEP] $79.99 [SEP] B084HMBJ7Q [SEP] Arizona Twin Bed with Trundle Solid Pine Wooden Trundle Bed Hardwood Slats Support Unfinished Suitable for Boys Girls Kids Bedroom Single Wooden Bed Frame [SEP] $199.99 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B08X71CZJ2 [SEP] Harper & Bright Designs Twin Over Twin Bunk Bed Frame for Kids, Pine Wood Twin Bunk Bed for Boys and Girls, Low Bunk Bed, 13 Slats (Pink) [SEP] $285.99 [SEP] B09NK7YM1R [SEP] Solid Wood Platform Bed, Queen Size Upholstered Platform Bed with Storage Ottoman Bench and Headboard, Upholstered Platform Bed for Kids Teens Adults (Beige) [SEP] $288.0 [SEP] B08X8WXZNQ [SEP] Figured Maple Epoxy River Coffee Table with Waterfall Leg [SEP] $14500.0 [SEP] B08MQ1ZVMH [SEP] LIXIONG Ottoman, Faux Leather Padded Storage Seat with Metal Hinge and Plastic Legs Shoes Bench for Bedroom Hallway, 6 Colour (Color : Red, Size : 30x30x35cm) [SEP] $77.15 [SEP] B08MQ6GZVY [SEP] LIXIONG Ottoman, Square Padded Storage Seat with Hinged Lid and Faux Leather Cover Footrest Stool for Hallway Living Room, 6 Colour (Color : Brown, Size : 30x30x35cm) [SEP] $77.15 [SEP] B08267L1GC [SEP] KLS14 Set of 2 Contemporary Ladder Back Design Metal Bar Stools, Clear Coated Frame Finish, Burgundy Vinyl Seat/2373 [SEP] $334.5",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09NTPLGYG [SEP] Modern Queen Size Upholstered Platform Bed with Storage Cushioned Ottoman and Tufted Headboard,Wooden Bed Frame with Wooden Slat Support,Mattress Foundation,No Box Spring Needed (Queen Size,Beige) [SEP] $219.99 [SEP] B07KM2838G [SEP] K & B Furniture Blue Faux Leather Square Ottoman [SEP] $79.99 [SEP] B084HMBJ7Q [SEP] Arizona Twin Bed with Trundle Solid Pine Wooden Trundle Bed Hardwood Slats Support Unfinished Suitable for Boys Girls Kids Bedroom Single Wooden Bed Frame [SEP] $199.99 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B08X71CZJ2 [SEP] Harper & Bright Designs Twin Over Twin Bunk Bed Frame for Kids, Pine Wood Twin Bunk Bed for Boys and Girls, Low Bunk Bed, 13 Slats (Pink) [SEP] $285.99 [SEP] B09NK7YM1R [SEP] Solid Wood Platform Bed, Queen Size Upholstered Platform Bed with Storage Ottoman Bench and Headboard, Upholstered Platform Bed for Kids Teens Adults (Beige) [SEP] $288.0 [SEP] B08X8WXZNQ [SEP] Figured Maple Epoxy River Coffee Table with Waterfall Leg [SEP] $14500.0 [SEP] B08MQ1ZVMH [SEP] LIXIONG Ottoman, Faux Leather Padded Storage Seat with Metal Hinge and Plastic Legs Shoes Bench for Bedroom Hallway, 6 Colour (Color : Red, Size : 30x30x35cm) [SEP] $77.15 [SEP] B08MQ6GZVY [SEP] LIXIONG Ottoman, Square Padded Storage Seat with Hinged Lid and Faux Leather Cover Footrest Stool for Hallway Living Room, 6 Colour (Color : Brown, Size : 30x30x35cm) [SEP] $77.15 [SEP] B08267L1GC [SEP] KLS14 Set of 2 Contemporary Ladder Back Design Metal Bar Stools, Clear Coated Frame Finish, Burgundy Vinyl Seat/2373 [SEP] $334.5\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b09gxg8hxk]\nclick[pink-white]\nclick[large]\nclick[back to search]\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09ntplgyg]",
+              "4": "click[b07km2838g]",
+              "5": "click[b084hmbj7q]",
+              "6": "click[b07jmgsdwt]",
+              "7": "click[b08x71czj2]",
+              "8": "click[b09nk7ym1r]",
+              "9": "click[b08x8wxznq]",
+              "10": "click[b08mq1zvmh]",
+              "11": "click[b08mq6gzvy]",
+              "12": "click[b08267l1gc]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a1a99f4fa6d4baa2ea8fe8ed7dd8ecb9d1178905989dd283f39f4abcec500d2b",
+      "attempts": [
+        {
+          "seconds": 0.4797869920730591,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.47996188700199127,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.09400333569298973,
+              "1": 0.143537770295106,
+              "2": 0.35487267551975676,
+              "3": 0.039489385026220396,
+              "4": 0.04378265043822522,
+              "5": 0.04279165489194102,
+              "6": 0.038359387767656974,
+              "7": 0.035729930591139165,
+              "8": 0.046779527548531506,
+              "9": 0.03523721425200632,
+              "10": 0.049128052147816695,
+              "11": 0.04549764769810791,
+              "12": 0.03079076813050218
+            },
+            "confidence": 0.30111206514640315
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10896,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4777786545455456,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.020884461700916
+    },
+    {
+      "step": 13,
+      "observation": "Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08K3MTFG7 [SEP] Twin Trundle Bed Wooden Bed Solid Pine Wood with Slats Support Unfinished Single Wooden Bed Frame Suitable for Bedroom and Wheeled Trundle Bed [SEP] $189.99 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B08KT9V3RG [SEP] Twin Over Twin Bunk Bed Frame for Kids, Pine Wood Twin Bunk Bed for Boys and Girls, Low Bunk Bed, 13 Slats, Grey [SEP] $265.99 [SEP] B09NPY4W4Y [SEP] 40cm Cube Ottoman, Storage Seat Storage Box PU Leather Upholstered Footrest Pouffe Chair with Lid Suitable for Living Room Dressing Table Fitting Room-40x40x40cm(16x16x16inch) [SEP] $231.99 [SEP] B085B3MPV8 [SEP] ZZFF Vintage Wood Storage Ottoman Trunk with Faux Leather Seat,flip Top Bed End Stool Bench,Industrial Rustic Pu Leather Footrest Stool A 53.5x31x42cm(21x12x17inch) [SEP] $257.0 [SEP] B07MF33FMR [SEP] Modern Style Metal Dining Bar Stools Pub Lounge Diner Restaurant Commercial Seats Vertical Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 4 Natural Wood Seat #2157 [SEP] $644.5 [SEP] B08TG6NV5T [SEP] Monarch Specialties I 9007 Round Foot Stool with Padded Seat and Wooden Legs and Footrests - Small Upholstered Ottoman, 16\" H, Dark Pink Velvet/Natural [SEP] $55.65 [SEP] B07JJK49HH [SEP] Contemporary Folding Chairs Upholstered Padded Seat Triple Braced Double Hinged Powder Coated Frame with Hand Grip Indoor-Outdoor Home Office Furniture - Set of 4 Navy Fabric/Grey Frame #2054 [SEP] $384.5 [SEP] B08DD4HMY3 [SEP] Twin Over Twin Bunk Beds, Convertible Into Two Individual Solid Wood Beds, Children Twin Sleeping Bedroom Furniture Ladder and Safety Rail for Kids Boys & Girl, Easy Assembly (Espresso) [SEP] $298.88 [SEP] B09NTFLKXR [SEP] Folding Storage Ottoman Bench,Storage Chest Footrest Padded Seat,Faux Leather Ottoman Foot Rest Stool for Bedroom(Colour: Black,Size: 40x40x40cm/15.7x15.7x15.7in) (Color : Black, Size : 60X40X40cm) [SEP] $181.34",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08K3MTFG7 [SEP] Twin Trundle Bed Wooden Bed Solid Pine Wood with Slats Support Unfinished Single Wooden Bed Frame Suitable for Bedroom and Wheeled Trundle Bed [SEP] $189.99 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B08KT9V3RG [SEP] Twin Over Twin Bunk Bed Frame for Kids, Pine Wood Twin Bunk Bed for Boys and Girls, Low Bunk Bed, 13 Slats, Grey [SEP] $265.99 [SEP] B09NPY4W4Y [SEP] 40cm Cube Ottoman, Storage Seat Storage Box PU Leather Upholstered Footrest Pouffe Chair with Lid Suitable for Living Room Dressing Table Fitting Room-40x40x40cm(16x16x16inch) [SEP] $231.99 [SEP] B085B3MPV8 [SEP] ZZFF Vintage Wood Storage Ottoman Trunk with Faux Leather Seat,flip Top Bed End Stool Bench,Industrial Rustic Pu Leather Footrest Stool A 53.5x31x42cm(21x12x17inch) [SEP] $257.0 [SEP] B07MF33FMR [SEP] Modern Style Metal Dining Bar Stools Pub Lounge Diner Restaurant Commercial Seats Vertical Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 4 Natural Wood Seat #2157 [SEP] $644.5 [SEP] B08TG6NV5T [SEP] Monarch Specialties I 9007 Round Foot Stool with Padded Seat and Wooden Legs and Footrests - Small Upholstered Ottoman, 16\" H, Dark Pink Velvet/Natural [SEP] $55.65 [SEP] B07JJK49HH [SEP] Contemporary Folding Chairs Upholstered Padded Seat Triple Braced Double Hinged Powder Coated Frame with Hand Grip Indoor-Outdoor Home Office Furniture - Set of 4 Navy Fabric/Grey Frame #2054 [SEP] $384.5 [SEP] B08DD4HMY3 [SEP] Twin Over Twin Bunk Beds, Convertible Into Two Individual Solid Wood Beds, Children Twin Sleeping Bedroom Furniture Ladder and Safety Rail for Kids Boys & Girl, Easy Assembly (Espresso) [SEP] $298.88 [SEP] B09NTFLKXR [SEP] Folding Storage Ottoman Bench,Storage Chest Footrest Padded Seat,Faux Leather Ottoman Foot Rest Stool for Bedroom(Colour: Black,Size: 40x40x40cm/15.7x15.7x15.7in) (Color : Black, Size : 60X40X40cm) [SEP] $181.34\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[b09gxg8hxk]\nclick[pink-white]\nclick[large]\nclick[back to search]\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b08k3mtfg7]",
+              "4": "click[b09g3fpp9s]",
+              "5": "click[b08kt9v3rg]",
+              "6": "click[b09npy4w4y]",
+              "7": "click[b085b3mpv8]",
+              "8": "click[b07mf33fmr]",
+              "9": "click[b08tg6nv5t]",
+              "10": "click[b07jjk49hh]",
+              "11": "click[b08dd4hmy3]",
+              "12": "click[b09ntflkxr]"
+            }
+          }
+        }
+      },
+      "request_sha256": "916f2f968f900b9bf22557e525fcbb0bdf9d7d2bd58fd976377d13a240a2faab",
+      "attempts": [
+        {
+          "seconds": 0.5377122797071934,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5378870368003845,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "9",
+            "probabilities": {
+              "0": 0.09140069078043102,
+              "1": 0.15870378267076252,
+              "2": 0.23264561376496457,
+              "3": 0.01743128102195783,
+              "4": 0.016269180926088686,
+              "5": 0.019243030134860808,
+              "6": 0.054425685576042104,
+              "7": 0.04509683700440087,
+              "8": 0.021682506404912368,
+              "9": 0.2571500253294506,
+              "10": 0.02419647105249018,
+              "11": 0.021010931883125486,
+              "12": 0.04074396345051287
+            },
+            "confidence": 0.19524586077357145
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 12366,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.5355497635900974,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b08tg6nv5t]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.581226352602243
+    },
+    {
+      "step": 14,
+      "observation": "Instruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Monarch Specialties I 9007 Round Foot Stool with Padded Seat and Wooden Legs and Footrests - Small Upholstered Ottoman, 16\" H, Dark Pink Velvet/Natural [SEP] Price: $55.65 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Monarch Specialties I 9007 Round Foot Stool with Padded Seat and Wooden Legs and Footrests - Small Upholstered Ottoman, 16\" H, Dark Pink Velvet/Natural [SEP] Price: $55.65 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[next >]\nclick[b09gxg8hxk]\nclick[pink-white]\nclick[large]\nclick[back to search]\nsearch[i would like a pink ottoman with a solid wooden frame, and price lower than 360.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b08tg6nv5t]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4b7f4d919bd0b707218921eedc24bc4d9c852dec452ea564ee86f866d5d87200",
+      "attempts": [
+        {
+          "seconds": 0.103493332862854,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.10359513759613037,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.08513698379460592,
+              "1": 0.10932491759612048,
+              "2": 0.11521698797357008,
+              "3": 0.07808634963216747,
+              "4": 0.0858433820648632,
+              "5": 0.5263913789386728
+            },
+            "confidence": 0.4316696547264074
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 1972,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 6,
+          "inference_seconds": 0.09452806040644646,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.5,
+      "done": true,
+      "elapsed_seconds": 5.715924832969904
+    }
+  ]
+}

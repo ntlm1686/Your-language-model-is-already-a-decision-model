@@ -1,0 +1,200 @@
+{
+  "task_id": 94,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for a x- large casual dresses with long sleeves, and price lower than 50.00 dollars",
+  "instruction_sha256": "fa8015572cdcfa80e2cbdc6b74d4902e0893c48664610bee684fae1b635ec011",
+  "reward": 0.6666666666666666,
+  "score": 66.66666666666666,
+  "success": false,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 0.8048683851957321,
+  "decision_seconds": 0.6853119991719723,
+  "input_tokens": 13986,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a x- large casual dresses with long sleeves, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[i am looking for a x- large casual dresses with long sleeves, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06260813772678375
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for a x- large casual dresses with long sleeves, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B08MBQ5QKV [SEP] Vedolay Sweater Dresses for Women, Women Winter Furry Sweater Knit O-Neck Warm Long Latern Sleeve Mini Sweater Dress [SEP] $6.03 to $9.09 [SEP] B07YKRLV34 [SEP] Men's Casual Hawaii Floral Printed Shirts Loose Long Sleeve Button Lapel T-Shirt Fashion Top Blouse [SEP] $13.99 to $16.99 [SEP] B08DRN51KH [SEP] Women Plus Size Scotland Plaid Printed Hem Skew Neck Belted Handkerchief Dress [SEP] $14.19 [SEP] B09F96ZPVM [SEP] Graphic Shirt Tunic Women Long Sleeve Graphic Pocket Hoodie plus size coats for women [SEP] $16.99 to $21.99 [SEP] B09DK2NCKQ [SEP] Boho Off The Shoulder Dresses, Haozin Women Floral Print Long Sleeves Flare Sleeves Mini Knee Casual Dresses [SEP] $14.66 to $20.99 [SEP] B09NRCBWP4 [SEP] Dress Shirts for Men's Cotton Casual Tops Fashion Color Stripe Lapel Slim Fit Long Sleeve Blouse Henley Shirt [SEP] $12.59 to $19.99 [SEP] B09NP12KVW [SEP] Tops for Men's Plaid Lapel Button Shirts Holiday Casual Loose Long Sleeve Blouse Fashion Dress Henley Shirts Top [SEP] $11.59 to $18.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a x- large casual dresses with long sleeves, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a x- large casual dresses with long sleeves, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B09PGGQZJ2 [SEP] Men's Short Sleeve Henley Shirt Cotton Lightweight Casual Funny Graphic Summer Sports Tee [SEP] $15.99 to $17.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B08MBQ5QKV [SEP] Vedolay Sweater Dresses for Women, Women Winter Furry Sweater Knit O-Neck Warm Long Latern Sleeve Mini Sweater Dress [SEP] $6.03 to $9.09 [SEP] B07YKRLV34 [SEP] Men's Casual Hawaii Floral Printed Shirts Loose Long Sleeve Button Lapel T-Shirt Fashion Top Blouse [SEP] $13.99 to $16.99 [SEP] B08DRN51KH [SEP] Women Plus Size Scotland Plaid Printed Hem Skew Neck Belted Handkerchief Dress [SEP] $14.19 [SEP] B09F96ZPVM [SEP] Graphic Shirt Tunic Women Long Sleeve Graphic Pocket Hoodie plus size coats for women [SEP] $16.99 to $21.99 [SEP] B09DK2NCKQ [SEP] Boho Off The Shoulder Dresses, Haozin Women Floral Print Long Sleeves Flare Sleeves Mini Knee Casual Dresses [SEP] $14.66 to $20.99 [SEP] B09NRCBWP4 [SEP] Dress Shirts for Men's Cotton Casual Tops Fashion Color Stripe Lapel Slim Fit Long Sleeve Blouse Henley Shirt [SEP] $12.59 to $19.99 [SEP] B09NP12KVW [SEP] Tops for Men's Plaid Lapel Button Shirts Holiday Casual Loose Long Sleeve Blouse Fashion Dress Henley Shirts Top [SEP] $11.59 to $18.99\n\nRecent actions:\nsearch[i am looking for a x- large casual dresses with long sleeves, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b097h5cplc]",
+              "3": "click[b09pggqzj2]",
+              "4": "click[b099z4t56c]",
+              "5": "click[b08mbq5qkv]",
+              "6": "click[b07ykrlv34]",
+              "7": "click[b08drn51kh]",
+              "8": "click[b09f96zpvm]",
+              "9": "click[b09dk2nckq]",
+              "10": "click[b09nrcbwp4]",
+              "11": "click[b09np12kvw]"
+            }
+          }
+        }
+      },
+      "request_sha256": "fa2d7730287a625728f3a43cbb198f1697fcc4cd04c6c2b6ae88b3c8502930a3",
+      "attempts": [
+        {
+          "seconds": 0.37872420623898506,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37884748354554176,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "9",
+            "probabilities": {
+              "0": 0.02560004044453222,
+              "1": 0.05824994710707848,
+              "2": 0.0033430087654455235,
+              "3": 0.0017092348473044079,
+              "4": 0.015333898209383611,
+              "5": 0.17084544022449438,
+              "6": 0.011292388338145576,
+              "7": 0.17822775692230008,
+              "8": 0.02835486674841688,
+              "9": 0.49226185393311406,
+              "10": 0.00993709075350607,
+              "11": 0.004844473706278849
+            },
+            "confidence": 0.4461038406543063
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8480,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.37709876894950867,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b09dk2nckq]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.46599580347537994
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for a x- large casual dresses with long sleeves, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] blue [SEP] green [SEP] light blue [SEP] multicolor [SEP] red [SEP] sky blue [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Boho Off The Shoulder Dresses, Haozin Women Floral Print Long Sleeves Flare Sleeves Mini Knee Casual Dresses [SEP] Price: $14.66 to $20.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a x- large casual dresses with long sleeves, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a x- large casual dresses with long sleeves, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] blue [SEP] green [SEP] light blue [SEP] multicolor [SEP] red [SEP] sky blue [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Boho Off The Shoulder Dresses, Haozin Women Floral Print Long Sleeves Flare Sleeves Mini Knee Casual Dresses [SEP] Price: $14.66 to $20.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a x- large casual dresses with long sleeves, and price lower than 50.00 dollars]\nclick[b09dk2nckq]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[blue]",
+              "7": "click[green]",
+              "8": "click[light blue]",
+              "9": "click[multicolor]",
+              "10": "click[red]",
+              "11": "click[sky blue]",
+              "12": "click[small]",
+              "13": "click[medium]",
+              "14": "click[large]",
+              "15": "click[x-large]",
+              "16": "click[xx-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6b596b5e0ccb44febbc73c499f75782f8c743232e828aaddeff5416ba924350c",
+      "attempts": [
+        {
+          "seconds": 0.30636173859238625,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3064645156264305,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.035804053851204456,
+              "1": 0.03618555455185544,
+              "2": 0.04351254105582224,
+              "3": 0.027770848703937902,
+              "4": 0.03237098319678779,
+              "5": 0.20815697827845484,
+              "6": 0.07960878815829343,
+              "7": 0.046540484000884695,
+              "8": 0.0651978394871528,
+              "9": 0.09185176241484284,
+              "10": 0.059538611906710844,
+              "11": 0.06821968654407183,
+              "12": 0.01506233273062689,
+              "13": 0.019979318456613236,
+              "14": 0.030840152138983407,
+              "15": 0.11500544067819413,
+              "16": 0.024354623845563278
+            },
+            "confidence": 0.15866678942085827
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 5506,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 17,
+          "inference_seconds": 0.3046921119093895,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.6666666666666666,
+      "done": true,
+      "elapsed_seconds": 0.8048657402396202
+    }
+  ]
+}

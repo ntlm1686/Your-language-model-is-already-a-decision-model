@@ -1,0 +1,430 @@
+{
+  "task_id": 220,
+  "model": "qwen",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars",
+  "instruction_sha256": "8c53fcdc75140f53dd4bf42c7bd1cd94760d7627febf8fb7355e6436c7e6278e",
+  "reward": 0.05,
+  "score": 5.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 2.0757340490818024,
+  "decision_seconds": 1.891323745250702,
+  "input_tokens": 48433,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.08133290708065033
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55 [SEP] B096Y565X5 [SEP] Queen Size Mattress, Sweetnight 12” Hybrid Mattress with Gel Memory Foam & Pocket Innerspring for Cool Sleep & Edge Support, Bed Mattress with Moisture Wicking Adaptive Cover, Medium Firm, Queen Size [SEP] $559.46 [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B08QTQGVGK [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] $19.99 to $22.99 [SEP] B08W1VPN4B [SEP] Jilin VR Controller Fixer for Oculus Quest 2 VR Headset Handle Bumper ProtectiveHolder [SEP] $9.09 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B086SLVQGX [SEP] Olee Sleep 10 Inch Gel Infused Layer Top Memory Foam Mattress, King, Blue [SEP] $453.7 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95 [SEP] B07KRNJ8KV [SEP] Just Love Short Sleeve Nightgown Sleep Dress for Women Sleepwear [SEP] $14.99",
+      "request": {
+        "state": "Shopping instruction:\ni would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55 [SEP] B096Y565X5 [SEP] Queen Size Mattress, Sweetnight 12” Hybrid Mattress with Gel Memory Foam & Pocket Innerspring for Cool Sleep & Edge Support, Bed Mattress with Moisture Wicking Adaptive Cover, Medium Firm, Queen Size [SEP] $559.46 [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B08QTQGVGK [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] $19.99 to $22.99 [SEP] B08W1VPN4B [SEP] Jilin VR Controller Fixer for Oculus Quest 2 VR Headset Handle Bumper ProtectiveHolder [SEP] $9.09 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B086SLVQGX [SEP] Olee Sleep 10 Inch Gel Infused Layer Top Memory Foam Mattress, King, Blue [SEP] $453.7 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95 [SEP] B07KRNJ8KV [SEP] Just Love Short Sleeve Nightgown Sleep Dress for Women Sleepwear [SEP] $14.99\n\nRecent actions:\nsearch[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09jp4xjsv]",
+              "3": "click[b096y565x5]",
+              "4": "click[b09r8s9t2k]",
+              "5": "click[b08qtqgvgk]",
+              "6": "click[b08w1vpn4b]",
+              "7": "click[b01730lx9q]",
+              "8": "click[b086slvqgx]",
+              "9": "click[b09kcl5gk5]",
+              "10": "click[b00004rg7m]",
+              "11": "click[b07krnj8kv]"
+            }
+          }
+        }
+      },
+      "request_sha256": "47687a34b01495559b4f13899ea5dae2bf98db50822b13ee66aeb17c8bc7dbc4",
+      "attempts": [
+        {
+          "seconds": 0.3780025653541088,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3781677633523941,
+      "response": {
+        "model": "qwen3.5-9b",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "11",
+            "probabilities": {
+              "0": 4.5155451340695156e-15,
+              "1": 3.472628202760634e-21,
+              "2": 5.701375019451641e-23,
+              "3": 2.731248106823882e-27,
+              "4": 2.49375431160866e-28,
+              "5": 5.001239215675987e-11,
+              "6": 1.1112595976702799e-26,
+              "7": 1.6641973501159118e-29,
+              "8": 1.1529276371041424e-28,
+              "9": 5.73231180777304e-26,
+              "10": 3.795666460291942e-27,
+              "11": 0.9999999999499831
+            },
+            "confidence": 0.9999999999454361
+          }
+        },
+        "usage": {
+          "input_tokens": 10476,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "batched_letter_logprob_rotations",
+          "inference_seconds": 0.37566984817385674,
+          "forward_passes": 12,
+          "max_length": 8192,
+          "probability_calibration": "none"
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b07krnj8kv]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4853244796395302
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] 1x [SEP] 1x plus [SEP] 2x plus [SEP] 3x plus [SEP] color [SEP] black - blessed mama [SEP] black - blessed mamma [SEP] black - greatful [SEP] black - i love jesus [SEP] black - i love you sleep [SEP] fuchsia - sweet life [SEP] grey - believe [SEP] grey - love in the usa [SEP] royal - jesus saves [SEP] grey - i love jesus [SEP] red - i woke up like this [SEP] black - coffee obsessed [SEP] coral - keep it holy [SEP] fuchsia - can i get an amen [SEP] turquoise - #blessed [SEP] Just Love Short Sleeve Nightgown Sleep Dress for Women Sleepwear [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] 1x [SEP] 1x plus [SEP] 2x plus [SEP] 3x plus [SEP] color [SEP] black - blessed mama [SEP] black - blessed mamma [SEP] black - greatful [SEP] black - i love jesus [SEP] black - i love you sleep [SEP] fuchsia - sweet life [SEP] grey - believe [SEP] grey - love in the usa [SEP] royal - jesus saves [SEP] grey - i love jesus [SEP] red - i woke up like this [SEP] black - coffee obsessed [SEP] coral - keep it holy [SEP] fuchsia - can i get an amen [SEP] turquoise - #blessed [SEP] Just Love Short Sleeve Nightgown Sleep Dress for Women Sleepwear [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]\nclick[b07krnj8kv]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[small]",
+              "7": "click[medium]",
+              "8": "click[large]",
+              "9": "click[x-large]",
+              "10": "click[1x]",
+              "11": "click[1x plus]",
+              "12": "click[2x plus]",
+              "13": "click[3x plus]",
+              "14": "click[black - blessed mama]",
+              "15": "click[black - blessed mamma]",
+              "16": "click[black - greatful]",
+              "17": "click[black - i love jesus]",
+              "18": "click[black - i love you sleep]",
+              "19": "click[fuchsia - sweet life]",
+              "20": "click[grey - believe]",
+              "21": "click[grey - love in the usa]",
+              "22": "click[royal - jesus saves]",
+              "23": "click[grey - i love jesus]",
+              "24": "click[red - i woke up like this]",
+              "25": "click[black - coffee obsessed]",
+              "26": "click[coral - keep it holy]",
+              "27": "click[fuchsia - can i get an amen]",
+              "28": "click[turquoise - #blessed]"
+            }
+          }
+        }
+      },
+      "request_sha256": "25977db512ba41b4d803e47fb596ed9b4d147463d131671ea4b433fbb5176c97",
+      "attempts": [
+        {
+          "seconds": 0.4928310289978981,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4930233545601368,
+      "response": {
+        "model": "qwen3.5-9b",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "7",
+            "probabilities": {
+              "0": 0.023011465392547583,
+              "1": 0.016835547726152582,
+              "2": 0.045763763456155564,
+              "3": 0.031452943980541805,
+              "4": 0.012317149838330325,
+              "5": 0.06255164822277628,
+              "6": 0.019077174862422525,
+              "7": 0.15973122948614216,
+              "8": 0.0115708914547584,
+              "9": 0.01021127586896685,
+              "10": 0.009011419325800069,
+              "11": 0.00258181486336034,
+              "12": 0.0022784436199623703,
+              "13": 0.0020107194373304247,
+              "14": 0.11686186392292425,
+              "15": 0.06255164822277628,
+              "16": 0.07545169023745288,
+              "17": 0.1324218403267676,
+              "18": 0.09101211113435738,
+              "19": 0.007952549642909524,
+              "20": 0.0013819459119338172,
+              "21": 0.002208343279348118,
+              "22": 0.003998793085836439,
+              "23": 0.0028355688994545413,
+              "24": 0.016835547726152582,
+              "25": 0.07088030342041925,
+              "26": 0.00076318301585822,
+              "27": 0.004823465181311381,
+              "28": 0.001615658457250363
+            },
+            "confidence": 0.12972163053921865
+          }
+        },
+        "usage": {
+          "input_tokens": 12459,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "batched_candidate_yes_no_log_odds",
+          "inference_seconds": 0.4904232770204544,
+          "forward_passes": 29,
+          "max_length": 8192,
+          "probability_calibration": "none"
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[medium]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.0020984672009945
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] 1x [SEP] 1x plus [SEP] 2x plus [SEP] 3x plus [SEP] color [SEP] black - blessed mama [SEP] black - blessed mamma [SEP] black - greatful [SEP] black - i love jesus [SEP] black - i love you sleep [SEP] fuchsia - sweet life [SEP] grey - believe [SEP] grey - love in the usa [SEP] royal - jesus saves [SEP] grey - i love jesus [SEP] red - i woke up like this [SEP] black - coffee obsessed [SEP] coral - keep it holy [SEP] fuchsia - can i get an amen [SEP] turquoise - #blessed [SEP] Just Love Short Sleeve Nightgown Sleep Dress for Women Sleepwear [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] 1x [SEP] 1x plus [SEP] 2x plus [SEP] 3x plus [SEP] color [SEP] black - blessed mama [SEP] black - blessed mamma [SEP] black - greatful [SEP] black - i love jesus [SEP] black - i love you sleep [SEP] fuchsia - sweet life [SEP] grey - believe [SEP] grey - love in the usa [SEP] royal - jesus saves [SEP] grey - i love jesus [SEP] red - i woke up like this [SEP] black - coffee obsessed [SEP] coral - keep it holy [SEP] fuchsia - can i get an amen [SEP] turquoise - #blessed [SEP] Just Love Short Sleeve Nightgown Sleep Dress for Women Sleepwear [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]\nclick[b07krnj8kv]\nclick[medium]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[small]",
+              "7": "click[medium]",
+              "8": "click[large]",
+              "9": "click[x-large]",
+              "10": "click[1x]",
+              "11": "click[1x plus]",
+              "12": "click[2x plus]",
+              "13": "click[3x plus]",
+              "14": "click[black - blessed mama]",
+              "15": "click[black - blessed mamma]",
+              "16": "click[black - greatful]",
+              "17": "click[black - i love jesus]",
+              "18": "click[black - i love you sleep]",
+              "19": "click[fuchsia - sweet life]",
+              "20": "click[grey - believe]",
+              "21": "click[grey - love in the usa]",
+              "22": "click[royal - jesus saves]",
+              "23": "click[grey - i love jesus]",
+              "24": "click[red - i woke up like this]",
+              "25": "click[black - coffee obsessed]",
+              "26": "click[coral - keep it holy]",
+              "27": "click[fuchsia - can i get an amen]",
+              "28": "click[turquoise - #blessed]"
+            }
+          }
+        }
+      },
+      "request_sha256": "da9b47bfaae7744942daa2a06603746223896de77ecc62a3fdf65044a837fae9",
+      "attempts": [
+        {
+          "seconds": 0.5009277649223804,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5010812319815159,
+      "response": {
+        "model": "qwen3.5-9b",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "17",
+            "probabilities": {
+              "0": 0.010993327005439119,
+              "1": 0.02186284133108767,
+              "2": 0.04084516493478664,
+              "3": 0.02988296103319325,
+              "4": 0.01702679794881695,
+              "5": 0.02988296103319325,
+              "6": 0.0033527753074648805,
+              "7": 0.02988296103319325,
+              "8": 0.0023043265230157177,
+              "9": 0.003569010736792988,
+              "10": 0.009113788193187974,
+              "11": 0.0012725699683110638,
+              "12": 0.0005304860871723655,
+              "13": 0.0008216329248164275,
+              "14": 0.15175819819827915,
+              "15": 0.15175819819827915,
+              "16": 0.0979824570400709,
+              "17": 0.17196456752858882,
+              "18": 0.10430178259031268,
+              "19": 0.0027795483566046305,
+              "20": 0.0020335610191049014,
+              "21": 0.002164714436708523,
+              "22": 0.005884303917107736,
+              "23": 0.0033527753074648805,
+              "24": 0.0018515783783935545,
+              "25": 0.0979824570400709,
+              "26": 0.0022334298491921522,
+              "27": 0.0014877850239938062,
+              "28": 0.0011230390553566905
+            },
+            "confidence": 0.14239187351175273
+          }
+        },
+        "usage": {
+          "input_tokens": 12604,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "batched_candidate_yes_no_log_odds",
+          "inference_seconds": 0.4991055130958557,
+          "forward_passes": 29,
+          "max_length": 8192,
+          "probability_calibration": "none"
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[black - i love jesus]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.526087924838066
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] 1x [SEP] 1x plus [SEP] 2x plus [SEP] 3x plus [SEP] color [SEP] black - blessed mama [SEP] black - blessed mamma [SEP] black - greatful [SEP] black - i love jesus [SEP] black - i love you sleep [SEP] fuchsia - sweet life [SEP] grey - believe [SEP] grey - love in the usa [SEP] royal - jesus saves [SEP] grey - i love jesus [SEP] red - i woke up like this [SEP] black - coffee obsessed [SEP] coral - keep it holy [SEP] fuchsia - can i get an amen [SEP] turquoise - #blessed [SEP] Just Love Short Sleeve Nightgown Sleep Dress for Women Sleepwear [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] 1x [SEP] 1x plus [SEP] 2x plus [SEP] 3x plus [SEP] color [SEP] black - blessed mama [SEP] black - blessed mamma [SEP] black - greatful [SEP] black - i love jesus [SEP] black - i love you sleep [SEP] fuchsia - sweet life [SEP] grey - believe [SEP] grey - love in the usa [SEP] royal - jesus saves [SEP] grey - i love jesus [SEP] red - i woke up like this [SEP] black - coffee obsessed [SEP] coral - keep it holy [SEP] fuchsia - can i get an amen [SEP] turquoise - #blessed [SEP] Just Love Short Sleeve Nightgown Sleep Dress for Women Sleepwear [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]\nclick[b07krnj8kv]\nclick[medium]\nclick[black - i love jesus]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[small]",
+              "7": "click[medium]",
+              "8": "click[large]",
+              "9": "click[x-large]",
+              "10": "click[1x]",
+              "11": "click[1x plus]",
+              "12": "click[2x plus]",
+              "13": "click[3x plus]",
+              "14": "click[black - blessed mama]",
+              "15": "click[black - blessed mamma]",
+              "16": "click[black - greatful]",
+              "17": "click[black - i love jesus]",
+              "18": "click[black - i love you sleep]",
+              "19": "click[fuchsia - sweet life]",
+              "20": "click[grey - believe]",
+              "21": "click[grey - love in the usa]",
+              "22": "click[royal - jesus saves]",
+              "23": "click[grey - i love jesus]",
+              "24": "click[red - i woke up like this]",
+              "25": "click[black - coffee obsessed]",
+              "26": "click[coral - keep it holy]",
+              "27": "click[fuchsia - can i get an amen]",
+              "28": "click[turquoise - #blessed]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c0eb01821af37e06d1f4c5ec295ce49f6f88c5cbc677720de846f2f3cba5efaf",
+      "attempts": [
+        {
+          "seconds": 0.5188987627625465,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5190513953566551,
+      "response": {
+        "model": "qwen3.5-9b",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.034291559887849654,
+              "1": 0.041363516836555383,
+              "2": 0.09922591861080482,
+              "3": 0.07259523285225225,
+              "4": 0.038857428040165266,
+              "5": 0.1853784213171348,
+              "6": 0.008144959392623007,
+              "7": 0.026706293693397287,
+              "8": 0.006343300753059591,
+              "9": 0.00718790143566711,
+              "10": 0.03221393930289658,
+              "11": 0.0033953242226082633,
+              "12": 0.0013718349956125823,
+              "13": 0.0013718349956125823,
+              "14": 0.08226117580655569,
+              "15": 0.06819691003939175,
+              "16": 0.06406506813452008,
+              "17": 0.07727722311507428,
+              "18": 0.053111806941728436,
+              "19": 0.0031896119272052125,
+              "20": 0.002333569936217952,
+              "21": 0.003969536179377454,
+              "22": 0.011132839527157006,
+              "23": 0.0042255492674212695,
+              "24": 0.004095542783901863,
+              "25": 0.06018356187560351,
+              "26": 0.002814822646205482,
+              "27": 0.0016038375984715311,
+              "28": 0.0030914778849294336
+            },
+            "confidence": 0.15628479350703248
+          }
+        },
+        "usage": {
+          "input_tokens": 12894,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "batched_candidate_yes_no_log_odds",
+          "inference_seconds": 0.5170301981270313,
+          "forward_passes": 29,
+          "max_length": 8192,
+          "probability_calibration": "none"
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.05,
+      "done": true,
+      "elapsed_seconds": 2.075728941708803
+    }
+  ]
+}

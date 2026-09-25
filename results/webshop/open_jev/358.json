@@ -1,0 +1,1761 @@
+{
+  "task_id": 358,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars",
+  "instruction_sha256": "30ce5faec4564afdb3f2088b5184c9d8adc5d9eda578288303a18e91f9c376ca",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 15,
+  "elapsed_seconds": 18.83502508327365,
+  "decision_seconds": 18.010071516036987,
+  "input_tokens": 414584,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Search",
+      "action": "search[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.04210486263036728
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00SYGP60Q [SEP] Crocs Unisex-Adult Classic Clog (Retired Colors) | Water Comfortable Slip on Shoes [SEP] $41.79 to $67.99 [SEP] B07S6N9BKN [SEP] Crocs Unisex Flip Flop Sandals [SEP] $15.73 to $93.27 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55 [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B08P32KCTT [SEP] Hibye Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Wireless Support AUX TF USB [SEP] $100.0 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B08B6WNZ9N [SEP] Crocs Women's Men's Baya Flip Flop [SEP] $19.97 to $54.98",
+      "request": {
+        "state": "Shopping instruction:\ni want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00SYGP60Q [SEP] Crocs Unisex-Adult Classic Clog (Retired Colors) | Water Comfortable Slip on Shoes [SEP] $41.79 to $67.99 [SEP] B07S6N9BKN [SEP] Crocs Unisex Flip Flop Sandals [SEP] $15.73 to $93.27 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55 [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B08P32KCTT [SEP] Hibye Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Wireless Support AUX TF USB [SEP] $100.0 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B08B6WNZ9N [SEP] Crocs Women's Men's Baya Flip Flop [SEP] $19.97 to $54.98\n\nRecent actions:\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b00sygp60q]",
+              "3": "click[b07s6n9bkn]",
+              "4": "click[b09g3fpp9s]",
+              "5": "click[b07jmgsdwt]",
+              "6": "click[b09kcl5gk5]",
+              "7": "click[b09jp4xjsv]",
+              "8": "click[b09cd5rzr4]",
+              "9": "click[b08p32kctt]",
+              "10": "click[b08pyvwm7b]",
+              "11": "click[b08b6wnz9n]"
+            }
+          }
+        }
+      },
+      "request_sha256": "602143b74e4afc22de1157936c568941bdc381fbf3ac0e8e751a08a794e290f1",
+      "attempts": [
+        {
+          "seconds": 0.3904995359480381,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3906158283352852,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.12124087449578308,
+              "1": 0.3102103299442261,
+              "2": 0.11209409737406259,
+              "3": 0.1925252073927546,
+              "4": 0.017702775824550113,
+              "5": 0.01390724991976774,
+              "6": 0.015969005842941565,
+              "7": 0.018147927134768694,
+              "8": 0.01879573089088001,
+              "9": 0.021984081963071632,
+              "10": 0.037984989058676505,
+              "11": 0.11943773015851726
+            },
+            "confidence": 0.24750217812097394
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8708,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3846619240939617,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4890482537448406
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07SDHRC3D [SEP] Crocs Women's Isabella T-Strap Sandals [SEP] $43.94 to $80.0 [SEP] B01A560V16 [SEP] Crocs Men's Swiftwater Clog | Casual Lightweight Beach or Water Shoe [SEP] $100.0 [SEP] B08RP8BJWH [SEP] Crocs Women's Snow Boot [SEP] $43.65 to $121.95 [SEP] B08S1YQXG6 [SEP] Crocs Unisex-Adult Men's and Women's Classic The Child Clog | Star Wars Baby Yoda [SEP] $59.95 to $59.99 [SEP] B07W486PVM [SEP] DORCEV 10x7ft Cartoon Underwater World Photography Backdrop for Kids Birthday Party Baby Shower Background Cartoon Under The Sea Castle Fish Coral Cake Table Banner Kids Photo Studio Props [SEP] $25.99 [SEP] B07W7HM2HF [SEP] DORCEV 10x8ft Cartoon Underwater World Photography Backdrop for Kids Birthday Party Baby Shower Background Cartoon Under The Sea World Conch Coral Cake Table Banner Kids Photo Studio Props [SEP] $35.59 [SEP] B015PBIFMI [SEP] Crocs Women's Classic Comfort Clog Pool 9 Medium US Blue [SEP] $100.0 [SEP] B08LK1NWJJ [SEP] crocs Unisex's Sliders [SEP] $74.98 [SEP] B0825G4QYP [SEP] Crocs Men's and Women's Crocband Graphic Clog [SEP] $51.19 to $69.99 [SEP] B07CB5MYF8 [SEP] Polaroid Originals Instant Color Film for I-Type - Double Pack, 16 Photos (4836) [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07SDHRC3D [SEP] Crocs Women's Isabella T-Strap Sandals [SEP] $43.94 to $80.0 [SEP] B01A560V16 [SEP] Crocs Men's Swiftwater Clog | Casual Lightweight Beach or Water Shoe [SEP] $100.0 [SEP] B08RP8BJWH [SEP] Crocs Women's Snow Boot [SEP] $43.65 to $121.95 [SEP] B08S1YQXG6 [SEP] Crocs Unisex-Adult Men's and Women's Classic The Child Clog | Star Wars Baby Yoda [SEP] $59.95 to $59.99 [SEP] B07W486PVM [SEP] DORCEV 10x7ft Cartoon Underwater World Photography Backdrop for Kids Birthday Party Baby Shower Background Cartoon Under The Sea Castle Fish Coral Cake Table Banner Kids Photo Studio Props [SEP] $25.99 [SEP] B07W7HM2HF [SEP] DORCEV 10x8ft Cartoon Underwater World Photography Backdrop for Kids Birthday Party Baby Shower Background Cartoon Under The Sea World Conch Coral Cake Table Banner Kids Photo Studio Props [SEP] $35.59 [SEP] B015PBIFMI [SEP] Crocs Women's Classic Comfort Clog Pool 9 Medium US Blue [SEP] $100.0 [SEP] B08LK1NWJJ [SEP] crocs Unisex's Sliders [SEP] $74.98 [SEP] B0825G4QYP [SEP] Crocs Men's and Women's Crocband Graphic Clog [SEP] $51.19 to $69.99 [SEP] B07CB5MYF8 [SEP] Polaroid Originals Instant Color Film for I-Type - Double Pack, 16 Photos (4836) [SEP] $100.0\n\nRecent actions:\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07sdhrc3d]",
+              "4": "click[b01a560v16]",
+              "5": "click[b08rp8bjwh]",
+              "6": "click[b08s1yqxg6]",
+              "7": "click[b07w486pvm]",
+              "8": "click[b07w7hm2hf]",
+              "9": "click[b015pbifmi]",
+              "10": "click[b08lk1nwjj]",
+              "11": "click[b0825g4qyp]",
+              "12": "click[b07cb5myf8]"
+            }
+          }
+        }
+      },
+      "request_sha256": "09b09ef27e5ea406f4adde296f63876bb7df16e2417cc21c07146641a78d409d",
+      "attempts": [
+        {
+          "seconds": 0.3899575062096119,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.39010434597730637,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.1306501880740795,
+              "1": 0.12494501235511556,
+              "2": 0.18405126634317434,
+              "3": 0.06692932761217964,
+              "4": 0.035853762898523406,
+              "5": 0.06734757110232653,
+              "6": 0.0889180972203983,
+              "7": 0.021329587471245474,
+              "8": 0.022346625430739998,
+              "9": 0.017190850810189076,
+              "10": 0.09712074749545245,
+              "11": 0.08665623311148621,
+              "12": 0.05666073007508943
+            },
+            "confidence": 0.11605553853843889
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8778,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.38763629645109177,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9593284502625465
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B096YBNL7F [SEP] Byged Mini Projector, DIY Toy Portable Smart Phone Projector for Kids, Mobile Phone Screen Magnifier, Indoor Entertainment for Home Cinema [SEP] $18.56 [SEP] B07TXWF6ZC [SEP] Crocs Crocband Full Force Clog Slate Grey/White Men's 7, Women's 9 [SEP] $64.88 [SEP] B07DLK7SGX [SEP] Crocs Women's Isabella Strappy Sandal [SEP] $33.98 to $61.2 [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B09SFZ1836 [SEP] SWEETSHOPZ BMX Color Style Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B08846NCF7 [SEP] Crocs Unisex-Adult Men's and Women's Classic Clog (Retired Colors) [SEP] $21.91 to $105.95 [SEP] B09LYV7Z84 [SEP] UIN Women's Slip On Sneakers Cute Bear Casual Walking Shoes Microfiber Leather Street Travel Painted Shoes Be with You [SEP] $75.0 to $120.0 [SEP] B00499CRNG [SEP] Chung -Shi DUX Premium Unisex Beach Sandals Clog, Color:Navy, crocs größe:EUR [SEP] $50.29 to $68.93 [SEP] B07TB3M6W2 [SEP] DORCEV 7x5ft Underwater Blue Ocean Photography Backdrop Underwater World Theme Birthday Party Summer Holiday Party Background Blue Sea Water Beach Sunlight Wallpaper Kids Adult Photo Studio Props [SEP] $20.99 [SEP] B09QRFJGZN [SEP] SWEETSHOPZ Color Guard Colors Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B096YBNL7F [SEP] Byged Mini Projector, DIY Toy Portable Smart Phone Projector for Kids, Mobile Phone Screen Magnifier, Indoor Entertainment for Home Cinema [SEP] $18.56 [SEP] B07TXWF6ZC [SEP] Crocs Crocband Full Force Clog Slate Grey/White Men's 7, Women's 9 [SEP] $64.88 [SEP] B07DLK7SGX [SEP] Crocs Women's Isabella Strappy Sandal [SEP] $33.98 to $61.2 [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B09SFZ1836 [SEP] SWEETSHOPZ BMX Color Style Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B08846NCF7 [SEP] Crocs Unisex-Adult Men's and Women's Classic Clog (Retired Colors) [SEP] $21.91 to $105.95 [SEP] B09LYV7Z84 [SEP] UIN Women's Slip On Sneakers Cute Bear Casual Walking Shoes Microfiber Leather Street Travel Painted Shoes Be with You [SEP] $75.0 to $120.0 [SEP] B00499CRNG [SEP] Chung -Shi DUX Premium Unisex Beach Sandals Clog, Color:Navy, crocs größe:EUR [SEP] $50.29 to $68.93 [SEP] B07TB3M6W2 [SEP] DORCEV 7x5ft Underwater Blue Ocean Photography Backdrop Underwater World Theme Birthday Party Summer Holiday Party Background Blue Sea Water Beach Sunlight Wallpaper Kids Adult Photo Studio Props [SEP] $20.99 [SEP] B09QRFJGZN [SEP] SWEETSHOPZ Color Guard Colors Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0\n\nRecent actions:\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b096ybnl7f]",
+              "4": "click[b07txwf6zc]",
+              "5": "click[b07dlk7sgx]",
+              "6": "click[b09r8s9t2k]",
+              "7": "click[b09sfz1836]",
+              "8": "click[b08846ncf7]",
+              "9": "click[b09lyv7z84]",
+              "10": "click[b00499crng]",
+              "11": "click[b07tb3m6w2]",
+              "12": "click[b09qrfjgzn]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0cf51ff04311b0f22df1ff15371192c18a9b881efabcf254a30c181f4eb8db84",
+      "attempts": [
+        {
+          "seconds": 0.4276823587715626,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.42784617468714714,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.182748367525806,
+              "1": 0.1616077885597886,
+              "2": 0.2648049859534734,
+              "3": 0.018770769897159856,
+              "4": 0.025813897771308717,
+              "5": 0.0319363499365425,
+              "6": 0.029110060287120557,
+              "7": 0.0339954348775739,
+              "8": 0.1245496392755107,
+              "9": 0.033705172980282284,
+              "10": 0.03612910719442574,
+              "11": 0.03503854956242117,
+              "12": 0.02178987617858641
+            },
+            "confidence": 0.20353873478292955
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9692,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4254211075603962,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.451317209750414
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09QYL9M64 [SEP] SWEETSHOPZ Baseball Campus Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SFWVF19 [SEP] SWEETSHOPZ BMX Acumen Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SFY8TMT [SEP] SWEETSHOPZ BMX Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG4MPF8 [SEP] SWEETSHOPZ Geocacher Heartbeat Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG52W1V [SEP] SWEETSHOPZ Snowmobile Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG5GGMV [SEP] SWEETSHOPZ Kayaking Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG5P7SP [SEP] SWEETSHOPZ Geocaching Watercolor Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG5YLM6 [SEP] SWEETSHOPZ Motocycle Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG65YXR [SEP] SWEETSHOPZ Hunter Trials Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SH1Q2SV [SEP] SWEETSHOPZ Wrestling Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09QYL9M64 [SEP] SWEETSHOPZ Baseball Campus Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SFWVF19 [SEP] SWEETSHOPZ BMX Acumen Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SFY8TMT [SEP] SWEETSHOPZ BMX Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG4MPF8 [SEP] SWEETSHOPZ Geocacher Heartbeat Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG52W1V [SEP] SWEETSHOPZ Snowmobile Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG5GGMV [SEP] SWEETSHOPZ Kayaking Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG5P7SP [SEP] SWEETSHOPZ Geocaching Watercolor Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG5YLM6 [SEP] SWEETSHOPZ Motocycle Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG65YXR [SEP] SWEETSHOPZ Hunter Trials Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SH1Q2SV [SEP] SWEETSHOPZ Wrestling Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0\n\nRecent actions:\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09qyl9m64]",
+              "4": "click[b09sfwvf19]",
+              "5": "click[b09sfy8tmt]",
+              "6": "click[b09sg4mpf8]",
+              "7": "click[b09sg52w1v]",
+              "8": "click[b09sg5ggmv]",
+              "9": "click[b09sg5p7sp]",
+              "10": "click[b09sg5ylm6]",
+              "11": "click[b09sg65yxr]",
+              "12": "click[b09sh1q2sv]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e11cbce9c0cb07867778c7e156abec031a30aabb5462ea4216c123574ac21520",
+      "attempts": [
+        {
+          "seconds": 0.40912868455052376,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.40927544981241226,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.40114492381147576,
+              "1": 0.16727703654176884,
+              "2": 0.30409843148014826,
+              "3": 0.01840877392008918,
+              "4": 0.007610727512557587,
+              "5": 0.009949962494298841,
+              "6": 0.013934463869777829,
+              "7": 0.01028192615859122,
+              "8": 0.02105696925170651,
+              "9": 0.011987343021898623,
+              "10": 0.017833718927005103,
+              "11": 0.011097025035917862,
+              "12": 0.005318697974764419
+            },
+            "confidence": 0.3512403341290987
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9219,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.40685250610113144,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.876137025654316
+    },
+    {
+      "step": 5,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Search",
+      "action": "search[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.9237843453884125
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00SYGP60Q [SEP] Crocs Unisex-Adult Classic Clog (Retired Colors) | Water Comfortable Slip on Shoes [SEP] $41.79 to $67.99 [SEP] B07S6N9BKN [SEP] Crocs Unisex Flip Flop Sandals [SEP] $15.73 to $93.27 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55 [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B08P32KCTT [SEP] Hibye Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Wireless Support AUX TF USB [SEP] $100.0 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B08B6WNZ9N [SEP] Crocs Women's Men's Baya Flip Flop [SEP] $19.97 to $54.98",
+      "request": {
+        "state": "Shopping instruction:\ni want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00SYGP60Q [SEP] Crocs Unisex-Adult Classic Clog (Retired Colors) | Water Comfortable Slip on Shoes [SEP] $41.79 to $67.99 [SEP] B07S6N9BKN [SEP] Crocs Unisex Flip Flop Sandals [SEP] $15.73 to $93.27 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55 [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B08P32KCTT [SEP] Hibye Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Wireless Support AUX TF USB [SEP] $100.0 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B08B6WNZ9N [SEP] Crocs Women's Men's Baya Flip Flop [SEP] $19.97 to $54.98\n\nRecent actions:\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b00sygp60q]",
+              "3": "click[b07s6n9bkn]",
+              "4": "click[b09g3fpp9s]",
+              "5": "click[b07jmgsdwt]",
+              "6": "click[b09kcl5gk5]",
+              "7": "click[b09jp4xjsv]",
+              "8": "click[b09cd5rzr4]",
+              "9": "click[b08p32kctt]",
+              "10": "click[b08pyvwm7b]",
+              "11": "click[b08b6wnz9n]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c05ac0540d717049f75db700a43931943d5f6300fa709701e3eb91499c5ca744",
+      "attempts": [
+        {
+          "seconds": 0.42384616285562515,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4239852726459503,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.10356372743320148,
+              "1": 0.27888710592427735,
+              "2": 0.11076966627720346,
+              "3": 0.20675566837445758,
+              "4": 0.020802013828717734,
+              "5": 0.01967954509305029,
+              "6": 0.019341746409453884,
+              "7": 0.023025660559419986,
+              "8": 0.020659342583840393,
+              "9": 0.02981627686458516,
+              "10": 0.0444020109830986,
+              "11": 0.1222972356686941
+            },
+            "confidence": 0.21333138828102985
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9344,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.41230399534106255,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.4042899757623672
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07SDHRC3D [SEP] Crocs Women's Isabella T-Strap Sandals [SEP] $43.94 to $80.0 [SEP] B01A560V16 [SEP] Crocs Men's Swiftwater Clog | Casual Lightweight Beach or Water Shoe [SEP] $100.0 [SEP] B08RP8BJWH [SEP] Crocs Women's Snow Boot [SEP] $43.65 to $121.95 [SEP] B08S1YQXG6 [SEP] Crocs Unisex-Adult Men's and Women's Classic The Child Clog | Star Wars Baby Yoda [SEP] $59.95 to $59.99 [SEP] B07W486PVM [SEP] DORCEV 10x7ft Cartoon Underwater World Photography Backdrop for Kids Birthday Party Baby Shower Background Cartoon Under The Sea Castle Fish Coral Cake Table Banner Kids Photo Studio Props [SEP] $25.99 [SEP] B07W7HM2HF [SEP] DORCEV 10x8ft Cartoon Underwater World Photography Backdrop for Kids Birthday Party Baby Shower Background Cartoon Under The Sea World Conch Coral Cake Table Banner Kids Photo Studio Props [SEP] $35.59 [SEP] B015PBIFMI [SEP] Crocs Women's Classic Comfort Clog Pool 9 Medium US Blue [SEP] $100.0 [SEP] B08LK1NWJJ [SEP] crocs Unisex's Sliders [SEP] $74.98 [SEP] B0825G4QYP [SEP] Crocs Men's and Women's Crocband Graphic Clog [SEP] $51.19 to $69.99 [SEP] B07CB5MYF8 [SEP] Polaroid Originals Instant Color Film for I-Type - Double Pack, 16 Photos (4836) [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07SDHRC3D [SEP] Crocs Women's Isabella T-Strap Sandals [SEP] $43.94 to $80.0 [SEP] B01A560V16 [SEP] Crocs Men's Swiftwater Clog | Casual Lightweight Beach or Water Shoe [SEP] $100.0 [SEP] B08RP8BJWH [SEP] Crocs Women's Snow Boot [SEP] $43.65 to $121.95 [SEP] B08S1YQXG6 [SEP] Crocs Unisex-Adult Men's and Women's Classic The Child Clog | Star Wars Baby Yoda [SEP] $59.95 to $59.99 [SEP] B07W486PVM [SEP] DORCEV 10x7ft Cartoon Underwater World Photography Backdrop for Kids Birthday Party Baby Shower Background Cartoon Under The Sea Castle Fish Coral Cake Table Banner Kids Photo Studio Props [SEP] $25.99 [SEP] B07W7HM2HF [SEP] DORCEV 10x8ft Cartoon Underwater World Photography Backdrop for Kids Birthday Party Baby Shower Background Cartoon Under The Sea World Conch Coral Cake Table Banner Kids Photo Studio Props [SEP] $35.59 [SEP] B015PBIFMI [SEP] Crocs Women's Classic Comfort Clog Pool 9 Medium US Blue [SEP] $100.0 [SEP] B08LK1NWJJ [SEP] crocs Unisex's Sliders [SEP] $74.98 [SEP] B0825G4QYP [SEP] Crocs Men's and Women's Crocband Graphic Clog [SEP] $51.19 to $69.99 [SEP] B07CB5MYF8 [SEP] Polaroid Originals Instant Color Film for I-Type - Double Pack, 16 Photos (4836) [SEP] $100.0\n\nRecent actions:\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07sdhrc3d]",
+              "4": "click[b01a560v16]",
+              "5": "click[b08rp8bjwh]",
+              "6": "click[b08s1yqxg6]",
+              "7": "click[b07w486pvm]",
+              "8": "click[b07w7hm2hf]",
+              "9": "click[b015pbifmi]",
+              "10": "click[b08lk1nwjj]",
+              "11": "click[b0825g4qyp]",
+              "12": "click[b07cb5myf8]"
+            }
+          }
+        }
+      },
+      "request_sha256": "aaff2ced6f4d59840b4ed1d534a11a57d2b990d7bc862ab8bfe1779315c66757",
+      "attempts": [
+        {
+          "seconds": 0.42126984149217606,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.42140237987041473,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.10050727305898696,
+              "1": 0.16185453702165292,
+              "2": 0.28602309332394343,
+              "3": 0.055723999908262295,
+              "4": 0.027123966936229565,
+              "5": 0.05725505855003354,
+              "6": 0.08143786763880122,
+              "7": 0.014621492304254613,
+              "8": 0.016766351970741274,
+              "9": 0.01460186370028811,
+              "10": 0.07695573272336431,
+              "11": 0.06454082234399111,
+              "12": 0.04258794051945064
+            },
+            "confidence": 0.22652501776760536
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9467,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.41603825613856316,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.8781907856464386
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B096YBNL7F [SEP] Byged Mini Projector, DIY Toy Portable Smart Phone Projector for Kids, Mobile Phone Screen Magnifier, Indoor Entertainment for Home Cinema [SEP] $18.56 [SEP] B07TXWF6ZC [SEP] Crocs Crocband Full Force Clog Slate Grey/White Men's 7, Women's 9 [SEP] $64.88 [SEP] B07DLK7SGX [SEP] Crocs Women's Isabella Strappy Sandal [SEP] $33.98 to $61.2 [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B09SFZ1836 [SEP] SWEETSHOPZ BMX Color Style Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B08846NCF7 [SEP] Crocs Unisex-Adult Men's and Women's Classic Clog (Retired Colors) [SEP] $21.91 to $105.95 [SEP] B09LYV7Z84 [SEP] UIN Women's Slip On Sneakers Cute Bear Casual Walking Shoes Microfiber Leather Street Travel Painted Shoes Be with You [SEP] $75.0 to $120.0 [SEP] B00499CRNG [SEP] Chung -Shi DUX Premium Unisex Beach Sandals Clog, Color:Navy, crocs größe:EUR [SEP] $50.29 to $68.93 [SEP] B07TB3M6W2 [SEP] DORCEV 7x5ft Underwater Blue Ocean Photography Backdrop Underwater World Theme Birthday Party Summer Holiday Party Background Blue Sea Water Beach Sunlight Wallpaper Kids Adult Photo Studio Props [SEP] $20.99 [SEP] B09QRFJGZN [SEP] SWEETSHOPZ Color Guard Colors Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B096YBNL7F [SEP] Byged Mini Projector, DIY Toy Portable Smart Phone Projector for Kids, Mobile Phone Screen Magnifier, Indoor Entertainment for Home Cinema [SEP] $18.56 [SEP] B07TXWF6ZC [SEP] Crocs Crocband Full Force Clog Slate Grey/White Men's 7, Women's 9 [SEP] $64.88 [SEP] B07DLK7SGX [SEP] Crocs Women's Isabella Strappy Sandal [SEP] $33.98 to $61.2 [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B09SFZ1836 [SEP] SWEETSHOPZ BMX Color Style Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B08846NCF7 [SEP] Crocs Unisex-Adult Men's and Women's Classic Clog (Retired Colors) [SEP] $21.91 to $105.95 [SEP] B09LYV7Z84 [SEP] UIN Women's Slip On Sneakers Cute Bear Casual Walking Shoes Microfiber Leather Street Travel Painted Shoes Be with You [SEP] $75.0 to $120.0 [SEP] B00499CRNG [SEP] Chung -Shi DUX Premium Unisex Beach Sandals Clog, Color:Navy, crocs größe:EUR [SEP] $50.29 to $68.93 [SEP] B07TB3M6W2 [SEP] DORCEV 7x5ft Underwater Blue Ocean Photography Backdrop Underwater World Theme Birthday Party Summer Holiday Party Background Blue Sea Water Beach Sunlight Wallpaper Kids Adult Photo Studio Props [SEP] $20.99 [SEP] B09QRFJGZN [SEP] SWEETSHOPZ Color Guard Colors Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0\n\nRecent actions:\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b096ybnl7f]",
+              "4": "click[b07txwf6zc]",
+              "5": "click[b07dlk7sgx]",
+              "6": "click[b09r8s9t2k]",
+              "7": "click[b09sfz1836]",
+              "8": "click[b08846ncf7]",
+              "9": "click[b09lyv7z84]",
+              "10": "click[b00499crng]",
+              "11": "click[b07tb3m6w2]",
+              "12": "click[b09qrfjgzn]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e5a585261e1f1db821f0713074247637ad3a079dc3085180d71702c8f72659aa",
+      "attempts": [
+        {
+          "seconds": 0.45968080312013626,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4598352536559105,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.12583908401300548,
+              "1": 0.20776345096520402,
+              "2": 0.3312146018150876,
+              "3": 0.01588758543882852,
+              "4": 0.01889407432544487,
+              "5": 0.027667518943254452,
+              "6": 0.026558190939590384,
+              "7": 0.02708762463123255,
+              "8": 0.11141306534110634,
+              "9": 0.03242447404388585,
+              "10": 0.029411443699515517,
+              "11": 0.027410683376841098,
+              "12": 0.01842820246700331
+            },
+            "confidence": 0.2754824852996782
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10381,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4557173289358616,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.3943516239523888
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09QYL9M64 [SEP] SWEETSHOPZ Baseball Campus Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SFWVF19 [SEP] SWEETSHOPZ BMX Acumen Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SFY8TMT [SEP] SWEETSHOPZ BMX Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG4MPF8 [SEP] SWEETSHOPZ Geocacher Heartbeat Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG52W1V [SEP] SWEETSHOPZ Snowmobile Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG5GGMV [SEP] SWEETSHOPZ Kayaking Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG5P7SP [SEP] SWEETSHOPZ Geocaching Watercolor Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG5YLM6 [SEP] SWEETSHOPZ Motocycle Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG65YXR [SEP] SWEETSHOPZ Hunter Trials Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SH1Q2SV [SEP] SWEETSHOPZ Wrestling Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09QYL9M64 [SEP] SWEETSHOPZ Baseball Campus Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SFWVF19 [SEP] SWEETSHOPZ BMX Acumen Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SFY8TMT [SEP] SWEETSHOPZ BMX Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG4MPF8 [SEP] SWEETSHOPZ Geocacher Heartbeat Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG52W1V [SEP] SWEETSHOPZ Snowmobile Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG5GGMV [SEP] SWEETSHOPZ Kayaking Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG5P7SP [SEP] SWEETSHOPZ Geocaching Watercolor Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG5YLM6 [SEP] SWEETSHOPZ Motocycle Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SG65YXR [SEP] SWEETSHOPZ Hunter Trials Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09SH1Q2SV [SEP] SWEETSHOPZ Wrestling Dynamic Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0\n\nRecent actions:\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09qyl9m64]",
+              "4": "click[b09sfwvf19]",
+              "5": "click[b09sfy8tmt]",
+              "6": "click[b09sg4mpf8]",
+              "7": "click[b09sg52w1v]",
+              "8": "click[b09sg5ggmv]",
+              "9": "click[b09sg5p7sp]",
+              "10": "click[b09sg5ylm6]",
+              "11": "click[b09sg65yxr]",
+              "12": "click[b09sh1q2sv]"
+            }
+          }
+        }
+      },
+      "request_sha256": "cba5c996862aa7347f153447ee9ca5cf0939e2b209f04e6cda323ae436d41137",
+      "attempts": [
+        {
+          "seconds": 0.4373840428888798,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.43749551475048065,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.1725038484235283,
+              "1": 0.2959857165355777,
+              "2": 0.3311968362571192,
+              "3": 0.024106136149000038,
+              "4": 0.01174184510549539,
+              "5": 0.014701850502164165,
+              "6": 0.01823524787514525,
+              "7": 0.014348353473915488,
+              "8": 0.052913705000046496,
+              "9": 0.016390597559423063,
+              "10": 0.02410222190588174,
+              "11": 0.014016837496267863,
+              "12": 0.009756803716435078
+            },
+            "confidence": 0.2754632392785458
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9908,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4352796599268913,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.9248262606561184
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01HEXEHWC [SEP] Crocs Unisex-Child Toddler Classic Clog [SEP] $19.93 to $92.95 [SEP] B09PN22STS [SEP] SWEETSHOPZ Dog Mom Splash Color Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09PN2STBW [SEP] SWEETSHOPZ Dog Mom Rainbow Color Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports [SEP] $100.0 [SEP] B09PN9J9K5 [SEP] SWEETSHOPZ Dog Mom Rainbow Color White Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports [SEP] $100.0 [SEP] B09PNBJ863 [SEP] SWEETSHOPZ Dog Mom Splash Color White Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports [SEP] $100.0 [SEP] B09PQZND7P [SEP] SWEETSHOPZ Dragonfly Colorful Fractal Flower White Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports [SEP] $100.0 [SEP] B09PR6BVHH [SEP] SWEETSHOPZ Dragonfly Light Color Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09PR77PP3 [SEP] SWEETSHOPZ Dragonfly Geometric Holographic Pastel Color Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09PR7JFWQ [SEP] SWEETSHOPZ Dragonfly Flower Green Color Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports [SEP] $100.0 [SEP] B09PR7PB16 [SEP] SWEETSHOPZ Dragonfly Colorful Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01HEXEHWC [SEP] Crocs Unisex-Child Toddler Classic Clog [SEP] $19.93 to $92.95 [SEP] B09PN22STS [SEP] SWEETSHOPZ Dog Mom Splash Color Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09PN2STBW [SEP] SWEETSHOPZ Dog Mom Rainbow Color Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports [SEP] $100.0 [SEP] B09PN9J9K5 [SEP] SWEETSHOPZ Dog Mom Rainbow Color White Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports [SEP] $100.0 [SEP] B09PNBJ863 [SEP] SWEETSHOPZ Dog Mom Splash Color White Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports [SEP] $100.0 [SEP] B09PQZND7P [SEP] SWEETSHOPZ Dragonfly Colorful Fractal Flower White Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports [SEP] $100.0 [SEP] B09PR6BVHH [SEP] SWEETSHOPZ Dragonfly Light Color Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09PR77PP3 [SEP] SWEETSHOPZ Dragonfly Geometric Holographic Pastel Color Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0 [SEP] B09PR7JFWQ [SEP] SWEETSHOPZ Dragonfly Flower Green Color Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports [SEP] $100.0 [SEP] B09PR7PB16 [SEP] SWEETSHOPZ Dragonfly Colorful Active Running Walking Sneakers Shoes for Women Men Unisex Kids Adults Fashion Sports Black [SEP] $100.0\n\nRecent actions:\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b01hexehwc]",
+              "4": "click[b09pn22sts]",
+              "5": "click[b09pn2stbw]",
+              "6": "click[b09pn9j9k5]",
+              "7": "click[b09pnbj863]",
+              "8": "click[b09pqznd7p]",
+              "9": "click[b09pr6bvhh]",
+              "10": "click[b09pr77pp3]",
+              "11": "click[b09pr7jfwq]",
+              "12": "click[b09pr7pb16]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ab07a974c13770b9d423fa49f77966742be08231ae1a29b48305e10f66be502c",
+      "attempts": [
+        {
+          "seconds": 0.4439803436398506,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.44409527629613876,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "probabilities": {
+              "0": 0.097404639534563,
+              "1": 0.2282119813605708,
+              "2": 0.16439138242225715,
+              "3": 0.37038689973687733,
+              "4": 0.017579858655171615,
+              "5": 0.011701930198041742,
+              "6": 0.017371494396594068,
+              "7": 0.0143268940563323,
+              "8": 0.02020662144505302,
+              "9": 0.01638805508446995,
+              "10": 0.013050584456426595,
+              "11": 0.015169017241248762,
+              "12": 0.013810641412393633
+            },
+            "confidence": 0.3179191413816171
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10021,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4393041133880615,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b01hexehwc]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.409541618078947
+    },
+    {
+      "step": 11,
+      "observation": "Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size [SEP] infant (0-12 months) [SEP] toddler (1-4 years) [SEP] little kid (4-8 years) [SEP] big kid (8-12 years) [SEP] size [SEP] 2-3 infant [SEP] 4 toddler [SEP] 5 toddler [SEP] 6 toddler [SEP] 7 toddler [SEP] 8 toddler [SEP] 9 toddler [SEP] 10 toddler [SEP] 1 little kid [SEP] 2 little kid [SEP] 2-3 little kid [SEP] 3 little kid [SEP] 10 little kid [SEP] 10-11 little kid [SEP] 11 little kid [SEP] 12 little kid [SEP] 12-13 little kid [SEP] 13 little kid [SEP] 4 big kid [SEP] 5 big kid [SEP] 6 big kid [SEP] color [SEP] ballerina pink [SEP] lavender [SEP] navy [SEP] pepper [SEP] celery [SEP] ballerina pink | ballerina pink [SEP] black [SEP] black | black [SEP] bright cobalt [SEP] bright cobalt | bright cobalt [SEP] cantaloupe [SEP] citrus | citrus [SEP] deep green [SEP] digital aqua [SEP] electric pink [SEP] fresco [SEP] grass green [SEP] ice blue | ice blue [SEP] lapis [SEP] lavender | lavender [SEP] lemon [SEP] lime punch [SEP] lime zest [SEP] mineral blue [SEP] navy | navy [SEP] neo mint [SEP] neon purple [SEP] ocean [SEP] orange zing [SEP] orchid [SEP] pepper | pepper [SEP] pink lemonade [SEP] pistachio [SEP] pure water [SEP] slate grey [SEP] slate grey | slate grey [SEP] taffy pink [SEP] tangerine [SEP] white [SEP] white | white [SEP] ice blue [SEP] orange sorbet [SEP] army green [SEP] carnation [SEP] pool [SEP] lemon | lemon [SEP] ocean | ocean [SEP] amethyst [SEP] candy pink [SEP] powder blue [SEP] banana [SEP] melon [SEP] tropical teal [SEP] ocean | black [SEP] candy pink | black [SEP] bright cobalt | white [SEP] nautical navy | oatmeal [SEP] sky blue [SEP] cerulean blue [SEP] fuchsia [SEP] orange [SEP] purple [SEP] digital aqua | multi [SEP] Crocs Unisex-Child Toddler Classic Clog [SEP] Price: $19.93 to $92.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size [SEP] infant (0-12 months) [SEP] toddler (1-4 years) [SEP] little kid (4-8 years) [SEP] big kid (8-12 years) [SEP] size [SEP] 2-3 infant [SEP] 4 toddler [SEP] 5 toddler [SEP] 6 toddler [SEP] 7 toddler [SEP] 8 toddler [SEP] 9 toddler [SEP] 10 toddler [SEP] 1 little kid [SEP] 2 little kid [SEP] 2-3 little kid [SEP] 3 little kid [SEP] 10 little kid [SEP] 10-11 little kid [SEP] 11 little kid [SEP] 12 little kid [SEP] 12-13 little kid [SEP] 13 little kid [SEP] 4 big kid [SEP] 5 big kid [SEP] 6 big kid [SEP] color [SEP] ballerina pink [SEP] lavender [SEP] navy [SEP] pepper [SEP] celery [SEP] ballerina pink | ballerina pink [SEP] black [SEP] black | black [SEP] bright cobalt [SEP] bright cobalt | bright cobalt [SEP] cantaloupe [SEP] citrus | citrus [SEP] deep green [SEP] digital aqua [SEP] electric pink [SEP] fresco [SEP] grass green [SEP] ice blue | ice blue [SEP] lapis [SEP] lavender | lavender [SEP] lemon [SEP] lime punch [SEP] lime zest [SEP] mineral blue [SEP] navy | navy [SEP] neo mint [SEP] neon purple [SEP] ocean [SEP] orange zing [SEP] orchid [SEP] pepper | pepper [SEP] pink lemonade [SEP] pistachio [SEP] pure water [SEP] slate grey [SEP] slate grey | slate grey [SEP] taffy pink [SEP] tangerine [SEP] white [SEP] white | white [SEP] ice blue [SEP] orange sorbet [SEP] army green [SEP] carnation [SEP] pool [SEP] lemon | lemon [SEP] ocean | ocean [SEP] amethyst [SEP] candy pink [SEP] powder blue [SEP] banana [SEP] melon [SEP] tropical teal [SEP] ocean | black [SEP] candy pink | black [SEP] bright cobalt | white [SEP] nautical navy | oatmeal [SEP] sky blue [SEP] cerulean blue [SEP] fuchsia [SEP] orange [SEP] purple [SEP] digital aqua | multi [SEP] Crocs Unisex-Child Toddler Classic Clog [SEP] Price: $19.93 to $92.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b01hexehwc]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[infant (0-12 months)]",
+              "7": "click[toddler (1-4 years)]",
+              "8": "click[little kid (4-8 years)]",
+              "9": "click[big kid (8-12 years)]",
+              "10": "click[2-3 infant]",
+              "11": "click[4 toddler]",
+              "12": "click[5 toddler]",
+              "13": "click[6 toddler]",
+              "14": "click[7 toddler]",
+              "15": "click[8 toddler]",
+              "16": "click[9 toddler]",
+              "17": "click[10 toddler]",
+              "18": "click[1 little kid]",
+              "19": "click[2 little kid]",
+              "20": "click[2-3 little kid]",
+              "21": "click[3 little kid]",
+              "22": "click[10 little kid]",
+              "23": "click[10-11 little kid]",
+              "24": "click[11 little kid]",
+              "25": "click[12 little kid]",
+              "26": "click[12-13 little kid]",
+              "27": "click[13 little kid]",
+              "28": "click[4 big kid]",
+              "29": "click[5 big kid]",
+              "30": "click[6 big kid]",
+              "31": "click[ballerina pink]",
+              "32": "click[lavender]",
+              "33": "click[navy]",
+              "34": "click[pepper]",
+              "35": "click[celery]",
+              "36": "click[ballerina pink | ballerina pink]",
+              "37": "click[black]",
+              "38": "click[black | black]",
+              "39": "click[bright cobalt]",
+              "40": "click[bright cobalt | bright cobalt]",
+              "41": "click[cantaloupe]",
+              "42": "click[citrus | citrus]",
+              "43": "click[deep green]",
+              "44": "click[digital aqua]",
+              "45": "click[electric pink]",
+              "46": "click[fresco]",
+              "47": "click[grass green]",
+              "48": "click[ice blue | ice blue]",
+              "49": "click[lapis]",
+              "50": "click[lavender | lavender]",
+              "51": "click[lemon]",
+              "52": "click[lime punch]",
+              "53": "click[lime zest]",
+              "54": "click[mineral blue]",
+              "55": "click[navy | navy]",
+              "56": "click[neo mint]",
+              "57": "click[neon purple]",
+              "58": "click[ocean]",
+              "59": "click[orange zing]",
+              "60": "click[orchid]",
+              "61": "click[pepper | pepper]",
+              "62": "click[pink lemonade]",
+              "63": "click[pistachio]",
+              "64": "click[pure water]",
+              "65": "click[slate grey]",
+              "66": "click[slate grey | slate grey]",
+              "67": "click[taffy pink]",
+              "68": "click[tangerine]",
+              "69": "click[white]",
+              "70": "click[white | white]",
+              "71": "click[ice blue]",
+              "72": "click[orange sorbet]",
+              "73": "click[army green]",
+              "74": "click[carnation]",
+              "75": "click[pool]",
+              "76": "click[lemon | lemon]",
+              "77": "click[ocean | ocean]",
+              "78": "click[amethyst]",
+              "79": "click[candy pink]",
+              "80": "click[powder blue]",
+              "81": "click[banana]",
+              "82": "click[melon]",
+              "83": "click[tropical teal]",
+              "84": "click[ocean | black]",
+              "85": "click[candy pink | black]",
+              "86": "click[bright cobalt | white]",
+              "87": "click[nautical navy | oatmeal]",
+              "88": "click[sky blue]",
+              "89": "click[cerulean blue]",
+              "90": "click[fuchsia]",
+              "91": "click[orange]",
+              "92": "click[purple]",
+              "93": "click[digital aqua | multi]"
+            }
+          }
+        }
+      },
+      "request_sha256": "eba7ff9499c4675f1326abbea1800af7fc1bba866edbf0339a8df70751b942cd",
+      "attempts": [
+        {
+          "seconds": 3.52622864022851,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 3.5264421924948692,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "68",
+            "probabilities": {
+              "0": 0.01186603799225342,
+              "1": 0.014199083616324753,
+              "2": 0.016750865059776004,
+              "3": 0.010382553324876332,
+              "4": 0.011746901795905351,
+              "5": 0.02908368001445117,
+              "6": 0.013150063442282417,
+              "7": 0.02468898279726657,
+              "8": 0.03529248838386751,
+              "9": 0.015559184153117106,
+              "10": 0.01459089566203787,
+              "11": 0.01742683486292041,
+              "12": 0.016318284673684614,
+              "13": 0.018897589027298982,
+              "14": 0.013506360786727178,
+              "15": 0.018740772595044326,
+              "16": 0.014169963032064007,
+              "17": 0.016345803670494426,
+              "18": 0.022441821089511385,
+              "19": 0.02511831476109123,
+              "20": 0.02394694473199593,
+              "21": 0.02102682072077076,
+              "22": 0.019388579395944613,
+              "23": 0.015901235726138094,
+              "24": 0.01855592022094649,
+              "25": 0.019753960153464565,
+              "26": 0.012407271071069124,
+              "27": 0.016070677270288065,
+              "28": 0.016134904373200695,
+              "29": 0.013822740057247667,
+              "30": 0.012788454306367575,
+              "31": 0.002980422610265755,
+              "32": 0.0024299820087780874,
+              "33": 0.0027964126421164684,
+              "34": 0.007011234256620025,
+              "35": 0.00344329650032761,
+              "36": 0.0027600610507930107,
+              "37": 0.003638839414764131,
+              "38": 0.003292287634129118,
+              "39": 0.0034413590559686977,
+              "40": 0.003468706574244966,
+              "41": 0.007838285737035966,
+              "42": 0.025528364563251076,
+              "43": 0.0021141014468782507,
+              "44": 0.0033619544372334416,
+              "45": 0.006093584080898762,
+              "46": 0.007302398836726651,
+              "47": 0.0024086322745598666,
+              "48": 0.003926731620129543,
+              "49": 0.002954484771190149,
+              "50": 0.002618885919071046,
+              "51": 0.009164514298297052,
+              "52": 0.0062492971216095506,
+              "53": 0.006424549974836202,
+              "54": 0.0026434279602207665,
+              "55": 0.0027258821926592455,
+              "56": 0.003565910814785585,
+              "57": 0.0035400832108031482,
+              "58": 0.008172842231703135,
+              "59": 0.012984482568161837,
+              "60": 0.004994251525224421,
+              "61": 0.007454841634188607,
+              "62": 0.006672781403156388,
+              "63": 0.0030916054383461774,
+              "64": 0.006457250553825856,
+              "65": 0.0020832725389534614,
+              "66": 0.0020382107434842463,
+              "67": 0.004382749946990654,
+              "68": 0.12419453565469844,
+              "69": 0.007831242920850957,
+              "70": 0.006182025848973102,
+              "71": 0.0029894281491764135,
+              "72": 0.009206136797954545,
+              "73": 0.0018926370374328042,
+              "74": 0.003212141341549094,
+              "75": 0.005743103781721558,
+              "76": 0.006305346059275605,
+              "77": 0.005629150992492016,
+              "78": 0.0027283672471508833,
+              "79": 0.004777764798611073,
+              "80": 0.004006775688292176,
+              "81": 0.006444106335077238,
+              "82": 0.008090539997345974,
+              "83": 0.004198693307568751,
+              "84": 0.0065605699117055345,
+              "85": 0.003627629504541969,
+              "86": 0.00387186940946874,
+              "87": 0.002896508612164413,
+              "88": 0.003738241292077126,
+              "89": 0.0023534290783800062,
+              "90": 0.005316290219812122,
+              "91": 0.016786817132431735,
+              "92": 0.005052889091815211,
+              "93": 0.0042337914287748175
+            },
+            "confidence": 0.1147772725972221
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 81867,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 94,
+          "inference_seconds": 3.5219150967895985,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[tangerine]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.996866017580032
+    },
+    {
+      "step": 12,
+      "observation": "Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size [SEP] infant (0-12 months) [SEP] toddler (1-4 years) [SEP] little kid (4-8 years) [SEP] big kid (8-12 years) [SEP] size [SEP] 2-3 infant [SEP] 4 toddler [SEP] 5 toddler [SEP] 6 toddler [SEP] 7 toddler [SEP] 8 toddler [SEP] 9 toddler [SEP] 10 toddler [SEP] 1 little kid [SEP] 2 little kid [SEP] 2-3 little kid [SEP] 3 little kid [SEP] 10 little kid [SEP] 10-11 little kid [SEP] 11 little kid [SEP] 12 little kid [SEP] 12-13 little kid [SEP] 13 little kid [SEP] 4 big kid [SEP] 5 big kid [SEP] 6 big kid [SEP] color [SEP] ballerina pink [SEP] lavender [SEP] navy [SEP] pepper [SEP] celery [SEP] ballerina pink | ballerina pink [SEP] black [SEP] black | black [SEP] bright cobalt [SEP] bright cobalt | bright cobalt [SEP] cantaloupe [SEP] citrus | citrus [SEP] deep green [SEP] digital aqua [SEP] electric pink [SEP] fresco [SEP] grass green [SEP] ice blue | ice blue [SEP] lapis [SEP] lavender | lavender [SEP] lemon [SEP] lime punch [SEP] lime zest [SEP] mineral blue [SEP] navy | navy [SEP] neo mint [SEP] neon purple [SEP] ocean [SEP] orange zing [SEP] orchid [SEP] pepper | pepper [SEP] pink lemonade [SEP] pistachio [SEP] pure water [SEP] slate grey [SEP] slate grey | slate grey [SEP] taffy pink [SEP] tangerine [SEP] white [SEP] white | white [SEP] ice blue [SEP] orange sorbet [SEP] army green [SEP] carnation [SEP] pool [SEP] lemon | lemon [SEP] ocean | ocean [SEP] amethyst [SEP] candy pink [SEP] powder blue [SEP] banana [SEP] melon [SEP] tropical teal [SEP] ocean | black [SEP] candy pink | black [SEP] bright cobalt | white [SEP] nautical navy | oatmeal [SEP] sky blue [SEP] cerulean blue [SEP] fuchsia [SEP] orange [SEP] purple [SEP] digital aqua | multi [SEP] Crocs Unisex-Child Toddler Classic Clog [SEP] Price: $19.93 to $92.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size [SEP] infant (0-12 months) [SEP] toddler (1-4 years) [SEP] little kid (4-8 years) [SEP] big kid (8-12 years) [SEP] size [SEP] 2-3 infant [SEP] 4 toddler [SEP] 5 toddler [SEP] 6 toddler [SEP] 7 toddler [SEP] 8 toddler [SEP] 9 toddler [SEP] 10 toddler [SEP] 1 little kid [SEP] 2 little kid [SEP] 2-3 little kid [SEP] 3 little kid [SEP] 10 little kid [SEP] 10-11 little kid [SEP] 11 little kid [SEP] 12 little kid [SEP] 12-13 little kid [SEP] 13 little kid [SEP] 4 big kid [SEP] 5 big kid [SEP] 6 big kid [SEP] color [SEP] ballerina pink [SEP] lavender [SEP] navy [SEP] pepper [SEP] celery [SEP] ballerina pink | ballerina pink [SEP] black [SEP] black | black [SEP] bright cobalt [SEP] bright cobalt | bright cobalt [SEP] cantaloupe [SEP] citrus | citrus [SEP] deep green [SEP] digital aqua [SEP] electric pink [SEP] fresco [SEP] grass green [SEP] ice blue | ice blue [SEP] lapis [SEP] lavender | lavender [SEP] lemon [SEP] lime punch [SEP] lime zest [SEP] mineral blue [SEP] navy | navy [SEP] neo mint [SEP] neon purple [SEP] ocean [SEP] orange zing [SEP] orchid [SEP] pepper | pepper [SEP] pink lemonade [SEP] pistachio [SEP] pure water [SEP] slate grey [SEP] slate grey | slate grey [SEP] taffy pink [SEP] tangerine [SEP] white [SEP] white | white [SEP] ice blue [SEP] orange sorbet [SEP] army green [SEP] carnation [SEP] pool [SEP] lemon | lemon [SEP] ocean | ocean [SEP] amethyst [SEP] candy pink [SEP] powder blue [SEP] banana [SEP] melon [SEP] tropical teal [SEP] ocean | black [SEP] candy pink | black [SEP] bright cobalt | white [SEP] nautical navy | oatmeal [SEP] sky blue [SEP] cerulean blue [SEP] fuchsia [SEP] orange [SEP] purple [SEP] digital aqua | multi [SEP] Crocs Unisex-Child Toddler Classic Clog [SEP] Price: $19.93 to $92.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b01hexehwc]\nclick[tangerine]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[infant (0-12 months)]",
+              "7": "click[toddler (1-4 years)]",
+              "8": "click[little kid (4-8 years)]",
+              "9": "click[big kid (8-12 years)]",
+              "10": "click[2-3 infant]",
+              "11": "click[4 toddler]",
+              "12": "click[5 toddler]",
+              "13": "click[6 toddler]",
+              "14": "click[7 toddler]",
+              "15": "click[8 toddler]",
+              "16": "click[9 toddler]",
+              "17": "click[10 toddler]",
+              "18": "click[1 little kid]",
+              "19": "click[2 little kid]",
+              "20": "click[2-3 little kid]",
+              "21": "click[3 little kid]",
+              "22": "click[10 little kid]",
+              "23": "click[10-11 little kid]",
+              "24": "click[11 little kid]",
+              "25": "click[12 little kid]",
+              "26": "click[12-13 little kid]",
+              "27": "click[13 little kid]",
+              "28": "click[4 big kid]",
+              "29": "click[5 big kid]",
+              "30": "click[6 big kid]",
+              "31": "click[ballerina pink]",
+              "32": "click[lavender]",
+              "33": "click[navy]",
+              "34": "click[pepper]",
+              "35": "click[celery]",
+              "36": "click[ballerina pink | ballerina pink]",
+              "37": "click[black]",
+              "38": "click[black | black]",
+              "39": "click[bright cobalt]",
+              "40": "click[bright cobalt | bright cobalt]",
+              "41": "click[cantaloupe]",
+              "42": "click[citrus | citrus]",
+              "43": "click[deep green]",
+              "44": "click[digital aqua]",
+              "45": "click[electric pink]",
+              "46": "click[fresco]",
+              "47": "click[grass green]",
+              "48": "click[ice blue | ice blue]",
+              "49": "click[lapis]",
+              "50": "click[lavender | lavender]",
+              "51": "click[lemon]",
+              "52": "click[lime punch]",
+              "53": "click[lime zest]",
+              "54": "click[mineral blue]",
+              "55": "click[navy | navy]",
+              "56": "click[neo mint]",
+              "57": "click[neon purple]",
+              "58": "click[ocean]",
+              "59": "click[orange zing]",
+              "60": "click[orchid]",
+              "61": "click[pepper | pepper]",
+              "62": "click[pink lemonade]",
+              "63": "click[pistachio]",
+              "64": "click[pure water]",
+              "65": "click[slate grey]",
+              "66": "click[slate grey | slate grey]",
+              "67": "click[taffy pink]",
+              "68": "click[tangerine]",
+              "69": "click[white]",
+              "70": "click[white | white]",
+              "71": "click[ice blue]",
+              "72": "click[orange sorbet]",
+              "73": "click[army green]",
+              "74": "click[carnation]",
+              "75": "click[pool]",
+              "76": "click[lemon | lemon]",
+              "77": "click[ocean | ocean]",
+              "78": "click[amethyst]",
+              "79": "click[candy pink]",
+              "80": "click[powder blue]",
+              "81": "click[banana]",
+              "82": "click[melon]",
+              "83": "click[tropical teal]",
+              "84": "click[ocean | black]",
+              "85": "click[candy pink | black]",
+              "86": "click[bright cobalt | white]",
+              "87": "click[nautical navy | oatmeal]",
+              "88": "click[sky blue]",
+              "89": "click[cerulean blue]",
+              "90": "click[fuchsia]",
+              "91": "click[orange]",
+              "92": "click[purple]",
+              "93": "click[digital aqua | multi]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a06f20b8f464db3ca131f466fac113da525494426d638cd209fe127e19f4c037",
+      "attempts": [
+        {
+          "seconds": 3.5305670723319054,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 3.530777558684349,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "probabilities": {
+              "0": 0.013312480953977437,
+              "1": 0.016122200318053007,
+              "2": 0.018627085255842522,
+              "3": 0.013028927515273127,
+              "4": 0.013491054001491871,
+              "5": 0.042582168469147814,
+              "6": 0.01566033256674361,
+              "7": 0.028911340761593393,
+              "8": 0.04659963871693923,
+              "9": 0.01837033750308172,
+              "10": 0.01776928661167215,
+              "11": 0.022654967733544796,
+              "12": 0.02110126303718857,
+              "13": 0.02478132988817559,
+              "14": 0.017411526913642783,
+              "15": 0.022320838980434264,
+              "16": 0.017402526099210634,
+              "17": 0.019903100574774304,
+              "18": 0.03139439231876535,
+              "19": 0.035572894632171025,
+              "20": 0.03261732878797587,
+              "21": 0.027577881353050518,
+              "22": 0.022770835402100488,
+              "23": 0.01860887965071733,
+              "24": 0.0212327251911125,
+              "25": 0.0226892484893248,
+              "26": 0.01475406831630697,
+              "27": 0.01785674596130721,
+              "28": 0.018792702971098998,
+              "29": 0.016148739123486498,
+              "30": 0.015133602328752297,
+              "31": 0.0031912284702192385,
+              "32": 0.0023033686520327118,
+              "33": 0.0029296721251160134,
+              "34": 0.005220952465535036,
+              "35": 0.0028498829454650164,
+              "36": 0.003243315253488329,
+              "37": 0.005409039352974615,
+              "38": 0.0043107921003405995,
+              "39": 0.0034664067380861343,
+              "40": 0.003837894275029075,
+              "41": 0.005839195167334923,
+              "42": 0.01401899181031366,
+              "43": 0.0020851196253286815,
+              "44": 0.0037578095140215735,
+              "45": 0.005479512238020262,
+              "46": 0.005460038594001852,
+              "47": 0.002558177405314996,
+              "48": 0.0037912487036208284,
+              "49": 0.002992748133140282,
+              "50": 0.002377252584578885,
+              "51": 0.007026571196493728,
+              "52": 0.004817602477317844,
+              "53": 0.004469563853872663,
+              "54": 0.002569679289220375,
+              "55": 0.0028894658241299374,
+              "56": 0.003657103054834248,
+              "57": 0.0038982313744035826,
+              "58": 0.006541795570620385,
+              "59": 0.01248489250360288,
+              "60": 0.00394476402656137,
+              "61": 0.005473033955177696,
+              "62": 0.005726033974448358,
+              "63": 0.002790212859901497,
+              "64": 0.008048836805067698,
+              "65": 0.0025828516479709336,
+              "66": 0.002259777564447347,
+              "67": 0.003970804181661105,
+              "68": 0.017339175447006163,
+              "69": 0.009540785464378216,
+              "70": 0.007337471160647296,
+              "71": 0.0029564888737323497,
+              "72": 0.006941575423029777,
+              "73": 0.001876198237467622,
+              "74": 0.002926017942743028,
+              "75": 0.0052915387515092786,
+              "76": 0.005508734609789812,
+              "77": 0.004877232534766072,
+              "78": 0.002558888731988175,
+              "79": 0.004278983122056463,
+              "80": 0.00374271181558074,
+              "81": 0.005711266252460168,
+              "82": 0.006960470896066412,
+              "83": 0.003768961223246467,
+              "84": 0.007320845613650317,
+              "85": 0.004126780088889098,
+              "86": 0.004765407419539156,
+              "87": 0.004022564986937802,
+              "88": 0.003801751286295968,
+              "89": 0.002891403624795914,
+              "90": 0.004509317380302489,
+              "91": 0.013327081068670104,
+              "92": 0.004273189394202535,
+              "93": 0.005870841909597573
+            },
+            "confidence": 0.036348021928949335
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 81961,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 94,
+          "inference_seconds": 3.5257750004529953,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[little kid (4-8 years)]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 11.580907728523016
+    },
+    {
+      "step": 13,
+      "observation": "Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size [SEP] infant (0-12 months) [SEP] toddler (1-4 years) [SEP] little kid (4-8 years) [SEP] big kid (8-12 years) [SEP] size [SEP] 2-3 infant [SEP] 4 toddler [SEP] 5 toddler [SEP] 6 toddler [SEP] 7 toddler [SEP] 8 toddler [SEP] 9 toddler [SEP] 10 toddler [SEP] 1 little kid [SEP] 2 little kid [SEP] 2-3 little kid [SEP] 3 little kid [SEP] 10 little kid [SEP] 10-11 little kid [SEP] 11 little kid [SEP] 12 little kid [SEP] 12-13 little kid [SEP] 13 little kid [SEP] 4 big kid [SEP] 5 big kid [SEP] 6 big kid [SEP] color [SEP] ballerina pink [SEP] lavender [SEP] navy [SEP] pepper [SEP] celery [SEP] ballerina pink | ballerina pink [SEP] black [SEP] black | black [SEP] bright cobalt [SEP] bright cobalt | bright cobalt [SEP] cantaloupe [SEP] citrus | citrus [SEP] deep green [SEP] digital aqua [SEP] electric pink [SEP] fresco [SEP] grass green [SEP] ice blue | ice blue [SEP] lapis [SEP] lavender | lavender [SEP] lemon [SEP] lime punch [SEP] lime zest [SEP] mineral blue [SEP] navy | navy [SEP] neo mint [SEP] neon purple [SEP] ocean [SEP] orange zing [SEP] orchid [SEP] pepper | pepper [SEP] pink lemonade [SEP] pistachio [SEP] pure water [SEP] slate grey [SEP] slate grey | slate grey [SEP] taffy pink [SEP] tangerine [SEP] white [SEP] white | white [SEP] ice blue [SEP] orange sorbet [SEP] army green [SEP] carnation [SEP] pool [SEP] lemon | lemon [SEP] ocean | ocean [SEP] amethyst [SEP] candy pink [SEP] powder blue [SEP] banana [SEP] melon [SEP] tropical teal [SEP] ocean | black [SEP] candy pink | black [SEP] bright cobalt | white [SEP] nautical navy | oatmeal [SEP] sky blue [SEP] cerulean blue [SEP] fuchsia [SEP] orange [SEP] purple [SEP] digital aqua | multi [SEP] Crocs Unisex-Child Toddler Classic Clog [SEP] Price: $19.93 to $92.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size [SEP] infant (0-12 months) [SEP] toddler (1-4 years) [SEP] little kid (4-8 years) [SEP] big kid (8-12 years) [SEP] size [SEP] 2-3 infant [SEP] 4 toddler [SEP] 5 toddler [SEP] 6 toddler [SEP] 7 toddler [SEP] 8 toddler [SEP] 9 toddler [SEP] 10 toddler [SEP] 1 little kid [SEP] 2 little kid [SEP] 2-3 little kid [SEP] 3 little kid [SEP] 10 little kid [SEP] 10-11 little kid [SEP] 11 little kid [SEP] 12 little kid [SEP] 12-13 little kid [SEP] 13 little kid [SEP] 4 big kid [SEP] 5 big kid [SEP] 6 big kid [SEP] color [SEP] ballerina pink [SEP] lavender [SEP] navy [SEP] pepper [SEP] celery [SEP] ballerina pink | ballerina pink [SEP] black [SEP] black | black [SEP] bright cobalt [SEP] bright cobalt | bright cobalt [SEP] cantaloupe [SEP] citrus | citrus [SEP] deep green [SEP] digital aqua [SEP] electric pink [SEP] fresco [SEP] grass green [SEP] ice blue | ice blue [SEP] lapis [SEP] lavender | lavender [SEP] lemon [SEP] lime punch [SEP] lime zest [SEP] mineral blue [SEP] navy | navy [SEP] neo mint [SEP] neon purple [SEP] ocean [SEP] orange zing [SEP] orchid [SEP] pepper | pepper [SEP] pink lemonade [SEP] pistachio [SEP] pure water [SEP] slate grey [SEP] slate grey | slate grey [SEP] taffy pink [SEP] tangerine [SEP] white [SEP] white | white [SEP] ice blue [SEP] orange sorbet [SEP] army green [SEP] carnation [SEP] pool [SEP] lemon | lemon [SEP] ocean | ocean [SEP] amethyst [SEP] candy pink [SEP] powder blue [SEP] banana [SEP] melon [SEP] tropical teal [SEP] ocean | black [SEP] candy pink | black [SEP] bright cobalt | white [SEP] nautical navy | oatmeal [SEP] sky blue [SEP] cerulean blue [SEP] fuchsia [SEP] orange [SEP] purple [SEP] digital aqua | multi [SEP] Crocs Unisex-Child Toddler Classic Clog [SEP] Price: $19.93 to $92.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[next >]\nclick[back to search]\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b01hexehwc]\nclick[tangerine]\nclick[little kid (4-8 years)]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[infant (0-12 months)]",
+              "7": "click[toddler (1-4 years)]",
+              "8": "click[little kid (4-8 years)]",
+              "9": "click[big kid (8-12 years)]",
+              "10": "click[2-3 infant]",
+              "11": "click[4 toddler]",
+              "12": "click[5 toddler]",
+              "13": "click[6 toddler]",
+              "14": "click[7 toddler]",
+              "15": "click[8 toddler]",
+              "16": "click[9 toddler]",
+              "17": "click[10 toddler]",
+              "18": "click[1 little kid]",
+              "19": "click[2 little kid]",
+              "20": "click[2-3 little kid]",
+              "21": "click[3 little kid]",
+              "22": "click[10 little kid]",
+              "23": "click[10-11 little kid]",
+              "24": "click[11 little kid]",
+              "25": "click[12 little kid]",
+              "26": "click[12-13 little kid]",
+              "27": "click[13 little kid]",
+              "28": "click[4 big kid]",
+              "29": "click[5 big kid]",
+              "30": "click[6 big kid]",
+              "31": "click[ballerina pink]",
+              "32": "click[lavender]",
+              "33": "click[navy]",
+              "34": "click[pepper]",
+              "35": "click[celery]",
+              "36": "click[ballerina pink | ballerina pink]",
+              "37": "click[black]",
+              "38": "click[black | black]",
+              "39": "click[bright cobalt]",
+              "40": "click[bright cobalt | bright cobalt]",
+              "41": "click[cantaloupe]",
+              "42": "click[citrus | citrus]",
+              "43": "click[deep green]",
+              "44": "click[digital aqua]",
+              "45": "click[electric pink]",
+              "46": "click[fresco]",
+              "47": "click[grass green]",
+              "48": "click[ice blue | ice blue]",
+              "49": "click[lapis]",
+              "50": "click[lavender | lavender]",
+              "51": "click[lemon]",
+              "52": "click[lime punch]",
+              "53": "click[lime zest]",
+              "54": "click[mineral blue]",
+              "55": "click[navy | navy]",
+              "56": "click[neo mint]",
+              "57": "click[neon purple]",
+              "58": "click[ocean]",
+              "59": "click[orange zing]",
+              "60": "click[orchid]",
+              "61": "click[pepper | pepper]",
+              "62": "click[pink lemonade]",
+              "63": "click[pistachio]",
+              "64": "click[pure water]",
+              "65": "click[slate grey]",
+              "66": "click[slate grey | slate grey]",
+              "67": "click[taffy pink]",
+              "68": "click[tangerine]",
+              "69": "click[white]",
+              "70": "click[white | white]",
+              "71": "click[ice blue]",
+              "72": "click[orange sorbet]",
+              "73": "click[army green]",
+              "74": "click[carnation]",
+              "75": "click[pool]",
+              "76": "click[lemon | lemon]",
+              "77": "click[ocean | ocean]",
+              "78": "click[amethyst]",
+              "79": "click[candy pink]",
+              "80": "click[powder blue]",
+              "81": "click[banana]",
+              "82": "click[melon]",
+              "83": "click[tropical teal]",
+              "84": "click[ocean | black]",
+              "85": "click[candy pink | black]",
+              "86": "click[bright cobalt | white]",
+              "87": "click[nautical navy | oatmeal]",
+              "88": "click[sky blue]",
+              "89": "click[cerulean blue]",
+              "90": "click[fuchsia]",
+              "91": "click[orange]",
+              "92": "click[purple]",
+              "93": "click[digital aqua | multi]"
+            }
+          }
+        }
+      },
+      "request_sha256": "802603986d9cf3d2fba78a64e72ab44097624ee4c55957341695e00bb77f87e0",
+      "attempts": [
+        {
+          "seconds": 3.5661009922623634,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 3.566330723464489,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "19",
+            "probabilities": {
+              "0": 0.019895591589658708,
+              "1": 0.02167774916570754,
+              "2": 0.02792261843995296,
+              "3": 0.01903840870651643,
+              "4": 0.01784763552484952,
+              "5": 0.04777580786576323,
+              "6": 0.011259532897519988,
+              "7": 0.011611226575592331,
+              "8": 0.017767780777025205,
+              "9": 0.014790531473646685,
+              "10": 0.012743565692377135,
+              "11": 0.013597917936292789,
+              "12": 0.012870697104027835,
+              "13": 0.013845599541385483,
+              "14": 0.011222208532380786,
+              "15": 0.014670123086245141,
+              "16": 0.013910090507399735,
+              "17": 0.016106126575402172,
+              "18": 0.03182543889562072,
+              "19": 0.057343917264706945,
+              "20": 0.026819911609045066,
+              "21": 0.036057897204076414,
+              "22": 0.02783026028482387,
+              "23": 0.018111729838139176,
+              "24": 0.019086926540981028,
+              "25": 0.022458520859758493,
+              "26": 0.012880541268438418,
+              "27": 0.017933805658577745,
+              "28": 0.012635539138865363,
+              "29": 0.011180262857981533,
+              "30": 0.011188179870323955,
+              "31": 0.0037633953014565,
+              "32": 0.0025074629219583797,
+              "33": 0.003813672644104572,
+              "34": 0.006594034773350499,
+              "35": 0.0033861108137207053,
+              "36": 0.003915896968002481,
+              "37": 0.005736911453824811,
+              "38": 0.00484871067180118,
+              "39": 0.0038634541384669823,
+              "40": 0.004590817050715562,
+              "41": 0.006911310776021068,
+              "42": 0.018231905302212574,
+              "43": 0.0023430797172506244,
+              "44": 0.004257927834175802,
+              "45": 0.0063086570723204305,
+              "46": 0.006551608540562207,
+              "47": 0.0028508608904546408,
+              "48": 0.00473878773442845,
+              "49": 0.003195745516862556,
+              "50": 0.0027103354793650202,
+              "51": 0.008090967925633685,
+              "52": 0.005310100224618404,
+              "53": 0.0048200031687057054,
+              "54": 0.0031689365306837515,
+              "55": 0.004003919674848173,
+              "56": 0.003956565889127494,
+              "57": 0.004643443078789027,
+              "58": 0.008266089459456524,
+              "59": 0.015647090900884043,
+              "60": 0.004895306613518213,
+              "61": 0.0068920792336914435,
+              "62": 0.006685370894391077,
+              "63": 0.0030552706362861268,
+              "64": 0.009445603727359565,
+              "65": 0.0028016717122364577,
+              "66": 0.0024213895564384963,
+              "67": 0.0045442352870357534,
+              "68": 0.022375994193472585,
+              "69": 0.010790198362259825,
+              "70": 0.008244806043143703,
+              "71": 0.003674163554185773,
+              "72": 0.008162611113216048,
+              "73": 0.002185797427559082,
+              "74": 0.0036353326304657454,
+              "75": 0.007064533950800399,
+              "76": 0.007083885213484647,
+              "77": 0.006150540331955989,
+              "78": 0.003050967380585899,
+              "79": 0.004977371207732435,
+              "80": 0.00441278314636865,
+              "81": 0.007116681539355174,
+              "82": 0.00827123384306609,
+              "83": 0.004130788223172603,
+              "84": 0.00863868860168805,
+              "85": 0.004590407392285127,
+              "86": 0.005336635967337213,
+              "87": 0.005213071914162615,
+              "88": 0.004334300101594553,
+              "89": 0.0032922242458915413,
+              "90": 0.005509856194483673,
+              "91": 0.015632740957632882,
+              "92": 0.0053839810168614605,
+              "93": 0.00706553204939706
+            },
+            "confidence": 0.047207830353574766
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 82525,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 94,
+          "inference_seconds": 3.561481449753046,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[2 little kid]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 15.192250773310661
+    },
+    {
+      "step": 14,
+      "observation": "Instruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size [SEP] infant (0-12 months) [SEP] toddler (1-4 years) [SEP] little kid (4-8 years) [SEP] big kid (8-12 years) [SEP] size [SEP] 2-3 infant [SEP] 4 toddler [SEP] 5 toddler [SEP] 6 toddler [SEP] 7 toddler [SEP] 8 toddler [SEP] 9 toddler [SEP] 10 toddler [SEP] 1 little kid [SEP] 2 little kid [SEP] 2-3 little kid [SEP] 3 little kid [SEP] 10 little kid [SEP] 10-11 little kid [SEP] 11 little kid [SEP] 12 little kid [SEP] 12-13 little kid [SEP] 13 little kid [SEP] 4 big kid [SEP] 5 big kid [SEP] 6 big kid [SEP] color [SEP] ballerina pink [SEP] lavender [SEP] navy [SEP] pepper [SEP] celery [SEP] ballerina pink | ballerina pink [SEP] black [SEP] black | black [SEP] bright cobalt [SEP] bright cobalt | bright cobalt [SEP] cantaloupe [SEP] citrus | citrus [SEP] deep green [SEP] digital aqua [SEP] electric pink [SEP] fresco [SEP] grass green [SEP] ice blue | ice blue [SEP] lapis [SEP] lavender | lavender [SEP] lemon [SEP] lime punch [SEP] lime zest [SEP] mineral blue [SEP] navy | navy [SEP] neo mint [SEP] neon purple [SEP] ocean [SEP] orange zing [SEP] orchid [SEP] pepper | pepper [SEP] pink lemonade [SEP] pistachio [SEP] pure water [SEP] slate grey [SEP] slate grey | slate grey [SEP] taffy pink [SEP] tangerine [SEP] white [SEP] white | white [SEP] ice blue [SEP] orange sorbet [SEP] army green [SEP] carnation [SEP] pool [SEP] lemon | lemon [SEP] ocean | ocean [SEP] amethyst [SEP] candy pink [SEP] powder blue [SEP] banana [SEP] melon [SEP] tropical teal [SEP] ocean | black [SEP] candy pink | black [SEP] bright cobalt | white [SEP] nautical navy | oatmeal [SEP] sky blue [SEP] cerulean blue [SEP] fuchsia [SEP] orange [SEP] purple [SEP] digital aqua | multi [SEP] Crocs Unisex-Child Toddler Classic Clog [SEP] Price: $19.93 to $92.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] special size [SEP] infant (0-12 months) [SEP] toddler (1-4 years) [SEP] little kid (4-8 years) [SEP] big kid (8-12 years) [SEP] size [SEP] 2-3 infant [SEP] 4 toddler [SEP] 5 toddler [SEP] 6 toddler [SEP] 7 toddler [SEP] 8 toddler [SEP] 9 toddler [SEP] 10 toddler [SEP] 1 little kid [SEP] 2 little kid [SEP] 2-3 little kid [SEP] 3 little kid [SEP] 10 little kid [SEP] 10-11 little kid [SEP] 11 little kid [SEP] 12 little kid [SEP] 12-13 little kid [SEP] 13 little kid [SEP] 4 big kid [SEP] 5 big kid [SEP] 6 big kid [SEP] color [SEP] ballerina pink [SEP] lavender [SEP] navy [SEP] pepper [SEP] celery [SEP] ballerina pink | ballerina pink [SEP] black [SEP] black | black [SEP] bright cobalt [SEP] bright cobalt | bright cobalt [SEP] cantaloupe [SEP] citrus | citrus [SEP] deep green [SEP] digital aqua [SEP] electric pink [SEP] fresco [SEP] grass green [SEP] ice blue | ice blue [SEP] lapis [SEP] lavender | lavender [SEP] lemon [SEP] lime punch [SEP] lime zest [SEP] mineral blue [SEP] navy | navy [SEP] neo mint [SEP] neon purple [SEP] ocean [SEP] orange zing [SEP] orchid [SEP] pepper | pepper [SEP] pink lemonade [SEP] pistachio [SEP] pure water [SEP] slate grey [SEP] slate grey | slate grey [SEP] taffy pink [SEP] tangerine [SEP] white [SEP] white | white [SEP] ice blue [SEP] orange sorbet [SEP] army green [SEP] carnation [SEP] pool [SEP] lemon | lemon [SEP] ocean | ocean [SEP] amethyst [SEP] candy pink [SEP] powder blue [SEP] banana [SEP] melon [SEP] tropical teal [SEP] ocean | black [SEP] candy pink | black [SEP] bright cobalt | white [SEP] nautical navy | oatmeal [SEP] sky blue [SEP] cerulean blue [SEP] fuchsia [SEP] orange [SEP] purple [SEP] digital aqua | multi [SEP] Crocs Unisex-Child Toddler Classic Clog [SEP] Price: $19.93 to $92.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[back to search]\nsearch[i want tangerine colored crocs made with vinyl acetate for kids, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b01hexehwc]\nclick[tangerine]\nclick[little kid (4-8 years)]\nclick[2 little kid]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[infant (0-12 months)]",
+              "7": "click[toddler (1-4 years)]",
+              "8": "click[little kid (4-8 years)]",
+              "9": "click[big kid (8-12 years)]",
+              "10": "click[2-3 infant]",
+              "11": "click[4 toddler]",
+              "12": "click[5 toddler]",
+              "13": "click[6 toddler]",
+              "14": "click[7 toddler]",
+              "15": "click[8 toddler]",
+              "16": "click[9 toddler]",
+              "17": "click[10 toddler]",
+              "18": "click[1 little kid]",
+              "19": "click[2 little kid]",
+              "20": "click[2-3 little kid]",
+              "21": "click[3 little kid]",
+              "22": "click[10 little kid]",
+              "23": "click[10-11 little kid]",
+              "24": "click[11 little kid]",
+              "25": "click[12 little kid]",
+              "26": "click[12-13 little kid]",
+              "27": "click[13 little kid]",
+              "28": "click[4 big kid]",
+              "29": "click[5 big kid]",
+              "30": "click[6 big kid]",
+              "31": "click[ballerina pink]",
+              "32": "click[lavender]",
+              "33": "click[navy]",
+              "34": "click[pepper]",
+              "35": "click[celery]",
+              "36": "click[ballerina pink | ballerina pink]",
+              "37": "click[black]",
+              "38": "click[black | black]",
+              "39": "click[bright cobalt]",
+              "40": "click[bright cobalt | bright cobalt]",
+              "41": "click[cantaloupe]",
+              "42": "click[citrus | citrus]",
+              "43": "click[deep green]",
+              "44": "click[digital aqua]",
+              "45": "click[electric pink]",
+              "46": "click[fresco]",
+              "47": "click[grass green]",
+              "48": "click[ice blue | ice blue]",
+              "49": "click[lapis]",
+              "50": "click[lavender | lavender]",
+              "51": "click[lemon]",
+              "52": "click[lime punch]",
+              "53": "click[lime zest]",
+              "54": "click[mineral blue]",
+              "55": "click[navy | navy]",
+              "56": "click[neo mint]",
+              "57": "click[neon purple]",
+              "58": "click[ocean]",
+              "59": "click[orange zing]",
+              "60": "click[orchid]",
+              "61": "click[pepper | pepper]",
+              "62": "click[pink lemonade]",
+              "63": "click[pistachio]",
+              "64": "click[pure water]",
+              "65": "click[slate grey]",
+              "66": "click[slate grey | slate grey]",
+              "67": "click[taffy pink]",
+              "68": "click[tangerine]",
+              "69": "click[white]",
+              "70": "click[white | white]",
+              "71": "click[ice blue]",
+              "72": "click[orange sorbet]",
+              "73": "click[army green]",
+              "74": "click[carnation]",
+              "75": "click[pool]",
+              "76": "click[lemon | lemon]",
+              "77": "click[ocean | ocean]",
+              "78": "click[amethyst]",
+              "79": "click[candy pink]",
+              "80": "click[powder blue]",
+              "81": "click[banana]",
+              "82": "click[melon]",
+              "83": "click[tropical teal]",
+              "84": "click[ocean | black]",
+              "85": "click[candy pink | black]",
+              "86": "click[bright cobalt | white]",
+              "87": "click[nautical navy | oatmeal]",
+              "88": "click[sky blue]",
+              "89": "click[cerulean blue]",
+              "90": "click[fuchsia]",
+              "91": "click[orange]",
+              "92": "click[purple]",
+              "93": "click[digital aqua | multi]"
+            }
+          }
+        }
+      },
+      "request_sha256": "85f22bcc411e52a100b1cf62cd2aa00abbd220958b508a207e0acfebbc32f4b5",
+      "attempts": [
+        {
+          "seconds": 3.581634670495987,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 3.581865545362234,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.01884587953138485,
+              "1": 0.021986391038445,
+              "2": 0.030923575368261978,
+              "3": 0.02249544386903788,
+              "4": 0.021680178903286242,
+              "5": 0.07489964942677128,
+              "6": 0.011449945735543015,
+              "7": 0.011474246526857461,
+              "8": 0.013401062345663217,
+              "9": 0.013484683978683576,
+              "10": 0.012202382927146932,
+              "11": 0.014713382207961315,
+              "12": 0.013095972239530799,
+              "13": 0.0145507913474252,
+              "14": 0.011560232133392703,
+              "15": 0.014684998949235632,
+              "16": 0.01369573539379696,
+              "17": 0.01689236716617521,
+              "18": 0.020544019690473536,
+              "19": 0.02137948634861725,
+              "20": 0.023925498809391984,
+              "21": 0.015263393442172656,
+              "22": 0.01847511513439695,
+              "23": 0.014184818098851248,
+              "24": 0.013136315243113919,
+              "25": 0.014668946235591375,
+              "26": 0.01094980446075149,
+              "27": 0.010956159102812283,
+              "28": 0.013143836385751922,
+              "29": 0.010679122129535042,
+              "30": 0.011639316840562445,
+              "31": 0.004400328572243234,
+              "32": 0.0032501760108506438,
+              "33": 0.004956316262312338,
+              "34": 0.0077347105200442565,
+              "35": 0.004188595081351467,
+              "36": 0.004245703266797039,
+              "37": 0.008432473752486779,
+              "38": 0.007100353431752292,
+              "39": 0.004827356535973383,
+              "40": 0.0053250544545457015,
+              "41": 0.008067625080249816,
+              "42": 0.019549110014738212,
+              "43": 0.0029790539512785257,
+              "44": 0.004954116497498196,
+              "45": 0.0075516892129185035,
+              "46": 0.007962891185430941,
+              "47": 0.003463057265745868,
+              "48": 0.005935740340959374,
+              "49": 0.0037208791702491636,
+              "50": 0.003459394282605561,
+              "51": 0.0092364046913206,
+              "52": 0.00639289681249356,
+              "53": 0.005963853705162234,
+              "54": 0.0036946534933390376,
+              "55": 0.005111195850605627,
+              "56": 0.004642903093949689,
+              "57": 0.005378740979858449,
+              "58": 0.0093770988995086,
+              "59": 0.018016181157195887,
+              "60": 0.005727715746784029,
+              "61": 0.00828175363625141,
+              "62": 0.008326062750032892,
+              "63": 0.0035537057776200494,
+              "64": 0.01234206735033828,
+              "65": 0.00357038636027211,
+              "66": 0.003073120181767918,
+              "67": 0.005496277870494776,
+              "68": 0.02416462601676613,
+              "69": 0.013490217135124341,
+              "70": 0.010792803547270526,
+              "71": 0.004655568330490961,
+              "72": 0.009676951408260042,
+              "73": 0.002405878814190582,
+              "74": 0.004075508854828541,
+              "75": 0.008308091019861921,
+              "76": 0.008207746228007375,
+              "77": 0.007024176888954569,
+              "78": 0.003715669247989871,
+              "79": 0.006062956467419175,
+              "80": 0.005165747104685035,
+              "81": 0.009184355383838709,
+              "82": 0.010162012888232663,
+              "83": 0.004844750256431602,
+              "84": 0.010388068938096798,
+              "85": 0.005935553831432805,
+              "86": 0.006612471823376485,
+              "87": 0.005930134187459327,
+              "88": 0.004947289251807952,
+              "89": 0.0037792065736811853,
+              "90": 0.006851217452334383,
+              "91": 0.017695978864279573,
+              "92": 0.006471507799115452,
+              "93": 0.008179117428416302
+            },
+            "confidence": 0.06495233382920967
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 82713,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 94,
+          "inference_seconds": 3.5793313086032867,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 18.83502034470439
+    }
+  ]
+}

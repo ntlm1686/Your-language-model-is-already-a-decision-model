@@ -1,0 +1,412 @@
+{
+  "task_id": 139,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars",
+  "instruction_sha256": "8a2d9192cbb0703912a9f4ad2c9ba7a9016c823b33681fcab0f1b27b4ed17883",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 1.8209345489740372,
+  "decision_seconds": 1.6573439091444016,
+  "input_tokens": 36569,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars [SEP] Search",
+      "action": "search[i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.07080389931797981
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08B1MCFKL [SEP] Salewa Ultra Train 3 - Men's [SEP] $104.0 to $182.99 [SEP] B00T12Q7QY [SEP] Complete Tattoo Kit Inkstar Ace C 5 Machine Gun Power Supply with 40 Color Truecolor Starter Ink (257 PCS) [SEP] $69.99 [SEP] B00KVVK87S [SEP] Inkstar Tattoo Kit ACE 5 Machine Gun TKI5C20 + Needle + Power Supply + Inks (217 PCS) [SEP] $69.99 [SEP] B07J5MC2X1 [SEP] Skechers Men's Low-top Trainers, US Men [SEP] $53.39 to $140.35 [SEP] B097PJVNVH [SEP] USB Type C Fast Charger Block Compatible iPhone 11/12 / 13/ Mini/Pro Max, Samsung Galaxy S21/ S21+/ S21 Ultra 5G / Note10 /Note 20 /S20 / Plus, 25W More Power Super Fast PD Power Adapter [SEP] $8.99 [SEP] B07X5HR3TZ [SEP] Bruno Marc Men's Linen Canvas Stretch Loafer Shoes [SEP] $39.99 [SEP] B08D9QYRWR [SEP] Anthem Athletics Evolflex Men's 5\" 7\" 9\" Running Workout Short [SEP] $29.99 [SEP] B08ZKR4PRX [SEP] Pillow Slippers for Women & Men, Shower Shoes Bathroom Sandals, Extra Thick Soft Cloud Cushioned Non-Slip Quick Drying Massage Open Toe Pool Gym House Platform Slippers [SEP] $8.99 to $23.99 [SEP] B08FRQ8F4J [SEP] Anthem Athletics Isoflex Men's 9\" Cross-Training Workout Gym Shorts [SEP] $27.99 [SEP] B07T1BSFYF [SEP] Fashion Men's Summer Casual Hooded Pure Color T-Shirt Sleeveless Hoodie Tops [SEP] $9.26 to $14.69",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08B1MCFKL [SEP] Salewa Ultra Train 3 - Men's [SEP] $104.0 to $182.99 [SEP] B00T12Q7QY [SEP] Complete Tattoo Kit Inkstar Ace C 5 Machine Gun Power Supply with 40 Color Truecolor Starter Ink (257 PCS) [SEP] $69.99 [SEP] B00KVVK87S [SEP] Inkstar Tattoo Kit ACE 5 Machine Gun TKI5C20 + Needle + Power Supply + Inks (217 PCS) [SEP] $69.99 [SEP] B07J5MC2X1 [SEP] Skechers Men's Low-top Trainers, US Men [SEP] $53.39 to $140.35 [SEP] B097PJVNVH [SEP] USB Type C Fast Charger Block Compatible iPhone 11/12 / 13/ Mini/Pro Max, Samsung Galaxy S21/ S21+/ S21 Ultra 5G / Note10 /Note 20 /S20 / Plus, 25W More Power Super Fast PD Power Adapter [SEP] $8.99 [SEP] B07X5HR3TZ [SEP] Bruno Marc Men's Linen Canvas Stretch Loafer Shoes [SEP] $39.99 [SEP] B08D9QYRWR [SEP] Anthem Athletics Evolflex Men's 5\" 7\" 9\" Running Workout Short [SEP] $29.99 [SEP] B08ZKR4PRX [SEP] Pillow Slippers for Women & Men, Shower Shoes Bathroom Sandals, Extra Thick Soft Cloud Cushioned Non-Slip Quick Drying Massage Open Toe Pool Gym House Platform Slippers [SEP] $8.99 to $23.99 [SEP] B08FRQ8F4J [SEP] Anthem Athletics Isoflex Men's 9\" Cross-Training Workout Gym Shorts [SEP] $27.99 [SEP] B07T1BSFYF [SEP] Fashion Men's Summer Casual Hooded Pure Color T-Shirt Sleeveless Hoodie Tops [SEP] $9.26 to $14.69\n\nRecent actions:\nsearch[i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b08b1mcfkl]",
+              "3": "click[b00t12q7qy]",
+              "4": "click[b00kvvk87s]",
+              "5": "click[b07j5mc2x1]",
+              "6": "click[b097pjvnvh]",
+              "7": "click[b07x5hr3tz]",
+              "8": "click[b08d9qyrwr]",
+              "9": "click[b08zkr4prx]",
+              "10": "click[b08frq8f4j]",
+              "11": "click[b07t1bsfyf]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6f7728a5322a6502dd7f9862f717ae5373695d56c8d8ca154ba763d8507d27f9",
+      "attempts": [
+        {
+          "seconds": 0.39914287626743317,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3992657735943794,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.14137382538513957,
+              "1": 0.2546864692945223,
+              "2": 0.3862164343814218,
+              "3": 0.01126413163864296,
+              "4": 0.010640380760534113,
+              "5": 0.05384935017456101,
+              "6": 0.022390865149355222,
+              "7": 0.01742366511133436,
+              "8": 0.02957919631502184,
+              "9": 0.02095136329299035,
+              "10": 0.026463688038463298,
+              "11": 0.025160630458013464
+            },
+            "confidence": 0.3304179284160964
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8972,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.39700162410736084,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b08b1mcfkl]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.49677228182554245
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 9.5 [SEP] 10 [SEP] 10.5 [SEP] 11 [SEP] 11.5 [SEP] 12 [SEP] 12.5 [SEP] 13 [SEP] color [SEP] ombre blue | red orange [SEP] raw green | black out [SEP] dark denim | red orange [SEP] Salewa Ultra Train 3 - Men's [SEP] Price: $104.0 to $182.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 9.5 [SEP] 10 [SEP] 10.5 [SEP] 11 [SEP] 11.5 [SEP] 12 [SEP] 12.5 [SEP] 13 [SEP] color [SEP] ombre blue | red orange [SEP] raw green | black out [SEP] dark denim | red orange [SEP] Salewa Ultra Train 3 - Men's [SEP] Price: $104.0 to $182.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars]\nclick[b08b1mcfkl]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[7]",
+              "7": "click[7.5]",
+              "8": "click[8]",
+              "9": "click[8.5]",
+              "10": "click[9]",
+              "11": "click[9.5]",
+              "12": "click[10]",
+              "13": "click[10.5]",
+              "14": "click[11]",
+              "15": "click[11.5]",
+              "16": "click[12]",
+              "17": "click[12.5]",
+              "18": "click[13]",
+              "19": "click[ombre blue | red orange]",
+              "20": "click[raw green | black out]",
+              "21": "click[dark denim | red orange]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2ec6367d20905caa85d52a998f2c565b1d03dd51f87d47949d9dc484097f1137",
+      "attempts": [
+        {
+          "seconds": 0.41315098106861115,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.41327325627207756,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "12",
+            "probabilities": {
+              "0": 0.020921906422397996,
+              "1": 0.01941404881614907,
+              "2": 0.03023172307395391,
+              "3": 0.02181047499612939,
+              "4": 0.02391554767775294,
+              "5": 0.1530208497038891,
+              "6": 0.013242976266231216,
+              "7": 0.008796940397956641,
+              "8": 0.018646444351555942,
+              "9": 0.016073375414639362,
+              "10": 0.030052784602585318,
+              "11": 0.023995360728147126,
+              "12": 0.25794887288037854,
+              "13": 0.021189745666241072,
+              "14": 0.021087562652496582,
+              "15": 0.013973801437754176,
+              "16": 0.020336636483612437,
+              "17": 0.014021768310223197,
+              "18": 0.02132841158164185,
+              "19": 0.0071821534301044695,
+              "20": 0.010927249064196322,
+              "21": 0.23188136604196347
+            },
+            "confidence": 0.2226131049223013
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9045,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 22,
+          "inference_seconds": 0.4095829576253891,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[10]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9295229576528072
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 9.5 [SEP] 10 [SEP] 10.5 [SEP] 11 [SEP] 11.5 [SEP] 12 [SEP] 12.5 [SEP] 13 [SEP] color [SEP] ombre blue | red orange [SEP] raw green | black out [SEP] dark denim | red orange [SEP] Salewa Ultra Train 3 - Men's [SEP] Price: $104.0 to $182.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 9.5 [SEP] 10 [SEP] 10.5 [SEP] 11 [SEP] 11.5 [SEP] 12 [SEP] 12.5 [SEP] 13 [SEP] color [SEP] ombre blue | red orange [SEP] raw green | black out [SEP] dark denim | red orange [SEP] Salewa Ultra Train 3 - Men's [SEP] Price: $104.0 to $182.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars]\nclick[b08b1mcfkl]\nclick[10]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[7]",
+              "7": "click[7.5]",
+              "8": "click[8]",
+              "9": "click[8.5]",
+              "10": "click[9]",
+              "11": "click[9.5]",
+              "12": "click[10]",
+              "13": "click[10.5]",
+              "14": "click[11]",
+              "15": "click[11.5]",
+              "16": "click[12]",
+              "17": "click[12.5]",
+              "18": "click[13]",
+              "19": "click[ombre blue | red orange]",
+              "20": "click[raw green | black out]",
+              "21": "click[dark denim | red orange]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6b81afd218674109b7b89124b4bc5b506118f06510b83d6991dfd2f4d9c32d01",
+      "attempts": [
+        {
+          "seconds": 0.41791248321533203,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4180643633008003,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "21",
+            "probabilities": {
+              "0": 0.023179958225868533,
+              "1": 0.022650002949200207,
+              "2": 0.037413450325351934,
+              "3": 0.02449506683501162,
+              "4": 0.02765741940983285,
+              "5": 0.14036644608183563,
+              "6": 0.012251756587021774,
+              "7": 0.007134246151626965,
+              "8": 0.017411868792155723,
+              "9": 0.014809450385436742,
+              "10": 0.020513389469835008,
+              "11": 0.01760784571551252,
+              "12": 0.02351337555138216,
+              "13": 0.019208505608933234,
+              "14": 0.01411663445103768,
+              "15": 0.011995715049030875,
+              "16": 0.015526937136553927,
+              "17": 0.011105308443265566,
+              "18": 0.015479594703090582,
+              "19": 0.0090022285016658,
+              "20": 0.013245742294961057,
+              "21": 0.5013150573313897
+            },
+            "confidence": 0.4775681552995511
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9177,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 22,
+          "inference_seconds": 0.41575103253126144,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[dark denim | red orange]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.3702596314251423
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 9.5 [SEP] 10 [SEP] 10.5 [SEP] 11 [SEP] 11.5 [SEP] 12 [SEP] 12.5 [SEP] 13 [SEP] color [SEP] ombre blue | red orange [SEP] raw green | black out [SEP] dark denim | red orange [SEP] Salewa Ultra Train 3 - Men's [SEP] Price: $104.0 to $182.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 9.5 [SEP] 10 [SEP] 10.5 [SEP] 11 [SEP] 11.5 [SEP] 12 [SEP] 12.5 [SEP] 13 [SEP] color [SEP] ombre blue | red orange [SEP] raw green | black out [SEP] dark denim | red orange [SEP] Salewa Ultra Train 3 - Men's [SEP] Price: $104.0 to $182.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for dark denim color ethylene vinyl ultra train of size 10, 3rd generation for  men, and price lower than 200.00 dollars]\nclick[b08b1mcfkl]\nclick[10]\nclick[dark denim | red orange]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[7]",
+              "7": "click[7.5]",
+              "8": "click[8]",
+              "9": "click[8.5]",
+              "10": "click[9]",
+              "11": "click[9.5]",
+              "12": "click[10]",
+              "13": "click[10.5]",
+              "14": "click[11]",
+              "15": "click[11.5]",
+              "16": "click[12]",
+              "17": "click[12.5]",
+              "18": "click[13]",
+              "19": "click[ombre blue | red orange]",
+              "20": "click[raw green | black out]",
+              "21": "click[dark denim | red orange]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5bdf5b3630849a0bc706323e8ddc61cb3902eebaf1c2163fd89d91a2c8427711",
+      "attempts": [
+        {
+          "seconds": 0.42661624774336815,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.42674051597714424,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.039774784030208156,
+              "1": 0.03845120208475231,
+              "2": 0.058452191553800326,
+              "3": 0.03923189027427803,
+              "4": 0.045516841324038035,
+              "5": 0.3886351620331034,
+              "6": 0.017342442626810027,
+              "7": 0.010309066279718697,
+              "8": 0.025790769117418833,
+              "9": 0.021993155773047373,
+              "10": 0.031240665271478677,
+              "11": 0.025693175106476163,
+              "12": 0.04837345498127715,
+              "13": 0.03441299740913534,
+              "14": 0.01937354734856305,
+              "15": 0.01770025997294688,
+              "16": 0.023301816705343432,
+              "17": 0.016309882036344484,
+              "18": 0.02576947422587627,
+              "19": 0.016903204254931557,
+              "20": 0.01631600434275897,
+              "21": 0.03910801324769299
+            },
+            "confidence": 0.3595225507013462
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9375,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 22,
+          "inference_seconds": 0.42463210970163345,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 1.8209311589598656
+    }
+  ]
+}

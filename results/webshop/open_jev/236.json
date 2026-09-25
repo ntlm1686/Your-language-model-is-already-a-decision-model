@@ -1,0 +1,574 @@
+{
+  "task_id": 236,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i need an evening gown in purple that is a size four, and price lower than 90.00 dollars",
+  "instruction_sha256": "6c439e39c5ef5a367012328c2f01f114bd14ff836224bb5d9222d11af4577e58",
+  "reward": 0.5,
+  "score": 50.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 4.015642073005438,
+  "decision_seconds": 3.7953734174370766,
+  "input_tokens": 81030,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need an evening gown in purple that is a size four, and price lower than 90.00 dollars [SEP] Search",
+      "action": "search[i need an evening gown in purple that is a size four, and price lower than 90.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06718740984797478
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i need an evening gown in purple that is a size four, and price lower than 90.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09PRG7SMK [SEP] Lindo Noiva Women Sequin Prom Dress Long Mermaid Bridesmaid Dresses Slit Formal Evening Party Gown [SEP] $79.99 to $129.99 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B07L43PC6S [SEP] Tom Ford Eye Color Quad Palette - 28 Daydream [SEP] $34.98 [SEP] B0912DYKLM [SEP] Women Shirts Casual Graphic Tunic Short Sleeve Vintage World Map Print Pullover V Neck Tops Blouse [SEP] $11.89 to $13.79 [SEP] B08W1VPN4B [SEP] Jilin VR Controller Fixer for Oculus Quest 2 VR Headset Handle Bumper ProtectiveHolder [SEP] $9.09 [SEP] B07X1BVL12 [SEP] Tulle Beaded Homecoming Dresses Teens V Neck Short Prom Dresses Juniors [SEP] $75.99 to $79.99 [SEP] B08P32KCTT [SEP] Hibye Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Wireless Support AUX TF USB [SEP] $100.0 [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B08MZSR42F [SEP] Wondiwe Glass Film, VR Accessories for -Oculus Quest 2 Vr Glasses TPU Soft Film VR Lens Protector H D Film Anti-Scratch for for -Oculus Quest2 4pcs [SEP] $9.07 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69",
+      "request": {
+        "state": "Shopping instruction:\ni need an evening gown in purple that is a size four, and price lower than 90.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need an evening gown in purple that is a size four, and price lower than 90.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09PRG7SMK [SEP] Lindo Noiva Women Sequin Prom Dress Long Mermaid Bridesmaid Dresses Slit Formal Evening Party Gown [SEP] $79.99 to $129.99 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B07L43PC6S [SEP] Tom Ford Eye Color Quad Palette - 28 Daydream [SEP] $34.98 [SEP] B0912DYKLM [SEP] Women Shirts Casual Graphic Tunic Short Sleeve Vintage World Map Print Pullover V Neck Tops Blouse [SEP] $11.89 to $13.79 [SEP] B08W1VPN4B [SEP] Jilin VR Controller Fixer for Oculus Quest 2 VR Headset Handle Bumper ProtectiveHolder [SEP] $9.09 [SEP] B07X1BVL12 [SEP] Tulle Beaded Homecoming Dresses Teens V Neck Short Prom Dresses Juniors [SEP] $75.99 to $79.99 [SEP] B08P32KCTT [SEP] Hibye Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Wireless Support AUX TF USB [SEP] $100.0 [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B08MZSR42F [SEP] Wondiwe Glass Film, VR Accessories for -Oculus Quest 2 Vr Glasses TPU Soft Film VR Lens Protector H D Film Anti-Scratch for for -Oculus Quest2 4pcs [SEP] $9.07 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69\n\nRecent actions:\nsearch[i need an evening gown in purple that is a size four, and price lower than 90.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09prg7smk]",
+              "3": "click[b09kcl5gk5]",
+              "4": "click[b07l43pc6s]",
+              "5": "click[b0912dyklm]",
+              "6": "click[b08w1vpn4b]",
+              "7": "click[b07x1bvl12]",
+              "8": "click[b08p32kctt]",
+              "9": "click[b09cd5rzr4]",
+              "10": "click[b08mzsr42f]",
+              "11": "click[b08pyvwm7b]"
+            }
+          }
+        }
+      },
+      "request_sha256": "8fca25f66aa8288919cb473f803b623706a25b933c0a5c8bf76c15c2dce0f1db",
+      "attempts": [
+        {
+          "seconds": 0.36703360080718994,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.367190383374691,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.11020154045164295,
+              "1": 0.23436615962002097,
+              "2": 0.2579521548097221,
+              "3": 0.020232613966486054,
+              "4": 0.022193998074249394,
+              "5": 0.025803241832527798,
+              "6": 0.016793276570477772,
+              "7": 0.19287858107493655,
+              "8": 0.03297276734166425,
+              "9": 0.033581407725871454,
+              "10": 0.01632982137605138,
+              "11": 0.036694437156349353
+            },
+            "confidence": 0.19049325979242415
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8181,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.36495716497302055,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b09prg7smk]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.46485067903995514
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i need an evening gown in purple that is a size four, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] one size [SEP] 2 [SEP] 4 [SEP] 6 [SEP] 8 [SEP] 10 [SEP] 12 [SEP] 14 [SEP] 16 [SEP] 17 plus [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] 26 plus [SEP] color [SEP] aqua [SEP] black [SEP] blue [SEP] blush [SEP] brown [SEP] burgundy [SEP] champagne [SEP] dusty blue [SEP] dusty rose [SEP] emerald green [SEP] fuchia [SEP] gold [SEP] grape [SEP] green [SEP] hot pink [SEP] light blue [SEP] mint [SEP] navy blue [SEP] orange [SEP] peacock [SEP] purple [SEP] red [SEP] rose gold [SEP] royal blue [SEP] sage [SEP] silver [SEP] wine red [SEP] yellow [SEP] Lindo Noiva Women Sequin Prom Dress Long Mermaid Bridesmaid Dresses Slit Formal Evening Party Gown [SEP] Price: $79.99 to $129.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need an evening gown in purple that is a size four, and price lower than 90.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need an evening gown in purple that is a size four, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] one size [SEP] 2 [SEP] 4 [SEP] 6 [SEP] 8 [SEP] 10 [SEP] 12 [SEP] 14 [SEP] 16 [SEP] 17 plus [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] 26 plus [SEP] color [SEP] aqua [SEP] black [SEP] blue [SEP] blush [SEP] brown [SEP] burgundy [SEP] champagne [SEP] dusty blue [SEP] dusty rose [SEP] emerald green [SEP] fuchia [SEP] gold [SEP] grape [SEP] green [SEP] hot pink [SEP] light blue [SEP] mint [SEP] navy blue [SEP] orange [SEP] peacock [SEP] purple [SEP] red [SEP] rose gold [SEP] royal blue [SEP] sage [SEP] silver [SEP] wine red [SEP] yellow [SEP] Lindo Noiva Women Sequin Prom Dress Long Mermaid Bridesmaid Dresses Slit Formal Evening Party Gown [SEP] Price: $79.99 to $129.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need an evening gown in purple that is a size four, and price lower than 90.00 dollars]\nclick[b09prg7smk]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[one size]",
+              "7": "click[2]",
+              "8": "click[4]",
+              "9": "click[6]",
+              "10": "click[8]",
+              "11": "click[10]",
+              "12": "click[12]",
+              "13": "click[14]",
+              "14": "click[16]",
+              "15": "click[17 plus]",
+              "16": "click[18 plus]",
+              "17": "click[20 plus]",
+              "18": "click[22 plus]",
+              "19": "click[24 plus]",
+              "20": "click[26 plus]",
+              "21": "click[aqua]",
+              "22": "click[black]",
+              "23": "click[blue]",
+              "24": "click[blush]",
+              "25": "click[brown]",
+              "26": "click[burgundy]",
+              "27": "click[champagne]",
+              "28": "click[dusty blue]",
+              "29": "click[dusty rose]",
+              "30": "click[emerald green]",
+              "31": "click[fuchia]",
+              "32": "click[gold]",
+              "33": "click[grape]",
+              "34": "click[green]",
+              "35": "click[hot pink]",
+              "36": "click[light blue]",
+              "37": "click[mint]",
+              "38": "click[navy blue]",
+              "39": "click[orange]",
+              "40": "click[peacock]",
+              "41": "click[purple]",
+              "42": "click[red]",
+              "43": "click[rose gold]",
+              "44": "click[royal blue]",
+              "45": "click[sage]",
+              "46": "click[silver]",
+              "47": "click[wine red]",
+              "48": "click[yellow]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bf70948be8b486b83b9bb6e1bcd94b8f4e4566c7c573b8f581171d62b66b6b0b",
+      "attempts": [
+        {
+          "seconds": 1.1654361374676228,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.1656215190887451,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "41",
+            "probabilities": {
+              "0": 0.027361290573141097,
+              "1": 0.023951608693398706,
+              "2": 0.03469072887852182,
+              "3": 0.01791826976864889,
+              "4": 0.019100765608234007,
+              "5": 0.03846851389144234,
+              "6": 0.015341196762238437,
+              "7": 0.03458196451263911,
+              "8": 0.09255602315983291,
+              "9": 0.07399310457057687,
+              "10": 0.03979272175924554,
+              "11": 0.030900842134050113,
+              "12": 0.022712366192775633,
+              "13": 0.026422209101497354,
+              "14": 0.020924532912010702,
+              "15": 0.009433891711821032,
+              "16": 0.011109739767577155,
+              "17": 0.010314674799832191,
+              "18": 0.008944224817819249,
+              "19": 0.01016441935363112,
+              "20": 0.010226898479855095,
+              "21": 0.00718667177401463,
+              "22": 0.007225114705965869,
+              "23": 0.01105875320874776,
+              "24": 0.008379166617094837,
+              "25": 0.006994559656981227,
+              "26": 0.01381108982730342,
+              "27": 0.006401881438932013,
+              "28": 0.007737784988560051,
+              "29": 0.011203789365405996,
+              "30": 0.004070530804574132,
+              "31": 0.018224831833887154,
+              "32": 0.01299004463830394,
+              "33": 0.04138674109651841,
+              "34": 0.005502897019294244,
+              "35": 0.008647614617186156,
+              "36": 0.0058388857130870315,
+              "37": 0.005631371204014867,
+              "38": 0.007294641325989165,
+              "39": 0.007183595872414658,
+              "40": 0.023405823536193613,
+              "41": 0.11265226370096236,
+              "42": 0.016368956273620016,
+              "43": 0.012519637833213656,
+              "44": 0.011462173090270023,
+              "45": 0.006751900025437194,
+              "46": 0.01519328105750785,
+              "47": 0.014069432529112424,
+              "48": 0.011896578796618077
+            },
+            "confidence": 0.09416585252806577
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 24038,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 49,
+          "inference_seconds": 1.1422877833247185,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[purple]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.6617190353572369
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i need an evening gown in purple that is a size four, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] one size [SEP] 2 [SEP] 4 [SEP] 6 [SEP] 8 [SEP] 10 [SEP] 12 [SEP] 14 [SEP] 16 [SEP] 17 plus [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] 26 plus [SEP] color [SEP] aqua [SEP] black [SEP] blue [SEP] blush [SEP] brown [SEP] burgundy [SEP] champagne [SEP] dusty blue [SEP] dusty rose [SEP] emerald green [SEP] fuchia [SEP] gold [SEP] grape [SEP] green [SEP] hot pink [SEP] light blue [SEP] mint [SEP] navy blue [SEP] orange [SEP] peacock [SEP] purple [SEP] red [SEP] rose gold [SEP] royal blue [SEP] sage [SEP] silver [SEP] wine red [SEP] yellow [SEP] Lindo Noiva Women Sequin Prom Dress Long Mermaid Bridesmaid Dresses Slit Formal Evening Party Gown [SEP] Price: $79.99 to $129.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need an evening gown in purple that is a size four, and price lower than 90.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need an evening gown in purple that is a size four, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] one size [SEP] 2 [SEP] 4 [SEP] 6 [SEP] 8 [SEP] 10 [SEP] 12 [SEP] 14 [SEP] 16 [SEP] 17 plus [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] 26 plus [SEP] color [SEP] aqua [SEP] black [SEP] blue [SEP] blush [SEP] brown [SEP] burgundy [SEP] champagne [SEP] dusty blue [SEP] dusty rose [SEP] emerald green [SEP] fuchia [SEP] gold [SEP] grape [SEP] green [SEP] hot pink [SEP] light blue [SEP] mint [SEP] navy blue [SEP] orange [SEP] peacock [SEP] purple [SEP] red [SEP] rose gold [SEP] royal blue [SEP] sage [SEP] silver [SEP] wine red [SEP] yellow [SEP] Lindo Noiva Women Sequin Prom Dress Long Mermaid Bridesmaid Dresses Slit Formal Evening Party Gown [SEP] Price: $79.99 to $129.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need an evening gown in purple that is a size four, and price lower than 90.00 dollars]\nclick[b09prg7smk]\nclick[purple]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[one size]",
+              "7": "click[2]",
+              "8": "click[4]",
+              "9": "click[6]",
+              "10": "click[8]",
+              "11": "click[10]",
+              "12": "click[12]",
+              "13": "click[14]",
+              "14": "click[16]",
+              "15": "click[17 plus]",
+              "16": "click[18 plus]",
+              "17": "click[20 plus]",
+              "18": "click[22 plus]",
+              "19": "click[24 plus]",
+              "20": "click[26 plus]",
+              "21": "click[aqua]",
+              "22": "click[black]",
+              "23": "click[blue]",
+              "24": "click[blush]",
+              "25": "click[brown]",
+              "26": "click[burgundy]",
+              "27": "click[champagne]",
+              "28": "click[dusty blue]",
+              "29": "click[dusty rose]",
+              "30": "click[emerald green]",
+              "31": "click[fuchia]",
+              "32": "click[gold]",
+              "33": "click[grape]",
+              "34": "click[green]",
+              "35": "click[hot pink]",
+              "36": "click[light blue]",
+              "37": "click[mint]",
+              "38": "click[navy blue]",
+              "39": "click[orange]",
+              "40": "click[peacock]",
+              "41": "click[purple]",
+              "42": "click[red]",
+              "43": "click[rose gold]",
+              "44": "click[royal blue]",
+              "45": "click[sage]",
+              "46": "click[silver]",
+              "47": "click[wine red]",
+              "48": "click[yellow]"
+            }
+          }
+        }
+      },
+      "request_sha256": "de69bd7620442c1efe1243ff2165dd44851ba9e1a13bbb8cdf6484768a01419f",
+      "attempts": [
+        {
+          "seconds": 1.125346951186657,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.125512883067131,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "probabilities": {
+              "0": 0.02732990601912272,
+              "1": 0.026188430661865145,
+              "2": 0.03342065795417154,
+              "3": 0.016777730277735173,
+              "4": 0.020338365430158534,
+              "5": 0.03563446977751514,
+              "6": 0.014801208234241307,
+              "7": 0.048599236014063525,
+              "8": 0.3143630285633269,
+              "9": 0.03680499327701139,
+              "10": 0.04721909754573664,
+              "11": 0.025702018321893217,
+              "12": 0.02064176186145885,
+              "13": 0.018130112724704578,
+              "14": 0.018504509580322855,
+              "15": 0.008464627978280983,
+              "16": 0.010176211057325094,
+              "17": 0.01089505740648209,
+              "18": 0.008514278422651185,
+              "19": 0.009309736565651604,
+              "20": 0.009949186520339994,
+              "21": 0.0057049377115988694,
+              "22": 0.006054709596249762,
+              "23": 0.007994273610148336,
+              "24": 0.005501741147492157,
+              "25": 0.00541406644284452,
+              "26": 0.009421500303748767,
+              "27": 0.004474493837180684,
+              "28": 0.006287351857360326,
+              "29": 0.0071486747526601805,
+              "30": 0.003949819043933379,
+              "31": 0.00933741586160348,
+              "32": 0.008538440027522022,
+              "33": 0.027705156635623944,
+              "34": 0.004267010364522608,
+              "35": 0.005784692949029149,
+              "36": 0.004683075463537473,
+              "37": 0.004267793450309037,
+              "38": 0.005985929609001368,
+              "39": 0.0051767747340038285,
+              "40": 0.013609847917832164,
+              "41": 0.027599385302014518,
+              "42": 0.008037238598356184,
+              "43": 0.007937091963212359,
+              "44": 0.008573805574787976,
+              "45": 0.00493926102418324,
+              "46": 0.012603091248845986,
+              "47": 0.009838705907278877,
+              "48": 0.007399090871060372
+            },
+            "confidence": 0.3000789249917295
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 24283,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 49,
+          "inference_seconds": 1.1232340596616268,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[4]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.8191915452480316
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i need an evening gown in purple that is a size four, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] one size [SEP] 2 [SEP] 4 [SEP] 6 [SEP] 8 [SEP] 10 [SEP] 12 [SEP] 14 [SEP] 16 [SEP] 17 plus [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] 26 plus [SEP] color [SEP] aqua [SEP] black [SEP] blue [SEP] blush [SEP] brown [SEP] burgundy [SEP] champagne [SEP] dusty blue [SEP] dusty rose [SEP] emerald green [SEP] fuchia [SEP] gold [SEP] grape [SEP] green [SEP] hot pink [SEP] light blue [SEP] mint [SEP] navy blue [SEP] orange [SEP] peacock [SEP] purple [SEP] red [SEP] rose gold [SEP] royal blue [SEP] sage [SEP] silver [SEP] wine red [SEP] yellow [SEP] Lindo Noiva Women Sequin Prom Dress Long Mermaid Bridesmaid Dresses Slit Formal Evening Party Gown [SEP] Price: $79.99 to $129.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need an evening gown in purple that is a size four, and price lower than 90.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need an evening gown in purple that is a size four, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] one size [SEP] 2 [SEP] 4 [SEP] 6 [SEP] 8 [SEP] 10 [SEP] 12 [SEP] 14 [SEP] 16 [SEP] 17 plus [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] 26 plus [SEP] color [SEP] aqua [SEP] black [SEP] blue [SEP] blush [SEP] brown [SEP] burgundy [SEP] champagne [SEP] dusty blue [SEP] dusty rose [SEP] emerald green [SEP] fuchia [SEP] gold [SEP] grape [SEP] green [SEP] hot pink [SEP] light blue [SEP] mint [SEP] navy blue [SEP] orange [SEP] peacock [SEP] purple [SEP] red [SEP] rose gold [SEP] royal blue [SEP] sage [SEP] silver [SEP] wine red [SEP] yellow [SEP] Lindo Noiva Women Sequin Prom Dress Long Mermaid Bridesmaid Dresses Slit Formal Evening Party Gown [SEP] Price: $79.99 to $129.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need an evening gown in purple that is a size four, and price lower than 90.00 dollars]\nclick[b09prg7smk]\nclick[purple]\nclick[4]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[one size]",
+              "7": "click[2]",
+              "8": "click[4]",
+              "9": "click[6]",
+              "10": "click[8]",
+              "11": "click[10]",
+              "12": "click[12]",
+              "13": "click[14]",
+              "14": "click[16]",
+              "15": "click[17 plus]",
+              "16": "click[18 plus]",
+              "17": "click[20 plus]",
+              "18": "click[22 plus]",
+              "19": "click[24 plus]",
+              "20": "click[26 plus]",
+              "21": "click[aqua]",
+              "22": "click[black]",
+              "23": "click[blue]",
+              "24": "click[blush]",
+              "25": "click[brown]",
+              "26": "click[burgundy]",
+              "27": "click[champagne]",
+              "28": "click[dusty blue]",
+              "29": "click[dusty rose]",
+              "30": "click[emerald green]",
+              "31": "click[fuchia]",
+              "32": "click[gold]",
+              "33": "click[grape]",
+              "34": "click[green]",
+              "35": "click[hot pink]",
+              "36": "click[light blue]",
+              "37": "click[mint]",
+              "38": "click[navy blue]",
+              "39": "click[orange]",
+              "40": "click[peacock]",
+              "41": "click[purple]",
+              "42": "click[red]",
+              "43": "click[rose gold]",
+              "44": "click[royal blue]",
+              "45": "click[sage]",
+              "46": "click[silver]",
+              "47": "click[wine red]",
+              "48": "click[yellow]"
+            }
+          }
+        }
+      },
+      "request_sha256": "03abac4757cc4778fc77d96c889ac71221bbb00db78a66498d76e13a85c643bd",
+      "attempts": [
+        {
+          "seconds": 1.1367869190871716,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.1370486319065094,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.041601668153038285,
+              "1": 0.04044507923292323,
+              "2": 0.06270316771174098,
+              "3": 0.02850730186770829,
+              "4": 0.03528328204414107,
+              "5": 0.07926655980350232,
+              "6": 0.01903867783421956,
+              "7": 0.03264460333701342,
+              "8": 0.03874862485595226,
+              "9": 0.025427094808089024,
+              "10": 0.03278276478518597,
+              "11": 0.03195967735024326,
+              "12": 0.020844265426681698,
+              "13": 0.017435322921881016,
+              "14": 0.021740742541225842,
+              "15": 0.010416515888021992,
+              "16": 0.01387412758576818,
+              "17": 0.01481646936251431,
+              "18": 0.012050473158619191,
+              "19": 0.013811787427622981,
+              "20": 0.01435315123747385,
+              "21": 0.008436232583664272,
+              "22": 0.010022298970295256,
+              "23": 0.01263097165194815,
+              "24": 0.009098088755693857,
+              "25": 0.0080126210803749,
+              "26": 0.016395760845034125,
+              "27": 0.006815858451189155,
+              "28": 0.009516325472515585,
+              "29": 0.01179938850647832,
+              "30": 0.006302166762768981,
+              "31": 0.017403830207836278,
+              "32": 0.015232037918827494,
+              "33": 0.05187305891705596,
+              "34": 0.0068546125896848525,
+              "35": 0.010159570778514659,
+              "36": 0.007626980517948215,
+              "37": 0.007108854202302944,
+              "38": 0.009595513437958673,
+              "39": 0.008250024768495933,
+              "40": 0.02341376740026728,
+              "41": 0.04184990154656571,
+              "42": 0.012583928043526213,
+              "43": 0.013396333106257948,
+              "44": 0.013059612803782284,
+              "45": 0.007156184072330936,
+              "46": 0.02090687983077798,
+              "47": 0.015249185993776077,
+              "48": 0.011498653450560928
+            },
+            "confidence": 0.060084613132741944
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 24528,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 49,
+          "inference_seconds": 1.1308538727462292,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.5,
+      "done": true,
+      "elapsed_seconds": 4.015638068318367
+    }
+  ]
+}

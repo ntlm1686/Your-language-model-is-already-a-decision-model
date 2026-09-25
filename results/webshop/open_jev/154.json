@@ -1,0 +1,789 @@
+{
+  "task_id": 154,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars",
+  "instruction_sha256": "0d8650bd6771f2dedd3d1847223a45da80613c37235acfcd9bc7f86a6704370e",
+  "reward": 0.5,
+  "score": 50.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 11,
+  "elapsed_seconds": 3.91832971945405,
+  "decision_seconds": 3.3052139058709145,
+  "input_tokens": 73203,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06276752799749374
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07ZZRTSKM [SEP] Columbia Women's Give and Go Ii Full Zip Fleece Jacket [SEP] $15.09 to $100.37 [SEP] B07ZCWFC3R [SEP] SSDXY Fringe Vest for Women Suede Faux Tassels Vest 70s Ethnic Winter Open-Front Sleeveless Vest Western Cowgir Tops [SEP] $11.09 to $20.99 [SEP] B07X6GDMLB [SEP] Men's Women Outdoor Hooded Jersey Sun Protection Tops Casual Windproof Ultra-Light Rainproof Windbreaker Jackets Top [SEP] $5.19 to $5.99 [SEP] B09N3HP4XZ [SEP] Men's Quarter Zip Sweaters Slim Basic Fit Solid Color Lightweight Cotton Knitted Mock Turtleneck Pullover [SEP] $29.99 to $33.99 [SEP] B0814BLFYM [SEP] Columbia Men’s Timberline Triple Interchange Winter Jacket [SEP] $89.98 to $294.75 [SEP] B09CW73S5Z [SEP] Lands' End Men's Short Sleeve Super Soft Supima Polo Shirt [SEP] $37.45 to $46.46 [SEP] B09HPPGNCJ [SEP] Men's Cardigan Casual Slim Fit Pink Trench Aztec Print Coat Button Down Long Jacket Lightweight Lapel Windbreaker Streetwear [SEP] $28.98 [SEP] B09HTTJSSL [SEP] Puffer Jacket For Men Slim Fit Coat Zip Down Jacket With Removable Hood Lightweight Outerwear Classic Winter Clothing [SEP] $26.96 [SEP] B09PTWYQM9 [SEP] Mens Cable Knit Cardigan Loose Fit Sweater Long Sleeve Button Down Outerwear Turndown Collar Casual Cardigans [SEP] $39.44 [SEP] B09PDVPMXY [SEP] Mens Casual Button Down Henley Shirts Long Sleeve Comfy Slim Fit Streetwear Solid Color Band-Collar Shirts [SEP] $12.91",
+      "request": {
+        "state": "Shopping instruction:\ni need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07ZZRTSKM [SEP] Columbia Women's Give and Go Ii Full Zip Fleece Jacket [SEP] $15.09 to $100.37 [SEP] B07ZCWFC3R [SEP] SSDXY Fringe Vest for Women Suede Faux Tassels Vest 70s Ethnic Winter Open-Front Sleeveless Vest Western Cowgir Tops [SEP] $11.09 to $20.99 [SEP] B07X6GDMLB [SEP] Men's Women Outdoor Hooded Jersey Sun Protection Tops Casual Windproof Ultra-Light Rainproof Windbreaker Jackets Top [SEP] $5.19 to $5.99 [SEP] B09N3HP4XZ [SEP] Men's Quarter Zip Sweaters Slim Basic Fit Solid Color Lightweight Cotton Knitted Mock Turtleneck Pullover [SEP] $29.99 to $33.99 [SEP] B0814BLFYM [SEP] Columbia Men’s Timberline Triple Interchange Winter Jacket [SEP] $89.98 to $294.75 [SEP] B09CW73S5Z [SEP] Lands' End Men's Short Sleeve Super Soft Supima Polo Shirt [SEP] $37.45 to $46.46 [SEP] B09HPPGNCJ [SEP] Men's Cardigan Casual Slim Fit Pink Trench Aztec Print Coat Button Down Long Jacket Lightweight Lapel Windbreaker Streetwear [SEP] $28.98 [SEP] B09HTTJSSL [SEP] Puffer Jacket For Men Slim Fit Coat Zip Down Jacket With Removable Hood Lightweight Outerwear Classic Winter Clothing [SEP] $26.96 [SEP] B09PTWYQM9 [SEP] Mens Cable Knit Cardigan Loose Fit Sweater Long Sleeve Button Down Outerwear Turndown Collar Casual Cardigans [SEP] $39.44 [SEP] B09PDVPMXY [SEP] Mens Casual Button Down Henley Shirts Long Sleeve Comfy Slim Fit Streetwear Solid Color Band-Collar Shirts [SEP] $12.91\n\nRecent actions:\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07zzrtskm]",
+              "3": "click[b07zcwfc3r]",
+              "4": "click[b07x6gdmlb]",
+              "5": "click[b09n3hp4xz]",
+              "6": "click[b0814blfym]",
+              "7": "click[b09cw73s5z]",
+              "8": "click[b09hppgncj]",
+              "9": "click[b09httjssl]",
+              "10": "click[b09ptwyqm9]",
+              "11": "click[b09pdvpmxy]"
+            }
+          }
+        }
+      },
+      "request_sha256": "485b0e55ad27cb478122fa549b431b31d27bd1ab6364cb97f6efbc4e39b19322",
+      "attempts": [
+        {
+          "seconds": 0.37517595663666725,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3752880431711674,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.1419494514543541,
+              "1": 0.35145807107914717,
+              "2": 0.20196629186805415,
+              "3": 0.02020559513639691,
+              "4": 0.03996542347661458,
+              "5": 0.027358393601865597,
+              "6": 0.05364881219530166,
+              "7": 0.02903419242229232,
+              "8": 0.029969295922048042,
+              "9": 0.041407067267658984,
+              "10": 0.04020162475166104,
+              "11": 0.022835780824605564
+            },
+            "confidence": 0.29249971390452423
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8374,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.37318801134824753,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5095040500164032
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09QM84CQ5 [SEP] Short Sleeve Shirt for Men Novelty 3D Digital Print Tee Casual Aloha Beach Shirt Button Down Holiday Lapel Slim Fit Summer [SEP] $10.99 [SEP] B09QM8GHYW [SEP] Hawaiian Shirt for Men Casual 3D Digital Full Print Novelty Aloha Beach Shirt Button Down Holiday Lapel Slim Fit Summer Tops [SEP] $10.99 [SEP] B08B8438JS [SEP] Dolcevida Women's Long Sleeve Sweater Fleece Zip Up Speckled Jacket with Pockets [SEP] $33.99 to $35.99 [SEP] B07ZZRC13T [SEP] Columbia Women's Collegiate Give and Go Ii Vest [SEP] $16.14 to $85.86 [SEP] B09NSD7M4P [SEP] Men's Casual Button Down Shirts Turn-Down Collar Tops Short Sleeve Regular Fit Cotton Linen Blouse Tee M-3XL [SEP] $13.99 to $17.99 [SEP] B09K3YMXPG [SEP] Huangse Men's Winter Pullover Thermal Fleece Hoodies Warm Thick Wool Coats Sherpa Fleece Thermal Track Jackets Outerwear [SEP] $23.99 [SEP] B07DVXJ6JM [SEP] Carhartt Men's Full Swing Loose Fit Washed Duck Fleece-Lined Jacket [SEP] $79.99 to $171.14 [SEP] B09PDVKJ4T [SEP] Mens Aztec Print Cardigan Sweater, Mens Cardigan Long Button Up Color Block Lapel Sweater Lightweight Jackets Coats [SEP] $30.29 [SEP] B07MJRD32F [SEP] Lands' End Men's Short Sleeve Comfort-First Mesh Polo Shirt [SEP] $32.96 to $49.16 [SEP] B09JBL1RCZ [SEP] Men's Luxury Faux Fur Coat Jacket Winter Warm Long Coats Overwear Furry Overcoat Plus Size Outerwear [SEP] $68.99",
+      "request": {
+        "state": "Shopping instruction:\ni need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09QM84CQ5 [SEP] Short Sleeve Shirt for Men Novelty 3D Digital Print Tee Casual Aloha Beach Shirt Button Down Holiday Lapel Slim Fit Summer [SEP] $10.99 [SEP] B09QM8GHYW [SEP] Hawaiian Shirt for Men Casual 3D Digital Full Print Novelty Aloha Beach Shirt Button Down Holiday Lapel Slim Fit Summer Tops [SEP] $10.99 [SEP] B08B8438JS [SEP] Dolcevida Women's Long Sleeve Sweater Fleece Zip Up Speckled Jacket with Pockets [SEP] $33.99 to $35.99 [SEP] B07ZZRC13T [SEP] Columbia Women's Collegiate Give and Go Ii Vest [SEP] $16.14 to $85.86 [SEP] B09NSD7M4P [SEP] Men's Casual Button Down Shirts Turn-Down Collar Tops Short Sleeve Regular Fit Cotton Linen Blouse Tee M-3XL [SEP] $13.99 to $17.99 [SEP] B09K3YMXPG [SEP] Huangse Men's Winter Pullover Thermal Fleece Hoodies Warm Thick Wool Coats Sherpa Fleece Thermal Track Jackets Outerwear [SEP] $23.99 [SEP] B07DVXJ6JM [SEP] Carhartt Men's Full Swing Loose Fit Washed Duck Fleece-Lined Jacket [SEP] $79.99 to $171.14 [SEP] B09PDVKJ4T [SEP] Mens Aztec Print Cardigan Sweater, Mens Cardigan Long Button Up Color Block Lapel Sweater Lightweight Jackets Coats [SEP] $30.29 [SEP] B07MJRD32F [SEP] Lands' End Men's Short Sleeve Comfort-First Mesh Polo Shirt [SEP] $32.96 to $49.16 [SEP] B09JBL1RCZ [SEP] Men's Luxury Faux Fur Coat Jacket Winter Warm Long Coats Overwear Furry Overcoat Plus Size Outerwear [SEP] $68.99\n\nRecent actions:\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09qm84cq5]",
+              "4": "click[b09qm8ghyw]",
+              "5": "click[b08b8438js]",
+              "6": "click[b07zzrc13t]",
+              "7": "click[b09nsd7m4p]",
+              "8": "click[b09k3ymxpg]",
+              "9": "click[b07dvxj6jm]",
+              "10": "click[b09pdvkj4t]",
+              "11": "click[b07mjrd32f]",
+              "12": "click[b09jbl1rcz]"
+            }
+          }
+        }
+      },
+      "request_sha256": "881df6763bfd99ef5bd4669ef806b31159f31b955eb652d31155a6e04edf0441",
+      "attempts": [
+        {
+          "seconds": 0.41252244263887405,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.41261473670601845,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "probabilities": {
+              "0": 0.13041835116196637,
+              "1": 0.1396614527669092,
+              "2": 0.20076960171585434,
+              "3": 0.013664526180199149,
+              "4": 0.011045416544895435,
+              "5": 0.07954260420723056,
+              "6": 0.04940224145829509,
+              "7": 0.01738442367195495,
+              "8": 0.22098572061618646,
+              "9": 0.043890448842097196,
+              "10": 0.03743078865884584,
+              "11": 0.033890403714737255,
+              "12": 0.0219140204608283
+            },
+            "confidence": 0.15606786400086864
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9336,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.41079051047563553,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b09k3ymxpg]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9535037577152252
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] color [SEP] black [SEP] blue [SEP] red [SEP] Huangse Men's Winter Pullover Thermal Fleece Hoodies Warm Thick Wool Coats Sherpa Fleece Thermal Track Jackets Outerwear [SEP] Price: $23.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] color [SEP] black [SEP] blue [SEP] red [SEP] Huangse Men's Winter Pullover Thermal Fleece Hoodies Warm Thick Wool Coats Sherpa Fleece Thermal Track Jackets Outerwear [SEP] Price: $23.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]\nclick[next >]\nclick[b09k3ymxpg]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[medium]",
+              "7": "click[large]",
+              "8": "click[x-large]",
+              "9": "click[xx-large]",
+              "10": "click[3x-large]",
+              "11": "click[black]",
+              "12": "click[blue]",
+              "13": "click[red]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5f74bb27737ec12b7129168700932d96d304e1cd2f4a3bc0d4577ca13f9da2b9",
+      "attempts": [
+        {
+          "seconds": 0.2203405275940895,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.22044676169753075,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "10",
+            "probabilities": {
+              "0": 0.09258938841651905,
+              "1": 0.07605871770024936,
+              "2": 0.08870651779901789,
+              "3": 0.05765962673442993,
+              "4": 0.06029999951900268,
+              "5": 0.09269293724373777,
+              "6": 0.04388646864973197,
+              "7": 0.037559409009411175,
+              "8": 0.05286799304839084,
+              "9": 0.05123871121406653,
+              "10": 0.23373422225347784,
+              "11": 0.02936500568817394,
+              "12": 0.04985374586905852,
+              "13": 0.03348725685473255
+            },
+            "confidence": 0.17479070088836074
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 4659,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 14,
+          "inference_seconds": 0.21877656504511833,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[3x-large]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.192173320800066
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] color [SEP] black [SEP] blue [SEP] red [SEP] Huangse Men's Winter Pullover Thermal Fleece Hoodies Warm Thick Wool Coats Sherpa Fleece Thermal Track Jackets Outerwear [SEP] Price: $23.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] color [SEP] black [SEP] blue [SEP] red [SEP] Huangse Men's Winter Pullover Thermal Fleece Hoodies Warm Thick Wool Coats Sherpa Fleece Thermal Track Jackets Outerwear [SEP] Price: $23.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]\nclick[next >]\nclick[b09k3ymxpg]\nclick[3x-large]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[medium]",
+              "7": "click[large]",
+              "8": "click[x-large]",
+              "9": "click[xx-large]",
+              "10": "click[3x-large]",
+              "11": "click[black]",
+              "12": "click[blue]",
+              "13": "click[red]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ae624920203c5937844712591bcff1c890bb3648b83c5cb95f304a2f2ff0d521",
+      "attempts": [
+        {
+          "seconds": 0.22901631146669388,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.22910629957914352,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.1271317128182549,
+              "1": 0.110060479088248,
+              "2": 0.1188715121873153,
+              "3": 0.07487823935352478,
+              "4": 0.08421213274293543,
+              "5": 0.11455529996612143,
+              "6": 0.05017886128468951,
+              "7": 0.038274303114409686,
+              "8": 0.03337493714433633,
+              "9": 0.03638630372642638,
+              "10": 0.061347765669744474,
+              "11": 0.03752153529168034,
+              "12": 0.07041678607102192,
+              "13": 0.04279013154129138
+            },
+            "confidence": 0.05998799841965914
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 4757,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 14,
+          "inference_seconds": 0.2218734435737133,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.4392227418720722
+    },
+    {
+      "step": 5,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.5018188506364822
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07ZZRTSKM [SEP] Columbia Women's Give and Go Ii Full Zip Fleece Jacket [SEP] $15.09 to $100.37 [SEP] B07ZCWFC3R [SEP] SSDXY Fringe Vest for Women Suede Faux Tassels Vest 70s Ethnic Winter Open-Front Sleeveless Vest Western Cowgir Tops [SEP] $11.09 to $20.99 [SEP] B07X6GDMLB [SEP] Men's Women Outdoor Hooded Jersey Sun Protection Tops Casual Windproof Ultra-Light Rainproof Windbreaker Jackets Top [SEP] $5.19 to $5.99 [SEP] B09N3HP4XZ [SEP] Men's Quarter Zip Sweaters Slim Basic Fit Solid Color Lightweight Cotton Knitted Mock Turtleneck Pullover [SEP] $29.99 to $33.99 [SEP] B0814BLFYM [SEP] Columbia Men’s Timberline Triple Interchange Winter Jacket [SEP] $89.98 to $294.75 [SEP] B09CW73S5Z [SEP] Lands' End Men's Short Sleeve Super Soft Supima Polo Shirt [SEP] $37.45 to $46.46 [SEP] B09HPPGNCJ [SEP] Men's Cardigan Casual Slim Fit Pink Trench Aztec Print Coat Button Down Long Jacket Lightweight Lapel Windbreaker Streetwear [SEP] $28.98 [SEP] B09HTTJSSL [SEP] Puffer Jacket For Men Slim Fit Coat Zip Down Jacket With Removable Hood Lightweight Outerwear Classic Winter Clothing [SEP] $26.96 [SEP] B09PTWYQM9 [SEP] Mens Cable Knit Cardigan Loose Fit Sweater Long Sleeve Button Down Outerwear Turndown Collar Casual Cardigans [SEP] $39.44 [SEP] B09PDVPMXY [SEP] Mens Casual Button Down Henley Shirts Long Sleeve Comfy Slim Fit Streetwear Solid Color Band-Collar Shirts [SEP] $12.91",
+      "request": {
+        "state": "Shopping instruction:\ni need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07ZZRTSKM [SEP] Columbia Women's Give and Go Ii Full Zip Fleece Jacket [SEP] $15.09 to $100.37 [SEP] B07ZCWFC3R [SEP] SSDXY Fringe Vest for Women Suede Faux Tassels Vest 70s Ethnic Winter Open-Front Sleeveless Vest Western Cowgir Tops [SEP] $11.09 to $20.99 [SEP] B07X6GDMLB [SEP] Men's Women Outdoor Hooded Jersey Sun Protection Tops Casual Windproof Ultra-Light Rainproof Windbreaker Jackets Top [SEP] $5.19 to $5.99 [SEP] B09N3HP4XZ [SEP] Men's Quarter Zip Sweaters Slim Basic Fit Solid Color Lightweight Cotton Knitted Mock Turtleneck Pullover [SEP] $29.99 to $33.99 [SEP] B0814BLFYM [SEP] Columbia Men’s Timberline Triple Interchange Winter Jacket [SEP] $89.98 to $294.75 [SEP] B09CW73S5Z [SEP] Lands' End Men's Short Sleeve Super Soft Supima Polo Shirt [SEP] $37.45 to $46.46 [SEP] B09HPPGNCJ [SEP] Men's Cardigan Casual Slim Fit Pink Trench Aztec Print Coat Button Down Long Jacket Lightweight Lapel Windbreaker Streetwear [SEP] $28.98 [SEP] B09HTTJSSL [SEP] Puffer Jacket For Men Slim Fit Coat Zip Down Jacket With Removable Hood Lightweight Outerwear Classic Winter Clothing [SEP] $26.96 [SEP] B09PTWYQM9 [SEP] Mens Cable Knit Cardigan Loose Fit Sweater Long Sleeve Button Down Outerwear Turndown Collar Casual Cardigans [SEP] $39.44 [SEP] B09PDVPMXY [SEP] Mens Casual Button Down Henley Shirts Long Sleeve Comfy Slim Fit Streetwear Solid Color Band-Collar Shirts [SEP] $12.91\n\nRecent actions:\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]\nclick[next >]\nclick[b09k3ymxpg]\nclick[3x-large]\nclick[back to search]\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07zzrtskm]",
+              "3": "click[b07zcwfc3r]",
+              "4": "click[b07x6gdmlb]",
+              "5": "click[b09n3hp4xz]",
+              "6": "click[b0814blfym]",
+              "7": "click[b09cw73s5z]",
+              "8": "click[b09hppgncj]",
+              "9": "click[b09httjssl]",
+              "10": "click[b09ptwyqm9]",
+              "11": "click[b09pdvpmxy]"
+            }
+          }
+        }
+      },
+      "request_sha256": "cc7d20ef6f3ce288e071cb6fad76000d4fa999f5dc308a71fa1049dfa955fd82",
+      "attempts": [
+        {
+          "seconds": 0.4118698798120022,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.41199198365211487,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.08996549918565941,
+              "1": 0.2825350542286523,
+              "2": 0.2713401204977345,
+              "3": 0.027493662330602787,
+              "4": 0.04350026685909765,
+              "5": 0.030351963667060933,
+              "6": 0.06783353342040144,
+              "7": 0.036386495940649084,
+              "8": 0.036756157958451496,
+              "9": 0.04559345770941532,
+              "10": 0.04454161944088465,
+              "11": 0.023702168761390238
+            },
+            "confidence": 0.217310968249439
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9142,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.40382784605026245,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.9843374341726303
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09QM84CQ5 [SEP] Short Sleeve Shirt for Men Novelty 3D Digital Print Tee Casual Aloha Beach Shirt Button Down Holiday Lapel Slim Fit Summer [SEP] $10.99 [SEP] B09QM8GHYW [SEP] Hawaiian Shirt for Men Casual 3D Digital Full Print Novelty Aloha Beach Shirt Button Down Holiday Lapel Slim Fit Summer Tops [SEP] $10.99 [SEP] B08B8438JS [SEP] Dolcevida Women's Long Sleeve Sweater Fleece Zip Up Speckled Jacket with Pockets [SEP] $33.99 to $35.99 [SEP] B07ZZRC13T [SEP] Columbia Women's Collegiate Give and Go Ii Vest [SEP] $16.14 to $85.86 [SEP] B09NSD7M4P [SEP] Men's Casual Button Down Shirts Turn-Down Collar Tops Short Sleeve Regular Fit Cotton Linen Blouse Tee M-3XL [SEP] $13.99 to $17.99 [SEP] B09K3YMXPG [SEP] Huangse Men's Winter Pullover Thermal Fleece Hoodies Warm Thick Wool Coats Sherpa Fleece Thermal Track Jackets Outerwear [SEP] $23.99 [SEP] B07DVXJ6JM [SEP] Carhartt Men's Full Swing Loose Fit Washed Duck Fleece-Lined Jacket [SEP] $79.99 to $171.14 [SEP] B09PDVKJ4T [SEP] Mens Aztec Print Cardigan Sweater, Mens Cardigan Long Button Up Color Block Lapel Sweater Lightweight Jackets Coats [SEP] $30.29 [SEP] B07MJRD32F [SEP] Lands' End Men's Short Sleeve Comfort-First Mesh Polo Shirt [SEP] $32.96 to $49.16 [SEP] B09JBL1RCZ [SEP] Men's Luxury Faux Fur Coat Jacket Winter Warm Long Coats Overwear Furry Overcoat Plus Size Outerwear [SEP] $68.99",
+      "request": {
+        "state": "Shopping instruction:\ni need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09QM84CQ5 [SEP] Short Sleeve Shirt for Men Novelty 3D Digital Print Tee Casual Aloha Beach Shirt Button Down Holiday Lapel Slim Fit Summer [SEP] $10.99 [SEP] B09QM8GHYW [SEP] Hawaiian Shirt for Men Casual 3D Digital Full Print Novelty Aloha Beach Shirt Button Down Holiday Lapel Slim Fit Summer Tops [SEP] $10.99 [SEP] B08B8438JS [SEP] Dolcevida Women's Long Sleeve Sweater Fleece Zip Up Speckled Jacket with Pockets [SEP] $33.99 to $35.99 [SEP] B07ZZRC13T [SEP] Columbia Women's Collegiate Give and Go Ii Vest [SEP] $16.14 to $85.86 [SEP] B09NSD7M4P [SEP] Men's Casual Button Down Shirts Turn-Down Collar Tops Short Sleeve Regular Fit Cotton Linen Blouse Tee M-3XL [SEP] $13.99 to $17.99 [SEP] B09K3YMXPG [SEP] Huangse Men's Winter Pullover Thermal Fleece Hoodies Warm Thick Wool Coats Sherpa Fleece Thermal Track Jackets Outerwear [SEP] $23.99 [SEP] B07DVXJ6JM [SEP] Carhartt Men's Full Swing Loose Fit Washed Duck Fleece-Lined Jacket [SEP] $79.99 to $171.14 [SEP] B09PDVKJ4T [SEP] Mens Aztec Print Cardigan Sweater, Mens Cardigan Long Button Up Color Block Lapel Sweater Lightweight Jackets Coats [SEP] $30.29 [SEP] B07MJRD32F [SEP] Lands' End Men's Short Sleeve Comfort-First Mesh Polo Shirt [SEP] $32.96 to $49.16 [SEP] B09JBL1RCZ [SEP] Men's Luxury Faux Fur Coat Jacket Winter Warm Long Coats Overwear Furry Overcoat Plus Size Outerwear [SEP] $68.99\n\nRecent actions:\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]\nclick[next >]\nclick[b09k3ymxpg]\nclick[3x-large]\nclick[back to search]\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09qm84cq5]",
+              "4": "click[b09qm8ghyw]",
+              "5": "click[b08b8438js]",
+              "6": "click[b07zzrc13t]",
+              "7": "click[b09nsd7m4p]",
+              "8": "click[b09k3ymxpg]",
+              "9": "click[b07dvxj6jm]",
+              "10": "click[b09pdvkj4t]",
+              "11": "click[b07mjrd32f]",
+              "12": "click[b09jbl1rcz]"
+            }
+          }
+        }
+      },
+      "request_sha256": "609908d6122678113298f9046ecb2b2f2c663bb2a81fec73f595680e2d0e92f3",
+      "attempts": [
+        {
+          "seconds": 0.44966697692871094,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4498216584324837,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.08914777987583844,
+              "1": 0.14255981586293467,
+              "2": 0.24029242778527926,
+              "3": 0.01461498797388438,
+              "4": 0.01089595620744552,
+              "5": 0.10348925770331664,
+              "6": 0.05461486836508549,
+              "7": 0.019498618031575588,
+              "8": 0.1826102480646582,
+              "9": 0.038186937511016775,
+              "10": 0.04389715645409348,
+              "11": 0.030847884440358873,
+              "12": 0.029344061724512753
+            },
+            "confidence": 0.17698346343405252
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10168,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4477245360612869,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.514305464923382
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09PDVZ86L [SEP] Mens Cardigan Button Down Pullover Solid Color Sweater Basic Coat Casual Long Sleeve Cardigan Plus Size Clothes [SEP] $15.83 [SEP] B09R9RH3V9 [SEP] Suit For Men Novelty Fancy Print Outerwear Casual Button Down Clothes Long Sleeve Jacket Plus Size Blazer Street Style [SEP] $17.97 to $19.97 [SEP] B09Q65R41H [SEP] Men's Tops Fashion Hip Hop Graphic Printed Pullover Casual Short Short Sleeve Colorful 3D Print T-Shirt Tee Henley Shirts [SEP] $9.96 [SEP] B09S633MLG [SEP] Mens Long Sleeve Tee Shirt Button Down Streetwear Casual Solid Color Beach Shirts Yoga Band-Collar Tops [SEP] $17.89 [SEP] B09QM7FJJZ [SEP] Hawaiian Palm Tree Shirt for Men Casual Short Sleeve Funky Aloha Beach Shirt Button Down Party Shirt Lapel Summer Tops [SEP] $10.99 [SEP] B09L4SP2R1 [SEP] Huangse Men's Regular Fit Polo Shirt Long Sleeve Golf Shirts Casual Business Dress Shirt Fashion Printed Henley Shirt [SEP] $17.99 [SEP] B09Q667BT5 [SEP] Men's Novelty 3D Print Tops Fashion Hip Hop Graphic Printed Pullover Casual Short Short Sleeve T-Shirt Tee Henley Shirts [SEP] $9.96 [SEP] B09QM81NYR [SEP] Mens Short Sleeve Tee Hawaiian Printing Button Down Shirts Casual Turndown Collar Beach Shirt Vacation Summer Tops [SEP] $11.31 [SEP] B09PQMBF7G [SEP] Mens 3D Printed Summer Casual Short Sleeve T Shirts with Muscle Cool Tiger Designs Vintage Graphic Tees Shirt Boyfriends Gift [SEP] $5.99 to $15.99 [SEP] B09NZMWSZB [SEP] Hawaiian Shirts for Men Short Sleeve Regular Fit Beach Shirt Floral Print Summer Casual Button Down Shirts [SEP] $17.99 to $20.99",
+      "request": {
+        "state": "Shopping instruction:\ni need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09PDVZ86L [SEP] Mens Cardigan Button Down Pullover Solid Color Sweater Basic Coat Casual Long Sleeve Cardigan Plus Size Clothes [SEP] $15.83 [SEP] B09R9RH3V9 [SEP] Suit For Men Novelty Fancy Print Outerwear Casual Button Down Clothes Long Sleeve Jacket Plus Size Blazer Street Style [SEP] $17.97 to $19.97 [SEP] B09Q65R41H [SEP] Men's Tops Fashion Hip Hop Graphic Printed Pullover Casual Short Short Sleeve Colorful 3D Print T-Shirt Tee Henley Shirts [SEP] $9.96 [SEP] B09S633MLG [SEP] Mens Long Sleeve Tee Shirt Button Down Streetwear Casual Solid Color Beach Shirts Yoga Band-Collar Tops [SEP] $17.89 [SEP] B09QM7FJJZ [SEP] Hawaiian Palm Tree Shirt for Men Casual Short Sleeve Funky Aloha Beach Shirt Button Down Party Shirt Lapel Summer Tops [SEP] $10.99 [SEP] B09L4SP2R1 [SEP] Huangse Men's Regular Fit Polo Shirt Long Sleeve Golf Shirts Casual Business Dress Shirt Fashion Printed Henley Shirt [SEP] $17.99 [SEP] B09Q667BT5 [SEP] Men's Novelty 3D Print Tops Fashion Hip Hop Graphic Printed Pullover Casual Short Short Sleeve T-Shirt Tee Henley Shirts [SEP] $9.96 [SEP] B09QM81NYR [SEP] Mens Short Sleeve Tee Hawaiian Printing Button Down Shirts Casual Turndown Collar Beach Shirt Vacation Summer Tops [SEP] $11.31 [SEP] B09PQMBF7G [SEP] Mens 3D Printed Summer Casual Short Sleeve T Shirts with Muscle Cool Tiger Designs Vintage Graphic Tees Shirt Boyfriends Gift [SEP] $5.99 to $15.99 [SEP] B09NZMWSZB [SEP] Hawaiian Shirts for Men Short Sleeve Regular Fit Beach Shirt Floral Print Summer Casual Button Down Shirts [SEP] $17.99 to $20.99\n\nRecent actions:\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]\nclick[next >]\nclick[b09k3ymxpg]\nclick[3x-large]\nclick[back to search]\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09pdvz86l]",
+              "4": "click[b09r9rh3v9]",
+              "5": "click[b09q65r41h]",
+              "6": "click[b09s633mlg]",
+              "7": "click[b09qm7fjjz]",
+              "8": "click[b09l4sp2r1]",
+              "9": "click[b09q667bt5]",
+              "10": "click[b09qm81nyr]",
+              "11": "click[b09pqmbf7g]",
+              "12": "click[b09nzmwszb]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c6cc20428fa6c2d38766a747837eb847e22fe164e82e490f7f9109f656f18a25",
+      "attempts": [
+        {
+          "seconds": 0.4494263529777527,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4495527148246765,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.13640831050527016,
+              "1": 0.1898966140851218,
+              "2": 0.3866550736934186,
+              "3": 0.03782053118438998,
+              "4": 0.03999895341540863,
+              "5": 0.017929756553857656,
+              "6": 0.02958541129158856,
+              "7": 0.021612843554432746,
+              "8": 0.032973821428678246,
+              "9": 0.01949887501719648,
+              "10": 0.018153371143030932,
+              "11": 0.033836029548612596,
+              "12": 0.03563040857899365
+            },
+            "confidence": 0.33554299650120345
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10212,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.44761278107762337,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.0708919055759907
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09PYQL3VB [SEP] Long Sleeve Shirt For Men Button Down Plus Plaid Print Tee Casual Lapel Tops With Chest Pocket Blouse Urban Streetwear [SEP] $21.79 [SEP] B09QXFKPBS [SEP] Mens Long Sleeve Shirts Button Down Tee Tie-Dye Turndown Sweatshirt Casual Y2K Tops Hip Hop Streetwear Carnival Festival [SEP] $11.97 [SEP] B09QZQGXB6 [SEP] Henley Shirt For Men Hawaiian Band-Collar Beach Floral Print T-Shirt Button Casual Tee Short Sleeve Tops Plus Novelty Shirt [SEP] $7.99 [SEP] B09J1FRN6Q [SEP] Men's Trench Coat Fashion Easy Notch Lapel Business Casual Jacket Solid Long Pea Coat Windbreaker Overcoat Slim Fit Clothing [SEP] $13.96 to $18.99 [SEP] B09LHJYZW3 [SEP] Christmas Suit For Men Long Sleeve Blazer Button Down Clothes Slim Fit Jacket Lightweight Outerwear Xmas Holiday Tops [SEP] $13.76 [SEP] B09JGQYGTF [SEP] Huangse 2021 Mens Casual Flannel Shirts Long Sleeve Button Down Sweatshirts Drawstring Plaid Hoodie Jackets with Pockets [SEP] $39.99 [SEP] B07SXTZMBF [SEP] Men’s Traditional Chef Coat with Knotted Cloth Buttons (XS-3X, 3 Colors) [SEP] $28.98 to $32.98 [SEP] B09QWY4VJJ [SEP] Henley Shirt For Men Solid Color Band-Collar Tee Button Up Tops Short Sleeve Clothes Slim Fit Sweatshirt [SEP] $8.67 [SEP] B09MJCJ5X1 [SEP] Men's Lightweight Recycled Polar Fleece Jacket Winter Warm Hiking Golf Running Travel Jacket [SEP] $32.89 to $38.59 [SEP] B09MJDK852 [SEP] Men's Warm Fleece Lined Denim Jacket Long Sleeve Button Down Slim Jean Jackets Winter Trucker Jeans Coat [SEP] $51.89 to $63.59",
+      "request": {
+        "state": "Shopping instruction:\ni need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09PYQL3VB [SEP] Long Sleeve Shirt For Men Button Down Plus Plaid Print Tee Casual Lapel Tops With Chest Pocket Blouse Urban Streetwear [SEP] $21.79 [SEP] B09QXFKPBS [SEP] Mens Long Sleeve Shirts Button Down Tee Tie-Dye Turndown Sweatshirt Casual Y2K Tops Hip Hop Streetwear Carnival Festival [SEP] $11.97 [SEP] B09QZQGXB6 [SEP] Henley Shirt For Men Hawaiian Band-Collar Beach Floral Print T-Shirt Button Casual Tee Short Sleeve Tops Plus Novelty Shirt [SEP] $7.99 [SEP] B09J1FRN6Q [SEP] Men's Trench Coat Fashion Easy Notch Lapel Business Casual Jacket Solid Long Pea Coat Windbreaker Overcoat Slim Fit Clothing [SEP] $13.96 to $18.99 [SEP] B09LHJYZW3 [SEP] Christmas Suit For Men Long Sleeve Blazer Button Down Clothes Slim Fit Jacket Lightweight Outerwear Xmas Holiday Tops [SEP] $13.76 [SEP] B09JGQYGTF [SEP] Huangse 2021 Mens Casual Flannel Shirts Long Sleeve Button Down Sweatshirts Drawstring Plaid Hoodie Jackets with Pockets [SEP] $39.99 [SEP] B07SXTZMBF [SEP] Men’s Traditional Chef Coat with Knotted Cloth Buttons (XS-3X, 3 Colors) [SEP] $28.98 to $32.98 [SEP] B09QWY4VJJ [SEP] Henley Shirt For Men Solid Color Band-Collar Tee Button Up Tops Short Sleeve Clothes Slim Fit Sweatshirt [SEP] $8.67 [SEP] B09MJCJ5X1 [SEP] Men's Lightweight Recycled Polar Fleece Jacket Winter Warm Hiking Golf Running Travel Jacket [SEP] $32.89 to $38.59 [SEP] B09MJDK852 [SEP] Men's Warm Fleece Lined Denim Jacket Long Sleeve Button Down Slim Jean Jackets Winter Trucker Jeans Coat [SEP] $51.89 to $63.59\n\nRecent actions:\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]\nclick[next >]\nclick[b09k3ymxpg]\nclick[3x-large]\nclick[back to search]\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09pyql3vb]",
+              "4": "click[b09qxfkpbs]",
+              "5": "click[b09qzqgxb6]",
+              "6": "click[b09j1frn6q]",
+              "7": "click[b09lhjyzw3]",
+              "8": "click[b09jgqygtf]",
+              "9": "click[b07sxtzmbf]",
+              "10": "click[b09qwy4vjj]",
+              "11": "click[b09mjcj5x1]",
+              "12": "click[b09mjdk852]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a67c3deaf9a0e2591b4c55efb70f61a4d209fcbe53445c917ff63d244f1962eb",
+      "attempts": [
+        {
+          "seconds": 0.45884548127651215,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4589982368052006,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "11",
+            "probabilities": {
+              "0": 0.09467715713267294,
+              "1": 0.15532834113981267,
+              "2": 0.2362905683243308,
+              "3": 0.021290357881259256,
+              "4": 0.018932100430800416,
+              "5": 0.017220800891267245,
+              "6": 0.021368042571589866,
+              "7": 0.012469657972224702,
+              "8": 0.04191242350387683,
+              "9": 0.026568222175646018,
+              "10": 0.024462319880307882,
+              "11": 0.2732297282090594,
+              "12": 0.05625027988715215
+            },
+            "confidence": 0.2126655388931476
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10390,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4568854458630085,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b09mjcj5x1]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.558000545948744
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] army green [SEP] black [SEP] khaki [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] Men's Lightweight Recycled Polar Fleece Jacket Winter Warm Hiking Golf Running Travel Jacket [SEP] Price: $32.89 to $38.59 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] army green [SEP] black [SEP] khaki [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] Men's Lightweight Recycled Polar Fleece Jacket Winter Warm Hiking Golf Running Travel Jacket [SEP] Price: $32.89 to $38.59 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]\nclick[next >]\nclick[b09k3ymxpg]\nclick[3x-large]\nclick[back to search]\nsearch[i need a fleece jacket that is regular fit size 3x in the color of sea salt, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b09mjcj5x1]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[army green]",
+              "7": "click[black]",
+              "8": "click[khaki]",
+              "9": "click[small]",
+              "10": "click[medium]",
+              "11": "click[large]",
+              "12": "click[x-large]",
+              "13": "click[xx-large]",
+              "14": "click[3x-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "aeef32bd225c8c3604572609b25f9be07faa953bca0b50f19c18ab5bcd36990c",
+      "attempts": [
+        {
+          "seconds": 0.29727664962410927,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.29739347100257874,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.08447229821100546,
+              "1": 0.08243689254422043,
+              "2": 0.08939277120405116,
+              "3": 0.05762249918762368,
+              "4": 0.06674265239158647,
+              "5": 0.19276831860895519,
+              "6": 0.029635605694362695,
+              "7": 0.02196183176010875,
+              "8": 0.03818196492899495,
+              "9": 0.022357761809573603,
+              "10": 0.03967652216528917,
+              "11": 0.03170812356194513,
+              "12": 0.025772687988064088,
+              "13": 0.03422278043852459,
+              "14": 0.1830472895056946
+            },
+            "confidence": 0.13510891279530912
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 6165,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 15,
+          "inference_seconds": 0.2827296294271946,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.5,
+      "done": true,
+      "elapsed_seconds": 3.9183263182640076
+    }
+  ]
+}

@@ -1,0 +1,3888 @@
+{
+  "task_id": 396,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars",
+  "instruction_sha256": "37aed0620ce528203c8bd467983edae5a48f8a3a3eb74f18c45b9e0a7fb6dd12",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "repeated_state_action",
+  "steps": 60,
+  "elapsed_seconds": 10.27806032449007,
+  "decision_seconds": 7.747418809682131,
+  "input_tokens": 129055,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Search",
+      "action": "search[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.04367557168006897
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07B8B2V3Y [SEP] Splat | Lemon Drop | 1.5 oz. Foil Pack | 30 Wash | Temporary Yellow Hair Dye [SEP] $7.25 [SEP] B009S7DK4Y [SEP] Garnier Olia Permanent Hair Colour 5.3 Golden Brown [SEP] $12.99 [SEP] B00H4W383I [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 7GR Light Golden Red Hair Color, 1 Count [SEP] $100.0 [SEP] B08L8C9TF4 [SEP] Splat Midnight Rosetta Pink Semi-Permanent Hair Dye [SEP] $24.17 [SEP] B00H4W383S [SEP] Clairol Natural Instincts 38 Burgundy Black 1 Kit [SEP] $9.98 [SEP] B09KB7VCM1 [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CARAMEL BROWN) [SEP] $27.0 [SEP] B09KBND9ZF [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CLEAR (Shine Clear)) [SEP] $27.0 [SEP] B09KBP39GG [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (HONEYCOMB BLOND BLONDE) [SEP] $27.0 [SEP] B07HGD73QV [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 8 Medium Natural Blonde Hair Color, 3 Count [SEP] $22.18 [SEP] B07HGD9BVY [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 2RV Burgundy Black Hair Color, 3 Count [SEP] $29.99",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07B8B2V3Y [SEP] Splat | Lemon Drop | 1.5 oz. Foil Pack | 30 Wash | Temporary Yellow Hair Dye [SEP] $7.25 [SEP] B009S7DK4Y [SEP] Garnier Olia Permanent Hair Colour 5.3 Golden Brown [SEP] $12.99 [SEP] B00H4W383I [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 7GR Light Golden Red Hair Color, 1 Count [SEP] $100.0 [SEP] B08L8C9TF4 [SEP] Splat Midnight Rosetta Pink Semi-Permanent Hair Dye [SEP] $24.17 [SEP] B00H4W383S [SEP] Clairol Natural Instincts 38 Burgundy Black 1 Kit [SEP] $9.98 [SEP] B09KB7VCM1 [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CARAMEL BROWN) [SEP] $27.0 [SEP] B09KBND9ZF [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CLEAR (Shine Clear)) [SEP] $27.0 [SEP] B09KBP39GG [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (HONEYCOMB BLOND BLONDE) [SEP] $27.0 [SEP] B07HGD73QV [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 8 Medium Natural Blonde Hair Color, 3 Count [SEP] $22.18 [SEP] B07HGD9BVY [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 2RV Burgundy Black Hair Color, 3 Count [SEP] $29.99\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07b8b2v3y]",
+              "3": "click[b009s7dk4y]",
+              "4": "click[b00h4w383i]",
+              "5": "click[b08l8c9tf4]",
+              "6": "click[b00h4w383s]",
+              "7": "click[b09kb7vcm1]",
+              "8": "click[b09kbnd9zf]",
+              "9": "click[b09kbp39gg]",
+              "10": "click[b07hgd73qv]",
+              "11": "click[b07hgd9bvy]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7290c5ad647b065ef662c04da50bd2ba67dda2c3e9f93c4d0c21bed2e49906ab",
+      "attempts": [
+        {
+          "seconds": 0.41247082129120827,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.41257651522755623,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.11833509871340274,
+              "1": 0.4108056897427889,
+              "2": 0.035775620836242535,
+              "3": 0.08672074374324187,
+              "4": 0.03255848702930682,
+              "5": 0.054207431981224304,
+              "6": 0.05656904128815221,
+              "7": 0.038506379335630836,
+              "8": 0.023495088393712945,
+              "9": 0.03219174610917206,
+              "10": 0.03689038060169643,
+              "11": 0.07394429222542825
+            },
+            "confidence": 0.357242570628497
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8999,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.40957406535744667,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.505906768143177
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00153EZ02 [SEP] La Riche Directions Hair Dye Colour Semi Permanent - Alpine Green - 88 ml / 30 oz [SEP] $11.0 [SEP] B00O29VGLM [SEP] MANIC PANIC Blue Steel Hair Color Classic [SEP] $13.99 [SEP] B0962THZCM [SEP] Lunar Tides Hair Dye - Neon Dragonfruit Hot Pink Semi-Permanent Vegan Hair Color (4 fl oz / 118 ml) [SEP] $15.99 [SEP] B08CT5BD96 [SEP] Permanent Hair Dye Medium Blond 7 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTGS3KT [SEP] Permanent Hair Dye Platinum Blond 11 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTHMLF5 [SEP] Permanent Hair Dye Medium Chocolate Brown 5.07 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTK31T8 [SEP] Permanent Hair Dye Dark Blond Natural Ash 6.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTPRP83 [SEP] Permanent Hair Dye Light Blond Natural Ash 8.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTZXTNG [SEP] Permanent Hair Dye Red Blond Intense 7.66 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CV1FPTZ [SEP] Permanent Hair Dye Dark Intense Red 6.6 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00153EZ02 [SEP] La Riche Directions Hair Dye Colour Semi Permanent - Alpine Green - 88 ml / 30 oz [SEP] $11.0 [SEP] B00O29VGLM [SEP] MANIC PANIC Blue Steel Hair Color Classic [SEP] $13.99 [SEP] B0962THZCM [SEP] Lunar Tides Hair Dye - Neon Dragonfruit Hot Pink Semi-Permanent Vegan Hair Color (4 fl oz / 118 ml) [SEP] $15.99 [SEP] B08CT5BD96 [SEP] Permanent Hair Dye Medium Blond 7 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTGS3KT [SEP] Permanent Hair Dye Platinum Blond 11 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTHMLF5 [SEP] Permanent Hair Dye Medium Chocolate Brown 5.07 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTK31T8 [SEP] Permanent Hair Dye Dark Blond Natural Ash 6.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTPRP83 [SEP] Permanent Hair Dye Light Blond Natural Ash 8.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTZXTNG [SEP] Permanent Hair Dye Red Blond Intense 7.66 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CV1FPTZ [SEP] Permanent Hair Dye Dark Intense Red 6.6 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b00153ez02]",
+              "4": "click[b00o29vglm]",
+              "5": "click[b0962thzcm]",
+              "6": "click[b08ct5bd96]",
+              "7": "click[b08ctgs3kt]",
+              "8": "click[b08cthmlf5]",
+              "9": "click[b08ctk31t8]",
+              "10": "click[b08ctprp83]",
+              "11": "click[b08ctzxtng]",
+              "12": "click[b08cv1fptz]"
+            }
+          }
+        }
+      },
+      "request_sha256": "99e2f072f028b3d3d34b1da9b3dc781ebfb45c889c087ea79a82bf7c03747ad0",
+      "attempts": [
+        {
+          "seconds": 0.46529868617653847,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4654070921242237,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.11639879153538148,
+              "1": 0.1945826559086309,
+              "2": 0.3151090251942229,
+              "3": 0.019525856784475985,
+              "4": 0.03720279839055247,
+              "5": 0.028260999971961104,
+              "6": 0.05358987142799395,
+              "7": 0.02855518201117667,
+              "8": 0.04329583388382484,
+              "9": 0.031227298298019,
+              "10": 0.03155675228266949,
+              "11": 0.04691602595924082,
+              "12": 0.05377890835185046
+            },
+            "confidence": 0.25803477729374147
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10491,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.46352703869342804,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.0244259536266327
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B000KOQ3MA [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, R68 Ruby Rush (Rich Auburn True Red), Pack of 1, Hair Dye [SEP] $9.97 [SEP] B0012NS7LI [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, 20 Black Leather (Natural Black), Pack of 1, Hair Dye [SEP] $9.69 [SEP] B00B1DR8QY [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, R57 Cherry Crush (Intense Medium Auburn), Pack of 1, Hair Dye [SEP] $9.69 [SEP] B079FPB6VH [SEP] Clairol Nice'n Easy Permanent Hair Dye, 10C Extra Light Cool Blonde Hair Color, 1 Count [SEP] $7.99 [SEP] B08QRXF1TJ [SEP] One 'n Only Colorfix Color Remover Fix with Argan Oil, Removes Unwanted Permanent Hair Color Dye (w/Sleek Teasing Comb) One & Only Haircolor Fix (3-PART SYSTEM (PACK OF 1)) [SEP] $100.0 [SEP] B08QV1LJ5Q [SEP] D de la Vega Color, Permanent Cream, Hair Dye Kit, 2.0 Black , 2 boxes [SEP] $7.3 [SEP] B06XBP55YW [SEP] Pack of 1 Box Berina Black Hair Dye A1 Hair Color Cream Black 60 G. Super Permanent Fashion Unisex [SEP] $8.99 [SEP] B09JNSDCFR [SEP] Newmind Hair Dye Washable Quick Fast-Drying Disposable Hair Color Spray for Halloween Christmas - Grey [SEP] $9.98 [SEP] B07KJQDVM4 [SEP] Garnier Olia Bold Ammonia Free Permanent Hair Color (Packaging May Vary), 7.20 Dark Rose Quartz, Rose Hair Dye, 1 Kit, Pack of 1 [SEP] $100.0 [SEP] B072HX5ZZS [SEP] Keracolor Clenditioner Hair Dye (19 colors) Semi Permanent Hair Color Depositing Conditioner [SEP] $22.0",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B000KOQ3MA [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, R68 Ruby Rush (Rich Auburn True Red), Pack of 1, Hair Dye [SEP] $9.97 [SEP] B0012NS7LI [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, 20 Black Leather (Natural Black), Pack of 1, Hair Dye [SEP] $9.69 [SEP] B00B1DR8QY [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, R57 Cherry Crush (Intense Medium Auburn), Pack of 1, Hair Dye [SEP] $9.69 [SEP] B079FPB6VH [SEP] Clairol Nice'n Easy Permanent Hair Dye, 10C Extra Light Cool Blonde Hair Color, 1 Count [SEP] $7.99 [SEP] B08QRXF1TJ [SEP] One 'n Only Colorfix Color Remover Fix with Argan Oil, Removes Unwanted Permanent Hair Color Dye (w/Sleek Teasing Comb) One & Only Haircolor Fix (3-PART SYSTEM (PACK OF 1)) [SEP] $100.0 [SEP] B08QV1LJ5Q [SEP] D de la Vega Color, Permanent Cream, Hair Dye Kit, 2.0 Black , 2 boxes [SEP] $7.3 [SEP] B06XBP55YW [SEP] Pack of 1 Box Berina Black Hair Dye A1 Hair Color Cream Black 60 G. Super Permanent Fashion Unisex [SEP] $8.99 [SEP] B09JNSDCFR [SEP] Newmind Hair Dye Washable Quick Fast-Drying Disposable Hair Color Spray for Halloween Christmas - Grey [SEP] $9.98 [SEP] B07KJQDVM4 [SEP] Garnier Olia Bold Ammonia Free Permanent Hair Color (Packaging May Vary), 7.20 Dark Rose Quartz, Rose Hair Dye, 1 Kit, Pack of 1 [SEP] $100.0 [SEP] B072HX5ZZS [SEP] Keracolor Clenditioner Hair Dye (19 colors) Semi Permanent Hair Color Depositing Conditioner [SEP] $22.0\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b000koq3ma]",
+              "4": "click[b0012ns7li]",
+              "5": "click[b00b1dr8qy]",
+              "6": "click[b079fpb6vh]",
+              "7": "click[b08qrxf1tj]",
+              "8": "click[b08qv1lj5q]",
+              "9": "click[b06xbp55yw]",
+              "10": "click[b09jnsdcfr]",
+              "11": "click[b07kjqdvm4]",
+              "12": "click[b072hx5zzs]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a92cfb204b4e265867defa92800368932906f11956c037be9ca58a09b9e4bdbf",
+      "attempts": [
+        {
+          "seconds": 0.4314293712377548,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4315223805606365,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.14611362813319573,
+              "1": 0.23397268003549943,
+              "2": 0.23495044349041835,
+              "3": 0.02959450317006058,
+              "4": 0.029139660188824267,
+              "5": 0.03224968517355323,
+              "6": 0.041609159716306104,
+              "7": 0.02233724518609637,
+              "8": 0.03620341043557996,
+              "9": 0.07054810617968679,
+              "10": 0.023952332637782642,
+              "11": 0.04213449360463453,
+              "12": 0.0571946520483621
+            },
+            "confidence": 0.17119631378128652
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9712,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4295794144272804,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.5065715350210667
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B0147RUWSQ [SEP] ARCTIC FOX Vegan and Cruelty-Free Semi-Permanent Hair Color Dye (8 Fl Oz, PURPLE RAIN) [SEP] $16.99 [SEP] B0722SMF14 [SEP] Bigen Easy Color Permanent Hair Dye With Aloe Olive Oil, Intense Black, 2.82 Oz (SG_B0722SMF14_US) [SEP] $100.0 [SEP] B00UOOEVL6 [SEP] X 1 Set Permanent Hair Color Dye Berina A23 Bright Red Color + Hair Coloring Dyeing Kit Dye Brush Comb Bowl [SEP] $21.5 [SEP] B08GCRG4CT [SEP] La Riche Directions Semi Permanent Atlantic Blue Hair Colour Dye x 4 [SEP] $30.59 [SEP] B08P5RXSY5 [SEP] La Riche Directions Semi Permanent Plum Hair Colour Dye x 4 [SEP] $30.1 [SEP] B09GM18LB8 [SEP] Dreadlock Extensions Loc Extensions Human Hair for Men Women 12 Inch 60 Strands 0.6cm Width 613 Blonde 100% Real Remy Human Hair Extensions Lohot Full Handmade Tight Soft Permanent Dread Extensions [SEP] $158.99 [SEP] B00ELLFVD0 [SEP] La Riche Directions Semi Permanent Rose Red Hair Colour Dye x 4 [SEP] $28.33 [SEP] B07VYN4NS4 [SEP] Water Works Powder Hair Color, Permanent, Light Brown, 3 packs [SEP] $13.19 [SEP] B00155PYHS [SEP] La Riche Directions Colour Hair Dye 88ml (Spring Green) [SEP] $11.0 [SEP] B004RAZ52C [SEP] La Riche Directions Colour Hair Dye 88ml (Apple Green) [SEP] $11.0",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B0147RUWSQ [SEP] ARCTIC FOX Vegan and Cruelty-Free Semi-Permanent Hair Color Dye (8 Fl Oz, PURPLE RAIN) [SEP] $16.99 [SEP] B0722SMF14 [SEP] Bigen Easy Color Permanent Hair Dye With Aloe Olive Oil, Intense Black, 2.82 Oz (SG_B0722SMF14_US) [SEP] $100.0 [SEP] B00UOOEVL6 [SEP] X 1 Set Permanent Hair Color Dye Berina A23 Bright Red Color + Hair Coloring Dyeing Kit Dye Brush Comb Bowl [SEP] $21.5 [SEP] B08GCRG4CT [SEP] La Riche Directions Semi Permanent Atlantic Blue Hair Colour Dye x 4 [SEP] $30.59 [SEP] B08P5RXSY5 [SEP] La Riche Directions Semi Permanent Plum Hair Colour Dye x 4 [SEP] $30.1 [SEP] B09GM18LB8 [SEP] Dreadlock Extensions Loc Extensions Human Hair for Men Women 12 Inch 60 Strands 0.6cm Width 613 Blonde 100% Real Remy Human Hair Extensions Lohot Full Handmade Tight Soft Permanent Dread Extensions [SEP] $158.99 [SEP] B00ELLFVD0 [SEP] La Riche Directions Semi Permanent Rose Red Hair Colour Dye x 4 [SEP] $28.33 [SEP] B07VYN4NS4 [SEP] Water Works Powder Hair Color, Permanent, Light Brown, 3 packs [SEP] $13.19 [SEP] B00155PYHS [SEP] La Riche Directions Colour Hair Dye 88ml (Spring Green) [SEP] $11.0 [SEP] B004RAZ52C [SEP] La Riche Directions Colour Hair Dye 88ml (Apple Green) [SEP] $11.0\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b0147ruwsq]",
+              "4": "click[b0722smf14]",
+              "5": "click[b00uooevl6]",
+              "6": "click[b08gcrg4ct]",
+              "7": "click[b08p5rxsy5]",
+              "8": "click[b09gm18lb8]",
+              "9": "click[b00ellfvd0]",
+              "10": "click[b07vyn4ns4]",
+              "11": "click[b00155pyhs]",
+              "12": "click[b004raz52c]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d079ae3c343219c7774e23aac4c3fbdea9fcaacd2f6884cccc0e44ef6c409d25",
+      "attempts": [
+        {
+          "seconds": 0.3987358696758747,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.39882898703217506,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.1489399623026872,
+              "1": 0.2616008907327621,
+              "2": 0.22510057782620502,
+              "3": 0.01855294630894291,
+              "4": 0.023616926043339093,
+              "5": 0.13673827629926896,
+              "6": 0.02457843096593146,
+              "7": 0.022859385271564045,
+              "8": 0.013246071054883617,
+              "9": 0.0330938188753354,
+              "10": 0.04222729779732246,
+              "11": 0.023884718390607268,
+              "12": 0.02556069813115056
+            },
+            "confidence": 0.20006763162715893
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8827,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.3936596028506756,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[< prev]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.957303248345852
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B000KOQ3MA [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, R68 Ruby Rush (Rich Auburn True Red), Pack of 1, Hair Dye [SEP] $9.97 [SEP] B0012NS7LI [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, 20 Black Leather (Natural Black), Pack of 1, Hair Dye [SEP] $9.69 [SEP] B00B1DR8QY [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, R57 Cherry Crush (Intense Medium Auburn), Pack of 1, Hair Dye [SEP] $9.69 [SEP] B079FPB6VH [SEP] Clairol Nice'n Easy Permanent Hair Dye, 10C Extra Light Cool Blonde Hair Color, 1 Count [SEP] $7.99 [SEP] B08QRXF1TJ [SEP] One 'n Only Colorfix Color Remover Fix with Argan Oil, Removes Unwanted Permanent Hair Color Dye (w/Sleek Teasing Comb) One & Only Haircolor Fix (3-PART SYSTEM (PACK OF 1)) [SEP] $100.0 [SEP] B08QV1LJ5Q [SEP] D de la Vega Color, Permanent Cream, Hair Dye Kit, 2.0 Black , 2 boxes [SEP] $7.3 [SEP] B06XBP55YW [SEP] Pack of 1 Box Berina Black Hair Dye A1 Hair Color Cream Black 60 G. Super Permanent Fashion Unisex [SEP] $8.99 [SEP] B09JNSDCFR [SEP] Newmind Hair Dye Washable Quick Fast-Drying Disposable Hair Color Spray for Halloween Christmas - Grey [SEP] $9.98 [SEP] B07KJQDVM4 [SEP] Garnier Olia Bold Ammonia Free Permanent Hair Color (Packaging May Vary), 7.20 Dark Rose Quartz, Rose Hair Dye, 1 Kit, Pack of 1 [SEP] $100.0 [SEP] B072HX5ZZS [SEP] Keracolor Clenditioner Hair Dye (19 colors) Semi Permanent Hair Color Depositing Conditioner [SEP] $22.0",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B000KOQ3MA [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, R68 Ruby Rush (Rich Auburn True Red), Pack of 1, Hair Dye [SEP] $9.97 [SEP] B0012NS7LI [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, 20 Black Leather (Natural Black), Pack of 1, Hair Dye [SEP] $9.69 [SEP] B00B1DR8QY [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, R57 Cherry Crush (Intense Medium Auburn), Pack of 1, Hair Dye [SEP] $9.69 [SEP] B079FPB6VH [SEP] Clairol Nice'n Easy Permanent Hair Dye, 10C Extra Light Cool Blonde Hair Color, 1 Count [SEP] $7.99 [SEP] B08QRXF1TJ [SEP] One 'n Only Colorfix Color Remover Fix with Argan Oil, Removes Unwanted Permanent Hair Color Dye (w/Sleek Teasing Comb) One & Only Haircolor Fix (3-PART SYSTEM (PACK OF 1)) [SEP] $100.0 [SEP] B08QV1LJ5Q [SEP] D de la Vega Color, Permanent Cream, Hair Dye Kit, 2.0 Black , 2 boxes [SEP] $7.3 [SEP] B06XBP55YW [SEP] Pack of 1 Box Berina Black Hair Dye A1 Hair Color Cream Black 60 G. Super Permanent Fashion Unisex [SEP] $8.99 [SEP] B09JNSDCFR [SEP] Newmind Hair Dye Washable Quick Fast-Drying Disposable Hair Color Spray for Halloween Christmas - Grey [SEP] $9.98 [SEP] B07KJQDVM4 [SEP] Garnier Olia Bold Ammonia Free Permanent Hair Color (Packaging May Vary), 7.20 Dark Rose Quartz, Rose Hair Dye, 1 Kit, Pack of 1 [SEP] $100.0 [SEP] B072HX5ZZS [SEP] Keracolor Clenditioner Hair Dye (19 colors) Semi Permanent Hair Color Depositing Conditioner [SEP] $22.0\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b000koq3ma]",
+              "4": "click[b0012ns7li]",
+              "5": "click[b00b1dr8qy]",
+              "6": "click[b079fpb6vh]",
+              "7": "click[b08qrxf1tj]",
+              "8": "click[b08qv1lj5q]",
+              "9": "click[b06xbp55yw]",
+              "10": "click[b09jnsdcfr]",
+              "11": "click[b07kjqdvm4]",
+              "12": "click[b072hx5zzs]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2f4b083b8a51f9c7dcf2de4cbd85a77a24dae3db5e9bcdfabd4e586935f99a60",
+      "attempts": [
+        {
+          "seconds": 0.4394811727106571,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4395800903439522,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.15210153593173056,
+              "1": 0.17874806665835719,
+              "2": 0.27851519337534925,
+              "3": 0.02676170001283754,
+              "4": 0.030657803262890047,
+              "5": 0.03241057292743712,
+              "6": 0.04008331172918545,
+              "7": 0.02123751411598994,
+              "8": 0.03610100697464002,
+              "9": 0.07663168450813787,
+              "10": 0.023912276543098927,
+              "11": 0.04404584039397792,
+              "12": 0.05879349356636821
+            },
+            "confidence": 0.21839145948996166
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9855,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4355536997318268,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.4563513286411762
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B0147RUWSQ [SEP] ARCTIC FOX Vegan and Cruelty-Free Semi-Permanent Hair Color Dye (8 Fl Oz, PURPLE RAIN) [SEP] $16.99 [SEP] B0722SMF14 [SEP] Bigen Easy Color Permanent Hair Dye With Aloe Olive Oil, Intense Black, 2.82 Oz (SG_B0722SMF14_US) [SEP] $100.0 [SEP] B00UOOEVL6 [SEP] X 1 Set Permanent Hair Color Dye Berina A23 Bright Red Color + Hair Coloring Dyeing Kit Dye Brush Comb Bowl [SEP] $21.5 [SEP] B08GCRG4CT [SEP] La Riche Directions Semi Permanent Atlantic Blue Hair Colour Dye x 4 [SEP] $30.59 [SEP] B08P5RXSY5 [SEP] La Riche Directions Semi Permanent Plum Hair Colour Dye x 4 [SEP] $30.1 [SEP] B09GM18LB8 [SEP] Dreadlock Extensions Loc Extensions Human Hair for Men Women 12 Inch 60 Strands 0.6cm Width 613 Blonde 100% Real Remy Human Hair Extensions Lohot Full Handmade Tight Soft Permanent Dread Extensions [SEP] $158.99 [SEP] B00ELLFVD0 [SEP] La Riche Directions Semi Permanent Rose Red Hair Colour Dye x 4 [SEP] $28.33 [SEP] B07VYN4NS4 [SEP] Water Works Powder Hair Color, Permanent, Light Brown, 3 packs [SEP] $13.19 [SEP] B00155PYHS [SEP] La Riche Directions Colour Hair Dye 88ml (Spring Green) [SEP] $11.0 [SEP] B004RAZ52C [SEP] La Riche Directions Colour Hair Dye 88ml (Apple Green) [SEP] $11.0",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B0147RUWSQ [SEP] ARCTIC FOX Vegan and Cruelty-Free Semi-Permanent Hair Color Dye (8 Fl Oz, PURPLE RAIN) [SEP] $16.99 [SEP] B0722SMF14 [SEP] Bigen Easy Color Permanent Hair Dye With Aloe Olive Oil, Intense Black, 2.82 Oz (SG_B0722SMF14_US) [SEP] $100.0 [SEP] B00UOOEVL6 [SEP] X 1 Set Permanent Hair Color Dye Berina A23 Bright Red Color + Hair Coloring Dyeing Kit Dye Brush Comb Bowl [SEP] $21.5 [SEP] B08GCRG4CT [SEP] La Riche Directions Semi Permanent Atlantic Blue Hair Colour Dye x 4 [SEP] $30.59 [SEP] B08P5RXSY5 [SEP] La Riche Directions Semi Permanent Plum Hair Colour Dye x 4 [SEP] $30.1 [SEP] B09GM18LB8 [SEP] Dreadlock Extensions Loc Extensions Human Hair for Men Women 12 Inch 60 Strands 0.6cm Width 613 Blonde 100% Real Remy Human Hair Extensions Lohot Full Handmade Tight Soft Permanent Dread Extensions [SEP] $158.99 [SEP] B00ELLFVD0 [SEP] La Riche Directions Semi Permanent Rose Red Hair Colour Dye x 4 [SEP] $28.33 [SEP] B07VYN4NS4 [SEP] Water Works Powder Hair Color, Permanent, Light Brown, 3 packs [SEP] $13.19 [SEP] B00155PYHS [SEP] La Riche Directions Colour Hair Dye 88ml (Spring Green) [SEP] $11.0 [SEP] B004RAZ52C [SEP] La Riche Directions Colour Hair Dye 88ml (Apple Green) [SEP] $11.0\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b0147ruwsq]",
+              "4": "click[b0722smf14]",
+              "5": "click[b00uooevl6]",
+              "6": "click[b08gcrg4ct]",
+              "7": "click[b08p5rxsy5]",
+              "8": "click[b09gm18lb8]",
+              "9": "click[b00ellfvd0]",
+              "10": "click[b07vyn4ns4]",
+              "11": "click[b00155pyhs]",
+              "12": "click[b004raz52c]"
+            }
+          }
+        }
+      },
+      "request_sha256": "963fa3f5c4a2faec6d91ebef93f7ca074376fecc7dc29181dc0cf8c92476b848",
+      "attempts": [
+        {
+          "seconds": 0.40352220088243484,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.40361519902944565,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.14899503275184345,
+              "1": 0.20486439624047373,
+              "2": 0.25309456029324084,
+              "3": 0.019522043124772934,
+              "4": 0.024823102027890363,
+              "5": 0.14079534115961623,
+              "6": 0.030332357145559853,
+              "7": 0.029947404105045792,
+              "8": 0.015027301397992856,
+              "9": 0.03573938783037307,
+              "10": 0.044603293281792314,
+              "11": 0.02503102097227878,
+              "12": 0.02722475966911955
+            },
+            "confidence": 0.19085244031767762
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8970,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4007621817290783,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.918956335633993
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01LYQP960 [SEP] Garnier Olia Ammonia-Free Brilliant Color Oil-Rich Permanent Hair Color, 4.11 Dark Platinum Brown (Pack of 1) Brown Hair Dye (Packaging May Vary) [SEP] $13.79 [SEP] B07H9J4VHW [SEP] Satin | Ultra Vivid Fashion Colors | Red Series | 6MR Red Mahogany Hair Dye| 3oz. [SEP] $10.99 [SEP] B079H8W2WM [SEP] L'Oreal Excellence HiColor H9 Red Hot Permanent Hair Tint HC-05116 (6 Pack) [SEP] $36.99 [SEP] B00155PYMI [SEP] La Riche Directions Hair Colour - Midnight Blue 88ml Tub [SEP] $11.0 [SEP] B00155XB82 [SEP] Directions Hair Colour - Violet 88ml Pot by La Riche [SEP] $11.0 [SEP] B001BFPG70 [SEP] La Riche Directions Hair Colour - Plum 88ml Tub [SEP] $11.0 [SEP] B001BFPG9I [SEP] La Riche Directions Hair Colour - Flamingo Pink 88ml Tub [SEP] $11.0 [SEP] B07BYYHK1R [SEP] Clairol Nice'n Easy Permanent Hair Dye, 10 Extra Light Blonde Hair Color, 3 Count [SEP] $20.97 [SEP] B005OKZ38K [SEP] Revlon Colorsilk Beautiful Color, Permanent Hair Dye with Keratin, 100% Gray Coverage, Ammonia Free, 11 Soft Black [SEP] $100.0 [SEP] B079G8H6SX [SEP] Satin | Ultra Vivid Fashion Colors | Gold Copper Series | 5GC Light Golden Copper Chestnut Hair Dye | 3oz. [SEP] $10.99",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01LYQP960 [SEP] Garnier Olia Ammonia-Free Brilliant Color Oil-Rich Permanent Hair Color, 4.11 Dark Platinum Brown (Pack of 1) Brown Hair Dye (Packaging May Vary) [SEP] $13.79 [SEP] B07H9J4VHW [SEP] Satin | Ultra Vivid Fashion Colors | Red Series | 6MR Red Mahogany Hair Dye| 3oz. [SEP] $10.99 [SEP] B079H8W2WM [SEP] L'Oreal Excellence HiColor H9 Red Hot Permanent Hair Tint HC-05116 (6 Pack) [SEP] $36.99 [SEP] B00155PYMI [SEP] La Riche Directions Hair Colour - Midnight Blue 88ml Tub [SEP] $11.0 [SEP] B00155XB82 [SEP] Directions Hair Colour - Violet 88ml Pot by La Riche [SEP] $11.0 [SEP] B001BFPG70 [SEP] La Riche Directions Hair Colour - Plum 88ml Tub [SEP] $11.0 [SEP] B001BFPG9I [SEP] La Riche Directions Hair Colour - Flamingo Pink 88ml Tub [SEP] $11.0 [SEP] B07BYYHK1R [SEP] Clairol Nice'n Easy Permanent Hair Dye, 10 Extra Light Blonde Hair Color, 3 Count [SEP] $20.97 [SEP] B005OKZ38K [SEP] Revlon Colorsilk Beautiful Color, Permanent Hair Dye with Keratin, 100% Gray Coverage, Ammonia Free, 11 Soft Black [SEP] $100.0 [SEP] B079G8H6SX [SEP] Satin | Ultra Vivid Fashion Colors | Gold Copper Series | 5GC Light Golden Copper Chestnut Hair Dye | 3oz. [SEP] $10.99\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b01lyqp960]",
+              "4": "click[b07h9j4vhw]",
+              "5": "click[b079h8w2wm]",
+              "6": "click[b00155pymi]",
+              "7": "click[b00155xb82]",
+              "8": "click[b001bfpg70]",
+              "9": "click[b001bfpg9i]",
+              "10": "click[b07byyhk1r]",
+              "11": "click[b005okz38k]",
+              "12": "click[b079g8h6sx]"
+            }
+          }
+        }
+      },
+      "request_sha256": "093cb3ae93c2cec1b9b867a7936d2010ae672d4d28fa136820d6a5e1a9e6e1c1",
+      "attempts": [
+        {
+          "seconds": 0.40635374933481216,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.40647439658641815,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.17021692597420895,
+              "1": 0.233969167806941,
+              "2": 0.2709698240321525,
+              "3": 0.04799800732851854,
+              "4": 0.05558184968914697,
+              "5": 0.027701477607164536,
+              "6": 0.02949057472616444,
+              "7": 0.019517674649771048,
+              "8": 0.01609319551101949,
+              "9": 0.0118735130285977,
+              "10": 0.04558771758963035,
+              "11": 0.025320045453613615,
+              "12": 0.04568002660307088
+            },
+            "confidence": 0.21021730936816516
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9093,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.40419621393084526,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.373942032456398
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2bd9c6725c7efa956434bb10397cf2917d36b7506a23ebb5581adc26c5295fe2",
+      "attempts": [
+        {
+          "seconds": 0.08410078659653664,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.08418496698141098,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.28121446075073364,
+              "1": 0.2875509712705859,
+              "2": 0.4312345679786805
+            },
+            "confidence": 0.14685185196802072
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 702,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06926611810922623,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.493933092802763
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3dce1fa5eb5c653f9277d41253392e8fa4e01a51f75a5b0c160afeeb97f7c5a9",
+      "attempts": [
+        {
+          "seconds": 0.0742231011390686,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07432258129119873,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.27456807274667816,
+              "1": 0.29710828987434573,
+              "2": 0.4283236373789762
+            },
+            "confidence": 0.14248545606846416
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 717,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07256769388914108,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.605778954923153
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e391fbf5613770a12890a0f451e004f0ea55ce08da81f5a2afaef09096ab29f6",
+      "attempts": [
+        {
+          "seconds": 0.07020280137658119,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0702802874147892,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2878328850910377,
+              "1": 0.2996358274437347,
+              "2": 0.4125312874652276
+            },
+            "confidence": 0.11879693119784142
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 732,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06857121363282204,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.7148500196635723
+    },
+    {
+      "step": 11,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "8fdf1b45ee6aff2da8c9b5054e20582ed5d9811b2ad8d553798c682398145e78",
+      "attempts": [
+        {
+          "seconds": 0.07441124692559242,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07448803260922432,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2554735115250491,
+              "1": 0.28488539907582666,
+              "2": 0.45964108939912435
+            },
+            "confidence": 0.18946163409868652
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07294373586773872,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.8250716999173164
+    },
+    {
+      "step": 12,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e269cf5fe42599b8c1d07880c50d4d57941922e9c9a20b58321aa5ca528d6004",
+      "attempts": [
+        {
+          "seconds": 0.07583253085613251,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0759131908416748,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2558988180717726,
+              "1": 0.2653706096102914,
+              "2": 0.47873057231793587
+            },
+            "confidence": 0.21809585847690396
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 672,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07040522620081902,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.937664095312357
+    },
+    {
+      "step": 13,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5092075908861429ad6a601a8ea105cb2187ae944eec0fa12bed3b0fd5bbcfa6",
+      "attempts": [
+        {
+          "seconds": 0.06916305422782898,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06925175338983536,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24346006985260218,
+              "1": 0.24831004044817692,
+              "2": 0.5082298896992209
+            },
+            "confidence": 0.26234483454883134
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 672,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06718897074460983,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.055392928421497
+    },
+    {
+      "step": 14,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "8095a4ba37c8a252edb0a1225ab1ef47d38b4e9e50bb07eae63ef77932607059",
+      "attempts": [
+        {
+          "seconds": 0.06981375813484192,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06989465281367302,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26691252473962035,
+              "1": 0.27354452490681613,
+              "2": 0.4595429503535636
+            },
+            "confidence": 0.18931442553034536
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 672,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06682776287198067,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.1694168001413345
+    },
+    {
+      "step": 15,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "459012deddf0b1c0cb78b5010fbefe40f8ab7c5273d8a1952d80e3c65515dda9",
+      "attempts": [
+        {
+          "seconds": 0.06766150146722794,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0677374117076397,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2373719255913439,
+              "1": 0.27911019464431686,
+              "2": 0.48351787976433935
+            },
+            "confidence": 0.22527681964650903
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06611685454845428,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.272948659956455
+    },
+    {
+      "step": 16,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6ade7b8dcd5b70ea320f8d508c92d05d4a282f7bc97470f989434eb626b4638a",
+      "attempts": [
+        {
+          "seconds": 0.06826940551400185,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06837347894906998,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.23916828523154532,
+              "1": 0.28543662204903947,
+              "2": 0.47539509271941527
+            },
+            "confidence": 0.2130926390791229
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0665179118514061,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.388684883713722
+    },
+    {
+      "step": 17,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "07665e81a9f4fb096c92c4ae14df7c038e42485c4c61d4bbe3f104e66bf4dd35",
+      "attempts": [
+        {
+          "seconds": 0.07624253630638123,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07633969932794571,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24320573948534202,
+              "1": 0.2798009605493344,
+              "2": 0.47699329996532364
+            },
+            "confidence": 0.21548994994798545
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07451924681663513,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.501046989113092
+    },
+    {
+      "step": 18,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7950842af6bfa69e091677f2b4cc484da6f0152ccec9dbf6b7d97ae371f2f2ba",
+      "attempts": [
+        {
+          "seconds": 0.07102126255631447,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07111287489533424,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.23994901707797667,
+              "1": 0.2744555832171093,
+              "2": 0.4855953997049141
+            },
+            "confidence": 0.22839309955737117
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06801167875528336,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.608576275408268
+    },
+    {
+      "step": 19,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2cd04e648cd2b0159e7f4ef7e0ac3d4e828545ad0f9f43f94be2d6de7af52b87",
+      "attempts": [
+        {
+          "seconds": 0.06838995963335037,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06845027208328247,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.23782303343447192,
+              "1": 0.2786952832422561,
+              "2": 0.483481683323272
+            },
+            "confidence": 0.22522252498490802
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06692161411046982,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.712477590888739
+    },
+    {
+      "step": 20,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "161bda76584d9c303ef81da62c472d46dae8a644871a0c1bfa00e39f3d49c343",
+      "attempts": [
+        {
+          "seconds": 0.07417096942663193,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07425355911254883,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.23770383442606927,
+              "1": 0.27361609889150734,
+              "2": 0.4886800666824235
+            },
+            "confidence": 0.2330201000236352
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0661846287548542,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.821448341012001
+    },
+    {
+      "step": 21,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2424e76d5c1e8ca6dffdab5b9850dfecf24263aa7cf4b216254c0691d9f80fe6",
+      "attempts": [
+        {
+          "seconds": 0.07186195999383926,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0719183199107647,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2341819482107282,
+              "1": 0.27902890642123557,
+              "2": 0.48678914536803625
+            },
+            "confidence": 0.23018371805205437
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06652332469820976,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.931750379502773
+    },
+    {
+      "step": 22,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2059842f15216e415bd1c89fe0ec7bc9f203dfd03f91f853263a9bd1c9cf3bee",
+      "attempts": [
+        {
+          "seconds": 0.06820903345942497,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06828677281737328,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2538597036690666,
+              "1": 0.3020371174198999,
+              "2": 0.4441031789110335
+            },
+            "confidence": 0.16615476836655027
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06669341027736664,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.040354888886213
+    },
+    {
+      "step": 23,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 21 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 21 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4909110f775cce2b87b2cce3a1e3360405e9a9149d8ed5e8624c7e5fbd4eb4c1",
+      "attempts": [
+        {
+          "seconds": 0.0765678733587265,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07664812728762627,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24834688266356758,
+              "1": 0.3016560022660483,
+              "2": 0.4499971150703841
+            },
+            "confidence": 0.17499567260557614
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06619294360280037,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.155396685004234
+    },
+    {
+      "step": 24,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 22 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 22 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1faa0e889802e0e5114b9d9aace02ebfa8c7ccd81cd01c62255c7d2acdade3a9",
+      "attempts": [
+        {
+          "seconds": 0.06777388975024223,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06788117811083794,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.25360362377966605,
+              "1": 0.2949171105921942,
+              "2": 0.45147926562813984
+            },
+            "confidence": 0.1772188984422096
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06607671082019806,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.259615182876587
+    },
+    {
+      "step": 25,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 23 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 23 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "88a06cd48772b47f75b8d111fe6ed90316eb4a232bdd32e40ec6602dc1a3bfcf",
+      "attempts": [
+        {
+          "seconds": 0.06965456157922745,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06974857300519943,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2541748862586861,
+              "1": 0.30130879765099716,
+              "2": 0.44451631609031667
+            },
+            "confidence": 0.166774474135475
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0671171173453331,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.365838374942541
+    },
+    {
+      "step": 26,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 24 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 24 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0ce56b0cb24f356534d4df4d25bf146bed51a7807ab48e11d79464d8f52148b5",
+      "attempts": [
+        {
+          "seconds": 0.06933613494038582,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0694144256412983,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.25267586538386033,
+              "1": 0.3019923443211519,
+              "2": 0.4453317902949878
+            },
+            "confidence": 0.16799768544248173
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0677022747695446,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.471127584576607
+    },
+    {
+      "step": 27,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 25 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 25 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d356ba068a22d6ae27c21b1e7065fc6ec878787b8e9a573b14e38752c35074bf",
+      "attempts": [
+        {
+          "seconds": 0.07818093150854111,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07824673503637314,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24983689632370673,
+              "1": 0.2973684232669128,
+              "2": 0.45279468040938053
+            },
+            "confidence": 0.1791920206140708
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06669806689023972,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.594955563545227
+    },
+    {
+      "step": 28,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 26 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 26 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0a6bfa3b10b327f6f7931c5f43dffea9c8aa7be218d93dcb4d273f71228294bb",
+      "attempts": [
+        {
+          "seconds": 0.07447116822004318,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07453586533665657,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2472163623907595,
+              "1": 0.28987368111155676,
+              "2": 0.46290995649768385
+            },
+            "confidence": 0.19436493474652577
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0661911815404892,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.713290184736252
+    },
+    {
+      "step": 29,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 27 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 27 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ed25d6d7c88e98d7af8e4dd025df7387430e9b750261e5f82d182b0caa6114ae",
+      "attempts": [
+        {
+          "seconds": 0.06885175406932831,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06893386319279671,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24416020905605415,
+              "1": 0.29958208404720715,
+              "2": 0.45625770689673867
+            },
+            "confidence": 0.184386560345108
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06720291078090668,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.817512709647417
+    },
+    {
+      "step": 30,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 28 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 28 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2318e5a2e990a4cd143587dd7a4f052d44d2d0253ce826363856495d27134691",
+      "attempts": [
+        {
+          "seconds": 0.06762419268488884,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06770315766334534,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24629177041160688,
+              "1": 0.3009232855552834,
+              "2": 0.4527849440331097
+            },
+            "confidence": 0.17917741604966456
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06617304682731628,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.920877601951361
+    },
+    {
+      "step": 31,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 29 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 29 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4d0f7ffc244bf2ad05077f0b84fa60ce2f2906fbbbe5f545af08f369e557ea29",
+      "attempts": [
+        {
+          "seconds": 0.06617572531104088,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06629598140716553,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2483239106096668,
+              "1": 0.31425802284973503,
+              "2": 0.43741806654059806
+            },
+            "confidence": 0.15612709981089726
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06486223265528679,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.022171434015036
+    },
+    {
+      "step": 32,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 30 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 30 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "8c464e942056869bb230510b06651f4b05c61b8ed611b5d30c97147319db760e",
+      "attempts": [
+        {
+          "seconds": 0.07414624840021133,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0742233581840992,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2653087994675962,
+              "1": 0.3146623661742311,
+              "2": 0.42002883435817273
+            },
+            "confidence": 0.1300432515372591
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0686723031103611,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.153146784752607
+    },
+    {
+      "step": 33,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 31 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 31 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "9c5a13429f22e108502c03b39e1c4275352e8716b46994990fe05e306f23a060",
+      "attempts": [
+        {
+          "seconds": 0.06765656545758247,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06772954761981964,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26433881657926994,
+              "1": 0.30234074434878594,
+              "2": 0.43332043907194406
+            },
+            "confidence": 0.1499806586079161
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06596827879548073,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.269187089055777
+    },
+    {
+      "step": 34,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 32 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 32 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "faed045c50a067a064e63c04998644891035788c97ced93b6d1d93f51b035cee",
+      "attempts": [
+        {
+          "seconds": 0.06904567405581474,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06912894919514656,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.25306238034589723,
+              "1": 0.31108774243880294,
+              "2": 0.43584987721529983
+            },
+            "confidence": 0.15377481582294975
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06725018844008446,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.386312872171402
+    },
+    {
+      "step": 35,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 33 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 33 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "092010a2d3630fcffb7d48d12cf5e3dd7f9c4f91ad0f0eda8b6acc11920ca94e",
+      "attempts": [
+        {
+          "seconds": 0.07007750868797302,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07016391679644585,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2534587331260233,
+              "1": 0.30381147794086716,
+              "2": 0.4427297889331096
+            },
+            "confidence": 0.1640946833996644
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06807798892259598,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.4927616864442825
+    },
+    {
+      "step": 36,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 34 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 34 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "625db437752080675681dbfcc484182bc1bbaee92357b442ef13c402831cb9ff",
+      "attempts": [
+        {
+          "seconds": 0.06864865496754646,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06873039901256561,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2551345824026067,
+              "1": 0.3155829227427378,
+              "2": 0.42928249485465547
+            },
+            "confidence": 0.1439237422819832
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06713014841079712,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.59625031426549
+    },
+    {
+      "step": 37,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 35 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 35 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ab45c1a0935998abda5910f0231257e78bbccb2cff96184fca6e9ddd7a66bdf4",
+      "attempts": [
+        {
+          "seconds": 0.07234473153948784,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07241371273994446,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.23960797165171674,
+              "1": 0.2970700074559104,
+              "2": 0.4633220208923729
+            },
+            "confidence": 0.19498303133855935
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06647751852869987,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.703613713383675
+    },
+    {
+      "step": 38,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 36 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 36 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2ff262aa0838deef463b2fc7f59ea77b80ad8b49661f6b2f59008feda9e6c558",
+      "attempts": [
+        {
+          "seconds": 0.07188296690583229,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07196348160505295,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24740639800052822,
+              "1": 0.30510703198844547,
+              "2": 0.4474865700110264
+            },
+            "confidence": 0.17122985501653956
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0659136027097702,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.841869335621595
+    },
+    {
+      "step": 39,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 37 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 37 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "43eb7542aed28010975f44b88fd21b732657867134addff2241c2796f82fec39",
+      "attempts": [
+        {
+          "seconds": 0.0675501897931099,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06762895360589027,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24699533945328564,
+              "1": 0.30273681683536763,
+              "2": 0.45026784371134676
+            },
+            "confidence": 0.17540176556702014
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06611024960875511,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.945087969303131
+    },
+    {
+      "step": 40,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 38 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 38 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d237aeaf28cf968cbc42157c27e706353e8160cdb60af5af93ec779183f2095b",
+      "attempts": [
+        {
+          "seconds": 0.07064490020275116,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07071872055530548,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24698239187330512,
+              "1": 0.31038055598801373,
+              "2": 0.44263705213868115
+            },
+            "confidence": 0.16395557820802173
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06624644249677658,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.066220626235008
+    },
+    {
+      "step": 41,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 39 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 39 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1933c31c4b807402dad211aab7800a98160796f2e5ef1588ef0cc3caf3347d6c",
+      "attempts": [
+        {
+          "seconds": 0.07746412232518196,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07754616811871529,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24779194793828868,
+              "1": 0.3120576365180841,
+              "2": 0.4401504155436272
+            },
+            "confidence": 0.16022562331544082
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06770897656679153,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.191045884042978
+    },
+    {
+      "step": 42,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 40 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 40 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "85d38df1ae34fa628feb10bea3e5b2f40b3c78928e72c75ecac6801081ee7462",
+      "attempts": [
+        {
+          "seconds": 0.07277277857065201,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07282805442810059,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.25296627008613193,
+              "1": 0.31376119424747806,
+              "2": 0.43327253566639
+            },
+            "confidence": 0.14990880349958502
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06893356144428253,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.298559285700321
+    },
+    {
+      "step": 43,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 41 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 41 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d1135285d46d5efcecd4e2afe75b6e45173bf7680c1192661851ab099cd0d76b",
+      "attempts": [
+        {
+          "seconds": 0.0681193396449089,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06819191202521324,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.25829752037416553,
+              "1": 0.30855653512387676,
+              "2": 0.43314594450195765
+            },
+            "confidence": 0.14971891675293647
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06648662313818932,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.40168771147728
+    },
+    {
+      "step": 44,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 42 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 42 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f7621872421e765c0f6f051dcc7b735420258d1ecc2c66366b494fc3ec62f496",
+      "attempts": [
+        {
+          "seconds": 0.06765205413103104,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06772571057081223,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2537178307318266,
+              "1": 0.2983030592096016,
+              "2": 0.4479791100585718
+            },
+            "confidence": 0.17196866508785766
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06611355394124985,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.505240052938461
+    },
+    {
+      "step": 45,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 43 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 43 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "fb3dc3994dbb2147a983c8b0d6fa99ccfa96287caf5630604978ebef7d045192",
+      "attempts": [
+        {
+          "seconds": 0.06824720278382301,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0683128759264946,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2549521996817826,
+              "1": 0.3052597680059906,
+              "2": 0.4397880323122269
+            },
+            "confidence": 0.1596820484683402
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06651763245463371,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.608289442956448
+    },
+    {
+      "step": 46,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 44 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 44 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "8f586516fb177748e8ce265c306a5370ff70b3565d46c2ee157ca7a38ca7db1c",
+      "attempts": [
+        {
+          "seconds": 0.07516366615891457,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07522072643041611,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24758937848752546,
+              "1": 0.30395306737299777,
+              "2": 0.44845755413947685
+            },
+            "confidence": 0.17268633120921528
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06661668419837952,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.718276862055063
+    },
+    {
+      "step": 47,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 45 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 45 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "586d565f2f05ad13f46b4843cb5b5ff6d8475024630833161714a55f925e8d9e",
+      "attempts": [
+        {
+          "seconds": 0.07297426462173462,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07303179055452347,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24810686424444486,
+              "1": 0.3041561058040714,
+              "2": 0.44773702995148373
+            },
+            "confidence": 0.1716055449272256
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06713318452239037,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.825494088232517
+    },
+    {
+      "step": 48,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 46 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 46 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "676c49e96dfabc66d351903e41b409407a779a1352f531c4e3417099b8e5b5a2",
+      "attempts": [
+        {
+          "seconds": 0.06818846240639687,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06826049089431763,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2540325737898115,
+              "1": 0.31017630614517666,
+              "2": 0.4357911200650119
+            },
+            "confidence": 0.15368668009751787
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06635608896613121,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.929468434303999
+    },
+    {
+      "step": 49,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 47 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 47 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "aa1037099d07b3457219d9a13eff42d7644e2244b8b5d1b6fd202df7590b0b36",
+      "attempts": [
+        {
+          "seconds": 0.06795046478509903,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0680060051381588,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.25527539297503743,
+              "1": 0.31709907061256604,
+              "2": 0.4276255364123966
+            },
+            "confidence": 0.14143830461859488
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06659740954637527,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.03191551566124
+    },
+    {
+      "step": 50,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 48 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 48 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "834ec04616331b4d16255bb10ff0dd541b8f4cdb13a017c2d1c5966edbf0a36d",
+      "attempts": [
+        {
+          "seconds": 0.06786180287599564,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0679367184638977,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.25915272289898833,
+              "1": 0.315952614906359,
+              "2": 0.4248946621946526
+            },
+            "confidence": 0.1373419932919789
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06626764312386513,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.142431005835533
+    },
+    {
+      "step": 51,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 49 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 49 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "cd6855be888d893ce28c1d08ef01442a23f8bf28d9bd7c03a00473618376c260",
+      "attempts": [
+        {
+          "seconds": 0.08387181907892227,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.08394494652748108,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.2849135341410108,
+              "1": 0.36847508688527136,
+              "2": 0.34661137897371797
+            },
+            "confidence": 0.052712630327907066
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 669,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06597090885043144,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[< prev]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.33187110349536
+    },
+    {
+      "step": 52,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 48 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 48 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d7f6da54a8e895e48e368902926a898db1d5c19aec512c2b58e19f1ac88b7b5f",
+      "attempts": [
+        {
+          "seconds": 0.06997177749872208,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07004709914326668,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2608611681755338,
+              "1": 0.223319077054401,
+              "2": 0.5158197547700653
+            },
+            "confidence": 0.2737296321550979
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 672,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06841962784528732,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.43698612973094
+    },
+    {
+      "step": 53,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 49 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 49 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "264ed8341b46db619f5f069fe85c9df0e4557c188c0a06720c65aa228258ac59",
+      "attempts": [
+        {
+          "seconds": 0.06851726397871971,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06859168037772179,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2871432334840776,
+              "1": 0.29911700964721655,
+              "2": 0.41373975686870595
+            },
+            "confidence": 0.12060963530305878
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 672,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06693831458687782,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.540384449064732
+    },
+    {
+      "step": 54,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 50 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 50 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "752be451f50b734ded022eb2156d8bb2713562591ec1d9bd19d065738f9b0bda",
+      "attempts": [
+        {
+          "seconds": 0.06809137016534805,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0681685097515583,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2799572510549165,
+              "1": 0.28585275194406073,
+              "2": 0.4341899970010228
+            },
+            "confidence": 0.15128499550153418
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 672,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06635138392448425,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.643178924918175
+    },
+    {
+      "step": 55,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 51 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 51 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "86a90e1a6faa874d2c176fae0b78ba21829fbc9bc5c03cb9bf020fa2d84b91b9",
+      "attempts": [
+        {
+          "seconds": 0.06787319853901863,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0679478757083416,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.4323335741525946,
+              "1": 0.3493651660643303,
+              "2": 0.21830125978307507
+            },
+            "confidence": 0.1485003612288919
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 672,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06651627644896507,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.717157315462828
+    },
+    {
+      "step": 56,
+      "observation": "WebShop [SEP] Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Search",
+      "action": "search[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.756710518151522
+    },
+    {
+      "step": 57,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07B8B2V3Y [SEP] Splat | Lemon Drop | 1.5 oz. Foil Pack | 30 Wash | Temporary Yellow Hair Dye [SEP] $7.25 [SEP] B009S7DK4Y [SEP] Garnier Olia Permanent Hair Colour 5.3 Golden Brown [SEP] $12.99 [SEP] B00H4W383I [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 7GR Light Golden Red Hair Color, 1 Count [SEP] $100.0 [SEP] B08L8C9TF4 [SEP] Splat Midnight Rosetta Pink Semi-Permanent Hair Dye [SEP] $24.17 [SEP] B00H4W383S [SEP] Clairol Natural Instincts 38 Burgundy Black 1 Kit [SEP] $9.98 [SEP] B09KB7VCM1 [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CARAMEL BROWN) [SEP] $27.0 [SEP] B09KBND9ZF [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CLEAR (Shine Clear)) [SEP] $27.0 [SEP] B09KBP39GG [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (HONEYCOMB BLOND BLONDE) [SEP] $27.0 [SEP] B07HGD73QV [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 8 Medium Natural Blonde Hair Color, 3 Count [SEP] $22.18 [SEP] B07HGD9BVY [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 2RV Burgundy Black Hair Color, 3 Count [SEP] $29.99",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07B8B2V3Y [SEP] Splat | Lemon Drop | 1.5 oz. Foil Pack | 30 Wash | Temporary Yellow Hair Dye [SEP] $7.25 [SEP] B009S7DK4Y [SEP] Garnier Olia Permanent Hair Colour 5.3 Golden Brown [SEP] $12.99 [SEP] B00H4W383I [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 7GR Light Golden Red Hair Color, 1 Count [SEP] $100.0 [SEP] B08L8C9TF4 [SEP] Splat Midnight Rosetta Pink Semi-Permanent Hair Dye [SEP] $24.17 [SEP] B00H4W383S [SEP] Clairol Natural Instincts 38 Burgundy Black 1 Kit [SEP] $9.98 [SEP] B09KB7VCM1 [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CARAMEL BROWN) [SEP] $27.0 [SEP] B09KBND9ZF [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CLEAR (Shine Clear)) [SEP] $27.0 [SEP] B09KBP39GG [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (HONEYCOMB BLOND BLONDE) [SEP] $27.0 [SEP] B07HGD73QV [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 8 Medium Natural Blonde Hair Color, 3 Count [SEP] $22.18 [SEP] B07HGD9BVY [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 2RV Burgundy Black Hair Color, 3 Count [SEP] $29.99\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07b8b2v3y]",
+              "3": "click[b009s7dk4y]",
+              "4": "click[b00h4w383i]",
+              "5": "click[b08l8c9tf4]",
+              "6": "click[b00h4w383s]",
+              "7": "click[b09kb7vcm1]",
+              "8": "click[b09kbnd9zf]",
+              "9": "click[b09kbp39gg]",
+              "10": "click[b07hgd73qv]",
+              "11": "click[b07hgd9bvy]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0f5391de95ecbfa76a9e427d43d8194030aa200918419d38ae71475f7ac17656",
+      "attempts": [
+        {
+          "seconds": 0.4256938248872757,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.42581136524677277,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.1349528075022922,
+              "1": 0.41602949732563077,
+              "2": 0.04697714729298945,
+              "3": 0.06134518616186624,
+              "4": 0.03743362592504653,
+              "5": 0.051531995212706815,
+              "6": 0.04536694064291841,
+              "7": 0.0319649252794133,
+              "8": 0.02701259815085672,
+              "9": 0.03178647335304735,
+              "10": 0.04981130926497549,
+              "11": 0.06578749388825698
+            },
+            "confidence": 0.3629412698097789
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9575,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.42397378012537956,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 9.236309856176376
+    },
+    {
+      "step": 58,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00153EZ02 [SEP] La Riche Directions Hair Dye Colour Semi Permanent - Alpine Green - 88 ml / 30 oz [SEP] $11.0 [SEP] B00O29VGLM [SEP] MANIC PANIC Blue Steel Hair Color Classic [SEP] $13.99 [SEP] B0962THZCM [SEP] Lunar Tides Hair Dye - Neon Dragonfruit Hot Pink Semi-Permanent Vegan Hair Color (4 fl oz / 118 ml) [SEP] $15.99 [SEP] B08CT5BD96 [SEP] Permanent Hair Dye Medium Blond 7 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTGS3KT [SEP] Permanent Hair Dye Platinum Blond 11 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTHMLF5 [SEP] Permanent Hair Dye Medium Chocolate Brown 5.07 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTK31T8 [SEP] Permanent Hair Dye Dark Blond Natural Ash 6.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTPRP83 [SEP] Permanent Hair Dye Light Blond Natural Ash 8.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTZXTNG [SEP] Permanent Hair Dye Red Blond Intense 7.66 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CV1FPTZ [SEP] Permanent Hair Dye Dark Intense Red 6.6 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00153EZ02 [SEP] La Riche Directions Hair Dye Colour Semi Permanent - Alpine Green - 88 ml / 30 oz [SEP] $11.0 [SEP] B00O29VGLM [SEP] MANIC PANIC Blue Steel Hair Color Classic [SEP] $13.99 [SEP] B0962THZCM [SEP] Lunar Tides Hair Dye - Neon Dragonfruit Hot Pink Semi-Permanent Vegan Hair Color (4 fl oz / 118 ml) [SEP] $15.99 [SEP] B08CT5BD96 [SEP] Permanent Hair Dye Medium Blond 7 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTGS3KT [SEP] Permanent Hair Dye Platinum Blond 11 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTHMLF5 [SEP] Permanent Hair Dye Medium Chocolate Brown 5.07 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTK31T8 [SEP] Permanent Hair Dye Dark Blond Natural Ash 6.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTPRP83 [SEP] Permanent Hair Dye Light Blond Natural Ash 8.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTZXTNG [SEP] Permanent Hair Dye Red Blond Intense 7.66 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CV1FPTZ [SEP] Permanent Hair Dye Dark Intense Red 6.6 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b00153ez02]",
+              "4": "click[b00o29vglm]",
+              "5": "click[b0962thzcm]",
+              "6": "click[b08ct5bd96]",
+              "7": "click[b08ctgs3kt]",
+              "8": "click[b08cthmlf5]",
+              "9": "click[b08ctk31t8]",
+              "10": "click[b08ctprp83]",
+              "11": "click[b08ctzxtng]",
+              "12": "click[b08cv1fptz]"
+            }
+          }
+        }
+      },
+      "request_sha256": "037ad57eb2d1bfb1b830c6d6947badbeba8c3d0def2d2a476fc222d5b593eb8c",
+      "attempts": [
+        {
+          "seconds": 0.4879332296550274,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.48806507140398026,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.09901086171512129,
+              "1": 0.16522568990171546,
+              "2": 0.404741559294884,
+              "3": 0.017766691088840703,
+              "4": 0.04063711658849014,
+              "5": 0.029030798325135738,
+              "6": 0.035712310455996044,
+              "7": 0.02322512999315885,
+              "8": 0.035247426252237424,
+              "9": 0.025325508296192272,
+              "10": 0.030836280058436,
+              "11": 0.047597031220430026,
+              "12": 0.045643596809362134
+            },
+            "confidence": 0.3551366892361243
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11050,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.48615623638033867,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 9.775146551430225
+    },
+    {
+      "step": 59,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B000KOQ3MA [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, R68 Ruby Rush (Rich Auburn True Red), Pack of 1, Hair Dye [SEP] $9.97 [SEP] B0012NS7LI [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, 20 Black Leather (Natural Black), Pack of 1, Hair Dye [SEP] $9.69 [SEP] B00B1DR8QY [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, R57 Cherry Crush (Intense Medium Auburn), Pack of 1, Hair Dye [SEP] $9.69 [SEP] B079FPB6VH [SEP] Clairol Nice'n Easy Permanent Hair Dye, 10C Extra Light Cool Blonde Hair Color, 1 Count [SEP] $7.99 [SEP] B08QRXF1TJ [SEP] One 'n Only Colorfix Color Remover Fix with Argan Oil, Removes Unwanted Permanent Hair Color Dye (w/Sleek Teasing Comb) One & Only Haircolor Fix (3-PART SYSTEM (PACK OF 1)) [SEP] $100.0 [SEP] B08QV1LJ5Q [SEP] D de la Vega Color, Permanent Cream, Hair Dye Kit, 2.0 Black , 2 boxes [SEP] $7.3 [SEP] B06XBP55YW [SEP] Pack of 1 Box Berina Black Hair Dye A1 Hair Color Cream Black 60 G. Super Permanent Fashion Unisex [SEP] $8.99 [SEP] B09JNSDCFR [SEP] Newmind Hair Dye Washable Quick Fast-Drying Disposable Hair Color Spray for Halloween Christmas - Grey [SEP] $9.98 [SEP] B07KJQDVM4 [SEP] Garnier Olia Bold Ammonia Free Permanent Hair Color (Packaging May Vary), 7.20 Dark Rose Quartz, Rose Hair Dye, 1 Kit, Pack of 1 [SEP] $100.0 [SEP] B072HX5ZZS [SEP] Keracolor Clenditioner Hair Dye (19 colors) Semi Permanent Hair Color Depositing Conditioner [SEP] $22.0",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B000KOQ3MA [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, R68 Ruby Rush (Rich Auburn True Red), Pack of 1, Hair Dye [SEP] $9.97 [SEP] B0012NS7LI [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, 20 Black Leather (Natural Black), Pack of 1, Hair Dye [SEP] $9.69 [SEP] B00B1DR8QY [SEP] L'Oreal Paris Feria Multi-Faceted Shimmering Permanent Hair Color, R57 Cherry Crush (Intense Medium Auburn), Pack of 1, Hair Dye [SEP] $9.69 [SEP] B079FPB6VH [SEP] Clairol Nice'n Easy Permanent Hair Dye, 10C Extra Light Cool Blonde Hair Color, 1 Count [SEP] $7.99 [SEP] B08QRXF1TJ [SEP] One 'n Only Colorfix Color Remover Fix with Argan Oil, Removes Unwanted Permanent Hair Color Dye (w/Sleek Teasing Comb) One & Only Haircolor Fix (3-PART SYSTEM (PACK OF 1)) [SEP] $100.0 [SEP] B08QV1LJ5Q [SEP] D de la Vega Color, Permanent Cream, Hair Dye Kit, 2.0 Black , 2 boxes [SEP] $7.3 [SEP] B06XBP55YW [SEP] Pack of 1 Box Berina Black Hair Dye A1 Hair Color Cream Black 60 G. Super Permanent Fashion Unisex [SEP] $8.99 [SEP] B09JNSDCFR [SEP] Newmind Hair Dye Washable Quick Fast-Drying Disposable Hair Color Spray for Halloween Christmas - Grey [SEP] $9.98 [SEP] B07KJQDVM4 [SEP] Garnier Olia Bold Ammonia Free Permanent Hair Color (Packaging May Vary), 7.20 Dark Rose Quartz, Rose Hair Dye, 1 Kit, Pack of 1 [SEP] $100.0 [SEP] B072HX5ZZS [SEP] Keracolor Clenditioner Hair Dye (19 colors) Semi Permanent Hair Color Depositing Conditioner [SEP] $22.0\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b000koq3ma]",
+              "4": "click[b0012ns7li]",
+              "5": "click[b00b1dr8qy]",
+              "6": "click[b079fpb6vh]",
+              "7": "click[b08qrxf1tj]",
+              "8": "click[b08qv1lj5q]",
+              "9": "click[b06xbp55yw]",
+              "10": "click[b09jnsdcfr]",
+              "11": "click[b07kjqdvm4]",
+              "12": "click[b072hx5zzs]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c6c0c4df7199d0fcce6bd45add04f19970416f82c5e1a8bbd830d21fe00a7256",
+      "attempts": [
+        {
+          "seconds": 0.4527505151927471,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.45286034792661667,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.10651955784523444,
+              "1": 0.14687899931429835,
+              "2": 0.35742346248182094,
+              "3": 0.02478609047193482,
+              "4": 0.03217888322517124,
+              "5": 0.032494083429878855,
+              "6": 0.038539712198682984,
+              "7": 0.022000922646949455,
+              "8": 0.031245091776741805,
+              "9": 0.07002531479307748,
+              "10": 0.02800708889991069,
+              "11": 0.04472059382930617,
+              "12": 0.06518019908699281
+            },
+            "confidence": 0.30387541768863935
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10206,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4508757255971432,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 10.278054561465979
+    }
+  ]
+}

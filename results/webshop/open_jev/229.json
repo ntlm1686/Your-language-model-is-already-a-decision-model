@@ -1,0 +1,427 @@
+{
+  "task_id": 229,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars",
+  "instruction_sha256": "0fedc2d474a471bd96b301bfef5acfed178c2d70760c13d96766aa465844f95e",
+  "reward": 0.3333333333333333,
+  "score": 33.33333333333333,
+  "success": false,
+  "termination": "purchase",
+  "steps": 6,
+  "elapsed_seconds": 1.9599533379077911,
+  "decision_seconds": 1.6745298951864243,
+  "input_tokens": 37501,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.04880065098404884
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07CVRHKGQ [SEP] Easter Day, St. Patrick's Day, Mothers Day & Fathers Day I Am Sorry Thinking of You Congratulations Graduation Thank You Anniversary Valentines day Popcorn Gift (Thinking of You) [SEP] $39.95 [SEP] B08XYCS6TT [SEP] Welcome Baby Boy! Baby Shower Popcorn Bags (20 Pack) [SEP] $45.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B094LBTHZM [SEP] Sports Team Easter Day Favor St. Patrick's Day Favor Goodie Bag Easy Snacks - Popcorn Candy & Juice Pouch - Gift Pack for Presents Husband Wife’s & for Any Events - 12 Pack (Pink) by Just Popped [SEP] $55.0 [SEP] B094M7P39S [SEP] Sports Team St. Patrick's Day Favor Easter Day Favor Goodie Bag Easy Snacks - Popcorn Candy & Juice Pouch - Gift Pack for Presents Husband Wife’s & for Any Events - 12 Pack (Pink) by Just Popped [SEP] $55.0 [SEP] B08TRNKYWP [SEP] \"Welcome Baby\" Popcorn Boxes (20 Pcs) -1 Pack [SEP] $5.43 [SEP] B082NLH5YJ [SEP] Pink Mini Popcorn Boxes,Pack of 36 [SEP] $12.99 [SEP] B094VH6JK6 [SEP] Little Man Cake Topper for Baby Shower - Little Man Birthday Decorations - Mustache Cake Topper(LITTLE MAN TOPPER) [SEP] $7.99 [SEP] B09RY8494Y [SEP] Honey Bee Party Favor Snack Boxes for Gender Reveal, Birthday Parties, Bridal Showers, Baby Showers, or Backyard Summer gatherings. Set of 12 Reversible Honey Bee Scalloped Popcorn Boxes [SEP] $12.95 [SEP] B08XYBBZPV [SEP] It's a Boy! Baby Shower Popcorn (20 Pack) [SEP] $45.0",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07CVRHKGQ [SEP] Easter Day, St. Patrick's Day, Mothers Day & Fathers Day I Am Sorry Thinking of You Congratulations Graduation Thank You Anniversary Valentines day Popcorn Gift (Thinking of You) [SEP] $39.95 [SEP] B08XYCS6TT [SEP] Welcome Baby Boy! Baby Shower Popcorn Bags (20 Pack) [SEP] $45.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B094LBTHZM [SEP] Sports Team Easter Day Favor St. Patrick's Day Favor Goodie Bag Easy Snacks - Popcorn Candy & Juice Pouch - Gift Pack for Presents Husband Wife’s & for Any Events - 12 Pack (Pink) by Just Popped [SEP] $55.0 [SEP] B094M7P39S [SEP] Sports Team St. Patrick's Day Favor Easter Day Favor Goodie Bag Easy Snacks - Popcorn Candy & Juice Pouch - Gift Pack for Presents Husband Wife’s & for Any Events - 12 Pack (Pink) by Just Popped [SEP] $55.0 [SEP] B08TRNKYWP [SEP] \"Welcome Baby\" Popcorn Boxes (20 Pcs) -1 Pack [SEP] $5.43 [SEP] B082NLH5YJ [SEP] Pink Mini Popcorn Boxes,Pack of 36 [SEP] $12.99 [SEP] B094VH6JK6 [SEP] Little Man Cake Topper for Baby Shower - Little Man Birthday Decorations - Mustache Cake Topper(LITTLE MAN TOPPER) [SEP] $7.99 [SEP] B09RY8494Y [SEP] Honey Bee Party Favor Snack Boxes for Gender Reveal, Birthday Parties, Bridal Showers, Baby Showers, or Backyard Summer gatherings. Set of 12 Reversible Honey Bee Scalloped Popcorn Boxes [SEP] $12.95 [SEP] B08XYBBZPV [SEP] It's a Boy! Baby Shower Popcorn (20 Pack) [SEP] $45.0\n\nRecent actions:\nsearch[i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07cvrhkgq]",
+              "3": "click[b08xycs6tt]",
+              "4": "click[b09kcl5gk5]",
+              "5": "click[b094lbthzm]",
+              "6": "click[b094m7p39s]",
+              "7": "click[b08trnkywp]",
+              "8": "click[b082nlh5yj]",
+              "9": "click[b094vh6jk6]",
+              "10": "click[b09ry8494y]",
+              "11": "click[b08xybbzpv]"
+            }
+          }
+        }
+      },
+      "request_sha256": "dcfeef7485ce840ed4ae3db101aa60105b4eb0293213fe904304d27596be6652",
+      "attempts": [
+        {
+          "seconds": 0.3900251053273678,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.39021292328834534,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.11851595158126609,
+              "1": 0.22799548176323428,
+              "2": 0.10292916106454775,
+              "3": 0.04131501293746758,
+              "4": 0.023966990724460287,
+              "5": 0.029090782975451892,
+              "6": 0.022071327669722203,
+              "7": 0.08279737205929259,
+              "8": 0.09971520390381448,
+              "9": 0.08612250627501002,
+              "10": 0.10784201998293509,
+              "11": 0.057638189062797815
+            },
+            "confidence": 0.1578132528326192
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8704,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.38773973286151886,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5019555538892746
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08P1G28W3 [SEP] Keaziu 48 Pack Dollar Sign Cupcake Topper For Theme Party Wedding Birthday Baby Shower Decorations Party Supplies [SEP] $8.99 [SEP] B08XY9W899 [SEP] It's A Girl! Baby Shower Popcorn Bags (20 Pack) [SEP] $45.0 [SEP] B08TRNY4B2 [SEP] \"It's a Girl!\" Pink Popcorn Boxes (20 Pcs) - 1 Pack [SEP] $7.56 [SEP] B07JBT1VH4 [SEP] Woodland Baby Shower Cupcake Wrappers and Toppers - 24 Sets - Woodland Deer Birthday Party Decorations - Wild One Party Supplies (Woodland Deer) [SEP] $7.75 [SEP] B0743GFCWW [SEP] Baby Blue Popped Popcorn 91 oz (Bulk 5 gal 80 cups) [SEP] $37.99 [SEP] B09HWBPVMJ [SEP] Bedford Candies Cheddar Cheese Flavored Gourmet Popcorn Size Medium 9 Cups Individually Bagged Fresh Popcorn Treats Gifts for Any Occasion 4.5 Ounce Bag [SEP] $12.0 [SEP] B09RZNZ8D7 [SEP] Donut Grow Up Doughnut Party Favor Snack Boxes for Kids Birthday Party Supplies, Baby Showers, two sweet celebrations, sprinkles, School Events. Set of 12 Reversible Scalloped Popcorn Boxes [SEP] $12.95 [SEP] B00W5X2L9S [SEP] Sylvania Portable CD Boombox with AM/FM Radio (Champagne) [SEP] $24.88 [SEP] B0743KXQJ5 [SEP] Baby Pink Popped Popcorn 91 oz. (Bulk 5 gal, 80 Cups) [SEP] $37.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08P1G28W3 [SEP] Keaziu 48 Pack Dollar Sign Cupcake Topper For Theme Party Wedding Birthday Baby Shower Decorations Party Supplies [SEP] $8.99 [SEP] B08XY9W899 [SEP] It's A Girl! Baby Shower Popcorn Bags (20 Pack) [SEP] $45.0 [SEP] B08TRNY4B2 [SEP] \"It's a Girl!\" Pink Popcorn Boxes (20 Pcs) - 1 Pack [SEP] $7.56 [SEP] B07JBT1VH4 [SEP] Woodland Baby Shower Cupcake Wrappers and Toppers - 24 Sets - Woodland Deer Birthday Party Decorations - Wild One Party Supplies (Woodland Deer) [SEP] $7.75 [SEP] B0743GFCWW [SEP] Baby Blue Popped Popcorn 91 oz (Bulk 5 gal 80 cups) [SEP] $37.99 [SEP] B09HWBPVMJ [SEP] Bedford Candies Cheddar Cheese Flavored Gourmet Popcorn Size Medium 9 Cups Individually Bagged Fresh Popcorn Treats Gifts for Any Occasion 4.5 Ounce Bag [SEP] $12.0 [SEP] B09RZNZ8D7 [SEP] Donut Grow Up Doughnut Party Favor Snack Boxes for Kids Birthday Party Supplies, Baby Showers, two sweet celebrations, sprinkles, School Events. Set of 12 Reversible Scalloped Popcorn Boxes [SEP] $12.95 [SEP] B00W5X2L9S [SEP] Sylvania Portable CD Boombox with AM/FM Radio (Champagne) [SEP] $24.88 [SEP] B0743KXQJ5 [SEP] Baby Pink Popped Popcorn 91 oz. (Bulk 5 gal, 80 Cups) [SEP] $37.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09\n\nRecent actions:\nsearch[i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b08p1g28w3]",
+              "4": "click[b08xy9w899]",
+              "5": "click[b08trny4b2]",
+              "6": "click[b07jbt1vh4]",
+              "7": "click[b0743gfcww]",
+              "8": "click[b09hwbpvmj]",
+              "9": "click[b09rznz8d7]",
+              "10": "click[b00w5x2l9s]",
+              "11": "click[b0743kxqj5]",
+              "12": "click[b09lglp9hg]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e3fdae7482937f832bc5675df9a003aa59d195cbef4318eccd360ddb2663896d",
+      "attempts": [
+        {
+          "seconds": 0.3945150338113308,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3946628049015999,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.14316492892884913,
+              "1": 0.14912516771303813,
+              "2": 0.2588665388543448,
+              "3": 0.041713499694171985,
+              "4": 0.041831946821644844,
+              "5": 0.0462557084624034,
+              "6": 0.033380281553565525,
+              "7": 0.036850587240544144,
+              "8": 0.05854390649610793,
+              "9": 0.10957487129299139,
+              "10": 0.01924541861593282,
+              "11": 0.03181431786425019,
+              "12": 0.02963282646215582
+            },
+            "confidence": 0.19710541709220686
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8926,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.39232413470745087,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9581479839980602
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B07ZBHCMHJ [SEP] TOYANDONA 24pcs Polka Dot Popcorn Treat Boxes Popcorn Candy Boxes Party Favors [SEP] $9.49 [SEP] B0013MV7BA [SEP] Atrend Dual 10\" Subwoofer Regular Standard Cab Truck Sub Box Enclosure 3/4\" MDF Speaker Box, Charcoal (E10DT) [SEP] $70.18 [SEP] B07XYB9Q78 [SEP] Wendry Mini Projector, Second-Generation Mini DIY Home Portable Smart Mobile Phone Projector Home Cinema Projector [SEP] $19.62 [SEP] B09NW7DZ84 [SEP] Silver Drop Eucalyptus, Live Eucalyptus, Live, plannt, Silver Dollar Eucalyptus, Silver Dollar sseeds, Father's Day, Great, Gift, idea, hot 875 257432 [SEP] $20.99 [SEP] B07KVKGN14 [SEP] Marvel Guardians Vol. 2 I Am Baby Groot Teal Graphic T-Shirt [SEP] $22.99 [SEP] B09B7JJ25T [SEP] Personalized Baby Blanket with Name I Am A Child of God, Super Soft Fleece Blanket Customized Shower Gifts for Newborn Boy & Girl - 30\" x 40\" [SEP] $33.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B07ZBHCMHJ [SEP] TOYANDONA 24pcs Polka Dot Popcorn Treat Boxes Popcorn Candy Boxes Party Favors [SEP] $9.49 [SEP] B0013MV7BA [SEP] Atrend Dual 10\" Subwoofer Regular Standard Cab Truck Sub Box Enclosure 3/4\" MDF Speaker Box, Charcoal (E10DT) [SEP] $70.18 [SEP] B07XYB9Q78 [SEP] Wendry Mini Projector, Second-Generation Mini DIY Home Portable Smart Mobile Phone Projector Home Cinema Projector [SEP] $19.62 [SEP] B09NW7DZ84 [SEP] Silver Drop Eucalyptus, Live Eucalyptus, Live, plannt, Silver Dollar Eucalyptus, Silver Dollar sseeds, Father's Day, Great, Gift, idea, hot 875 257432 [SEP] $20.99 [SEP] B07KVKGN14 [SEP] Marvel Guardians Vol. 2 I Am Baby Groot Teal Graphic T-Shirt [SEP] $22.99 [SEP] B09B7JJ25T [SEP] Personalized Baby Blanket with Name I Am A Child of God, Super Soft Fleece Blanket Customized Shower Gifts for Newborn Boy & Girl - 30\" x 40\" [SEP] $33.99\n\nRecent actions:\nsearch[i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09lspp1cj]",
+              "4": "click[b07jmgsdwt]",
+              "5": "click[b09lgy85yy]",
+              "6": "click[b09lh2mrh8]",
+              "7": "click[b07zbhcmhj]",
+              "8": "click[b0013mv7ba]",
+              "9": "click[b07xyb9q78]",
+              "10": "click[b09nw7dz84]",
+              "11": "click[b07kvkgn14]",
+              "12": "click[b09b7jj25t]"
+            }
+          }
+        }
+      },
+      "request_sha256": "8c464df4c91bedf5e0fea122416513162127131b9dfc65a76bc5bc541f02a37b",
+      "attempts": [
+        {
+          "seconds": 0.4191522188484669,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.41929034888744354,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.20643658547102686,
+              "1": 0.20655818085117547,
+              "2": 0.3010463037369381,
+              "3": 0.04733282919908328,
+              "4": 0.0193500301673856,
+              "5": 0.017298942344922675,
+              "6": 0.015512371846766303,
+              "7": 0.022257766938494742,
+              "8": 0.03521412485268457,
+              "9": 0.03475735957724058,
+              "10": 0.02784407883955818,
+              "11": 0.03550017213015608,
+              "12": 0.03089125404456748
+            },
+            "confidence": 0.2428001623816829
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9516,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4171130061149597,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.4386008530855179
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B004TAD0HW [SEP] Snappy 44-E Red & White Open Top Popcorn Boxes, .8 Oz. 100Count [SEP] $24.99 [SEP] B07QWLZRMG [SEP] Amish Country Popcorn Complete Gift Set Popper 8 Popcorn Varieties Salt and Oil [SEP] $84.98 [SEP] B07792DZ1M [SEP] Gustav Stickley Early Antique Bookcase with Leaded Glass w2014 [SEP] $100.0 [SEP] B07WDQKZTD [SEP] Jacksking Portable Projector, Second-Generation Mini DIY Home Smart Mobile Phone Movie Projector Home Cinema [SEP] $27.29 [SEP] B07CB5MYF8 [SEP] Polaroid Originals Instant Color Film for I-Type - Double Pack, 16 Photos (4836) [SEP] $100.0 [SEP] B00IJSBHN4 [SEP] Sylvania Portable CD Boombox with AM/FM Radio (Black) [SEP] $24.99 [SEP] B08ZHSWK7T [SEP] Faris Gourmet Popcorn 12 Bag Blue Raspberry Kettle Corn Snack Pack - It's A Boy Gender Baby Shower [SEP] $26.99 [SEP] B07YV4PF33 [SEP] Portable Projector, Second-Generation Mini DIY Home Smart Portable Projector Portable Smart Mobile Phone Projector Home Cinema Mobile Phone Projector [SEP] $21.44 [SEP] B08RJYGVCC [SEP] Vintage Marvel Superhero Iron Man Poster Retro 20 x14 Inch Unframed Marvel Posters Avengers Wall Art Kraft Paper Home Decor Posters Under 10 Dollars [SEP] $9.99 [SEP] B08W1VPN4B [SEP] Jilin VR Controller Fixer for Oculus Quest 2 VR Headset Handle Bumper ProtectiveHolder [SEP] $9.09",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B004TAD0HW [SEP] Snappy 44-E Red & White Open Top Popcorn Boxes, .8 Oz. 100Count [SEP] $24.99 [SEP] B07QWLZRMG [SEP] Amish Country Popcorn Complete Gift Set Popper 8 Popcorn Varieties Salt and Oil [SEP] $84.98 [SEP] B07792DZ1M [SEP] Gustav Stickley Early Antique Bookcase with Leaded Glass w2014 [SEP] $100.0 [SEP] B07WDQKZTD [SEP] Jacksking Portable Projector, Second-Generation Mini DIY Home Smart Mobile Phone Movie Projector Home Cinema [SEP] $27.29 [SEP] B07CB5MYF8 [SEP] Polaroid Originals Instant Color Film for I-Type - Double Pack, 16 Photos (4836) [SEP] $100.0 [SEP] B00IJSBHN4 [SEP] Sylvania Portable CD Boombox with AM/FM Radio (Black) [SEP] $24.99 [SEP] B08ZHSWK7T [SEP] Faris Gourmet Popcorn 12 Bag Blue Raspberry Kettle Corn Snack Pack - It's A Boy Gender Baby Shower [SEP] $26.99 [SEP] B07YV4PF33 [SEP] Portable Projector, Second-Generation Mini DIY Home Smart Portable Projector Portable Smart Mobile Phone Projector Home Cinema Mobile Phone Projector [SEP] $21.44 [SEP] B08RJYGVCC [SEP] Vintage Marvel Superhero Iron Man Poster Retro 20 x14 Inch Unframed Marvel Posters Avengers Wall Art Kraft Paper Home Decor Posters Under 10 Dollars [SEP] $9.99 [SEP] B08W1VPN4B [SEP] Jilin VR Controller Fixer for Oculus Quest 2 VR Headset Handle Bumper ProtectiveHolder [SEP] $9.09\n\nRecent actions:\nsearch[i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b004tad0hw]",
+              "4": "click[b07qwlzrmg]",
+              "5": "click[b07792dz1m]",
+              "6": "click[b07wdqkztd]",
+              "7": "click[b07cb5myf8]",
+              "8": "click[b00ijsbhn4]",
+              "9": "click[b08zhswk7t]",
+              "10": "click[b07yv4pf33]",
+              "11": "click[b08rjygvcc]",
+              "12": "click[b08w1vpn4b]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1941e3f281eedd653c5c8867e5dfa7e90d80115c9e6cc8a91c508b7040e34a2a",
+      "attempts": [
+        {
+          "seconds": 0.3877950459718704,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3879324309527874,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "probabilities": {
+              "0": 0.053878784840816374,
+              "1": 0.059379779525837284,
+              "2": 0.08914467175830582,
+              "3": 0.5286348286948893,
+              "4": 0.008194466669894745,
+              "5": 0.006654280917547034,
+              "6": 0.012009635087678541,
+              "7": 0.010656369966147022,
+              "8": 0.012259161396127238,
+              "9": 0.18510644214569086,
+              "10": 0.0123604244191221,
+              "11": 0.017057658380961144,
+              "12": 0.0046634961969825705
+            },
+            "confidence": 0.4893543977527967
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8737,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.38575227558612823,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b004tad0hw]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.849391933530569
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Snappy 44-E Red & White Open Top Popcorn Boxes, .8 Oz. 100Count [SEP] Price: $24.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Snappy 44-E Red & White Open Top Popcorn Boxes, .8 Oz. 100Count [SEP] Price: $24.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for red popcorn boxes for a baby shower, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b004tad0hw]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        }
+      },
+      "request_sha256": "393fd0785a1ce1c886e3813042c4c50898a53c12fa521e8ad916e39e83acf02a",
+      "attempts": [
+        {
+          "seconds": 0.0823289267718792,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.08243138715624809,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.06404149240166561,
+              "1": 0.06965064698712696,
+              "2": 0.07710174137638928,
+              "3": 0.05331799050835973,
+              "4": 0.053761312821003215,
+              "5": 0.6821268159054553
+            },
+            "confidence": 0.6185521790865464
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 1618,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 6,
+          "inference_seconds": 0.0805918462574482,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.3333333333333333,
+      "done": true,
+      "elapsed_seconds": 1.9599505811929703
+    }
+  ]
+}

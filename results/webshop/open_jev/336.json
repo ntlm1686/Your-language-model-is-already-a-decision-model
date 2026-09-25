@@ -1,0 +1,3470 @@
+{
+  "task_id": 336,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars",
+  "instruction_sha256": "b5f03c113f8be3dceeb5da3fe47814b17c9f5b8d92e8899f88021884a8a41cc9",
+  "reward": 0.5,
+  "score": 50.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 54,
+  "elapsed_seconds": 9.91450598090887,
+  "decision_seconds": 6.0963094830513,
+  "input_tokens": 96505,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.10337046161293983
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09QQ8YMPT [SEP] Men's Swim Trunks Quick Dry Floral Prints Beach Shorts Summer Casual Plus Size Athletic Knee Length Swim Boardshort [SEP] $10.99 to $14.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09SG8JQBV [SEP] Men's Henley T Shirts Casual Front Placket Short Sleeve Basic Tee Fashion Athletic Top [SEP] $100.0 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B0953JTCWD [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Loose Maxi Tank Dress Party Prom Floral Print Dress with Pocket [SEP] $2.19 to $9.79 [SEP] B09SG7DGCF [SEP] CHENGSE Men's Business Dress Shirt Long Sleeve Solid Regular Fit Shirt Wrinkle Free Casual Button Down Shirt [SEP] $100.0 [SEP] B095BZDSMM [SEP] Casual Summer Dress for Women,Round Neck Sleeve Floral Print Tank Dress Cocktail Party Swing Flowy Patchwork Dress [SEP] $0.49 to $8.09 [SEP] B09Q67DF2T [SEP] Women's Casual Summer Dresses, Floral Boho Sleeveless Long Maxi Dress Beach Sundress Loose Party Tank Dress [SEP] $7.27 to $7.29 [SEP] B09QQ7KL4F [SEP] Men's Quick Dry Swim Trunks Striped Print Pockets Board Shorts Summer Holiday Swim Beach Shorts with Mesh Lining [SEP] $12.99 to $16.99 [SEP] B096WTNXHF [SEP] camisole for women-Print V-neck Tank Tops Short Sleeve Workout Shirts Casual Loose Tees [SEP] $5.66 to $12.01",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09QQ8YMPT [SEP] Men's Swim Trunks Quick Dry Floral Prints Beach Shorts Summer Casual Plus Size Athletic Knee Length Swim Boardshort [SEP] $10.99 to $14.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09SG8JQBV [SEP] Men's Henley T Shirts Casual Front Placket Short Sleeve Basic Tee Fashion Athletic Top [SEP] $100.0 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B0953JTCWD [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Loose Maxi Tank Dress Party Prom Floral Print Dress with Pocket [SEP] $2.19 to $9.79 [SEP] B09SG7DGCF [SEP] CHENGSE Men's Business Dress Shirt Long Sleeve Solid Regular Fit Shirt Wrinkle Free Casual Button Down Shirt [SEP] $100.0 [SEP] B095BZDSMM [SEP] Casual Summer Dress for Women,Round Neck Sleeve Floral Print Tank Dress Cocktail Party Swing Flowy Patchwork Dress [SEP] $0.49 to $8.09 [SEP] B09Q67DF2T [SEP] Women's Casual Summer Dresses, Floral Boho Sleeveless Long Maxi Dress Beach Sundress Loose Party Tank Dress [SEP] $7.27 to $7.29 [SEP] B09QQ7KL4F [SEP] Men's Quick Dry Swim Trunks Striped Print Pockets Board Shorts Summer Holiday Swim Beach Shorts with Mesh Lining [SEP] $12.99 to $16.99 [SEP] B096WTNXHF [SEP] camisole for women-Print V-neck Tank Tops Short Sleeve Workout Shirts Casual Loose Tees [SEP] $5.66 to $12.01\n\nRecent actions:\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09qq8ympt]",
+              "3": "click[b099z4t56c]",
+              "4": "click[b09sg8jqbv]",
+              "5": "click[b09dshw7mz]",
+              "6": "click[b0953jtcwd]",
+              "7": "click[b09sg7dgcf]",
+              "8": "click[b095bzdsmm]",
+              "9": "click[b09q67df2t]",
+              "10": "click[b09qq7kl4f]",
+              "11": "click[b096wtnxhf]"
+            }
+          }
+        }
+      },
+      "request_sha256": "70e68cccfc3c123710217f86c9311ee3690dfd7f6350a84b2f75ddd28af3e14d",
+      "attempts": [
+        {
+          "seconds": 0.37352047115564346,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37365542724728584,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.11434181573469761,
+              "1": 0.20224892460252095,
+              "2": 0.025289667520423467,
+              "3": 0.013008810866675527,
+              "4": 0.053132708065452894,
+              "5": 0.01562367460065946,
+              "6": 0.17676062443707408,
+              "7": 0.029684966885724896,
+              "8": 0.14719551642603348,
+              "9": 0.13168089572548744,
+              "10": 0.038971599096471535,
+              "11": 0.05206079603877863
+            },
+            "confidence": 0.1297260995663865
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8333,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.37087541818618774,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5603365749120712
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09H278Z3R [SEP] Womens Vest Plaid Sleeveless Lapel Open Front Cardigan Sherpa Jacket Pockets mens jacket [SEP] $15.99 to $20.99 [SEP] B095BVS589 [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Hollowed Mini Tank Dress Vintage Floral Print Knee-Length Dress [SEP] $1.99 to $7.59 [SEP] B098DSK1PS [SEP] Tops Coat-Women's Print Puff Sleeve Cardigan Loose Cover Up Kimono Beach Blouse [SEP] $9.99 to $17.99 [SEP] B095773D3L [SEP] Casual Summer Dress for Women,Beach Sleeveless Round Neck Print Tank Dress Party Prom Fashion Colorful Maxi Dress [SEP] $0.99 to $6.29 [SEP] B094Z77449 [SEP] Casual Summer Dress for Women,V-Neck Sleeveless High Waist Maternity Dress Loose Floral Print Maxi Pregnant Dress [SEP] $1.69 to $12.19 [SEP] B0936W2V3Z [SEP] POTO Dresses for Women Boho Sleeveless Maxi Dress Summer Floral Print Tank Dress Vintage Casual Pocketed Long Dresses [SEP] $1.0 to $8.49 [SEP] B085FZQ1YQ [SEP] KYLEON Women's Elegant Floral Printed Long Short Sleeve Crew Neck Maxi Dress Vintage Casual Summer Swing Party Long Dress [SEP] $0.59 to $1.59 [SEP] B0973FYJKL [SEP] POTO Dresses for Women Vintage Boho Maxi Dress Summer Butterfly Print Sleeveless Tank Dress Casual Pocketed Long Dresses [SEP] $0.29 to $10.39 [SEP] B09NLR45HH [SEP] Men's Casual Paisley Printed Shirt Floral Short Sleeve Button Down Tropical Quick Dry Hawaiian Beach Aloha Shirts [SEP] $9.99 to $14.99 [SEP] B09RDX8KQJ [SEP] FABIURT Sundresses for Women Casual Beach, Women's Summer Butterfly Printed Dress V-Neck Sleeveless Long Dresses with Pockets [SEP] $4.99 to $7.99",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09H278Z3R [SEP] Womens Vest Plaid Sleeveless Lapel Open Front Cardigan Sherpa Jacket Pockets mens jacket [SEP] $15.99 to $20.99 [SEP] B095BVS589 [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Hollowed Mini Tank Dress Vintage Floral Print Knee-Length Dress [SEP] $1.99 to $7.59 [SEP] B098DSK1PS [SEP] Tops Coat-Women's Print Puff Sleeve Cardigan Loose Cover Up Kimono Beach Blouse [SEP] $9.99 to $17.99 [SEP] B095773D3L [SEP] Casual Summer Dress for Women,Beach Sleeveless Round Neck Print Tank Dress Party Prom Fashion Colorful Maxi Dress [SEP] $0.99 to $6.29 [SEP] B094Z77449 [SEP] Casual Summer Dress for Women,V-Neck Sleeveless High Waist Maternity Dress Loose Floral Print Maxi Pregnant Dress [SEP] $1.69 to $12.19 [SEP] B0936W2V3Z [SEP] POTO Dresses for Women Boho Sleeveless Maxi Dress Summer Floral Print Tank Dress Vintage Casual Pocketed Long Dresses [SEP] $1.0 to $8.49 [SEP] B085FZQ1YQ [SEP] KYLEON Women's Elegant Floral Printed Long Short Sleeve Crew Neck Maxi Dress Vintage Casual Summer Swing Party Long Dress [SEP] $0.59 to $1.59 [SEP] B0973FYJKL [SEP] POTO Dresses for Women Vintage Boho Maxi Dress Summer Butterfly Print Sleeveless Tank Dress Casual Pocketed Long Dresses [SEP] $0.29 to $10.39 [SEP] B09NLR45HH [SEP] Men's Casual Paisley Printed Shirt Floral Short Sleeve Button Down Tropical Quick Dry Hawaiian Beach Aloha Shirts [SEP] $9.99 to $14.99 [SEP] B09RDX8KQJ [SEP] FABIURT Sundresses for Women Casual Beach, Women's Summer Butterfly Printed Dress V-Neck Sleeveless Long Dresses with Pockets [SEP] $4.99 to $7.99\n\nRecent actions:\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09h278z3r]",
+              "4": "click[b095bvs589]",
+              "5": "click[b098dsk1ps]",
+              "6": "click[b095773d3l]",
+              "7": "click[b094z77449]",
+              "8": "click[b0936w2v3z]",
+              "9": "click[b085fzq1yq]",
+              "10": "click[b0973fyjkl]",
+              "11": "click[b09nlr45hh]",
+              "12": "click[b09rdx8kqj]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d9efd2870d83a3f74b3419e1555815aba31738cae16d781b6ec53a3ef80bf33b",
+      "attempts": [
+        {
+          "seconds": 0.4279503673315048,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.428080752491951,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.10963336190398242,
+              "1": 0.08865205850347387,
+              "2": 0.18138451792782134,
+              "3": 0.008651841037033823,
+              "4": 0.12728619174658573,
+              "5": 0.028390747647508614,
+              "6": 0.08870543589082423,
+              "7": 0.06413841725578369,
+              "8": 0.10572329497802296,
+              "9": 0.03640533740705975,
+              "10": 0.07309997522819678,
+              "11": 0.022818336806195504,
+              "12": 0.0651104836675113
+            },
+            "confidence": 0.11316656108847312
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9620,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.42545847967267036,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.0709638260304928
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B091TCR1XP [SEP] Women Dresses,Women's Butterfly Sleeveless Casual Dresses Summer Maxi Long Dress with Pockets Boho Beach Sundress [SEP] $3.99 to $9.99 [SEP] B094ZBS6ZN [SEP] Casual Summer Dress for Women,Beach Tie-Dye Print Sleeveless O-Neck Tank Dress Party Prom Bodycon Mini Shift Dress [SEP] $2.49 to $4.99 [SEP] B09D755467 [SEP] USYFAKGH Women Fashion Long Sleeve Zip-Up Hoodie Jacket Printed Sweatshirt Coat sweater tank tops for women [SEP] $25.99 to $29.99 [SEP] B0953M189L [SEP] Casual Summer Dress for Women,Beach O-Neck Sleeveless Print Tank Dress Plus Size Loose Flowy Pleated Mini Dress [SEP] $2.89 to $4.89 [SEP] B09BF719LV [SEP] Women Pullover Top BlouseLong Sleeve Tie-Dye Print Sweatshirt Crop Top Hoodies [SEP] $12.3 to $19.21 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B09B1QPF9D [SEP] Women Blouse-Flower Prints Long Sleeve T-Shirts Tunic Button Round Neck Causal [SEP] $7.98 to $22.91 [SEP] B09576JN35 [SEP] Casual Summer Dress for Women,Beach Round Neck Sleeveless Cold Shoulder Dress Prom Fashion Print Mini Tank Dress [SEP] $0.69 to $5.69 [SEP] B09PF3RJQK [SEP] Women's Sleeveless Floral Print V Neck Tunic Tank Tops Blouse Shirts Summer Trendy Casual Loose Tee Shirts [SEP] $5.99 to $8.99",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B097H5CPLC [SEP] Vikaki Womens Summer Dress Short Sleeve Ruffle Sleeve Round Neck Mini Dress Cute Printed Loose Fit Flowy Shift Dress [SEP] $13.99 to $14.99 [SEP] B091TCR1XP [SEP] Women Dresses,Women's Butterfly Sleeveless Casual Dresses Summer Maxi Long Dress with Pockets Boho Beach Sundress [SEP] $3.99 to $9.99 [SEP] B094ZBS6ZN [SEP] Casual Summer Dress for Women,Beach Tie-Dye Print Sleeveless O-Neck Tank Dress Party Prom Bodycon Mini Shift Dress [SEP] $2.49 to $4.99 [SEP] B09D755467 [SEP] USYFAKGH Women Fashion Long Sleeve Zip-Up Hoodie Jacket Printed Sweatshirt Coat sweater tank tops for women [SEP] $25.99 to $29.99 [SEP] B0953M189L [SEP] Casual Summer Dress for Women,Beach O-Neck Sleeveless Print Tank Dress Plus Size Loose Flowy Pleated Mini Dress [SEP] $2.89 to $4.89 [SEP] B09BF719LV [SEP] Women Pullover Top BlouseLong Sleeve Tie-Dye Print Sweatshirt Crop Top Hoodies [SEP] $12.3 to $19.21 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B09B1QPF9D [SEP] Women Blouse-Flower Prints Long Sleeve T-Shirts Tunic Button Round Neck Causal [SEP] $7.98 to $22.91 [SEP] B09576JN35 [SEP] Casual Summer Dress for Women,Beach Round Neck Sleeveless Cold Shoulder Dress Prom Fashion Print Mini Tank Dress [SEP] $0.69 to $5.69 [SEP] B09PF3RJQK [SEP] Women's Sleeveless Floral Print V Neck Tunic Tank Tops Blouse Shirts Summer Trendy Casual Loose Tee Shirts [SEP] $5.99 to $8.99\n\nRecent actions:\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b097h5cplc]",
+              "4": "click[b091tcr1xp]",
+              "5": "click[b094zbs6zn]",
+              "6": "click[b09d755467]",
+              "7": "click[b0953m189l]",
+              "8": "click[b09bf719lv]",
+              "9": "click[b09dycnyp4]",
+              "10": "click[b09b1qpf9d]",
+              "11": "click[b09576jn35]",
+              "12": "click[b09pf3rjqk]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a8c4561566138f87fe505900897a44fa2403e64730dc12935fb1cab8fd7e42dd",
+      "attempts": [
+        {
+          "seconds": 0.4319499842822552,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4321011118590832,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.13864187748217693,
+              "1": 0.11085243609841096,
+              "2": 0.23023934675352872,
+              "3": 0.03798774632394716,
+              "4": 0.06720994024083601,
+              "5": 0.05138741796777493,
+              "6": 0.01875419285212646,
+              "7": 0.05528088769517704,
+              "8": 0.03228219560184648,
+              "9": 0.030742071488801006,
+              "10": 0.05456288841146158,
+              "11": 0.07555056265070456,
+              "12": 0.0965084364332081
+            },
+            "confidence": 0.1660926256496561
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9758,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.42969202995300293,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.6098729819059372
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09PL33XT1 [SEP] Bikini for Women, Women's One Pieces Swimsuit Floral Print Sexy Swimwears Spaghetti Strap Beachwear [SEP] $8.75 to $9.32 [SEP] B09R7YW57V [SEP] Bidobibo Boho Jumpsuits for Women Casual Summer Floral Print Rompers Trendy Overalls One Piece Playsuit Romper [SEP] $16.98 to $20.98 [SEP] B094YJVGPS [SEP] Casual Summer Top for Women,Beach Sleeveless Cold Shoulder Halter Tank Tops Fashion Floral Print Swing Flowy Vest Top [SEP] $12.79 [SEP] B09RX1N3B7 [SEP] Men's Hawaiian Shirts, Mens Short Sleeve Button Down Summer Beach Regular Fit Floral Printed Dress Shirt Hawaiian Shirt Tops [SEP] $6.29 to $9.39 [SEP] B09NN3MD1H [SEP] Men's Muscle Tank Top Famous Impressionist Oil Painting Quick Dry Sleeveless Workout Bodybuilding Fitness Shirts [SEP] $7.49 to $12.49 [SEP] B08NSX1MQ9 [SEP] II ININ Women's Casual Summer V Neck Sleeveless Button Down Tank Dress Midi Floral Beach Party Sundress with Pockets [SEP] $19.98 to $27.98 [SEP] B092QL1FLW [SEP] Women Summer Cold Shoulder Dress,Beach Vintage Bohemian Print Sundress Party Prom Swing Loose A-Line Dress with Pocket [SEP] $16.29 to $17.59 [SEP] B09PDVCK8B [SEP] Men's Big and Tall Swim Trunks Teen Funny Stop Staring at My Cock Board Shorts Quick Dry Drawstring Mesh Lining Pant [SEP] $6.99 [SEP] B09QQ94J3N [SEP] Men's Swim Trunks Quick Dry Sports Shorts Summer Casual Prints Shorts Athletic Running Jogger Beach Shorts with Pockets [SEP] $9.99 to $13.99 [SEP] B092M3VFLD [SEP] Casual Sleeveless Tank Dress for Women,Summer Beach Floral Print Pocket Dress Skater Party Swing Flowy A-line Dress [SEP] $17.39",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09PL33XT1 [SEP] Bikini for Women, Women's One Pieces Swimsuit Floral Print Sexy Swimwears Spaghetti Strap Beachwear [SEP] $8.75 to $9.32 [SEP] B09R7YW57V [SEP] Bidobibo Boho Jumpsuits for Women Casual Summer Floral Print Rompers Trendy Overalls One Piece Playsuit Romper [SEP] $16.98 to $20.98 [SEP] B094YJVGPS [SEP] Casual Summer Top for Women,Beach Sleeveless Cold Shoulder Halter Tank Tops Fashion Floral Print Swing Flowy Vest Top [SEP] $12.79 [SEP] B09RX1N3B7 [SEP] Men's Hawaiian Shirts, Mens Short Sleeve Button Down Summer Beach Regular Fit Floral Printed Dress Shirt Hawaiian Shirt Tops [SEP] $6.29 to $9.39 [SEP] B09NN3MD1H [SEP] Men's Muscle Tank Top Famous Impressionist Oil Painting Quick Dry Sleeveless Workout Bodybuilding Fitness Shirts [SEP] $7.49 to $12.49 [SEP] B08NSX1MQ9 [SEP] II ININ Women's Casual Summer V Neck Sleeveless Button Down Tank Dress Midi Floral Beach Party Sundress with Pockets [SEP] $19.98 to $27.98 [SEP] B092QL1FLW [SEP] Women Summer Cold Shoulder Dress,Beach Vintage Bohemian Print Sundress Party Prom Swing Loose A-Line Dress with Pocket [SEP] $16.29 to $17.59 [SEP] B09PDVCK8B [SEP] Men's Big and Tall Swim Trunks Teen Funny Stop Staring at My Cock Board Shorts Quick Dry Drawstring Mesh Lining Pant [SEP] $6.99 [SEP] B09QQ94J3N [SEP] Men's Swim Trunks Quick Dry Sports Shorts Summer Casual Prints Shorts Athletic Running Jogger Beach Shorts with Pockets [SEP] $9.99 to $13.99 [SEP] B092M3VFLD [SEP] Casual Sleeveless Tank Dress for Women,Summer Beach Floral Print Pocket Dress Skater Party Swing Flowy A-line Dress [SEP] $17.39\n\nRecent actions:\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09pl33xt1]",
+              "4": "click[b09r7yw57v]",
+              "5": "click[b094yjvgps]",
+              "6": "click[b09rx1n3b7]",
+              "7": "click[b09nn3md1h]",
+              "8": "click[b08nsx1mq9]",
+              "9": "click[b092ql1flw]",
+              "10": "click[b09pdvck8b]",
+              "11": "click[b09qq94j3n]",
+              "12": "click[b092m3vfld]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d37ab7fc6efe1c03832f5c8297031010d5c68b27f88937dacc865e750e9af8d1",
+      "attempts": [
+        {
+          "seconds": 0.42855163663625717,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.42870891094207764,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.13766069934695793,
+              "1": 0.12359004129563332,
+              "2": 0.25313766545354144,
+              "3": 0.03589687498142114,
+              "4": 0.035304926287791846,
+              "5": 0.055300784171988054,
+              "6": 0.013280479716410417,
+              "7": 0.019052088184246727,
+              "8": 0.1271210601065893,
+              "9": 0.057207489355952997,
+              "10": 0.014478472028718572,
+              "11": 0.013351422304291082,
+              "12": 0.1146179967664572
+            },
+            "confidence": 0.19089913757466986
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9688,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.425897054374218,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.127269346266985
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09S13FJWL [SEP] PHSHY Sleeveless Tank Tops Men, Sports Fitness Vest, Gym Workout Cut Off Muscle T-Shirts, Quick Dry Shirts, Casual Basic Tee [SEP] $5.99 [SEP] B09RPYDYQQ [SEP] Hooded Tops for Women, Women's Fashion Heart Printing Comfy Hoodies Bright Color Long Sleeve Sweatshirt [SEP] $10.15 to $14.0 [SEP] B095P7GKB3 [SEP] AODONG Summer Dresses for Women Beach American Flag Patriotic Dress Floral Sundress Sleeveless Casual Boho Tank Dress [SEP] $0.99 to $4.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09SG4FC53 [SEP] Funny T Shirts for Men,Men's Round Neck Summer Casual Short Sleeve Tops Abstract Printed Slim Fit Workout Blouses [SEP] $10.57 [SEP] B09539PDW9 [SEP] Casual Summer Dress for Women,Beach V-Neck Sleeveless Maxi Tank Dress Cocktail Party Prom Print Loose Long Dress [SEP] $0.29 to $7.79 [SEP] B0953KSNBY [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Tie-Dye Print Tank Dress Cocktail Party Slim Mini Shift Dress [SEP] $2.49 to $4.99 [SEP] B07N7GL63Y [SEP] TWGONE Boho Dresses for Women Short Loose Vintage Summer Sleeveless 3D Floral Print Tank Mini Dress [SEP] $0.2 to $6.7 [SEP] B09PJK6C85 [SEP] Summer Dress for Women's Casual Sexy Side Split O-Neck Loose T-Shirt Long Dresses Sleeveless Beach Tank Maxi Dresse [SEP] $4.99 to $19.99",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09S13FJWL [SEP] PHSHY Sleeveless Tank Tops Men, Sports Fitness Vest, Gym Workout Cut Off Muscle T-Shirts, Quick Dry Shirts, Casual Basic Tee [SEP] $5.99 [SEP] B09RPYDYQQ [SEP] Hooded Tops for Women, Women's Fashion Heart Printing Comfy Hoodies Bright Color Long Sleeve Sweatshirt [SEP] $10.15 to $14.0 [SEP] B095P7GKB3 [SEP] AODONG Summer Dresses for Women Beach American Flag Patriotic Dress Floral Sundress Sleeveless Casual Boho Tank Dress [SEP] $0.99 to $4.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09SG4FC53 [SEP] Funny T Shirts for Men,Men's Round Neck Summer Casual Short Sleeve Tops Abstract Printed Slim Fit Workout Blouses [SEP] $10.57 [SEP] B09539PDW9 [SEP] Casual Summer Dress for Women,Beach V-Neck Sleeveless Maxi Tank Dress Cocktail Party Prom Print Loose Long Dress [SEP] $0.29 to $7.79 [SEP] B0953KSNBY [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Tie-Dye Print Tank Dress Cocktail Party Slim Mini Shift Dress [SEP] $2.49 to $4.99 [SEP] B07N7GL63Y [SEP] TWGONE Boho Dresses for Women Short Loose Vintage Summer Sleeveless 3D Floral Print Tank Mini Dress [SEP] $0.2 to $6.7 [SEP] B09PJK6C85 [SEP] Summer Dress for Women's Casual Sexy Side Split O-Neck Loose T-Shirt Long Dresses Sleeveless Beach Tank Maxi Dresse [SEP] $4.99 to $19.99\n\nRecent actions:\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09s13fjwl]",
+              "4": "click[b09rpydyqq]",
+              "5": "click[b095p7gkb3]",
+              "6": "click[b09dkckd7z]",
+              "7": "click[b09dsfsnp3]",
+              "8": "click[b09sg4fc53]",
+              "9": "click[b09539pdw9]",
+              "10": "click[b0953ksnby]",
+              "11": "click[b07n7gl63y]",
+              "12": "click[b09pjk6c85]"
+            }
+          }
+        }
+      },
+      "request_sha256": "9703d8cc24820d4212b382c77a4956b2e43d9363065578341235123a2bf4e48f",
+      "attempts": [
+        {
+          "seconds": 0.4332270622253418,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.43334993720054626,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.14541899854764465,
+              "1": 0.13385118920085612,
+              "2": 0.2184988285923176,
+              "3": 0.01581460088928218,
+              "4": 0.01684831806194093,
+              "5": 0.11273633363020037,
+              "6": 0.022384409602166772,
+              "7": 0.011136657935176144,
+              "8": 0.02196146526584134,
+              "9": 0.06205303773288238,
+              "10": 0.050356064347682444,
+              "11": 0.11483279139589751,
+              "12": 0.07410730479811152
+            },
+            "confidence": 0.15337373097501064
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9806,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4306047186255455,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.638057339936495
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "976dd0f981b16e364326f447ecf6fac6be95fc09399b3d0a5ee39a62a92b79f3",
+      "attempts": [
+        {
+          "seconds": 0.07389767095446587,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0739927589893341,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29799503372718994,
+              "1": 0.21540714693332,
+              "2": 0.48659781933949003
+            },
+            "confidence": 0.22989672900923505
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 720,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07188430428504944,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.7819249257445335
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a5824712ceecda34682dda84565d4042cc3b626dc64bb78cec67fb59b2745a46",
+      "attempts": [
+        {
+          "seconds": 0.07220282778143883,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07229828089475632,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.30930324495040606,
+              "1": 0.22393753003517755,
+              "2": 0.4667592250144164
+            },
+            "confidence": 0.20013883752162462
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0702902190387249,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.926909077912569
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7d006049a36ee75e480323598126f2be7c8761d46711b4bd2e9f14937a506a2a",
+      "attempts": [
+        {
+          "seconds": 0.07113515585660934,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07123841345310211,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.316349296921239,
+              "1": 0.22748076928411923,
+              "2": 0.4561699337946418
+            },
+            "confidence": 0.18425490069196274
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 750,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0691092349588871,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.0772286355495453
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7018e9abf97eeba60b38ccf9d2e0977c3e492c5c78cbbe339a929e511a0a7f69",
+      "attempts": [
+        {
+          "seconds": 0.07926738634705544,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0793822593986988,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.32157666674354085,
+              "1": 0.23654853677378881,
+              "2": 0.4418747964826704
+            },
+            "confidence": 0.16281219472400563
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 765,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06920212879776955,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.2237016297876835
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "25e118ee568118b579979bbb8b92460f460c5ebfc0eb2ab0b2cffb296ad27c55",
+      "attempts": [
+        {
+          "seconds": 0.07087565585970879,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07097769901156425,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3274557367589913,
+              "1": 0.2437608290414879,
+              "2": 0.4287834341995208
+            },
+            "confidence": 0.1431751512992812
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 783,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06919226422905922,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.371014852076769
+    },
+    {
+      "step": 11,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b2e60cd966c30e10496017853a74bffc711b22179af541598b8f885fc95f4edd",
+      "attempts": [
+        {
+          "seconds": 0.07155758142471313,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07165073230862617,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3018497904170034,
+              "1": 0.2205205872525559,
+              "2": 0.4776296223304407
+            },
+            "confidence": 0.21644443349566106
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06918724998831749,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.506513901054859
+    },
+    {
+      "step": 12,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4678ad7751037d6f93967963a55a3f1b92190f94c2a7bd18dbd6a54f3770bf75",
+      "attempts": [
+        {
+          "seconds": 0.06886652484536171,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06896163150668144,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.30869527894459325,
+              "1": 0.23159259833540505,
+              "2": 0.4597121227200018
+            },
+            "confidence": 0.18956818408000267
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06716813147068024,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.644998051226139
+    },
+    {
+      "step": 13,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7f2a57550f98db5503cf7fe80c5d7302ebac5645be249c626fb580ac3afa438d",
+      "attempts": [
+        {
+          "seconds": 0.06901135668158531,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06909824162721634,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.30108872023459565,
+              "1": 0.21986272172334506,
+              "2": 0.47904855804205926
+            },
+            "confidence": 0.2185728370630889
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06730001047253609,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.7780519649386406
+    },
+    {
+      "step": 14,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1d1bfaad3c1c5329f5491fb54a0e238e96858cb79d6a8136f99953c485306bd1",
+      "attempts": [
+        {
+          "seconds": 0.0690080039203167,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06907331943511963,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3058483332740134,
+              "1": 0.2223394337189674,
+              "2": 0.47181223300701935
+            },
+            "confidence": 0.20771834951052903
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06723954528570175,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.9101840928196907
+    },
+    {
+      "step": 15,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "04be97cc6d642e18690d1c119cc2561af5aa030c4134bb652fe7d591acf64d60",
+      "attempts": [
+        {
+          "seconds": 0.06915086507797241,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06921661272644997,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29662487266995574,
+              "1": 0.22054729562213202,
+              "2": 0.48282783170791227
+            },
+            "confidence": 0.2242417475618684
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06761771813035011,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.055587068200111
+    },
+    {
+      "step": 16,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f4031ee82fe01f51aa6d784ac0010aeab27d0c43e054690d78eefe239ea13991",
+      "attempts": [
+        {
+          "seconds": 0.07030334696173668,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07038497552275658,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29723063963326635,
+              "1": 0.21524525304024372,
+              "2": 0.48752410732649004
+            },
+            "confidence": 0.23128616098973506
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06863367184996605,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.20403141155839
+    },
+    {
+      "step": 17,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4f7ec5dff8d7e5f59684651150109ae4159334e7a5c400c8a73f107bd22077fd",
+      "attempts": [
+        {
+          "seconds": 0.068632110953331,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06869113072752953,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.28849220506628676,
+              "1": 0.2122640931143738,
+              "2": 0.4992437018193394
+            },
+            "confidence": 0.24886555272900912
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06702317669987679,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.368587572127581
+    },
+    {
+      "step": 18,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "874ecbc04329a801ccb07087e51abb30146eff34e3d99030c94f7dec5a4c8e7d",
+      "attempts": [
+        {
+          "seconds": 0.06922882795333862,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06930629536509514,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.28927301658776533,
+              "1": 0.21192276033510146,
+              "2": 0.4988042230771332
+            },
+            "confidence": 0.24820633461569977
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06745560839772224,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.514881897717714
+    },
+    {
+      "step": 19,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "beaa17f902d2687e7b58d6d3a23eff2087e2337362cd0a0dc4eaedd3a9ab08a1",
+      "attempts": [
+        {
+          "seconds": 0.07005063071846962,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07013098895549774,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29009651704846057,
+              "1": 0.21531727564883177,
+              "2": 0.49458620730270764
+            },
+            "confidence": 0.24187931095406145
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06840426847338676,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.651986565440893
+    },
+    {
+      "step": 20,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "44d647b84e699e9769f77186a4930e6b34b51221ac7136eab127aaa4883278f2",
+      "attempts": [
+        {
+          "seconds": 0.07033088803291321,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07042449712753296,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33346807735790723,
+              "1": 0.22657588999841077,
+              "2": 0.439956032643682
+            },
+            "confidence": 0.159934048965523
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0683484748005867,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.787735231220722
+    },
+    {
+      "step": 21,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 21 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 21 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "812ede4efd85c69a37dbf1857de3b8021362c28ec8c6aa2986857b44ad51b502",
+      "attempts": [
+        {
+          "seconds": 0.07661350816488266,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07671083509922028,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3217854157812913,
+              "1": 0.21958515730313247,
+              "2": 0.45862942691557634
+            },
+            "confidence": 0.18794414037336452
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06865010038018227,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.929324980825186
+    },
+    {
+      "step": 22,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 22 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 22 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "971b7c1de660ba3ab478eb3527701255c3db4995b6df7b0757c0a00dc992d3d6",
+      "attempts": [
+        {
+          "seconds": 0.06966765597462654,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06975796446204185,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3235346008550781,
+              "1": 0.22556786589578512,
+              "2": 0.45089753324913673
+            },
+            "confidence": 0.1763462998737051
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06758439540863037,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.0762487798929214
+    },
+    {
+      "step": 23,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 23 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 23 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d872a504e8cc406ca7b450d1a1518277395db215d86f9691996f536dbb70e057",
+      "attempts": [
+        {
+          "seconds": 0.07025369256734848,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07034669071435928,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.32396797333621224,
+              "1": 0.21909704626238094,
+              "2": 0.45693498040140684
+            },
+            "confidence": 0.18540247060211026
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06836896762251854,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.213920596987009
+    },
+    {
+      "step": 24,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 24 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 24 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4960f735bb509497de314463240222e50f9a8462c24d526862df2721a5b06a5f",
+      "attempts": [
+        {
+          "seconds": 0.0697546899318695,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06984725221991539,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3233564155900894,
+              "1": 0.22382082213884932,
+              "2": 0.4528227622710614
+            },
+            "confidence": 0.17923414340659208
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06782924011349678,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.348457433283329
+    },
+    {
+      "step": 25,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 25 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 25 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6019f834d7f22943e9135f28315e9e900eb2426a03481a6658df166184d06166",
+      "attempts": [
+        {
+          "seconds": 0.07114995270967484,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07124082371592522,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.302365329658131,
+              "1": 0.2172641817118767,
+              "2": 0.4803704886299924
+            },
+            "confidence": 0.22055573294498856
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0691944845020771,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.484858483076096
+    },
+    {
+      "step": 26,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 26 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 26 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1e9e01a185bd1b5e917b79554ad8e72abab4c09ef6b931338363d167067a94dd",
+      "attempts": [
+        {
+          "seconds": 0.0762314684689045,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07630681991577148,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3114626644913404,
+              "1": 0.21989670466167094,
+              "2": 0.4686406308469886
+            },
+            "confidence": 0.2029609462704829
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06820497289299965,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.625526376068592
+    },
+    {
+      "step": 27,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 27 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 27 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2db4f7bd00c7030d7e19711963653c6b5e02a23be8af1f5e10996e70077fead1",
+      "attempts": [
+        {
+          "seconds": 0.06881257146596909,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0688929446041584,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3090143789937384,
+              "1": 0.21754907293721423,
+              "2": 0.47343654806904734
+            },
+            "confidence": 0.210154822103571
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06717854365706444,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.763181518763304
+    },
+    {
+      "step": 28,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 28 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 28 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "92a5f0fcfb9b3aeef6974e1ac13cab0547f3d3442ddf52e9fb545b3cd5940d2f",
+      "attempts": [
+        {
+          "seconds": 0.06908368691802025,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06916429847478867,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3061178470446555,
+              "1": 0.22018725399160646,
+              "2": 0.473694898963738
+            },
+            "confidence": 0.210542348445607
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06732773035764694,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.905240748077631
+    },
+    {
+      "step": 29,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 29 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 29 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6e697915a198c7ae635d3619e035ecb05e97ab7f1632f755b916da12dd07731f",
+      "attempts": [
+        {
+          "seconds": 0.06975067406892776,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0698472298681736,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.31226432717227276,
+              "1": 0.2220096235546241,
+              "2": 0.4657260492731032
+            },
+            "confidence": 0.19858907390965477
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0680738240480423,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.03940211981535
+    },
+    {
+      "step": 30,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 30 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 30 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "95b6c78c9694537a9d45b8410e79a192b467e616b636fd0ad7b9a6dd6ff603f2",
+      "attempts": [
+        {
+          "seconds": 0.06904235854744911,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06912336871027946,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3217640242925684,
+              "1": 0.2266215548005181,
+              "2": 0.45161442090691356
+            },
+            "confidence": 0.17742163136037034
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06758714467287064,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.173577565699816
+    },
+    {
+      "step": 31,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 31 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 31 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "8d7fd13c40afff10a8137bd1d3b34ab34009a36525bdfe262bcf4b32aae5c56f",
+      "attempts": [
+        {
+          "seconds": 0.07187139987945557,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07196898758411407,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3235102255847444,
+              "1": 0.22236787011030462,
+              "2": 0.4541219043049509
+            },
+            "confidence": 0.18118285645742638
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07006773725152016,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.317100133746862
+    },
+    {
+      "step": 32,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 32 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 32 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c1a3240569cf72a852e8e0391c9345f3f2e8419207d30fe8b564b78211af621c",
+      "attempts": [
+        {
+          "seconds": 0.0704033263027668,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07049072161316872,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.32775998020629266,
+              "1": 0.23147705772827126,
+              "2": 0.44076296206543614
+            },
+            "confidence": 0.1611444430981542
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06884106621146202,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.469375807791948
+    },
+    {
+      "step": 33,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 33 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 33 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "563b9ae76f927db3ad11589b4b24435f517a107e7b78a889fdc242dd8cc2428c",
+      "attempts": [
+        {
+          "seconds": 0.06993763893842697,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07001300528645515,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.32026599764742997,
+              "1": 0.22808203393698662,
+              "2": 0.4516519684155834
+            },
+            "confidence": 0.17747795262337512
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06823617964982986,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.615935854613781
+    },
+    {
+      "step": 34,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 34 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 34 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "81844bdeaf0bb70545adbc0224e9a8cfbc04c73e8455a7669976dd9baaaccbc8",
+      "attempts": [
+        {
+          "seconds": 0.07183826342225075,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07193741947412491,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3328335445909834,
+              "1": 0.23013017908468655,
+              "2": 0.4370362763243301
+            },
+            "confidence": 0.15555441448649518
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06963960826396942,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.767232704907656
+    },
+    {
+      "step": 35,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 35 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 35 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f676df0d328cd0efa3b0984ff6f4a4c72d2519efddd70fabd0122df608f8f64d",
+      "attempts": [
+        {
+          "seconds": 0.07056761160492897,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07064950093626976,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.30035341336306043,
+              "1": 0.2238376494519028,
+              "2": 0.47580893718503675
+            },
+            "confidence": 0.21371340577755513
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0687108114361763,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.9113585986196995
+    },
+    {
+      "step": 36,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 36 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 36 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c397119a248795b352e925c9fab076b7e8a10f4bb48ad397f382159f8ecc9e00",
+      "attempts": [
+        {
+          "seconds": 0.07125382125377655,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07134360820055008,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3062972091639598,
+              "1": 0.22749292024786774,
+              "2": 0.4662098705881725
+            },
+            "confidence": 0.19931480588225872
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06926601752638817,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.0688205026090145
+    },
+    {
+      "step": 37,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 37 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 37 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1cfa62ff12d954e82618fbda45151d6f35e7c0d974d2103de059c47d226dcbcd",
+      "attempts": [
+        {
+          "seconds": 0.07415423169732094,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07423305884003639,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3087999415116603,
+              "1": 0.22024501810741687,
+              "2": 0.4709550403809228
+            },
+            "confidence": 0.20643256057138418
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06906676664948463,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.207970771938562
+    },
+    {
+      "step": 38,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 38 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 38 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7a031be738b2c01795f01bbe7a699f2923b40449d65f8b8a21530528bcbad761",
+      "attempts": [
+        {
+          "seconds": 0.07027990370988846,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07036883383989334,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3081819359450102,
+              "1": 0.22829696609979858,
+              "2": 0.4635210979551913
+            },
+            "confidence": 0.19528164693278696
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06824680790305138,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.350278325378895
+    },
+    {
+      "step": 39,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 39 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 39 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "659292bd0d4d75a0c4833336817a2c9d0c7e9ce61e56cb4e017f4422396e4254",
+      "attempts": [
+        {
+          "seconds": 0.07307667285203934,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0731646679341793,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3223226565422281,
+              "1": 0.23791488408862402,
+              "2": 0.439762459369148
+            },
+            "confidence": 0.15964368905372198
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06783979758620262,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.4957444332540035
+    },
+    {
+      "step": 40,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 40 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 40 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bfda84d9b2e6b8d270ba2a3fc853dd993aaa4730857eb65c468a50b7d4d06e05",
+      "attempts": [
+        {
+          "seconds": 0.06960750371217728,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.069713044911623,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33326592915881686,
+              "1": 0.23842716022096946,
+              "2": 0.42830691062021364
+            },
+            "confidence": 0.14246036593032047
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06789881363511086,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.634811330586672
+    },
+    {
+      "step": 41,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 41 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 41 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3bd3a0876f6ccfd89b7a14e28a0e20f5f7aa25e87de9e135aaddd73079afb190",
+      "attempts": [
+        {
+          "seconds": 0.0728803500533104,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0729539766907692,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.34772695874583687,
+              "1": 0.22933997022022717,
+              "2": 0.422933071033936
+            },
+            "confidence": 0.13439960655090402
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06747071072459221,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.79313288629055
+    },
+    {
+      "step": 42,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 42 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 42 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "88f87783b07dde9f347498f6873aa397b9ebbc2a251de8a5e6a510af5a90efbf",
+      "attempts": [
+        {
+          "seconds": 0.0733373612165451,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07342291623353958,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.313103581471194,
+              "1": 0.22902241350825514,
+              "2": 0.4578740050205508
+            },
+            "confidence": 0.18681100753082622
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06885898113250732,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.93072422221303
+    },
+    {
+      "step": 43,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 43 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 43 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e56e0d80c202a85c8393566fa654bc242f97c34b56bdb12e27e8124185987690",
+      "attempts": [
+        {
+          "seconds": 0.08406523615121841,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0841456800699234,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3046168685111792,
+              "1": 0.2211872101685889,
+              "2": 0.4741959213202319
+            },
+            "confidence": 0.21129388198034788
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06950195133686066,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.078183438628912
+    },
+    {
+      "step": 44,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 44 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 44 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4410fafb60393ddc5bda87294eca70bb43c0338668dc06bd8190468ff96f3aab",
+      "attempts": [
+        {
+          "seconds": 0.06912532076239586,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06919465586543083,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.31342942731048706,
+              "1": 0.23082343681115333,
+              "2": 0.45574713587835963
+            },
+            "confidence": 0.18362070381753945
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0673956573009491,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.22986762598157
+    },
+    {
+      "step": 45,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 45 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 45 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6c74ffb0e3bec939a204b1d363660ffb5b8d9bfcf4dcdac02ebaf3bebc480f29",
+      "attempts": [
+        {
+          "seconds": 0.08819938451051712,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.08828775212168694,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29777235036399996,
+              "1": 0.22143563383578785,
+              "2": 0.48079201580021225
+            },
+            "confidence": 0.22118802370031837
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06844176724553108,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.38391936942935
+    },
+    {
+      "step": 46,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 46 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 46 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c3d3210eada7e004931397f21d37323e284d710b151b18adf2eb631cacb3236e",
+      "attempts": [
+        {
+          "seconds": 0.06995454803109169,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07003578916192055,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3091819096668588,
+              "1": 0.22244702791886148,
+              "2": 0.46837106241427967
+            },
+            "confidence": 0.2025565936214195
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06826239079236984,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.51925764605403
+    },
+    {
+      "step": 47,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 47 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 47 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c43d1815894201336770ca164b8ecfd8dc4115590bf5db36230e7bed81c72130",
+      "attempts": [
+        {
+          "seconds": 0.07057850435376167,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0706717036664486,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3092935660293662,
+              "1": 0.2275800072621765,
+              "2": 0.4631264267084573
+            },
+            "confidence": 0.1946896400626859
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06886808201670647,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.655650533735752
+    },
+    {
+      "step": 48,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 48 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 48 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "15916a92f95d4b9b17f676104bd01661c4f7c618ca5157b952931f47de23a742",
+      "attempts": [
+        {
+          "seconds": 0.07049727439880371,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07059209048748016,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3170899076411878,
+              "1": 0.23131670544465815,
+              "2": 0.451593386914154
+            },
+            "confidence": 0.17739008037123102
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06856278330087662,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.791706345975399
+    },
+    {
+      "step": 49,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 49 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 49 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f39403b42eafbf9932a37f2d667322dd554e4b367d9ce95e5f7c379ab729910c",
+      "attempts": [
+        {
+          "seconds": 0.07029034197330475,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07038136944174767,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.39238019255176754,
+              "1": 0.2758234580557523,
+              "2": 0.33179634939248015
+            },
+            "confidence": 0.08857028882765132
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 705,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06830980256199837,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.868381273001432
+    },
+    {
+      "step": 50,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.996946949511766
+    },
+    {
+      "step": 51,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09QQ8YMPT [SEP] Men's Swim Trunks Quick Dry Floral Prints Beach Shorts Summer Casual Plus Size Athletic Knee Length Swim Boardshort [SEP] $10.99 to $14.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09SG8JQBV [SEP] Men's Henley T Shirts Casual Front Placket Short Sleeve Basic Tee Fashion Athletic Top [SEP] $100.0 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B0953JTCWD [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Loose Maxi Tank Dress Party Prom Floral Print Dress with Pocket [SEP] $2.19 to $9.79 [SEP] B09SG7DGCF [SEP] CHENGSE Men's Business Dress Shirt Long Sleeve Solid Regular Fit Shirt Wrinkle Free Casual Button Down Shirt [SEP] $100.0 [SEP] B095BZDSMM [SEP] Casual Summer Dress for Women,Round Neck Sleeve Floral Print Tank Dress Cocktail Party Swing Flowy Patchwork Dress [SEP] $0.49 to $8.09 [SEP] B09Q67DF2T [SEP] Women's Casual Summer Dresses, Floral Boho Sleeveless Long Maxi Dress Beach Sundress Loose Party Tank Dress [SEP] $7.27 to $7.29 [SEP] B09QQ7KL4F [SEP] Men's Quick Dry Swim Trunks Striped Print Pockets Board Shorts Summer Holiday Swim Beach Shorts with Mesh Lining [SEP] $12.99 to $16.99 [SEP] B096WTNXHF [SEP] camisole for women-Print V-neck Tank Tops Short Sleeve Workout Shirts Casual Loose Tees [SEP] $5.66 to $12.01",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09QQ8YMPT [SEP] Men's Swim Trunks Quick Dry Floral Prints Beach Shorts Summer Casual Plus Size Athletic Knee Length Swim Boardshort [SEP] $10.99 to $14.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09SG8JQBV [SEP] Men's Henley T Shirts Casual Front Placket Short Sleeve Basic Tee Fashion Athletic Top [SEP] $100.0 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B0953JTCWD [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Loose Maxi Tank Dress Party Prom Floral Print Dress with Pocket [SEP] $2.19 to $9.79 [SEP] B09SG7DGCF [SEP] CHENGSE Men's Business Dress Shirt Long Sleeve Solid Regular Fit Shirt Wrinkle Free Casual Button Down Shirt [SEP] $100.0 [SEP] B095BZDSMM [SEP] Casual Summer Dress for Women,Round Neck Sleeve Floral Print Tank Dress Cocktail Party Swing Flowy Patchwork Dress [SEP] $0.49 to $8.09 [SEP] B09Q67DF2T [SEP] Women's Casual Summer Dresses, Floral Boho Sleeveless Long Maxi Dress Beach Sundress Loose Party Tank Dress [SEP] $7.27 to $7.29 [SEP] B09QQ7KL4F [SEP] Men's Quick Dry Swim Trunks Striped Print Pockets Board Shorts Summer Holiday Swim Beach Shorts with Mesh Lining [SEP] $12.99 to $16.99 [SEP] B096WTNXHF [SEP] camisole for women-Print V-neck Tank Tops Short Sleeve Workout Shirts Casual Loose Tees [SEP] $5.66 to $12.01\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09qq8ympt]",
+              "3": "click[b099z4t56c]",
+              "4": "click[b09sg8jqbv]",
+              "5": "click[b09dshw7mz]",
+              "6": "click[b0953jtcwd]",
+              "7": "click[b09sg7dgcf]",
+              "8": "click[b095bzdsmm]",
+              "9": "click[b09q67df2t]",
+              "10": "click[b09qq7kl4f]",
+              "11": "click[b096wtnxhf]"
+            }
+          }
+        }
+      },
+      "request_sha256": "015649e8b148d56ff7db83482aeae15fa6e03b90af1f03dc2c719c16504c7eea",
+      "attempts": [
+        {
+          "seconds": 0.40021826699376106,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4003526084125042,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "probabilities": {
+              "0": 0.09939405510258027,
+              "1": 0.20483689004430086,
+              "2": 0.02971214326026118,
+              "3": 0.014370744736072116,
+              "4": 0.05089058102914883,
+              "5": 0.014375430851544,
+              "6": 0.21151311441793172,
+              "7": 0.01678185058012264,
+              "8": 0.14251646678159735,
+              "9": 0.11633735593804594,
+              "10": 0.03746802593785839,
+              "11": 0.06180334132053691
+            },
+            "confidence": 0.13983248845592544
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8897,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.39796144142746925,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b0953jtcwd]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 9.422144964337349
+    },
+    {
+      "step": 52,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] white [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Loose Maxi Tank Dress Party Prom Floral Print Dress with Pocket [SEP] Price: $2.19 to $9.79 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] white [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Loose Maxi Tank Dress Party Prom Floral Print Dress with Pocket [SEP] Price: $2.19 to $9.79 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]\nclick[b0953jtcwd]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[black]",
+              "7": "click[white]",
+              "8": "click[small]",
+              "9": "click[medium]",
+              "10": "click[large]",
+              "11": "click[x-large]",
+              "12": "click[xx-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "61f74f2b7196fd8237e575fcc8313d71b08208a3a301613f12815e18571d6f19",
+      "attempts": [
+        {
+          "seconds": 0.22214436158537865,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.22224652022123337,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "12",
+            "probabilities": {
+              "0": 0.05280460639199595,
+              "1": 0.06441393467443457,
+              "2": 0.0918189729021372,
+              "3": 0.05207223457601001,
+              "4": 0.05400952312486805,
+              "5": 0.2025633857596216,
+              "6": 0.01640523438752965,
+              "7": 0.02252824176247966,
+              "8": 0.034573575312691625,
+              "9": 0.039775258872697734,
+              "10": 0.047547787452923526,
+              "11": 0.046018054980778794,
+              "12": 0.27546918980183166
+            },
+            "confidence": 0.2150916222853176
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 4571,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.21959003061056137,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[xx-large]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 9.667527589946985
+    },
+    {
+      "step": 53,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] white [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Loose Maxi Tank Dress Party Prom Floral Print Dress with Pocket [SEP] Price: $2.19 to $9.79 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] white [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Loose Maxi Tank Dress Party Prom Floral Print Dress with Pocket [SEP] Price: $2.19 to $9.79 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]\nclick[b0953jtcwd]\nclick[xx-large]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[black]",
+              "7": "click[white]",
+              "8": "click[small]",
+              "9": "click[medium]",
+              "10": "click[large]",
+              "11": "click[x-large]",
+              "12": "click[xx-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d9ada4e10554199092681b83185444b2d93daf2b157caf0ee06273c3144d4a9d",
+      "attempts": [
+        {
+          "seconds": 0.21806536242365837,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.2181793674826622,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.06911467456594472,
+              "1": 0.0894043236876193,
+              "2": 0.11480404304223732,
+              "3": 0.07316925115320318,
+              "4": 0.07055367959128693,
+              "5": 0.30160055451250006,
+              "6": 0.02321014103411834,
+              "7": 0.03869652483612356,
+              "8": 0.029726796030365935,
+              "9": 0.046064913019329884,
+              "10": 0.035519185476307384,
+              "11": 0.02189037321350813,
+              "12": 0.08624553983745518
+            },
+            "confidence": 0.24340060072187505
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 4584,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.21643751487135887,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.5,
+      "done": true,
+      "elapsed_seconds": 9.914503499865532
+    }
+  ]
+}

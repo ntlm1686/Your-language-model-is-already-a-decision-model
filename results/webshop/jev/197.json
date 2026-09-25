@@ -1,0 +1,509 @@
+{
+  "task_id": 197,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars",
+  "instruction_sha256": "7ac0793b7a705e608fdd44a391e4bd30836ee9d33c574937e63c83879e9f135d",
+  "reward": 0.3333333333333333,
+  "score": 33.33333333333333,
+  "success": false,
+  "termination": "purchase",
+  "steps": 9,
+  "elapsed_seconds": 2.7578014209866524,
+  "decision_seconds": 2.4097356759011745,
+  "input_tokens": 6858,
+  "output_tokens": 681,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Search",
+      "action": "search[i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.04636348411440849
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B082LWP4CF [SEP] Star Wars The Mandalorian The Child Illustration Raglan Baseball Tee [SEP] $27.5 [SEP] B08KQ6LNS9 [SEP] Star Wars The Mandalorian The Child Rainbow Hearts T-Shirt [SEP] $22.99 [SEP] B082LTQK2Z [SEP] Star Wars The Mandalorian The Child Illustration Tank Top [SEP] $21.0 [SEP] B082N7P6NQ [SEP] Star Wars The Mandalorian The Child Pink Bubble Letters T-Shirt [SEP] $22.99 [SEP] B082N82QWM [SEP] Star Wars The Mandalorian Character Grid This Is The Way Premium T-Shirt [SEP] $23.5 [SEP] B0822B7J4R [SEP] Star Wars The Mandalorian The Child Cartoon Poses Premium T-Shirt [SEP] $23.5 [SEP] B082N7NHQ3 [SEP] Star Wars Logo and The Child from The Mandalorian Tank Top [SEP] $21.0 [SEP] B0823HFNV7 [SEP] Star Wars The Mandalorian The Child Nap Time T-Shirt [SEP] $22.99 [SEP] B0823FF5ZV [SEP] Star Wars The Mandalorian The Child Snack Time T-Shirt [SEP] $22.99 [SEP] B0823G5HDX [SEP] Star Wars The Mandalorian The Child Snack Time Premium T-Shirt [SEP] $23.5",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B082LWP4CF [SEP] Star Wars The Mandalorian The Child Illustration Raglan Baseball Tee [SEP] $27.5 [SEP] B08KQ6LNS9 [SEP] Star Wars The Mandalorian The Child Rainbow Hearts T-Shirt [SEP] $22.99 [SEP] B082LTQK2Z [SEP] Star Wars The Mandalorian The Child Illustration Tank Top [SEP] $21.0 [SEP] B082N7P6NQ [SEP] Star Wars The Mandalorian The Child Pink Bubble Letters T-Shirt [SEP] $22.99 [SEP] B082N82QWM [SEP] Star Wars The Mandalorian Character Grid This Is The Way Premium T-Shirt [SEP] $23.5 [SEP] B0822B7J4R [SEP] Star Wars The Mandalorian The Child Cartoon Poses Premium T-Shirt [SEP] $23.5 [SEP] B082N7NHQ3 [SEP] Star Wars Logo and The Child from The Mandalorian Tank Top [SEP] $21.0 [SEP] B0823HFNV7 [SEP] Star Wars The Mandalorian The Child Nap Time T-Shirt [SEP] $22.99 [SEP] B0823FF5ZV [SEP] Star Wars The Mandalorian The Child Snack Time T-Shirt [SEP] $22.99 [SEP] B0823G5HDX [SEP] Star Wars The Mandalorian The Child Snack Time Premium T-Shirt [SEP] $23.5\n\nRecent actions:\nsearch[i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b082lwp4cf]",
+              "3": "click[b08kq6lns9]",
+              "4": "click[b082ltqk2z]",
+              "5": "click[b082n7p6nq]",
+              "6": "click[b082n82qwm]",
+              "7": "click[b0822b7j4r]",
+              "8": "click[b082n7nhq3]",
+              "9": "click[b0823hfnv7]",
+              "10": "click[b0823ff5zv]",
+              "11": "click[b0823g5hdx]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "e9a8fa7f412a259c6f3dcaba1740c69be4b87d6a531e8729592ff7df29f69dce",
+      "attempts": [
+        {
+          "seconds": 0.34682802483439445,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.34690407663583755,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.51,
+            "probabilities": {
+              "5": 0.01,
+              "9": 0.01,
+              "4": 0.01,
+              "2": 0.25,
+              "3": 0.05,
+              "1": 0.55,
+              "10": 0.0,
+              "7": 0.0,
+              "0": 0.11,
+              "8": 0.0,
+              "6": 0.01,
+              "11": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1088,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4491218626499176
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09484GS86 [SEP] STAR WARS The Mandalorian The Child Baby Yoda Today I Feel T-Shirt [SEP] $17.95 to $21.95 [SEP] B082N7GJ76 [SEP] Star Wars The Mandalorian The Child Comic Book Illustration T-Shirt [SEP] $22.99 [SEP] B082N7RZ3V [SEP] Star Wars The Mandalorian The Child Pink Bubble Letters Raglan Baseball Tee [SEP] $27.5 [SEP] B081ZX6D8G [SEP] Star Wars The Mandalorian The Child Cute T-Shirt [SEP] $22.99 [SEP] B08HWQRZYM [SEP] Star Wars The Mandalorian Season 2 Logo T-Shirt [SEP] $22.99 [SEP] B081ZX7GL6 [SEP] Star Wars The Mandalorian The Child Floating Pod Tank Top [SEP] $21.0 [SEP] B082N7RG3L [SEP] Star Wars The Mandalorian The Child Pink Bubble Letters Premium T-Shirt [SEP] $23.5 [SEP] B08BV2WGPJ [SEP] The Mandalorian Grogu The Child Power Nap Sleepwear Set [SEP] $31.99 to $34.45 [SEP] B08ZWK587T [SEP] Star Wars Tie Dye Logo with The Child T-Shirt [SEP] $22.99 [SEP] B0855BC5LP [SEP] Star Wars The Mandalorian The Child Green St. Patrick's Day Tank Top [SEP] $21.0",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09484GS86 [SEP] STAR WARS The Mandalorian The Child Baby Yoda Today I Feel T-Shirt [SEP] $17.95 to $21.95 [SEP] B082N7GJ76 [SEP] Star Wars The Mandalorian The Child Comic Book Illustration T-Shirt [SEP] $22.99 [SEP] B082N7RZ3V [SEP] Star Wars The Mandalorian The Child Pink Bubble Letters Raglan Baseball Tee [SEP] $27.5 [SEP] B081ZX6D8G [SEP] Star Wars The Mandalorian The Child Cute T-Shirt [SEP] $22.99 [SEP] B08HWQRZYM [SEP] Star Wars The Mandalorian Season 2 Logo T-Shirt [SEP] $22.99 [SEP] B081ZX7GL6 [SEP] Star Wars The Mandalorian The Child Floating Pod Tank Top [SEP] $21.0 [SEP] B082N7RG3L [SEP] Star Wars The Mandalorian The Child Pink Bubble Letters Premium T-Shirt [SEP] $23.5 [SEP] B08BV2WGPJ [SEP] The Mandalorian Grogu The Child Power Nap Sleepwear Set [SEP] $31.99 to $34.45 [SEP] B08ZWK587T [SEP] Star Wars Tie Dye Logo with The Child T-Shirt [SEP] $22.99 [SEP] B0855BC5LP [SEP] Star Wars The Mandalorian The Child Green St. Patrick's Day Tank Top [SEP] $21.0\n\nRecent actions:\nsearch[i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09484gs86]",
+              "4": "click[b082n7gj76]",
+              "5": "click[b082n7rz3v]",
+              "6": "click[b081zx6d8g]",
+              "7": "click[b08hwqrzym]",
+              "8": "click[b081zx7gl6]",
+              "9": "click[b082n7rg3l]",
+              "10": "click[b08bv2wgpj]",
+              "11": "click[b08zwk587t]",
+              "12": "click[b0855bc5lp]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "82b12ea354eb3f89e739dcea7fffab17b1c91077bf7045ec5f524efb3a2ff862",
+      "attempts": [
+        {
+          "seconds": 0.35338883101940155,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3535170629620552,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "confidence": 0.23,
+            "probabilities": {
+              "10": 0.0,
+              "3": 0.29,
+              "5": 0.01,
+              "11": 0.08,
+              "2": 0.24,
+              "12": 0.0,
+              "0": 0.1,
+              "8": 0.0,
+              "1": 0.16,
+              "9": 0.0,
+              "7": 0.05,
+              "4": 0.06,
+              "6": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1126,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b09484gs86]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.8285545744001865
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] STAR WARS The Mandalorian The Child Baby Yoda Today I Feel T-Shirt [SEP] Price: $17.95 to $21.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] STAR WARS The Mandalorian The Child Baby Yoda Today I Feel T-Shirt [SEP] Price: $17.95 to $21.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars]\nclick[next >]\nclick[b09484gs86]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[x-small]",
+              "7": "click[small]",
+              "8": "click[medium]",
+              "9": "click[large]",
+              "10": "click[x-large]",
+              "11": "click[xx-large]",
+              "12": "click[3x-large]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "fa04e53d3db02dfd692d67d930b99819afbd4af848af3d6f1b14b6fb72e64343",
+      "attempts": [
+        {
+          "seconds": 0.33506178855895996,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3351527936756611,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "confidence": 0.26,
+            "probabilities": {
+              "10": 0.0,
+              "3": 0.33,
+              "5": 0.29,
+              "11": 0.0,
+              "2": 0.13,
+              "12": 0.0,
+              "0": 0.14,
+              "8": 0.06,
+              "1": 0.02,
+              "9": 0.01,
+              "4": 0.0,
+              "7": 0.01,
+              "6": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 780,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[features]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.1798354126513004
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Officially licensed The Mandalorian Child T-shirt [SEP] Standard Adult Men's sizes and Fit that can be worn by women who prefer a looser boyfriend fit. [SEP] He may look like a Baby Yoda, but this lovable creature is referred to as The Child before his his name was known as Grogu.Do you feel like the Child does today? This is the way! [SEP] Heather Black is a 50/50 poly cotton blend that is a lighter black and softer feel. [SEP] This is a fun Star Wars tee present for Christmas, Father’s Day, Mother’s Day, Halloween, Valentine’s Day, Saint Patrick’s Day, Thanksgiving, New Year’s, Easter, Hanukah and the 4th of July or a day at Galaxies Edge.",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Officially licensed The Mandalorian Child T-shirt [SEP] Standard Adult Men's sizes and Fit that can be worn by women who prefer a looser boyfriend fit. [SEP] He may look like a Baby Yoda, but this lovable creature is referred to as The Child before his his name was known as Grogu.Do you feel like the Child does today? This is the way! [SEP] Heather Black is a 50/50 poly cotton blend that is a lighter black and softer feel. [SEP] This is a fun Star Wars tee present for Christmas, Father’s Day, Mother’s Day, Halloween, Valentine’s Day, Saint Patrick’s Day, Thanksgiving, New Year’s, Easter, Hanukah and the 4th of July or a day at Galaxies Edge.\n\nRecent actions:\nsearch[i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars]\nclick[next >]\nclick[b09484gs86]\nclick[features]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "ed70b9413b93e396eb02cbc6f8ce6892578a31dd00c6530258edeaa16927a2c5",
+      "attempts": [
+        {
+          "seconds": 0.3210901543498039,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3211970813572407,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.47,
+            "probabilities": {
+              "1": 0.26,
+              "0": 0.74
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 675,
+          "output_tokens": 31
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.5081325769424438
+    },
+    {
+      "step": 5,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Search",
+      "action": "search[i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.5578683242201805
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B082LWP4CF [SEP] Star Wars The Mandalorian The Child Illustration Raglan Baseball Tee [SEP] $27.5 [SEP] B08KQ6LNS9 [SEP] Star Wars The Mandalorian The Child Rainbow Hearts T-Shirt [SEP] $22.99 [SEP] B082LTQK2Z [SEP] Star Wars The Mandalorian The Child Illustration Tank Top [SEP] $21.0 [SEP] B082N7P6NQ [SEP] Star Wars The Mandalorian The Child Pink Bubble Letters T-Shirt [SEP] $22.99 [SEP] B082N82QWM [SEP] Star Wars The Mandalorian Character Grid This Is The Way Premium T-Shirt [SEP] $23.5 [SEP] B0822B7J4R [SEP] Star Wars The Mandalorian The Child Cartoon Poses Premium T-Shirt [SEP] $23.5 [SEP] B082N7NHQ3 [SEP] Star Wars Logo and The Child from The Mandalorian Tank Top [SEP] $21.0 [SEP] B0823HFNV7 [SEP] Star Wars The Mandalorian The Child Nap Time T-Shirt [SEP] $22.99 [SEP] B0823FF5ZV [SEP] Star Wars The Mandalorian The Child Snack Time T-Shirt [SEP] $22.99 [SEP] B0823G5HDX [SEP] Star Wars The Mandalorian The Child Snack Time Premium T-Shirt [SEP] $23.5",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B082LWP4CF [SEP] Star Wars The Mandalorian The Child Illustration Raglan Baseball Tee [SEP] $27.5 [SEP] B08KQ6LNS9 [SEP] Star Wars The Mandalorian The Child Rainbow Hearts T-Shirt [SEP] $22.99 [SEP] B082LTQK2Z [SEP] Star Wars The Mandalorian The Child Illustration Tank Top [SEP] $21.0 [SEP] B082N7P6NQ [SEP] Star Wars The Mandalorian The Child Pink Bubble Letters T-Shirt [SEP] $22.99 [SEP] B082N82QWM [SEP] Star Wars The Mandalorian Character Grid This Is The Way Premium T-Shirt [SEP] $23.5 [SEP] B0822B7J4R [SEP] Star Wars The Mandalorian The Child Cartoon Poses Premium T-Shirt [SEP] $23.5 [SEP] B082N7NHQ3 [SEP] Star Wars Logo and The Child from The Mandalorian Tank Top [SEP] $21.0 [SEP] B0823HFNV7 [SEP] Star Wars The Mandalorian The Child Nap Time T-Shirt [SEP] $22.99 [SEP] B0823FF5ZV [SEP] Star Wars The Mandalorian The Child Snack Time T-Shirt [SEP] $22.99 [SEP] B0823G5HDX [SEP] Star Wars The Mandalorian The Child Snack Time Premium T-Shirt [SEP] $23.5\n\nRecent actions:\nsearch[i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars]\nclick[next >]\nclick[b09484gs86]\nclick[features]\nclick[back to search]\nsearch[i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b082lwp4cf]",
+              "3": "click[b08kq6lns9]",
+              "4": "click[b082ltqk2z]",
+              "5": "click[b082n7p6nq]",
+              "6": "click[b082n82qwm]",
+              "7": "click[b0822b7j4r]",
+              "8": "click[b082n7nhq3]",
+              "9": "click[b0823hfnv7]",
+              "10": "click[b0823ff5zv]",
+              "11": "click[b0823g5hdx]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "587124ebffb246b921536d10b584f6d8c04127b57ff089803d2fb5bae1e9d7d9",
+      "attempts": [
+        {
+          "seconds": 0.3667921982705593,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.36691753938794136,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.55,
+            "probabilities": {
+              "3": 0.05,
+              "9": 0.01,
+              "8": 0.01,
+              "6": 0.02,
+              "0": 0.01,
+              "4": 0.01,
+              "10": 0.0,
+              "11": 0.01,
+              "5": 0.01,
+              "7": 0.01,
+              "2": 0.28,
+              "1": 0.58
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1153,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.015552930533886
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09484GS86 [SEP] STAR WARS The Mandalorian The Child Baby Yoda Today I Feel T-Shirt [SEP] $17.95 to $21.95 [SEP] B082N7GJ76 [SEP] Star Wars The Mandalorian The Child Comic Book Illustration T-Shirt [SEP] $22.99 [SEP] B082N7RZ3V [SEP] Star Wars The Mandalorian The Child Pink Bubble Letters Raglan Baseball Tee [SEP] $27.5 [SEP] B081ZX6D8G [SEP] Star Wars The Mandalorian The Child Cute T-Shirt [SEP] $22.99 [SEP] B08HWQRZYM [SEP] Star Wars The Mandalorian Season 2 Logo T-Shirt [SEP] $22.99 [SEP] B081ZX7GL6 [SEP] Star Wars The Mandalorian The Child Floating Pod Tank Top [SEP] $21.0 [SEP] B082N7RG3L [SEP] Star Wars The Mandalorian The Child Pink Bubble Letters Premium T-Shirt [SEP] $23.5 [SEP] B08BV2WGPJ [SEP] The Mandalorian Grogu The Child Power Nap Sleepwear Set [SEP] $31.99 to $34.45 [SEP] B08ZWK587T [SEP] Star Wars Tie Dye Logo with The Child T-Shirt [SEP] $22.99 [SEP] B0855BC5LP [SEP] Star Wars The Mandalorian The Child Green St. Patrick's Day Tank Top [SEP] $21.0",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09484GS86 [SEP] STAR WARS The Mandalorian The Child Baby Yoda Today I Feel T-Shirt [SEP] $17.95 to $21.95 [SEP] B082N7GJ76 [SEP] Star Wars The Mandalorian The Child Comic Book Illustration T-Shirt [SEP] $22.99 [SEP] B082N7RZ3V [SEP] Star Wars The Mandalorian The Child Pink Bubble Letters Raglan Baseball Tee [SEP] $27.5 [SEP] B081ZX6D8G [SEP] Star Wars The Mandalorian The Child Cute T-Shirt [SEP] $22.99 [SEP] B08HWQRZYM [SEP] Star Wars The Mandalorian Season 2 Logo T-Shirt [SEP] $22.99 [SEP] B081ZX7GL6 [SEP] Star Wars The Mandalorian The Child Floating Pod Tank Top [SEP] $21.0 [SEP] B082N7RG3L [SEP] Star Wars The Mandalorian The Child Pink Bubble Letters Premium T-Shirt [SEP] $23.5 [SEP] B08BV2WGPJ [SEP] The Mandalorian Grogu The Child Power Nap Sleepwear Set [SEP] $31.99 to $34.45 [SEP] B08ZWK587T [SEP] Star Wars Tie Dye Logo with The Child T-Shirt [SEP] $22.99 [SEP] B0855BC5LP [SEP] Star Wars The Mandalorian The Child Green St. Patrick's Day Tank Top [SEP] $21.0\n\nRecent actions:\nsearch[i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars]\nclick[next >]\nclick[b09484gs86]\nclick[features]\nclick[back to search]\nsearch[i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09484gs86]",
+              "4": "click[b082n7gj76]",
+              "5": "click[b082n7rz3v]",
+              "6": "click[b081zx6d8g]",
+              "7": "click[b08hwqrzym]",
+              "8": "click[b081zx7gl6]",
+              "9": "click[b082n7rg3l]",
+              "10": "click[b08bv2wgpj]",
+              "11": "click[b08zwk587t]",
+              "12": "click[b0855bc5lp]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "56b036f1a992658e0f0c841c9f7b6ebd7ccad42f7bb7caeec7b2339f9f9e9485",
+      "attempts": [
+        {
+          "seconds": 0.3417713865637779,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.34186307340860367,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "confidence": 0.18,
+            "probabilities": {
+              "3": 0.25,
+              "7": 0.07,
+              "8": 0.0,
+              "0": 0.01,
+              "2": 0.25,
+              "12": 0.0,
+              "4": 0.16,
+              "6": 0.02,
+              "9": 0.0,
+              "1": 0.14,
+              "5": 0.01,
+              "10": 0.01,
+              "11": 0.08
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1191,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b09484gs86]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.3868055529892445
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] STAR WARS The Mandalorian The Child Baby Yoda Today I Feel T-Shirt [SEP] Price: $17.95 to $21.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] STAR WARS The Mandalorian The Child Baby Yoda Today I Feel T-Shirt [SEP] Price: $17.95 to $21.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars]\nclick[next >]\nclick[b09484gs86]\nclick[features]\nclick[back to search]\nsearch[i am looking for a star wars the mandalorian t-shirt which is machine washable and is in the baby blue color, and price lower than 60.00 dollars]\nclick[next >]\nclick[b09484gs86]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[x-small]",
+              "7": "click[small]",
+              "8": "click[medium]",
+              "9": "click[large]",
+              "10": "click[x-large]",
+              "11": "click[xx-large]",
+              "12": "click[3x-large]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "90a6cabc656987541fa7cca6ba0eda46c493031ea2f954db8ea4a35f6be1b9e3",
+      "attempts": [
+        {
+          "seconds": 0.34409770742058754,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.344184048473835,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.34,
+            "probabilities": {
+              "0": 0.06,
+              "11": 0.0,
+              "7": 0.01,
+              "8": 0.08,
+              "1": 0.05,
+              "5": 0.4,
+              "3": 0.23,
+              "9": 0.01,
+              "4": 0.01,
+              "2": 0.14,
+              "12": 0.0,
+              "10": 0.0,
+              "6": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 845,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.3333333333333333,
+      "done": true,
+      "elapsed_seconds": 2.7577983923256397
+    }
+  ]
+}

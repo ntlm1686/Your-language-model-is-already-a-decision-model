@@ -1,0 +1,154 @@
+{
+  "task_id": 458,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i'm looking for long-lasting anti-perspirant that is unscented, and price lower than 60.00 dollars",
+  "instruction_sha256": "90c0ce5a59f9c508582c8ff4fddd7d57ff6a198996ee3cd3c61f149547a846f4",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 0.7830982059240341,
+  "decision_seconds": 0.6969059109687805,
+  "input_tokens": 1800,
+  "output_tokens": 162,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for long-lasting anti-perspirant that is unscented, and price lower than 60.00 dollars [SEP] Search",
+      "action": "search[i'm looking for long-lasting anti-perspirant that is unscented, and price lower than 60.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.03711172565817833
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i'm looking for long-lasting anti-perspirant that is unscented, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B001F51UC6 [SEP] Old Spice High Endurance Antiperspirant and Deodorant for Men, Pure Sport 3 Ounce (Pack of 6) [SEP] $20.94 [SEP] B0017WKFQE [SEP] Old Spice Antiperspirant & Deodorant for Men, High Endurance, Long Lasting Fresh, 3 Oz, Pack of 6 (Packaging May Vary) [SEP] $20.94 [SEP] B07NBKQ5Y1 [SEP] Old Spice High Endurance AntiPerspirant Deodorant Swagger .5 Ounce (12 Pack) | Long Lasting Stick with Clean Dry Protection| Travel Size Anti Perspirant [SEP] $26.34 [SEP] B008CC3NHK [SEP] Old Spice High Endurance Sport 2.25 oz [SEP] $100.0 [SEP] B0017WGHRU [SEP] Old Spice Antiperspirant and Deodorant, High Endurance, Original, 3 Ounce (Pack of 6) [SEP] $27.84 [SEP] B000VLHCXQ [SEP] Hi & Dri Anti-Perspirant Deodorant Roll On Unscented 1.7 oz (Pack of 6) [SEP] $12.38 [SEP] B00E4MOE5W [SEP] Sure Sure Anti-Perspirant Deodorant Invisible Solid Unscented, Unscented 2.6 oz (Pack of 2) [SEP] $7.99 [SEP] B00E4MM1XE [SEP] Old Spice High Endurance Anti-Perspirant & Deodorant, Pure Sport 3 Oz ,Pack of 2 [SEP] $100.0 [SEP] B01IA99NIC [SEP] Old Spice High Endurance Anti-Perspirant & Deodorant, Pure Sport 3 oz (Pack of 4) [SEP] $19.95 [SEP] B01IA9A110 [SEP] Old Spice High Endurance Anti-Perspirant & Deodorant, Pure Sport 3 oz (Pack of 7) [SEP] $30.07",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for long-lasting anti-perspirant that is unscented, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for long-lasting anti-perspirant that is unscented, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B001F51UC6 [SEP] Old Spice High Endurance Antiperspirant and Deodorant for Men, Pure Sport 3 Ounce (Pack of 6) [SEP] $20.94 [SEP] B0017WKFQE [SEP] Old Spice Antiperspirant & Deodorant for Men, High Endurance, Long Lasting Fresh, 3 Oz, Pack of 6 (Packaging May Vary) [SEP] $20.94 [SEP] B07NBKQ5Y1 [SEP] Old Spice High Endurance AntiPerspirant Deodorant Swagger .5 Ounce (12 Pack) | Long Lasting Stick with Clean Dry Protection| Travel Size Anti Perspirant [SEP] $26.34 [SEP] B008CC3NHK [SEP] Old Spice High Endurance Sport 2.25 oz [SEP] $100.0 [SEP] B0017WGHRU [SEP] Old Spice Antiperspirant and Deodorant, High Endurance, Original, 3 Ounce (Pack of 6) [SEP] $27.84 [SEP] B000VLHCXQ [SEP] Hi & Dri Anti-Perspirant Deodorant Roll On Unscented 1.7 oz (Pack of 6) [SEP] $12.38 [SEP] B00E4MOE5W [SEP] Sure Sure Anti-Perspirant Deodorant Invisible Solid Unscented, Unscented 2.6 oz (Pack of 2) [SEP] $7.99 [SEP] B00E4MM1XE [SEP] Old Spice High Endurance Anti-Perspirant & Deodorant, Pure Sport 3 Oz ,Pack of 2 [SEP] $100.0 [SEP] B01IA99NIC [SEP] Old Spice High Endurance Anti-Perspirant & Deodorant, Pure Sport 3 oz (Pack of 4) [SEP] $19.95 [SEP] B01IA9A110 [SEP] Old Spice High Endurance Anti-Perspirant & Deodorant, Pure Sport 3 oz (Pack of 7) [SEP] $30.07\n\nRecent actions:\nsearch[i'm looking for long-lasting anti-perspirant that is unscented, and price lower than 60.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b001f51uc6]",
+              "3": "click[b0017wkfqe]",
+              "4": "click[b07nbkq5y1]",
+              "5": "click[b008cc3nhk]",
+              "6": "click[b0017wghru]",
+              "7": "click[b000vlhcxq]",
+              "8": "click[b00e4moe5w]",
+              "9": "click[b00e4mm1xe]",
+              "10": "click[b01ia99nic]",
+              "11": "click[b01ia9a110]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "baedadf8915799f43212461a1cc4dc22772faf7c8bd7b75456f4337551c63350",
+      "attempts": [
+        {
+          "seconds": 0.34274619817733765,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.34289293736219406,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "7",
+            "confidence": 0.67,
+            "probabilities": {
+              "2": 0.01,
+              "10": 0.0,
+              "3": 0.0,
+              "6": 0.0,
+              "0": 0.01,
+              "11": 0.0,
+              "9": 0.0,
+              "4": 0.0,
+              "7": 0.71,
+              "8": 0.26,
+              "1": 0.01,
+              "5": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1202,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b000vlhcxq]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4032105915248394
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i'm looking for long-lasting anti-perspirant that is unscented, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Hi & Dri Anti-Perspirant Deodorant Roll On Unscented 1.7 oz (Pack of 6) [SEP] Price: $12.38 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for long-lasting anti-perspirant that is unscented, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for long-lasting anti-perspirant that is unscented, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Hi & Dri Anti-Perspirant Deodorant Roll On Unscented 1.7 oz (Pack of 6) [SEP] Price: $12.38 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm looking for long-lasting anti-perspirant that is unscented, and price lower than 60.00 dollars]\nclick[b000vlhcxq]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "13f6edce89b995adf7611033ea7fb36fe9639d1b175e34d272350f9118daa78c",
+      "attempts": [
+        {
+          "seconds": 0.35391274094581604,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.35401297360658646,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.85,
+            "probabilities": {
+              "0": 0.0,
+              "5": 0.88,
+              "3": 0.09,
+              "4": 0.01,
+              "2": 0.02,
+              "1": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 598,
+          "output_tokens": 59
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 0.7830955386161804
+    }
+  ]
+}

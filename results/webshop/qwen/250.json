@@ -1,0 +1,273 @@
+{
+  "task_id": 250,
+  "model": "qwen",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars",
+  "instruction_sha256": "bf9b965cab84abc9e027b112379e5039ec222b0a8b1a89a98bfeb2cf68558755",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 4,
+  "elapsed_seconds": 1.0657909996807575,
+  "decision_seconds": 0.9335995130240917,
+  "input_tokens": 25693,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars [SEP] Search",
+      "action": "search[i want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.059427909553050995
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B09C8TF2HZ [SEP] USYFAKGH Women's Fashion Long Sleeve Color Block Buttons Casual Loose Blouse Tops coats hoodie for kids [SEP] $11.99 to $15.99 [SEP] B09B1R9D71 [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] $11.99 to $14.99 [SEP] B09BB14FMQ [SEP] T Shirt Long Sleeve Women's Fashion Casual Splice Collared Tied V Neck [SEP] $13.25 to $16.54 [SEP] B09BDR64YT [SEP] Women's Casual Long Sleeve T-Shirt Round Neck Loose Summer Blouse Top [SEP] $15.42 to $18.71 [SEP] B09C5DW7HF [SEP] Women's Casual O-Neck Blouse Long Sleeve Colorblock T Shirt Sweater Top [SEP] $15.99 to $19.99",
+      "request": {
+        "state": "Shopping instruction:\ni want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B09C8TF2HZ [SEP] USYFAKGH Women's Fashion Long Sleeve Color Block Buttons Casual Loose Blouse Tops coats hoodie for kids [SEP] $11.99 to $15.99 [SEP] B09B1R9D71 [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] $11.99 to $14.99 [SEP] B09BB14FMQ [SEP] T Shirt Long Sleeve Women's Fashion Casual Splice Collared Tied V Neck [SEP] $13.25 to $16.54 [SEP] B09BDR64YT [SEP] Women's Casual Long Sleeve T-Shirt Round Neck Loose Summer Blouse Top [SEP] $15.42 to $18.71 [SEP] B09C5DW7HF [SEP] Women's Casual O-Neck Blouse Long Sleeve Colorblock T Shirt Sweater Top [SEP] $15.99 to $19.99\n\nRecent actions:\nsearch[i want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b099z4t56c]",
+              "3": "click[b09b264ypl]",
+              "4": "click[b09dsfsnp3]",
+              "5": "click[b09dkckd7z]",
+              "6": "click[b09dshw7mz]",
+              "7": "click[b09c8tf2hz]",
+              "8": "click[b09b1r9d71]",
+              "9": "click[b09bb14fmq]",
+              "10": "click[b09bdr64yt]",
+              "11": "click[b09c5dw7hf]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0bbda35e0f0aa73a8a9eae297a151b3b33d737b104dce609bb7c28fdae1d5a6d",
+      "attempts": [
+        {
+          "seconds": 0.36377934366464615,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3639157824218273,
+      "response": {
+        "model": "qwen3.5-9b",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "probabilities": {
+              "0": 3.5262176509772914e-10,
+              "1": 3.2290436884865984e-11,
+              "2": 2.151006821767771e-11,
+              "3": 2.2657916792098014e-16,
+              "4": 1.0677178203906952e-19,
+              "5": 8.8650217026378e-23,
+              "6": 5.763808007812333e-22,
+              "7": 5.79461493772561e-19,
+              "8": 0.9999999987862153,
+              "9": 5.901778821867239e-14,
+              "10": 1.4380578231301237e-13,
+              "11": 8.071594512333872e-10
+            },
+            "confidence": 0.9999999986758712
+          }
+        },
+        "usage": {
+          "input_tokens": 10104,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "batched_letter_logprob_rotations",
+          "inference_seconds": 0.36173470318317413,
+          "forward_passes": 12,
+          "max_length": 8192,
+          "probability_calibration": "none"
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b09b1r9d71]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.44677288085222244
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black a [SEP] hot pink b [SEP] navy a [SEP] orange b [SEP] pink b [SEP] white a [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] Price: $11.99 to $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black a [SEP] hot pink b [SEP] navy a [SEP] orange b [SEP] pink b [SEP] white a [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] Price: $11.99 to $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars]\nclick[b09b1r9d71]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[black a]",
+              "7": "click[hot pink b]",
+              "8": "click[navy a]",
+              "9": "click[orange b]",
+              "10": "click[pink b]",
+              "11": "click[white a]",
+              "12": "click[small]",
+              "13": "click[medium]",
+              "14": "click[large]",
+              "15": "click[x-large]",
+              "16": "click[xx-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "206e1a4aa4bf639cc4add013e44639b7786bbbac33f22a478bceb9cd52645181",
+      "attempts": [
+        {
+          "seconds": 0.28417113050818443,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.2842940203845501,
+      "response": {
+        "model": "qwen3.5-9b",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "15",
+            "probabilities": {
+              "0": 2.431989294991734e-39,
+              "1": 2.9568064474597146e-47,
+              "2": 3.883408130900067e-44,
+              "3": 2.1640514343500933e-49,
+              "4": 1.508029395946283e-48,
+              "5": 4.4156120744528255e-21,
+              "6": 5.29993828425865e-28,
+              "7": 5.319162136220816e-43,
+              "8": 3.419899696601365e-45,
+              "9": 1.6602260703810726e-45,
+              "10": 3.1653783508683385e-43,
+              "11": 1.0179106647304702e-25,
+              "12": 1.521776139796271e-42,
+              "13": 8.628698389005561e-47,
+              "14": 1.6056380521399717e-40,
+              "15": 1.0,
+              "16": 2.039956149667074e-39
+            },
+            "confidence": 1.0
+          }
+        },
+        "usage": {
+          "input_tokens": 7752,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "batched_letter_logprob_rotations",
+          "inference_seconds": 0.28229035064578056,
+          "forward_passes": 17,
+          "max_length": 8192,
+          "probability_calibration": "none"
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[x-large]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.7499778047204018
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black a [SEP] hot pink b [SEP] navy a [SEP] orange b [SEP] pink b [SEP] white a [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] Price: $11.99 to $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black a [SEP] hot pink b [SEP] navy a [SEP] orange b [SEP] pink b [SEP] white a [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] T-shirt Women Fashion Solid Color V-neck Lace Broken Sleeve Casual Top [SEP] Price: $11.99 to $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want a x-large short sleeve mayntop womens t-shirt, and price lower than 30.00 dollars]\nclick[b09b1r9d71]\nclick[x-large]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[black a]",
+              "7": "click[hot pink b]",
+              "8": "click[navy a]",
+              "9": "click[orange b]",
+              "10": "click[pink b]",
+              "11": "click[white a]",
+              "12": "click[small]",
+              "13": "click[medium]",
+              "14": "click[large]",
+              "15": "click[x-large]",
+              "16": "click[xx-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5d603db51e039a30a0f31a1bcb691deb9aea286e2cbb0e9828546bf2dece3a9f",
+      "attempts": [
+        {
+          "seconds": 0.2853020466864109,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.2853897102177143,
+      "response": {
+        "model": "qwen3.5-9b",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 9.032196900425797e-26,
+              "1": 3.486706992121988e-37,
+              "2": 1.5459188723392098e-23,
+              "3": 4.112972816358158e-36,
+              "4": 4.0668771277701644e-33,
+              "5": 0.9995985868396979,
+              "6": 2.1436802402928667e-05,
+              "7": 1.2083130402893905e-25,
+              "8": 2.1820742355913784e-30,
+              "9": 1.2433090145836212e-30,
+              "10": 7.801462779315646e-26,
+              "11": 0.00037997635777898485,
+              "12": 2.1437330818566393e-31,
+              "13": 7.301402875612413e-38,
+              "14": 1.0044475371094412e-33,
+              "15": 1.201060651913942e-13,
+              "16": 5.6179570385079145e-34
+            },
+            "confidence": 0.999573498517179
+          }
+        },
+        "usage": {
+          "input_tokens": 7837,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "batched_letter_logprob_rotations",
+          "inference_seconds": 0.2834853380918503,
+          "forward_passes": 17,
+          "max_length": 8192,
+          "probability_calibration": "none"
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 1.0657875016331673
+    }
+  ]
+}

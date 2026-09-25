@@ -1,0 +1,412 @@
+{
+  "task_id": 420,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars",
+  "instruction_sha256": "035477a10e0b1236c0c331dd23a6981c1a093ac622728d603f30a7163d6f706b",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 1.7794183008372784,
+  "decision_seconds": 1.5976643934845924,
+  "input_tokens": 4852,
+  "output_tokens": 846,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars [SEP] Search",
+      "action": "search[i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.0646640807390213
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09J1NLWM1 [SEP] Lands' End Men's Tall Traditional Fit Rugged Flannel Shirt [SEP] $51.57 to $60.93 [SEP] B09CW9ZHD7 [SEP] Lands' End Men's Traditional Fit Comfort- First Lightweight Flannel Shirt [SEP] $39.33 to $42.93 [SEP] B09GQJY6NL [SEP] Lands' End Men's Flannel Pajama Shirt [SEP] $20.98 to $37.17 [SEP] B07HMSXGXD [SEP] Goodthreads Men's Slim-fit Long-Sleeve Doubleface Shirt [SEP] $10.48 to $31.6 [SEP] B09C2KNPM1 [SEP] Lands' End Men's Traditional Fit Flagship Flannel Shirt [SEP] $27.73 to $60.0 [SEP] B07BKR86GT [SEP] Goodthreads Men's Standard-Fit Long-Sleeve Brushed Flannel Shirt [SEP] $19.86 to $32.9 [SEP] B07BM95FW4 [SEP] Goodthreads Men's Slim-Fit Long-Sleeve Brushed Flannel Shirt [SEP] $32.2 [SEP] B07SH3ZQVS [SEP] CQR Men's All Cotton Flannel Shirt, Brushed Soft Casual Button Up Plaid Shirt, Long Sleeve Outdoor Shirts [SEP] $25.98 to $31.98 [SEP] B09QH1B4SL [SEP] Mens Flannel Shirt, Flannel Shirt for Men Big and Tall Long Sleeve Plaid Print Button Up Jacket Cardigan Coats Shirts Blouse [SEP] $7.69 to $11.79 [SEP] B09SZG6SQ3 [SEP] Men's New Recreational Button Long Sleeve Shirt Fashion Pure Long Sleeve Top [SEP] $10.7",
+      "request": {
+        "state": "Shopping instruction:\ni want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09J1NLWM1 [SEP] Lands' End Men's Tall Traditional Fit Rugged Flannel Shirt [SEP] $51.57 to $60.93 [SEP] B09CW9ZHD7 [SEP] Lands' End Men's Traditional Fit Comfort- First Lightweight Flannel Shirt [SEP] $39.33 to $42.93 [SEP] B09GQJY6NL [SEP] Lands' End Men's Flannel Pajama Shirt [SEP] $20.98 to $37.17 [SEP] B07HMSXGXD [SEP] Goodthreads Men's Slim-fit Long-Sleeve Doubleface Shirt [SEP] $10.48 to $31.6 [SEP] B09C2KNPM1 [SEP] Lands' End Men's Traditional Fit Flagship Flannel Shirt [SEP] $27.73 to $60.0 [SEP] B07BKR86GT [SEP] Goodthreads Men's Standard-Fit Long-Sleeve Brushed Flannel Shirt [SEP] $19.86 to $32.9 [SEP] B07BM95FW4 [SEP] Goodthreads Men's Slim-Fit Long-Sleeve Brushed Flannel Shirt [SEP] $32.2 [SEP] B07SH3ZQVS [SEP] CQR Men's All Cotton Flannel Shirt, Brushed Soft Casual Button Up Plaid Shirt, Long Sleeve Outdoor Shirts [SEP] $25.98 to $31.98 [SEP] B09QH1B4SL [SEP] Mens Flannel Shirt, Flannel Shirt for Men Big and Tall Long Sleeve Plaid Print Button Up Jacket Cardigan Coats Shirts Blouse [SEP] $7.69 to $11.79 [SEP] B09SZG6SQ3 [SEP] Men's New Recreational Button Long Sleeve Shirt Fashion Pure Long Sleeve Top [SEP] $10.7\n\nRecent actions:\nsearch[i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09j1nlwm1]",
+              "3": "click[b09cw9zhd7]",
+              "4": "click[b09gqjy6nl]",
+              "5": "click[b07hmsxgxd]",
+              "6": "click[b09c2knpm1]",
+              "7": "click[b07bkr86gt]",
+              "8": "click[b07bm95fw4]",
+              "9": "click[b07sh3zqvs]",
+              "10": "click[b09qh1b4sl]",
+              "11": "click[b09szg6sq3]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "dca1491b183135aa026aa902946f6a8ef20a6e17e34d282d00aa799855d8d534",
+      "attempts": [
+        {
+          "seconds": 0.41903479769825935,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4191550686955452,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.57,
+            "probabilities": {
+              "7": 0.0,
+              "8": 0.0,
+              "3": 0.04,
+              "10": 0.02,
+              "1": 0.05,
+              "5": 0.0,
+              "9": 0.02,
+              "6": 0.22,
+              "4": 0.0,
+              "2": 0.61,
+              "11": 0.0,
+              "0": 0.04
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1165,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b09j1nlwm1]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5114659033715725
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] medium tall [SEP] large [SEP] large tall [SEP] x-large [SEP] x-large tall [SEP] xx-large [SEP] xx-large big tall [SEP] xx-large tall [SEP] 3x-large big [SEP] 4x-large big [SEP] color [SEP] charcoal plaid [SEP] light stone houndstooth [SEP] sea cliff blue plaid [SEP] deep sea navy houndstooth [SEP] rich red multi plaid [SEP] woodland green houndstooth [SEP] cement heather | sorrel plaid [SEP] green plaid [SEP] navy plaid [SEP] red plaid [SEP] stone gray herringbone [SEP] Lands' End Men's Tall Traditional Fit Rugged Flannel Shirt [SEP] Price: $51.57 to $60.93 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] medium tall [SEP] large [SEP] large tall [SEP] x-large [SEP] x-large tall [SEP] xx-large [SEP] xx-large big tall [SEP] xx-large tall [SEP] 3x-large big [SEP] 4x-large big [SEP] color [SEP] charcoal plaid [SEP] light stone houndstooth [SEP] sea cliff blue plaid [SEP] deep sea navy houndstooth [SEP] rich red multi plaid [SEP] woodland green houndstooth [SEP] cement heather | sorrel plaid [SEP] green plaid [SEP] navy plaid [SEP] red plaid [SEP] stone gray herringbone [SEP] Lands' End Men's Tall Traditional Fit Rugged Flannel Shirt [SEP] Price: $51.57 to $60.93 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars]\nclick[b09j1nlwm1]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[x-small]",
+              "7": "click[small]",
+              "8": "click[medium]",
+              "9": "click[medium tall]",
+              "10": "click[large]",
+              "11": "click[large tall]",
+              "12": "click[x-large]",
+              "13": "click[x-large tall]",
+              "14": "click[xx-large]",
+              "15": "click[xx-large big tall]",
+              "16": "click[xx-large tall]",
+              "17": "click[3x-large big]",
+              "18": "click[4x-large big]",
+              "19": "click[charcoal plaid]",
+              "20": "click[light stone houndstooth]",
+              "21": "click[sea cliff blue plaid]",
+              "22": "click[deep sea navy houndstooth]",
+              "23": "click[rich red multi plaid]",
+              "24": "click[woodland green houndstooth]",
+              "25": "click[cement heather | sorrel plaid]",
+              "26": "click[green plaid]",
+              "27": "click[navy plaid]",
+              "28": "click[red plaid]",
+              "29": "click[stone gray herringbone]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "4d49e33d6d862f2708fcf5ea72bd7f6273f2f74f754ce2c4685c968ff5984e51",
+      "attempts": [
+        {
+          "seconds": 0.35426826030015945,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3543965369462967,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "13",
+            "confidence": 0.71,
+            "probabilities": {
+              "21": 0.23,
+              "2": 0.0,
+              "11": 0.0,
+              "24": 0.0,
+              "27": 0.0,
+              "4": 0.0,
+              "16": 0.0,
+              "9": 0.0,
+              "5": 0.02,
+              "29": 0.0,
+              "1": 0.0,
+              "20": 0.0,
+              "28": 0.0,
+              "22": 0.0,
+              "12": 0.01,
+              "18": 0.0,
+              "23": 0.0,
+              "15": 0.0,
+              "7": 0.0,
+              "3": 0.0,
+              "26": 0.0,
+              "14": 0.0,
+              "0": 0.02,
+              "25": 0.0,
+              "13": 0.72,
+              "17": 0.0,
+              "10": 0.0,
+              "8": 0.0,
+              "6": 0.0,
+              "19": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1223,
+          "output_tokens": 248
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[x-large tall]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.8954912535846233
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] medium tall [SEP] large [SEP] large tall [SEP] x-large [SEP] x-large tall [SEP] xx-large [SEP] xx-large big tall [SEP] xx-large tall [SEP] 3x-large big [SEP] 4x-large big [SEP] color [SEP] charcoal plaid [SEP] light stone houndstooth [SEP] sea cliff blue plaid [SEP] deep sea navy houndstooth [SEP] rich red multi plaid [SEP] woodland green houndstooth [SEP] cement heather | sorrel plaid [SEP] green plaid [SEP] navy plaid [SEP] red plaid [SEP] stone gray herringbone [SEP] Lands' End Men's Tall Traditional Fit Rugged Flannel Shirt [SEP] Price: $51.57 to $60.93 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] medium tall [SEP] large [SEP] large tall [SEP] x-large [SEP] x-large tall [SEP] xx-large [SEP] xx-large big tall [SEP] xx-large tall [SEP] 3x-large big [SEP] 4x-large big [SEP] color [SEP] charcoal plaid [SEP] light stone houndstooth [SEP] sea cliff blue plaid [SEP] deep sea navy houndstooth [SEP] rich red multi plaid [SEP] woodland green houndstooth [SEP] cement heather | sorrel plaid [SEP] green plaid [SEP] navy plaid [SEP] red plaid [SEP] stone gray herringbone [SEP] Lands' End Men's Tall Traditional Fit Rugged Flannel Shirt [SEP] Price: $51.57 to $60.93 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars]\nclick[b09j1nlwm1]\nclick[x-large tall]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[x-small]",
+              "7": "click[small]",
+              "8": "click[medium]",
+              "9": "click[medium tall]",
+              "10": "click[large]",
+              "11": "click[large tall]",
+              "12": "click[x-large]",
+              "13": "click[x-large tall]",
+              "14": "click[xx-large]",
+              "15": "click[xx-large big tall]",
+              "16": "click[xx-large tall]",
+              "17": "click[3x-large big]",
+              "18": "click[4x-large big]",
+              "19": "click[charcoal plaid]",
+              "20": "click[light stone houndstooth]",
+              "21": "click[sea cliff blue plaid]",
+              "22": "click[deep sea navy houndstooth]",
+              "23": "click[rich red multi plaid]",
+              "24": "click[woodland green houndstooth]",
+              "25": "click[cement heather | sorrel plaid]",
+              "26": "click[green plaid]",
+              "27": "click[navy plaid]",
+              "28": "click[red plaid]",
+              "29": "click[stone gray herringbone]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "b25c53da6068946ca4a19065221777164829ed17da517cd2e4d802a7582b2515",
+      "attempts": [
+        {
+          "seconds": 0.3732551261782646,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3734125606715679,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "21",
+            "confidence": 0.97,
+            "probabilities": {
+              "15": 0.0,
+              "27": 0.0,
+              "17": 0.0,
+              "0": 0.0,
+              "14": 0.0,
+              "6": 0.0,
+              "29": 0.0,
+              "25": 0.0,
+              "21": 0.97,
+              "9": 0.0,
+              "1": 0.0,
+              "4": 0.0,
+              "19": 0.0,
+              "11": 0.0,
+              "5": 0.02,
+              "10": 0.0,
+              "24": 0.0,
+              "3": 0.0,
+              "26": 0.0,
+              "7": 0.0,
+              "13": 0.01,
+              "2": 0.0,
+              "16": 0.0,
+              "12": 0.0,
+              "18": 0.0,
+              "22": 0.0,
+              "20": 0.0,
+              "28": 0.0,
+              "8": 0.0,
+              "23": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1228,
+          "output_tokens": 248
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[sea cliff blue plaid]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.298503078520298
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] medium tall [SEP] large [SEP] large tall [SEP] x-large [SEP] x-large tall [SEP] xx-large [SEP] xx-large big tall [SEP] xx-large tall [SEP] 3x-large big [SEP] 4x-large big [SEP] color [SEP] charcoal plaid [SEP] light stone houndstooth [SEP] sea cliff blue plaid [SEP] deep sea navy houndstooth [SEP] rich red multi plaid [SEP] woodland green houndstooth [SEP] cement heather | sorrel plaid [SEP] green plaid [SEP] navy plaid [SEP] red plaid [SEP] stone gray herringbone [SEP] Lands' End Men's Tall Traditional Fit Rugged Flannel Shirt [SEP] Price: $51.57 to $60.93 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] medium tall [SEP] large [SEP] large tall [SEP] x-large [SEP] x-large tall [SEP] xx-large [SEP] xx-large big tall [SEP] xx-large tall [SEP] 3x-large big [SEP] 4x-large big [SEP] color [SEP] charcoal plaid [SEP] light stone houndstooth [SEP] sea cliff blue plaid [SEP] deep sea navy houndstooth [SEP] rich red multi plaid [SEP] woodland green houndstooth [SEP] cement heather | sorrel plaid [SEP] green plaid [SEP] navy plaid [SEP] red plaid [SEP] stone gray herringbone [SEP] Lands' End Men's Tall Traditional Fit Rugged Flannel Shirt [SEP] Price: $51.57 to $60.93 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want to buy an x-large tall, long sleeve flannel shirt that is sea cliff blue plaid, and price lower than 60.00 dollars]\nclick[b09j1nlwm1]\nclick[x-large tall]\nclick[sea cliff blue plaid]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[x-small]",
+              "7": "click[small]",
+              "8": "click[medium]",
+              "9": "click[medium tall]",
+              "10": "click[large]",
+              "11": "click[large tall]",
+              "12": "click[x-large]",
+              "13": "click[x-large tall]",
+              "14": "click[xx-large]",
+              "15": "click[xx-large big tall]",
+              "16": "click[xx-large tall]",
+              "17": "click[3x-large big]",
+              "18": "click[4x-large big]",
+              "19": "click[charcoal plaid]",
+              "20": "click[light stone houndstooth]",
+              "21": "click[sea cliff blue plaid]",
+              "22": "click[deep sea navy houndstooth]",
+              "23": "click[rich red multi plaid]",
+              "24": "click[woodland green houndstooth]",
+              "25": "click[cement heather | sorrel plaid]",
+              "26": "click[green plaid]",
+              "27": "click[navy plaid]",
+              "28": "click[red plaid]",
+              "29": "click[stone gray herringbone]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "25741feb86cc53298895fd01a2e71969ec4300ed5a48962be1e41597ef7e7b1e",
+      "attempts": [
+        {
+          "seconds": 0.45055200532078743,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.45070022717118263,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.82,
+            "probabilities": {
+              "0": 0.08,
+              "29": 0.0,
+              "18": 0.0,
+              "28": 0.0,
+              "25": 0.0,
+              "11": 0.0,
+              "9": 0.0,
+              "5": 0.83,
+              "1": 0.060000000000000005,
+              "20": 0.0,
+              "16": 0.0,
+              "12": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "27": 0.0,
+              "4": 0.01,
+              "3": 0.0,
+              "23": 0.0,
+              "14": 0.0,
+              "24": 0.0,
+              "6": 0.0,
+              "17": 0.0,
+              "22": 0.0,
+              "21": 0.01,
+              "19": 0.0,
+              "26": 0.0,
+              "10": 0.0,
+              "15": 0.0,
+              "2": 0.0,
+              "13": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1236,
+          "output_tokens": 247
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 1.779415063560009
+    }
+  ]
+}

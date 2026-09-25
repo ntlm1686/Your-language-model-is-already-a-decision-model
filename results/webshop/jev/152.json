@@ -1,0 +1,398 @@
+{
+  "task_id": 152,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "find cookies made with high fructose, and price lower than 50.00 dollars",
+  "instruction_sha256": "98ab3f31536ec29ce317e3b53707d0cd838190fbe1d1f88f7fc7c557d553eeca",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "repeated_state_action",
+  "steps": 9,
+  "elapsed_seconds": 2.252660855650902,
+  "decision_seconds": 2.0406456030905247,
+  "input_tokens": 4510,
+  "output_tokens": 386,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[find cookies made with high fructose, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.043696723878383636
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B0153UHHUM [SEP] Annie's Chocolate Chip Cookie Bites, Certified Organic, 6.5 oz [SEP] $3.29 [SEP] B00MYRXWOS [SEP] SnackWell's Devil's Food Cookie Cakes, 6.75 Ounce [SEP] $9.16 [SEP] B00Z4Z95ZM [SEP] SnackWell's Devil's Food Cookie Cakes, 1.1 Ounce, 8 Count [SEP] $10.53 [SEP] B06XDG16VC [SEP] Annie's Organic Chocolate Chip Cookie Bites, 10 ct [SEP] $100.0 [SEP] B07VHWCV85 [SEP] STOLICHNAYA GINGER BEER COCKTAIL MIX, 4 CT, 12 OZ C [SEP] $19.95 [SEP] B09SBQN3Y4 [SEP] Voortman Bakery #1 Sugar Free Shortbread Cookies (Pack of 2) Really delicious! [SEP] $19.24 [SEP] B01LF70X2G [SEP] Newtons Soft & Fruit Chewy Strawberry Cookies, 10 oz Pack [SEP] $100.0 [SEP] B01LF70OL6 [SEP] Newtons Fat Free Soft & Fruit Chewy Fig Cookies, 10 oz Pack [SEP] $100.0 [SEP] B07QCFG13J [SEP] Cookie Crisp Breakfast Cereal, Chocolate Chip Cookie, 10.6 oz [SEP] $8.99 [SEP] B08X719R3Y [SEP] Cookie Crisp Breakfast Cereal, Chocolate Chip Cookie, 18.3 oz [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\nfind cookies made with high fructose, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B0153UHHUM [SEP] Annie's Chocolate Chip Cookie Bites, Certified Organic, 6.5 oz [SEP] $3.29 [SEP] B00MYRXWOS [SEP] SnackWell's Devil's Food Cookie Cakes, 6.75 Ounce [SEP] $9.16 [SEP] B00Z4Z95ZM [SEP] SnackWell's Devil's Food Cookie Cakes, 1.1 Ounce, 8 Count [SEP] $10.53 [SEP] B06XDG16VC [SEP] Annie's Organic Chocolate Chip Cookie Bites, 10 ct [SEP] $100.0 [SEP] B07VHWCV85 [SEP] STOLICHNAYA GINGER BEER COCKTAIL MIX, 4 CT, 12 OZ C [SEP] $19.95 [SEP] B09SBQN3Y4 [SEP] Voortman Bakery #1 Sugar Free Shortbread Cookies (Pack of 2) Really delicious! [SEP] $19.24 [SEP] B01LF70X2G [SEP] Newtons Soft & Fruit Chewy Strawberry Cookies, 10 oz Pack [SEP] $100.0 [SEP] B01LF70OL6 [SEP] Newtons Fat Free Soft & Fruit Chewy Fig Cookies, 10 oz Pack [SEP] $100.0 [SEP] B07QCFG13J [SEP] Cookie Crisp Breakfast Cereal, Chocolate Chip Cookie, 10.6 oz [SEP] $8.99 [SEP] B08X719R3Y [SEP] Cookie Crisp Breakfast Cereal, Chocolate Chip Cookie, 18.3 oz [SEP] $100.0\n\nRecent actions:\nsearch[find cookies made with high fructose, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b0153uhhum]",
+              "3": "click[b00myrxwos]",
+              "4": "click[b00z4z95zm]",
+              "5": "click[b06xdg16vc]",
+              "6": "click[b07vhwcv85]",
+              "7": "click[b09sbqn3y4]",
+              "8": "click[b01lf70x2g]",
+              "9": "click[b01lf70ol6]",
+              "10": "click[b07qcfg13j]",
+              "11": "click[b08x719r3y]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "6c2771fbaf77089364e6a0e859b2113c84889a061ee50a11f421ce96dc50bd16",
+      "attempts": [
+        {
+          "seconds": 0.33092207834124565,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3310253918170929,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.35,
+            "probabilities": {
+              "11": 0.0,
+              "3": 0.34,
+              "9": 0.0,
+              "8": 0.0,
+              "6": 0.0,
+              "2": 0.4,
+              "1": 0.13,
+              "4": 0.02,
+              "0": 0.03,
+              "5": 0.0,
+              "7": 0.03,
+              "10": 0.04
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1074,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b0153uhhum]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.3963230438530445
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Annie's Chocolate Chip Cookie Bites, Certified Organic, 6.5 oz [SEP] Price: $3.29 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\nfind cookies made with high fructose, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Annie's Chocolate Chip Cookie Bites, Certified Organic, 6.5 oz [SEP] Price: $3.29 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[find cookies made with high fructose, and price lower than 50.00 dollars]\nclick[b0153uhhum]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "dbb04ba6cde4f8d4eb4f83092f619d0f256d3b7bda92e2b5606ae6832b4fca47",
+      "attempts": [
+        {
+          "seconds": 0.3330708108842373,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3331413306295872,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "confidence": 0.25,
+            "probabilities": {
+              "5": 0.14,
+              "0": 0.16,
+              "2": 0.31,
+              "4": 0.0,
+              "3": 0.38,
+              "1": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 564,
+          "output_tokens": 59
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[features]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.7397167310118675
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] MADE WITH GOODNESS: Annie's Chocolate Cookie Bites are made with Certified Organic ingredients [SEP] REAL INGREDIENTS: No Artificial Flavors, Synthetic Colors or Synthetic Preservatives [SEP] WHOLESOME: Never made with high-fructose corn syrup [SEP] CONVENIENT: perfect for a quick snack, an addition to lunch time, or an anytime treat [SEP] CONTAINS: 6.5 oz [SEP] No Artificial Colors or Preservatives^No High-Fructose Corn Syrup^Sustainably Sourced Organic Cocoa",
+      "request": {
+        "state": "Shopping instruction:\nfind cookies made with high fructose, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] MADE WITH GOODNESS: Annie's Chocolate Cookie Bites are made with Certified Organic ingredients [SEP] REAL INGREDIENTS: No Artificial Flavors, Synthetic Colors or Synthetic Preservatives [SEP] WHOLESOME: Never made with high-fructose corn syrup [SEP] CONVENIENT: perfect for a quick snack, an addition to lunch time, or an anytime treat [SEP] CONTAINS: 6.5 oz [SEP] No Artificial Colors or Preservatives^No High-Fructose Corn Syrup^Sustainably Sourced Organic Cocoa\n\nRecent actions:\nsearch[find cookies made with high fructose, and price lower than 50.00 dollars]\nclick[b0153uhhum]\nclick[features]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "5c4e538a47b35975ab07cae45aa60d0b1a7fe3a3e7d09b13ab90c45d1bd7be45",
+      "attempts": [
+        {
+          "seconds": 0.35851649194955826,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.35860928893089294,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.82,
+            "probabilities": {
+              "1": 0.09,
+              "0": 0.91
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 572,
+          "output_tokens": 31
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.1164611354470253
+    },
+    {
+      "step": 4,
+      "observation": "WebShop [SEP] Instruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[find cookies made with high fructose, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.1523206010460854
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B0153UHHUM [SEP] Annie's Chocolate Chip Cookie Bites, Certified Organic, 6.5 oz [SEP] $3.29 [SEP] B00MYRXWOS [SEP] SnackWell's Devil's Food Cookie Cakes, 6.75 Ounce [SEP] $9.16 [SEP] B00Z4Z95ZM [SEP] SnackWell's Devil's Food Cookie Cakes, 1.1 Ounce, 8 Count [SEP] $10.53 [SEP] B06XDG16VC [SEP] Annie's Organic Chocolate Chip Cookie Bites, 10 ct [SEP] $100.0 [SEP] B07VHWCV85 [SEP] STOLICHNAYA GINGER BEER COCKTAIL MIX, 4 CT, 12 OZ C [SEP] $19.95 [SEP] B09SBQN3Y4 [SEP] Voortman Bakery #1 Sugar Free Shortbread Cookies (Pack of 2) Really delicious! [SEP] $19.24 [SEP] B01LF70X2G [SEP] Newtons Soft & Fruit Chewy Strawberry Cookies, 10 oz Pack [SEP] $100.0 [SEP] B01LF70OL6 [SEP] Newtons Fat Free Soft & Fruit Chewy Fig Cookies, 10 oz Pack [SEP] $100.0 [SEP] B07QCFG13J [SEP] Cookie Crisp Breakfast Cereal, Chocolate Chip Cookie, 10.6 oz [SEP] $8.99 [SEP] B08X719R3Y [SEP] Cookie Crisp Breakfast Cereal, Chocolate Chip Cookie, 18.3 oz [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\nfind cookies made with high fructose, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B0153UHHUM [SEP] Annie's Chocolate Chip Cookie Bites, Certified Organic, 6.5 oz [SEP] $3.29 [SEP] B00MYRXWOS [SEP] SnackWell's Devil's Food Cookie Cakes, 6.75 Ounce [SEP] $9.16 [SEP] B00Z4Z95ZM [SEP] SnackWell's Devil's Food Cookie Cakes, 1.1 Ounce, 8 Count [SEP] $10.53 [SEP] B06XDG16VC [SEP] Annie's Organic Chocolate Chip Cookie Bites, 10 ct [SEP] $100.0 [SEP] B07VHWCV85 [SEP] STOLICHNAYA GINGER BEER COCKTAIL MIX, 4 CT, 12 OZ C [SEP] $19.95 [SEP] B09SBQN3Y4 [SEP] Voortman Bakery #1 Sugar Free Shortbread Cookies (Pack of 2) Really delicious! [SEP] $19.24 [SEP] B01LF70X2G [SEP] Newtons Soft & Fruit Chewy Strawberry Cookies, 10 oz Pack [SEP] $100.0 [SEP] B01LF70OL6 [SEP] Newtons Fat Free Soft & Fruit Chewy Fig Cookies, 10 oz Pack [SEP] $100.0 [SEP] B07QCFG13J [SEP] Cookie Crisp Breakfast Cereal, Chocolate Chip Cookie, 10.6 oz [SEP] $8.99 [SEP] B08X719R3Y [SEP] Cookie Crisp Breakfast Cereal, Chocolate Chip Cookie, 18.3 oz [SEP] $100.0\n\nRecent actions:\nsearch[find cookies made with high fructose, and price lower than 50.00 dollars]\nclick[b0153uhhum]\nclick[features]\nclick[back to search]\nsearch[find cookies made with high fructose, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b0153uhhum]",
+              "3": "click[b00myrxwos]",
+              "4": "click[b00z4z95zm]",
+              "5": "click[b06xdg16vc]",
+              "6": "click[b07vhwcv85]",
+              "7": "click[b09sbqn3y4]",
+              "8": "click[b01lf70x2g]",
+              "9": "click[b01lf70ol6]",
+              "10": "click[b07qcfg13j]",
+              "11": "click[b08x719r3y]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "0d113956f266248bc675ca7bf489511414901d5c2ce9608fa2393d6aae3fb7d9",
+      "attempts": [
+        {
+          "seconds": 0.3618309460580349,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3619493804872036,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "confidence": 0.7,
+            "probabilities": {
+              "3": 0.73,
+              "2": 0.11,
+              "9": 0.0,
+              "11": 0.0,
+              "10": 0.02,
+              "5": 0.0,
+              "6": 0.0,
+              "8": 0.0,
+              "4": 0.02,
+              "7": 0.02,
+              "1": 0.09,
+              "0": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1117,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b00myrxwos]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.5375059731304646
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] SnackWell's Devil's Food Cookie Cakes, 6.75 Ounce [SEP] Price: $9.16 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\nfind cookies made with high fructose, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] SnackWell's Devil's Food Cookie Cakes, 6.75 Ounce [SEP] Price: $9.16 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[find cookies made with high fructose, and price lower than 50.00 dollars]\nclick[b0153uhhum]\nclick[features]\nclick[back to search]\nsearch[find cookies made with high fructose, and price lower than 50.00 dollars]\nclick[b00myrxwos]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "97170e60b9594f65f773fcb789aff99d2bbf8cb825ccd2f797cf5e7645363165",
+      "attempts": [
+        {
+          "seconds": 0.33554841205477715,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33564379438757896,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "confidence": 0.61,
+            "probabilities": {
+              "0": 0.0,
+              "1": 0.01,
+              "4": 0.0,
+              "5": 0.26,
+              "2": 0.05,
+              "3": 0.68
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 609,
+          "output_tokens": 59
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[features]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.8896499797701836
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Devil's Food Cookie Cakes are a delightful treat without high fructose corn syrup and partially hydrogenated oils [SEP] Chocolate cake lightly covered in sweet marshmallow and chocolate icing [SEP] They're a better than ever treat for yourself and your family [SEP] Tasty snacking without the guilt [SEP] Our improved recipe, now with more marshmallow",
+      "request": {
+        "state": "Shopping instruction:\nfind cookies made with high fructose, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Devil's Food Cookie Cakes are a delightful treat without high fructose corn syrup and partially hydrogenated oils [SEP] Chocolate cake lightly covered in sweet marshmallow and chocolate icing [SEP] They're a better than ever treat for yourself and your family [SEP] Tasty snacking without the guilt [SEP] Our improved recipe, now with more marshmallow\n\nRecent actions:\nsearch[find cookies made with high fructose, and price lower than 50.00 dollars]\nclick[b0153uhhum]\nclick[features]\nclick[back to search]\nsearch[find cookies made with high fructose, and price lower than 50.00 dollars]\nclick[b00myrxwos]\nclick[features]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "3c33d6804d7e8a0f3ca77e30fb97d16d30cabdc7f70751a8f0e264d9d1b072d7",
+      "attempts": [
+        {
+          "seconds": 0.3202049657702446,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3202764168381691,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.19,
+            "probabilities": {
+              "1": 0.4,
+              "0": 0.6
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 574,
+          "output_tokens": 31
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.2159176990389824
+    },
+    {
+      "step": 8,
+      "observation": "WebShop [SEP] Instruction: [SEP] find cookies made with high fructose, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[find cookies made with high fructose, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.2526556998491287
+    }
+  ]
+}

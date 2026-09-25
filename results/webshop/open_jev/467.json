@@ -1,0 +1,768 @@
+{
+  "task_id": 467,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars",
+  "instruction_sha256": "65abc15c6d77b94ffd869a50af89eca930c95ed322b17979d305be10620f2501",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "repeated_state_action",
+  "steps": 11,
+  "elapsed_seconds": 3.339932892471552,
+  "decision_seconds": 2.9485986195504665,
+  "input_tokens": 62465,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.07607562467455864
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08BJYTKL7 [SEP] Trary Women's D'Orsay Criss Cross Strap Ballet Flat Shoes [SEP] $17.49 to $28.99 [SEP] B07S722P9G [SEP] Classic Casual Pointed Toe Ballet Flats Flat Shoes for Women [SEP] $15.61 to $24.99 [SEP] B099515ZHH [SEP] Ballet Flat for Women, Women's Cloth Shoes Breathable Light Soft Sole Women's Single Shoes Casual Suede Slip-on Shoes [SEP] $100.0 [SEP] B08CGT566Q [SEP] Trary Women's Casual Pointed Toe Slip on Ballet Flat Shoes [SEP] $16.78 to $25.98 [SEP] B01I3OEPVY [SEP] Stick-on suede soles for high-heeled shoes, with industrial-strength adhesive backing. Resole old dance shoes or convert your favorite heels to perfect dance shoes [SUEDE-LA-r02] [SEP] $15.95 [SEP] B09FPPYZBW [SEP] FEVERSOLE Women's Penny Loafer Round Toe Casual Flat Shoes [SEP] $21.99 to $27.99 [SEP] B096VK6R1P [SEP] Rekayla Women's Flats Classic Pointed Toe Ballet Shoes [SEP] $21.99 to $27.99 [SEP] B09PT92BQD [SEP] FOWT D'Orsay Ballet Flats Shoes for Women Closed Square Toe Loafers Slip On Solid Plain Flat Side Cut Slipper Low Heels Suede Upper Driving Style Lightweight Shoes Comfort Walking Size 4-16 US [SEP] $62.99 to $72.99 [SEP] B087WQY82C [SEP] Caradise Womens Faux Suede Bow Ballet Flats Round Toe Ballerina Shoes [SEP] $31.99 to $33.99 [SEP] B0763CJJ3G [SEP] DailyShoes Women's Pointy Toe Flats D'Orsay Buckle Ankle Strap Casual Comfort Ballerina Ballet Flat Shoes [SEP] $19.99 to $39.99",
+      "request": {
+        "state": "Shopping instruction:\ni want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08BJYTKL7 [SEP] Trary Women's D'Orsay Criss Cross Strap Ballet Flat Shoes [SEP] $17.49 to $28.99 [SEP] B07S722P9G [SEP] Classic Casual Pointed Toe Ballet Flats Flat Shoes for Women [SEP] $15.61 to $24.99 [SEP] B099515ZHH [SEP] Ballet Flat for Women, Women's Cloth Shoes Breathable Light Soft Sole Women's Single Shoes Casual Suede Slip-on Shoes [SEP] $100.0 [SEP] B08CGT566Q [SEP] Trary Women's Casual Pointed Toe Slip on Ballet Flat Shoes [SEP] $16.78 to $25.98 [SEP] B01I3OEPVY [SEP] Stick-on suede soles for high-heeled shoes, with industrial-strength adhesive backing. Resole old dance shoes or convert your favorite heels to perfect dance shoes [SUEDE-LA-r02] [SEP] $15.95 [SEP] B09FPPYZBW [SEP] FEVERSOLE Women's Penny Loafer Round Toe Casual Flat Shoes [SEP] $21.99 to $27.99 [SEP] B096VK6R1P [SEP] Rekayla Women's Flats Classic Pointed Toe Ballet Shoes [SEP] $21.99 to $27.99 [SEP] B09PT92BQD [SEP] FOWT D'Orsay Ballet Flats Shoes for Women Closed Square Toe Loafers Slip On Solid Plain Flat Side Cut Slipper Low Heels Suede Upper Driving Style Lightweight Shoes Comfort Walking Size 4-16 US [SEP] $62.99 to $72.99 [SEP] B087WQY82C [SEP] Caradise Womens Faux Suede Bow Ballet Flats Round Toe Ballerina Shoes [SEP] $31.99 to $33.99 [SEP] B0763CJJ3G [SEP] DailyShoes Women's Pointy Toe Flats D'Orsay Buckle Ankle Strap Casual Comfort Ballerina Ballet Flat Shoes [SEP] $19.99 to $39.99\n\nRecent actions:\nsearch[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b08bjytkl7]",
+              "3": "click[b07s722p9g]",
+              "4": "click[b099515zhh]",
+              "5": "click[b08cgt566q]",
+              "6": "click[b01i3oepvy]",
+              "7": "click[b09fppyzbw]",
+              "8": "click[b096vk6r1p]",
+              "9": "click[b09pt92bqd]",
+              "10": "click[b087wqy82c]",
+              "11": "click[b0763cjj3g]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e276aaa5fa2d9480d08f2d4c1c9745807608507a644286fd9458f2f76dc6d649",
+      "attempts": [
+        {
+          "seconds": 0.397783737629652,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3978980556130409,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "10",
+            "probabilities": {
+              "0": 0.056299522658789396,
+              "1": 0.08732712013202798,
+              "2": 0.12259202912787406,
+              "3": 0.11842066014062219,
+              "4": 0.04417343264424825,
+              "5": 0.09802067388902494,
+              "6": 0.010451773245368915,
+              "7": 0.039413777975842904,
+              "8": 0.09167309657369625,
+              "9": 0.04232637084128061,
+              "10": 0.2007199246310279,
+              "11": 0.08858161814019658
+            },
+            "confidence": 0.128058099597485
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8951,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3959324434399605,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b087wqy82c]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.49983543530106544
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 4 [SEP] 4.5 [SEP] 5.5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 10 [SEP] 10.5 [SEP] 11.5 [SEP] 12.5 [SEP] 13 [SEP] 14 [SEP] color [SEP] beige [SEP] black [SEP] blue [SEP] pink [SEP] Caradise Womens Faux Suede Bow Ballet Flats Round Toe Ballerina Shoes [SEP] Price: $31.99 to $33.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 4 [SEP] 4.5 [SEP] 5.5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 10 [SEP] 10.5 [SEP] 11.5 [SEP] 12.5 [SEP] 13 [SEP] 14 [SEP] color [SEP] beige [SEP] black [SEP] blue [SEP] pink [SEP] Caradise Womens Faux Suede Bow Ballet Flats Round Toe Ballerina Shoes [SEP] Price: $31.99 to $33.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]\nclick[b087wqy82c]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[4]",
+              "7": "click[4.5]",
+              "8": "click[5.5]",
+              "9": "click[6]",
+              "10": "click[7]",
+              "11": "click[8]",
+              "12": "click[8.5]",
+              "13": "click[9]",
+              "14": "click[10]",
+              "15": "click[10.5]",
+              "16": "click[11.5]",
+              "17": "click[12.5]",
+              "18": "click[13]",
+              "19": "click[14]",
+              "20": "click[beige]",
+              "21": "click[black]",
+              "22": "click[blue]",
+              "23": "click[pink]"
+            }
+          }
+        }
+      },
+      "request_sha256": "18668ed95b0607ad021717634c696cf94ec3963a4495e052e2004c84cad04c1d",
+      "attempts": [
+        {
+          "seconds": 0.44272075966000557,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4428735710680485,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "9",
+            "probabilities": {
+              "0": 0.04985857088732049,
+              "1": 0.04498577895465296,
+              "2": 0.051859738924279905,
+              "3": 0.040663051835673876,
+              "4": 0.03773877622299141,
+              "5": 0.04640202153685202,
+              "6": 0.056779097800927956,
+              "7": 0.024163291155966646,
+              "8": 0.033636652832121604,
+              "9": 0.10893541217348127,
+              "10": 0.036462294681072295,
+              "11": 0.04264516020271629,
+              "12": 0.027479576760171605,
+              "13": 0.051369172640773016,
+              "14": 0.042734260884199855,
+              "15": 0.026397610985553554,
+              "16": 0.02023840801093198,
+              "17": 0.02349105473345841,
+              "18": 0.036991709939981965,
+              "19": 0.042103710464849266,
+              "20": 0.032881893311768565,
+              "21": 0.042354902235010164,
+              "22": 0.046072038426877085,
+              "23": 0.03375581439836756
+            },
+            "confidence": 0.07019347357232829
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9541,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 24,
+          "inference_seconds": 0.4358941651880741,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[6]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9647920727729797
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 4 [SEP] 4.5 [SEP] 5.5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 10 [SEP] 10.5 [SEP] 11.5 [SEP] 12.5 [SEP] 13 [SEP] 14 [SEP] color [SEP] beige [SEP] black [SEP] blue [SEP] pink [SEP] Caradise Womens Faux Suede Bow Ballet Flats Round Toe Ballerina Shoes [SEP] Price: $31.99 to $33.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 4 [SEP] 4.5 [SEP] 5.5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 10 [SEP] 10.5 [SEP] 11.5 [SEP] 12.5 [SEP] 13 [SEP] 14 [SEP] color [SEP] beige [SEP] black [SEP] blue [SEP] pink [SEP] Caradise Womens Faux Suede Bow Ballet Flats Round Toe Ballerina Shoes [SEP] Price: $31.99 to $33.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]\nclick[b087wqy82c]\nclick[6]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[4]",
+              "7": "click[4.5]",
+              "8": "click[5.5]",
+              "9": "click[6]",
+              "10": "click[7]",
+              "11": "click[8]",
+              "12": "click[8.5]",
+              "13": "click[9]",
+              "14": "click[10]",
+              "15": "click[10.5]",
+              "16": "click[11.5]",
+              "17": "click[12.5]",
+              "18": "click[13]",
+              "19": "click[14]",
+              "20": "click[beige]",
+              "21": "click[black]",
+              "22": "click[blue]",
+              "23": "click[pink]"
+            }
+          }
+        }
+      },
+      "request_sha256": "fb998ca8814866a603f2e79cb3913a66ecd1bcbf6b6e65615bc5e33e9e665ed8",
+      "attempts": [
+        {
+          "seconds": 0.43296872824430466,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.43311307206749916,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "22",
+            "probabilities": {
+              "0": 0.06242598147134448,
+              "1": 0.05969996829068351,
+              "2": 0.05758390742373694,
+              "3": 0.04578594912756914,
+              "4": 0.04456792117178062,
+              "5": 0.05095901792105651,
+              "6": 0.06150516279145401,
+              "7": 0.021695256875003552,
+              "8": 0.028296247012431275,
+              "9": 0.04573345004813739,
+              "10": 0.022144870724984098,
+              "11": 0.038120671653999315,
+              "12": 0.025660946833817377,
+              "13": 0.04201047986627577,
+              "14": 0.03997136612701439,
+              "15": 0.026130677729923907,
+              "16": 0.01945814342000035,
+              "17": 0.0207960806818816,
+              "18": 0.029853897417063173,
+              "19": 0.0354719197306452,
+              "20": 0.043522682330403704,
+              "21": 0.06107103743864198,
+              "22": 0.0710632911060263,
+              "23": 0.04647107280612534
+            },
+            "confidence": 0.03067473854541875
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9661,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 24,
+          "inference_seconds": 0.43107811734080315,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[blue]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.4311303161084652
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 4 [SEP] 4.5 [SEP] 5.5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 10 [SEP] 10.5 [SEP] 11.5 [SEP] 12.5 [SEP] 13 [SEP] 14 [SEP] color [SEP] beige [SEP] black [SEP] blue [SEP] pink [SEP] Caradise Womens Faux Suede Bow Ballet Flats Round Toe Ballerina Shoes [SEP] Price: $31.99 to $33.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 4 [SEP] 4.5 [SEP] 5.5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 10 [SEP] 10.5 [SEP] 11.5 [SEP] 12.5 [SEP] 13 [SEP] 14 [SEP] color [SEP] beige [SEP] black [SEP] blue [SEP] pink [SEP] Caradise Womens Faux Suede Bow Ballet Flats Round Toe Ballerina Shoes [SEP] Price: $31.99 to $33.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]\nclick[b087wqy82c]\nclick[6]\nclick[blue]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[4]",
+              "7": "click[4.5]",
+              "8": "click[5.5]",
+              "9": "click[6]",
+              "10": "click[7]",
+              "11": "click[8]",
+              "12": "click[8.5]",
+              "13": "click[9]",
+              "14": "click[10]",
+              "15": "click[10.5]",
+              "16": "click[11.5]",
+              "17": "click[12.5]",
+              "18": "click[13]",
+              "19": "click[14]",
+              "20": "click[beige]",
+              "21": "click[black]",
+              "22": "click[blue]",
+              "23": "click[pink]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e35fe085508553dfb9335c813b54f849073e35d400fad37f60caa2b662809f27",
+      "attempts": [
+        {
+          "seconds": 0.4483521357178688,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.44850290566682816,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.11703618127900492,
+              "1": 0.08028708694303234,
+              "2": 0.0452958532401052,
+              "3": 0.03549510177191689,
+              "4": 0.03620376535855381,
+              "5": 0.026640195333754623,
+              "6": 0.06635131720385573,
+              "7": 0.022940820215975898,
+              "8": 0.030808414631071406,
+              "9": 0.05158459064692208,
+              "10": 0.021227145193046797,
+              "11": 0.03523494003443038,
+              "12": 0.025293560686269836,
+              "13": 0.042309883475309916,
+              "14": 0.04021920702220251,
+              "15": 0.02639468772087295,
+              "16": 0.020466072311224895,
+              "17": 0.020866164916558506,
+              "18": 0.028190376586996097,
+              "19": 0.031066599467780894,
+              "20": 0.04440833086123099,
+              "21": 0.06465913383075975,
+              "22": 0.05134630812534189,
+              "23": 0.03567426314378177
+            },
+            "confidence": 0.078646450030266
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9781,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 24,
+          "inference_seconds": 0.4416307248175144,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.8918881453573704
+    },
+    {
+      "step": 5,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.968416716903448
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08BJYTKL7 [SEP] Trary Women's D'Orsay Criss Cross Strap Ballet Flat Shoes [SEP] $17.49 to $28.99 [SEP] B07S722P9G [SEP] Classic Casual Pointed Toe Ballet Flats Flat Shoes for Women [SEP] $15.61 to $24.99 [SEP] B099515ZHH [SEP] Ballet Flat for Women, Women's Cloth Shoes Breathable Light Soft Sole Women's Single Shoes Casual Suede Slip-on Shoes [SEP] $100.0 [SEP] B08CGT566Q [SEP] Trary Women's Casual Pointed Toe Slip on Ballet Flat Shoes [SEP] $16.78 to $25.98 [SEP] B01I3OEPVY [SEP] Stick-on suede soles for high-heeled shoes, with industrial-strength adhesive backing. Resole old dance shoes or convert your favorite heels to perfect dance shoes [SUEDE-LA-r02] [SEP] $15.95 [SEP] B09FPPYZBW [SEP] FEVERSOLE Women's Penny Loafer Round Toe Casual Flat Shoes [SEP] $21.99 to $27.99 [SEP] B096VK6R1P [SEP] Rekayla Women's Flats Classic Pointed Toe Ballet Shoes [SEP] $21.99 to $27.99 [SEP] B09PT92BQD [SEP] FOWT D'Orsay Ballet Flats Shoes for Women Closed Square Toe Loafers Slip On Solid Plain Flat Side Cut Slipper Low Heels Suede Upper Driving Style Lightweight Shoes Comfort Walking Size 4-16 US [SEP] $62.99 to $72.99 [SEP] B087WQY82C [SEP] Caradise Womens Faux Suede Bow Ballet Flats Round Toe Ballerina Shoes [SEP] $31.99 to $33.99 [SEP] B0763CJJ3G [SEP] DailyShoes Women's Pointy Toe Flats D'Orsay Buckle Ankle Strap Casual Comfort Ballerina Ballet Flat Shoes [SEP] $19.99 to $39.99",
+      "request": {
+        "state": "Shopping instruction:\ni want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08BJYTKL7 [SEP] Trary Women's D'Orsay Criss Cross Strap Ballet Flat Shoes [SEP] $17.49 to $28.99 [SEP] B07S722P9G [SEP] Classic Casual Pointed Toe Ballet Flats Flat Shoes for Women [SEP] $15.61 to $24.99 [SEP] B099515ZHH [SEP] Ballet Flat for Women, Women's Cloth Shoes Breathable Light Soft Sole Women's Single Shoes Casual Suede Slip-on Shoes [SEP] $100.0 [SEP] B08CGT566Q [SEP] Trary Women's Casual Pointed Toe Slip on Ballet Flat Shoes [SEP] $16.78 to $25.98 [SEP] B01I3OEPVY [SEP] Stick-on suede soles for high-heeled shoes, with industrial-strength adhesive backing. Resole old dance shoes or convert your favorite heels to perfect dance shoes [SUEDE-LA-r02] [SEP] $15.95 [SEP] B09FPPYZBW [SEP] FEVERSOLE Women's Penny Loafer Round Toe Casual Flat Shoes [SEP] $21.99 to $27.99 [SEP] B096VK6R1P [SEP] Rekayla Women's Flats Classic Pointed Toe Ballet Shoes [SEP] $21.99 to $27.99 [SEP] B09PT92BQD [SEP] FOWT D'Orsay Ballet Flats Shoes for Women Closed Square Toe Loafers Slip On Solid Plain Flat Side Cut Slipper Low Heels Suede Upper Driving Style Lightweight Shoes Comfort Walking Size 4-16 US [SEP] $62.99 to $72.99 [SEP] B087WQY82C [SEP] Caradise Womens Faux Suede Bow Ballet Flats Round Toe Ballerina Shoes [SEP] $31.99 to $33.99 [SEP] B0763CJJ3G [SEP] DailyShoes Women's Pointy Toe Flats D'Orsay Buckle Ankle Strap Casual Comfort Ballerina Ballet Flat Shoes [SEP] $19.99 to $39.99\n\nRecent actions:\nsearch[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]\nclick[b087wqy82c]\nclick[6]\nclick[blue]\nclick[back to search]\nsearch[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b08bjytkl7]",
+              "3": "click[b07s722p9g]",
+              "4": "click[b099515zhh]",
+              "5": "click[b08cgt566q]",
+              "6": "click[b01i3oepvy]",
+              "7": "click[b09fppyzbw]",
+              "8": "click[b096vk6r1p]",
+              "9": "click[b09pt92bqd]",
+              "10": "click[b087wqy82c]",
+              "11": "click[b0763cjj3g]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b5d06b7d9c6a68e74794644448a5c8aaf9316cc5f0d5e7e4b15f06c03234df34",
+      "attempts": [
+        {
+          "seconds": 0.43065807595849037,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.43083176389336586,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.037472776296812366,
+              "1": 0.10062301449046565,
+              "2": 0.16365933675355465,
+              "3": 0.1277646126728153,
+              "4": 0.0488836522566983,
+              "5": 0.0859115674576272,
+              "6": 0.01795561694975641,
+              "7": 0.034147666598513766,
+              "8": 0.09286211915972094,
+              "9": 0.05557593931324822,
+              "10": 0.15333591344122713,
+              "11": 0.08180778460956013
+            },
+            "confidence": 0.08762836736751417
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9731,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.4235633686184883,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b08bjytkl7]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.4327028393745422
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] color [SEP] new black [SEP] new leopard [SEP] new nude [SEP] new white [SEP] Trary Women's D'Orsay Criss Cross Strap Ballet Flat Shoes [SEP] Price: $17.49 to $28.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] color [SEP] new black [SEP] new leopard [SEP] new nude [SEP] new white [SEP] Trary Women's D'Orsay Criss Cross Strap Ballet Flat Shoes [SEP] Price: $17.49 to $28.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]\nclick[b087wqy82c]\nclick[6]\nclick[blue]\nclick[back to search]\nsearch[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]\nclick[b08bjytkl7]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[5]",
+              "7": "click[6]",
+              "8": "click[7]",
+              "9": "click[8]",
+              "10": "click[9]",
+              "11": "click[10]",
+              "12": "click[11]",
+              "13": "click[new black]",
+              "14": "click[new leopard]",
+              "15": "click[new nude]",
+              "16": "click[new white]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0ee53c3638ce0c251f69428bbccb05c00addc9fd8529fe74849e6e8282c2b021",
+      "attempts": [
+        {
+          "seconds": 0.3591561056673527,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.35931724682450294,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "7",
+            "probabilities": {
+              "0": 0.06751781953530239,
+              "1": 0.07331338318307548,
+              "2": 0.08715049677134326,
+              "3": 0.060419141117670834,
+              "4": 0.06188218793788928,
+              "5": 0.06370236944444634,
+              "6": 0.05287050827650253,
+              "7": 0.08961647285065946,
+              "8": 0.042124346176168614,
+              "9": 0.054462424686216086,
+              "10": 0.054540955303482665,
+              "11": 0.04901358231073954,
+              "12": 0.04071977331271853,
+              "13": 0.05555794240187054,
+              "14": 0.044949858393071356,
+              "15": 0.049986137269527345,
+              "16": 0.052172601029315646
+            },
+            "confidence": 0.0327175024038257
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 6966,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 17,
+          "inference_seconds": 0.35736414417624474,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[6]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.812022168189287
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] color [SEP] new black [SEP] new leopard [SEP] new nude [SEP] new white [SEP] Trary Women's D'Orsay Criss Cross Strap Ballet Flat Shoes [SEP] Price: $17.49 to $28.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 6 [SEP] 7 [SEP] 8 [SEP] 9 [SEP] 10 [SEP] 11 [SEP] color [SEP] new black [SEP] new leopard [SEP] new nude [SEP] new white [SEP] Trary Women's D'Orsay Criss Cross Strap Ballet Flat Shoes [SEP] Price: $17.49 to $28.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]\nclick[b087wqy82c]\nclick[6]\nclick[blue]\nclick[back to search]\nsearch[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]\nclick[b08bjytkl7]\nclick[6]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[5]",
+              "7": "click[6]",
+              "8": "click[7]",
+              "9": "click[8]",
+              "10": "click[9]",
+              "11": "click[10]",
+              "12": "click[11]",
+              "13": "click[new black]",
+              "14": "click[new leopard]",
+              "15": "click[new nude]",
+              "16": "click[new white]"
+            }
+          }
+        }
+      },
+      "request_sha256": "38e1870de3aa61733ae93149ec41fe37e722ae347c0ea6a955c11216c9dd5c6e",
+      "attempts": [
+        {
+          "seconds": 0.3667052946984768,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.36681612581014633,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.06688399709580699,
+              "1": 0.07779016712017486,
+              "2": 0.08430536598114778,
+              "3": 0.05974755884846994,
+              "4": 0.06228166015471407,
+              "5": 0.06376021368885026,
+              "6": 0.05168143498116102,
+              "7": 0.0647944812600685,
+              "8": 0.04395750474661675,
+              "9": 0.05620360316744805,
+              "10": 0.05558691024995641,
+              "11": 0.05020921060579757,
+              "12": 0.039255668233458677,
+              "13": 0.06058357051477811,
+              "14": 0.04999930293865653,
+              "15": 0.054905802512462944,
+              "16": 0.0580535479004314
+            },
+            "confidence": 0.027074451354969532
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 7051,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 17,
+          "inference_seconds": 0.36477649211883545,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[description]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.1896640360355377
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Trary’s flats are design to well with your wardrobe, cute and comfortable to all day along. About the these flats: Materials:  Upper: Suede / Denim  Insole: Cushioned Foot-Bed  Sole: Rubber Trait  D’Orsay Pointed toe Criss-cross strap Metal buckle  Flat NOTEEnjoy Trary comfortable flats!If you have any problem of the flats, feel free to contact us. We are always here for you.",
+      "request": {
+        "state": "Shopping instruction:\ni want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Trary’s flats are design to well with your wardrobe, cute and comfortable to all day along. About the these flats: Materials:  Upper: Suede / Denim  Insole: Cushioned Foot-Bed  Sole: Rubber Trait  D’Orsay Pointed toe Criss-cross strap Metal buckle  Flat NOTEEnjoy Trary comfortable flats!If you have any problem of the flats, feel free to contact us. We are always here for you.\n\nRecent actions:\nsearch[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]\nclick[b087wqy82c]\nclick[6]\nclick[blue]\nclick[back to search]\nsearch[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]\nclick[b08bjytkl7]\nclick[6]\nclick[description]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1cefbe08f2895bd18fff159144c796fb849642bbac51928734dd207d7b692e4b",
+      "attempts": [
+        {
+          "seconds": 0.06915447488427162,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06924587860703468,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.5050614611842874,
+              "1": 0.4949385388157126
+            },
+            "confidence": 0.010122922368574816
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 783,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 2,
+          "inference_seconds": 0.0673225075006485,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.2647313326597214
+    },
+    {
+      "step": 10,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i want to buy ballet shoes which have rubber sole in grey suede color and a size of 6, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.339929196983576
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "task_id": 140,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars",
+  "instruction_sha256": "9af67348a48c006d3df86b0706e96f3ed35a5a0f99cd8bad3a0926be6ffc57d9",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 4,
+  "elapsed_seconds": 1.1784056015312672,
+  "decision_seconds": 1.0387214571237564,
+  "input_tokens": 2685,
+  "output_tokens": 309,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars [SEP] Search",
+      "action": "search[i'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.0697544775903225
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B0936WQVXV [SEP] ZhongXinZe Chef Shoes Waterproof Non Slip Water Shoes Safety Garden Shoes Kitchen Shoes Rain Boots Catering Sneakers Work Clogs for Men Women [SEP] $38.99 [SEP] B09CD43DFH [SEP] Uminder Money Print Shoes Womens Mens Running Shoes Comfortable Lightweight Tennis Walking Jogging Sneakers [SEP] $59.99 [SEP] B095H2H37W [SEP] Dadfrug Women Pride Logo Gay Pride Poster Slip Ons Canvas Shoes Skateboard Sneakers Fashion Flats Loafers [SEP] $37.85 [SEP] B09C6CWML3 [SEP] 【Fast Delivery】 Low Heel Booties For Women, Fashion Mid-Tube Belt Buckle Round Toe Side Zipper Knee High Boots [SEP] $24.25 to $32.62 [SEP] B07YYMQQLZ [SEP] adidas Womens Falcon Lace Up Sneakers Shoes Casual - Grey [SEP] $64.95 [SEP] B093XYLVXY [SEP] Sperry womens Sneaker [SEP] $54.95 to $118.99 [SEP] B09NMWJXBF [SEP] The sole is non-toxic,Lightweight Soft Cozy Home Slippers for Women Slip On,Comfy Women's Washable Cotton Bedroom Slippers▁ [SEP] $100.0 [SEP] B099WRTYT6 [SEP] Chef Shoes Unisex Waterproof Garden Shoes Womens Rain Boots Mens Car Wash Footwear [SEP] $100.0 [SEP] B09B8PTF7R [SEP] Fashion Women's Casual Shoes Breathable Slip-on Wedges Outdoor Leisure Sneakers Loafers Oxfords Sandals Slipper Shoes Womens [SEP] $100.0 [SEP] B07RQF6HZN [SEP] ECCO Women's Omni-Vent GORE-TEX waterproof Sneaker [SEP] $112.0 to $469.82",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B0936WQVXV [SEP] ZhongXinZe Chef Shoes Waterproof Non Slip Water Shoes Safety Garden Shoes Kitchen Shoes Rain Boots Catering Sneakers Work Clogs for Men Women [SEP] $38.99 [SEP] B09CD43DFH [SEP] Uminder Money Print Shoes Womens Mens Running Shoes Comfortable Lightweight Tennis Walking Jogging Sneakers [SEP] $59.99 [SEP] B095H2H37W [SEP] Dadfrug Women Pride Logo Gay Pride Poster Slip Ons Canvas Shoes Skateboard Sneakers Fashion Flats Loafers [SEP] $37.85 [SEP] B09C6CWML3 [SEP] 【Fast Delivery】 Low Heel Booties For Women, Fashion Mid-Tube Belt Buckle Round Toe Side Zipper Knee High Boots [SEP] $24.25 to $32.62 [SEP] B07YYMQQLZ [SEP] adidas Womens Falcon Lace Up Sneakers Shoes Casual - Grey [SEP] $64.95 [SEP] B093XYLVXY [SEP] Sperry womens Sneaker [SEP] $54.95 to $118.99 [SEP] B09NMWJXBF [SEP] The sole is non-toxic,Lightweight Soft Cozy Home Slippers for Women Slip On,Comfy Women's Washable Cotton Bedroom Slippers▁ [SEP] $100.0 [SEP] B099WRTYT6 [SEP] Chef Shoes Unisex Waterproof Garden Shoes Womens Rain Boots Mens Car Wash Footwear [SEP] $100.0 [SEP] B09B8PTF7R [SEP] Fashion Women's Casual Shoes Breathable Slip-on Wedges Outdoor Leisure Sneakers Loafers Oxfords Sandals Slipper Shoes Womens [SEP] $100.0 [SEP] B07RQF6HZN [SEP] ECCO Women's Omni-Vent GORE-TEX waterproof Sneaker [SEP] $112.0 to $469.82\n\nRecent actions:\nsearch[i'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b0936wqvxv]",
+              "3": "click[b09cd43dfh]",
+              "4": "click[b095h2h37w]",
+              "5": "click[b09c6cwml3]",
+              "6": "click[b07yymqqlz]",
+              "7": "click[b093xylvxy]",
+              "8": "click[b09nmwjxbf]",
+              "9": "click[b099wrtyt6]",
+              "10": "click[b09b8ptf7r]",
+              "11": "click[b07rqf6hzn]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "06d22d17f6e6d1c88632a24c4b47eeff7166cba08a1fb9ea70d6ca3b410edd87",
+      "attempts": [
+        {
+          "seconds": 0.35412897169589996,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.354254774749279,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "confidence": 0.6,
+            "probabilities": {
+              "9": 0.0,
+              "1": 0.01,
+              "10": 0.0,
+              "2": 0.01,
+              "7": 0.07,
+              "0": 0.01,
+              "6": 0.65,
+              "4": 0.13,
+              "11": 0.0,
+              "3": 0.12,
+              "5": 0.0,
+              "8": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1179,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b07yymqqlz]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.45101938396692276
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 6.5 [SEP] 7 [SEP] 9 [SEP] 10 [SEP] adidas Womens Falcon Lace Up Sneakers Shoes Casual - Grey [SEP] Price: $64.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 6.5 [SEP] 7 [SEP] 9 [SEP] 10 [SEP] adidas Womens Falcon Lace Up Sneakers Shoes Casual - Grey [SEP] Price: $64.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars]\nclick[b07yymqqlz]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[5]",
+              "7": "click[5.5]",
+              "8": "click[6.5]",
+              "9": "click[7]",
+              "10": "click[9]",
+              "11": "click[10]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "f5feefcf193473e9b19eb38a57bfd249565901035740a44101d1f1a960cf1ce2",
+      "attempts": [
+        {
+          "seconds": 0.3506849482655525,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.35080912336707115,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "confidence": 0.7,
+            "probabilities": {
+              "0": 0.01,
+              "2": 0.02,
+              "4": 0.0,
+              "7": 0.0,
+              "1": 0.0,
+              "11": 0.0,
+              "8": 0.73,
+              "9": 0.0,
+              "3": 0.04,
+              "6": 0.0,
+              "10": 0.0,
+              "5": 0.2
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 750,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[6.5]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.8194829374551773
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 6.5 [SEP] 7 [SEP] 9 [SEP] 10 [SEP] adidas Womens Falcon Lace Up Sneakers Shoes Casual - Grey [SEP] Price: $64.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 6.5 [SEP] 7 [SEP] 9 [SEP] 10 [SEP] adidas Womens Falcon Lace Up Sneakers Shoes Casual - Grey [SEP] Price: $64.95 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm looking for some women's sneakers with rubber soles.  make sure they are fabric and in a size 6.5, and price lower than 70.00 dollars]\nclick[b07yymqqlz]\nclick[6.5]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[5]",
+              "7": "click[5.5]",
+              "8": "click[6.5]",
+              "9": "click[7]",
+              "10": "click[9]",
+              "11": "click[10]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "a7243005f0ec9a06225e370992c2877c6ffebf06ebef4d348b50cecbe367d9ad",
+      "attempts": [
+        {
+          "seconds": 0.33351854607462883,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33365755900740623,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.64,
+            "probabilities": {
+              "5": 0.67,
+              "6": 0.0,
+              "2": 0.12,
+              "1": 0.01,
+              "0": 0.01,
+              "8": 0.01,
+              "4": 0.0,
+              "9": 0.0,
+              "3": 0.18,
+              "10": 0.0,
+              "7": 0.0,
+              "11": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 756,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.0,
+      "done": true,
+      "elapsed_seconds": 1.1784030050039291
+    }
+  ]
+}

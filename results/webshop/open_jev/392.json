@@ -1,0 +1,556 @@
+{
+  "task_id": 392,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars",
+  "instruction_sha256": "de34b65e68ea6c8e2191eb7ded3f45dceba4059a6d4d4866c970106b5023ef1c",
+  "reward": 0.75,
+  "score": 75.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 7,
+  "elapsed_seconds": 2.8398471362888813,
+  "decision_seconds": 2.4657332822680473,
+  "input_tokens": 54153,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars [SEP] Search",
+      "action": "search[i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06972165405750275
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B098KH5X2T [SEP] NC Leather Women Work Sneakers Men Safety Shoes Steel Toe Cap Protect for Outdoor Industry [SEP] $211.99 [SEP] B09BD8HPJN [SEP] NC Safety Shoes for Men Women Work Shoes Steel Toe Cap Work Sneakers Men Security Boots Lightweight Safty Shoes Steel Toe Shoes [SEP] $99.99 [SEP] B09B87RP4M [SEP] NC Indestructible Ryder Shoes Menand Women Steel Toe Cap Work Safety Shoes Puncture- Proof Boots Lightweight Breathable Sneakers [SEP] $126.99 [SEP] B097LMNXY1 [SEP] Men's Shoes Work Shoes Breathable Summer Anti Smashing Stab Safety Shoes Non Slip Wear Resistant Steel Toe Caps Casual Shoes [SEP] $101.99 [SEP] B09B8H6QQR [SEP] NC Safety Shoes Men Indestructible Boots Steel Toe Safety Shoes Puncture- Proof Sneakers Boots Outdoor Comfortable Women Safety Boot [SEP] $146.99 [SEP] B09BDCF9TC [SEP] NC Lightweight Breathable Men Safety Shoes Steel Toe Work Shoes for Men Anti-Smashing Construction Sneaker with Reflective [SEP] $134.99 [SEP] B097LLSDXL [SEP] NC Boots Men Spring Summer Light Breathable Deodorant Safety Work Shoes Steel Toe Safety Shoes Cap Protective Shoes Male [SEP] $110.99 [SEP] B097LNCHYS [SEP] NC Breathable Men's Safety Shoes Boots with Steel Toe Cap Casual Men's Boots Work Indestructible Shoes Puncture- Proof Work Sneakers [SEP] $98.99 [SEP] B09BD87CYQ [SEP] NC Plus Size Safety Shoes Men Steel Toe Shoes Anti-Puncture Work Sneakers Indestructible Work Sefety Boots Male Shoes Work Boots [SEP] $112.99 [SEP] B09B8H4TKD [SEP] NC Male Work Sneakers Toe Cap Work Safety Boot Comfort Men Boots Anti-Puncture Safety Shoes Men Indestructible Shoes Work Boots [SEP] $87.99",
+      "request": {
+        "state": "Shopping instruction:\ni need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B098KH5X2T [SEP] NC Leather Women Work Sneakers Men Safety Shoes Steel Toe Cap Protect for Outdoor Industry [SEP] $211.99 [SEP] B09BD8HPJN [SEP] NC Safety Shoes for Men Women Work Shoes Steel Toe Cap Work Sneakers Men Security Boots Lightweight Safty Shoes Steel Toe Shoes [SEP] $99.99 [SEP] B09B87RP4M [SEP] NC Indestructible Ryder Shoes Menand Women Steel Toe Cap Work Safety Shoes Puncture- Proof Boots Lightweight Breathable Sneakers [SEP] $126.99 [SEP] B097LMNXY1 [SEP] Men's Shoes Work Shoes Breathable Summer Anti Smashing Stab Safety Shoes Non Slip Wear Resistant Steel Toe Caps Casual Shoes [SEP] $101.99 [SEP] B09B8H6QQR [SEP] NC Safety Shoes Men Indestructible Boots Steel Toe Safety Shoes Puncture- Proof Sneakers Boots Outdoor Comfortable Women Safety Boot [SEP] $146.99 [SEP] B09BDCF9TC [SEP] NC Lightweight Breathable Men Safety Shoes Steel Toe Work Shoes for Men Anti-Smashing Construction Sneaker with Reflective [SEP] $134.99 [SEP] B097LLSDXL [SEP] NC Boots Men Spring Summer Light Breathable Deodorant Safety Work Shoes Steel Toe Safety Shoes Cap Protective Shoes Male [SEP] $110.99 [SEP] B097LNCHYS [SEP] NC Breathable Men's Safety Shoes Boots with Steel Toe Cap Casual Men's Boots Work Indestructible Shoes Puncture- Proof Work Sneakers [SEP] $98.99 [SEP] B09BD87CYQ [SEP] NC Plus Size Safety Shoes Men Steel Toe Shoes Anti-Puncture Work Sneakers Indestructible Work Sefety Boots Male Shoes Work Boots [SEP] $112.99 [SEP] B09B8H4TKD [SEP] NC Male Work Sneakers Toe Cap Work Safety Boot Comfort Men Boots Anti-Puncture Safety Shoes Men Indestructible Shoes Work Boots [SEP] $87.99\n\nRecent actions:\nsearch[i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b098kh5x2t]",
+              "3": "click[b09bd8hpjn]",
+              "4": "click[b09b87rp4m]",
+              "5": "click[b097lmnxy1]",
+              "6": "click[b09b8h6qqr]",
+              "7": "click[b09bdcf9tc]",
+              "8": "click[b097llsdxl]",
+              "9": "click[b097lnchys]",
+              "10": "click[b09bd87cyq]",
+              "11": "click[b09b8h4tkd]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e14698edaf51ea8fa55eb2e62423705fb97514a4bf37cbb2821280e2634b11a7",
+      "attempts": [
+        {
+          "seconds": 0.38516179472208023,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3853079006075859,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.07598624064122123,
+              "1": 0.12386849225466204,
+              "2": 0.04640298869986312,
+              "3": 0.08669576276162934,
+              "4": 0.1126325373219136,
+              "5": 0.08075513879923424,
+              "6": 0.06734667836276216,
+              "7": 0.055718021518415484,
+              "8": 0.06570851937458481,
+              "9": 0.10128982411562246,
+              "10": 0.07438918346912066,
+              "11": 0.10920661268097079
+            },
+            "confidence": 0.04422017336872223
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8382,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.374845989048481,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5298237502574921
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09BBFGNKD [SEP] NC Indestructible Shoes Men Safety Work Shoeswith Steel Toe Cap Puncture- Proof Boots Lightweight Breathable Sneakers [SEP] $132.99 [SEP] B09BD7SBWT [SEP] NC Lightweight Safety Shoes Work Safety Boots Men Boots Steel Toe Work Shoes Outdoor Sneakeres Puncture- Proof Work Sneakers [SEP] $107.99 [SEP] B0953WXR96 [SEP] N\\C Safety Work Boots for Men Breathable Safety Shoes Air Mesh Work Shoes Steel Toe Puncture-Proof Indestructible Shoes Work Sneaker [SEP] $46.99 [SEP] B09M3N8F5R [SEP] MOV-TEC Steel Toe Shoes for Men Lightweight Safety Shoes Non-Slip Breathable Industrial Work Boots [SEP] $56.99 [SEP] B09CKJW9M8 [SEP] QdLOVES Men's Indestructible Steel Toe Shoes Work Safety Toe Non-Slip Breathable Industrial and Construction Shoes Lightweight Safety Sports Shoes [SEP] $49.99 [SEP] B0953VCTXK [SEP] NC Breathable Man's Work Shoes Steel Toe Cap Work Boots Men Construction Safety Shoes Light Sneaker Male Security Shoes Men Boots [SEP] $119.99 [SEP] B097LNFRR6 [SEP] NC Boots Men Steel Toe Safety Shoes Work Casual Breathable Sneakers Outdoor Anti Puncture Boots Work Shoes Male [SEP] $92.99 [SEP] B07KJ46H5V [SEP] Lehigh Safety Shoes Swampers Unisex 6 inch Steel Toe Waterproof Work Boot [SEP] $123.0 [SEP] B0953VRFXC [SEP] NC Men Work Safety Shoes Anti-Puncture Working Sneakers Male Indestructible Work Shoes Men Boots Lightweight Men Shoes Safety Boots [SEP] $89.99 [SEP] B0953XKQ53 [SEP] NC Male Indestructible Work Shoes Sneakers Men Boots Anti-Puncture Safety Shoes Men Anti-Smash Work Boots Steel Toe Shoes Footwear [SEP] $89.99",
+      "request": {
+        "state": "Shopping instruction:\ni need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09BBFGNKD [SEP] NC Indestructible Shoes Men Safety Work Shoeswith Steel Toe Cap Puncture- Proof Boots Lightweight Breathable Sneakers [SEP] $132.99 [SEP] B09BD7SBWT [SEP] NC Lightweight Safety Shoes Work Safety Boots Men Boots Steel Toe Work Shoes Outdoor Sneakeres Puncture- Proof Work Sneakers [SEP] $107.99 [SEP] B0953WXR96 [SEP] N\\C Safety Work Boots for Men Breathable Safety Shoes Air Mesh Work Shoes Steel Toe Puncture-Proof Indestructible Shoes Work Sneaker [SEP] $46.99 [SEP] B09M3N8F5R [SEP] MOV-TEC Steel Toe Shoes for Men Lightweight Safety Shoes Non-Slip Breathable Industrial Work Boots [SEP] $56.99 [SEP] B09CKJW9M8 [SEP] QdLOVES Men's Indestructible Steel Toe Shoes Work Safety Toe Non-Slip Breathable Industrial and Construction Shoes Lightweight Safety Sports Shoes [SEP] $49.99 [SEP] B0953VCTXK [SEP] NC Breathable Man's Work Shoes Steel Toe Cap Work Boots Men Construction Safety Shoes Light Sneaker Male Security Shoes Men Boots [SEP] $119.99 [SEP] B097LNFRR6 [SEP] NC Boots Men Steel Toe Safety Shoes Work Casual Breathable Sneakers Outdoor Anti Puncture Boots Work Shoes Male [SEP] $92.99 [SEP] B07KJ46H5V [SEP] Lehigh Safety Shoes Swampers Unisex 6 inch Steel Toe Waterproof Work Boot [SEP] $123.0 [SEP] B0953VRFXC [SEP] NC Men Work Safety Shoes Anti-Puncture Working Sneakers Male Indestructible Work Shoes Men Boots Lightweight Men Shoes Safety Boots [SEP] $89.99 [SEP] B0953XKQ53 [SEP] NC Male Indestructible Work Shoes Sneakers Men Boots Anti-Puncture Safety Shoes Men Anti-Smash Work Boots Steel Toe Shoes Footwear [SEP] $89.99\n\nRecent actions:\nsearch[i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09bbfgnkd]",
+              "4": "click[b09bd7sbwt]",
+              "5": "click[b0953wxr96]",
+              "6": "click[b09m3n8f5r]",
+              "7": "click[b09ckjw9m8]",
+              "8": "click[b0953vctxk]",
+              "9": "click[b097lnfrr6]",
+              "10": "click[b07kj46h5v]",
+              "11": "click[b0953vrfxc]",
+              "12": "click[b0953xkq53]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3c4173ca1269dd8c3212e649c9d9e9b7b4b3dbd4d82f519d55b19266d0d6ee57",
+      "attempts": [
+        {
+          "seconds": 0.4112597815692425,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4113575480878353,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.06881581963755043,
+              "1": 0.06768519748626989,
+              "2": 0.11133391415994424,
+              "3": 0.07823504816425701,
+              "4": 0.09706693549936186,
+              "5": 0.06853117317498207,
+              "6": 0.07359952089211866,
+              "7": 0.08138949027756132,
+              "8": 0.0751745886106982,
+              "9": 0.07305914494458654,
+              "10": 0.06221324888524417,
+              "11": 0.06896549406419639,
+              "12": 0.07393042420322923
+            },
+            "confidence": 0.03727840700660626
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9171,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4094170294702053,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.0159727409482002
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B0953WSK1F [SEP] NC 2021 Indestructible Men's Breathable Steel Anti-Smashing Labor Safety Shoes Men's Anti-Puncture Low-top Work Shoes [SEP] $73.99 [SEP] B08W1VPN4B [SEP] Jilin VR Controller Fixer for Oculus Quest 2 VR Headset Handle Bumper ProtectiveHolder [SEP] $9.09 [SEP] B099F2N1PX [SEP] QdLOVES Mens Basketball Shoes High TopBasketball Shoes for Men Sports Shoes Men's Breathable Outdoor Sports Shoes Cushioning Fitness Shoes [SEP] $49.95 [SEP] B003UVAD76 [SEP] Nina Women's Falana Open-Toe Pump [SEP] $77.28 to $81.66 [SEP] B09JZLPWLC [SEP] Gerulata Chain Penny Loafers for Women Chunky Platform Shoes [SEP] $32.99 to $48.99 [SEP] B09GKHHBKH [SEP] PDBQ Waterproof Non-Slip Steel-Toed Shoes, Men and Women Work Safety Outdoor Protective Shoes, Industrial and Construction Work Shoes [SEP] $36.66 [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B09JKVNFQ7 [SEP] Arillwe Steel Toe Boots, Men High Top Steel Toe Sneakers Waterproof Lightweight Comfortable Work Safety Shoes Non-Slip Industrial Construction Boots Outdoor Protection Footwear [SEP] $45.99 to $49.99 [SEP] B08P32KCTT [SEP] Hibye Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Wireless Support AUX TF USB [SEP] $100.0 [SEP] B078S7PNL5 [SEP] Bestshoot 2PACK 7\" 180mm Soft White Diffuser Sock for Studio Strobe Standard Bowen Mount Reflector Fits Godox AD360.Monolights Speedlites [SEP] $7.99",
+      "request": {
+        "state": "Shopping instruction:\ni need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B0953WSK1F [SEP] NC 2021 Indestructible Men's Breathable Steel Anti-Smashing Labor Safety Shoes Men's Anti-Puncture Low-top Work Shoes [SEP] $73.99 [SEP] B08W1VPN4B [SEP] Jilin VR Controller Fixer for Oculus Quest 2 VR Headset Handle Bumper ProtectiveHolder [SEP] $9.09 [SEP] B099F2N1PX [SEP] QdLOVES Mens Basketball Shoes High TopBasketball Shoes for Men Sports Shoes Men's Breathable Outdoor Sports Shoes Cushioning Fitness Shoes [SEP] $49.95 [SEP] B003UVAD76 [SEP] Nina Women's Falana Open-Toe Pump [SEP] $77.28 to $81.66 [SEP] B09JZLPWLC [SEP] Gerulata Chain Penny Loafers for Women Chunky Platform Shoes [SEP] $32.99 to $48.99 [SEP] B09GKHHBKH [SEP] PDBQ Waterproof Non-Slip Steel-Toed Shoes, Men and Women Work Safety Outdoor Protective Shoes, Industrial and Construction Work Shoes [SEP] $36.66 [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B09JKVNFQ7 [SEP] Arillwe Steel Toe Boots, Men High Top Steel Toe Sneakers Waterproof Lightweight Comfortable Work Safety Shoes Non-Slip Industrial Construction Boots Outdoor Protection Footwear [SEP] $45.99 to $49.99 [SEP] B08P32KCTT [SEP] Hibye Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Wireless Support AUX TF USB [SEP] $100.0 [SEP] B078S7PNL5 [SEP] Bestshoot 2PACK 7\" 180mm Soft White Diffuser Sock for Studio Strobe Standard Bowen Mount Reflector Fits Godox AD360.Monolights Speedlites [SEP] $7.99\n\nRecent actions:\nsearch[i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b0953wsk1f]",
+              "4": "click[b08w1vpn4b]",
+              "5": "click[b099f2n1px]",
+              "6": "click[b003uvad76]",
+              "7": "click[b09jzlpwlc]",
+              "8": "click[b09gkhhbkh]",
+              "9": "click[b09cd5rzr4]",
+              "10": "click[b09jkvnfq7]",
+              "11": "click[b08p32kctt]",
+              "12": "click[b078s7pnl5]"
+            }
+          }
+        }
+      },
+      "request_sha256": "265aa0628b4984633ebb0c9b97ed723e76b61b165633606ed606ab249508a931",
+      "attempts": [
+        {
+          "seconds": 0.41804590076208115,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.41819629073143005,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.1497577687027408,
+              "1": 0.14435580035963222,
+              "2": 0.23609437052527785,
+              "3": 0.14460365701469413,
+              "4": 0.009099715438976875,
+              "5": 0.012218104393267589,
+              "6": 0.016332622758505545,
+              "7": 0.019810355271994255,
+              "8": 0.04665505897558636,
+              "9": 0.01374741251198897,
+              "10": 0.16840141597028857,
+              "11": 0.030600197740416085,
+              "12": 0.008323520336630781
+            },
+            "confidence": 0.172435568069051
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9376,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.41633301973342896,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.5100151486694813
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09PB9L6N2 [SEP] BAIJIE Men's Outdoor Tooling Shoes Safety Steel-Toed Shoes Comfortable Slip-On Tennis Shoes Non-Slip and Puncture-Resistant Work Shoes [SEP] $41.99 to $54.99 [SEP] B08P8BJ4HH [SEP] Fashion Popular NFC Mobile Phone tag Smart Ring Stainless Steel 8mm Wide Smart Wearable Ring Smart Ring Couple Ring [SEP] $16.91 to $22.31 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B08MZSR42F [SEP] Wondiwe Glass Film, VR Accessories for -Oculus Quest 2 Vr Glasses TPU Soft Film VR Lens Protector H D Film Anti-Scratch for for -Oculus Quest2 4pcs [SEP] $9.07 [SEP] B08111JX6W [SEP] Wadonerful Mesh Tops Women V-Neck Trumpet Sleeves Loose Christmas Santa Claus Print Xmas Shirt Loose Blouse Hole T-Shirt [SEP] $7.49 [SEP] B08D3Q77QJ [SEP] Gibobby Womens Sandals Walking Shoes for Women,Casual Comfortable Breathable Loafers Sneakers Lightweight Running Shoe [SEP] $7.07 to $12.88 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B09NKJS6HC [SEP] Women's Wide Calf Knee High Pull On Fall Weather Winter Boots Wide Calf Ladies Shoes Round Toe Buckle Slouch Riding Boots WNVMWI [SEP] $100.0 [SEP] B0834V2NFD [SEP] Espadrilles Wedges for Women,Casual Espadrille Slide On Platform Sandals Comfort Open Toe Ankle Elastic Strappy Studded Flatform Sandal Shoes [SEP] $3.42 to $15.52 [SEP] B07W3P95WT [SEP] Clearance Sale, Forthery Mens Button Down Cotton Linen Shirts Long Sleeve Loose Summer Beach Casual Cool Shirt Tops [SEP] $3.99 to $4.01",
+      "request": {
+        "state": "Shopping instruction:\ni need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09PB9L6N2 [SEP] BAIJIE Men's Outdoor Tooling Shoes Safety Steel-Toed Shoes Comfortable Slip-On Tennis Shoes Non-Slip and Puncture-Resistant Work Shoes [SEP] $41.99 to $54.99 [SEP] B08P8BJ4HH [SEP] Fashion Popular NFC Mobile Phone tag Smart Ring Stainless Steel 8mm Wide Smart Wearable Ring Smart Ring Couple Ring [SEP] $16.91 to $22.31 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B08MZSR42F [SEP] Wondiwe Glass Film, VR Accessories for -Oculus Quest 2 Vr Glasses TPU Soft Film VR Lens Protector H D Film Anti-Scratch for for -Oculus Quest2 4pcs [SEP] $9.07 [SEP] B08111JX6W [SEP] Wadonerful Mesh Tops Women V-Neck Trumpet Sleeves Loose Christmas Santa Claus Print Xmas Shirt Loose Blouse Hole T-Shirt [SEP] $7.49 [SEP] B08D3Q77QJ [SEP] Gibobby Womens Sandals Walking Shoes for Women,Casual Comfortable Breathable Loafers Sneakers Lightweight Running Shoe [SEP] $7.07 to $12.88 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B09NKJS6HC [SEP] Women's Wide Calf Knee High Pull On Fall Weather Winter Boots Wide Calf Ladies Shoes Round Toe Buckle Slouch Riding Boots WNVMWI [SEP] $100.0 [SEP] B0834V2NFD [SEP] Espadrilles Wedges for Women,Casual Espadrille Slide On Platform Sandals Comfort Open Toe Ankle Elastic Strappy Studded Flatform Sandal Shoes [SEP] $3.42 to $15.52 [SEP] B07W3P95WT [SEP] Clearance Sale, Forthery Mens Button Down Cotton Linen Shirts Long Sleeve Loose Summer Beach Casual Cool Shirt Tops [SEP] $3.99 to $4.01\n\nRecent actions:\nsearch[i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09pb9l6n2]",
+              "4": "click[b08p8bj4hh]",
+              "5": "click[b08pyvwm7b]",
+              "6": "click[b08mzsr42f]",
+              "7": "click[b08111jx6w]",
+              "8": "click[b08d3q77qj]",
+              "9": "click[b09g3fpp9s]",
+              "10": "click[b09nkjs6hc]",
+              "11": "click[b0834v2nfd]",
+              "12": "click[b07w3p95wt]"
+            }
+          }
+        }
+      },
+      "request_sha256": "9ce378d56aca4233d4eda5dae765b7a4d1f63e5d3f0d2a586a5955a81ecf7237",
+      "attempts": [
+        {
+          "seconds": 0.4631929136812687,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.46333518996834755,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "probabilities": {
+              "0": 0.1467017610053437,
+              "1": 0.14021343388130314,
+              "2": 0.19810931411019847,
+              "3": 0.3652101310233857,
+              "4": 0.025789166848948487,
+              "5": 0.00863463851485735,
+              "6": 0.011758147046861627,
+              "7": 0.00690793161765252,
+              "8": 0.018205656437856328,
+              "9": 0.009333245534108043,
+              "10": 0.02313004226719437,
+              "11": 0.029038793851663296,
+              "12": 0.016967737860626934
+            },
+            "confidence": 0.31231097527533447
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10435,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.46129025518894196,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b09pb9l6n2]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.9990609101951122
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 6 [SEP] 6.5 [SEP] 7 [SEP] 8 [SEP] 8.5 [SEP] 9.5 [SEP] 10 [SEP] 11 [SEP] 12 [SEP] 13 [SEP] 14 [SEP] color [SEP] black [SEP] grey [SEP] red [SEP] yellow [SEP] BAIJIE Men's Outdoor Tooling Shoes Safety Steel-Toed Shoes Comfortable Slip-On Tennis Shoes Non-Slip and Puncture-Resistant Work Shoes [SEP] Price: $41.99 to $54.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 6 [SEP] 6.5 [SEP] 7 [SEP] 8 [SEP] 8.5 [SEP] 9.5 [SEP] 10 [SEP] 11 [SEP] 12 [SEP] 13 [SEP] 14 [SEP] color [SEP] black [SEP] grey [SEP] red [SEP] yellow [SEP] BAIJIE Men's Outdoor Tooling Shoes Safety Steel-Toed Shoes Comfortable Slip-On Tennis Shoes Non-Slip and Puncture-Resistant Work Shoes [SEP] Price: $41.99 to $54.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b09pb9l6n2]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[6]",
+              "7": "click[6.5]",
+              "8": "click[7]",
+              "9": "click[8]",
+              "10": "click[8.5]",
+              "11": "click[9.5]",
+              "12": "click[10]",
+              "13": "click[11]",
+              "14": "click[12]",
+              "15": "click[13]",
+              "16": "click[14]",
+              "17": "click[black]",
+              "18": "click[grey]",
+              "19": "click[red]",
+              "20": "click[yellow]"
+            }
+          }
+        }
+      },
+      "request_sha256": "174a985c1ebc02bab9a64280cfa4cfee426cbbcd35b3c3144be8b2b00d8eddcf",
+      "attempts": [
+        {
+          "seconds": 0.39055629074573517,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.39067692682147026,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "probabilities": {
+              "0": 0.06371629159477539,
+              "1": 0.05374138023428317,
+              "2": 0.07634509046196297,
+              "3": 0.0426768878362375,
+              "4": 0.04943855172098539,
+              "5": 0.09212937182605335,
+              "6": 0.04501683758829082,
+              "7": 0.02708361115772886,
+              "8": 0.141586002939574,
+              "9": 0.052073203758344254,
+              "10": 0.03655676500989162,
+              "11": 0.034691935611556146,
+              "12": 0.042336487820315544,
+              "13": 0.039430765808996,
+              "14": 0.03862100611207233,
+              "15": 0.03638834352225309,
+              "16": 0.03580760165231746,
+              "17": 0.025981636392967307,
+              "18": 0.018317154853978397,
+              "19": 0.021440217542457056,
+              "20": 0.02662085655495952
+            },
+            "confidence": 0.09866530308655269
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8342,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 21,
+          "inference_seconds": 0.38826391473412514,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[7]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.40952605009079
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 6 [SEP] 6.5 [SEP] 7 [SEP] 8 [SEP] 8.5 [SEP] 9.5 [SEP] 10 [SEP] 11 [SEP] 12 [SEP] 13 [SEP] 14 [SEP] color [SEP] black [SEP] grey [SEP] red [SEP] yellow [SEP] BAIJIE Men's Outdoor Tooling Shoes Safety Steel-Toed Shoes Comfortable Slip-On Tennis Shoes Non-Slip and Puncture-Resistant Work Shoes [SEP] Price: $41.99 to $54.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 6 [SEP] 6.5 [SEP] 7 [SEP] 8 [SEP] 8.5 [SEP] 9.5 [SEP] 10 [SEP] 11 [SEP] 12 [SEP] 13 [SEP] 14 [SEP] color [SEP] black [SEP] grey [SEP] red [SEP] yellow [SEP] BAIJIE Men's Outdoor Tooling Shoes Safety Steel-Toed Shoes Comfortable Slip-On Tennis Shoes Non-Slip and Puncture-Resistant Work Shoes [SEP] Price: $41.99 to $54.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need some steel toed shoes that are chocolate colored and are a size 7, and price lower than 210.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b09pb9l6n2]\nclick[7]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[6]",
+              "7": "click[6.5]",
+              "8": "click[7]",
+              "9": "click[8]",
+              "10": "click[8.5]",
+              "11": "click[9.5]",
+              "12": "click[10]",
+              "13": "click[11]",
+              "14": "click[12]",
+              "15": "click[13]",
+              "16": "click[14]",
+              "17": "click[black]",
+              "18": "click[grey]",
+              "19": "click[red]",
+              "20": "click[yellow]"
+            }
+          }
+        }
+      },
+      "request_sha256": "17a8d382d1826b67acdca52de9ed679e3b2df346c663f98f3af0e80a1f1917ba",
+      "attempts": [
+        {
+          "seconds": 0.39672964811325073,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.39685942605137825,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.06994955960873467,
+              "1": 0.059944245931147985,
+              "2": 0.09175973549747374,
+              "3": 0.054540762752927255,
+              "4": 0.05793217620896195,
+              "5": 0.1013832941263328,
+              "6": 0.03651246767292466,
+              "7": 0.023748870700140666,
+              "8": 0.048545167021819845,
+              "9": 0.05878755323571543,
+              "10": 0.036398952403734315,
+              "11": 0.03184540002484707,
+              "12": 0.048173742757715805,
+              "13": 0.04150794879361843,
+              "14": 0.04163526205297364,
+              "15": 0.03688475388209548,
+              "16": 0.039119720203117284,
+              "17": 0.03494086419384072,
+              "18": 0.022789819515959243,
+              "19": 0.028157109958137305,
+              "20": 0.03544259345778168
+            },
+            "confidence": 0.05645245883264947
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8447,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 21,
+          "inference_seconds": 0.39437639713287354,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.75,
+      "done": true,
+      "elapsed_seconds": 2.8398432806134224
+    }
+  ]
+}
