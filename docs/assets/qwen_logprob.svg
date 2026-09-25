@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="735" viewBox="0 0 1200 735" role="img" aria-labelledby="title desc">
+  <title id="title">Qwen3-8B decision scoring with letter log probabilities</title>
+  <desc id="desc">Two semantic candidates are shown in both A and B positions. Each ordering uses one forward pass. The A and B next-token logits after Answer colon are normalized, aligned back to the semantic candidates, summed, and the candidate with the larger sum is selected.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1 1 L9 5 L1 9Z" fill="#53657f"/>
+    </marker>
+    <style>
+      .bg { fill: #f5f7fb; }
+      .title { fill: #15233b; font: 700 30px Arial, sans-serif; }
+      .subtitle { fill: #53657f; font: 16px Arial, sans-serif; }
+      .section { fill: #172642; font: 700 18px Arial, sans-serif; }
+      .body { fill: #24354f; font: 16px Arial, sans-serif; }
+      .small { fill: #53657f; font: 14px Arial, sans-serif; }
+      .mono { fill: #172642; font: 15px 'DejaVu Sans Mono', monospace; }
+      .card { fill: #fff; stroke: #dbe3ee; stroke-width: 1.5; }
+      .blue { fill: #e7f1ff; }
+      .blue-text { fill: #1363ae; font: 700 15px Arial, sans-serif; }
+      .violet { fill: #eeeaff; }
+      .violet-text { fill: #6944b9; font: 700 15px Arial, sans-serif; }
+      .green { fill: #e4f7ec; }
+      .green-text { fill: #17834e; font: 700 17px Arial, sans-serif; }
+      .line { stroke: #53657f; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .softline { stroke: #a8b6c9; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="735"/>
+  <text class="title" x="48" y="57">How a language model makes a decision</text>
+  <text class="subtitle" x="48" y="88">Illustrative two-option example · Qwen3-8B, thinking disabled · no answer is generated</text>
+
+  <rect class="card" x="48" y="122" width="1104" height="116" rx="16"/>
+  <text class="section" x="72" y="155">1  Define the decision</text>
+  <text class="body" x="72" y="187">State: “What is the weather in Paris right now?”</text>
+  <rect class="blue" x="610" y="156" width="210" height="40" rx="9"/>
+  <text class="blue-text" x="627" y="181">Use an external tool</text>
+  <rect class="violet" x="835" y="156" width="272" height="40" rx="9"/>
+  <text class="violet-text" x="852" y="181">Answer directly</text>
+
+  <path class="line" d="M600 238 V268"/>
+  <text class="small" x="515" y="261">Rotate option positions</text>
+
+  <rect class="card" x="48" y="285" width="534" height="218" rx="16"/>
+  <text class="section" x="72" y="319">2a  Ordering 1 · one forward pass</text>
+  <text class="mono" x="72" y="355">A. Use an external tool</text>
+  <text class="mono" x="72" y="385">B. Answer directly</text>
+  <text class="mono" x="72" y="421">Answer: [next token]</text>
+  <rect class="blue" x="72" y="443" width="486" height="42" rx="8"/>
+  <text class="mono" x="86" y="470">log p(A) = −0.36    log p(B) = −1.20</text>
+
+  <rect class="card" x="618" y="285" width="534" height="218" rx="16"/>
+  <text class="section" x="642" y="319">2b  Ordering 2 · one forward pass</text>
+  <text class="mono" x="642" y="355">A. Answer directly</text>
+  <text class="mono" x="642" y="385">B. Use an external tool</text>
+  <text class="mono" x="642" y="421">Answer: [next token]</text>
+  <rect class="violet" x="642" y="443" width="486" height="42" rx="8"/>
+  <text class="mono" x="656" y="470">log p(A) = −0.92    log p(B) = −0.51</text>
+
+  <path class="line" d="M315 503 V538 H483 V554"/>
+  <path class="line" d="M885 503 V538 H718 V554"/>
+
+  <rect class="card" x="180" y="554" width="840" height="132" rx="16"/>
+  <text class="section" x="205" y="586">3  Align by meaning, sum log probabilities, choose the maximum</text>
+  <text class="mono" x="205" y="618">Use an external tool:  −0.36 (A) + −0.51 (B) = −0.87</text>
+  <text class="mono" x="205" y="648">Answer directly:      −1.20 (B) + −0.92 (A) = −2.12</text>
+  <rect class="green" x="813" y="606" width="184" height="51" rx="10"/>
+  <text class="green-text" x="832" y="638">Choose: use tool</text>
+
+  <text class="small" x="48" y="713">At each “Answer: ” position: log-softmax over the A/B letter logits only. Generalizes to N options with N cyclic rotations and N forward passes.</text>
+</svg>

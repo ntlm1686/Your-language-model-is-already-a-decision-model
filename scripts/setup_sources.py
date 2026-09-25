@@ -21,11 +21,16 @@ SOURCES = {
     "jev-phishing-bench": ("https://github.com/anisselbd/jev-phishing-bench.git", "1d56e8c64d029a9554a0874e2ef2901ed196e230"),
     "When2Call": ("https://github.com/NVIDIA/When2Call.git", "ecc8d42388e91ab37e7e737d48e16e8ecea3d1dc"),
     "MetaTool": ("https://github.com/HowieHwong/MetaTool.git", "35e81bb7576826e980c80fed8f8c0a2b4a1e6fbb"),
+    "Open-Jev": ("https://github.com/Zefan-Cai/Open-Jev.git", "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"),
 }
 MODEL_REV = "b968826d9c46dd6066d109eabc6255188de91218"
 HEAD_REVS = {
     "Contrastive-LM/CLM-v0.1-8B": "e939398d4556fcd9400c76fa8c5a513202f42b0a",
     "Contrastive-LM/deepswe-clm-heads-8k": "c60876f3fdf7a75dc58d33b776e469b7e903d0ee",
+}
+OPEN_JEV_REVS = {
+    "ZefanCai/Open-Jev-2B": "0c7aa498b1627be8da4acf34c863ff0ee0a92785",
+    "ZefanCai/Open-Jev-9B": "47e966881e489511c0c7f5633a9e1960a676a551",
 }
 DEEPSWE_REPO = "kaitchup/DeepSWE1.1-trajectories-Qwen3.8-27B"
 DEEPSWE_REV = "e58b83310346104971fd17c42f9955e7cd5e3b25"
@@ -114,7 +119,7 @@ def get_bfcl() -> None:
 
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("components", nargs="+", choices=("repos", "heads", "model", "webprm", "deepswe", "phishing", "when2call", "metatool", "bfcl"))
+    p.add_argument("components", nargs="+", choices=("repos", "heads", "model", "qwen_tokenizer", "webprm", "deepswe", "phishing", "when2call", "metatool", "bfcl", "open_jev"))
     args = p.parse_args()
     for component in args.components:
         if component == "repos":
@@ -126,6 +131,12 @@ def main() -> None:
         elif component == "model":
             print(snapshot_download(repo_id="Qwen/Qwen3-8B", revision=MODEL_REV,
                                     local_dir=ROOT / "models/qwen3_8b"))
+        elif component == "qwen_tokenizer":
+            print(snapshot_download(repo_id="Qwen/Qwen3-8B", revision=MODEL_REV,
+                                    local_dir=ROOT / "models/qwen3_8b_tokenizer",
+                                    allow_patterns=["config.json", "tokenizer*", "vocab*", "merges*",
+                                                    "added_tokens.json", "special_tokens_map.json",
+                                                    "chat_template.jinja"]))
         elif component == "webprm":
             get_webprm()
         elif component == "deepswe":
@@ -139,6 +150,12 @@ def main() -> None:
             get_git_repo("MetaTool")
         elif component == "bfcl":
             get_bfcl()
+        elif component == "open_jev":
+            get_git_repo("Open-Jev")
+            for repo, revision in OPEN_JEV_REVS.items():
+                size = repo.rsplit("-", 1)[-1].lower()
+                print(snapshot_download(repo_id=repo, revision=revision,
+                                        local_dir=ROOT / "models" / f"open_jev_{size}"))
 
 
 if __name__ == "__main__":

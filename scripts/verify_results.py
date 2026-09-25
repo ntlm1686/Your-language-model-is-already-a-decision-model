@@ -142,10 +142,53 @@ def check_tool_suite(name: str, expected_n: int, expected: dict[str, int]) -> di
     return {k: f"{v}/{expected_n}" for k, v in counts.items()}
 
 
+def check_qwen_jev_api() -> dict:
+    baseline = {r["id"]: r for r in rows("results/jevbench/qwen3_8b_letters_results.jsonl")}
+    api = rows("results/jevbench/qwen3_8b_jev_api.jsonl")
+    assert len(api) == len({r["id"] for r in api}) == 231
+    assert {r["id"] for r in api} == set(baseline)
+    assert all(r["outcome"] == "ok" and r["status"] == 200 and
+               r["prediction"] == baseline[r["id"]]["prediction"] and
+               r["correct"] == baseline[r["id"]]["correct"] for r in api)
+    assert sum(r["correct"] for r in api) == 163
+    return {"correct": "163/231", "prediction_agreement_with_direct_qwen": "231/231"}
+
+
+def check_open_jev() -> dict:
+    from summarize_open_jev import EXPECTED, summarize
+
+    saved = json.loads((ROOT / "results/open_jev_summary.json").read_text())
+    targets = {
+        "2b": {"jevbench": 150, "metatool": 692, "when2call": 235, "bfcl": 196,
+               "phishing": 1000, "webprm120": 43, "webprm1141": 421},
+        "9b": {"jevbench": 179, "metatool": 792, "when2call": 451, "bfcl": 197,
+               "phishing": 1453, "webprm120": 47, "webprm1141": 472},
+    }
+    output = {}
+    for size, scores in targets.items():
+        output[size] = {}
+        for suite, target in scores.items():
+            result = summarize(ROOT / f"results/open_jev_{size}/{suite}.jsonl", suite)
+            assert result == saved[size][suite]
+            assert result["correct"] == target
+            output[size][suite] = f"{target}/{result['eligible']}"
+        default = summarize(ROOT / f"results/open_jev_{size}/deepswe.jsonl", "deepswe")
+        extended = summarize(ROOT / f"results/open_jev_{size}/deepswe_8k.jsonl", "deepswe")
+        assert default == saved[size]["deepswe"] and default["tasks_eligible"] == 0
+        assert extended == saved[size]["deepswe_8k_exploratory"]
+        assert extended["tasks_eligible"] == 38 and extended["tasks_correct"] == (24 if size == "2b" else 23)
+        output[size]["deepswe_4k"] = "0/38 eligible"
+        output[size]["deepswe_8k_exploratory"] = f"{extended['tasks_correct']}/38"
+    assert set(EXPECTED) == set(saved["2b"]) - {"deepswe_8k_exploratory"}
+    return output
+
+
 if __name__ == "__main__":
     print(json.dumps({"jevbench": check_jevbench(), "deepswe": check_deepswe(),
                       "webprm_pilot": check_webprm(), "webprm_full": check_webprm_full(),
                       "phishing": check_phishing(),
+                      "qwen_jev_api": check_qwen_jev_api(),
+                      "open_jev": check_open_jev(),
                       "metatool": check_tool_suite("metatool", 1040, {"qwen": 842, "clm_default_2k": 518, "jev": 802}),
                       "when2call": check_tool_suite("when2call", 600, {"qwen": 307, "clm_default_2k": 201, "jev": 440}),
                       "bfcl": check_tool_suite("bfcl", 200, {"qwen": 198, "clm_default_2k": 169, "jev": 198})}, indent=2))
