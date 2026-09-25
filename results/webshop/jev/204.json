@@ -1,0 +1,392 @@
+{
+  "task_id": 204,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars",
+  "instruction_sha256": "fb89b8a0834a92d02bf08703158ad2bcf7733fc9ce0cff5c59651e49bebafce1",
+  "reward": 0.25,
+  "score": 25.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 6,
+  "elapsed_seconds": 1.8059743531048298,
+  "decision_seconds": 1.4343352690339088,
+  "input_tokens": 5547,
+  "output_tokens": 725,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.0836092159152031
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B082MMP31K [SEP] Men's Corduroy Shirt Long Sleeve Turn-Down Collar T-Shirt Top Casual Winter Lapel Chest Pocket Button Blouse M-3XL [SEP] $20.99 to $25.99 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B09DGQBPKD [SEP] USYFAKGH Autumn And Winter Women's Sweater Sports Solid Color Cardigan Zipper Hooded Jack men's henley short sleeve mens coats winter clearance Black D XXL [SEP] $17.99 [SEP] B09DGT4YRZ [SEP] USYFAKGH Autumn And Winter Women's Sweater Sports Solid Color Cardigan Zipper Hooded Jack ugly christmas sweater kids mens cardigan Black D XL [SEP] $17.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DSHR1Q7 [SEP] USYFAKGH Women's Fashion Long Sleeve Autumn Winter Short Top Jacket Outwear oversized sweater [SEP] $16.99 to $21.99 [SEP] B07YKRLV34 [SEP] Men's Casual Hawaii Floral Printed Shirts Loose Long Sleeve Button Lapel T-Shirt Fashion Top Blouse [SEP] $13.99 to $16.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B082MMP31K [SEP] Men's Corduroy Shirt Long Sleeve Turn-Down Collar T-Shirt Top Casual Winter Lapel Chest Pocket Button Blouse M-3XL [SEP] $20.99 to $25.99 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B09DGQBPKD [SEP] USYFAKGH Autumn And Winter Women's Sweater Sports Solid Color Cardigan Zipper Hooded Jack men's henley short sleeve mens coats winter clearance Black D XXL [SEP] $17.99 [SEP] B09DGT4YRZ [SEP] USYFAKGH Autumn And Winter Women's Sweater Sports Solid Color Cardigan Zipper Hooded Jack ugly christmas sweater kids mens cardigan Black D XL [SEP] $17.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DSHR1Q7 [SEP] USYFAKGH Women's Fashion Long Sleeve Autumn Winter Short Top Jacket Outwear oversized sweater [SEP] $16.99 to $21.99 [SEP] B07YKRLV34 [SEP] Men's Casual Hawaii Floral Printed Shirts Loose Long Sleeve Button Lapel T-Shirt Fashion Top Blouse [SEP] $13.99 to $16.99\n\nRecent actions:\nsearch[i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b099z4t56c]",
+              "3": "click[b082mmp31k]",
+              "4": "click[b09dycnyp4]",
+              "5": "click[b09dshw7mz]",
+              "6": "click[b09dgqbpkd]",
+              "7": "click[b09dgt4yrz]",
+              "8": "click[b09dkckd7z]",
+              "9": "click[b09dsfsnp3]",
+              "10": "click[b09dshr1q7]",
+              "11": "click[b07ykrlv34]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "ba86c03c5fe3205cce2e96453e57f3528e52a870f15d38ec2de8b5fefbb8b23d",
+      "attempts": [
+        {
+          "seconds": 0.363264262676239,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3633919805288315,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.49,
+            "probabilities": {
+              "0": 0.54,
+              "2": 0.0,
+              "4": 0.0,
+              "7": 0.01,
+              "1": 0.31,
+              "11": 0.01,
+              "8": 0.0,
+              "9": 0.0,
+              "3": 0.11,
+              "6": 0.02,
+              "10": 0.0,
+              "5": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1217,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4623296931385994
+    },
+    {
+      "step": 2,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5457700677216053
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B082MMP31K [SEP] Men's Corduroy Shirt Long Sleeve Turn-Down Collar T-Shirt Top Casual Winter Lapel Chest Pocket Button Blouse M-3XL [SEP] $20.99 to $25.99 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B09DGQBPKD [SEP] USYFAKGH Autumn And Winter Women's Sweater Sports Solid Color Cardigan Zipper Hooded Jack men's henley short sleeve mens coats winter clearance Black D XXL [SEP] $17.99 [SEP] B09DGT4YRZ [SEP] USYFAKGH Autumn And Winter Women's Sweater Sports Solid Color Cardigan Zipper Hooded Jack ugly christmas sweater kids mens cardigan Black D XL [SEP] $17.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DSHR1Q7 [SEP] USYFAKGH Women's Fashion Long Sleeve Autumn Winter Short Top Jacket Outwear oversized sweater [SEP] $16.99 to $21.99 [SEP] B07YKRLV34 [SEP] Men's Casual Hawaii Floral Printed Shirts Loose Long Sleeve Button Lapel T-Shirt Fashion Top Blouse [SEP] $13.99 to $16.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B082MMP31K [SEP] Men's Corduroy Shirt Long Sleeve Turn-Down Collar T-Shirt Top Casual Winter Lapel Chest Pocket Button Blouse M-3XL [SEP] $20.99 to $25.99 [SEP] B09DYCNYP4 [SEP] USYFAKGH Women Fashion Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat henley shirts for men [SEP] $15.99 to $19.99 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B09DGQBPKD [SEP] USYFAKGH Autumn And Winter Women's Sweater Sports Solid Color Cardigan Zipper Hooded Jack men's henley short sleeve mens coats winter clearance Black D XXL [SEP] $17.99 [SEP] B09DGT4YRZ [SEP] USYFAKGH Autumn And Winter Women's Sweater Sports Solid Color Cardigan Zipper Hooded Jack ugly christmas sweater kids mens cardigan Black D XL [SEP] $17.99 [SEP] B09DKCKD7Z [SEP] USYFAKGH Women Button Coat Patchworl Tops Hooded Pullover Loose Sweater Blouse Plus Size kimono cardigan [SEP] $16.99 to $22.99 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99 [SEP] B09DSHR1Q7 [SEP] USYFAKGH Women's Fashion Long Sleeve Autumn Winter Short Top Jacket Outwear oversized sweater [SEP] $16.99 to $21.99 [SEP] B07YKRLV34 [SEP] Men's Casual Hawaii Floral Printed Shirts Loose Long Sleeve Button Lapel T-Shirt Fashion Top Blouse [SEP] $13.99 to $16.99\n\nRecent actions:\nsearch[i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars]\nclick[back to search]\nsearch[i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b099z4t56c]",
+              "3": "click[b082mmp31k]",
+              "4": "click[b09dycnyp4]",
+              "5": "click[b09dshw7mz]",
+              "6": "click[b09dgqbpkd]",
+              "7": "click[b09dgt4yrz]",
+              "8": "click[b09dkckd7z]",
+              "9": "click[b09dsfsnp3]",
+              "10": "click[b09dshr1q7]",
+              "11": "click[b07ykrlv34]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "a8d2ed7b71fe8fa9cbfd4c1a76fe92bc892cd301dff447d4c540fc994066e630",
+      "attempts": [
+        {
+          "seconds": 0.39408574998378754,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.39421024546027184,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.69,
+            "probabilities": {
+              "6": 0.04,
+              "10": 0.0,
+              "3": 0.19,
+              "7": 0.01,
+              "4": 0.0,
+              "9": 0.0,
+              "5": 0.01,
+              "2": 0.0,
+              "8": 0.0,
+              "11": 0.01,
+              "0": 0.02,
+              "1": 0.72
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1251,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.0593667216598988
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09DYCWSDJ [SEP] USYFAKGH Womens Casual BlouseWomen's Button Perforated Denim Jacket With Pocket Coat winter coats women [SEP] $18.99 to $41.99 [SEP] B082WGC52X [SEP] Men's Muscle Print T-Shirt Unisex Holiday Shirt Rude Stag Party Fancy Dress 3D Offensive Boobs Printed Tee Top M-2XL [SEP] $9.99 [SEP] B07YKQKNK3 [SEP] GDJGTA Shirt for Men's Outdoor Quick-Drying Camouflage Long Sleeves Tops Blouse T-Shirts [SEP] $11.99 [SEP] B09DYDY4VT [SEP] USYFAKGH Women's Winter Solid Color Open Stitch Long Sleeve Sweater Cardigan Coat men hoodie pullover [SEP] $25.99 to $37.99 [SEP] B09DGQQBHC [SEP] USYFAKGH Autumn And Winter Women's Sweater Sports Solid Color Cardigan Zipper Hooded Jack mens sweaters and pullovers ugly sweaters Pink D XL [SEP] $17.99 [SEP] B09DK1XB3H [SEP] USYFAKGH Autumn And Winter Women's Sweater Sports Solid Color Cardigan Zipper Hooded Jack mens sweater coats hoodie for kids Gray D L [SEP] $17.99 [SEP] B09D755467 [SEP] USYFAKGH Women Fashion Long Sleeve Zip-Up Hoodie Jacket Printed Sweatshirt Coat sweater tank tops for women [SEP] $25.99 to $29.99 [SEP] B09ND17HJ6 [SEP] Mens Fashion Skull 3D Printing Tees Shirt Casual Short Sleeve T-Shirt Blouse Tops Crew Neck Tee Shirts S-4XL [SEP] $5.37 to $14.08 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09DPHSCQX [SEP] Ladies Fashion lace stitching solid color Loose long-sleeve T-shirt Womens Casual Tunic Tops T-Shirts Blouses [SEP] $4.55",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09DYCWSDJ [SEP] USYFAKGH Womens Casual BlouseWomen's Button Perforated Denim Jacket With Pocket Coat winter coats women [SEP] $18.99 to $41.99 [SEP] B082WGC52X [SEP] Men's Muscle Print T-Shirt Unisex Holiday Shirt Rude Stag Party Fancy Dress 3D Offensive Boobs Printed Tee Top M-2XL [SEP] $9.99 [SEP] B07YKQKNK3 [SEP] GDJGTA Shirt for Men's Outdoor Quick-Drying Camouflage Long Sleeves Tops Blouse T-Shirts [SEP] $11.99 [SEP] B09DYDY4VT [SEP] USYFAKGH Women's Winter Solid Color Open Stitch Long Sleeve Sweater Cardigan Coat men hoodie pullover [SEP] $25.99 to $37.99 [SEP] B09DGQQBHC [SEP] USYFAKGH Autumn And Winter Women's Sweater Sports Solid Color Cardigan Zipper Hooded Jack mens sweaters and pullovers ugly sweaters Pink D XL [SEP] $17.99 [SEP] B09DK1XB3H [SEP] USYFAKGH Autumn And Winter Women's Sweater Sports Solid Color Cardigan Zipper Hooded Jack mens sweater coats hoodie for kids Gray D L [SEP] $17.99 [SEP] B09D755467 [SEP] USYFAKGH Women Fashion Long Sleeve Zip-Up Hoodie Jacket Printed Sweatshirt Coat sweater tank tops for women [SEP] $25.99 to $29.99 [SEP] B09ND17HJ6 [SEP] Mens Fashion Skull 3D Printing Tees Shirt Casual Short Sleeve T-Shirt Blouse Tops Crew Neck Tee Shirts S-4XL [SEP] $5.37 to $14.08 [SEP] B09B264YPL [SEP] Women Fashion Print Zipper Long Sleeves Casual Blouse T-Shirts [SEP] $11.99 to $14.99 [SEP] B09DPHSCQX [SEP] Ladies Fashion lace stitching solid color Loose long-sleeve T-shirt Womens Casual Tunic Tops T-Shirts Blouses [SEP] $4.55\n\nRecent actions:\nsearch[i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars]\nclick[back to search]\nsearch[i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09dycwsdj]",
+              "4": "click[b082wgc52x]",
+              "5": "click[b07ykqknk3]",
+              "6": "click[b09dydy4vt]",
+              "7": "click[b09dgqqbhc]",
+              "8": "click[b09dk1xb3h]",
+              "9": "click[b09d755467]",
+              "10": "click[b09nd17hj6]",
+              "11": "click[b09b264ypl]",
+              "12": "click[b09dphscqx]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "004c4305f44e6b83b30640631f60748bbe6ba6265b7ba85d67f5e608a7acd162",
+      "attempts": [
+        {
+          "seconds": 0.32189255207777023,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.32198454439640045,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "10",
+            "confidence": 0.46,
+            "probabilities": {
+              "9": 0.0,
+              "10": 0.51,
+              "1": 0.18000000000000002,
+              "12": 0.0,
+              "2": 0.06,
+              "6": 0.0,
+              "0": 0.04,
+              "11": 0.0,
+              "4": 0.15,
+              "7": 0.0,
+              "3": 0.0,
+              "5": 0.06,
+              "8": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1265,
+          "output_tokens": 112
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b09nd17hj6]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.4096224084496498
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] 5x-large [SEP] 3x [SEP] 4x [SEP] 5x [SEP] color [SEP] wa blue tee shirt [SEP] z05#black [SEP] z02#multicolor [SEP] z04#black [SEP] z12#purple [SEP] z12#yellow [SEP] a red [SEP] b black [SEP] b multicolor [SEP] c blue [SEP] c red [SEP] d black [SEP] z10#black [SEP] z10#blue [SEP] z10#green [SEP] z10#white [SEP] z01#black tee shirt [SEP] z02#black [SEP] z06#black [SEP] z06#white [SEP] z11#black [SEP] z14#yellow [SEP] z15#black [SEP] z15#white [SEP] z07#khaki [SEP] z03#blue [SEP] z03#yellow [SEP] z08#black [SEP] z13#blue [SEP] z03#green [SEP] z03#hot pink [SEP] z09#black [SEP] z13#black [SEP] z11#black [SEP] Mens Fashion Skull 3D Printing Tees Shirt Casual Short Sleeve T-Shirt Blouse Tops Crew Neck Tee Shirts S-4XL [SEP] Price: $5.37 to $14.08 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] 5x-large [SEP] 3x [SEP] 4x [SEP] 5x [SEP] color [SEP] wa blue tee shirt [SEP] z05#black [SEP] z02#multicolor [SEP] z04#black [SEP] z12#purple [SEP] z12#yellow [SEP] a red [SEP] b black [SEP] b multicolor [SEP] c blue [SEP] c red [SEP] d black [SEP] z10#black [SEP] z10#blue [SEP] z10#green [SEP] z10#white [SEP] z01#black tee shirt [SEP] z02#black [SEP] z06#black [SEP] z06#white [SEP] z11#black [SEP] z14#yellow [SEP] z15#black [SEP] z15#white [SEP] z07#khaki [SEP] z03#blue [SEP] z03#yellow [SEP] z08#black [SEP] z13#blue [SEP] z03#green [SEP] z03#hot pink [SEP] z09#black [SEP] z13#black [SEP] z11#black [SEP] Mens Fashion Skull 3D Printing Tees Shirt Casual Short Sleeve T-Shirt Blouse Tops Crew Neck Tee Shirts S-4XL [SEP] Price: $5.37 to $14.08 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars]\nclick[back to search]\nsearch[i am looking for men classic fit t-shirt. please choose black color, and price lower than 40.00 dollars]\nclick[next >]\nclick[b09nd17hj6]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[small]",
+              "7": "click[medium]",
+              "8": "click[large]",
+              "9": "click[x-large]",
+              "10": "click[xx-large]",
+              "11": "click[3x-large]",
+              "12": "click[4x-large]",
+              "13": "click[5x-large]",
+              "14": "click[3x]",
+              "15": "click[4x]",
+              "16": "click[5x]",
+              "17": "click[wa blue tee shirt]",
+              "18": "click[z05#black]",
+              "19": "click[z02#multicolor]",
+              "20": "click[z04#black]",
+              "21": "click[z12#purple]",
+              "22": "click[z12#yellow]",
+              "23": "click[a red]",
+              "24": "click[b black]",
+              "25": "click[b multicolor]",
+              "26": "click[c blue]",
+              "27": "click[c red]",
+              "28": "click[d black]",
+              "29": "click[z10#black]",
+              "30": "click[z10#blue]",
+              "31": "click[z10#green]",
+              "32": "click[z10#white]",
+              "33": "click[z01#black tee shirt]",
+              "34": "click[z02#black]",
+              "35": "click[z06#black]",
+              "36": "click[z06#white]",
+              "37": "click[z11#black]",
+              "38": "click[z14#yellow]",
+              "39": "click[z15#black]",
+              "40": "click[z15#white]",
+              "41": "click[z07#khaki]",
+              "42": "click[z03#blue]",
+              "43": "click[z03#yellow]",
+              "44": "click[z08#black]",
+              "45": "click[z13#blue]",
+              "46": "click[z03#green]",
+              "47": "click[z03#hot pink]",
+              "48": "click[z09#black]",
+              "49": "click[z13#black]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "5125fa9d15a4366d7898fa73a69a1ee87fa5f5f8bf85612409a203a3128c3b09",
+      "attempts": [
+        {
+          "seconds": 0.3546195775270462,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3547484986484051,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.43,
+            "probabilities": {
+              "25": 0.0,
+              "44": 0.01,
+              "4": 0.0,
+              "5": 0.45,
+              "7": 0.01,
+              "2": 0.01,
+              "12": 0.0,
+              "28": 0.01,
+              "49": 0.0,
+              "35": 0.0,
+              "24": 0.24000000000000002,
+              "14": 0.0,
+              "43": 0.0,
+              "30": 0.0,
+              "45": 0.0,
+              "47": 0.0,
+              "41": 0.0,
+              "10": 0.0,
+              "3": 0.0,
+              "31": 0.0,
+              "27": 0.0,
+              "39": 0.01,
+              "23": 0.0,
+              "36": 0.0,
+              "34": 0.02,
+              "29": 0.0,
+              "48": 0.01,
+              "19": 0.0,
+              "20": 0.01,
+              "26": 0.0,
+              "21": 0.0,
+              "32": 0.0,
+              "9": 0.0,
+              "46": 0.0,
+              "11": 0.0,
+              "17": 0.0,
+              "16": 0.0,
+              "8": 0.01,
+              "33": 0.04,
+              "13": 0.0,
+              "15": 0.0,
+              "18": 0.14,
+              "37": 0.0,
+              "0": 0.01,
+              "1": 0.01,
+              "42": 0.0,
+              "6": 0.01,
+              "22": 0.0,
+              "38": 0.0,
+              "40": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1814,
+          "output_tokens": 407
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.25,
+      "done": true,
+      "elapsed_seconds": 1.8059715367853642
+    }
+  ]
+}

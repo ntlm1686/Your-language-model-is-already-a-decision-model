@@ -1,0 +1,156 @@
+{
+  "task_id": 13,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars",
+  "instruction_sha256": "b68f01d495bc4d2393006741af75fc4b83e126e4fd4e8ed38162a6116c6a7493",
+  "reward": 0.6666666666666666,
+  "score": 66.66666666666666,
+  "success": false,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 0.7572218105196953,
+  "decision_seconds": 0.6499325856566429,
+  "input_tokens": 1872,
+  "output_tokens": 176,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars [SEP] Search",
+      "action": "search[i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.05189705267548561
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B000VOHH8I [SEP] L'eau D'issey By Issey Miyake for MenEau De Toilette Spray, 6.7 Fl Oz Bottle [SEP] $64.98 [SEP] B000MJZOPK [SEP] L'eau d'Issey by Issey Miyake for Women 3.3 oz Eau de Toilette Spray [SEP] $49.98 [SEP] B000C214CO [SEP] Issey Miyake L'eau D'issey Eau de Toilette Spray for Men, 4.2 Fl Oz [SEP] $53.99 [SEP] B0012S249E [SEP] L'eau D'issey By Issey Miyake For Women. Shower Cream 6.7-Ounces [SEP] $31.36 [SEP] B01H8PGKZS [SEP] L'eau D'Issey FOR MEN by Issey Miyake - 6.7 oz EDT Spray [SEP] $67.97 [SEP] B00G3C8FHE [SEP] L'Eau d'Issey pour Homme - Eau de Toilette 4.2 fl oz [SEP] $51.25 [SEP] B079HZR2RX [SEP] L'eau d'Issey Pure by Issey Miyake for Women 3.0 oz Nectar de Parfum Spray [SEP] $71.49 [SEP] B000R94HRG [SEP] Issey Miyake L'Eau D'Issey Pour Homme Eau De Toilette Natural Spray [SEP] $44.99 [SEP] B01I54JJYA [SEP] L'EAU D'ISSEY (issey Miyake) by Issey Miyake Eau De Toilette Spray 2.5 oz for Men - 100% Authentic [SEP] $39.65 [SEP] B0018SBRDC [SEP] Issey Miyake L'eau d'Issey for Women EDT, White, 0.84 Fl Oz [SEP] $27.04",
+      "request": {
+        "state": "Shopping instruction:\ni need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B000VOHH8I [SEP] L'eau D'issey By Issey Miyake for MenEau De Toilette Spray, 6.7 Fl Oz Bottle [SEP] $64.98 [SEP] B000MJZOPK [SEP] L'eau d'Issey by Issey Miyake for Women 3.3 oz Eau de Toilette Spray [SEP] $49.98 [SEP] B000C214CO [SEP] Issey Miyake L'eau D'issey Eau de Toilette Spray for Men, 4.2 Fl Oz [SEP] $53.99 [SEP] B0012S249E [SEP] L'eau D'issey By Issey Miyake For Women. Shower Cream 6.7-Ounces [SEP] $31.36 [SEP] B01H8PGKZS [SEP] L'eau D'Issey FOR MEN by Issey Miyake - 6.7 oz EDT Spray [SEP] $67.97 [SEP] B00G3C8FHE [SEP] L'Eau d'Issey pour Homme - Eau de Toilette 4.2 fl oz [SEP] $51.25 [SEP] B079HZR2RX [SEP] L'eau d'Issey Pure by Issey Miyake for Women 3.0 oz Nectar de Parfum Spray [SEP] $71.49 [SEP] B000R94HRG [SEP] Issey Miyake L'Eau D'Issey Pour Homme Eau De Toilette Natural Spray [SEP] $44.99 [SEP] B01I54JJYA [SEP] L'EAU D'ISSEY (issey Miyake) by Issey Miyake Eau De Toilette Spray 2.5 oz for Men - 100% Authentic [SEP] $39.65 [SEP] B0018SBRDC [SEP] Issey Miyake L'eau d'Issey for Women EDT, White, 0.84 Fl Oz [SEP] $27.04\n\nRecent actions:\nsearch[i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b000vohh8i]",
+              "3": "click[b000mjzopk]",
+              "4": "click[b000c214co]",
+              "5": "click[b0012s249e]",
+              "6": "click[b01h8pgkzs]",
+              "7": "click[b00g3c8fhe]",
+              "8": "click[b079hzr2rx]",
+              "9": "click[b000r94hrg]",
+              "10": "click[b01i54jjya]",
+              "11": "click[b0018sbrdc]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "be2bf837033ef13abc0020159eb42a1739305592ad799e12c053e159d1573bed",
+      "attempts": [
+        {
+          "seconds": 0.3354787230491638,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3356464020907879,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.69,
+            "probabilities": {
+              "4": 0.0,
+              "3": 0.0,
+              "7": 0.0,
+              "8": 0.02,
+              "1": 0.13,
+              "10": 0.0,
+              "6": 0.1,
+              "5": 0.0,
+              "9": 0.01,
+              "2": 0.73,
+              "0": 0.01,
+              "11": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1186,
+          "output_tokens": 103
+        }
+      },
+      "action": "click[b000vohh8i]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4152671843767166
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2.5 fl oz [SEP] 6.76 fl oz (pack of 1) [SEP] L'eau D'issey By Issey Miyake for MenEau De Toilette Spray, 6.7 Fl Oz Bottle [SEP] Price: $64.98 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2.5 fl oz [SEP] 6.76 fl oz (pack of 1) [SEP] L'eau D'issey By Issey Miyake for MenEau De Toilette Spray, 6.7 Fl Oz Bottle [SEP] Price: $64.98 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars]\nclick[b000vohh8i]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[2.5 fl oz]",
+              "7": "click[6.76 fl oz (pack of 1)]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "877607e365b4e4f810f6fee724b9cf450179e8776136f58bcc7031d48313d53c",
+      "attempts": [
+        {
+          "seconds": 0.3141608089208603,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.314286183565855,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.58,
+            "probabilities": {
+              "6": 0.0,
+              "3": 0.01,
+              "0": 0.0,
+              "1": 0.0,
+              "7": 0.33,
+              "5": 0.65,
+              "4": 0.01,
+              "2": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 686,
+          "output_tokens": 73
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.6666666666666666,
+      "done": true,
+      "elapsed_seconds": 0.7572187408804893
+    }
+  ]
+}

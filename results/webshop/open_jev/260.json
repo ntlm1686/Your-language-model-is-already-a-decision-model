@@ -1,0 +1,399 @@
+{
+  "task_id": 260,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i'm looking for furniture to make my living room and dinning room so nice",
+  "instruction_sha256": "fe1832b2048da30242bea1905227311c724f4dc31096906421119d6b5881de49",
+  "reward": 0.6666666666666666,
+  "score": 66.66666666666666,
+  "success": false,
+  "termination": "purchase",
+  "steps": 7,
+  "elapsed_seconds": 1.201201070100069,
+  "decision_seconds": 1.0131102688610554,
+  "input_tokens": 21423,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Search",
+      "action": "search[i'm looking for furniture to make my living room and dinning room so nice]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.04924905672669411
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07X9C8Z6L [SEP] Set of 6 Computer PC Laptop Cart Desk Height Adjustable Table Rolling Portable Mobile Smartphone Notebook Over Sofa Bed Stand Office Living Room School Home Furniture - Oak/2302 [SEP] $424.5 [SEP] B09CPL8T81 [SEP] ZOSIMIO Modern Black Brass Kitchen Island Light Gold Chandelier Industrial Rectangular Dining Room Lighting Rustic Hanging Pendant Light for Living Room Bar Living Room (4-Light) [SEP] $99.99 [SEP] B09CPNLY3X [SEP] ZOSIMIO Modern Black Gold Kitchen Island Light Brass Chandelier Industrial Linear Dining Room Lighting Farmhouse Hanging Pendant Light for Living Room Bar Living Room (3-Light) [SEP] $84.99 [SEP] B07M7D9VXK [SEP] Asamour Funny Quote Saying Throw Pillow Covers Vintage Wood with Lettering Cotton Linen Decorative Cushion Cover Pillow Case Home Sofa Pillowcase 18x18 Inches (Trust Me, I'm a Gamer) [SEP] $10.99 [SEP] B0832PLNM1 [SEP] Reclaimed Pallet Wood Coffee Table [SEP] $320.0 [SEP] B07XNW9Z64 [SEP] Lika Black Farmhouse Chandeliers Industrial Pendant Lighting Metal Ceiling Light Fixture Hanging for Dinning Room Kitchen Island Living Room Bedroom Foyer (4-Light) [SEP] $54.89 [SEP] B07891FJ9G [SEP] Moroccan Pouf Ottoman Footstool (Leather) Genuine Hand-Stitched Seating | Living Room, Bedroom, Sitting Area (Unstuffed, Brown) [SEP] $65.0 [SEP] B07WHZXV99 [SEP] I'm Too Sexy For My Hair That's Why It Isn't There Bald Joke T-Shirt [SEP] $19.99 [SEP] B07T6P5XMQ [SEP] SEI Furniture Jaymes Metal & Glass 2-Tier, Console Table, Soft Gold [SEP] $115.37 [SEP] B09C4DPS2Z [SEP] Storage Sideboard Dining Buffet Server Cabinet, Buffet Server Cabinet Bedroom Chest of Drawers Living Room Unit Storage Sideboard Cabinet Storage Unit Hallway Bedroom, Villa Hotel Furniture Decor [SEP] $1565.25",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for furniture to make my living room and dinning room so nice\n\nCurrent page:\nInstruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07X9C8Z6L [SEP] Set of 6 Computer PC Laptop Cart Desk Height Adjustable Table Rolling Portable Mobile Smartphone Notebook Over Sofa Bed Stand Office Living Room School Home Furniture - Oak/2302 [SEP] $424.5 [SEP] B09CPL8T81 [SEP] ZOSIMIO Modern Black Brass Kitchen Island Light Gold Chandelier Industrial Rectangular Dining Room Lighting Rustic Hanging Pendant Light for Living Room Bar Living Room (4-Light) [SEP] $99.99 [SEP] B09CPNLY3X [SEP] ZOSIMIO Modern Black Gold Kitchen Island Light Brass Chandelier Industrial Linear Dining Room Lighting Farmhouse Hanging Pendant Light for Living Room Bar Living Room (3-Light) [SEP] $84.99 [SEP] B07M7D9VXK [SEP] Asamour Funny Quote Saying Throw Pillow Covers Vintage Wood with Lettering Cotton Linen Decorative Cushion Cover Pillow Case Home Sofa Pillowcase 18x18 Inches (Trust Me, I'm a Gamer) [SEP] $10.99 [SEP] B0832PLNM1 [SEP] Reclaimed Pallet Wood Coffee Table [SEP] $320.0 [SEP] B07XNW9Z64 [SEP] Lika Black Farmhouse Chandeliers Industrial Pendant Lighting Metal Ceiling Light Fixture Hanging for Dinning Room Kitchen Island Living Room Bedroom Foyer (4-Light) [SEP] $54.89 [SEP] B07891FJ9G [SEP] Moroccan Pouf Ottoman Footstool (Leather) Genuine Hand-Stitched Seating | Living Room, Bedroom, Sitting Area (Unstuffed, Brown) [SEP] $65.0 [SEP] B07WHZXV99 [SEP] I'm Too Sexy For My Hair That's Why It Isn't There Bald Joke T-Shirt [SEP] $19.99 [SEP] B07T6P5XMQ [SEP] SEI Furniture Jaymes Metal & Glass 2-Tier, Console Table, Soft Gold [SEP] $115.37 [SEP] B09C4DPS2Z [SEP] Storage Sideboard Dining Buffet Server Cabinet, Buffet Server Cabinet Bedroom Chest of Drawers Living Room Unit Storage Sideboard Cabinet Storage Unit Hallway Bedroom, Villa Hotel Furniture Decor [SEP] $1565.25\n\nRecent actions:\nsearch[i'm looking for furniture to make my living room and dinning room so nice]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07x9c8z6l]",
+              "3": "click[b09cpl8t81]",
+              "4": "click[b09cpnly3x]",
+              "5": "click[b07m7d9vxk]",
+              "6": "click[b0832plnm1]",
+              "7": "click[b07xnw9z64]",
+              "8": "click[b07891fj9g]",
+              "9": "click[b07whzxv99]",
+              "10": "click[b07t6p5xmq]",
+              "11": "click[b09c4dps2z]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3aa442681bd0c2ba92b523e4c447c58d164f615a0a5f71a18d6bfa0fcd2acf01",
+      "attempts": [
+        {
+          "seconds": 0.37983472645282745,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3799529895186424,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "probabilities": {
+              "0": 0.033060147278963246,
+              "1": 0.07351487853088491,
+              "2": 0.09438182464017666,
+              "3": 0.11763036752278229,
+              "4": 0.10213216699469604,
+              "5": 0.05781976702168637,
+              "6": 0.167827029924402,
+              "7": 0.09008945683005017,
+              "8": 0.12950034635757257,
+              "9": 0.021156677021093834,
+              "10": 0.038488236641217595,
+              "11": 0.07439910123647439
+            },
+            "confidence": 0.09217494173571127
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8497,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3780205175280571,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b0832plnm1]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4546070657670498
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] < Prev [SEP] Reclaimed Pallet Wood Coffee Table [SEP] Price: $320.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for furniture to make my living room and dinning room so nice\n\nCurrent page:\nInstruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] < Prev [SEP] Reclaimed Pallet Wood Coffee Table [SEP] Price: $320.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm looking for furniture to make my living room and dinning room so nice]\nclick[b0832plnm1]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        }
+      },
+      "request_sha256": "53af053581f7748ad20ca587b5dc1c3bca71ce4b0d1d9cb8002010cb81e7a476",
+      "attempts": [
+        {
+          "seconds": 0.07307649403810501,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07318167760968208,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.11906073961356342,
+              "1": 0.10153917845123475,
+              "2": 0.2786513113654757,
+              "3": 0.1809970811997994,
+              "4": 0.12692838699681802,
+              "5": 0.1928233023731087
+            },
+            "confidence": 0.13438157363857087
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 1300,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 6,
+          "inference_seconds": 0.07056175172328949,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[description]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5358917415142059
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] < Prev [SEP] Pallet Wood- Upcycled Living Room Coffee Table - Vintage, Rustic Look Made with 100% real wood. Every table starts with very rough pallets- the more weathered the better! Pallet wood is usually rough-sawn with multiple nail holes etc. using a combination of hardwoods (mostly Oak). I bust the pallets apart using the support pieces to make the table frame and the slats for the top and shelf. The nails are removed and the gnarly pieces are then sawed, ripped, cut to size, and drilled. Then sanded- just enough to remove the splinters, but not too much to remove the character of the wood. So you'll get a piece of hand-built furniture with very interesting original saw marks, knots, gouges and brandings which make every table unique. I put it together reusing the salvaged spiral nails and traditional furniture making techniques with hidden pocket screws to make a nice, heavy-duty, solid table. It's stained a beautiful dark walnut color- and finished with multiple coats of hand-rubbed Danish Oil. Dimensions: 40\" Wide x 23\" deep x 19\" tall and with a full size shelf underneath the top. Comes partially disassembled. Easy assembly requires a cordless drill or 1/4\" driver (I'll include the bit and instructions). If you like the vintage look of a weathered hand-built piece of furniture then you'll love this table! Please contact me if you have any questions. BTW- See my other listings for matching end tables. I also offer the tables unfinished if you want to paint or stain it yourself, and do custom work. Contact me if you have a cool idea for a pallet project!",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for furniture to make my living room and dinning room so nice\n\nCurrent page:\nInstruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] < Prev [SEP] Pallet Wood- Upcycled Living Room Coffee Table - Vintage, Rustic Look Made with 100% real wood. Every table starts with very rough pallets- the more weathered the better! Pallet wood is usually rough-sawn with multiple nail holes etc. using a combination of hardwoods (mostly Oak). I bust the pallets apart using the support pieces to make the table frame and the slats for the top and shelf. The nails are removed and the gnarly pieces are then sawed, ripped, cut to size, and drilled. Then sanded- just enough to remove the splinters, but not too much to remove the character of the wood. So you'll get a piece of hand-built furniture with very interesting original saw marks, knots, gouges and brandings which make every table unique. I put it together reusing the salvaged spiral nails and traditional furniture making techniques with hidden pocket screws to make a nice, heavy-duty, solid table. It's stained a beautiful dark walnut color- and finished with multiple coats of hand-rubbed Danish Oil. Dimensions: 40\" Wide x 23\" deep x 19\" tall and with a full size shelf underneath the top. Comes partially disassembled. Easy assembly requires a cordless drill or 1/4\" driver (I'll include the bit and instructions). If you like the vintage look of a weathered hand-built piece of furniture then you'll love this table! Please contact me if you have any questions. BTW- See my other listings for matching end tables. I also offer the tables unfinished if you want to paint or stain it yourself, and do custom work. Contact me if you have a cool idea for a pallet project!\n\nRecent actions:\nsearch[i'm looking for furniture to make my living room and dinning room so nice]\nclick[b0832plnm1]\nclick[description]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3aca1e2a29b01a0e9f721c29c6f57e2f6d18e60904cb3cc1ebd85756579407a0",
+      "attempts": [
+        {
+          "seconds": 0.0745939239859581,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07468758895993233,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.6136855347153832,
+              "1": 0.3863144652846168
+            },
+            "confidence": 0.22737106943076646
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 1073,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 2,
+          "inference_seconds": 0.07309901341795921,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.6163838319480419
+    },
+    {
+      "step": 4,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Search",
+      "action": "search[i'm looking for furniture to make my living room and dinning room so nice]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.6650604158639908
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07X9C8Z6L [SEP] Set of 6 Computer PC Laptop Cart Desk Height Adjustable Table Rolling Portable Mobile Smartphone Notebook Over Sofa Bed Stand Office Living Room School Home Furniture - Oak/2302 [SEP] $424.5 [SEP] B09CPL8T81 [SEP] ZOSIMIO Modern Black Brass Kitchen Island Light Gold Chandelier Industrial Rectangular Dining Room Lighting Rustic Hanging Pendant Light for Living Room Bar Living Room (4-Light) [SEP] $99.99 [SEP] B09CPNLY3X [SEP] ZOSIMIO Modern Black Gold Kitchen Island Light Brass Chandelier Industrial Linear Dining Room Lighting Farmhouse Hanging Pendant Light for Living Room Bar Living Room (3-Light) [SEP] $84.99 [SEP] B07M7D9VXK [SEP] Asamour Funny Quote Saying Throw Pillow Covers Vintage Wood with Lettering Cotton Linen Decorative Cushion Cover Pillow Case Home Sofa Pillowcase 18x18 Inches (Trust Me, I'm a Gamer) [SEP] $10.99 [SEP] B0832PLNM1 [SEP] Reclaimed Pallet Wood Coffee Table [SEP] $320.0 [SEP] B07XNW9Z64 [SEP] Lika Black Farmhouse Chandeliers Industrial Pendant Lighting Metal Ceiling Light Fixture Hanging for Dinning Room Kitchen Island Living Room Bedroom Foyer (4-Light) [SEP] $54.89 [SEP] B07891FJ9G [SEP] Moroccan Pouf Ottoman Footstool (Leather) Genuine Hand-Stitched Seating | Living Room, Bedroom, Sitting Area (Unstuffed, Brown) [SEP] $65.0 [SEP] B07WHZXV99 [SEP] I'm Too Sexy For My Hair That's Why It Isn't There Bald Joke T-Shirt [SEP] $19.99 [SEP] B07T6P5XMQ [SEP] SEI Furniture Jaymes Metal & Glass 2-Tier, Console Table, Soft Gold [SEP] $115.37 [SEP] B09C4DPS2Z [SEP] Storage Sideboard Dining Buffet Server Cabinet, Buffet Server Cabinet Bedroom Chest of Drawers Living Room Unit Storage Sideboard Cabinet Storage Unit Hallway Bedroom, Villa Hotel Furniture Decor [SEP] $1565.25",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for furniture to make my living room and dinning room so nice\n\nCurrent page:\nInstruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07X9C8Z6L [SEP] Set of 6 Computer PC Laptop Cart Desk Height Adjustable Table Rolling Portable Mobile Smartphone Notebook Over Sofa Bed Stand Office Living Room School Home Furniture - Oak/2302 [SEP] $424.5 [SEP] B09CPL8T81 [SEP] ZOSIMIO Modern Black Brass Kitchen Island Light Gold Chandelier Industrial Rectangular Dining Room Lighting Rustic Hanging Pendant Light for Living Room Bar Living Room (4-Light) [SEP] $99.99 [SEP] B09CPNLY3X [SEP] ZOSIMIO Modern Black Gold Kitchen Island Light Brass Chandelier Industrial Linear Dining Room Lighting Farmhouse Hanging Pendant Light for Living Room Bar Living Room (3-Light) [SEP] $84.99 [SEP] B07M7D9VXK [SEP] Asamour Funny Quote Saying Throw Pillow Covers Vintage Wood with Lettering Cotton Linen Decorative Cushion Cover Pillow Case Home Sofa Pillowcase 18x18 Inches (Trust Me, I'm a Gamer) [SEP] $10.99 [SEP] B0832PLNM1 [SEP] Reclaimed Pallet Wood Coffee Table [SEP] $320.0 [SEP] B07XNW9Z64 [SEP] Lika Black Farmhouse Chandeliers Industrial Pendant Lighting Metal Ceiling Light Fixture Hanging for Dinning Room Kitchen Island Living Room Bedroom Foyer (4-Light) [SEP] $54.89 [SEP] B07891FJ9G [SEP] Moroccan Pouf Ottoman Footstool (Leather) Genuine Hand-Stitched Seating | Living Room, Bedroom, Sitting Area (Unstuffed, Brown) [SEP] $65.0 [SEP] B07WHZXV99 [SEP] I'm Too Sexy For My Hair That's Why It Isn't There Bald Joke T-Shirt [SEP] $19.99 [SEP] B07T6P5XMQ [SEP] SEI Furniture Jaymes Metal & Glass 2-Tier, Console Table, Soft Gold [SEP] $115.37 [SEP] B09C4DPS2Z [SEP] Storage Sideboard Dining Buffet Server Cabinet, Buffet Server Cabinet Bedroom Chest of Drawers Living Room Unit Storage Sideboard Cabinet Storage Unit Hallway Bedroom, Villa Hotel Furniture Decor [SEP] $1565.25\n\nRecent actions:\nsearch[i'm looking for furniture to make my living room and dinning room so nice]\nclick[b0832plnm1]\nclick[description]\nclick[back to search]\nsearch[i'm looking for furniture to make my living room and dinning room so nice]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07x9c8z6l]",
+              "3": "click[b09cpl8t81]",
+              "4": "click[b09cpnly3x]",
+              "5": "click[b07m7d9vxk]",
+              "6": "click[b0832plnm1]",
+              "7": "click[b07xnw9z64]",
+              "8": "click[b07891fj9g]",
+              "9": "click[b07whzxv99]",
+              "10": "click[b07t6p5xmq]",
+              "11": "click[b09c4dps2z]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a6b3747885de7cf7bb94b86e77a01f80746aed4fe61141a45220785d8feab8a3",
+      "attempts": [
+        {
+          "seconds": 0.40615878626704216,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4062967300415039,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "probabilities": {
+              "0": 0.02426704733318825,
+              "1": 0.09552389891134411,
+              "2": 0.09933651027021174,
+              "3": 0.11141613166439981,
+              "4": 0.06400245746595733,
+              "5": 0.0632528550232704,
+              "6": 0.1747865659160661,
+              "7": 0.07038827464999578,
+              "8": 0.15613576610990562,
+              "9": 0.020272722758665217,
+              "10": 0.029469488413981837,
+              "11": 0.09114828148301388
+            },
+            "confidence": 0.09976716281752665
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9001,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.40440692380070686,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b0832plnm1]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.098426278680563
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] < Prev [SEP] Reclaimed Pallet Wood Coffee Table [SEP] Price: $320.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for furniture to make my living room and dinning room so nice\n\nCurrent page:\nInstruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] < Prev [SEP] Reclaimed Pallet Wood Coffee Table [SEP] Price: $320.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm looking for furniture to make my living room and dinning room so nice]\nclick[b0832plnm1]\nclick[description]\nclick[back to search]\nsearch[i'm looking for furniture to make my living room and dinning room so nice]\nclick[b0832plnm1]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        }
+      },
+      "request_sha256": "28cb7281226aa9356408b8183337fd48961b5435ce9c2edc61e8f11dd2bb77fc",
+      "attempts": [
+        {
+          "seconds": 0.07890273258090019,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07899128273129463,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.08601554353916409,
+              "1": 0.078222265765207,
+              "2": 0.25512995116787646,
+              "3": 0.17854001081540688,
+              "4": 0.13440431006282347,
+              "5": 0.2676879186495222
+            },
+            "confidence": 0.12122550237942663
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 1552,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 6,
+          "inference_seconds": 0.07723468914628029,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.6666666666666666,
+      "done": true,
+      "elapsed_seconds": 1.2011981010437012
+    }
+  ]
+}

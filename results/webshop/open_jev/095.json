@@ -1,0 +1,178 @@
+{
+  "task_id": 95,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i would like to have a kosher gelato, and price lower than 130.00 dollars",
+  "instruction_sha256": "855839f065227995064ab189eb6540dc0f096bb2d6b73f9c16d646c2aae899c3",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 0.5261524207890034,
+  "decision_seconds": 0.44311753287911415,
+  "input_tokens": 9708,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i would like to have a kosher gelato, and price lower than 130.00 dollars [SEP] Search",
+      "action": "search[i would like to have a kosher gelato, and price lower than 130.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.03504759818315506
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i would like to have a kosher gelato, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B0040IM9MA [SEP] Talenti Gelato, Belgian Chocolate, 16 oz (Frozen) [SEP] $100.0 [SEP] B01FN6KE60 [SEP] Talenti Gelato, Coconut Almond Chocolate, 16 oz (Frozen) [SEP] $100.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B01GJOOTHA [SEP] Talenti Gelato Sea Salt Caramel 1 pt [SEP] $100.0 [SEP] B01HXZ03I8 [SEP] Talenti Ice Cream, Southern Butter Pecan, 16 oz (Frozen) [SEP] $100.0 [SEP] B00A66V0X4 [SEP] Amoretti Premium Syrup, Cherry, 25.4 Ounce [SEP] $11.92 [SEP] B084L27RJK [SEP] Perfect Gelato [Gelato Stabilizer] ☮ Vegan ✡ OU Kosher Certified - 400g/14oz (stabilizes and prevents crystal formation in gelato recipes) [SEP] $29.99 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B07NQN55RB [SEP] Talenti Layers Cherry Cheesecake Non-GMO Sourced Ingredients and OUD Kosher 306.1g [SEP] $100.0 [SEP] B07NQN58ZC [SEP] Talenti Layers Salted Caramel Truffle Non-GMO Sourced Ingredients and OUD Kosher 323.1g [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni would like to have a kosher gelato, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like to have a kosher gelato, and price lower than 130.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B0040IM9MA [SEP] Talenti Gelato, Belgian Chocolate, 16 oz (Frozen) [SEP] $100.0 [SEP] B01FN6KE60 [SEP] Talenti Gelato, Coconut Almond Chocolate, 16 oz (Frozen) [SEP] $100.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B01GJOOTHA [SEP] Talenti Gelato Sea Salt Caramel 1 pt [SEP] $100.0 [SEP] B01HXZ03I8 [SEP] Talenti Ice Cream, Southern Butter Pecan, 16 oz (Frozen) [SEP] $100.0 [SEP] B00A66V0X4 [SEP] Amoretti Premium Syrup, Cherry, 25.4 Ounce [SEP] $11.92 [SEP] B084L27RJK [SEP] Perfect Gelato [Gelato Stabilizer] ☮ Vegan ✡ OU Kosher Certified - 400g/14oz (stabilizes and prevents crystal formation in gelato recipes) [SEP] $29.99 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B07NQN55RB [SEP] Talenti Layers Cherry Cheesecake Non-GMO Sourced Ingredients and OUD Kosher 306.1g [SEP] $100.0 [SEP] B07NQN58ZC [SEP] Talenti Layers Salted Caramel Truffle Non-GMO Sourced Ingredients and OUD Kosher 323.1g [SEP] $100.0\n\nRecent actions:\nsearch[i would like to have a kosher gelato, and price lower than 130.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b0040im9ma]",
+              "3": "click[b01fn6ke60]",
+              "4": "click[b09kcl5gk5]",
+              "5": "click[b01gjootha]",
+              "6": "click[b01hxz03i8]",
+              "7": "click[b00a66v0x4]",
+              "8": "click[b084l27rjk]",
+              "9": "click[b09g3fpp9s]",
+              "10": "click[b07nqn55rb]",
+              "11": "click[b07nqn58zc]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e44a0dfa5b1c9b878afa7fede4ae81957fbce7859964c885ff86d8b1bd73c8cb",
+      "attempts": [
+        {
+          "seconds": 0.36329570040106773,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3634295351803303,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "10",
+            "probabilities": {
+              "0": 0.009075966419921592,
+              "1": 0.01762644675339046,
+              "2": 0.2029779316993604,
+              "3": 0.15626918855845892,
+              "4": 0.006790760304839001,
+              "5": 0.1044239849959983,
+              "6": 0.08563569230977576,
+              "7": 0.0061484882779441734,
+              "8": 0.03173676937685895,
+              "9": 0.0048585488477202515,
+              "10": 0.20684714418013564,
+              "11": 0.1676090782755965
+            },
+            "confidence": 0.13474233910560252
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8192,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3615022338926792,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b07nqn55rb]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4206561744213104
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i would like to have a kosher gelato, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Talenti Layers Cherry Cheesecake Non-GMO Sourced Ingredients and OUD Kosher 306.1g [SEP] Price: $100.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like to have a kosher gelato, and price lower than 130.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like to have a kosher gelato, and price lower than 130.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Talenti Layers Cherry Cheesecake Non-GMO Sourced Ingredients and OUD Kosher 306.1g [SEP] Price: $100.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like to have a kosher gelato, and price lower than 130.00 dollars]\nclick[b07nqn55rb]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        }
+      },
+      "request_sha256": "51daafcad72839f672755de55f0cb0526132a2b13930ccd439a77c296c12dec5",
+      "attempts": [
+        {
+          "seconds": 0.07961263135075569,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07968799769878387,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.07516320865095912,
+              "1": 0.06768839194927523,
+              "2": 0.08285127380891383,
+              "3": 0.05746638991038493,
+              "4": 0.055904554608116164,
+              "5": 0.6609261810723508
+            },
+            "confidence": 0.5931114172868209
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 1516,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 6,
+          "inference_seconds": 0.0778997465968132,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 0.5261498987674713
+    }
+  ]
+}

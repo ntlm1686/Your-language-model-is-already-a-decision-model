@@ -1,0 +1,538 @@
+{
+  "task_id": 17,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars",
+  "instruction_sha256": "64f18b196c41551693d19832331a836a385fbec60ccb098494c7460b7f5c0b7b",
+  "reward": 0.6666666666666666,
+  "score": 66.66666666666666,
+  "success": false,
+  "termination": "purchase",
+  "steps": 9,
+  "elapsed_seconds": 2.930454883724451,
+  "decision_seconds": 2.5022131726145744,
+  "input_tokens": 8551,
+  "output_tokens": 817,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Search",
+      "action": "search[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.055927444249391556
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GLPHDVM [SEP] Blush by Sacha Cosmetics, Best Highlighter Makeup Blusher to Sculpt Face & Highlight Cheeks, 14 shades, 0.27 oz, Matte Brown [SEP] $15.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B0718WN37L [SEP] Christophe Robin Cleansing Purifying Scrub with Sea Salt, 2.53 Fl Oz [SEP] $18.36 [SEP] B08VDLN3SM [SEP] 5Pcs Makeup Sponge, Makeup Blender, Makeup Egg, Beauty Foundation Blending Sponge, Flawless for Liquid, Cream, and Powder, Multi-Colored. [SEP] $4.39 [SEP] B09LSSBS2C [SEP] Sealed Nib Compatible with Dish Network Satellite TV 145822 [SEP] $116.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09 [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GLPHDVM [SEP] Blush by Sacha Cosmetics, Best Highlighter Makeup Blusher to Sculpt Face & Highlight Cheeks, 14 shades, 0.27 oz, Matte Brown [SEP] $15.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B0718WN37L [SEP] Christophe Robin Cleansing Purifying Scrub with Sea Salt, 2.53 Fl Oz [SEP] $18.36 [SEP] B08VDLN3SM [SEP] 5Pcs Makeup Sponge, Makeup Blender, Makeup Egg, Beauty Foundation Blending Sponge, Flawless for Liquid, Cream, and Powder, Multi-Colored. [SEP] $4.39 [SEP] B09LSSBS2C [SEP] Sealed Nib Compatible with Dish Network Satellite TV 145822 [SEP] $116.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09 [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55\n\nRecent actions:\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b00glphdvm]",
+              "3": "click[b09kcl5gk5]",
+              "4": "click[b0718wn37l]",
+              "5": "click[b08vdln3sm]",
+              "6": "click[b09lssbs2c]",
+              "7": "click[b09lglp9hg]",
+              "8": "click[b09lspp1cj]",
+              "9": "click[b09lgy85yy]",
+              "10": "click[b09lh2mrh8]",
+              "11": "click[b09jp4xjsv]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "566a1933544f997ee28bf23f8f474440deda8f150ad38962b6cf5f148f186049",
+      "attempts": [
+        {
+          "seconds": 0.3477610871195793,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.34789538756012917,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.69,
+            "probabilities": {
+              "2": 0.0,
+              "3": 0.0,
+              "11": 0.0,
+              "8": 0.0,
+              "6": 0.0,
+              "10": 0.0,
+              "1": 0.73,
+              "4": 0.0,
+              "0": 0.27,
+              "5": 0.0,
+              "7": 0.0,
+              "9": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1178,
+          "output_tokens": 103
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4648381248116493
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07BY7XN28 [SEP] Anita B Fresh Start Facial Cleanser Skincare - Makeup Remover, Light Cleansing Oil, Face Wash, PH Balancer - For Dry, Oily, and Sensitive Skin (100ml) [SEP] $35.0 [SEP] B077PR9TL4 [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] $7.59 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B092Z1GHG1 [SEP] MYSTCOVER No Drama Llama Cool Throw Blanket Super Soft Lightweight Luxurious Cozy Warm Fluffy Plush for Bed Couch Living Room [SEP] $29.99 [SEP] B07C51LVKG [SEP] Aunt Honey’s SPF Lip Balm Smooth Mint Flavored, Made with Beeswax, Aloe Vera, Coconut Oil—6 Tubes Chapstick [SEP] $22.99 [SEP] B07N495MB4 [SEP] Graftobian HD Glamour Creme Foundation Super Palette - Inclusion Collection [SEP] $75.6 [SEP] B09RMWTY6Q [SEP] New Wish Herb Shampoo Conditioner Serum Anti Hair Loss Stimulate Rampei Aroma Essence Shampoo For Dry Damaged Hair Body Express Shipping by DHL BY BEAUTY GOOD SHOPS [GET FREE FOR YOU BEAUTY GIFTS] [SEP] $165.67 [SEP] B0010NN9GS [SEP] NaturalCare RingStop | Ringing in the Ear Aid | Homeopathic Support For Tinnitus Relief, Ear Noise & Sensitivity to Sound | 0.5 oz [SEP] $16.57 [SEP] B07X9C8Z6L [SEP] Set of 6 Computer PC Laptop Cart Desk Height Adjustable Table Rolling Portable Mobile Smartphone Notebook Over Sofa Bed Stand Office Living Room School Home Furniture - Oak/2302 [SEP] $424.5 [SEP] B07QJQP74S [SEP] Annie's Deluxe Rich & Creamy Shells & Classic Cheddar Macaroni & Cheese Sauce Microcup, 2.6 oz [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07BY7XN28 [SEP] Anita B Fresh Start Facial Cleanser Skincare - Makeup Remover, Light Cleansing Oil, Face Wash, PH Balancer - For Dry, Oily, and Sensitive Skin (100ml) [SEP] $35.0 [SEP] B077PR9TL4 [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] $7.59 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B092Z1GHG1 [SEP] MYSTCOVER No Drama Llama Cool Throw Blanket Super Soft Lightweight Luxurious Cozy Warm Fluffy Plush for Bed Couch Living Room [SEP] $29.99 [SEP] B07C51LVKG [SEP] Aunt Honey’s SPF Lip Balm Smooth Mint Flavored, Made with Beeswax, Aloe Vera, Coconut Oil—6 Tubes Chapstick [SEP] $22.99 [SEP] B07N495MB4 [SEP] Graftobian HD Glamour Creme Foundation Super Palette - Inclusion Collection [SEP] $75.6 [SEP] B09RMWTY6Q [SEP] New Wish Herb Shampoo Conditioner Serum Anti Hair Loss Stimulate Rampei Aroma Essence Shampoo For Dry Damaged Hair Body Express Shipping by DHL BY BEAUTY GOOD SHOPS [GET FREE FOR YOU BEAUTY GIFTS] [SEP] $165.67 [SEP] B0010NN9GS [SEP] NaturalCare RingStop | Ringing in the Ear Aid | Homeopathic Support For Tinnitus Relief, Ear Noise & Sensitivity to Sound | 0.5 oz [SEP] $16.57 [SEP] B07X9C8Z6L [SEP] Set of 6 Computer PC Laptop Cart Desk Height Adjustable Table Rolling Portable Mobile Smartphone Notebook Over Sofa Bed Stand Office Living Room School Home Furniture - Oak/2302 [SEP] $424.5 [SEP] B07QJQP74S [SEP] Annie's Deluxe Rich & Creamy Shells & Classic Cheddar Macaroni & Cheese Sauce Microcup, 2.6 oz [SEP] $100.0\n\nRecent actions:\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07by7xn28]",
+              "4": "click[b077pr9tl4]",
+              "5": "click[b09g3fpp9s]",
+              "6": "click[b092z1ghg1]",
+              "7": "click[b07c51lvkg]",
+              "8": "click[b07n495mb4]",
+              "9": "click[b09rmwty6q]",
+              "10": "click[b0010nn9gs]",
+              "11": "click[b07x9c8z6l]",
+              "12": "click[b07qjqp74s]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "33141a4f28baa8a09bff7f447430238a7eb8b5c98b8cc0df0cfc69f381ad5938",
+      "attempts": [
+        {
+          "seconds": 0.37613124772906303,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3762749694287777,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.32,
+            "probabilities": {
+              "1": 0.38,
+              "12": 0.0,
+              "10": 0.0,
+              "3": 0.0,
+              "8": 0.05,
+              "7": 0.0,
+              "6": 0.0,
+              "9": 0.0,
+              "11": 0.0,
+              "4": 0.27,
+              "5": 0.0,
+              "0": 0.16,
+              "2": 0.14
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1280,
+          "output_tokens": 111
+        }
+      },
+      "action": "click[< prev]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9041564390063286
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GLPHDVM [SEP] Blush by Sacha Cosmetics, Best Highlighter Makeup Blusher to Sculpt Face & Highlight Cheeks, 14 shades, 0.27 oz, Matte Brown [SEP] $15.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B0718WN37L [SEP] Christophe Robin Cleansing Purifying Scrub with Sea Salt, 2.53 Fl Oz [SEP] $18.36 [SEP] B08VDLN3SM [SEP] 5Pcs Makeup Sponge, Makeup Blender, Makeup Egg, Beauty Foundation Blending Sponge, Flawless for Liquid, Cream, and Powder, Multi-Colored. [SEP] $4.39 [SEP] B09LSSBS2C [SEP] Sealed Nib Compatible with Dish Network Satellite TV 145822 [SEP] $116.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09 [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GLPHDVM [SEP] Blush by Sacha Cosmetics, Best Highlighter Makeup Blusher to Sculpt Face & Highlight Cheeks, 14 shades, 0.27 oz, Matte Brown [SEP] $15.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B0718WN37L [SEP] Christophe Robin Cleansing Purifying Scrub with Sea Salt, 2.53 Fl Oz [SEP] $18.36 [SEP] B08VDLN3SM [SEP] 5Pcs Makeup Sponge, Makeup Blender, Makeup Egg, Beauty Foundation Blending Sponge, Flawless for Liquid, Cream, and Powder, Multi-Colored. [SEP] $4.39 [SEP] B09LSSBS2C [SEP] Sealed Nib Compatible with Dish Network Satellite TV 145822 [SEP] $116.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09 [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55\n\nRecent actions:\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]\nclick[< prev]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b00glphdvm]",
+              "3": "click[b09kcl5gk5]",
+              "4": "click[b0718wn37l]",
+              "5": "click[b08vdln3sm]",
+              "6": "click[b09lssbs2c]",
+              "7": "click[b09lglp9hg]",
+              "8": "click[b09lspp1cj]",
+              "9": "click[b09lgy85yy]",
+              "10": "click[b09lh2mrh8]",
+              "11": "click[b09jp4xjsv]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "469ed06a5d5595b447e22839b932d3e1a98dece91ac70554a0ff9e5fdb2154b9",
+      "attempts": [
+        {
+          "seconds": 0.35635068640112877,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.35648415982723236,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.46,
+            "probabilities": {
+              "5": 0.01,
+              "8": 0.0,
+              "2": 0.01,
+              "6": 0.0,
+              "0": 0.51,
+              "7": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "1": 0.47,
+              "9": 0.0,
+              "10": 0.0,
+              "11": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1187,
+          "output_tokens": 103
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.2755090780556202
+    },
+    {
+      "step": 4,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Search",
+      "action": "search[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.3234150409698486
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GLPHDVM [SEP] Blush by Sacha Cosmetics, Best Highlighter Makeup Blusher to Sculpt Face & Highlight Cheeks, 14 shades, 0.27 oz, Matte Brown [SEP] $15.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B0718WN37L [SEP] Christophe Robin Cleansing Purifying Scrub with Sea Salt, 2.53 Fl Oz [SEP] $18.36 [SEP] B08VDLN3SM [SEP] 5Pcs Makeup Sponge, Makeup Blender, Makeup Egg, Beauty Foundation Blending Sponge, Flawless for Liquid, Cream, and Powder, Multi-Colored. [SEP] $4.39 [SEP] B09LSSBS2C [SEP] Sealed Nib Compatible with Dish Network Satellite TV 145822 [SEP] $116.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09 [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00GLPHDVM [SEP] Blush by Sacha Cosmetics, Best Highlighter Makeup Blusher to Sculpt Face & Highlight Cheeks, 14 shades, 0.27 oz, Matte Brown [SEP] $15.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B0718WN37L [SEP] Christophe Robin Cleansing Purifying Scrub with Sea Salt, 2.53 Fl Oz [SEP] $18.36 [SEP] B08VDLN3SM [SEP] 5Pcs Makeup Sponge, Makeup Blender, Makeup Egg, Beauty Foundation Blending Sponge, Flawless for Liquid, Cream, and Powder, Multi-Colored. [SEP] $4.39 [SEP] B09LSSBS2C [SEP] Sealed Nib Compatible with Dish Network Satellite TV 145822 [SEP] $116.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09 [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55\n\nRecent actions:\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b00glphdvm]",
+              "3": "click[b09kcl5gk5]",
+              "4": "click[b0718wn37l]",
+              "5": "click[b08vdln3sm]",
+              "6": "click[b09lssbs2c]",
+              "7": "click[b09lglp9hg]",
+              "8": "click[b09lspp1cj]",
+              "9": "click[b09lgy85yy]",
+              "10": "click[b09lh2mrh8]",
+              "11": "click[b09jp4xjsv]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "ca5dc9af915542ab25772744b52d9851608bd1a59fd044c010778f73969332cb",
+      "attempts": [
+        {
+          "seconds": 0.34594278782606125,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.34605082869529724,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.84,
+            "probabilities": {
+              "10": 0.0,
+              "9": 0.0,
+              "1": 0.85,
+              "2": 0.02,
+              "7": 0.0,
+              "0": 0.12,
+              "11": 0.0,
+              "4": 0.0,
+              "6": 0.0,
+              "3": 0.0,
+              "5": 0.01,
+              "8": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1219,
+          "output_tokens": 103
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.731485404074192
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07BY7XN28 [SEP] Anita B Fresh Start Facial Cleanser Skincare - Makeup Remover, Light Cleansing Oil, Face Wash, PH Balancer - For Dry, Oily, and Sensitive Skin (100ml) [SEP] $35.0 [SEP] B077PR9TL4 [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] $7.59 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B092Z1GHG1 [SEP] MYSTCOVER No Drama Llama Cool Throw Blanket Super Soft Lightweight Luxurious Cozy Warm Fluffy Plush for Bed Couch Living Room [SEP] $29.99 [SEP] B07C51LVKG [SEP] Aunt Honey’s SPF Lip Balm Smooth Mint Flavored, Made with Beeswax, Aloe Vera, Coconut Oil—6 Tubes Chapstick [SEP] $22.99 [SEP] B07N495MB4 [SEP] Graftobian HD Glamour Creme Foundation Super Palette - Inclusion Collection [SEP] $75.6 [SEP] B09RMWTY6Q [SEP] New Wish Herb Shampoo Conditioner Serum Anti Hair Loss Stimulate Rampei Aroma Essence Shampoo For Dry Damaged Hair Body Express Shipping by DHL BY BEAUTY GOOD SHOPS [GET FREE FOR YOU BEAUTY GIFTS] [SEP] $165.67 [SEP] B0010NN9GS [SEP] NaturalCare RingStop | Ringing in the Ear Aid | Homeopathic Support For Tinnitus Relief, Ear Noise & Sensitivity to Sound | 0.5 oz [SEP] $16.57 [SEP] B07X9C8Z6L [SEP] Set of 6 Computer PC Laptop Cart Desk Height Adjustable Table Rolling Portable Mobile Smartphone Notebook Over Sofa Bed Stand Office Living Room School Home Furniture - Oak/2302 [SEP] $424.5 [SEP] B07QJQP74S [SEP] Annie's Deluxe Rich & Creamy Shells & Classic Cheddar Macaroni & Cheese Sauce Microcup, 2.6 oz [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07BY7XN28 [SEP] Anita B Fresh Start Facial Cleanser Skincare - Makeup Remover, Light Cleansing Oil, Face Wash, PH Balancer - For Dry, Oily, and Sensitive Skin (100ml) [SEP] $35.0 [SEP] B077PR9TL4 [SEP] Physicians Formula The Healthy Foundation with SPF 20, LW2, 1 Fl Oz [SEP] $7.59 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B092Z1GHG1 [SEP] MYSTCOVER No Drama Llama Cool Throw Blanket Super Soft Lightweight Luxurious Cozy Warm Fluffy Plush for Bed Couch Living Room [SEP] $29.99 [SEP] B07C51LVKG [SEP] Aunt Honey’s SPF Lip Balm Smooth Mint Flavored, Made with Beeswax, Aloe Vera, Coconut Oil—6 Tubes Chapstick [SEP] $22.99 [SEP] B07N495MB4 [SEP] Graftobian HD Glamour Creme Foundation Super Palette - Inclusion Collection [SEP] $75.6 [SEP] B09RMWTY6Q [SEP] New Wish Herb Shampoo Conditioner Serum Anti Hair Loss Stimulate Rampei Aroma Essence Shampoo For Dry Damaged Hair Body Express Shipping by DHL BY BEAUTY GOOD SHOPS [GET FREE FOR YOU BEAUTY GIFTS] [SEP] $165.67 [SEP] B0010NN9GS [SEP] NaturalCare RingStop | Ringing in the Ear Aid | Homeopathic Support For Tinnitus Relief, Ear Noise & Sensitivity to Sound | 0.5 oz [SEP] $16.57 [SEP] B07X9C8Z6L [SEP] Set of 6 Computer PC Laptop Cart Desk Height Adjustable Table Rolling Portable Mobile Smartphone Notebook Over Sofa Bed Stand Office Living Room School Home Furniture - Oak/2302 [SEP] $424.5 [SEP] B07QJQP74S [SEP] Annie's Deluxe Rich & Creamy Shells & Classic Cheddar Macaroni & Cheese Sauce Microcup, 2.6 oz [SEP] $100.0\n\nRecent actions:\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07by7xn28]",
+              "4": "click[b077pr9tl4]",
+              "5": "click[b09g3fpp9s]",
+              "6": "click[b092z1ghg1]",
+              "7": "click[b07c51lvkg]",
+              "8": "click[b07n495mb4]",
+              "9": "click[b09rmwty6q]",
+              "10": "click[b0010nn9gs]",
+              "11": "click[b07x9c8z6l]",
+              "12": "click[b07qjqp74s]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "2d21637cd52d68d01cbebb5f9171b0cf64030c6840d2140567277bb8f4d3a98c",
+      "attempts": [
+        {
+          "seconds": 0.3632703609764576,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.36339253187179565,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.32,
+            "probabilities": {
+              "12": 0.0,
+              "5": 0.0,
+              "9": 0.0,
+              "4": 0.31,
+              "7": 0.0,
+              "3": 0.0,
+              "0": 0.08,
+              "10": 0.0,
+              "2": 0.38,
+              "1": 0.18,
+              "8": 0.05,
+              "6": 0.0,
+              "11": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1321,
+          "output_tokens": 111
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.1546415872871876
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B0849LCMFY [SEP] Original Kona Anti Cellulite Coffee Scrub with Dead Sea Salts - 24oz - All Natural [SEP] $24.99 [SEP] B00CXWZJ2W [SEP] Liquid Kamaflage by Sacha Cosmetics, Camouflage Full Coverage Concealer Foundation Makeup, Matte Poreless Tattoo Cover Up, 1.0 oz, Perfect Tan [SEP] $20.0 [SEP] B0849Z9B2D [SEP] Grapefruit & Lemongrass Kona Anti Cellulite Coffee Scrub with Dead Sea Salts - 24oz - All Natural [SEP] $24.99 [SEP] B09P52T7H2 [SEP] 3D Snake Skin Printed Business Affairs Wedding Stage Suit Casual Slim Fit Mens Blazer Jacket [SEP] $72.73 [SEP] B09QZJ8GPM [SEP] I Am Mixed Half Jesus And Half Peter Christian Jesus Christ Tank Top [SEP] $19.99 [SEP] B09J1X9M1P [SEP] Neutrogena Healthy Skin Sensitive Skin Serum Foundation with Pro-Vitamin B5, Color Correcting & Pore Minimizing Liquid Foundation & Face Serum, Buildable Coverage, Medium 02, 1 oz [SEP] $14.39 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B00CXWXLGI [SEP] Loose Face Powder by Sacha Cosmetics, Best Matte Finishing Powder for use alone or Setting your Makeup Foundation to give a Flawless Beautiful Finish, for All Skin Types, 1.25 oz, Perfect Caramel [SEP] $20.0 [SEP] B08Q7QR1LB [SEP] Custom Boxer Briefs for Men You are My Sunshine Underwear Shorts Personalized Face Boxers for Husband Gag Gift [SEP] $22.99 [SEP] B08NLZWNG4 [SEP] Mirror mirror on the wall I am my mother after all funny looks Decorative Wall Decor Funny Gift [SEP] $17.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B0849LCMFY [SEP] Original Kona Anti Cellulite Coffee Scrub with Dead Sea Salts - 24oz - All Natural [SEP] $24.99 [SEP] B00CXWZJ2W [SEP] Liquid Kamaflage by Sacha Cosmetics, Camouflage Full Coverage Concealer Foundation Makeup, Matte Poreless Tattoo Cover Up, 1.0 oz, Perfect Tan [SEP] $20.0 [SEP] B0849Z9B2D [SEP] Grapefruit & Lemongrass Kona Anti Cellulite Coffee Scrub with Dead Sea Salts - 24oz - All Natural [SEP] $24.99 [SEP] B09P52T7H2 [SEP] 3D Snake Skin Printed Business Affairs Wedding Stage Suit Casual Slim Fit Mens Blazer Jacket [SEP] $72.73 [SEP] B09QZJ8GPM [SEP] I Am Mixed Half Jesus And Half Peter Christian Jesus Christ Tank Top [SEP] $19.99 [SEP] B09J1X9M1P [SEP] Neutrogena Healthy Skin Sensitive Skin Serum Foundation with Pro-Vitamin B5, Color Correcting & Pore Minimizing Liquid Foundation & Face Serum, Buildable Coverage, Medium 02, 1 oz [SEP] $14.39 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B00CXWXLGI [SEP] Loose Face Powder by Sacha Cosmetics, Best Matte Finishing Powder for use alone or Setting your Makeup Foundation to give a Flawless Beautiful Finish, for All Skin Types, 1.25 oz, Perfect Caramel [SEP] $20.0 [SEP] B08Q7QR1LB [SEP] Custom Boxer Briefs for Men You are My Sunshine Underwear Shorts Personalized Face Boxers for Husband Gag Gift [SEP] $22.99 [SEP] B08NLZWNG4 [SEP] Mirror mirror on the wall I am my mother after all funny looks Decorative Wall Decor Funny Gift [SEP] $17.99\n\nRecent actions:\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b0849lcmfy]",
+              "4": "click[b00cxwzj2w]",
+              "5": "click[b0849z9b2d]",
+              "6": "click[b09p52t7h2]",
+              "7": "click[b09qzj8gpm]",
+              "8": "click[b09j1x9m1p]",
+              "9": "click[b07jmgsdwt]",
+              "10": "click[b00cxwxlgi]",
+              "11": "click[b08q7qr1lb]",
+              "12": "click[b08nlzwng4]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "5a53ad9f51ee398ed2920d0e916b995237a5f3fb4283af30e358fa1cb57dad0f",
+      "attempts": [
+        {
+          "seconds": 0.3383404016494751,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33850467950105667,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "confidence": 0.46,
+            "probabilities": {
+              "1": 0.09,
+              "8": 0.51,
+              "5": 0.0,
+              "4": 0.13,
+              "7": 0.0,
+              "3": 0.0,
+              "12": 0.0,
+              "9": 0.0,
+              "6": 0.0,
+              "0": 0.06,
+              "11": 0.0,
+              "10": 0.0,
+              "2": 0.21000000000000002
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1286,
+          "output_tokens": 111
+        }
+      },
+      "action": "click[b09j1x9m1p]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.5220064595341682
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] deep 01 [SEP] deep 02 [SEP] deep 03 [SEP] light 01 [SEP] light 02 [SEP] light 03 [SEP] light | medium 01 [SEP] light | medium 02 [SEP] light | medium 03 [SEP] medium 01 [SEP] medium 02 [SEP] medium 03 [SEP] medium | deep 01 [SEP] medium | deep 02 [SEP] medium | deep 03 [SEP] Neutrogena Healthy Skin Sensitive Skin Serum Foundation with Pro-Vitamin B5, Color Correcting & Pore Minimizing Liquid Foundation & Face Serum, Buildable Coverage, Medium 02, 1 oz [SEP] Price: $14.39 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] deep 01 [SEP] deep 02 [SEP] deep 03 [SEP] light 01 [SEP] light 02 [SEP] light 03 [SEP] light | medium 01 [SEP] light | medium 02 [SEP] light | medium 03 [SEP] medium 01 [SEP] medium 02 [SEP] medium 03 [SEP] medium | deep 01 [SEP] medium | deep 02 [SEP] medium | deep 03 [SEP] Neutrogena Healthy Skin Sensitive Skin Serum Foundation with Pro-Vitamin B5, Color Correcting & Pore Minimizing Liquid Foundation & Face Serum, Buildable Coverage, Medium 02, 1 oz [SEP] Price: $14.39 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i am looking for mn4 color foundation for my sensitive skin, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]\nclick[b09j1x9m1p]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[deep 01]",
+              "7": "click[deep 02]",
+              "8": "click[deep 03]",
+              "9": "click[light 01]",
+              "10": "click[light 02]",
+              "11": "click[light 03]",
+              "12": "click[light | medium 01]",
+              "13": "click[light | medium 02]",
+              "14": "click[light | medium 03]",
+              "15": "click[medium 01]",
+              "16": "click[medium 02]",
+              "17": "click[medium 03]",
+              "18": "click[medium | deep 01]",
+              "19": "click[medium | deep 02]",
+              "20": "click[medium | deep 03]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "073d58d34a73f18f4bce48ebf02fd89fca8bf978a95339b851326eec26b5a770",
+      "attempts": [
+        {
+          "seconds": 0.3734324686229229,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37361061573028564,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.43,
+            "probabilities": {
+              "16": 0.23,
+              "8": 0.01,
+              "20": 0.01,
+              "4": 0.0,
+              "15": 0.04,
+              "19": 0.01,
+              "7": 0.0,
+              "1": 0.01,
+              "13": 0.0,
+              "3": 0.01,
+              "9": 0.01,
+              "6": 0.01,
+              "18": 0.01,
+              "0": 0.14,
+              "10": 0.01,
+              "14": 0.0,
+              "11": 0.0,
+              "17": 0.02,
+              "2": 0.02,
+              "12": 0.0,
+              "5": 0.46
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1080,
+          "output_tokens": 175
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.6666666666666666,
+      "done": true,
+      "elapsed_seconds": 2.93045012652874
+    }
+  ]
+}

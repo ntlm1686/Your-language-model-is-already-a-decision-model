@@ -1,0 +1,401 @@
+{
+  "task_id": 220,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars",
+  "instruction_sha256": "8c53fcdc75140f53dd4bf42c7bd1cd94760d7627febf8fb7355e6436c7e6278e",
+  "reward": 0.5,
+  "score": 50.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 7,
+  "elapsed_seconds": 2.174566797912121,
+  "decision_seconds": 1.7835608907043934,
+  "input_tokens": 5513,
+  "output_tokens": 588,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.09638046100735664
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55 [SEP] B096Y565X5 [SEP] Queen Size Mattress, Sweetnight 12” Hybrid Mattress with Gel Memory Foam & Pocket Innerspring for Cool Sleep & Edge Support, Bed Mattress with Moisture Wicking Adaptive Cover, Medium Firm, Queen Size [SEP] $559.46 [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B08QTQGVGK [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] $19.99 to $22.99 [SEP] B08W1VPN4B [SEP] Jilin VR Controller Fixer for Oculus Quest 2 VR Headset Handle Bumper ProtectiveHolder [SEP] $9.09 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B086SLVQGX [SEP] Olee Sleep 10 Inch Gel Infused Layer Top Memory Foam Mattress, King, Blue [SEP] $453.7 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95 [SEP] B07KRNJ8KV [SEP] Just Love Short Sleeve Nightgown Sleep Dress for Women Sleepwear [SEP] $14.99",
+      "request": {
+        "state": "Shopping instruction:\ni would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55 [SEP] B096Y565X5 [SEP] Queen Size Mattress, Sweetnight 12” Hybrid Mattress with Gel Memory Foam & Pocket Innerspring for Cool Sleep & Edge Support, Bed Mattress with Moisture Wicking Adaptive Cover, Medium Firm, Queen Size [SEP] $559.46 [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B08QTQGVGK [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] $19.99 to $22.99 [SEP] B08W1VPN4B [SEP] Jilin VR Controller Fixer for Oculus Quest 2 VR Headset Handle Bumper ProtectiveHolder [SEP] $9.09 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B086SLVQGX [SEP] Olee Sleep 10 Inch Gel Infused Layer Top Memory Foam Mattress, King, Blue [SEP] $453.7 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95 [SEP] B07KRNJ8KV [SEP] Just Love Short Sleeve Nightgown Sleep Dress for Women Sleepwear [SEP] $14.99\n\nRecent actions:\nsearch[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09jp4xjsv]",
+              "3": "click[b096y565x5]",
+              "4": "click[b09r8s9t2k]",
+              "5": "click[b08qtqgvgk]",
+              "6": "click[b08w1vpn4b]",
+              "7": "click[b01730lx9q]",
+              "8": "click[b086slvqgx]",
+              "9": "click[b09kcl5gk5]",
+              "10": "click[b00004rg7m]",
+              "11": "click[b07krnj8kv]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "0174a26d94564309c699729bf9f23117eb3b841f3edd2b0093d3c5439db5ab2e",
+      "attempts": [
+        {
+          "seconds": 0.3319614790380001,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.332086019217968,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.42,
+            "probabilities": {
+              "2": 0.0,
+              "10": 0.0,
+              "3": 0.0,
+              "11": 0.06,
+              "0": 0.08,
+              "4": 0.0,
+              "9": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "5": 0.38,
+              "1": 0.48,
+              "8": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1222,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.541047465056181
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07CZTG9XN [SEP] Bulk Golden Raisins 10 Pound Wholesale Box [SEP] $39.0 [SEP] B07MF33FMR [SEP] Modern Style Metal Dining Bar Stools Pub Lounge Diner Restaurant Commercial Seats Vertical Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 4 Natural Wood Seat #2157 [SEP] $644.5 [SEP] B07Y9FMBDX [SEP] Zinus Green Tea 8 Inch Memory Foam Mattress and Jared Adjustable Bed Frame Set with Remote / Whisper-Quiet Motorized Movement / Ergonomic Positioning for Better Health and Relaxation, Queen [SEP] $100.0 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B09QJ5BMN8 [SEP] Bulk Golden Raisins; Dried Fruit Snacks; Healthy Gluten-Free Snack; Wholesale Value Box (10) [SEP] $39.0 [SEP] B07KYW9RQD [SEP] Contemporary Desk Task Office Chair Fabric Upholstery Seats Mid-Back Quilted Design Hydraulic Adjustable 360-Degree Swivel Home Office Dining Room Furniture - Set of 4 Black #2135 [SEP] $604.5 [SEP] B09P58X3QY [SEP] Women's Sleeveless Spaghetti Strap Satin Dress Summer Cocktail Beach Evening Party Midi Dresses Halter Bodycon Dress [SEP] $12.99 to $16.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B016WJWC0S [SEP] Olee Sleep Aquarius 10-Inch Memory Foam Mattress in Blue, Queen [SEP] $306.27 [SEP] B0727Z2J7F [SEP] Platform Bed 17\" H Steel Frame Heavy Duty Foldable Bedroom Storage King Size # 642 [SEP] $244.95",
+      "request": {
+        "state": "Shopping instruction:\ni would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07CZTG9XN [SEP] Bulk Golden Raisins 10 Pound Wholesale Box [SEP] $39.0 [SEP] B07MF33FMR [SEP] Modern Style Metal Dining Bar Stools Pub Lounge Diner Restaurant Commercial Seats Vertical Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 4 Natural Wood Seat #2157 [SEP] $644.5 [SEP] B07Y9FMBDX [SEP] Zinus Green Tea 8 Inch Memory Foam Mattress and Jared Adjustable Bed Frame Set with Remote / Whisper-Quiet Motorized Movement / Ergonomic Positioning for Better Health and Relaxation, Queen [SEP] $100.0 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99 [SEP] B09QJ5BMN8 [SEP] Bulk Golden Raisins; Dried Fruit Snacks; Healthy Gluten-Free Snack; Wholesale Value Box (10) [SEP] $39.0 [SEP] B07KYW9RQD [SEP] Contemporary Desk Task Office Chair Fabric Upholstery Seats Mid-Back Quilted Design Hydraulic Adjustable 360-Degree Swivel Home Office Dining Room Furniture - Set of 4 Black #2135 [SEP] $604.5 [SEP] B09P58X3QY [SEP] Women's Sleeveless Spaghetti Strap Satin Dress Summer Cocktail Beach Evening Party Midi Dresses Halter Bodycon Dress [SEP] $12.99 to $16.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B016WJWC0S [SEP] Olee Sleep Aquarius 10-Inch Memory Foam Mattress in Blue, Queen [SEP] $306.27 [SEP] B0727Z2J7F [SEP] Platform Bed 17\" H Steel Frame Heavy Duty Foldable Bedroom Storage King Size # 642 [SEP] $244.95\n\nRecent actions:\nsearch[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07cztg9xn]",
+              "4": "click[b07mf33fmr]",
+              "5": "click[b07y9fmbdx]",
+              "6": "click[b09g3fpp9s]",
+              "7": "click[b09qj5bmn8]",
+              "8": "click[b07kyw9rqd]",
+              "9": "click[b09p58x3qy]",
+              "10": "click[b099z4t56c]",
+              "11": "click[b016wjwc0s]",
+              "12": "click[b0727z2j7f]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "fd8dd7233b4afc50fd722f275bd00efd24aac7ef26b8b3c8d36478352d0b995c",
+      "attempts": [
+        {
+          "seconds": 0.38246390223503113,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.38258830085396767,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.32,
+            "probabilities": {
+              "5": 0.0,
+              "7": 0.0,
+              "2": 0.32,
+              "6": 0.0,
+              "10": 0.03,
+              "0": 0.38,
+              "3": 0.0,
+              "12": 0.0,
+              "4": 0.0,
+              "1": 0.23,
+              "9": 0.04,
+              "8": 0.0,
+              "11": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1255,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9387298189103603
+    },
+    {
+      "step": 3,
+      "observation": "WebShop [SEP] Instruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.0195404849946499
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55 [SEP] B096Y565X5 [SEP] Queen Size Mattress, Sweetnight 12” Hybrid Mattress with Gel Memory Foam & Pocket Innerspring for Cool Sleep & Edge Support, Bed Mattress with Moisture Wicking Adaptive Cover, Medium Firm, Queen Size [SEP] $559.46 [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B08QTQGVGK [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] $19.99 to $22.99 [SEP] B08W1VPN4B [SEP] Jilin VR Controller Fixer for Oculus Quest 2 VR Headset Handle Bumper ProtectiveHolder [SEP] $9.09 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B086SLVQGX [SEP] Olee Sleep 10 Inch Gel Infused Layer Top Memory Foam Mattress, King, Blue [SEP] $453.7 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95 [SEP] B07KRNJ8KV [SEP] Just Love Short Sleeve Nightgown Sleep Dress for Women Sleepwear [SEP] $14.99",
+      "request": {
+        "state": "Shopping instruction:\ni would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09JP4XJSV [SEP] QQQ Dressers For Bedroom 6 Drawer - Plastic Storage Drawers For Clothes, Vertical Dresser Storage Tower, Tall Chest of Drawers Cabinet, Organizer Unit for Bedroom Hallway Entryway Closets White [SEP] $84.55 [SEP] B096Y565X5 [SEP] Queen Size Mattress, Sweetnight 12” Hybrid Mattress with Gel Memory Foam & Pocket Innerspring for Cool Sleep & Edge Support, Bed Mattress with Moisture Wicking Adaptive Cover, Medium Firm, Queen Size [SEP] $559.46 [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B08QTQGVGK [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] $19.99 to $22.99 [SEP] B08W1VPN4B [SEP] Jilin VR Controller Fixer for Oculus Quest 2 VR Headset Handle Bumper ProtectiveHolder [SEP] $9.09 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B086SLVQGX [SEP] Olee Sleep 10 Inch Gel Infused Layer Top Memory Foam Mattress, King, Blue [SEP] $453.7 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95 [SEP] B07KRNJ8KV [SEP] Just Love Short Sleeve Nightgown Sleep Dress for Women Sleepwear [SEP] $14.99\n\nRecent actions:\nsearch[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]\nclick[next >]\nclick[back to search]\nsearch[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09jp4xjsv]",
+              "3": "click[b096y565x5]",
+              "4": "click[b09r8s9t2k]",
+              "5": "click[b08qtqgvgk]",
+              "6": "click[b08w1vpn4b]",
+              "7": "click[b01730lx9q]",
+              "8": "click[b086slvqgx]",
+              "9": "click[b09kcl5gk5]",
+              "10": "click[b00004rg7m]",
+              "11": "click[b07krnj8kv]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "57c82544cba946c577514689afccf692f9f457fda276866b86f7ddf0332ecddc",
+      "attempts": [
+        {
+          "seconds": 0.3971395157277584,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.39727166667580605,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.43,
+            "probabilities": {
+              "9": 0.0,
+              "11": 0.08,
+              "10": 0.0,
+              "7": 0.0,
+              "4": 0.0,
+              "6": 0.0,
+              "5": 0.48,
+              "2": 0.0,
+              "8": 0.0,
+              "1": 0.43,
+              "3": 0.0,
+              "0": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1259,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b08qtqgvgk]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.439445462077856
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black sweatpants [SEP] dark grey sweatpants [SEP] light grey sweatpants [SEP] black [SEP] navy sweatpants [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] Price: $19.99 to $22.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black sweatpants [SEP] dark grey sweatpants [SEP] light grey sweatpants [SEP] black [SEP] navy sweatpants [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] Price: $19.99 to $22.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]\nclick[next >]\nclick[back to search]\nsearch[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]\nclick[b08qtqgvgk]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[black sweatpants]",
+              "7": "click[dark grey sweatpants]",
+              "8": "click[light grey sweatpants]",
+              "9": "click[black]",
+              "10": "click[navy sweatpants]",
+              "11": "click[small]",
+              "12": "click[medium]",
+              "13": "click[large]",
+              "14": "click[x-large]",
+              "15": "click[xx-large]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "e0068c042d0a8626ce666a47df5bdc747815f2e8b292f9fe3c5c2521e27ab173",
+      "attempts": [
+        {
+          "seconds": 0.3254564553499222,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3255939520895481,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "12",
+            "confidence": 0.52,
+            "probabilities": {
+              "2": 0.01,
+              "10": 0.0,
+              "12": 0.55,
+              "14": 0.0,
+              "3": 0.01,
+              "1": 0.0,
+              "8": 0.0,
+              "9": 0.2,
+              "0": 0.01,
+              "13": 0.0,
+              "4": 0.0,
+              "7": 0.0,
+              "6": 0.01,
+              "15": 0.0,
+              "11": 0.0,
+              "5": 0.21
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 886,
+          "output_tokens": 136
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[medium]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.783724281936884
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black sweatpants [SEP] dark grey sweatpants [SEP] light grey sweatpants [SEP] black [SEP] navy sweatpants [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] Price: $19.99 to $22.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black sweatpants [SEP] dark grey sweatpants [SEP] light grey sweatpants [SEP] black [SEP] navy sweatpants [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] Price: $19.99 to $22.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]\nclick[next >]\nclick[back to search]\nsearch[i would like a medium sized black sleep set that is light weight, and price lower than 50.00 dollars]\nclick[b08qtqgvgk]\nclick[medium]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[black sweatpants]",
+              "7": "click[dark grey sweatpants]",
+              "8": "click[light grey sweatpants]",
+              "9": "click[black]",
+              "10": "click[navy sweatpants]",
+              "11": "click[small]",
+              "12": "click[medium]",
+              "13": "click[large]",
+              "14": "click[x-large]",
+              "15": "click[xx-large]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "bb69e5ee707a8508068d7db228868f6b3def1ea0dc58dd2d98ae4e331e0b2d33",
+      "attempts": [
+        {
+          "seconds": 0.3459196537733078,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3460209518671036,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.58,
+            "probabilities": {
+              "12": 0.0,
+              "8": 0.0,
+              "5": 0.62,
+              "15": 0.0,
+              "13": 0.0,
+              "3": 0.01,
+              "11": 0.0,
+              "4": 0.0,
+              "9": 0.33,
+              "7": 0.0,
+              "10": 0.0,
+              "14": 0.0,
+              "2": 0.01,
+              "6": 0.02,
+              "0": 0.0,
+              "1": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 891,
+          "output_tokens": 135
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.5,
+      "done": true,
+      "elapsed_seconds": 2.17456366494298
+    }
+  ]
+}

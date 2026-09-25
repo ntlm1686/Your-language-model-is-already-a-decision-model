@@ -1,0 +1,346 @@
+{
+  "task_id": 249,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars",
+  "instruction_sha256": "79b915cfaf05b9aa8953e6dc1961d3298c6f728e47ddd1eee809ee817089f12c",
+  "reward": 0.6666666666666666,
+  "score": 66.66666666666666,
+  "success": false,
+  "termination": "purchase",
+  "steps": 6,
+  "elapsed_seconds": 1.5549706816673279,
+  "decision_seconds": 1.3672119453549385,
+  "input_tokens": 4260,
+  "output_tokens": 540,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars [SEP] Search",
+      "action": "search[get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.04350476711988449
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07CZ2GN56 [SEP] Men’s Calavera Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QCJGXMW [SEP] Men’s Chalkboard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B088DMRZR5 [SEP] More of Me to Love Button Pant Extenders - Adds 1\" Waistband Length [SEP] $39.98 [SEP] B07DGQ1Y53 [SEP] Women’s Houndstooth Chef Pant (XS-3X, 2 Colors) [SEP] $28.98 to $31.98 [SEP] B078GGPQJF [SEP] Victoria Collection Womens Silky Pajama Lounge Pants [SEP] $8.99 to $19.99 [SEP] B08QTQGVGK [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] $19.99 to $22.99 [SEP] B07BS3HGMH [SEP] Men’s Boneyard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07D5JS3KW [SEP] Men’s Donut Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QYCMRQW [SEP] Men’s Knives Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07VBPXCGS [SEP] Men’s Piggin Out Print Baggy Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $33.98",
+      "request": {
+        "state": "Shopping instruction:\nget me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars\n\nCurrent page:\nInstruction: [SEP] get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07CZ2GN56 [SEP] Men’s Calavera Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QCJGXMW [SEP] Men’s Chalkboard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B088DMRZR5 [SEP] More of Me to Love Button Pant Extenders - Adds 1\" Waistband Length [SEP] $39.98 [SEP] B07DGQ1Y53 [SEP] Women’s Houndstooth Chef Pant (XS-3X, 2 Colors) [SEP] $28.98 to $31.98 [SEP] B078GGPQJF [SEP] Victoria Collection Womens Silky Pajama Lounge Pants [SEP] $8.99 to $19.99 [SEP] B08QTQGVGK [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] $19.99 to $22.99 [SEP] B07BS3HGMH [SEP] Men’s Boneyard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07D5JS3KW [SEP] Men’s Donut Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QYCMRQW [SEP] Men’s Knives Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07VBPXCGS [SEP] Men’s Piggin Out Print Baggy Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $33.98\n\nRecent actions:\nsearch[get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07cz2gn56]",
+              "3": "click[b07qcjgxmw]",
+              "4": "click[b088dmrzr5]",
+              "5": "click[b07dgq1y53]",
+              "6": "click[b078ggpqjf]",
+              "7": "click[b08qtqgvgk]",
+              "8": "click[b07bs3hgmh]",
+              "9": "click[b07d5js3kw]",
+              "10": "click[b07qycmrqw]",
+              "11": "click[b07vbpxcgs]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "828ec8d7af066d77ae3728945cde1676e98ada5b27cdd68decb7091bafb8a0a4",
+      "attempts": [
+        {
+          "seconds": 0.33211828768253326,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33222515136003494,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "confidence": 0.85,
+            "probabilities": {
+              "5": 0.0,
+              "7": 0.07,
+              "2": 0.0,
+              "6": 0.86,
+              "0": 0.01,
+              "8": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "1": 0.06,
+              "9": 0.0,
+              "10": 0.0,
+              "11": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1203,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b078ggpqjf]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.40083956345915794
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] color [SEP] flamingo [SEP] loveme [SEP] panda pink [SEP] pink ice cream [SEP] lady [SEP] panda [SEP] pink cupcake [SEP] pink pastry [SEP] pinkcat [SEP] Victoria Collection Womens Silky Pajama Lounge Pants [SEP] Price: $8.99 to $19.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\nget me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars\n\nCurrent page:\nInstruction: [SEP] get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] color [SEP] flamingo [SEP] loveme [SEP] panda pink [SEP] pink ice cream [SEP] lady [SEP] panda [SEP] pink cupcake [SEP] pink pastry [SEP] pinkcat [SEP] Victoria Collection Womens Silky Pajama Lounge Pants [SEP] Price: $8.99 to $19.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars]\nclick[b078ggpqjf]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[small]",
+              "7": "click[medium]",
+              "8": "click[large]",
+              "9": "click[x-large]",
+              "10": "click[xx-large]",
+              "11": "click[flamingo]",
+              "12": "click[loveme]",
+              "13": "click[panda pink]",
+              "14": "click[pink ice cream]",
+              "15": "click[lady]",
+              "16": "click[panda]",
+              "17": "click[pink cupcake]",
+              "18": "click[pink pastry]",
+              "19": "click[pinkcat]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "daaf8e04c187977468db86f1348a2f439778469aa72a67d0a8c2b620a1d8bc68",
+      "attempts": [
+        {
+          "seconds": 0.3631366491317749,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.36322352290153503,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.48,
+            "probabilities": {
+              "17": 0.0,
+              "4": 0.0,
+              "8": 0.01,
+              "7": 0.04,
+              "2": 0.02,
+              "15": 0.0,
+              "6": 0.01,
+              "10": 0.0,
+              "12": 0.0,
+              "0": 0.51,
+              "16": 0.0,
+              "13": 0.0,
+              "19": 0.0,
+              "11": 0.01,
+              "9": 0.0,
+              "18": 0.0,
+              "5": 0.37,
+              "3": 0.02,
+              "14": 0.0,
+              "1": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 885,
+          "output_tokens": 167
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.7736155278980732
+    },
+    {
+      "step": 3,
+      "observation": "WebShop [SEP] Instruction: [SEP] get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars [SEP] Search",
+      "action": "search[get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.8162162750959396
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07CZ2GN56 [SEP] Men’s Calavera Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QCJGXMW [SEP] Men’s Chalkboard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B088DMRZR5 [SEP] More of Me to Love Button Pant Extenders - Adds 1\" Waistband Length [SEP] $39.98 [SEP] B07DGQ1Y53 [SEP] Women’s Houndstooth Chef Pant (XS-3X, 2 Colors) [SEP] $28.98 to $31.98 [SEP] B078GGPQJF [SEP] Victoria Collection Womens Silky Pajama Lounge Pants [SEP] $8.99 to $19.99 [SEP] B08QTQGVGK [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] $19.99 to $22.99 [SEP] B07BS3HGMH [SEP] Men’s Boneyard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07D5JS3KW [SEP] Men’s Donut Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QYCMRQW [SEP] Men’s Knives Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07VBPXCGS [SEP] Men’s Piggin Out Print Baggy Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $33.98",
+      "request": {
+        "state": "Shopping instruction:\nget me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars\n\nCurrent page:\nInstruction: [SEP] get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07CZ2GN56 [SEP] Men’s Calavera Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QCJGXMW [SEP] Men’s Chalkboard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B088DMRZR5 [SEP] More of Me to Love Button Pant Extenders - Adds 1\" Waistband Length [SEP] $39.98 [SEP] B07DGQ1Y53 [SEP] Women’s Houndstooth Chef Pant (XS-3X, 2 Colors) [SEP] $28.98 to $31.98 [SEP] B078GGPQJF [SEP] Victoria Collection Womens Silky Pajama Lounge Pants [SEP] $8.99 to $19.99 [SEP] B08QTQGVGK [SEP] Mens Sweatpants Elastic Closed Bottoms Athletic Yoga Pants Drawstring Gym Joggers Lounge Sweats Sleep Pajamas with Pockets [SEP] $19.99 to $22.99 [SEP] B07BS3HGMH [SEP] Men’s Boneyard Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07D5JS3KW [SEP] Men’s Donut Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07QYCMRQW [SEP] Men’s Knives Print Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $28.98 to $33.98 [SEP] B07VBPXCGS [SEP] Men’s Piggin Out Print Baggy Chef Pant (XS-3X) | Traditional Baggy Fit, 100% Cotton, Elastic Waist [SEP] $33.98\n\nRecent actions:\nsearch[get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars]\nclick[b078ggpqjf]\nclick[back to search]\nsearch[get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07cz2gn56]",
+              "3": "click[b07qcjgxmw]",
+              "4": "click[b088dmrzr5]",
+              "5": "click[b07dgq1y53]",
+              "6": "click[b078ggpqjf]",
+              "7": "click[b08qtqgvgk]",
+              "8": "click[b07bs3hgmh]",
+              "9": "click[b07d5js3kw]",
+              "10": "click[b07qycmrqw]",
+              "11": "click[b07vbpxcgs]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "f9c4222de11b32447a6634d7423206db27940f1465a8ea7302c97d5be2ae31e9",
+      "attempts": [
+        {
+          "seconds": 0.34510786831378937,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3452059403061867,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "confidence": 0.55,
+            "probabilities": {
+              "8": 0.0,
+              "7": 0.2,
+              "3": 0.0,
+              "10": 0.0,
+              "5": 0.0,
+              "1": 0.19,
+              "4": 0.0,
+              "6": 0.6,
+              "9": 0.0,
+              "2": 0.0,
+              "11": 0.0,
+              "0": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1245,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b078ggpqjf]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.1852221824228764
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] color [SEP] flamingo [SEP] loveme [SEP] panda pink [SEP] pink ice cream [SEP] lady [SEP] panda [SEP] pink cupcake [SEP] pink pastry [SEP] pinkcat [SEP] Victoria Collection Womens Silky Pajama Lounge Pants [SEP] Price: $8.99 to $19.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\nget me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars\n\nCurrent page:\nInstruction: [SEP] get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] color [SEP] flamingo [SEP] loveme [SEP] panda pink [SEP] pink ice cream [SEP] lady [SEP] panda [SEP] pink cupcake [SEP] pink pastry [SEP] pinkcat [SEP] Victoria Collection Womens Silky Pajama Lounge Pants [SEP] Price: $8.99 to $19.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars]\nclick[b078ggpqjf]\nclick[back to search]\nsearch[get me some black lounge pants with an elastic waistband, and price lower than 20.00 dollars]\nclick[b078ggpqjf]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[small]",
+              "7": "click[medium]",
+              "8": "click[large]",
+              "9": "click[x-large]",
+              "10": "click[xx-large]",
+              "11": "click[flamingo]",
+              "12": "click[loveme]",
+              "13": "click[panda pink]",
+              "14": "click[pink ice cream]",
+              "15": "click[lady]",
+              "16": "click[panda]",
+              "17": "click[pink cupcake]",
+              "18": "click[pink pastry]",
+              "19": "click[pinkcat]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "c1bafdd16d52ca6b596836797e37f9423089d3fecb19b19aebb00e9e1db486fd",
+      "attempts": [
+        {
+          "seconds": 0.32642459496855736,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.32655733078718185,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.52,
+            "probabilities": {
+              "16": 0.0,
+              "8": 0.01,
+              "4": 0.0,
+              "15": 0.01,
+              "13": 0.0,
+              "1": 0.03,
+              "7": 0.02,
+              "19": 0.0,
+              "3": 0.03,
+              "9": 0.0,
+              "6": 0.01,
+              "0": 0.31,
+              "18": 0.0,
+              "10": 0.0,
+              "14": 0.0,
+              "11": 0.01,
+              "17": 0.0,
+              "5": 0.55,
+              "12": 0.0,
+              "2": 0.02
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 927,
+          "output_tokens": 167
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.6666666666666666,
+      "done": true,
+      "elapsed_seconds": 1.5549670718610287
+    }
+  ]
+}

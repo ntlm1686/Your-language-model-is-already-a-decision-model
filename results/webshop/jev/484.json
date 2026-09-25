@@ -1,0 +1,941 @@
+{
+  "task_id": 484,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars",
+  "instruction_sha256": "739cf9eca6c2b075f25b6b1a700c33ff95b69c72d1bf332ce7aa5cb4b5e5f348",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 13,
+  "elapsed_seconds": 4.705298438668251,
+  "decision_seconds": 3.9577975682914257,
+  "input_tokens": 13069,
+  "output_tokens": 1710,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Search",
+      "action": "search[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.07776195555925369
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07N62G99X [SEP] Shhh Nobody Knows I'm a Lesbian - LGBTQ Gay Pride T-Shirt [SEP] $19.95 [SEP] B00XD06YY0 [SEP] I'm A Mushroom and I Hate This Game Graphic Novelty Sarcastic Funny T Shirt [SEP] $14.99 to $18.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09RMZSM39 [SEP] Ladies Graphic Hot Drill Tight Blouse Off The Shoulder T Shirts Long Sleeve Crewneck Rhinestone Tees Sexy Pullover [SEP] $10.19 to $20.79 [SEP] B07PG48NM5 [SEP] I Am A January Girl T-Shirt Womens Birthday Gifts Shirt T-Shirt [SEP] $19.99 [SEP] B01F9JP3YE [SEP] I'm Magical - Rainbow Unicorn Magic Men's T-Shirt [SEP] $8.95 to $20.95 [SEP] B08FHVHV4H [SEP] I'm Blunt Because God Rolled Me That Way T-Shirt Vintage Tank Top [SEP] $19.99 [SEP] B07NDW96TW [SEP] I'm The Sassy Grandma T-Shirt [SEP] $19.95 [SEP] B09QG697K9 [SEP] Women Trendy Blouses Casual Butterfly Print T Shirts Floral Lace Long Sleeve T-Shirt Sheer Mesh Tunic Tops Summer Basic Tee [SEP] $8.77 to $10.62 [SEP] B09PCY83C3 [SEP] I'm A Basketball Mom Shirt, Basketball Lover, Hooper Gift, Basketball, T-Shirt, Sweater, Hoodie for Men, Women, Kids [SEP] $18.99",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07N62G99X [SEP] Shhh Nobody Knows I'm a Lesbian - LGBTQ Gay Pride T-Shirt [SEP] $19.95 [SEP] B00XD06YY0 [SEP] I'm A Mushroom and I Hate This Game Graphic Novelty Sarcastic Funny T Shirt [SEP] $14.99 to $18.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09RMZSM39 [SEP] Ladies Graphic Hot Drill Tight Blouse Off The Shoulder T Shirts Long Sleeve Crewneck Rhinestone Tees Sexy Pullover [SEP] $10.19 to $20.79 [SEP] B07PG48NM5 [SEP] I Am A January Girl T-Shirt Womens Birthday Gifts Shirt T-Shirt [SEP] $19.99 [SEP] B01F9JP3YE [SEP] I'm Magical - Rainbow Unicorn Magic Men's T-Shirt [SEP] $8.95 to $20.95 [SEP] B08FHVHV4H [SEP] I'm Blunt Because God Rolled Me That Way T-Shirt Vintage Tank Top [SEP] $19.99 [SEP] B07NDW96TW [SEP] I'm The Sassy Grandma T-Shirt [SEP] $19.95 [SEP] B09QG697K9 [SEP] Women Trendy Blouses Casual Butterfly Print T Shirts Floral Lace Long Sleeve T-Shirt Sheer Mesh Tunic Tops Summer Basic Tee [SEP] $8.77 to $10.62 [SEP] B09PCY83C3 [SEP] I'm A Basketball Mom Shirt, Basketball Lover, Hooper Gift, Basketball, T-Shirt, Sweater, Hoodie for Men, Women, Kids [SEP] $18.99\n\nRecent actions:\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07n62g99x]",
+              "3": "click[b00xd06yy0]",
+              "4": "click[b099z4t56c]",
+              "5": "click[b09rmzsm39]",
+              "6": "click[b07pg48nm5]",
+              "7": "click[b01f9jp3ye]",
+              "8": "click[b08fhvhv4h]",
+              "9": "click[b07ndw96tw]",
+              "10": "click[b09qg697k9]",
+              "11": "click[b09pcy83c3]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "918a3405cdbc2a324ea94ba9a1d30b4f48179376664bceaac281d37379cde3cf",
+      "attempts": [
+        {
+          "seconds": 0.3746030107140541,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3747997619211674,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.68,
+            "probabilities": {
+              "1": 0.72,
+              "3": 0.0,
+              "5": 0.0,
+              "11": 0.0,
+              "2": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              "7": 0.0,
+              "0": 0.28,
+              "4": 0.0,
+              "10": 0.0,
+              "6": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1149,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5448720753192902
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B081LJBQBP [SEP] Sloth Shirt I'm Not Weird I'm Limited Edition T-Shirt [SEP] $17.99 [SEP] B09RSPFPZZ [SEP] Swiusd Ladies Sleeveless Crop Padded Jacket Women Turtleneck Thicken Black Vest Outwear Sleeveless Lightweight Cotton Coat [SEP] $23.09 to $39.19 [SEP] B09PPVMV27 [SEP] I'm Sexy And I Throw It Funny Golf T-shirt, Sweater, Hoodie for Golf Lover, Golfing Gift for Men, Women, Kids [SEP] $18.99 [SEP] B09QCZLRRR [SEP] I'm Only Talking to My Dog Today Women’s Plus Size 3/4 Sleeve Linen T-Shirts Casual Loose Printed Summer T Shirts Tops [SEP] $10.71 to $14.3 [SEP] B09J6ZHS3Q [SEP] Alpaca Cardigan for Women. 100% Peruvian Baby Alpaca. US Size Chart for Great fit! - Princess Black [SEP] $159.99 [SEP] B09RN58KCQ [SEP] Ladies Fashion Cat Hoodies Sweatshirt Long Sleeve Pullover with Pocket Women Casual Loose Oversize Cat Print Jumper [SEP] $15.69 to $26.39 [SEP] B09PYMJJFR [SEP] Upetstory Women's T-Shirts Soft Short Sleeve Casual Tee Tops Daily Wear Size XS-4XL [SEP] $14.99 [SEP] B091C6VKG7 [SEP] Autism Dabbing Society Say I'm Autistic God Says I'm Perfect T-Shirt [SEP] $15.99 [SEP] B09NSCZPMM [SEP] Men's Western Vintage Short Sleeve Trucker Denim Shirt Jacket Distressed Washed Slim Fit Button Down Work Shirts [SEP] $14.49 to $19.49 [SEP] B08JSNBFLP [SEP] My Chemical Romance Men's I'm Not Okay Slim Fit T-Shirt Black [SEP] $16.91 to $26.98",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B081LJBQBP [SEP] Sloth Shirt I'm Not Weird I'm Limited Edition T-Shirt [SEP] $17.99 [SEP] B09RSPFPZZ [SEP] Swiusd Ladies Sleeveless Crop Padded Jacket Women Turtleneck Thicken Black Vest Outwear Sleeveless Lightweight Cotton Coat [SEP] $23.09 to $39.19 [SEP] B09PPVMV27 [SEP] I'm Sexy And I Throw It Funny Golf T-shirt, Sweater, Hoodie for Golf Lover, Golfing Gift for Men, Women, Kids [SEP] $18.99 [SEP] B09QCZLRRR [SEP] I'm Only Talking to My Dog Today Women’s Plus Size 3/4 Sleeve Linen T-Shirts Casual Loose Printed Summer T Shirts Tops [SEP] $10.71 to $14.3 [SEP] B09J6ZHS3Q [SEP] Alpaca Cardigan for Women. 100% Peruvian Baby Alpaca. US Size Chart for Great fit! - Princess Black [SEP] $159.99 [SEP] B09RN58KCQ [SEP] Ladies Fashion Cat Hoodies Sweatshirt Long Sleeve Pullover with Pocket Women Casual Loose Oversize Cat Print Jumper [SEP] $15.69 to $26.39 [SEP] B09PYMJJFR [SEP] Upetstory Women's T-Shirts Soft Short Sleeve Casual Tee Tops Daily Wear Size XS-4XL [SEP] $14.99 [SEP] B091C6VKG7 [SEP] Autism Dabbing Society Say I'm Autistic God Says I'm Perfect T-Shirt [SEP] $15.99 [SEP] B09NSCZPMM [SEP] Men's Western Vintage Short Sleeve Trucker Denim Shirt Jacket Distressed Washed Slim Fit Button Down Work Shirts [SEP] $14.49 to $19.49 [SEP] B08JSNBFLP [SEP] My Chemical Romance Men's I'm Not Okay Slim Fit T-Shirt Black [SEP] $16.91 to $26.98\n\nRecent actions:\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b081ljbqbp]",
+              "4": "click[b09rspfpzz]",
+              "5": "click[b09ppvmv27]",
+              "6": "click[b09qczlrrr]",
+              "7": "click[b09j6zhs3q]",
+              "8": "click[b09rn58kcq]",
+              "9": "click[b09pymjjfr]",
+              "10": "click[b091c6vkg7]",
+              "11": "click[b09nsczpmm]",
+              "12": "click[b08jsnbflp]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "fe075506ce1097adcad35edce11160a2e33290d527aedcf72cfea9a0bbb40030",
+      "attempts": [
+        {
+          "seconds": 0.3157632537186146,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.31596655398607254,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.24,
+            "probabilities": {
+              "0": 0.18,
+              "2": 0.29000000000000004,
+              "5": 0.0,
+              "4": 0.0,
+              "7": 0.08,
+              "1": 0.31,
+              "11": 0.0,
+              "8": 0.01,
+              "9": 0.13,
+              "3": 0.0,
+              "6": 0.0,
+              "10": 0.0,
+              "12": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1213,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[< prev]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9527315124869347
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07N62G99X [SEP] Shhh Nobody Knows I'm a Lesbian - LGBTQ Gay Pride T-Shirt [SEP] $19.95 [SEP] B00XD06YY0 [SEP] I'm A Mushroom and I Hate This Game Graphic Novelty Sarcastic Funny T Shirt [SEP] $14.99 to $18.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09RMZSM39 [SEP] Ladies Graphic Hot Drill Tight Blouse Off The Shoulder T Shirts Long Sleeve Crewneck Rhinestone Tees Sexy Pullover [SEP] $10.19 to $20.79 [SEP] B07PG48NM5 [SEP] I Am A January Girl T-Shirt Womens Birthday Gifts Shirt T-Shirt [SEP] $19.99 [SEP] B01F9JP3YE [SEP] I'm Magical - Rainbow Unicorn Magic Men's T-Shirt [SEP] $8.95 to $20.95 [SEP] B08FHVHV4H [SEP] I'm Blunt Because God Rolled Me That Way T-Shirt Vintage Tank Top [SEP] $19.99 [SEP] B07NDW96TW [SEP] I'm The Sassy Grandma T-Shirt [SEP] $19.95 [SEP] B09QG697K9 [SEP] Women Trendy Blouses Casual Butterfly Print T Shirts Floral Lace Long Sleeve T-Shirt Sheer Mesh Tunic Tops Summer Basic Tee [SEP] $8.77 to $10.62 [SEP] B09PCY83C3 [SEP] I'm A Basketball Mom Shirt, Basketball Lover, Hooper Gift, Basketball, T-Shirt, Sweater, Hoodie for Men, Women, Kids [SEP] $18.99",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07N62G99X [SEP] Shhh Nobody Knows I'm a Lesbian - LGBTQ Gay Pride T-Shirt [SEP] $19.95 [SEP] B00XD06YY0 [SEP] I'm A Mushroom and I Hate This Game Graphic Novelty Sarcastic Funny T Shirt [SEP] $14.99 to $18.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09RMZSM39 [SEP] Ladies Graphic Hot Drill Tight Blouse Off The Shoulder T Shirts Long Sleeve Crewneck Rhinestone Tees Sexy Pullover [SEP] $10.19 to $20.79 [SEP] B07PG48NM5 [SEP] I Am A January Girl T-Shirt Womens Birthday Gifts Shirt T-Shirt [SEP] $19.99 [SEP] B01F9JP3YE [SEP] I'm Magical - Rainbow Unicorn Magic Men's T-Shirt [SEP] $8.95 to $20.95 [SEP] B08FHVHV4H [SEP] I'm Blunt Because God Rolled Me That Way T-Shirt Vintage Tank Top [SEP] $19.99 [SEP] B07NDW96TW [SEP] I'm The Sassy Grandma T-Shirt [SEP] $19.95 [SEP] B09QG697K9 [SEP] Women Trendy Blouses Casual Butterfly Print T Shirts Floral Lace Long Sleeve T-Shirt Sheer Mesh Tunic Tops Summer Basic Tee [SEP] $8.77 to $10.62 [SEP] B09PCY83C3 [SEP] I'm A Basketball Mom Shirt, Basketball Lover, Hooper Gift, Basketball, T-Shirt, Sweater, Hoodie for Men, Women, Kids [SEP] $18.99\n\nRecent actions:\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]\nclick[< prev]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07n62g99x]",
+              "3": "click[b00xd06yy0]",
+              "4": "click[b099z4t56c]",
+              "5": "click[b09rmzsm39]",
+              "6": "click[b07pg48nm5]",
+              "7": "click[b01f9jp3ye]",
+              "8": "click[b08fhvhv4h]",
+              "9": "click[b07ndw96tw]",
+              "10": "click[b09qg697k9]",
+              "11": "click[b09pcy83c3]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "72101ce144c3f5527c319541a33f647c038ade63204ec628ce1fb3cdd0c78a1c",
+      "attempts": [
+        {
+          "seconds": 0.3363551087677479,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33649326115846634,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.44,
+            "probabilities": {
+              "1": 0.48,
+              "3": 0.0,
+              "5": 0.0,
+              "8": 0.0,
+              "11": 0.0,
+              "2": 0.01,
+              "9": 0.0,
+              "7": 0.0,
+              "0": 0.5,
+              "4": 0.01,
+              "10": 0.0,
+              "6": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1158,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.3056057654321194
+    },
+    {
+      "step": 4,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Search",
+      "action": "search[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.3823137879371643
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07N62G99X [SEP] Shhh Nobody Knows I'm a Lesbian - LGBTQ Gay Pride T-Shirt [SEP] $19.95 [SEP] B00XD06YY0 [SEP] I'm A Mushroom and I Hate This Game Graphic Novelty Sarcastic Funny T Shirt [SEP] $14.99 to $18.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09RMZSM39 [SEP] Ladies Graphic Hot Drill Tight Blouse Off The Shoulder T Shirts Long Sleeve Crewneck Rhinestone Tees Sexy Pullover [SEP] $10.19 to $20.79 [SEP] B07PG48NM5 [SEP] I Am A January Girl T-Shirt Womens Birthday Gifts Shirt T-Shirt [SEP] $19.99 [SEP] B01F9JP3YE [SEP] I'm Magical - Rainbow Unicorn Magic Men's T-Shirt [SEP] $8.95 to $20.95 [SEP] B08FHVHV4H [SEP] I'm Blunt Because God Rolled Me That Way T-Shirt Vintage Tank Top [SEP] $19.99 [SEP] B07NDW96TW [SEP] I'm The Sassy Grandma T-Shirt [SEP] $19.95 [SEP] B09QG697K9 [SEP] Women Trendy Blouses Casual Butterfly Print T Shirts Floral Lace Long Sleeve T-Shirt Sheer Mesh Tunic Tops Summer Basic Tee [SEP] $8.77 to $10.62 [SEP] B09PCY83C3 [SEP] I'm A Basketball Mom Shirt, Basketball Lover, Hooper Gift, Basketball, T-Shirt, Sweater, Hoodie for Men, Women, Kids [SEP] $18.99",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07N62G99X [SEP] Shhh Nobody Knows I'm a Lesbian - LGBTQ Gay Pride T-Shirt [SEP] $19.95 [SEP] B00XD06YY0 [SEP] I'm A Mushroom and I Hate This Game Graphic Novelty Sarcastic Funny T Shirt [SEP] $14.99 to $18.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09RMZSM39 [SEP] Ladies Graphic Hot Drill Tight Blouse Off The Shoulder T Shirts Long Sleeve Crewneck Rhinestone Tees Sexy Pullover [SEP] $10.19 to $20.79 [SEP] B07PG48NM5 [SEP] I Am A January Girl T-Shirt Womens Birthday Gifts Shirt T-Shirt [SEP] $19.99 [SEP] B01F9JP3YE [SEP] I'm Magical - Rainbow Unicorn Magic Men's T-Shirt [SEP] $8.95 to $20.95 [SEP] B08FHVHV4H [SEP] I'm Blunt Because God Rolled Me That Way T-Shirt Vintage Tank Top [SEP] $19.99 [SEP] B07NDW96TW [SEP] I'm The Sassy Grandma T-Shirt [SEP] $19.95 [SEP] B09QG697K9 [SEP] Women Trendy Blouses Casual Butterfly Print T Shirts Floral Lace Long Sleeve T-Shirt Sheer Mesh Tunic Tops Summer Basic Tee [SEP] $8.77 to $10.62 [SEP] B09PCY83C3 [SEP] I'm A Basketball Mom Shirt, Basketball Lover, Hooper Gift, Basketball, T-Shirt, Sweater, Hoodie for Men, Women, Kids [SEP] $18.99\n\nRecent actions:\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07n62g99x]",
+              "3": "click[b00xd06yy0]",
+              "4": "click[b099z4t56c]",
+              "5": "click[b09rmzsm39]",
+              "6": "click[b07pg48nm5]",
+              "7": "click[b01f9jp3ye]",
+              "8": "click[b08fhvhv4h]",
+              "9": "click[b07ndw96tw]",
+              "10": "click[b09qg697k9]",
+              "11": "click[b09pcy83c3]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "11abb011774a131e81623ef50f1f072febb99aa271f51fd5286843f6370bdb93",
+      "attempts": [
+        {
+          "seconds": 0.37583135813474655,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37595927715301514,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.69,
+            "probabilities": {
+              "7": 0.0,
+              "3": 0.0,
+              "9": 0.0,
+              "5": 0.01,
+              "11": 0.0,
+              "1": 0.73,
+              "10": 0.0,
+              "2": 0.01,
+              "0": 0.24,
+              "6": 0.0,
+              "8": 0.0,
+              "4": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1197,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.832320675253868
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B081LJBQBP [SEP] Sloth Shirt I'm Not Weird I'm Limited Edition T-Shirt [SEP] $17.99 [SEP] B09RSPFPZZ [SEP] Swiusd Ladies Sleeveless Crop Padded Jacket Women Turtleneck Thicken Black Vest Outwear Sleeveless Lightweight Cotton Coat [SEP] $23.09 to $39.19 [SEP] B09PPVMV27 [SEP] I'm Sexy And I Throw It Funny Golf T-shirt, Sweater, Hoodie for Golf Lover, Golfing Gift for Men, Women, Kids [SEP] $18.99 [SEP] B09QCZLRRR [SEP] I'm Only Talking to My Dog Today Women’s Plus Size 3/4 Sleeve Linen T-Shirts Casual Loose Printed Summer T Shirts Tops [SEP] $10.71 to $14.3 [SEP] B09J6ZHS3Q [SEP] Alpaca Cardigan for Women. 100% Peruvian Baby Alpaca. US Size Chart for Great fit! - Princess Black [SEP] $159.99 [SEP] B09RN58KCQ [SEP] Ladies Fashion Cat Hoodies Sweatshirt Long Sleeve Pullover with Pocket Women Casual Loose Oversize Cat Print Jumper [SEP] $15.69 to $26.39 [SEP] B09PYMJJFR [SEP] Upetstory Women's T-Shirts Soft Short Sleeve Casual Tee Tops Daily Wear Size XS-4XL [SEP] $14.99 [SEP] B091C6VKG7 [SEP] Autism Dabbing Society Say I'm Autistic God Says I'm Perfect T-Shirt [SEP] $15.99 [SEP] B09NSCZPMM [SEP] Men's Western Vintage Short Sleeve Trucker Denim Shirt Jacket Distressed Washed Slim Fit Button Down Work Shirts [SEP] $14.49 to $19.49 [SEP] B08JSNBFLP [SEP] My Chemical Romance Men's I'm Not Okay Slim Fit T-Shirt Black [SEP] $16.91 to $26.98",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B081LJBQBP [SEP] Sloth Shirt I'm Not Weird I'm Limited Edition T-Shirt [SEP] $17.99 [SEP] B09RSPFPZZ [SEP] Swiusd Ladies Sleeveless Crop Padded Jacket Women Turtleneck Thicken Black Vest Outwear Sleeveless Lightweight Cotton Coat [SEP] $23.09 to $39.19 [SEP] B09PPVMV27 [SEP] I'm Sexy And I Throw It Funny Golf T-shirt, Sweater, Hoodie for Golf Lover, Golfing Gift for Men, Women, Kids [SEP] $18.99 [SEP] B09QCZLRRR [SEP] I'm Only Talking to My Dog Today Women’s Plus Size 3/4 Sleeve Linen T-Shirts Casual Loose Printed Summer T Shirts Tops [SEP] $10.71 to $14.3 [SEP] B09J6ZHS3Q [SEP] Alpaca Cardigan for Women. 100% Peruvian Baby Alpaca. US Size Chart for Great fit! - Princess Black [SEP] $159.99 [SEP] B09RN58KCQ [SEP] Ladies Fashion Cat Hoodies Sweatshirt Long Sleeve Pullover with Pocket Women Casual Loose Oversize Cat Print Jumper [SEP] $15.69 to $26.39 [SEP] B09PYMJJFR [SEP] Upetstory Women's T-Shirts Soft Short Sleeve Casual Tee Tops Daily Wear Size XS-4XL [SEP] $14.99 [SEP] B091C6VKG7 [SEP] Autism Dabbing Society Say I'm Autistic God Says I'm Perfect T-Shirt [SEP] $15.99 [SEP] B09NSCZPMM [SEP] Men's Western Vintage Short Sleeve Trucker Denim Shirt Jacket Distressed Washed Slim Fit Button Down Work Shirts [SEP] $14.49 to $19.49 [SEP] B08JSNBFLP [SEP] My Chemical Romance Men's I'm Not Okay Slim Fit T-Shirt Black [SEP] $16.91 to $26.98\n\nRecent actions:\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b081ljbqbp]",
+              "4": "click[b09rspfpzz]",
+              "5": "click[b09ppvmv27]",
+              "6": "click[b09qczlrrr]",
+              "7": "click[b09j6zhs3q]",
+              "8": "click[b09rn58kcq]",
+              "9": "click[b09pymjjfr]",
+              "10": "click[b091c6vkg7]",
+              "11": "click[b09nsczpmm]",
+              "12": "click[b08jsnbflp]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "8757be0e4fb094f1580e8da14e05a2fb79e4183cf6834011bcecaa048ba154ad",
+      "attempts": [
+        {
+          "seconds": 0.3227102495729923,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3228534907102585,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.39,
+            "probabilities": {
+              "6": 0.0,
+              "1": 0.12,
+              "8": 0.01,
+              "3": 0.01,
+              "5": 0.0,
+              "7": 0.11,
+              "10": 0.0,
+              "4": 0.0,
+              "0": 0.08,
+              "9": 0.22,
+              "11": 0.0,
+              "2": 0.44,
+              "12": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1261,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.2355774454772472
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07KRQ9W2L [SEP] Disney Peter Pan Trust SMEE I'm A Pirate Salute T-Shirt T-Shirt [SEP] $22.99 [SEP] B09MDBHCZK [SEP] Men's Casual Vintage Distressed Wash Color Long Sleeve V-Neck Quarter Button Slim Fit Henley Shirt Blouse [SEP] $0.99 to $10.99 [SEP] B09LM9LTMV [SEP] Men's Fall Casual Denim Shirt Slim Fit USA American Flag Stripe Inside Long Sleeve Button Down Washed Jacket Coat [SEP] $10.99 to $25.99 [SEP] B09QSPT6WP [SEP] Hoyomi Workout T Shirt for Men, Short Sleeve Nursing Working Uniform T-Shirts V-Neck Solid Color Casual Breathable Blouse [SEP] $7.99 to $8.99 [SEP] B09PSTNFLH [SEP] I'm Going To Make An Offer He Can't Refuse Shirt, T-shirt For Fans Of Marlon Brando, Tribute Shirt, Sweater, Hoodie [SEP] $18.99 [SEP] B09B4GKWLD [SEP] Really! - I'm Not Anti-Social, I'd Just Rather Be Fishing T-Shirt [SEP] $19.99 [SEP] B09N3H2GCV [SEP] Lovor Shirts for Women Fashion Round Neck Plus Size Heart Love Print Tee Shirt Casual Short Sleeve T-Shirt Top Blouses [SEP] $100.0 [SEP] B09KX2N7T4 [SEP] Oversized Sweatshirt for Women Casual Long Sleeve Fall Sweatshirts Crew Neck Print Shirt Christmas Comfy Pullover [SEP] $7.99 to $11.99 [SEP] B09SD2PW1H [SEP] Trucker I'm The Storm 3D All Over Black Sublimation 3D Unisex T Shirt Warm Zip Hoodie Jacket Sweatshirt Sweater [SEP] $14.99 [SEP] B085B3W93H [SEP] Fat People Are Harder To Kidnap Funny Statement T-Shirt [SEP] $15.99",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07KRQ9W2L [SEP] Disney Peter Pan Trust SMEE I'm A Pirate Salute T-Shirt T-Shirt [SEP] $22.99 [SEP] B09MDBHCZK [SEP] Men's Casual Vintage Distressed Wash Color Long Sleeve V-Neck Quarter Button Slim Fit Henley Shirt Blouse [SEP] $0.99 to $10.99 [SEP] B09LM9LTMV [SEP] Men's Fall Casual Denim Shirt Slim Fit USA American Flag Stripe Inside Long Sleeve Button Down Washed Jacket Coat [SEP] $10.99 to $25.99 [SEP] B09QSPT6WP [SEP] Hoyomi Workout T Shirt for Men, Short Sleeve Nursing Working Uniform T-Shirts V-Neck Solid Color Casual Breathable Blouse [SEP] $7.99 to $8.99 [SEP] B09PSTNFLH [SEP] I'm Going To Make An Offer He Can't Refuse Shirt, T-shirt For Fans Of Marlon Brando, Tribute Shirt, Sweater, Hoodie [SEP] $18.99 [SEP] B09B4GKWLD [SEP] Really! - I'm Not Anti-Social, I'd Just Rather Be Fishing T-Shirt [SEP] $19.99 [SEP] B09N3H2GCV [SEP] Lovor Shirts for Women Fashion Round Neck Plus Size Heart Love Print Tee Shirt Casual Short Sleeve T-Shirt Top Blouses [SEP] $100.0 [SEP] B09KX2N7T4 [SEP] Oversized Sweatshirt for Women Casual Long Sleeve Fall Sweatshirts Crew Neck Print Shirt Christmas Comfy Pullover [SEP] $7.99 to $11.99 [SEP] B09SD2PW1H [SEP] Trucker I'm The Storm 3D All Over Black Sublimation 3D Unisex T Shirt Warm Zip Hoodie Jacket Sweatshirt Sweater [SEP] $14.99 [SEP] B085B3W93H [SEP] Fat People Are Harder To Kidnap Funny Statement T-Shirt [SEP] $15.99\n\nRecent actions:\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07krq9w2l]",
+              "4": "click[b09mdbhczk]",
+              "5": "click[b09lm9ltmv]",
+              "6": "click[b09qspt6wp]",
+              "7": "click[b09pstnflh]",
+              "8": "click[b09b4gkwld]",
+              "9": "click[b09n3h2gcv]",
+              "10": "click[b09kx2n7t4]",
+              "11": "click[b09sd2pw1h]",
+              "12": "click[b085b3w93h]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "06872c889d4d2c75b125892ff637a959c94a55e5e42a5894d8635021b58a0b73",
+      "attempts": [
+        {
+          "seconds": 0.3258572816848755,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.32597043365240097,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.36,
+            "probabilities": {
+              "12": 0.01,
+              "5": 0.0,
+              "1": 0.15,
+              "4": 0.0,
+              "11": 0.06,
+              "10": 0.01,
+              "6": 0.0,
+              "3": 0.02,
+              "2": 0.41,
+              "0": 0.31,
+              "8": 0.01,
+              "7": 0.0,
+              "9": 0.02
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1266,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.6616812124848366
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B079RY9F3N [SEP] I Play Water Polo Because I'm Too Good Looking Funny Shirt [SEP] $19.99 [SEP] B07WC7NVQX [SEP] In Dog Years I'm 420 60th Birthday Tshirt Tank Top [SEP] $19.95 [SEP] B09RQ49ZDC [SEP] Funny sarcastic I'm Sorry Did I Roll My Eyes Out Loud Tank Top [SEP] $19.99 [SEP] B07V9ZZDG1 [SEP] I'm With The Band Retro 70's Look T-Shirt [SEP] $13.98 [SEP] B09NSDLTXF [SEP] Unisex Fashion 3D Print T-Shirts Space Universe Nebula Galaxy Hawaiian Shirt Men Casual Long Sleeve Sweatshirt [SEP] $8.28 to $13.28 [SEP] B08QV7P9CV [SEP] I'm Not Weird I'm Just More Creative Than You Anime T-Shirt [SEP] $16.5 [SEP] B091QHW6LQ [SEP] USA Patriotic American Llama July 4th Alpaca Cute T-Shirt [SEP] $14.99 [SEP] B07PBPWT9R [SEP] Kids 6th Birthday Boy Shark Shirts Jaw-Some Six Shirt Boys T-Shirt [SEP] $16.99 [SEP] B09PYJZP5C [SEP] I'm Not Sleeping I'm Just Resting My Eyes Vintage Dad Joke Grunge Shirt, Hoodie, T-Shirt [SEP] $100.0 [SEP] B096MFFH2D [SEP] kathshop Personalized Rooster Mexico Us6 3D Printed Unisex Shirts Hoodie Rooster Lover, Gift for Mexican Black [SEP] $30.84",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B079RY9F3N [SEP] I Play Water Polo Because I'm Too Good Looking Funny Shirt [SEP] $19.99 [SEP] B07WC7NVQX [SEP] In Dog Years I'm 420 60th Birthday Tshirt Tank Top [SEP] $19.95 [SEP] B09RQ49ZDC [SEP] Funny sarcastic I'm Sorry Did I Roll My Eyes Out Loud Tank Top [SEP] $19.99 [SEP] B07V9ZZDG1 [SEP] I'm With The Band Retro 70's Look T-Shirt [SEP] $13.98 [SEP] B09NSDLTXF [SEP] Unisex Fashion 3D Print T-Shirts Space Universe Nebula Galaxy Hawaiian Shirt Men Casual Long Sleeve Sweatshirt [SEP] $8.28 to $13.28 [SEP] B08QV7P9CV [SEP] I'm Not Weird I'm Just More Creative Than You Anime T-Shirt [SEP] $16.5 [SEP] B091QHW6LQ [SEP] USA Patriotic American Llama July 4th Alpaca Cute T-Shirt [SEP] $14.99 [SEP] B07PBPWT9R [SEP] Kids 6th Birthday Boy Shark Shirts Jaw-Some Six Shirt Boys T-Shirt [SEP] $16.99 [SEP] B09PYJZP5C [SEP] I'm Not Sleeping I'm Just Resting My Eyes Vintage Dad Joke Grunge Shirt, Hoodie, T-Shirt [SEP] $100.0 [SEP] B096MFFH2D [SEP] kathshop Personalized Rooster Mexico Us6 3D Printed Unisex Shirts Hoodie Rooster Lover, Gift for Mexican Black [SEP] $30.84\n\nRecent actions:\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b079ry9f3n]",
+              "4": "click[b07wc7nvqx]",
+              "5": "click[b09rq49zdc]",
+              "6": "click[b07v9zzdg1]",
+              "7": "click[b09nsdltxf]",
+              "8": "click[b08qv7p9cv]",
+              "9": "click[b091qhw6lq]",
+              "10": "click[b07pbpwt9r]",
+              "11": "click[b09pyjzp5c]",
+              "12": "click[b096mffh2d]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "9ca7efbb2686c079da9b387b39ecb44d7db66600d35191e7c3d770ed6761bc61",
+      "attempts": [
+        {
+          "seconds": 0.3860141485929489,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.38613004237413406,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "9",
+            "confidence": 0.86,
+            "probabilities": {
+              "4": 0.0,
+              "9": 0.88,
+              "7": 0.0,
+              "5": 0.0,
+              "3": 0.0,
+              "12": 0.0,
+              "10": 0.0,
+              "0": 0.05,
+              "2": 0.02,
+              "6": 0.0,
+              "8": 0.0,
+              "11": 0.0,
+              "1": 0.05
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1200,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b091qhw6lq]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.077573388814926
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] fit type [SEP] men [SEP] women [SEP] youth [SEP] color [SEP] black [SEP] navy [SEP] asphalt [SEP] slate [SEP] royal blue [SEP] baby blue [SEP] cranberry [SEP] red [SEP] dark heather [SEP] pink [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 2t [SEP] 3t [SEP] 4t [SEP] x-small [SEP] USA Patriotic American Llama July 4th Alpaca Cute T-Shirt [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] fit type [SEP] men [SEP] women [SEP] youth [SEP] color [SEP] black [SEP] navy [SEP] asphalt [SEP] slate [SEP] royal blue [SEP] baby blue [SEP] cranberry [SEP] red [SEP] dark heather [SEP] pink [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 2t [SEP] 3t [SEP] 4t [SEP] x-small [SEP] USA Patriotic American Llama July 4th Alpaca Cute T-Shirt [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b091qhw6lq]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[men]",
+              "7": "click[women]",
+              "8": "click[youth]",
+              "9": "click[black]",
+              "10": "click[navy]",
+              "11": "click[asphalt]",
+              "12": "click[slate]",
+              "13": "click[royal blue]",
+              "14": "click[baby blue]",
+              "15": "click[cranberry]",
+              "16": "click[red]",
+              "17": "click[dark heather]",
+              "18": "click[pink]",
+              "19": "click[small]",
+              "20": "click[medium]",
+              "21": "click[large]",
+              "22": "click[x-large]",
+              "23": "click[xx-large]",
+              "24": "click[3x-large]",
+              "25": "click[2t]",
+              "26": "click[3t]",
+              "27": "click[4t]",
+              "28": "click[x-small]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "103827e242faf074d84401e63909cfb68e6d3d9997b978a947260f196e904e25",
+      "attempts": [
+        {
+          "seconds": 0.46282167732715607,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4629640206694603,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "7",
+            "confidence": 0.57,
+            "probabilities": {
+              "17": 0.0,
+              "15": 0.0,
+              "3": 0.03,
+              "9": 0.05,
+              "7": 0.59,
+              "27": 0.0,
+              "23": 0.0,
+              "11": 0.0,
+              "21": 0.0,
+              "16": 0.0,
+              "6": 0.0,
+              "8": 0.0,
+              "12": 0.0,
+              "25": 0.0,
+              "22": 0.0,
+              "20": 0.0,
+              "2": 0.01,
+              "1": 0.0,
+              "13": 0.0,
+              "0": 0.01,
+              "24": 0.0,
+              "28": 0.0,
+              "19": 0.07,
+              "14": 0.0,
+              "5": 0.24000000000000002,
+              "4": 0.0,
+              "10": 0.0,
+              "26": 0.0,
+              "18": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1167,
+          "output_tokens": 239
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[women]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.5658389888703823
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] fit type [SEP] men [SEP] women [SEP] youth [SEP] color [SEP] black [SEP] navy [SEP] asphalt [SEP] slate [SEP] royal blue [SEP] baby blue [SEP] cranberry [SEP] red [SEP] dark heather [SEP] pink [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 2t [SEP] 3t [SEP] 4t [SEP] x-small [SEP] USA Patriotic American Llama July 4th Alpaca Cute T-Shirt [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] fit type [SEP] men [SEP] women [SEP] youth [SEP] color [SEP] black [SEP] navy [SEP] asphalt [SEP] slate [SEP] royal blue [SEP] baby blue [SEP] cranberry [SEP] red [SEP] dark heather [SEP] pink [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 2t [SEP] 3t [SEP] 4t [SEP] x-small [SEP] USA Patriotic American Llama July 4th Alpaca Cute T-Shirt [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b091qhw6lq]\nclick[women]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[men]",
+              "7": "click[women]",
+              "8": "click[youth]",
+              "9": "click[black]",
+              "10": "click[navy]",
+              "11": "click[asphalt]",
+              "12": "click[slate]",
+              "13": "click[royal blue]",
+              "14": "click[baby blue]",
+              "15": "click[cranberry]",
+              "16": "click[red]",
+              "17": "click[dark heather]",
+              "18": "click[pink]",
+              "19": "click[small]",
+              "20": "click[medium]",
+              "21": "click[large]",
+              "22": "click[x-large]",
+              "23": "click[xx-large]",
+              "24": "click[3x-large]",
+              "25": "click[2t]",
+              "26": "click[3t]",
+              "27": "click[4t]",
+              "28": "click[x-small]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "746210c85519098ae54fb4fcb1bbbcc6a891456982c216901f72405709ad0789",
+      "attempts": [
+        {
+          "seconds": 0.3536772094666958,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.35383907333016396,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "9",
+            "confidence": 0.34,
+            "probabilities": {
+              "5": 0.3,
+              "21": 0.0,
+              "26": 0.0,
+              "19": 0.29,
+              "4": 0.0,
+              "15": 0.0,
+              "20": 0.0,
+              "0": 0.0,
+              "28": 0.0,
+              "6": 0.0,
+              "3": 0.01,
+              "18": 0.0,
+              "24": 0.0,
+              "1": 0.0,
+              "7": 0.01,
+              "17": 0.0,
+              "16": 0.0,
+              "22": 0.0,
+              "12": 0.0,
+              "2": 0.02,
+              "13": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "9": 0.37,
+              "25": 0.0,
+              "27": 0.0,
+              "8": 0.0,
+              "23": 0.0,
+              "14": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1171,
+          "output_tokens": 239
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[black]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.944194819778204
+    },
+    {
+      "step": 11,
+      "observation": "Instruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] fit type [SEP] men [SEP] women [SEP] youth [SEP] color [SEP] black [SEP] navy [SEP] asphalt [SEP] slate [SEP] royal blue [SEP] baby blue [SEP] cranberry [SEP] red [SEP] dark heather [SEP] pink [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 2t [SEP] 3t [SEP] 4t [SEP] x-small [SEP] USA Patriotic American Llama July 4th Alpaca Cute T-Shirt [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] fit type [SEP] men [SEP] women [SEP] youth [SEP] color [SEP] black [SEP] navy [SEP] asphalt [SEP] slate [SEP] royal blue [SEP] baby blue [SEP] cranberry [SEP] red [SEP] dark heather [SEP] pink [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 2t [SEP] 3t [SEP] 4t [SEP] x-small [SEP] USA Patriotic American Llama July 4th Alpaca Cute T-Shirt [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[next >]\nclick[< prev]\nclick[back to search]\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b091qhw6lq]\nclick[women]\nclick[black]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[men]",
+              "7": "click[women]",
+              "8": "click[youth]",
+              "9": "click[black]",
+              "10": "click[navy]",
+              "11": "click[asphalt]",
+              "12": "click[slate]",
+              "13": "click[royal blue]",
+              "14": "click[baby blue]",
+              "15": "click[cranberry]",
+              "16": "click[red]",
+              "17": "click[dark heather]",
+              "18": "click[pink]",
+              "19": "click[small]",
+              "20": "click[medium]",
+              "21": "click[large]",
+              "22": "click[x-large]",
+              "23": "click[xx-large]",
+              "24": "click[3x-large]",
+              "25": "click[2t]",
+              "26": "click[3t]",
+              "27": "click[4t]",
+              "28": "click[x-small]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "f3f61fcbf9171e9ac78765bfaaf3d2010683a10f6ae49aae030ecad3dd92cc6c",
+      "attempts": [
+        {
+          "seconds": 0.33128656819462776,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.331435676664114,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "19",
+            "confidence": 0.53,
+            "probabilities": {
+              "11": 0.0,
+              "28": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              "16": 0.0,
+              "24": 0.0,
+              "4": 0.0,
+              "21": 0.0,
+              "2": 0.02,
+              "0": 0.0,
+              "1": 0.0,
+              "17": 0.0,
+              "12": 0.0,
+              "22": 0.0,
+              "7": 0.0,
+              "19": 0.56,
+              "10": 0.0,
+              "25": 0.0,
+              "26": 0.0,
+              "3": 0.06,
+              "14": 0.0,
+              "6": 0.0,
+              "5": 0.35000000000000003,
+              "23": 0.0,
+              "27": 0.0,
+              "13": 0.0,
+              "18": 0.0,
+              "20": 0.0,
+              "15": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1143,
+          "output_tokens": 240
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[small]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.302443604916334
+    },
+    {
+      "step": 12,
+      "observation": "Instruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] fit type [SEP] men [SEP] women [SEP] youth [SEP] color [SEP] black [SEP] navy [SEP] asphalt [SEP] slate [SEP] royal blue [SEP] baby blue [SEP] cranberry [SEP] red [SEP] dark heather [SEP] pink [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 2t [SEP] 3t [SEP] 4t [SEP] x-small [SEP] USA Patriotic American Llama July 4th Alpaca Cute T-Shirt [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] fit type [SEP] men [SEP] women [SEP] youth [SEP] color [SEP] black [SEP] navy [SEP] asphalt [SEP] slate [SEP] royal blue [SEP] baby blue [SEP] cranberry [SEP] red [SEP] dark heather [SEP] pink [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 2t [SEP] 3t [SEP] 4t [SEP] x-small [SEP] USA Patriotic American Llama July 4th Alpaca Cute T-Shirt [SEP] Price: $14.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[< prev]\nclick[back to search]\nsearch[i'm looking for a small black t-shirt for women with alpaca design and manchine wash, and price lower than 30.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[b091qhw6lq]\nclick[women]\nclick[black]\nclick[small]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[men]",
+              "7": "click[women]",
+              "8": "click[youth]",
+              "9": "click[black]",
+              "10": "click[navy]",
+              "11": "click[asphalt]",
+              "12": "click[slate]",
+              "13": "click[royal blue]",
+              "14": "click[baby blue]",
+              "15": "click[cranberry]",
+              "16": "click[red]",
+              "17": "click[dark heather]",
+              "18": "click[pink]",
+              "19": "click[small]",
+              "20": "click[medium]",
+              "21": "click[large]",
+              "22": "click[x-large]",
+              "23": "click[xx-large]",
+              "24": "click[3x-large]",
+              "25": "click[2t]",
+              "26": "click[3t]",
+              "27": "click[4t]",
+              "28": "click[x-small]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "039baaf5c6d63b054044ea08f0047520f5014c486ff568a9e7133c0eadbfac88",
+      "attempts": [
+        {
+          "seconds": 0.37121453508734703,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37138597667217255,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.63,
+            "probabilities": {
+              "15": 0.0,
+              "27": 0.0,
+              "17": 0.0,
+              "6": 0.0,
+              "14": 0.0,
+              "0": 0.01,
+              "25": 0.0,
+              "21": 0.0,
+              "9": 0.0,
+              "1": 0.01,
+              "4": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "5": 0.65,
+              "19": 0.0,
+              "24": 0.0,
+              "3": 0.24000000000000002,
+              "7": 0.0,
+              "26": 0.0,
+              "16": 0.0,
+              "2": 0.09,
+              "13": 0.0,
+              "12": 0.0,
+              "18": 0.0,
+              "22": 0.0,
+              "20": 0.0,
+              "28": 0.0,
+              "8": 0.0,
+              "23": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1144,
+          "output_tokens": 239
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 4.705295044928789
+    }
+  ]
+}

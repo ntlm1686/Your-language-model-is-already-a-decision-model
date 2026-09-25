@@ -1,0 +1,375 @@
+{
+  "task_id": 353,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "find a water resistant leather jacket, and price lower than 110.00 dollars",
+  "instruction_sha256": "5d721bafad5c445574be59ef56ee7beb796b816adcba723a1ecf8816609bee8a",
+  "reward": 0.5,
+  "score": 50.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 7,
+  "elapsed_seconds": 1.905174471437931,
+  "decision_seconds": 1.7326470129191875,
+  "input_tokens": 4647,
+  "output_tokens": 491,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Search",
+      "action": "search[find a water resistant leather jacket, and price lower than 110.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.042011212557554245
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09G9JDZWS [SEP] Essentials Men's Water-Resistant Puffer Jacket Winter Down Jackets with Detachable Hat Full Zip Classic Thermal Outerwear [SEP] $20.71 to $25.99 [SEP] B00RKNWG34 [SEP] Townforst Women's Slip and Oil Resistant Non Slip Work Shoes Jess PU Leather Slip-On Flat [SEP] $18.98 to $34.98 [SEP] B09RGX2X2P [SEP] Men's Fashion Slim Fit Casual Loose Suit Slim Fit Single Breasted Jacket Blazer Floral Dress Shirt Turn Down Sport Coat [SEP] $25.99 [SEP] B08CSX61Z2 [SEP] Tommy Hilfiger Men's Water Resistant Ultra Loft Down Alternative Puffer Jacket [SEP] $63.33 to $169.75 [SEP] B091FT1YPM [SEP] The jacket Designer Men's Motorcycle Victory Lane Distressed Cowhide Leather Jacket [SEP] $199.99 [SEP] B00LV8PAPU [SEP] Nomad USA Motorcycle Leather jacket for Men [SEP] $79.99 [SEP] B006Z9YZ1K [SEP] Audioquest - Golden Gate Mini-to-Mini (3.0m) [SEP] $109.95 [SEP] B007NIQUIS [SEP] Betty Dain Premier Barber Jacket, Soft, Lightweight, Water Resistant Nylon Repels Hair, Zippered Front, Two Angled Lower Pockets with Zippered Bottoms, Angled Chest Pocket, Black, 3X [SEP] $22.59 [SEP] B007NIQWE0 [SEP] Betty Dain Premier Barber Jacket, Soft, Lightweight, Water Resistant Nylon Repels Hair, Zippered Front, Two Angled Lower Pockets with Zippered Bottoms, Angled Chest Pocket, Burgundy, XL [SEP] $22.05 [SEP] B09MTG5R84 [SEP] Men Suit Jacket Blazer Banquet Senior Suit Jacket Slim Fit Tuxedo Costume for Party,Wedding,Banquet,Prom [SEP] $22.65 to $37.99",
+      "request": {
+        "state": "Shopping instruction:\nfind a water resistant leather jacket, and price lower than 110.00 dollars\n\nCurrent page:\nInstruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09G9JDZWS [SEP] Essentials Men's Water-Resistant Puffer Jacket Winter Down Jackets with Detachable Hat Full Zip Classic Thermal Outerwear [SEP] $20.71 to $25.99 [SEP] B00RKNWG34 [SEP] Townforst Women's Slip and Oil Resistant Non Slip Work Shoes Jess PU Leather Slip-On Flat [SEP] $18.98 to $34.98 [SEP] B09RGX2X2P [SEP] Men's Fashion Slim Fit Casual Loose Suit Slim Fit Single Breasted Jacket Blazer Floral Dress Shirt Turn Down Sport Coat [SEP] $25.99 [SEP] B08CSX61Z2 [SEP] Tommy Hilfiger Men's Water Resistant Ultra Loft Down Alternative Puffer Jacket [SEP] $63.33 to $169.75 [SEP] B091FT1YPM [SEP] The jacket Designer Men's Motorcycle Victory Lane Distressed Cowhide Leather Jacket [SEP] $199.99 [SEP] B00LV8PAPU [SEP] Nomad USA Motorcycle Leather jacket for Men [SEP] $79.99 [SEP] B006Z9YZ1K [SEP] Audioquest - Golden Gate Mini-to-Mini (3.0m) [SEP] $109.95 [SEP] B007NIQUIS [SEP] Betty Dain Premier Barber Jacket, Soft, Lightweight, Water Resistant Nylon Repels Hair, Zippered Front, Two Angled Lower Pockets with Zippered Bottoms, Angled Chest Pocket, Black, 3X [SEP] $22.59 [SEP] B007NIQWE0 [SEP] Betty Dain Premier Barber Jacket, Soft, Lightweight, Water Resistant Nylon Repels Hair, Zippered Front, Two Angled Lower Pockets with Zippered Bottoms, Angled Chest Pocket, Burgundy, XL [SEP] $22.05 [SEP] B09MTG5R84 [SEP] Men Suit Jacket Blazer Banquet Senior Suit Jacket Slim Fit Tuxedo Costume for Party,Wedding,Banquet,Prom [SEP] $22.65 to $37.99\n\nRecent actions:\nsearch[find a water resistant leather jacket, and price lower than 110.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09g9jdzws]",
+              "3": "click[b00rknwg34]",
+              "4": "click[b09rgx2x2p]",
+              "5": "click[b08csx61z2]",
+              "6": "click[b091ft1ypm]",
+              "7": "click[b00lv8papu]",
+              "8": "click[b006z9yz1k]",
+              "9": "click[b007niquis]",
+              "10": "click[b007niqwe0]",
+              "11": "click[b09mtg5r84]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "5cebae436865494bea0c39f219199212c6b754a6607654353b2a55e6cf18c2d4",
+      "attempts": [
+        {
+          "seconds": 0.31806379929184914,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3181658051908016,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "7",
+            "confidence": 0.8,
+            "probabilities": {
+              "2": 0.0,
+              "1": 0.1,
+              "10": 0.0,
+              "0": 0.03,
+              "11": 0.0,
+              "5": 0.02,
+              "9": 0.0,
+              "3": 0.02,
+              "6": 0.0,
+              "8": 0.0,
+              "4": 0.0,
+              "7": 0.83
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1172,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b00lv8papu]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.38260458782315254
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] 5x-large [SEP] Nomad USA Motorcycle Leather jacket for Men [SEP] Price: $79.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\nfind a water resistant leather jacket, and price lower than 110.00 dollars\n\nCurrent page:\nInstruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] 5x-large [SEP] Nomad USA Motorcycle Leather jacket for Men [SEP] Price: $79.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[find a water resistant leather jacket, and price lower than 110.00 dollars]\nclick[b00lv8papu]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[x-small]",
+              "7": "click[small]",
+              "8": "click[medium]",
+              "9": "click[large]",
+              "10": "click[x-large]",
+              "11": "click[xx-large]",
+              "12": "click[3x-large]",
+              "13": "click[4x-large]",
+              "14": "click[5x-large]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "c489c0e0d2f1c0897d1a1d8739ceb9f9c7c7f109c82be4b32e7b9b52a12d93fc",
+      "attempts": [
+        {
+          "seconds": 0.317868173122406,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.31796275451779366,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "confidence": 0.53,
+            "probabilities": {
+              "6": 0.0,
+              "7": 0.01,
+              "8": 0.06,
+              "5": 0.27,
+              "14": 0.0,
+              "2": 0.07,
+              "0": 0.01,
+              "12": 0.0,
+              "9": 0.01,
+              "10": 0.0,
+              "13": 0.0,
+              "3": 0.56,
+              "4": 0.0,
+              "1": 0.0,
+              "11": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 755,
+          "output_tokens": 127
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[features]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.7110290788114071
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Leather [SEP] ✅ PREMIUM LEATHER: This Nomad Jacket is made of Premium Leather to provide the best quality of leather to our riding community. Designed with exquisite workmanship and easy care leather, this heavy duty jacket is wrinkle free and will never sag. [SEP] ✅ CLASSIC VINTAGE DESIGN: This motorbike leather jacket has a timeless retro design that will never go out of style and will compliment any outfit. [SEP] ✅ MULTI-POCKET: No need to worry about leaving anything behind with Angel Fire’s multiple pockets, which have enough space to carry your keys, wallet, cards, cash, sunglasses, phone, and other items without making you uncomfortable while riding. [SEP] ✅ FUNCTIONAL & COMFORTABLE: This is one of Nomad USA safest and most comfortable motorcycle jackets. It comes with a belted waist and adjustable cuffs that you can modify according to your size. It includes heavy duty zippers and a quilted polyester liner that is soft to the touch [SEP] ✅ AFFORDABLE QUALITY: We manufacture our jackets with the highest quality materials at an affordable price. Try our leather jackets without worry because you will surely notice the quality of workmanship and ride in style.",
+      "request": {
+        "state": "Shopping instruction:\nfind a water resistant leather jacket, and price lower than 110.00 dollars\n\nCurrent page:\nInstruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Leather [SEP] ✅ PREMIUM LEATHER: This Nomad Jacket is made of Premium Leather to provide the best quality of leather to our riding community. Designed with exquisite workmanship and easy care leather, this heavy duty jacket is wrinkle free and will never sag. [SEP] ✅ CLASSIC VINTAGE DESIGN: This motorbike leather jacket has a timeless retro design that will never go out of style and will compliment any outfit. [SEP] ✅ MULTI-POCKET: No need to worry about leaving anything behind with Angel Fire’s multiple pockets, which have enough space to carry your keys, wallet, cards, cash, sunglasses, phone, and other items without making you uncomfortable while riding. [SEP] ✅ FUNCTIONAL & COMFORTABLE: This is one of Nomad USA safest and most comfortable motorcycle jackets. It comes with a belted waist and adjustable cuffs that you can modify according to your size. It includes heavy duty zippers and a quilted polyester liner that is soft to the touch [SEP] ✅ AFFORDABLE QUALITY: We manufacture our jackets with the highest quality materials at an affordable price. Try our leather jackets without worry because you will surely notice the quality of workmanship and ride in style.\n\nRecent actions:\nsearch[find a water resistant leather jacket, and price lower than 110.00 dollars]\nclick[b00lv8papu]\nclick[features]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "e822485f114307a233f6173737fa2cdc06eeed80d066f6241513d3da37c78fa9",
+      "attempts": [
+        {
+          "seconds": 0.3661581687629223,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.36631035804748535,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.71,
+            "probabilities": {
+              "1": 0.15,
+              "0": 0.85
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 709,
+          "output_tokens": 31
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.0843552239239216
+    },
+    {
+      "step": 4,
+      "observation": "WebShop [SEP] Instruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Search",
+      "action": "search[find a water resistant leather jacket, and price lower than 110.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.1267096027731895
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09G9JDZWS [SEP] Essentials Men's Water-Resistant Puffer Jacket Winter Down Jackets with Detachable Hat Full Zip Classic Thermal Outerwear [SEP] $20.71 to $25.99 [SEP] B00RKNWG34 [SEP] Townforst Women's Slip and Oil Resistant Non Slip Work Shoes Jess PU Leather Slip-On Flat [SEP] $18.98 to $34.98 [SEP] B09RGX2X2P [SEP] Men's Fashion Slim Fit Casual Loose Suit Slim Fit Single Breasted Jacket Blazer Floral Dress Shirt Turn Down Sport Coat [SEP] $25.99 [SEP] B08CSX61Z2 [SEP] Tommy Hilfiger Men's Water Resistant Ultra Loft Down Alternative Puffer Jacket [SEP] $63.33 to $169.75 [SEP] B091FT1YPM [SEP] The jacket Designer Men's Motorcycle Victory Lane Distressed Cowhide Leather Jacket [SEP] $199.99 [SEP] B00LV8PAPU [SEP] Nomad USA Motorcycle Leather jacket for Men [SEP] $79.99 [SEP] B006Z9YZ1K [SEP] Audioquest - Golden Gate Mini-to-Mini (3.0m) [SEP] $109.95 [SEP] B007NIQUIS [SEP] Betty Dain Premier Barber Jacket, Soft, Lightweight, Water Resistant Nylon Repels Hair, Zippered Front, Two Angled Lower Pockets with Zippered Bottoms, Angled Chest Pocket, Black, 3X [SEP] $22.59 [SEP] B007NIQWE0 [SEP] Betty Dain Premier Barber Jacket, Soft, Lightweight, Water Resistant Nylon Repels Hair, Zippered Front, Two Angled Lower Pockets with Zippered Bottoms, Angled Chest Pocket, Burgundy, XL [SEP] $22.05 [SEP] B09MTG5R84 [SEP] Men Suit Jacket Blazer Banquet Senior Suit Jacket Slim Fit Tuxedo Costume for Party,Wedding,Banquet,Prom [SEP] $22.65 to $37.99",
+      "request": {
+        "state": "Shopping instruction:\nfind a water resistant leather jacket, and price lower than 110.00 dollars\n\nCurrent page:\nInstruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09G9JDZWS [SEP] Essentials Men's Water-Resistant Puffer Jacket Winter Down Jackets with Detachable Hat Full Zip Classic Thermal Outerwear [SEP] $20.71 to $25.99 [SEP] B00RKNWG34 [SEP] Townforst Women's Slip and Oil Resistant Non Slip Work Shoes Jess PU Leather Slip-On Flat [SEP] $18.98 to $34.98 [SEP] B09RGX2X2P [SEP] Men's Fashion Slim Fit Casual Loose Suit Slim Fit Single Breasted Jacket Blazer Floral Dress Shirt Turn Down Sport Coat [SEP] $25.99 [SEP] B08CSX61Z2 [SEP] Tommy Hilfiger Men's Water Resistant Ultra Loft Down Alternative Puffer Jacket [SEP] $63.33 to $169.75 [SEP] B091FT1YPM [SEP] The jacket Designer Men's Motorcycle Victory Lane Distressed Cowhide Leather Jacket [SEP] $199.99 [SEP] B00LV8PAPU [SEP] Nomad USA Motorcycle Leather jacket for Men [SEP] $79.99 [SEP] B006Z9YZ1K [SEP] Audioquest - Golden Gate Mini-to-Mini (3.0m) [SEP] $109.95 [SEP] B007NIQUIS [SEP] Betty Dain Premier Barber Jacket, Soft, Lightweight, Water Resistant Nylon Repels Hair, Zippered Front, Two Angled Lower Pockets with Zippered Bottoms, Angled Chest Pocket, Black, 3X [SEP] $22.59 [SEP] B007NIQWE0 [SEP] Betty Dain Premier Barber Jacket, Soft, Lightweight, Water Resistant Nylon Repels Hair, Zippered Front, Two Angled Lower Pockets with Zippered Bottoms, Angled Chest Pocket, Burgundy, XL [SEP] $22.05 [SEP] B09MTG5R84 [SEP] Men Suit Jacket Blazer Banquet Senior Suit Jacket Slim Fit Tuxedo Costume for Party,Wedding,Banquet,Prom [SEP] $22.65 to $37.99\n\nRecent actions:\nsearch[find a water resistant leather jacket, and price lower than 110.00 dollars]\nclick[b00lv8papu]\nclick[features]\nclick[back to search]\nsearch[find a water resistant leather jacket, and price lower than 110.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09g9jdzws]",
+              "3": "click[b00rknwg34]",
+              "4": "click[b09rgx2x2p]",
+              "5": "click[b08csx61z2]",
+              "6": "click[b091ft1ypm]",
+              "7": "click[b00lv8papu]",
+              "8": "click[b006z9yz1k]",
+              "9": "click[b007niquis]",
+              "10": "click[b007niqwe0]",
+              "11": "click[b09mtg5r84]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "8aea54d836372042230933652164112097c2c8eedba7123b23ac3e135b55dc3e",
+      "attempts": [
+        {
+          "seconds": 0.3444390371441841,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.34453994035720825,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "7",
+            "confidence": 0.66,
+            "probabilities": {
+              "2": 0.0,
+              "9": 0.0,
+              "6": 0.0,
+              "7": 0.7,
+              "5": 0.02,
+              "10": 0.0,
+              "11": 0.0,
+              "3": 0.04,
+              "8": 0.0,
+              "4": 0.0,
+              "0": 0.0,
+              "1": 0.24
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1214,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b00lv8papu]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.4933846555650234
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] 5x-large [SEP] Nomad USA Motorcycle Leather jacket for Men [SEP] Price: $79.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\nfind a water resistant leather jacket, and price lower than 110.00 dollars\n\nCurrent page:\nInstruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] 5x-large [SEP] Nomad USA Motorcycle Leather jacket for Men [SEP] Price: $79.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[find a water resistant leather jacket, and price lower than 110.00 dollars]\nclick[b00lv8papu]\nclick[features]\nclick[back to search]\nsearch[find a water resistant leather jacket, and price lower than 110.00 dollars]\nclick[b00lv8papu]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[x-small]",
+              "7": "click[small]",
+              "8": "click[medium]",
+              "9": "click[large]",
+              "10": "click[x-large]",
+              "11": "click[xx-large]",
+              "12": "click[3x-large]",
+              "13": "click[4x-large]",
+              "14": "click[5x-large]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "646a657df6c3b7718807176b03b764dc544b6e3d2486258af18911326df26a5c",
+      "attempts": [
+        {
+          "seconds": 0.38556086644530296,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.38566815480589867,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.54,
+            "probabilities": {
+              "6": 0.0,
+              "13": 0.0,
+              "11": 0.0,
+              "1": 0.01,
+              "4": 0.01,
+              "8": 0.07,
+              "14": 0.0,
+              "12": 0.0,
+              "3": 0.26,
+              "0": 0.0,
+              "7": 0.01,
+              "10": 0.0,
+              "2": 0.06,
+              "5": 0.57,
+              "9": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 797,
+          "output_tokens": 127
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.5,
+      "done": true,
+      "elapsed_seconds": 1.9051713682711124
+    }
+  ]
+}

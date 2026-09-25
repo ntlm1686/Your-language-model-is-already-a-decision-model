@@ -1,0 +1,372 @@
+{
+  "task_id": 43,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars",
+  "instruction_sha256": "b9d12f9fdbd37e05264b02c460e073c8c391d69ffdc5ac1101c65e97c07ef378",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 1.457375407218933,
+  "decision_seconds": 1.2797082513570786,
+  "input_tokens": 4379,
+  "output_tokens": 702,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars [SEP] Search",
+      "action": "search[i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06325844675302505
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B003UVAD76 [SEP] Nina Women's Falana Open-Toe Pump [SEP] $77.28 to $81.66 [SEP] B000WI24XG [SEP] Nina Women's Arley Royal Satin Pump [SEP] $77.33 to $81.08 [SEP] B07GCKBMBK [SEP] CL by Chinese Laundry Women's Capital Heeled Sandal [SEP] $25.38 to $77.18 [SEP] B0848QHDTH [SEP] Sandals for Women Heels,Womens Ankle Strap Chunky Block Low Heel Zipper Closure Party Dress Open Toe Pumps Sandals [SEP] $7.84 to $37.3 [SEP] B0834V2NFD [SEP] Espadrilles Wedges for Women,Casual Espadrille Slide On Platform Sandals Comfort Open Toe Ankle Elastic Strappy Studded Flatform Sandal Shoes [SEP] $3.42 to $15.52 [SEP] B076DHVVMK [SEP] CL by Chinese Laundry Women's Noreen Wedge Sandal [SEP] $44.43 to $51.68 [SEP] B08NDSBRWS [SEP] Werk Dancewear Relax Joggers - Fashionable Activewear Designed for Dance [SEP] $47.0 [SEP] B08R9ZRTYS [SEP] Walking Shoes for Women Wide Width Gibobby Women’s Fashion Sneakers Classic Slip on Flats Comfortable Walking Sports Casual Shoes [SEP] $14.79 [SEP] B08439NDJW [SEP] Sandals for Women Flat,Slide Sandals for Women Cork Sole Canvas Cute Knot Bow Womens Slides Sandals for Women [SEP] $6.18 to $10.45 [SEP] B086C63X9S [SEP] Quealent Sandals for Women Wide Width,2020 Comfy Womens Wedge Platform Sandals Flats Ankle Strap Studded Summer Beach Sandals [SEP] $0.01 to $19.2",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B003UVAD76 [SEP] Nina Women's Falana Open-Toe Pump [SEP] $77.28 to $81.66 [SEP] B000WI24XG [SEP] Nina Women's Arley Royal Satin Pump [SEP] $77.33 to $81.08 [SEP] B07GCKBMBK [SEP] CL by Chinese Laundry Women's Capital Heeled Sandal [SEP] $25.38 to $77.18 [SEP] B0848QHDTH [SEP] Sandals for Women Heels,Womens Ankle Strap Chunky Block Low Heel Zipper Closure Party Dress Open Toe Pumps Sandals [SEP] $7.84 to $37.3 [SEP] B0834V2NFD [SEP] Espadrilles Wedges for Women,Casual Espadrille Slide On Platform Sandals Comfort Open Toe Ankle Elastic Strappy Studded Flatform Sandal Shoes [SEP] $3.42 to $15.52 [SEP] B076DHVVMK [SEP] CL by Chinese Laundry Women's Noreen Wedge Sandal [SEP] $44.43 to $51.68 [SEP] B08NDSBRWS [SEP] Werk Dancewear Relax Joggers - Fashionable Activewear Designed for Dance [SEP] $47.0 [SEP] B08R9ZRTYS [SEP] Walking Shoes for Women Wide Width Gibobby Women’s Fashion Sneakers Classic Slip on Flats Comfortable Walking Sports Casual Shoes [SEP] $14.79 [SEP] B08439NDJW [SEP] Sandals for Women Flat,Slide Sandals for Women Cork Sole Canvas Cute Knot Bow Womens Slides Sandals for Women [SEP] $6.18 to $10.45 [SEP] B086C63X9S [SEP] Quealent Sandals for Women Wide Width,2020 Comfy Womens Wedge Platform Sandals Flats Ankle Strap Studded Summer Beach Sandals [SEP] $0.01 to $19.2\n\nRecent actions:\nsearch[i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b003uvad76]",
+              "3": "click[b000wi24xg]",
+              "4": "click[b07gckbmbk]",
+              "5": "click[b0848qhdth]",
+              "6": "click[b0834v2nfd]",
+              "7": "click[b076dhvvmk]",
+              "8": "click[b08ndsbrws]",
+              "9": "click[b08r9zrtys]",
+              "10": "click[b08439ndjw]",
+              "11": "click[b086c63x9s]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "080f3c6757e8b1e7f889651b7d5dda1179f3650c997c66fbdeac29ea1e5e8698",
+      "attempts": [
+        {
+          "seconds": 0.31682847812771797,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3170057274401188,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.36,
+            "probabilities": {
+              "2": 0.0,
+              "7": 0.25,
+              "8": 0.0,
+              "5": 0.42,
+              "6": 0.0,
+              "3": 0.0,
+              "0": 0.01,
+              "4": 0.25,
+              "9": 0.0,
+              "10": 0.0,
+              "1": 0.07,
+              "11": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1189,
+          "output_tokens": 103
+        }
+      },
+      "action": "click[b0848qhdth]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4079505391418934
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] brown [SEP] yellow [SEP] z3-black [SEP] z3-khaki [SEP] z4-silver [SEP] z1-black [SEP] z8-leopard [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 6 [SEP] 6.5 [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 9.5  |  10 [SEP] 10 [SEP] Sandals for Women Heels,Womens Ankle Strap Chunky Block Low Heel Zipper Closure Party Dress Open Toe Pumps Sandals [SEP] Price: $7.84 to $37.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] brown [SEP] yellow [SEP] z3-black [SEP] z3-khaki [SEP] z4-silver [SEP] z1-black [SEP] z8-leopard [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 6 [SEP] 6.5 [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 9.5  |  10 [SEP] 10 [SEP] Sandals for Women Heels,Womens Ankle Strap Chunky Block Low Heel Zipper Closure Party Dress Open Toe Pumps Sandals [SEP] Price: $7.84 to $37.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars]\nclick[b0848qhdth]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[brown]",
+              "7": "click[yellow]",
+              "8": "click[z3-black]",
+              "9": "click[z3-khaki]",
+              "10": "click[z4-silver]",
+              "11": "click[z1-black]",
+              "12": "click[z8-leopard]",
+              "13": "click[5]",
+              "14": "click[5.5]",
+              "15": "click[6]",
+              "16": "click[6.5]",
+              "17": "click[7]",
+              "18": "click[7.5]",
+              "19": "click[8]",
+              "20": "click[8.5]",
+              "21": "click[9]",
+              "22": "click[9.5  |  10]",
+              "23": "click[10]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "44f8f81b30598e82bd6ca470837c5926d0f02c930a54ba03d422e199684e1830",
+      "attempts": [
+        {
+          "seconds": 0.31552865728735924,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.31571588292717934,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "11",
+            "confidence": 0.41,
+            "probabilities": {
+              "15": 0.0,
+              "17": 0.0,
+              "2": 0.0,
+              "6": 0.0,
+              "14": 0.4,
+              "16": 0.0,
+              "23": 0.0,
+              "13": 0.0,
+              "0": 0.0,
+              "12": 0.0,
+              "4": 0.0,
+              "20": 0.0,
+              "18": 0.0,
+              "10": 0.0,
+              "11": 0.45,
+              "5": 0.07,
+              "21": 0.0,
+              "22": 0.0,
+              "9": 0.0,
+              "1": 0.0,
+              "19": 0.0,
+              "3": 0.0,
+              "8": 0.08,
+              "7": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1058,
+          "output_tokens": 200
+        }
+      },
+      "action": "click[z1-black]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.7460576854646206
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] brown [SEP] yellow [SEP] z3-black [SEP] z3-khaki [SEP] z4-silver [SEP] z1-black [SEP] z8-leopard [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 6 [SEP] 6.5 [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 9.5  |  10 [SEP] 10 [SEP] Sandals for Women Heels,Womens Ankle Strap Chunky Block Low Heel Zipper Closure Party Dress Open Toe Pumps Sandals [SEP] Price: $7.84 to $37.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] brown [SEP] yellow [SEP] z3-black [SEP] z3-khaki [SEP] z4-silver [SEP] z1-black [SEP] z8-leopard [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 6 [SEP] 6.5 [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 9.5  |  10 [SEP] 10 [SEP] Sandals for Women Heels,Womens Ankle Strap Chunky Block Low Heel Zipper Closure Party Dress Open Toe Pumps Sandals [SEP] Price: $7.84 to $37.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars]\nclick[b0848qhdth]\nclick[z1-black]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[brown]",
+              "7": "click[yellow]",
+              "8": "click[z3-black]",
+              "9": "click[z3-khaki]",
+              "10": "click[z4-silver]",
+              "11": "click[z1-black]",
+              "12": "click[z8-leopard]",
+              "13": "click[5]",
+              "14": "click[5.5]",
+              "15": "click[6]",
+              "16": "click[6.5]",
+              "17": "click[7]",
+              "18": "click[7.5]",
+              "19": "click[8]",
+              "20": "click[8.5]",
+              "21": "click[9]",
+              "22": "click[9.5  |  10]",
+              "23": "click[10]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "08ed4a3d5a002c151e6b3c1544c255a3cacf94ceddef0dd08ba898ebfddb44ac",
+      "attempts": [
+        {
+          "seconds": 0.31813644245266914,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.31840987503528595,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "14",
+            "confidence": 0.95,
+            "probabilities": {
+              "1": 0.0,
+              "18": 0.0,
+              "8": 0.0,
+              "14": 0.96,
+              "17": 0.0,
+              "5": 0.03,
+              "21": 0.0,
+              "19": 0.0,
+              "16": 0.0,
+              "22": 0.0,
+              "12": 0.0,
+              "4": 0.0,
+              "2": 0.0,
+              "15": 0.0,
+              "10": 0.0,
+              "0": 0.0,
+              "11": 0.0,
+              "20": 0.0,
+              "13": 0.01,
+              "9": 0.0,
+              "6": 0.0,
+              "3": 0.0,
+              "23": 0.0,
+              "7": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1063,
+          "output_tokens": 200
+        }
+      },
+      "action": "click[5.5]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.090678296983242
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] brown [SEP] yellow [SEP] z3-black [SEP] z3-khaki [SEP] z4-silver [SEP] z1-black [SEP] z8-leopard [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 6 [SEP] 6.5 [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 9.5  |  10 [SEP] 10 [SEP] Sandals for Women Heels,Womens Ankle Strap Chunky Block Low Heel Zipper Closure Party Dress Open Toe Pumps Sandals [SEP] Price: $7.84 to $37.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] brown [SEP] yellow [SEP] z3-black [SEP] z3-khaki [SEP] z4-silver [SEP] z1-black [SEP] z8-leopard [SEP] size [SEP] 5 [SEP] 5.5 [SEP] 6 [SEP] 6.5 [SEP] 7 [SEP] 7.5 [SEP] 8 [SEP] 8.5 [SEP] 9 [SEP] 9.5  |  10 [SEP] 10 [SEP] Sandals for Women Heels,Womens Ankle Strap Chunky Block Low Heel Zipper Closure Party Dress Open Toe Pumps Sandals [SEP] Price: $7.84 to $37.3 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm looking for some black high heeled sandals for my mom. she wears size 5.5, and price lower than 70.00 dollars]\nclick[b0848qhdth]\nclick[z1-black]\nclick[5.5]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[brown]",
+              "7": "click[yellow]",
+              "8": "click[z3-black]",
+              "9": "click[z3-khaki]",
+              "10": "click[z4-silver]",
+              "11": "click[z1-black]",
+              "12": "click[z8-leopard]",
+              "13": "click[5]",
+              "14": "click[5.5]",
+              "15": "click[6]",
+              "16": "click[6.5]",
+              "17": "click[7]",
+              "18": "click[7.5]",
+              "19": "click[8]",
+              "20": "click[8.5]",
+              "21": "click[9]",
+              "22": "click[9.5  |  10]",
+              "23": "click[10]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "0c921db9f7293225efb807ce51c64a884edb3d1c716004f7b639ab98e52e069b",
+      "attempts": [
+        {
+          "seconds": 0.32840176299214363,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3285767659544945,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.94,
+            "probabilities": {
+              "6": 0.0,
+              "10": 0.0,
+              "19": 0.0,
+              "17": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "18": 0.0,
+              "15": 0.0,
+              "23": 0.0,
+              "13": 0.0,
+              "1": 0.01,
+              "8": 0.01,
+              "3": 0.0,
+              "5": 0.95,
+              "7": 0.0,
+              "14": 0.0,
+              "4": 0.01,
+              "9": 0.0,
+              "0": 0.01,
+              "22": 0.0,
+              "20": 0.0,
+              "2": 0.01,
+              "21": 0.0,
+              "16": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1069,
+          "output_tokens": 199
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 1.4573707059025764
+    }
+  ]
+}

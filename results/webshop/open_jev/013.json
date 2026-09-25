@@ -1,0 +1,182 @@
+{
+  "task_id": 13,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars",
+  "instruction_sha256": "b68f01d495bc4d2393006741af75fc4b83e126e4fd4e8ed38162a6116c6a7493",
+  "reward": 0.6666666666666666,
+  "score": 66.66666666666666,
+  "success": false,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 0.6186225935816765,
+  "decision_seconds": 0.5088240280747414,
+  "input_tokens": 10988,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars [SEP] Search",
+      "action": "search[i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.04888065159320831
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B000VOHH8I [SEP] L'eau D'issey By Issey Miyake for MenEau De Toilette Spray, 6.7 Fl Oz Bottle [SEP] $64.98 [SEP] B000MJZOPK [SEP] L'eau d'Issey by Issey Miyake for Women 3.3 oz Eau de Toilette Spray [SEP] $49.98 [SEP] B000C214CO [SEP] Issey Miyake L'eau D'issey Eau de Toilette Spray for Men, 4.2 Fl Oz [SEP] $53.99 [SEP] B0012S249E [SEP] L'eau D'issey By Issey Miyake For Women. Shower Cream 6.7-Ounces [SEP] $31.36 [SEP] B01H8PGKZS [SEP] L'eau D'Issey FOR MEN by Issey Miyake - 6.7 oz EDT Spray [SEP] $67.97 [SEP] B00G3C8FHE [SEP] L'Eau d'Issey pour Homme - Eau de Toilette 4.2 fl oz [SEP] $51.25 [SEP] B079HZR2RX [SEP] L'eau d'Issey Pure by Issey Miyake for Women 3.0 oz Nectar de Parfum Spray [SEP] $71.49 [SEP] B000R94HRG [SEP] Issey Miyake L'Eau D'Issey Pour Homme Eau De Toilette Natural Spray [SEP] $44.99 [SEP] B01I54JJYA [SEP] L'EAU D'ISSEY (issey Miyake) by Issey Miyake Eau De Toilette Spray 2.5 oz for Men - 100% Authentic [SEP] $39.65 [SEP] B0018SBRDC [SEP] Issey Miyake L'eau d'Issey for Women EDT, White, 0.84 Fl Oz [SEP] $27.04",
+      "request": {
+        "state": "Shopping instruction:\ni need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B000VOHH8I [SEP] L'eau D'issey By Issey Miyake for MenEau De Toilette Spray, 6.7 Fl Oz Bottle [SEP] $64.98 [SEP] B000MJZOPK [SEP] L'eau d'Issey by Issey Miyake for Women 3.3 oz Eau de Toilette Spray [SEP] $49.98 [SEP] B000C214CO [SEP] Issey Miyake L'eau D'issey Eau de Toilette Spray for Men, 4.2 Fl Oz [SEP] $53.99 [SEP] B0012S249E [SEP] L'eau D'issey By Issey Miyake For Women. Shower Cream 6.7-Ounces [SEP] $31.36 [SEP] B01H8PGKZS [SEP] L'eau D'Issey FOR MEN by Issey Miyake - 6.7 oz EDT Spray [SEP] $67.97 [SEP] B00G3C8FHE [SEP] L'Eau d'Issey pour Homme - Eau de Toilette 4.2 fl oz [SEP] $51.25 [SEP] B079HZR2RX [SEP] L'eau d'Issey Pure by Issey Miyake for Women 3.0 oz Nectar de Parfum Spray [SEP] $71.49 [SEP] B000R94HRG [SEP] Issey Miyake L'Eau D'Issey Pour Homme Eau De Toilette Natural Spray [SEP] $44.99 [SEP] B01I54JJYA [SEP] L'EAU D'ISSEY (issey Miyake) by Issey Miyake Eau De Toilette Spray 2.5 oz for Men - 100% Authentic [SEP] $39.65 [SEP] B0018SBRDC [SEP] Issey Miyake L'eau d'Issey for Women EDT, White, 0.84 Fl Oz [SEP] $27.04\n\nRecent actions:\nsearch[i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b000vohh8i]",
+              "3": "click[b000mjzopk]",
+              "4": "click[b000c214co]",
+              "5": "click[b0012s249e]",
+              "6": "click[b01h8pgkzs]",
+              "7": "click[b00g3c8fhe]",
+              "8": "click[b079hzr2rx]",
+              "9": "click[b000r94hrg]",
+              "10": "click[b01i54jjya]",
+              "11": "click[b0018sbrdc]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bb5955f6aaf34805fc3ef41011575bb3847e52b8eb4b822145a2984ddf0a750d",
+      "attempts": [
+        {
+          "seconds": 0.38211793079972267,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.38223840668797493,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.01150626503297615,
+              "1": 0.02315232297734083,
+              "2": 0.5011006133857294,
+              "3": 0.004504307186131862,
+              "4": 0.004155466756082169,
+              "5": 0.00349903666278545,
+              "6": 0.3447479566899169,
+              "7": 0.008214366348479291,
+              "8": 0.009595121380416325,
+              "9": 0.06836647775443731,
+              "10": 0.017014837099922537,
+              "11": 0.00414322872578179
+            },
+            "confidence": 0.455746123693523
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8458,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3742634430527687,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b000vohh8i]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4650265872478485
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2.5 fl oz [SEP] 6.76 fl oz (pack of 1) [SEP] L'eau D'issey By Issey Miyake for MenEau De Toilette Spray, 6.7 Fl Oz Bottle [SEP] Price: $64.98 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2.5 fl oz [SEP] 6.76 fl oz (pack of 1) [SEP] L'eau D'issey By Issey Miyake for MenEau De Toilette Spray, 6.7 Fl Oz Bottle [SEP] Price: $64.98 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need a long lasting 6.76 fl oz bottle of l'eau d'issey, and price lower than 90.00 dollars]\nclick[b000vohh8i]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[2.5 fl oz]",
+              "7": "click[6.76 fl oz (pack of 1)]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f68f8a8ffbf3b8943bae12ccd1c2ef865b300b485e63d330a6dd329f8ac9b51c",
+      "attempts": [
+        {
+          "seconds": 0.12651456892490387,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.12658562138676643,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.025787688410702843,
+              "1": 0.02707192239945555,
+              "2": 0.05217313972693061,
+              "3": 0.03286769866761169,
+              "4": 0.034717424714739896,
+              "5": 0.7440395381761765,
+              "6": 0.013425636183044865,
+              "7": 0.06991695172133812
+            },
+            "confidence": 0.7074737579156303
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 2530,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 8,
+          "inference_seconds": 0.12109643965959549,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.6666666666666666,
+      "done": true,
+      "elapsed_seconds": 0.6186201795935631
+    }
+  ]
+}

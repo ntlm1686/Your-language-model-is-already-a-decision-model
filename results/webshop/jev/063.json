@@ -1,0 +1,456 @@
+{
+  "task_id": 63,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars",
+  "instruction_sha256": "155566aa10e703f3ebfc029a503970d3440b97cce4c2228b8bed3f2640aee271",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 1.5711046606302261,
+  "decision_seconds": 1.376220066100359,
+  "input_tokens": 5317,
+  "output_tokens": 1038,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Search",
+      "action": "search[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.07282530143857002
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08SQHTMPR [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] $17.93 to $69.28 [SEP] B09B5TQWRT [SEP] HGWXX7 Capri Pants for Women Plus Size Cotton Wide Leg Pants Linen Summer Beach Harem Comfy Pants Print Cropped Trouser [SEP] $11.29 [SEP] B091GY58SC [SEP] Women's Linen Capri Pants Loose Cropped Wide Leg Pants Floral Comfy Elastic Waist Lightweight Trousers with Pockets [SEP] $16.15 to $20.39 [SEP] B096XYVQ9H [SEP] Wide Leg Pants for Women Paper Bag Belt Elastic High Waist Palazzo Long Trousers Casual Plus Size Pants with Pockets [SEP] $12.69 to $13.69 [SEP] B084R8D1S4 [SEP] Woman Within Women's Plus Size Convertible Length Cargo Pant [SEP] $26.04 to $33.25 [SEP] B09PFZHV78 [SEP] Gillberry Men's Classic Relaxed Vintage Denim Jeans Retro Men Stretch Retro Leg Comfort Bell Bottom Trousers Wide Leg [SEP] $32.29 [SEP] B09PBDFLLY [SEP] Women Yoga Short Pants Dolphin Running Athletic Shorts Sports Shorts Gym Dance Workout Shorts Sexy Tights [SEP] $4.48 [SEP] B09PBD4RY1 [SEP] Nyybw Women's High Rise Bermuda Shorts Lounge Athletic Casual Jersey Cotton Sweat Shorts with Pockets [SEP] $16.99 [SEP] B09PBF588W [SEP] Nyybw Workout Shorts for Women with Side Pockets High Waist Running Sports Biker Gym Shorts Yoga Tights [SEP] $11.49 [SEP] B09PBV2G93 [SEP] Gillberry Men's Flannel Pajamas Pants Pockets Bottoms Lounge Sleepwear Soft Jogger Pant Sweatpants for Men Red Black [SEP] $16.89",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08SQHTMPR [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] $17.93 to $69.28 [SEP] B09B5TQWRT [SEP] HGWXX7 Capri Pants for Women Plus Size Cotton Wide Leg Pants Linen Summer Beach Harem Comfy Pants Print Cropped Trouser [SEP] $11.29 [SEP] B091GY58SC [SEP] Women's Linen Capri Pants Loose Cropped Wide Leg Pants Floral Comfy Elastic Waist Lightweight Trousers with Pockets [SEP] $16.15 to $20.39 [SEP] B096XYVQ9H [SEP] Wide Leg Pants for Women Paper Bag Belt Elastic High Waist Palazzo Long Trousers Casual Plus Size Pants with Pockets [SEP] $12.69 to $13.69 [SEP] B084R8D1S4 [SEP] Woman Within Women's Plus Size Convertible Length Cargo Pant [SEP] $26.04 to $33.25 [SEP] B09PFZHV78 [SEP] Gillberry Men's Classic Relaxed Vintage Denim Jeans Retro Men Stretch Retro Leg Comfort Bell Bottom Trousers Wide Leg [SEP] $32.29 [SEP] B09PBDFLLY [SEP] Women Yoga Short Pants Dolphin Running Athletic Shorts Sports Shorts Gym Dance Workout Shorts Sexy Tights [SEP] $4.48 [SEP] B09PBD4RY1 [SEP] Nyybw Women's High Rise Bermuda Shorts Lounge Athletic Casual Jersey Cotton Sweat Shorts with Pockets [SEP] $16.99 [SEP] B09PBF588W [SEP] Nyybw Workout Shorts for Women with Side Pockets High Waist Running Sports Biker Gym Shorts Yoga Tights [SEP] $11.49 [SEP] B09PBV2G93 [SEP] Gillberry Men's Flannel Pajamas Pants Pockets Bottoms Lounge Sleepwear Soft Jogger Pant Sweatpants for Men Red Black [SEP] $16.89\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b08sqhtmpr]",
+              "3": "click[b09b5tqwrt]",
+              "4": "click[b091gy58sc]",
+              "5": "click[b096xyvq9h]",
+              "6": "click[b084r8d1s4]",
+              "7": "click[b09pfzhv78]",
+              "8": "click[b09pbdflly]",
+              "9": "click[b09pbd4ry1]",
+              "10": "click[b09pbf588w]",
+              "11": "click[b09pbv2g93]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "2fae43be01c41ae0d7825d4a6e6e945c85eb7f7e6bb6ecb7733a571fa7fa9d8c",
+      "attempts": [
+        {
+          "seconds": 0.3455520197749138,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.34572185203433037,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.39,
+            "probabilities": {
+              "7": 0.0,
+              "9": 0.0,
+              "3": 0.06,
+              "5": 0.01,
+              "11": 0.0,
+              "1": 0.17,
+              "10": 0.0,
+              "2": 0.45,
+              "0": 0.04,
+              "8": 0.0,
+              "6": 0.19,
+              "4": 0.08
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1193,
+          "output_tokens": 103
+        }
+      },
+      "action": "click[b08sqhtmpr]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.45082539692521095
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2 [SEP] 2 petite [SEP] 4 [SEP] 4 petite [SEP] 6 [SEP] 6 petite [SEP] 8 [SEP] 8 petite [SEP] 10 [SEP] 10 petite [SEP] 12 [SEP] 12 petite [SEP] 14 [SEP] 14 petite [SEP] 14 plus [SEP] 16 [SEP] 16 petite [SEP] 16 plus [SEP] 18 [SEP] 18 petite [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] color [SEP] deep lichen green [SEP] kahuna [SEP] rainy day [SEP] blue velvet [SEP] white [SEP] black [SEP] rose garden [SEP] stormy gray [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] Price: $17.93 to $69.28 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2 [SEP] 2 petite [SEP] 4 [SEP] 4 petite [SEP] 6 [SEP] 6 petite [SEP] 8 [SEP] 8 petite [SEP] 10 [SEP] 10 petite [SEP] 12 [SEP] 12 petite [SEP] 14 [SEP] 14 petite [SEP] 14 plus [SEP] 16 [SEP] 16 petite [SEP] 16 plus [SEP] 18 [SEP] 18 petite [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] color [SEP] deep lichen green [SEP] kahuna [SEP] rainy day [SEP] blue velvet [SEP] white [SEP] black [SEP] rose garden [SEP] stormy gray [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] Price: $17.93 to $69.28 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[b08sqhtmpr]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[2]",
+              "7": "click[2 petite]",
+              "8": "click[4]",
+              "9": "click[4 petite]",
+              "10": "click[6]",
+              "11": "click[6 petite]",
+              "12": "click[8]",
+              "13": "click[8 petite]",
+              "14": "click[10]",
+              "15": "click[10 petite]",
+              "16": "click[12]",
+              "17": "click[12 petite]",
+              "18": "click[14]",
+              "19": "click[14 petite]",
+              "20": "click[14 plus]",
+              "21": "click[16]",
+              "22": "click[16 petite]",
+              "23": "click[16 plus]",
+              "24": "click[18]",
+              "25": "click[18 petite]",
+              "26": "click[18 plus]",
+              "27": "click[20 plus]",
+              "28": "click[22 plus]",
+              "29": "click[24 plus]",
+              "30": "click[deep lichen green]",
+              "31": "click[kahuna]",
+              "32": "click[rainy day]",
+              "33": "click[blue velvet]",
+              "34": "click[white]",
+              "35": "click[black]",
+              "36": "click[rose garden]",
+              "37": "click[stormy gray]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "ea9606709405e0061379d34d7db9a464e09bcb4be1a4322ead77e686b46c59c7",
+      "attempts": [
+        {
+          "seconds": 0.33624885231256485,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33643118292093277,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "27",
+            "confidence": 0.7,
+            "probabilities": {
+              "2": 0.0,
+              "33": 0.0,
+              "4": 0.0,
+              "22": 0.0,
+              "9": 0.0,
+              "32": 0.0,
+              "15": 0.0,
+              "16": 0.0,
+              "17": 0.0,
+              "20": 0.0,
+              "36": 0.0,
+              "19": 0.0,
+              "23": 0.0,
+              "6": 0.0,
+              "12": 0.0,
+              "0": 0.0,
+              "30": 0.0,
+              "11": 0.0,
+              "8": 0.0,
+              "3": 0.0,
+              "28": 0.0,
+              "10": 0.0,
+              "5": 0.07,
+              "26": 0.0,
+              "31": 0.21000000000000002,
+              "21": 0.0,
+              "37": 0.0,
+              "13": 0.0,
+              "29": 0.0,
+              "7": 0.0,
+              "1": 0.0,
+              "27": 0.72,
+              "18": 0.0,
+              "24": 0.0,
+              "34": 0.0,
+              "14": 0.0,
+              "35": 0.0,
+              "25": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1369,
+          "output_tokens": 312
+        }
+      },
+      "action": "click[20 plus]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.8153454698622227
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2 [SEP] 2 petite [SEP] 4 [SEP] 4 petite [SEP] 6 [SEP] 6 petite [SEP] 8 [SEP] 8 petite [SEP] 10 [SEP] 10 petite [SEP] 12 [SEP] 12 petite [SEP] 14 [SEP] 14 petite [SEP] 14 plus [SEP] 16 [SEP] 16 petite [SEP] 16 plus [SEP] 18 [SEP] 18 petite [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] color [SEP] deep lichen green [SEP] kahuna [SEP] rainy day [SEP] blue velvet [SEP] white [SEP] black [SEP] rose garden [SEP] stormy gray [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] Price: $17.93 to $69.28 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2 [SEP] 2 petite [SEP] 4 [SEP] 4 petite [SEP] 6 [SEP] 6 petite [SEP] 8 [SEP] 8 petite [SEP] 10 [SEP] 10 petite [SEP] 12 [SEP] 12 petite [SEP] 14 [SEP] 14 petite [SEP] 14 plus [SEP] 16 [SEP] 16 petite [SEP] 16 plus [SEP] 18 [SEP] 18 petite [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] color [SEP] deep lichen green [SEP] kahuna [SEP] rainy day [SEP] blue velvet [SEP] white [SEP] black [SEP] rose garden [SEP] stormy gray [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] Price: $17.93 to $69.28 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[b08sqhtmpr]\nclick[20 plus]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[2]",
+              "7": "click[2 petite]",
+              "8": "click[4]",
+              "9": "click[4 petite]",
+              "10": "click[6]",
+              "11": "click[6 petite]",
+              "12": "click[8]",
+              "13": "click[8 petite]",
+              "14": "click[10]",
+              "15": "click[10 petite]",
+              "16": "click[12]",
+              "17": "click[12 petite]",
+              "18": "click[14]",
+              "19": "click[14 petite]",
+              "20": "click[14 plus]",
+              "21": "click[16]",
+              "22": "click[16 petite]",
+              "23": "click[16 plus]",
+              "24": "click[18]",
+              "25": "click[18 petite]",
+              "26": "click[18 plus]",
+              "27": "click[20 plus]",
+              "28": "click[22 plus]",
+              "29": "click[24 plus]",
+              "30": "click[deep lichen green]",
+              "31": "click[kahuna]",
+              "32": "click[rainy day]",
+              "33": "click[blue velvet]",
+              "34": "click[white]",
+              "35": "click[black]",
+              "36": "click[rose garden]",
+              "37": "click[stormy gray]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "0773901ee2d428227e58a3977f6fd4c43a86628759e248a4c048a915bf5abed7",
+      "attempts": [
+        {
+          "seconds": 0.328416645526886,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3285636566579342,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "31",
+            "confidence": 0.88,
+            "probabilities": {
+              "11": 0.0,
+              "28": 0.0,
+              "12": 0.0,
+              "23": 0.0,
+              "32": 0.0,
+              "21": 0.0,
+              "19": 0.0,
+              "27": 0.0,
+              "20": 0.0,
+              "4": 0.0,
+              "22": 0.0,
+              "37": 0.0,
+              "35": 0.0,
+              "10": 0.0,
+              "5": 0.11,
+              "25": 0.0,
+              "3": 0.0,
+              "17": 0.0,
+              "30": 0.0,
+              "18": 0.0,
+              "24": 0.0,
+              "2": 0.0,
+              "16": 0.0,
+              "1": 0.0,
+              "9": 0.0,
+              "13": 0.0,
+              "14": 0.0,
+              "6": 0.0,
+              "36": 0.0,
+              "7": 0.0,
+              "34": 0.0,
+              "31": 0.89,
+              "0": 0.0,
+              "8": 0.0,
+              "29": 0.0,
+              "15": 0.0,
+              "26": 0.0,
+              "33": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1375,
+          "output_tokens": 312
+        }
+      },
+      "action": "click[kahuna]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.1711889952421188
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2 [SEP] 2 petite [SEP] 4 [SEP] 4 petite [SEP] 6 [SEP] 6 petite [SEP] 8 [SEP] 8 petite [SEP] 10 [SEP] 10 petite [SEP] 12 [SEP] 12 petite [SEP] 14 [SEP] 14 petite [SEP] 14 plus [SEP] 16 [SEP] 16 petite [SEP] 16 plus [SEP] 18 [SEP] 18 petite [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] color [SEP] deep lichen green [SEP] kahuna [SEP] rainy day [SEP] blue velvet [SEP] white [SEP] black [SEP] rose garden [SEP] stormy gray [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] Price: $17.93 to $69.28 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2 [SEP] 2 petite [SEP] 4 [SEP] 4 petite [SEP] 6 [SEP] 6 petite [SEP] 8 [SEP] 8 petite [SEP] 10 [SEP] 10 petite [SEP] 12 [SEP] 12 petite [SEP] 14 [SEP] 14 petite [SEP] 14 plus [SEP] 16 [SEP] 16 petite [SEP] 16 plus [SEP] 18 [SEP] 18 petite [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] color [SEP] deep lichen green [SEP] kahuna [SEP] rainy day [SEP] blue velvet [SEP] white [SEP] black [SEP] rose garden [SEP] stormy gray [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] Price: $17.93 to $69.28 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[b08sqhtmpr]\nclick[20 plus]\nclick[kahuna]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[2]",
+              "7": "click[2 petite]",
+              "8": "click[4]",
+              "9": "click[4 petite]",
+              "10": "click[6]",
+              "11": "click[6 petite]",
+              "12": "click[8]",
+              "13": "click[8 petite]",
+              "14": "click[10]",
+              "15": "click[10 petite]",
+              "16": "click[12]",
+              "17": "click[12 petite]",
+              "18": "click[14]",
+              "19": "click[14 petite]",
+              "20": "click[14 plus]",
+              "21": "click[16]",
+              "22": "click[16 petite]",
+              "23": "click[16 plus]",
+              "24": "click[18]",
+              "25": "click[18 petite]",
+              "26": "click[18 plus]",
+              "27": "click[20 plus]",
+              "28": "click[22 plus]",
+              "29": "click[24 plus]",
+              "30": "click[deep lichen green]",
+              "31": "click[kahuna]",
+              "32": "click[rainy day]",
+              "33": "click[blue velvet]",
+              "34": "click[white]",
+              "35": "click[black]",
+              "36": "click[rose garden]",
+              "37": "click[stormy gray]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "6a887cc1f3a0f76c981f8ae60b9e690be0178bc336a25e004a7380ce451c10af",
+      "attempts": [
+        {
+          "seconds": 0.36535197123885155,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.36550337448716164,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.93,
+            "probabilities": {
+              "15": 0.0,
+              "27": 0.01,
+              "17": 0.0,
+              "0": 0.0,
+              "14": 0.0,
+              "6": 0.0,
+              "29": 0.0,
+              "25": 0.0,
+              "21": 0.0,
+              "4": 0.0,
+              "1": 0.0,
+              "9": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "5": 0.95,
+              "19": 0.0,
+              "24": 0.0,
+              "37": 0.0,
+              "3": 0.01,
+              "32": 0.0,
+              "7": 0.0,
+              "26": 0.0,
+              "16": 0.0,
+              "2": 0.03,
+              "13": 0.0,
+              "12": 0.0,
+              "31": 0.0,
+              "22": 0.0,
+              "35": 0.0,
+              "20": 0.0,
+              "18": 0.0,
+              "34": 0.0,
+              "36": 0.0,
+              "28": 0.0,
+              "33": 0.0,
+              "30": 0.0,
+              "8": 0.0,
+              "23": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1380,
+          "output_tokens": 311
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 1.5710997879505157
+    }
+  ]
+}

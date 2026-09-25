@@ -1,0 +1,3314 @@
+{
+  "task_id": 461,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars",
+  "instruction_sha256": "e90639251858046bf49a2846c593283b8f8b45d7efd8518f2d0d44cc90c94d45",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "repeated_state_action",
+  "steps": 53,
+  "elapsed_seconds": 8.276128578931093,
+  "decision_seconds": 5.65974123775959,
+  "input_tokens": 92064,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Search",
+      "action": "search[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.053453706204891205
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B076MMY8T8 [SEP] PrimaSleep Wave Gel Infused Memory Foam Mattress, 10'' H, Twin, Blue [SEP] $202.01 [SEP] B016WJWC0S [SEP] Olee Sleep Aquarius 10-Inch Memory Foam Mattress in Blue, Queen [SEP] $306.27 [SEP] B09SB352V4 [SEP] KIMIN 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (Twin) (Queen) [SEP] $277.05 [SEP] B07QJY3HFN [SEP] PrimaSleep 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (King) [SEP] $272.04 [SEP] B07JNMBTCY [SEP] Travel Happy (Custom Size Requests) with A 10 INCH Any King Size New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover Made in The USA [SEP] $799.99 [SEP] B07ZXL7J4Q [SEP] Set of 6 Contemporary Metal Frame Dining Chair Vertical Back Design Commercial Home Office Furniture, Burgundy Vinyl/2349 [SEP] $784.5 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B073VLQ5JR [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Full [SEP] $238.92 [SEP] B073VMTFCC [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Twin [SEP] $146.88",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B076MMY8T8 [SEP] PrimaSleep Wave Gel Infused Memory Foam Mattress, 10'' H, Twin, Blue [SEP] $202.01 [SEP] B016WJWC0S [SEP] Olee Sleep Aquarius 10-Inch Memory Foam Mattress in Blue, Queen [SEP] $306.27 [SEP] B09SB352V4 [SEP] KIMIN 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (Twin) (Queen) [SEP] $277.05 [SEP] B07QJY3HFN [SEP] PrimaSleep 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (King) [SEP] $272.04 [SEP] B07JNMBTCY [SEP] Travel Happy (Custom Size Requests) with A 10 INCH Any King Size New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover Made in The USA [SEP] $799.99 [SEP] B07ZXL7J4Q [SEP] Set of 6 Contemporary Metal Frame Dining Chair Vertical Back Design Commercial Home Office Furniture, Burgundy Vinyl/2349 [SEP] $784.5 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B073VLQ5JR [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Full [SEP] $238.92 [SEP] B073VMTFCC [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Twin [SEP] $146.88\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09r8s9t2k]",
+              "3": "click[b076mmy8t8]",
+              "4": "click[b016wjwc0s]",
+              "5": "click[b09sb352v4]",
+              "6": "click[b07qjy3hfn]",
+              "7": "click[b07jnmbtcy]",
+              "8": "click[b07zxl7j4q]",
+              "9": "click[b01730lx9q]",
+              "10": "click[b073vlq5jr]",
+              "11": "click[b073vmtfcc]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1a99bb06b19fffcddc3124222d85e251968a66d83081d97fd0a29376f8ee715e",
+      "attempts": [
+        {
+          "seconds": 0.3764895983040333,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3766353353857994,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.560200624345278,
+              "1": 0.2735411510685876,
+              "2": 0.011662897139740712,
+              "3": 0.01181514978683503,
+              "4": 0.013822611292771859,
+              "5": 0.015756576014270322,
+              "6": 0.016892219293750097,
+              "7": 0.01569904349595192,
+              "8": 0.011008953223328993,
+              "9": 0.01810335925322977,
+              "10": 0.022901674250776105,
+              "11": 0.028595740835479617
+            },
+            "confidence": 0.5202188629221215
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8409,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3745979368686676,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4459129683673382
+    },
+    {
+      "step": 2,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Search",
+      "action": "search[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5009297244250774
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B076MMY8T8 [SEP] PrimaSleep Wave Gel Infused Memory Foam Mattress, 10'' H, Twin, Blue [SEP] $202.01 [SEP] B016WJWC0S [SEP] Olee Sleep Aquarius 10-Inch Memory Foam Mattress in Blue, Queen [SEP] $306.27 [SEP] B09SB352V4 [SEP] KIMIN 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (Twin) (Queen) [SEP] $277.05 [SEP] B07QJY3HFN [SEP] PrimaSleep 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (King) [SEP] $272.04 [SEP] B07JNMBTCY [SEP] Travel Happy (Custom Size Requests) with A 10 INCH Any King Size New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover Made in The USA [SEP] $799.99 [SEP] B07ZXL7J4Q [SEP] Set of 6 Contemporary Metal Frame Dining Chair Vertical Back Design Commercial Home Office Furniture, Burgundy Vinyl/2349 [SEP] $784.5 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B073VLQ5JR [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Full [SEP] $238.92 [SEP] B073VMTFCC [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Twin [SEP] $146.88",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B076MMY8T8 [SEP] PrimaSleep Wave Gel Infused Memory Foam Mattress, 10'' H, Twin, Blue [SEP] $202.01 [SEP] B016WJWC0S [SEP] Olee Sleep Aquarius 10-Inch Memory Foam Mattress in Blue, Queen [SEP] $306.27 [SEP] B09SB352V4 [SEP] KIMIN 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (Twin) (Queen) [SEP] $277.05 [SEP] B07QJY3HFN [SEP] PrimaSleep 10 Inch Wave Gel Infused Memory Foam Mattress,Gray (King) [SEP] $272.04 [SEP] B07JNMBTCY [SEP] Travel Happy (Custom Size Requests) with A 10 INCH Any King Size New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover Made in The USA [SEP] $799.99 [SEP] B07ZXL7J4Q [SEP] Set of 6 Contemporary Metal Frame Dining Chair Vertical Back Design Commercial Home Office Furniture, Burgundy Vinyl/2349 [SEP] $784.5 [SEP] B01730LX9Q [SEP] Olee Sleep 10 Inch Gel Layer Top Memory Foam Mattress - Queen [SEP] $289.0 [SEP] B073VLQ5JR [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Full [SEP] $238.92 [SEP] B073VMTFCC [SEP] Olee Sleep 10 inch Aquarius Memory Foam Mattress - Twin [SEP] $146.88\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[back to search]\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09r8s9t2k]",
+              "3": "click[b076mmy8t8]",
+              "4": "click[b016wjwc0s]",
+              "5": "click[b09sb352v4]",
+              "6": "click[b07qjy3hfn]",
+              "7": "click[b07jnmbtcy]",
+              "8": "click[b07zxl7j4q]",
+              "9": "click[b01730lx9q]",
+              "10": "click[b073vlq5jr]",
+              "11": "click[b073vmtfcc]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e1d332420fe2bfc6786eaeec7876da0ea97bdbc5c6a805ea19e21c67694509fd",
+      "attempts": [
+        {
+          "seconds": 0.4000006914138794,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.40014325082302094,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.13073126237376537,
+              "1": 0.500455950755401,
+              "2": 0.02179471075954464,
+              "3": 0.024981525109414645,
+              "4": 0.027503266396301716,
+              "5": 0.031415266679650715,
+              "6": 0.03198714772015661,
+              "7": 0.03455841240908486,
+              "8": 0.024648662934130105,
+              "9": 0.03531111925515447,
+              "10": 0.05588688376445715,
+              "11": 0.08072579184293871
+            },
+            "confidence": 0.4550428553695283
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8901,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.39772243052721024,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9667693488299847
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B086SLVQGX [SEP] Olee Sleep 10 Inch Gel Infused Layer Top Memory Foam Mattress, King, Blue [SEP] $453.7 [SEP] B008LTBJFW [SEP] Crucial RAM 16GB Kit (2x8GB) DDR3 1600 MHz CL11 Memory for Mac CT2K8G3S160BM [SEP] $94.99 [SEP] B07Y9FMBDX [SEP] Zinus Green Tea 8 Inch Memory Foam Mattress and Jared Adjustable Bed Frame Set with Remote / Whisper-Quiet Motorized Movement / Ergonomic Positioning for Better Health and Relaxation, Queen [SEP] $100.0 [SEP] B07JNLQPHQ [SEP] Travel Happy (Custom Size Requests) with A 12 INCH Any King Size New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover Made in The USA [SEP] $999.99 [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B09LSSBS2C [SEP] Sealed Nib Compatible with Dish Network Satellite TV 145822 [SEP] $116.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B00MW20QB2 [SEP] MyContour mattress 10” California King size [SEP] $100.0 [SEP] B09L1K4YHX [SEP] Hundreds Of 100 Dollar Bills Mans Women'S Slipper Warm Step-In Furry Slippers Anti-Skid Winter Shoes [SEP] $12.98",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B086SLVQGX [SEP] Olee Sleep 10 Inch Gel Infused Layer Top Memory Foam Mattress, King, Blue [SEP] $453.7 [SEP] B008LTBJFW [SEP] Crucial RAM 16GB Kit (2x8GB) DDR3 1600 MHz CL11 Memory for Mac CT2K8G3S160BM [SEP] $94.99 [SEP] B07Y9FMBDX [SEP] Zinus Green Tea 8 Inch Memory Foam Mattress and Jared Adjustable Bed Frame Set with Remote / Whisper-Quiet Motorized Movement / Ergonomic Positioning for Better Health and Relaxation, Queen [SEP] $100.0 [SEP] B07JNLQPHQ [SEP] Travel Happy (Custom Size Requests) with A 12 INCH Any King Size New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover Made in The USA [SEP] $999.99 [SEP] B09LSPP1CJ [SEP] Used VHS Movie Stage Bands on Film (H) [SEP] $7.19 [SEP] B09LSSBS2C [SEP] Sealed Nib Compatible with Dish Network Satellite TV 145822 [SEP] $116.99 [SEP] B09LGLP9HG [SEP] Used VHS Movie Compatible with Disney's FLUBBER 111 [SEP] $8.09 [SEP] B09LGY85YY [SEP] Used VHS Movie Home Alone 2\" Lost in New York [SEP] $7.19 [SEP] B00MW20QB2 [SEP] MyContour mattress 10” California King size [SEP] $100.0 [SEP] B09L1K4YHX [SEP] Hundreds Of 100 Dollar Bills Mans Women'S Slipper Warm Step-In Furry Slippers Anti-Skid Winter Shoes [SEP] $12.98\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[back to search]\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b086slvqgx]",
+              "4": "click[b008ltbjfw]",
+              "5": "click[b07y9fmbdx]",
+              "6": "click[b07jnlqphq]",
+              "7": "click[b09lspp1cj]",
+              "8": "click[b09lssbs2c]",
+              "9": "click[b09lglp9hg]",
+              "10": "click[b09lgy85yy]",
+              "11": "click[b00mw20qb2]",
+              "12": "click[b09l1k4yhx]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c192c0b36b2d8661bea966efbda3c6fedcdb427a12dafa9075b1de85b199ce56",
+      "attempts": [
+        {
+          "seconds": 0.42504429817199707,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4252030849456787,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.12392957291445185,
+              "1": 0.11652019547818197,
+              "2": 0.3754386156395261,
+              "3": 0.034829729603999666,
+              "4": 0.030248577745852198,
+              "5": 0.028946808718095365,
+              "6": 0.0478339240489295,
+              "7": 0.04751076196157018,
+              "8": 0.03138767943416308,
+              "9": 0.03724076773493072,
+              "10": 0.02354643318967677,
+              "11": 0.04385673729011337,
+              "12": 0.058710196240509195
+            },
+            "confidence": 0.32339183360948653
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9555,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.42295413836836815,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.4579874351620674
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B085DY3K9P [SEP] King Size Mattress Memory Foam Mattress 10 INCH Gel Infused Layer TOP Memory Foam Mattress Healthy and Breathable 10 Years Warranty King Mattress (King, White/Blue) [SEP] $598.98 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B09J48RWH1 [SEP] occ3506 Skin Sticker for Oculus Quest 2 VR Headset Virtual Reality Cartoon Decals Protetcive PVC Skin for Oculus Quest 2 Accessories [SEP] $100.0 [SEP] B07998RBRM [SEP] Best Price Mattress 3 Inch Ventilated Memory Foam Mattress Topper, Cooling Gel Infusion, CertiPUR-US Certified, Cal King [SEP] $93.25 [SEP] B073T4R3JS [SEP] TRAVEL HAPPY with A 8 INCH Narrow King (72 inch x 80 inches) New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's and Trailers Made in The USA [SEP] $649.99 [SEP] B07VDBK6HW [SEP] TRAVEL HAPPY with A 8 INCH Short King (72\" x 75\" Inches) New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's and Trailers Made in The USA [SEP] $649.99 [SEP] B073T4G91Y [SEP] TRAVEL HAPPY with A 10 INCH Narrow King (72 inch x 80 inches) New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's & Trailers Made in The USA [SEP] $749.99 [SEP] B07ZHGLBKG [SEP] TRAVEL HAPPY with A 8\" RV BUNK Bed Twin 34\" x 75\" Now with 2\" of Gel Memory Foam for a Medium Feel Cooler Sleep Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's and Trailers USA [SEP] $369.99 [SEP] B08267L1GC [SEP] KLS14 Set of 2 Contemporary Ladder Back Design Metal Bar Stools, Clear Coated Frame Finish, Burgundy Vinyl Seat/2373 [SEP] $334.5 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B085DY3K9P [SEP] King Size Mattress Memory Foam Mattress 10 INCH Gel Infused Layer TOP Memory Foam Mattress Healthy and Breathable 10 Years Warranty King Mattress (King, White/Blue) [SEP] $598.98 [SEP] B09LH2MRH8 [SEP] P.I.I Model 10-8320 TV VCR Video Distribution Amp 117 V 60Hz 3.6W Input/Output [SEP] $15.29 [SEP] B09J48RWH1 [SEP] occ3506 Skin Sticker for Oculus Quest 2 VR Headset Virtual Reality Cartoon Decals Protetcive PVC Skin for Oculus Quest 2 Accessories [SEP] $100.0 [SEP] B07998RBRM [SEP] Best Price Mattress 3 Inch Ventilated Memory Foam Mattress Topper, Cooling Gel Infusion, CertiPUR-US Certified, Cal King [SEP] $93.25 [SEP] B073T4R3JS [SEP] TRAVEL HAPPY with A 8 INCH Narrow King (72 inch x 80 inches) New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's and Trailers Made in The USA [SEP] $649.99 [SEP] B07VDBK6HW [SEP] TRAVEL HAPPY with A 8 INCH Short King (72\" x 75\" Inches) New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's and Trailers Made in The USA [SEP] $649.99 [SEP] B073T4G91Y [SEP] TRAVEL HAPPY with A 10 INCH Narrow King (72 inch x 80 inches) New Cooler Sleep Graphite Gel Memory Foam Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's & Trailers Made in The USA [SEP] $749.99 [SEP] B07ZHGLBKG [SEP] TRAVEL HAPPY with A 8\" RV BUNK Bed Twin 34\" x 75\" Now with 2\" of Gel Memory Foam for a Medium Feel Cooler Sleep Mattress with Premium Textured 8-Way Stretch Cover for Campers, RV's and Trailers USA [SEP] $369.99 [SEP] B08267L1GC [SEP] KLS14 Set of 2 Contemporary Ladder Back Design Metal Bar Stools, Clear Coated Frame Finish, Burgundy Vinyl Seat/2373 [SEP] $334.5 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[back to search]\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b085dy3k9p]",
+              "4": "click[b09lh2mrh8]",
+              "5": "click[b09j48rwh1]",
+              "6": "click[b07998rbrm]",
+              "7": "click[b073t4r3js]",
+              "8": "click[b07vdbk6hw]",
+              "9": "click[b073t4g91y]",
+              "10": "click[b07zhglbkg]",
+              "11": "click[b08267l1gc]",
+              "12": "click[b00004rg7m]"
+            }
+          }
+        }
+      },
+      "request_sha256": "40f9a8eb939f9ce0fc47f60f744268486284b271256ee8b70aca8a8d5c124dcf",
+      "attempts": [
+        {
+          "seconds": 0.5353616401553154,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5355318859219551,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.14981101973148386,
+              "1": 0.149009269987069,
+              "2": 0.40815055836472725,
+              "3": 0.02364026139922532,
+              "4": 0.03910299075587924,
+              "5": 0.03111547135143285,
+              "6": 0.039831736427016914,
+              "7": 0.03277275779050609,
+              "8": 0.022023407024120464,
+              "9": 0.02635150404640815,
+              "10": 0.03004506328311047,
+              "11": 0.02494106387958451,
+              "12": 0.023204895959435926
+            },
+            "confidence": 0.3588297715617878
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 12189,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.5333090201020241,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.0626577623188496
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B071G8T81J [SEP] Best Price Mattress 11\" Memory Foam Mattress & 14\" Premium Metal Bed Frame Set, King [SEP] $100.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B07BV2PTJQ [SEP] Classic Brands Cool Gel Chill Memory Foam 14-Inch Mattress with 2 BONUS Pillows |CertiPUR-US Certified |Bed-in-a-Box, California King [SEP] $594.33 [SEP] B07X6154XC [SEP] VOWUA Womens Tops Long Sleeve Leopard Print Patchwork T-Shirt Blouse Ladies T-Shirt Oversize Tops [SEP] $5.99 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B07MDQCTJR [SEP] Modern Style Metal Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 4 Natural Wood Seat #2153 [SEP] $524.5 [SEP] B07MKX9VVN [SEP] Modern Style Metal Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 4 Walnut Wood Seat #2153 [SEP] $444.5 [SEP] B07MRBWPXM [SEP] Modern Style Metal Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 4 Cherry Wood Seat #2153 [SEP] $444.5 [SEP] B084FHX3BD [SEP] NINE WEST Women's Misses Gramercy Skinny Crop Length Clean Hem Jean [SEP] $30.77 to $44.76 [SEP] B09618YLN4 [SEP] NINE WEST Women's Heidi Ready-to-go Pull on Legging [SEP] $14.98 to $58.35",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B071G8T81J [SEP] Best Price Mattress 11\" Memory Foam Mattress & 14\" Premium Metal Bed Frame Set, King [SEP] $100.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B07BV2PTJQ [SEP] Classic Brands Cool Gel Chill Memory Foam 14-Inch Mattress with 2 BONUS Pillows |CertiPUR-US Certified |Bed-in-a-Box, California King [SEP] $594.33 [SEP] B07X6154XC [SEP] VOWUA Womens Tops Long Sleeve Leopard Print Patchwork T-Shirt Blouse Ladies T-Shirt Oversize Tops [SEP] $5.99 [SEP] B07JMGSDWT [SEP] Modern Design Folding Wood Chair Lightweight Waterproof Vinyl Padded Seat Clear Lacquer Varnish Frame Indoor-Outdoor Home Office Commercial Furniture - Set of 2 Natural Wood #2059 [SEP] $164.5 [SEP] B07MDQCTJR [SEP] Modern Style Metal Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 4 Natural Wood Seat #2153 [SEP] $524.5 [SEP] B07MKX9VVN [SEP] Modern Style Metal Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 4 Walnut Wood Seat #2153 [SEP] $444.5 [SEP] B07MRBWPXM [SEP] Modern Style Metal Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 4 Cherry Wood Seat #2153 [SEP] $444.5 [SEP] B084FHX3BD [SEP] NINE WEST Women's Misses Gramercy Skinny Crop Length Clean Hem Jean [SEP] $30.77 to $44.76 [SEP] B09618YLN4 [SEP] NINE WEST Women's Heidi Ready-to-go Pull on Legging [SEP] $14.98 to $58.35\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[back to search]\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b071g8t81j]",
+              "4": "click[b09kcl5gk5]",
+              "5": "click[b07bv2ptjq]",
+              "6": "click[b07x6154xc]",
+              "7": "click[b07jmgsdwt]",
+              "8": "click[b07mdqctjr]",
+              "9": "click[b07mkx9vvn]",
+              "10": "click[b07mrbwpxm]",
+              "11": "click[b084fhx3bd]",
+              "12": "click[b09618yln4]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0505e8bea832927ac77add1e4221df9734f83487e02382a46ebc17165a3f7a3a",
+      "attempts": [
+        {
+          "seconds": 0.47163568064570427,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.47177335247397423,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.15521267811392847,
+              "1": 0.16024344809055863,
+              "2": 0.41258913645909495,
+              "3": 0.02259600238550011,
+              "4": 0.04489850105388481,
+              "5": 0.02611956609724555,
+              "6": 0.01530561757475613,
+              "7": 0.014102774618537107,
+              "8": 0.008648049988844822,
+              "9": 0.010799442300286285,
+              "10": 0.014441970849815952,
+              "11": 0.04959071203888723,
+              "12": 0.06545210042866002
+            },
+            "confidence": 0.3636382311640195
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10715,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4695170037448406,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.599600788205862
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08C5GM5VJ [SEP] White, 17.7x21.6in, PVC Matte Paper, Waterproof Photo Backdrop Photography Background Paper, Food, Product Photography Backdrop Paper [SEP] $22.91 [SEP] B01CFU1IF8 [SEP] 12 Inch Cooling Gel Memory Foam Mattress Plush Support Made in USA (King) [SEP] $899.99 [SEP] B078PBSNNC [SEP] Olee Sleep Mattress, King, Blue [SEP] $69.99 [SEP] B07YRSHPBT [SEP] XF Storage Stool Wooden Ottoman Living Room Doorway Change Shoe Bench 15x15x15in (Color : White) [SEP] $119.04 [SEP] B08Z3PW1T6 [SEP] Midnight 8” (Queen) Pressure Relieving Memory Foam Mattress//CertiPUR-US/Bed-in-a-Box [SEP] $399.0 [SEP] B07M9PL53Q [SEP] Modern Style Metal Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 2 Black Vinyl Seat #2153 [SEP] $224.5 [SEP] B08Y5M4R51 [SEP] NINE WEST Women's Gramercy Skinny Crop Length Jean [SEP] $29.07 to $55.12 [SEP] B082WGC52X [SEP] Men's Muscle Print T-Shirt Unisex Holiday Shirt Rude Stag Party Fancy Dress 3D Offensive Boobs Printed Tee Top M-2XL [SEP] $9.99 [SEP] B08B12JR4T [SEP] NINE WEST Women's Misses Gramercy Kick Boot Cut Crop Jean [SEP] $25.98 to $48.34 [SEP] B07D6XX5ZX [SEP] Antique Quarter Oak China Cabinet f9652 [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08C5GM5VJ [SEP] White, 17.7x21.6in, PVC Matte Paper, Waterproof Photo Backdrop Photography Background Paper, Food, Product Photography Backdrop Paper [SEP] $22.91 [SEP] B01CFU1IF8 [SEP] 12 Inch Cooling Gel Memory Foam Mattress Plush Support Made in USA (King) [SEP] $899.99 [SEP] B078PBSNNC [SEP] Olee Sleep Mattress, King, Blue [SEP] $69.99 [SEP] B07YRSHPBT [SEP] XF Storage Stool Wooden Ottoman Living Room Doorway Change Shoe Bench 15x15x15in (Color : White) [SEP] $119.04 [SEP] B08Z3PW1T6 [SEP] Midnight 8” (Queen) Pressure Relieving Memory Foam Mattress//CertiPUR-US/Bed-in-a-Box [SEP] $399.0 [SEP] B07M9PL53Q [SEP] Modern Style Metal Dining Chairs School Bar Restaurant Commercial Seats Ladder Back Design Black Powder Coated Frame Finish Home Office Furniture - Set of 2 Black Vinyl Seat #2153 [SEP] $224.5 [SEP] B08Y5M4R51 [SEP] NINE WEST Women's Gramercy Skinny Crop Length Jean [SEP] $29.07 to $55.12 [SEP] B082WGC52X [SEP] Men's Muscle Print T-Shirt Unisex Holiday Shirt Rude Stag Party Fancy Dress 3D Offensive Boobs Printed Tee Top M-2XL [SEP] $9.99 [SEP] B08B12JR4T [SEP] NINE WEST Women's Misses Gramercy Kick Boot Cut Crop Jean [SEP] $25.98 to $48.34 [SEP] B07D6XX5ZX [SEP] Antique Quarter Oak China Cabinet f9652 [SEP] $100.0\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[back to search]\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b08c5gm5vj]",
+              "4": "click[b01cfu1if8]",
+              "5": "click[b078pbsnnc]",
+              "6": "click[b07yrshpbt]",
+              "7": "click[b08z3pw1t6]",
+              "8": "click[b07m9pl53q]",
+              "9": "click[b08y5m4r51]",
+              "10": "click[b082wgc52x]",
+              "11": "click[b08b12jr4t]",
+              "12": "click[b07d6xx5zx]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0eec726c500c39047be8ded4dab191ac82cd9df752e0a6520d135a331f724626",
+      "attempts": [
+        {
+          "seconds": 0.43285416811704636,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.433025598526001,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.15068376870518815,
+              "1": 0.1585570685518431,
+              "2": 0.40902974262433656,
+              "3": 0.020496407636957672,
+              "4": 0.02006253328299035,
+              "5": 0.018555267391804832,
+              "6": 0.026473456660603526,
+              "7": 0.020909430994479415,
+              "8": 0.015808389681062667,
+              "9": 0.07216417916616324,
+              "10": 0.03207382845190258,
+              "11": 0.038319462466415107,
+              "12": 0.016866464386252902
+            },
+            "confidence": 0.3597822211763646
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9820,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4307790584862232,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.095715019851923
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[back to search]\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "45b8b9cc6cf45aac82f0d3c944fb4219ede83632247fae557a2f8ff1fc301455",
+      "attempts": [
+        {
+          "seconds": 0.0760611928999424,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07615926116704941,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.21735518270088555,
+              "1": 0.2528891101148471,
+              "2": 0.5297557071842675
+            },
+            "confidence": 0.2946335607764012
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 870,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07407630234956741,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.220924325287342
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[back to search]\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3ef61a0a19e9f1f106572d0f7069e97afaf7b8d8d92d369af515981096ace105",
+      "attempts": [
+        {
+          "seconds": 0.07133336365222931,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0714181661605835,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2224499551820019,
+              "1": 0.25763041463381325,
+              "2": 0.5199196301841849
+            },
+            "confidence": 0.2798794452762773
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 885,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06955133751034737,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.340886138379574
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[back to search]\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "21f0641aa2d5a7ce6334b4fd77b5c044dabc037f6bc9b60535534948c73795ea",
+      "attempts": [
+        {
+          "seconds": 0.07440797612071037,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07450172677636147,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.22961844043758997,
+              "1": 0.26327630536295754,
+              "2": 0.5071052541994525
+            },
+            "confidence": 0.2606578812991788
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 900,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07275361195206642,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.4640488661825657
+    },
+    {
+      "step": 11,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[back to search]\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4f431ff3714e3673794247fd095ccb22a8f52b9c939c34555c85669dd3469fcf",
+      "attempts": [
+        {
+          "seconds": 0.0688134916126728,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0689007043838501,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24353332429212976,
+              "1": 0.30013489979169766,
+              "2": 0.45633177591617263
+            },
+            "confidence": 0.18449766387425895
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 813,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06718016043305397,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.581372231245041
+    },
+    {
+      "step": 12,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "870151282204d2a9ea81644e403647a28af307413d73b363943a7b89a218525f",
+      "attempts": [
+        {
+          "seconds": 0.07019970938563347,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07028954848647118,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.31723776532503933,
+              "1": 0.25999831335242723,
+              "2": 0.4227639213225335
+            },
+            "confidence": 0.13414588198380023
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 810,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06846455112099648,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.7003352604806423
+    },
+    {
+      "step": 13,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "720302a3538a0d377a8deeb16434b2bf4e31ce8f243be022839e34c9605fb2a3",
+      "attempts": [
+        {
+          "seconds": 0.06962138414382935,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06970824673771858,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3251660652778827,
+              "1": 0.2496468155700123,
+              "2": 0.42518711915210494
+            },
+            "confidence": 0.1377806787281574
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06791166588664055,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.818325527012348
+    },
+    {
+      "step": 14,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0b8ce2784f3154cd67a751e6e47be620f430bd9129fb50bfd65c1080f4ecae34",
+      "attempts": [
+        {
+          "seconds": 0.07135667651891708,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0714447945356369,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.32486077514675016,
+              "1": 0.24903047840795836,
+              "2": 0.4261087464452915
+            },
+            "confidence": 0.13916311966793726
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06956010684370995,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.9390322752296925
+    },
+    {
+      "step": 15,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5bd683ab860e852538b2822763673ff8397dca945f8884fa2ae91e027fd8150c",
+      "attempts": [
+        {
+          "seconds": 0.0714806504547596,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0715576820075512,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.317446187732732,
+              "1": 0.2397750632070769,
+              "2": 0.44277874906019116
+            },
+            "confidence": 0.16416812359028674
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06981432065367699,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.059292767196894
+    },
+    {
+      "step": 16,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e2feaaecf9c44bdb4d92c7ef4dce1534474e184f01d2f057ccaa011379b5e539",
+      "attempts": [
+        {
+          "seconds": 0.07007190957665443,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07016569375991821,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.31895178973480576,
+              "1": 0.2447904162890346,
+              "2": 0.4362577939761596
+            },
+            "confidence": 0.1543866909642394
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06846214085817337,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.177968338131905
+    },
+    {
+      "step": 17,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1b00dd68a7b72db4d156c16b789f463bdcbc98e7fbc5a83301095b0dd8346732",
+      "attempts": [
+        {
+          "seconds": 0.0691111758351326,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0691956989467144,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3101589080415832,
+              "1": 0.24442750152055076,
+              "2": 0.44541359043786605
+            },
+            "confidence": 0.16812038565679907
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06742473691701889,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.298551622778177
+    },
+    {
+      "step": 18,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "01f4bcedda05e8e79d3839e36057c63e36af8225e63709aebfd9ea4c7745a5fd",
+      "attempts": [
+        {
+          "seconds": 0.06865695491433144,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06873954087495804,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3115544510957734,
+              "1": 0.23896761659248955,
+              "2": 0.4494779323117371
+            },
+            "confidence": 0.17421689846760566
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06716214492917061,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.41491286829114
+    },
+    {
+      "step": 19,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "07518353aaecf822dd53f559973e75554b018805d032219412e0adf085076e0a",
+      "attempts": [
+        {
+          "seconds": 0.0693843886256218,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06946666911244392,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3079460734011432,
+              "1": 0.23547712380944594,
+              "2": 0.4565768027894108
+            },
+            "confidence": 0.18486520418411623
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06763410568237305,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.5320149175822735
+    },
+    {
+      "step": 20,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "af581005bb6f40db080ce8eadab6c6b1983f7c748db7a5e02e0617e39ff02ef0",
+      "attempts": [
+        {
+          "seconds": 0.0687255933880806,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06879911199212074,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.30611410672355505,
+              "1": 0.2391755537837523,
+              "2": 0.45471033949269263
+            },
+            "confidence": 0.18206550923903894
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06738850846886635,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.648865431547165
+    },
+    {
+      "step": 21,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ddc9e0e03b9b7ab12597247fdd21656fa0ad0fbfdfbafb2791ce4eb124e177dd",
+      "attempts": [
+        {
+          "seconds": 0.06920890882611275,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0692918710410595,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.30486674419655035,
+              "1": 0.23568263443663048,
+              "2": 0.45945062136681925
+            },
+            "confidence": 0.18917593205022887
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06735943257808685,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.766146808862686
+    },
+    {
+      "step": 22,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2ad17320205565c3bb8630bb39dc7f59657db0c32cc564874bc620c2eac9d843",
+      "attempts": [
+        {
+          "seconds": 0.06912962719798088,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06921553239226341,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3470985436182125,
+              "1": 0.24991193436974812,
+              "2": 0.40298952201203936
+            },
+            "confidence": 0.10448428301805905
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06749887391924858,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.8837205320596695
+    },
+    {
+      "step": 23,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 21 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 21 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a1f353452dd82a6edc492e0ac1e21a48c4dac8ce2ac8e4864f4cce2e1d4eac77",
+      "attempts": [
+        {
+          "seconds": 0.07258138433098793,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07272995263338089,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3493457058623084,
+              "1": 0.2516753175881477,
+              "2": 0.398978976549544
+            },
+            "confidence": 0.09846846482431602
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07045713067054749,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.007570169866085
+    },
+    {
+      "step": 24,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 22 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 22 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ffc4885df1c82d72bbe9f30c95dfe21a1256c9397ecaddbededf68559dec816a",
+      "attempts": [
+        {
+          "seconds": 0.06974343955516815,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06985930353403091,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3473682243634535,
+              "1": 0.2477211753201098,
+              "2": 0.4049106003164367
+            },
+            "confidence": 0.1073659004746551
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06807532161474228,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.126409415155649
+    },
+    {
+      "step": 25,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 23 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 23 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "93a995a7d82acc3cc708c2828e10ac76dedfdfc24fee96383b31adffee920dff",
+      "attempts": [
+        {
+          "seconds": 0.06845351681113243,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06855500116944313,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3395501917972937,
+              "1": 0.24570451881572034,
+              "2": 0.41474528938698607
+            },
+            "confidence": 0.12211793408047912
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0665716603398323,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.244667939841747
+    },
+    {
+      "step": 26,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 24 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 24 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "043c014b4ac95c8285210bc0db2699dac7db08ecba0fdab3d6050682d1f7468f",
+      "attempts": [
+        {
+          "seconds": 0.06840983033180237,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06850481033325195,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.34142144906541827,
+              "1": 0.25635261763664546,
+              "2": 0.40222593329793627
+            },
+            "confidence": 0.10333889994690441
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06681191921234131,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.362822588533163
+    },
+    {
+      "step": 27,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 25 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 25 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f427f973df47c41da2f47f67307b401920c749652be6c1327979d4304361a53c",
+      "attempts": [
+        {
+          "seconds": 0.06809336692094803,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06818562746047974,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3247489643260074,
+              "1": 0.2517925835920291,
+              "2": 0.4234584520819635
+            },
+            "confidence": 0.13518767812294522
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0664508268237114,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.480039998888969
+    },
+    {
+      "step": 28,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 26 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 26 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "130640d55a6e6ccaa9613b50a00dbcecea3f5fa766a3d62ef8e8eea2d4277d40",
+      "attempts": [
+        {
+          "seconds": 0.06900579109787941,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06909631937742233,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3360280212597257,
+              "1": 0.2519922658777515,
+              "2": 0.4119797128625227
+            },
+            "confidence": 0.11796956929378426
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06704361736774445,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.597638368606567
+    },
+    {
+      "step": 29,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 27 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 27 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "cdabf779a0cd3acd71214e75873bc648d8d24ae1ad81287f422208ad414dbf09",
+      "attempts": [
+        {
+          "seconds": 0.06664423644542694,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06673048436641693,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33042855141027366,
+              "1": 0.2484535070366827,
+              "2": 0.4211179415530436
+            },
+            "confidence": 0.1316769123295654
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0649760477244854,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.716174021363258
+    },
+    {
+      "step": 30,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 28 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 28 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "34bb22b6d0bea6f921fb25deaac3e0278b0b55891a5466aa6f061bbf73758d5e",
+      "attempts": [
+        {
+          "seconds": 0.06666363775730133,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06676777452230453,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3315607524642566,
+              "1": 0.24600976318591544,
+              "2": 0.42242948434982797
+            },
+            "confidence": 0.13364422652474195
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06502028927206993,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.830909952521324
+    },
+    {
+      "step": 31,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 29 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 29 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5b74d71696389e7dff100ad25d10a212cc31cefac707acdaab24cb669d7083ea",
+      "attempts": [
+        {
+          "seconds": 0.0657036155462265,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06577892601490021,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33334710281840957,
+              "1": 0.24661463492983363,
+              "2": 0.4200382622517567
+            },
+            "confidence": 0.13005739337763508
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06432059779763222,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.9444703087210655
+    },
+    {
+      "step": 32,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 30 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 30 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a9b958dcf503ebff24369b231fb030e62b3f5f74d3bb6b050815be2ea6d070bc",
+      "attempts": [
+        {
+          "seconds": 0.06631727889180183,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06640208140015602,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.34156027239134734,
+              "1": 0.25050300066271625,
+              "2": 0.40793672694593636
+            },
+            "confidence": 0.11190509041890455
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06490012630820274,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.060420885682106
+    },
+    {
+      "step": 33,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 31 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 31 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a50a15aa59b568becaac690d1558264d485225faf9fa0eaf7b06ebf98161b369",
+      "attempts": [
+        {
+          "seconds": 0.0657927431166172,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06587464734911919,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3512300856075543,
+              "1": 0.2564890340538489,
+              "2": 0.3922808803385969
+            },
+            "confidence": 0.0884213205078954
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06443579867482185,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.1748400144279
+    },
+    {
+      "step": 34,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 32 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 32 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1589a3d83eaeb98591453fe23fbfc058cf6c14e0bb89d734542bd80c766b6c41",
+      "attempts": [
+        {
+          "seconds": 0.06567303091287613,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06575975194573402,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3521774036443285,
+              "1": 0.2603631382230518,
+              "2": 0.3874594581326198
+            },
+            "confidence": 0.08118918719892969
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06422944739460945,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.289532657712698
+    },
+    {
+      "step": 35,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 33 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 33 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "63c8de6c7d516861adbde6167e69e4852bd25f83ff4b12bdefce3ec2b9d4ca11",
+      "attempts": [
+        {
+          "seconds": 0.0663626492023468,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06643637642264366,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3462830820316078,
+              "1": 0.251373338403381,
+              "2": 0.40234357956501127
+            },
+            "confidence": 0.10351536934751691
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06499455124139786,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.404849033802748
+    },
+    {
+      "step": 36,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 34 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 34 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b34986752b61ca5220502f96b8e07436d9453ee38caa2ce6968166f6b6aa5cf3",
+      "attempts": [
+        {
+          "seconds": 0.06635623797774315,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06642726063728333,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3495722669952275,
+              "1": 0.26436413239637213,
+              "2": 0.3860636006084004
+            },
+            "confidence": 0.0790954009126006
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06492910906672478,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.51905245706439
+    },
+    {
+      "step": 37,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 35 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 35 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7357bd0627449ada2beca1d1a4df55e7c92c9a70c35a850acacad804cf9367c2",
+      "attempts": [
+        {
+          "seconds": 0.06573521345853806,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06581642106175423,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3270759340821962,
+              "1": 0.2531928526462923,
+              "2": 0.4197312132715116
+            },
+            "confidence": 0.1295968199072672
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0643368549644947,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.632868651300669
+    },
+    {
+      "step": 38,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 36 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 36 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "10c244fc4aa4cff032b5576e3ab1b83164ebe80b76199ff134978043d8578bc1",
+      "attempts": [
+        {
+          "seconds": 0.06651187688112259,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06660538911819458,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3320650958803228,
+              "1": 0.25418634881842506,
+              "2": 0.41374855530125215
+            },
+            "confidence": 0.12062283295187824
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06509925425052643,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.74769052490592
+    },
+    {
+      "step": 39,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 37 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 37 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5205faf921754ce5fed35173f34d3b2738f44d4731a6269584c49b1adbe0c65e",
+      "attempts": [
+        {
+          "seconds": 0.06546911969780922,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06554944813251495,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3326374230306718,
+              "1": 0.2523220681268081,
+              "2": 0.4150405088425202
+            },
+            "confidence": 0.1225607632637803
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06414996832609177,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.8609901405870914
+    },
+    {
+      "step": 40,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 38 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 38 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4ba4c379028cb604db98d42118b2a80a689aafb94b8699b8d432c51f43227fc8",
+      "attempts": [
+        {
+          "seconds": 0.06573644652962685,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06581267341971397,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3333649680697889,
+              "1": 0.25410120297759436,
+              "2": 0.41253382895261675
+            },
+            "confidence": 0.11880074342892515
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06413023173809052,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.974520917981863
+    },
+    {
+      "step": 41,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 39 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 39 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7f74e4c3825e87614ff999f057d9b576d896e7570944dd55ef8940e624aaffe1",
+      "attempts": [
+        {
+          "seconds": 0.07113521173596382,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07121963426470757,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33709552326145203,
+              "1": 0.2523200648485637,
+              "2": 0.4105844118899843
+            },
+            "confidence": 0.11587661783497645
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06930627673864365,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.097512613981962
+    },
+    {
+      "step": 42,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 40 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 40 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "971d28bde13aafc118a33c7f6d2c30dd5d79d8238c69ab3eb651d1e986c0fe9e",
+      "attempts": [
+        {
+          "seconds": 0.06718900799751282,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06726748868823051,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3525870547430692,
+              "1": 0.26793094509488813,
+              "2": 0.37948200016204275
+            },
+            "confidence": 0.06922300024306415
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06552160903811455,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.213796470314264
+    },
+    {
+      "step": 43,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 41 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 41 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "41b3a0a282631fd103d7a675950a80f8b3c54a3cd313f8aeb9cb07736f354734",
+      "attempts": [
+        {
+          "seconds": 0.06829120218753815,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06837804242968559,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.35319466353995893,
+              "1": 0.26429606159695423,
+              "2": 0.3825092748630868
+            },
+            "confidence": 0.07376391229463018
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06653982773423195,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.330941013991833
+    },
+    {
+      "step": 44,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 42 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 42 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4233ac07d740a4a7b357bd08bf91abecfb9af11371ddc2b248cccc133996c4d0",
+      "attempts": [
+        {
+          "seconds": 0.0685185045003891,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0685868039727211,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3450296868148979,
+              "1": 0.26083486241872866,
+              "2": 0.39413545076637346
+            },
+            "confidence": 0.09120317614956021
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06692512705922127,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.447284080088139
+    },
+    {
+      "step": 45,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 43 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 43 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bcae4318bff147b6bf6f3f095281d9be78f08965e5f1e49ab9339572af343a34",
+      "attempts": [
+        {
+          "seconds": 0.06766688078641891,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06775357201695442,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.342396838265172,
+              "1": 0.2648632510825124,
+              "2": 0.39273991065231556
+            },
+            "confidence": 0.08910986597847335
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06589527428150177,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.563752491027117
+    },
+    {
+      "step": 46,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 44 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 44 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "86025af2ec821a551f5b797c321e8bdd3226e36085b5aa5553551e0b323bdc28",
+      "attempts": [
+        {
+          "seconds": 0.06767037510871887,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06776148825883865,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.35089941563812627,
+              "1": 0.2705187580119464,
+              "2": 0.3785818263499274
+            },
+            "confidence": 0.06787273952489108
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06575626507401466,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.680791541934013
+    },
+    {
+      "step": 47,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 45 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 45 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6ccf1b45a330da5f5f560d66e4dbf99e982a3b0811e0241c1eeb0b34540763ed",
+      "attempts": [
+        {
+          "seconds": 0.06779968738555908,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06788982078433037,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.34421442958299997,
+              "1": 0.2673349785545119,
+              "2": 0.3884505918624881
+            },
+            "confidence": 0.08267588779373215
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06601904332637787,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.798373483121395
+    },
+    {
+      "step": 48,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 46 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 46 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "319398e91355342db1e9afa41238397e53f87399b9ed13d7c216d4990ae51f41",
+      "attempts": [
+        {
+          "seconds": 0.0669483095407486,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06703996658325195,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.34653324528412266,
+              "1": 0.26297906373757884,
+              "2": 0.3904876909782985
+            },
+            "confidence": 0.08573153646744776
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06546984985470772,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.913634549826384
+    },
+    {
+      "step": 49,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 47 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 47 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6560b2d9d35c0778ae32f8ddbb7ee12c0f2897baea02ee291856f419938513bc",
+      "attempts": [
+        {
+          "seconds": 0.06652308627963066,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06660711020231247,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.35234609776290793,
+              "1": 0.2683724889945407,
+              "2": 0.37928141324255144
+            },
+            "confidence": 0.06892211986382717
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06494975835084915,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.02882705628872
+    },
+    {
+      "step": 50,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 48 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 48 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c775d40aca313631f80e432cd6a9a01bb4be94880803708b315344715ccc2be6",
+      "attempts": [
+        {
+          "seconds": 0.06619828939437866,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06628354266285896,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3528277183695525,
+              "1": 0.277830274497078,
+              "2": 0.36934200713336957
+            },
+            "confidence": 0.05401301070005437
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06454503163695335,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.14454909414053
+    },
+    {
+      "step": 51,
+      "observation": "Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 49 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Back to Search [SEP] Page 49 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f8c7d8f5a1aea9ed16bf1a3004e1bd2eec3856144493e1dfd025fc0f67fc7ab8",
+      "attempts": [
+        {
+          "seconds": 0.06878252699971199,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06889476254582405,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.4342218212612007,
+              "1": 0.32016041832400544,
+              "2": 0.24561776041479386
+            },
+            "confidence": 0.15133273189180102
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 723,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06699276715517044,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.219929113984108
+    },
+    {
+      "step": 52,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars [SEP] Search",
+      "action": "search[i am looking for some flats with memory foam in a size nine and the color picante, and price lower than 100.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.276123397052288
+    }
+  ]
+}

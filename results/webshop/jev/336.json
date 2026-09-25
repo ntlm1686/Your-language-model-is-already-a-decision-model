@@ -1,0 +1,243 @@
+{
+  "task_id": 336,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars",
+  "instruction_sha256": "b5f03c113f8be3dceeb5da3fe47814b17c9f5b8d92e8899f88021884a8a41cc9",
+  "reward": 0.5,
+  "score": 50.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 4,
+  "elapsed_seconds": 1.167611449956894,
+  "decision_seconds": 1.0270317681133747,
+  "input_tokens": 2738,
+  "output_tokens": 342,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06970186531543732
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09QQ8YMPT [SEP] Men's Swim Trunks Quick Dry Floral Prints Beach Shorts Summer Casual Plus Size Athletic Knee Length Swim Boardshort [SEP] $10.99 to $14.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09SG8JQBV [SEP] Men's Henley T Shirts Casual Front Placket Short Sleeve Basic Tee Fashion Athletic Top [SEP] $100.0 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B0953JTCWD [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Loose Maxi Tank Dress Party Prom Floral Print Dress with Pocket [SEP] $2.19 to $9.79 [SEP] B09SG7DGCF [SEP] CHENGSE Men's Business Dress Shirt Long Sleeve Solid Regular Fit Shirt Wrinkle Free Casual Button Down Shirt [SEP] $100.0 [SEP] B095BZDSMM [SEP] Casual Summer Dress for Women,Round Neck Sleeve Floral Print Tank Dress Cocktail Party Swing Flowy Patchwork Dress [SEP] $0.49 to $8.09 [SEP] B09Q67DF2T [SEP] Women's Casual Summer Dresses, Floral Boho Sleeveless Long Maxi Dress Beach Sundress Loose Party Tank Dress [SEP] $7.27 to $7.29 [SEP] B09QQ7KL4F [SEP] Men's Quick Dry Swim Trunks Striped Print Pockets Board Shorts Summer Holiday Swim Beach Shorts with Mesh Lining [SEP] $12.99 to $16.99 [SEP] B096WTNXHF [SEP] camisole for women-Print V-neck Tank Tops Short Sleeve Workout Shirts Casual Loose Tees [SEP] $5.66 to $12.01",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09QQ8YMPT [SEP] Men's Swim Trunks Quick Dry Floral Prints Beach Shorts Summer Casual Plus Size Athletic Knee Length Swim Boardshort [SEP] $10.99 to $14.99 [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09SG8JQBV [SEP] Men's Henley T Shirts Casual Front Placket Short Sleeve Basic Tee Fashion Athletic Top [SEP] $100.0 [SEP] B09DSHW7MZ [SEP] USYFAKGH Women Pocket Zipper Solid Color Jacket Plush Sleeveless Lapel Vest Loose Coat mens cardigan [SEP] $14.99 to $18.99 [SEP] B0953JTCWD [SEP] Casual Summer Dress for Women,Round Neck Sleeveless Loose Maxi Tank Dress Party Prom Floral Print Dress with Pocket [SEP] $2.19 to $9.79 [SEP] B09SG7DGCF [SEP] CHENGSE Men's Business Dress Shirt Long Sleeve Solid Regular Fit Shirt Wrinkle Free Casual Button Down Shirt [SEP] $100.0 [SEP] B095BZDSMM [SEP] Casual Summer Dress for Women,Round Neck Sleeve Floral Print Tank Dress Cocktail Party Swing Flowy Patchwork Dress [SEP] $0.49 to $8.09 [SEP] B09Q67DF2T [SEP] Women's Casual Summer Dresses, Floral Boho Sleeveless Long Maxi Dress Beach Sundress Loose Party Tank Dress [SEP] $7.27 to $7.29 [SEP] B09QQ7KL4F [SEP] Men's Quick Dry Swim Trunks Striped Print Pockets Board Shorts Summer Holiday Swim Beach Shorts with Mesh Lining [SEP] $12.99 to $16.99 [SEP] B096WTNXHF [SEP] camisole for women-Print V-neck Tank Tops Short Sleeve Workout Shirts Casual Loose Tees [SEP] $5.66 to $12.01\n\nRecent actions:\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09qq8ympt]",
+              "3": "click[b099z4t56c]",
+              "4": "click[b09sg8jqbv]",
+              "5": "click[b09dshw7mz]",
+              "6": "click[b0953jtcwd]",
+              "7": "click[b09sg7dgcf]",
+              "8": "click[b095bzdsmm]",
+              "9": "click[b09q67df2t]",
+              "10": "click[b09qq7kl4f]",
+              "11": "click[b096wtnxhf]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "b529d0dacd6258d0fcb7625aaf0fd52ee6cc106bb0874276c61f3936529ad3ca",
+      "attempts": [
+        {
+          "seconds": 0.35499512404203415,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3551310896873474,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "confidence": 0.35,
+            "probabilities": {
+              "11": 0.0,
+              "4": 0.0,
+              "2": 0.0,
+              "8": 0.4,
+              "7": 0.0,
+              "10": 0.0,
+              "6": 0.25,
+              "5": 0.0,
+              "0": 0.03,
+              "3": 0.0,
+              "9": 0.2,
+              "1": 0.12
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1181,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b095bzdsmm]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.44760094210505486
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] beige [SEP] black [SEP] pink [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Casual Summer Dress for Women,Round Neck Sleeve Floral Print Tank Dress Cocktail Party Swing Flowy Patchwork Dress [SEP] Price: $0.49 to $8.09 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] beige [SEP] black [SEP] pink [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Casual Summer Dress for Women,Round Neck Sleeve Floral Print Tank Dress Cocktail Party Swing Flowy Patchwork Dress [SEP] Price: $0.49 to $8.09 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]\nclick[b095bzdsmm]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[beige]",
+              "7": "click[black]",
+              "8": "click[pink]",
+              "9": "click[small]",
+              "10": "click[medium]",
+              "11": "click[large]",
+              "12": "click[x-large]",
+              "13": "click[xx-large]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "b3342f9b920056acc755a8d88521016be77e061f5addde401fc3c70701cc4ce1",
+      "attempts": [
+        {
+          "seconds": 0.3347197324037552,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33481568470597267,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "13",
+            "confidence": 0.5,
+            "probabilities": {
+              "1": 0.01,
+              "9": 0.0,
+              "12": 0.0,
+              "4": 0.0,
+              "2": 0.01,
+              "13": 0.55,
+              "7": 0.0,
+              "6": 0.01,
+              "3": 0.03,
+              "11": 0.0,
+              "10": 0.0,
+              "8": 0.01,
+              "0": 0.28,
+              "5": 0.09
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 776,
+          "output_tokens": 120
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[xx-large]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.7990049384534359
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] beige [SEP] black [SEP] pink [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Casual Summer Dress for Women,Round Neck Sleeve Floral Print Tank Dress Cocktail Party Swing Flowy Patchwork Dress [SEP] Price: $0.49 to $8.09 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] beige [SEP] black [SEP] pink [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] Casual Summer Dress for Women,Round Neck Sleeve Floral Print Tank Dress Cocktail Party Swing Flowy Patchwork Dress [SEP] Price: $0.49 to $8.09 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need a yellow xx-large floral print tank sleeveless dress that is quick drying, and price lower than 40.00 dollars]\nclick[b095bzdsmm]\nclick[xx-large]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[beige]",
+              "7": "click[black]",
+              "8": "click[pink]",
+              "9": "click[small]",
+              "10": "click[medium]",
+              "11": "click[large]",
+              "12": "click[x-large]",
+              "13": "click[xx-large]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "eb675e566088a8376226bddea947fa2b73e01c08b1ac636eacb77627f184e09c",
+      "attempts": [
+        {
+          "seconds": 0.33700624480843544,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3370849937200546,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.36,
+            "probabilities": {
+              "13": 0.01,
+              "5": 0.42,
+              "6": 0.02,
+              "12": 0.0,
+              "2": 0.02,
+              "1": 0.03,
+              "4": 0.0,
+              "8": 0.05,
+              "0": 0.36,
+              "10": 0.0,
+              "3": 0.08,
+              "9": 0.0,
+              "7": 0.01,
+              "11": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 781,
+          "output_tokens": 119
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.5,
+      "done": true,
+      "elapsed_seconds": 1.1676090992987156
+    }
+  ]
+}

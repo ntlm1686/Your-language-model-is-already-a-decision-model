@@ -1,0 +1,439 @@
+{
+  "task_id": 304,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars",
+  "instruction_sha256": "d0c6e980bd85701de3b5c195ffc0fad5c44ab4709ac3f69bfa49bd138654282a",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 4,
+  "elapsed_seconds": 3.1397687420248985,
+  "decision_seconds": 2.959510985761881,
+  "input_tokens": 66890,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars [SEP] Search",
+      "action": "search[i am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.07385767623782158
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07YKRLV34 [SEP] Men's Casual Hawaii Floral Printed Shirts Loose Long Sleeve Button Lapel T-Shirt Fashion Top Blouse [SEP] $13.99 to $16.99 [SEP] B09QWWDCM2 [SEP] Men's Short Sleeve Shirts Fashion Stripe Printed Button Lapel Front Pocket Casual Henley Shirts Blouse Tops [SEP] $7.59 to $15.99 [SEP] B09N6WQHS2 [SEP] Men's Casual Button-Down Shirts, Mens Dress Shirts Long Sleeve, Regular Fit Easy Care Stretch Casual Button Down Shirt Men [SEP] $6.99 to $11.29 [SEP] B09QQPDTHW [SEP] Hawaiian Floral Shirts for Men Short Sleeve Beach Shirts Summer Holiday Casual Button Down Lapel Shirt Blouse Tops [SEP] $5.59 to $13.99 [SEP] B09QWWFBCS [SEP] Men Long Sleeves Blouse Tops 3D Geometric Patterns Plus Size Button Lapel Business Casual Henley Shirt Dress Shirt [SEP] $11.59 to $20.99 [SEP] B09QXLJMMJ [SEP] Men's Blouse Tops Graffiti Printed Long Sleeves Plus Size Button Lapel Business Casual Henley Shirt Dress Shirts [SEP] $11.59 to $20.99 [SEP] B09R1Z6VMS [SEP] Mens Short Sleeve T-Shirts Fashion Gradient Print Slim Button Lapel Daily Shirts Casual Basic Henley Tee Shirts [SEP] $2.59 to $9.99 [SEP] B09QD2WHQ4 [SEP] Gifts for Men, Men's Dress Shirts Long Sleeve Regular Fit Stretch Solid Color Turn Down Collar Button-Down Dress Shirts [SEP] $8.69 to $11.99 [SEP] B09N8VHG1T [SEP] Mens Shirts Long Sleeve Button Down, Mens Dress Shirts Long Sleeve, Regular Fit Easy Care Stretch Dress Shirt Gifts for Men [SEP] $5.79 to $11.29 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07YKRLV34 [SEP] Men's Casual Hawaii Floral Printed Shirts Loose Long Sleeve Button Lapel T-Shirt Fashion Top Blouse [SEP] $13.99 to $16.99 [SEP] B09QWWDCM2 [SEP] Men's Short Sleeve Shirts Fashion Stripe Printed Button Lapel Front Pocket Casual Henley Shirts Blouse Tops [SEP] $7.59 to $15.99 [SEP] B09N6WQHS2 [SEP] Men's Casual Button-Down Shirts, Mens Dress Shirts Long Sleeve, Regular Fit Easy Care Stretch Casual Button Down Shirt Men [SEP] $6.99 to $11.29 [SEP] B09QQPDTHW [SEP] Hawaiian Floral Shirts for Men Short Sleeve Beach Shirts Summer Holiday Casual Button Down Lapel Shirt Blouse Tops [SEP] $5.59 to $13.99 [SEP] B09QWWFBCS [SEP] Men Long Sleeves Blouse Tops 3D Geometric Patterns Plus Size Button Lapel Business Casual Henley Shirt Dress Shirt [SEP] $11.59 to $20.99 [SEP] B09QXLJMMJ [SEP] Men's Blouse Tops Graffiti Printed Long Sleeves Plus Size Button Lapel Business Casual Henley Shirt Dress Shirts [SEP] $11.59 to $20.99 [SEP] B09R1Z6VMS [SEP] Mens Short Sleeve T-Shirts Fashion Gradient Print Slim Button Lapel Daily Shirts Casual Basic Henley Tee Shirts [SEP] $2.59 to $9.99 [SEP] B09QD2WHQ4 [SEP] Gifts for Men, Men's Dress Shirts Long Sleeve Regular Fit Stretch Solid Color Turn Down Collar Button-Down Dress Shirts [SEP] $8.69 to $11.99 [SEP] B09N8VHG1T [SEP] Mens Shirts Long Sleeve Button Down, Mens Dress Shirts Long Sleeve, Regular Fit Easy Care Stretch Dress Shirt Gifts for Men [SEP] $5.79 to $11.29 [SEP] B09DSFSNP3 [SEP] USYFAKGH Women Vintage Button Down Distressed Short Denim Jean Jacket Coat With Pocket black cardigan [SEP] $22.99 to $30.99\n\nRecent actions:\nsearch[i am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07ykrlv34]",
+              "3": "click[b09qwwdcm2]",
+              "4": "click[b09n6wqhs2]",
+              "5": "click[b09qqpdthw]",
+              "6": "click[b09qwwfbcs]",
+              "7": "click[b09qxljmmj]",
+              "8": "click[b09r1z6vms]",
+              "9": "click[b09qd2whq4]",
+              "10": "click[b09n8vhg1t]",
+              "11": "click[b09dsfsnp3]"
+            }
+          }
+        }
+      },
+      "request_sha256": "84e3cfc15de0223586b061510549e25cd0040b823adee78c09fb3d39444eb33d",
+      "attempts": [
+        {
+          "seconds": 0.39234453067183495,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.39247577637434006,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "4",
+            "probabilities": {
+              "0": 0.09530374312963587,
+              "1": 0.16776773446046475,
+              "2": 0.02250290949808587,
+              "3": 0.033720518959288556,
+              "4": 0.23278770594519949,
+              "5": 0.05011351036356263,
+              "6": 0.05307180081226176,
+              "7": 0.028192203700573258,
+              "8": 0.03292382107128955,
+              "9": 0.11566171653098956,
+              "10": 0.1513793637307417,
+              "11": 0.016574971797906898
+            },
+            "confidence": 0.16304113375839951
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8872,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3901980295777321,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b09n6wqhs2]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.49965522810816765
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] color [SEP] a-black [SEP] a-dark blue [SEP] a-light blue [SEP] a-white [SEP] a-wine [SEP] b-black [SEP] b-blue [SEP] b-gray [SEP] b-pink [SEP] b-white [SEP] c-black [SEP] c-blue [SEP] c-white [SEP] d-army green [SEP] d-black [SEP] d-gray [SEP] d-sky blue [SEP] d-white [SEP] e-blue [SEP] e-white [SEP] f-black [SEP] f-navy [SEP] f-white [SEP] f-wine [SEP] h-black [SEP] h-green [SEP] i-black [SEP] i-navy [SEP] i-pink [SEP] i-white [SEP] j-blue [SEP] j-green [SEP] j-navy [SEP] j-orange [SEP] l-black [SEP] l-blue [SEP] l-gray [SEP] l-white [SEP] m-black [SEP] m-gray [SEP] m-khaki [SEP] m-light blue [SEP] m-white [SEP] Men's Casual Button-Down Shirts, Mens Dress Shirts Long Sleeve, Regular Fit Easy Care Stretch Casual Button Down Shirt Men [SEP] Price: $6.99 to $11.29 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] color [SEP] a-black [SEP] a-dark blue [SEP] a-light blue [SEP] a-white [SEP] a-wine [SEP] b-black [SEP] b-blue [SEP] b-gray [SEP] b-pink [SEP] b-white [SEP] c-black [SEP] c-blue [SEP] c-white [SEP] d-army green [SEP] d-black [SEP] d-gray [SEP] d-sky blue [SEP] d-white [SEP] e-blue [SEP] e-white [SEP] f-black [SEP] f-navy [SEP] f-white [SEP] f-wine [SEP] h-black [SEP] h-green [SEP] i-black [SEP] i-navy [SEP] i-pink [SEP] i-white [SEP] j-blue [SEP] j-green [SEP] j-navy [SEP] j-orange [SEP] l-black [SEP] l-blue [SEP] l-gray [SEP] l-white [SEP] m-black [SEP] m-gray [SEP] m-khaki [SEP] m-light blue [SEP] m-white [SEP] Men's Casual Button-Down Shirts, Mens Dress Shirts Long Sleeve, Regular Fit Easy Care Stretch Casual Button Down Shirt Men [SEP] Price: $6.99 to $11.29 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars]\nclick[b09n6wqhs2]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[small]",
+              "7": "click[medium]",
+              "8": "click[large]",
+              "9": "click[x-large]",
+              "10": "click[xx-large]",
+              "11": "click[a-black]",
+              "12": "click[a-dark blue]",
+              "13": "click[a-light blue]",
+              "14": "click[a-white]",
+              "15": "click[a-wine]",
+              "16": "click[b-black]",
+              "17": "click[b-blue]",
+              "18": "click[b-gray]",
+              "19": "click[b-pink]",
+              "20": "click[b-white]",
+              "21": "click[c-black]",
+              "22": "click[c-blue]",
+              "23": "click[c-white]",
+              "24": "click[d-army green]",
+              "25": "click[d-black]",
+              "26": "click[d-gray]",
+              "27": "click[d-sky blue]",
+              "28": "click[d-white]",
+              "29": "click[e-blue]",
+              "30": "click[e-white]",
+              "31": "click[f-black]",
+              "32": "click[f-navy]",
+              "33": "click[f-white]",
+              "34": "click[f-wine]",
+              "35": "click[h-black]",
+              "36": "click[h-green]",
+              "37": "click[i-black]",
+              "38": "click[i-navy]",
+              "39": "click[i-pink]",
+              "40": "click[i-white]",
+              "41": "click[j-blue]",
+              "42": "click[j-green]",
+              "43": "click[j-navy]",
+              "44": "click[j-orange]",
+              "45": "click[l-black]",
+              "46": "click[l-blue]",
+              "47": "click[l-gray]",
+              "48": "click[l-white]",
+              "49": "click[m-black]",
+              "50": "click[m-gray]",
+              "51": "click[m-khaki]",
+              "52": "click[m-light blue]",
+              "53": "click[m-white]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e4022aa59752ff2b8dcb6b58699ff9653e15bd95ecbcded614b46dff71f9a46e",
+      "attempts": [
+        {
+          "seconds": 1.2789873592555523,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.2791924476623535,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "52",
+            "probabilities": {
+              "0": 0.014073430817295245,
+              "1": 0.014332025256271535,
+              "2": 0.022577096045591594,
+              "3": 0.011153354806730367,
+              "4": 0.01393685569107175,
+              "5": 0.06539271455803787,
+              "6": 0.043792797454670594,
+              "7": 0.03703680457547926,
+              "8": 0.036727715273715,
+              "9": 0.023666666732260987,
+              "10": 0.025898969389147375,
+              "11": 0.003711390403699719,
+              "12": 0.003871947332716039,
+              "13": 0.11668976994523336,
+              "14": 0.006803975536258254,
+              "15": 0.0027596975594657647,
+              "16": 0.004855034091922323,
+              "17": 0.017129549130173054,
+              "18": 0.005173704584222652,
+              "19": 0.004133273452149647,
+              "20": 0.015949767705009922,
+              "21": 0.004085212299713275,
+              "22": 0.023585812480607506,
+              "23": 0.013804298459222323,
+              "24": 0.0033362821343673635,
+              "25": 0.003321327228826118,
+              "26": 0.00493022793558778,
+              "27": 0.043018107710011286,
+              "28": 0.018927421540018488,
+              "29": 0.02646004083343333,
+              "30": 0.010623151274395129,
+              "31": 0.004712989375436113,
+              "32": 0.004490188367394214,
+              "33": 0.011241864470510605,
+              "34": 0.0033382149656723883,
+              "35": 0.003924377203447987,
+              "36": 0.0037721227017973144,
+              "37": 0.003646170053015447,
+              "38": 0.004080360921110378,
+              "39": 0.003841410014891629,
+              "40": 0.011763259038025267,
+              "41": 0.030227682088716276,
+              "42": 0.005985619693183133,
+              "43": 0.005686802566052504,
+              "44": 0.005737531099716038,
+              "45": 0.006344539533081581,
+              "46": 0.031267035484972075,
+              "47": 0.0069606205313480305,
+              "48": 0.023235396667839737,
+              "49": 0.009096081919109674,
+              "50": 0.011237213953183164,
+              "51": 0.007618322251630464,
+              "52": 0.13328214779810688,
+              "53": 0.026751627064454324
+            },
+            "confidence": 0.11692898077542961
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 28847,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 54,
+          "inference_seconds": 1.2769025675952435,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[m-light blue]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.8108780086040497
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] color [SEP] a-black [SEP] a-dark blue [SEP] a-light blue [SEP] a-white [SEP] a-wine [SEP] b-black [SEP] b-blue [SEP] b-gray [SEP] b-pink [SEP] b-white [SEP] c-black [SEP] c-blue [SEP] c-white [SEP] d-army green [SEP] d-black [SEP] d-gray [SEP] d-sky blue [SEP] d-white [SEP] e-blue [SEP] e-white [SEP] f-black [SEP] f-navy [SEP] f-white [SEP] f-wine [SEP] h-black [SEP] h-green [SEP] i-black [SEP] i-navy [SEP] i-pink [SEP] i-white [SEP] j-blue [SEP] j-green [SEP] j-navy [SEP] j-orange [SEP] l-black [SEP] l-blue [SEP] l-gray [SEP] l-white [SEP] m-black [SEP] m-gray [SEP] m-khaki [SEP] m-light blue [SEP] m-white [SEP] Men's Casual Button-Down Shirts, Mens Dress Shirts Long Sleeve, Regular Fit Easy Care Stretch Casual Button Down Shirt Men [SEP] Price: $6.99 to $11.29 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] color [SEP] a-black [SEP] a-dark blue [SEP] a-light blue [SEP] a-white [SEP] a-wine [SEP] b-black [SEP] b-blue [SEP] b-gray [SEP] b-pink [SEP] b-white [SEP] c-black [SEP] c-blue [SEP] c-white [SEP] d-army green [SEP] d-black [SEP] d-gray [SEP] d-sky blue [SEP] d-white [SEP] e-blue [SEP] e-white [SEP] f-black [SEP] f-navy [SEP] f-white [SEP] f-wine [SEP] h-black [SEP] h-green [SEP] i-black [SEP] i-navy [SEP] i-pink [SEP] i-white [SEP] j-blue [SEP] j-green [SEP] j-navy [SEP] j-orange [SEP] l-black [SEP] l-blue [SEP] l-gray [SEP] l-white [SEP] m-black [SEP] m-gray [SEP] m-khaki [SEP] m-light blue [SEP] m-white [SEP] Men's Casual Button-Down Shirts, Mens Dress Shirts Long Sleeve, Regular Fit Easy Care Stretch Casual Button Down Shirt Men [SEP] Price: $6.99 to $11.29 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for a men's long sleeve button down light blue shirt, and price lower than 30.00 dollars]\nclick[b09n6wqhs2]\nclick[m-light blue]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[small]",
+              "7": "click[medium]",
+              "8": "click[large]",
+              "9": "click[x-large]",
+              "10": "click[xx-large]",
+              "11": "click[a-black]",
+              "12": "click[a-dark blue]",
+              "13": "click[a-light blue]",
+              "14": "click[a-white]",
+              "15": "click[a-wine]",
+              "16": "click[b-black]",
+              "17": "click[b-blue]",
+              "18": "click[b-gray]",
+              "19": "click[b-pink]",
+              "20": "click[b-white]",
+              "21": "click[c-black]",
+              "22": "click[c-blue]",
+              "23": "click[c-white]",
+              "24": "click[d-army green]",
+              "25": "click[d-black]",
+              "26": "click[d-gray]",
+              "27": "click[d-sky blue]",
+              "28": "click[d-white]",
+              "29": "click[e-blue]",
+              "30": "click[e-white]",
+              "31": "click[f-black]",
+              "32": "click[f-navy]",
+              "33": "click[f-white]",
+              "34": "click[f-wine]",
+              "35": "click[h-black]",
+              "36": "click[h-green]",
+              "37": "click[i-black]",
+              "38": "click[i-navy]",
+              "39": "click[i-pink]",
+              "40": "click[i-white]",
+              "41": "click[j-blue]",
+              "42": "click[j-green]",
+              "43": "click[j-navy]",
+              "44": "click[j-orange]",
+              "45": "click[l-black]",
+              "46": "click[l-blue]",
+              "47": "click[l-gray]",
+              "48": "click[l-white]",
+              "49": "click[m-black]",
+              "50": "click[m-gray]",
+              "51": "click[m-khaki]",
+              "52": "click[m-light blue]",
+              "53": "click[m-white]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1d82dbf9abaa20bd0fd97df57d1bda73c0e9fce04ae21559ed5be83880a8e6c9",
+      "attempts": [
+        {
+          "seconds": 1.2876236513257027,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.2878427617251873,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.020639028296056783,
+              "1": 0.022633341053307398,
+              "2": 0.04865553422034645,
+              "3": 0.018432602020857905,
+              "4": 0.02202430415950592,
+              "5": 0.14256843966275023,
+              "6": 0.06958835149277029,
+              "7": 0.06180934725279457,
+              "8": 0.05740047328903128,
+              "9": 0.03688779013402028,
+              "10": 0.03923159560816871,
+              "11": 0.004990096739914377,
+              "12": 0.005699197317471867,
+              "13": 0.03386146263388088,
+              "14": 0.007030213624827587,
+              "15": 0.003420331495955533,
+              "16": 0.007504118850803805,
+              "17": 0.01650337860785914,
+              "18": 0.005156085143317747,
+              "19": 0.006135872683363983,
+              "20": 0.010953078819553479,
+              "21": 0.005872522533619494,
+              "22": 0.02270385212747027,
+              "23": 0.01046468749220822,
+              "24": 0.0037163861008715753,
+              "25": 0.004896090260778123,
+              "26": 0.004806379220122292,
+              "27": 0.02979731588785908,
+              "28": 0.017208767941212667,
+              "29": 0.02515107124138677,
+              "30": 0.007380045631373623,
+              "31": 0.007483123003286015,
+              "32": 0.006223956563185183,
+              "33": 0.010896840884650854,
+              "34": 0.004652879078778839,
+              "35": 0.005476089929964222,
+              "36": 0.0049152017376030786,
+              "37": 0.006452613417108583,
+              "38": 0.0064303651840067364,
+              "39": 0.005653522566009249,
+              "40": 0.009973726726333239,
+              "41": 0.02650860479967608,
+              "42": 0.0055654083446868485,
+              "43": 0.006965250308463328,
+              "44": 0.006615694661593997,
+              "45": 0.008642606476277358,
+              "46": 0.03472187874629198,
+              "47": 0.006739317173382247,
+              "48": 0.017333268906455864,
+              "49": 0.005679769544342958,
+              "50": 0.00423993585333655,
+              "51": 0.00651214556600943,
+              "52": 0.020612285180674372,
+              "53": 0.008583753804422946
+            },
+            "confidence": 0.12639048569412287
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 29171,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 54,
+          "inference_seconds": 1.2854296192526817,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 3.1397648490965366
+    }
+  ]
+}

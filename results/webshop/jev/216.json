@@ -1,0 +1,227 @@
+{
+  "task_id": 216,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars",
+  "instruction_sha256": "5f8ea1936fc4ded2e9748a340ca745dd8943b3a3a8521fec95fd8d6bc2022d38",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 4,
+  "elapsed_seconds": 1.1944213919341564,
+  "decision_seconds": 1.0676715821027756,
+  "input_tokens": 2631,
+  "output_tokens": 277,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.057568520307540894
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B074338PG3 [SEP] Trader Joe's Trader Giotto's Oven-Baked, Gluten-Free, Low Carb Cheese Bites (3-pack) [SEP] $14.25 [SEP] B00NG0L0KA [SEP] Trader Joe's Multigrain Pita Bite Crackers (2 Pack) [SEP] $14.99 [SEP] B07VC9HH8C [SEP] Trader Joe's Aioli Garlic Mustard Sauce (Pack of 3) [SEP] $20.0 [SEP] B01ES0QF56 [SEP] 2 Pack Value: Toufayan Bakeries Low Carb Pita Bread, 12 Loaves Total, Includes Low Carb Recipe E-Book [SEP] $18.49 [SEP] B07CJL9JDZ [SEP] INTAKT Crunchy Cheese Crisps Keto Snacks - 4 Pack - Original - 100% Natural Cheese, High Protein Bites, Low Carb Snack Bites, Gluten Free Snack Packs, Grain Free, Soy & Nut Free, Non GMO [SEP] $29.99 [SEP] B0968ZY2R5 [SEP] Sam's Snack Farm Crunchy Bites Cheese crisps variety pack 3 Pack - Cheddar, Gouda and Pepper Jack - 100% Cheese - Keto Snack - High Protein Low Carb Snacks for Kids and Adults - Kosher Office Snacks - 1.5oz [SEP] $10.99 [SEP] B07NHRR473 [SEP] Trader Joe's Mexican Style Roasted Corn w/ Cotija Cheese (6 Pack) [SEP] $95.0 [SEP] B07NQQH1S7 [SEP] Trader Joe's Reduced Guilt Baked Ziti with Mozzarella & Grana Cheese (6 Pack) [SEP] $100.0 [SEP] B014X60L64 [SEP] Trader Joe’s Organic Apricot Preserves [SEP] $13.04 [SEP] B086T2DG35 [SEP] Trader Joe's Soft Bite Mini Chocolate Hazelnut Biscotti Made w/Real Ingredients - 8 oz. [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B074338PG3 [SEP] Trader Joe's Trader Giotto's Oven-Baked, Gluten-Free, Low Carb Cheese Bites (3-pack) [SEP] $14.25 [SEP] B00NG0L0KA [SEP] Trader Joe's Multigrain Pita Bite Crackers (2 Pack) [SEP] $14.99 [SEP] B07VC9HH8C [SEP] Trader Joe's Aioli Garlic Mustard Sauce (Pack of 3) [SEP] $20.0 [SEP] B01ES0QF56 [SEP] 2 Pack Value: Toufayan Bakeries Low Carb Pita Bread, 12 Loaves Total, Includes Low Carb Recipe E-Book [SEP] $18.49 [SEP] B07CJL9JDZ [SEP] INTAKT Crunchy Cheese Crisps Keto Snacks - 4 Pack - Original - 100% Natural Cheese, High Protein Bites, Low Carb Snack Bites, Gluten Free Snack Packs, Grain Free, Soy & Nut Free, Non GMO [SEP] $29.99 [SEP] B0968ZY2R5 [SEP] Sam's Snack Farm Crunchy Bites Cheese crisps variety pack 3 Pack - Cheddar, Gouda and Pepper Jack - 100% Cheese - Keto Snack - High Protein Low Carb Snacks for Kids and Adults - Kosher Office Snacks - 1.5oz [SEP] $10.99 [SEP] B07NHRR473 [SEP] Trader Joe's Mexican Style Roasted Corn w/ Cotija Cheese (6 Pack) [SEP] $95.0 [SEP] B07NQQH1S7 [SEP] Trader Joe's Reduced Guilt Baked Ziti with Mozzarella & Grana Cheese (6 Pack) [SEP] $100.0 [SEP] B014X60L64 [SEP] Trader Joe’s Organic Apricot Preserves [SEP] $13.04 [SEP] B086T2DG35 [SEP] Trader Joe's Soft Bite Mini Chocolate Hazelnut Biscotti Made w/Real Ingredients - 8 oz. [SEP] $100.0\n\nRecent actions:\nsearch[i want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b074338pg3]",
+              "3": "click[b00ng0l0ka]",
+              "4": "click[b07vc9hh8c]",
+              "5": "click[b01es0qf56]",
+              "6": "click[b07cjl9jdz]",
+              "7": "click[b0968zy2r5]",
+              "8": "click[b07nhrr473]",
+              "9": "click[b07nqqh1s7]",
+              "10": "click[b014x60l64]",
+              "11": "click[b086t2dg35]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "5b01fba3a99c2f04caf2e01170cb0d00269035e1ff524fa36c12f5cede521f4d",
+      "attempts": [
+        {
+          "seconds": 0.3671620227396488,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3672858774662018,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "confidence": 0.69,
+            "probabilities": {
+              "8": 0.0,
+              "10": 0.0,
+              "4": 0.0,
+              "2": 0.73,
+              "9": 0.0,
+              "3": 0.0,
+              "11": 0.0,
+              "5": 0.0,
+              "7": 0.0,
+              "1": 0.26,
+              "0": 0.01,
+              "6": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1196,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b074338pg3]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4481128826737404
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2.11 ounce (pack of 3) [SEP] 6-pack [SEP] pack of 9 [SEP] pack of 12 [SEP] Trader Joe's Trader Giotto's Oven-Baked, Gluten-Free, Low Carb Cheese Bites (3-pack) [SEP] Price: $14.25 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2.11 ounce (pack of 3) [SEP] 6-pack [SEP] pack of 9 [SEP] pack of 12 [SEP] Trader Joe's Trader Giotto's Oven-Baked, Gluten-Free, Low Carb Cheese Bites (3-pack) [SEP] Price: $14.25 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars]\nclick[b074338pg3]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[2.11 ounce (pack of 3)]",
+              "7": "click[6-pack]",
+              "8": "click[pack of 9]",
+              "9": "click[pack of 12]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "47864f9ffa6a2547109f80f22a6912bddcd7a2c198b23729060c2eece0b74e2c",
+      "attempts": [
+        {
+          "seconds": 0.33413106575608253,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33423303067684174,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "confidence": 0.84,
+            "probabilities": {
+              "0": 0.03,
+              "5": 0.09,
+              "7": 0.01,
+              "8": 0.87,
+              "1": 0.0,
+              "9": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "2": 0.0,
+              "6": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 714,
+          "output_tokens": 87
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[pack of 9]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.7991221025586128
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2.11 ounce (pack of 3) [SEP] 6-pack [SEP] pack of 9 [SEP] pack of 12 [SEP] Trader Joe's Trader Giotto's Oven-Baked, Gluten-Free, Low Carb Cheese Bites (3-pack) [SEP] Price: $14.25 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2.11 ounce (pack of 3) [SEP] 6-pack [SEP] pack of 9 [SEP] pack of 12 [SEP] Trader Joe's Trader Giotto's Oven-Baked, Gluten-Free, Low Carb Cheese Bites (3-pack) [SEP] Price: $14.25 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want to find a pack of nine low-carb cheese bites from trader joe's, and price lower than 40.00 dollars]\nclick[b074338pg3]\nclick[pack of 9]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[2.11 ounce (pack of 3)]",
+              "7": "click[6-pack]",
+              "8": "click[pack of 9]",
+              "9": "click[pack of 12]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "87fed2148213d790e919893af3ded18e17ddbf3622d1d0797b6ac1de18e54f9a",
+      "attempts": [
+        {
+          "seconds": 0.3660726919770241,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.36615267395973206,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.64,
+            "probabilities": {
+              "6": 0.01,
+              "8": 0.13,
+              "3": 0.01,
+              "0": 0.12,
+              "7": 0.01,
+              "4": 0.0,
+              "2": 0.01,
+              "1": 0.03,
+              "5": 0.68,
+              "9": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 721,
+          "output_tokens": 87
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 1.1944189295172691
+    }
+  ]
+}

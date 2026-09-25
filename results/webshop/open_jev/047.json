@@ -1,0 +1,271 @@
+{
+  "task_id": 47,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars",
+  "instruction_sha256": "4fb79ba57ba35d039d1d44c28834a9ac5b07f03694b1b619d9318206aabc88a4",
+  "reward": 0.6666666666666666,
+  "score": 66.66666666666666,
+  "success": false,
+  "termination": "purchase",
+  "steps": 4,
+  "elapsed_seconds": 0.8747666515409946,
+  "decision_seconds": 0.7490224465727806,
+  "input_tokens": 16010,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars [SEP] Search",
+      "action": "search[i want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.052834052592515945
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B000R30X2A [SEP] Capri Sun Pacific Cooler Mixed Fruit Naturally Flavored Juice Drink Blend (Pack of 10) (Packaging May Vary) [SEP] $2.55 [SEP] B075CSWGJR [SEP] Capri Sun Pacific Cooler Ready-to-Drink Juice, 6 Fl Oz (Pack of 30) [SEP] $100.0 [SEP] B0083GG2SC [SEP] Capri Sun Coolers Variety Pack Ready-to-Drink Juice (40 Pouches, 4 Boxes of 10) [SEP] $100.0 [SEP] B00BNQLSSI [SEP] Capri Sun Mountain Cooler Ready-to-Drink Juice (10 Pouches) [SEP] $11.02 [SEP] B09JZW7K44 [SEP] Capri Sun Juice Pouch Variety Pack, Pack of 16 [SEP] $14.99 [SEP] B01FUI8TR2 [SEP] Capri Sun Roarin' Waters Tropical Tide Naturally Flavored Water Beverage (40 ct Pack, 4 Boxes of 10 Pouches) [SEP] $10.76 [SEP] B01BSKPK4Q [SEP] Capri Sun Fruit Punch Ready-to-Drink Juice (40 Pouches, 4 Boxes of 10) [SEP] $29.7 [SEP] B00BNQLR9I [SEP] Capri Sun Fruit Punch Naturally Flavored Juice Drink Blend (10 ct Box, 6 fl oz Pouches) [SEP] $100.0 [SEP] B000RULVME [SEP] Capri Sun Roarin' Waters Tropical Tide Ready-to-Drink Juice (10 Pouches) [SEP] $100.0 [SEP] B000VDUM4A [SEP] Capri Sun Roarin' Waters Wild Cherry Ready-to-Drink Juice (10 Pouches) [SEP] $14.45",
+      "request": {
+        "state": "Shopping instruction:\ni want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B000R30X2A [SEP] Capri Sun Pacific Cooler Mixed Fruit Naturally Flavored Juice Drink Blend (Pack of 10) (Packaging May Vary) [SEP] $2.55 [SEP] B075CSWGJR [SEP] Capri Sun Pacific Cooler Ready-to-Drink Juice, 6 Fl Oz (Pack of 30) [SEP] $100.0 [SEP] B0083GG2SC [SEP] Capri Sun Coolers Variety Pack Ready-to-Drink Juice (40 Pouches, 4 Boxes of 10) [SEP] $100.0 [SEP] B00BNQLSSI [SEP] Capri Sun Mountain Cooler Ready-to-Drink Juice (10 Pouches) [SEP] $11.02 [SEP] B09JZW7K44 [SEP] Capri Sun Juice Pouch Variety Pack, Pack of 16 [SEP] $14.99 [SEP] B01FUI8TR2 [SEP] Capri Sun Roarin' Waters Tropical Tide Naturally Flavored Water Beverage (40 ct Pack, 4 Boxes of 10 Pouches) [SEP] $10.76 [SEP] B01BSKPK4Q [SEP] Capri Sun Fruit Punch Ready-to-Drink Juice (40 Pouches, 4 Boxes of 10) [SEP] $29.7 [SEP] B00BNQLR9I [SEP] Capri Sun Fruit Punch Naturally Flavored Juice Drink Blend (10 ct Box, 6 fl oz Pouches) [SEP] $100.0 [SEP] B000RULVME [SEP] Capri Sun Roarin' Waters Tropical Tide Ready-to-Drink Juice (10 Pouches) [SEP] $100.0 [SEP] B000VDUM4A [SEP] Capri Sun Roarin' Waters Wild Cherry Ready-to-Drink Juice (10 Pouches) [SEP] $14.45\n\nRecent actions:\nsearch[i want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b000r30x2a]",
+              "3": "click[b075cswgjr]",
+              "4": "click[b0083gg2sc]",
+              "5": "click[b00bnqlssi]",
+              "6": "click[b09jzw7k44]",
+              "7": "click[b01fui8tr2]",
+              "8": "click[b01bskpk4q]",
+              "9": "click[b00bnqlr9i]",
+              "10": "click[b000rulvme]",
+              "11": "click[b000vdum4a]"
+            }
+          }
+        }
+      },
+      "request_sha256": "765a8aaf371962941fb6bba3484daef5d14c85580b34d3927c188a66996b0994",
+      "attempts": [
+        {
+          "seconds": 0.357208214700222,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3573622293770313,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.02010259012144045,
+              "1": 0.040207136036075786,
+              "2": 0.8355807240084608,
+              "3": 0.0130826367048799,
+              "4": 0.008370884687858793,
+              "5": 0.018584343282914743,
+              "6": 0.024094208451113444,
+              "7": 0.009945927748592086,
+              "8": 0.008923929700766638,
+              "9": 0.006600345561334529,
+              "10": 0.005884705961938133,
+              "11": 0.008622567734624881
+            },
+            "confidence": 0.8206335171001391
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 7996,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3552941046655178,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b000r30x2a]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.43585553765296936
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] flavor name [SEP] assorted [SEP] pacific cooler [SEP] strawberry kiwi [SEP] variety pack [SEP] size [SEP] 6 fl oz (pack of 10) [SEP] 6 fl oz (pack of 30) [SEP] Capri Sun Pacific Cooler Mixed Fruit Naturally Flavored Juice Drink Blend (Pack of 10) (Packaging May Vary) [SEP] Price: $2.55 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] flavor name [SEP] assorted [SEP] pacific cooler [SEP] strawberry kiwi [SEP] variety pack [SEP] size [SEP] 6 fl oz (pack of 10) [SEP] 6 fl oz (pack of 30) [SEP] Capri Sun Pacific Cooler Mixed Fruit Naturally Flavored Juice Drink Blend (Pack of 10) (Packaging May Vary) [SEP] Price: $2.55 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars]\nclick[b000r30x2a]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[assorted]",
+              "7": "click[pacific cooler]",
+              "8": "click[strawberry kiwi]",
+              "9": "click[variety pack]",
+              "10": "click[6 fl oz (pack of 10)]",
+              "11": "click[6 fl oz (pack of 30)]"
+            }
+          }
+        }
+      },
+      "request_sha256": "17bde26e06a4c2682186c5a58b08228677909d373337674651c170ce92eabf95",
+      "attempts": [
+        {
+          "seconds": 0.1917165406048298,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.19183241575956345,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "10",
+            "probabilities": {
+              "0": 0.016791024893622955,
+              "1": 0.01878902795785418,
+              "2": 0.021699868707684297,
+              "3": 0.016679112179960494,
+              "4": 0.014083180467753914,
+              "5": 0.3095389208853975,
+              "6": 0.03255468551914077,
+              "7": 0.029899793273250028,
+              "8": 0.04866013134225901,
+              "9": 0.06430204710915269,
+              "10": 0.3398359441532843,
+              "11": 0.08716626351063987
+            },
+            "confidence": 0.27982102998540104
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 3929,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.18998658284544945,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[6 fl oz (pack of 10)]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.6442700438201427
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] flavor name [SEP] assorted [SEP] pacific cooler [SEP] strawberry kiwi [SEP] variety pack [SEP] size [SEP] 6 fl oz (pack of 10) [SEP] 6 fl oz (pack of 30) [SEP] Capri Sun Pacific Cooler Mixed Fruit Naturally Flavored Juice Drink Blend (Pack of 10) (Packaging May Vary) [SEP] Price: $2.55 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] flavor name [SEP] assorted [SEP] pacific cooler [SEP] strawberry kiwi [SEP] variety pack [SEP] size [SEP] 6 fl oz (pack of 10) [SEP] 6 fl oz (pack of 30) [SEP] Capri Sun Pacific Cooler Mixed Fruit Naturally Flavored Juice Drink Blend (Pack of 10) (Packaging May Vary) [SEP] Price: $2.55 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i want capri sun pacific cooler mixed fruit naturally flavored juice drinks, and price lower than 30.00 dollars]\nclick[b000r30x2a]\nclick[6 fl oz (pack of 10)]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[assorted]",
+              "7": "click[pacific cooler]",
+              "8": "click[strawberry kiwi]",
+              "9": "click[variety pack]",
+              "10": "click[6 fl oz (pack of 10)]",
+              "11": "click[6 fl oz (pack of 30)]"
+            }
+          }
+        }
+      },
+      "request_sha256": "12a50a1f08a775b7a7e8d5e37538a354b48f5ce71d2a90b2875f0782afc7e86b",
+      "attempts": [
+        {
+          "seconds": 0.19971930235624313,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.19982780143618584,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.019826911226414508,
+              "1": 0.022101649160394445,
+              "2": 0.025242309153669568,
+              "3": 0.017803828154346876,
+              "4": 0.017212423126387866,
+              "5": 0.6245618012771585,
+              "6": 0.04089989626571564,
+              "7": 0.03490542694304089,
+              "8": 0.05366332584977633,
+              "9": 0.052216380979267944,
+              "10": 0.03539674263105088,
+              "11": 0.05616930523277658
+            },
+            "confidence": 0.5904310559387184
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 4085,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.19778763130307198,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.6666666666666666,
+      "done": true,
+      "elapsed_seconds": 0.8747635819017887
+    }
+  ]
+}

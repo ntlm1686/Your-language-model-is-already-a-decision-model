@@ -1,0 +1,225 @@
+{
+  "task_id": 334,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars",
+  "instruction_sha256": "d9793716d7ddbbecc6f9c2ecc677d39b4f257ac51c56d626220ceabd652645c6",
+  "reward": 0.05,
+  "score": 5.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 4,
+  "elapsed_seconds": 1.2256373725831509,
+  "decision_seconds": 1.0300904996693134,
+  "input_tokens": 2961,
+  "output_tokens": 273,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06700153648853302
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B01LYPS9X4 [SEP] Philadelphia Candies Dark Chocolate Covered OREO® Cookies, 15 Ounce [SEP] $19.95 [SEP] B00FGINOZ4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO® Cookies, Valentine's Day Gift 8 Ounce [SEP] $14.99 [SEP] B00FGINMV0 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, St. Patrick's Day Gift Net Wt 8 oz [SEP] $14.95 [SEP] B016762N64 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Halloween Assortment (Cute Witch, Ghost, Pumpkin) 8 Ounce [SEP] $14.95 [SEP] B016762TF4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Dad Trophy Father's Day Gift 8 oz [SEP] $14.95 [SEP] B01676307A [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Happy Birthday Gift Net Wt 8 oz [SEP] $14.95 [SEP] B07ZBLT23F [SEP] It's a Boy Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B07ZBLD6D8 [SEP] It's a Boy \"Cookie Talk\" Oreo Tin - 16 Pieces [SEP] $39.99 [SEP] B07ZBLV5JL [SEP] It's a Girl Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B082VJSFJ2 [SEP] Kirkland Signature European Cookies with Belgian Chocolate, 49.4 Ounce - PACK OF 2 [SEP] $46.49",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B01LYPS9X4 [SEP] Philadelphia Candies Dark Chocolate Covered OREO® Cookies, 15 Ounce [SEP] $19.95 [SEP] B00FGINOZ4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO® Cookies, Valentine's Day Gift 8 Ounce [SEP] $14.99 [SEP] B00FGINMV0 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, St. Patrick's Day Gift Net Wt 8 oz [SEP] $14.95 [SEP] B016762N64 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Halloween Assortment (Cute Witch, Ghost, Pumpkin) 8 Ounce [SEP] $14.95 [SEP] B016762TF4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Dad Trophy Father's Day Gift 8 oz [SEP] $14.95 [SEP] B01676307A [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Happy Birthday Gift Net Wt 8 oz [SEP] $14.95 [SEP] B07ZBLT23F [SEP] It's a Boy Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B07ZBLD6D8 [SEP] It's a Boy \"Cookie Talk\" Oreo Tin - 16 Pieces [SEP] $39.99 [SEP] B07ZBLV5JL [SEP] It's a Girl Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B082VJSFJ2 [SEP] Kirkland Signature European Cookies with Belgian Chocolate, 49.4 Ounce - PACK OF 2 [SEP] $46.49\n\nRecent actions:\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b01lyps9x4]",
+              "3": "click[b00fginoz4]",
+              "4": "click[b00fginmv0]",
+              "5": "click[b016762n64]",
+              "6": "click[b016762tf4]",
+              "7": "click[b01676307a]",
+              "8": "click[b07zblt23f]",
+              "9": "click[b07zbld6d8]",
+              "10": "click[b07zblv5jl]",
+              "11": "click[b082vjsfj2]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "26d6b424a392d68602f1ffba361d45f138d173be5760a2176ad7a31060818e63",
+      "attempts": [
+        {
+          "seconds": 0.3441872373223305,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.34430117160081863,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.36,
+            "probabilities": {
+              "2": 0.05,
+              "1": 0.43,
+              "10": 0.0,
+              "0": 0.09,
+              "11": 0.0,
+              "5": 0.0,
+              "9": 0.23,
+              "7": 0.0,
+              "6": 0.0,
+              "8": 0.2,
+              "4": 0.0,
+              "3": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1123,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.49114467948675156
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07ZBL172C [SEP] It's a Boy COOKIE TALK Cookie Platter - 2LB [SEP] $69.99 [SEP] B07ZBL7G1L [SEP] It's a Boy Cookie Talk Cookie Platter - 1LB [SEP] $44.99 [SEP] B07ZBJFB3G [SEP] It's a Boy - COOKIE TALK Chocolate Covered Oreos - 6 Pack [SEP] $18.99 [SEP] B099DF4JB8 [SEP] Keebler Fudge Stripes Chocolate Fudge Strawberry Valentine's Day Cookies | Strawberry Shortbread Chocolate Covered Cookies for Party Snacks and Office Snacks, 9.7oz [SEP] $100.0 [SEP] B07NDMDNP5 [SEP] Stork German Candy - KNOPPERS Hazelnut Cream Chocolate 8 cookie wafers + RIESEN Chocolate caramel covered in Dark Chocolate Individually wrapped 3 2.65 oz bags [SEP] $21.5 [SEP] B097X415YY [SEP] Bauducco Wafer Cookies - Enriched with Chocolate - Crispy Wafers - 3 Creamy Layers - No Artificial Flavors, 34.92 oz (Pack of 6) [SEP] $100.0 [SEP] B084VCTNTN [SEP] It's a Boy - Supreme Cookie Platter -- 1 lb. [SEP] $45.49 [SEP] B08G53B2J9 [SEP] COOKIES GIFT BASKET - White Chocolate Blossom Cookie Gift Basket, Cookie Gift Box, Gourmet Cookies, Cookie Care package, Care package, [SEP] $100.0 [SEP] B083M93XYQ [SEP] Congratulations - \"Cookie Talk\" Chocolate Covered Graham Cracker - 6 Piece [SEP] $24.99 [SEP] B003JE8T02 [SEP] Gift Basket Village I Love You More Than Chocolate, Romantic Gift Basket - Men or Women Will Love the Plush Bear and Delicious Treats Bursting with Flavor [SEP] $139.5",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07ZBL172C [SEP] It's a Boy COOKIE TALK Cookie Platter - 2LB [SEP] $69.99 [SEP] B07ZBL7G1L [SEP] It's a Boy Cookie Talk Cookie Platter - 1LB [SEP] $44.99 [SEP] B07ZBJFB3G [SEP] It's a Boy - COOKIE TALK Chocolate Covered Oreos - 6 Pack [SEP] $18.99 [SEP] B099DF4JB8 [SEP] Keebler Fudge Stripes Chocolate Fudge Strawberry Valentine's Day Cookies | Strawberry Shortbread Chocolate Covered Cookies for Party Snacks and Office Snacks, 9.7oz [SEP] $100.0 [SEP] B07NDMDNP5 [SEP] Stork German Candy - KNOPPERS Hazelnut Cream Chocolate 8 cookie wafers + RIESEN Chocolate caramel covered in Dark Chocolate Individually wrapped 3 2.65 oz bags [SEP] $21.5 [SEP] B097X415YY [SEP] Bauducco Wafer Cookies - Enriched with Chocolate - Crispy Wafers - 3 Creamy Layers - No Artificial Flavors, 34.92 oz (Pack of 6) [SEP] $100.0 [SEP] B084VCTNTN [SEP] It's a Boy - Supreme Cookie Platter -- 1 lb. [SEP] $45.49 [SEP] B08G53B2J9 [SEP] COOKIES GIFT BASKET - White Chocolate Blossom Cookie Gift Basket, Cookie Gift Box, Gourmet Cookies, Cookie Care package, Care package, [SEP] $100.0 [SEP] B083M93XYQ [SEP] Congratulations - \"Cookie Talk\" Chocolate Covered Graham Cracker - 6 Piece [SEP] $24.99 [SEP] B003JE8T02 [SEP] Gift Basket Village I Love You More Than Chocolate, Romantic Gift Basket - Men or Women Will Love the Plush Bear and Delicious Treats Bursting with Flavor [SEP] $139.5\n\nRecent actions:\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07zbl172c]",
+              "4": "click[b07zbl7g1l]",
+              "5": "click[b07zbjfb3g]",
+              "6": "click[b099df4jb8]",
+              "7": "click[b07ndmdnp5]",
+              "8": "click[b097x415yy]",
+              "9": "click[b084vctntn]",
+              "10": "click[b08g53b2j9]",
+              "11": "click[b083m93xyq]",
+              "12": "click[b003je8t02]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "464cf9c47f3059f058c2f2cf86c360174502bc3d65a7d68acb577488344f3b13",
+      "attempts": [
+        {
+          "seconds": 0.3361536115407944,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3362734727561474,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.3,
+            "probabilities": {
+              "10": 0.0,
+              "9": 0.0,
+              "1": 0.15,
+              "2": 0.15,
+              "12": 0.0,
+              "6": 0.0,
+              "0": 0.06,
+              "7": 0.26,
+              "4": 0.01,
+              "11": 0.01,
+              "3": 0.0,
+              "5": 0.36,
+              "8": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1230,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b07zbjfb3g]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.8494737148284912
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] It's a Boy - COOKIE TALK Chocolate Covered Oreos - 6 Pack [SEP] Price: $18.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] It's a Boy - COOKIE TALK Chocolate Covered Oreos - 6 Pack [SEP] Price: $18.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]\nclick[next >]\nclick[b07zbjfb3g]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "175d78ff24a20d75857c680b96949d7327f100193d406be820cf6940bd6e9bf2",
+      "attempts": [
+        {
+          "seconds": 0.34939930215477943,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3495158553123474,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.27,
+            "probabilities": {
+              "0": 0.35,
+              "1": 0.09,
+              "4": 0.01,
+              "2": 0.1,
+              "5": 0.39,
+              "3": 0.06
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 608,
+          "output_tokens": 59
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.05,
+      "done": true,
+      "elapsed_seconds": 1.2256329543888569
+    }
+  ]
+}

@@ -1,0 +1,1892 @@
+{
+  "task_id": 141,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars",
+  "instruction_sha256": "998704f83b607865d67b703afea2a29c77f743a8ed02327669dc94a9b001aff4",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "repeated_state_action",
+  "steps": 28,
+  "elapsed_seconds": 8.67798526212573,
+  "decision_seconds": 6.231373902410269,
+  "input_tokens": 129554,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.08685925230383873
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B082G4HM4S [SEP] PopSockets: PopGrip with Swappable Top for Phones & Tablets - NFL - Oakland Raiders Logo [SEP] $15.02 [SEP] B082G4QXDW [SEP] PopSockets: PopGrip with Swappable Top for Phones & Tablets - NFL - Buffalo Bills Helmet [SEP] $15.46 [SEP] B08XZ85B5G [SEP] Strategic Printing Kansas City Chiefs Wireless Charging Station and Bluetooth Speaker [SEP] $54.99 [SEP] B01MTSTCNB [SEP] Skinit Decal Gaming Skin Compatible with Xbox One S Controller - Officially Licensed NFL Kansas City Chiefs Design [SEP] $16.99 [SEP] B075TJZ5RV [SEP] Skinit Decal Gaming Skin Compatible with Xbox One Elite Controller - Officially Licensed NFL Kansas City Chiefs Team Motto Design [SEP] $16.99 [SEP] B075TK5VZW [SEP] Skinit Decal Gaming Skin Compatible with Xbox One S Controller - Officially Licensed NFL Kansas City Chiefs Team Motto Design [SEP] $16.99 [SEP] B075VJS626 [SEP] Skinit Decal Gaming Skin Compatible with Xbox One Elite Controller - Officially Licensed NFL Kansas City Chiefs Design [SEP] $16.99 [SEP] B01N6EQ3CV [SEP] Skinit Decal Gaming Skin Compatible with Xbox One S Console and Controller Bundle - Officially Licensed NFL Kansas City Chiefs Design [SEP] $39.99 [SEP] B075833ZDW [SEP] Skinit Decal Gaming Skin Compatible with PS4 Pro Console and Controller Bundle - Officially Licensed NFL Kansas City Chiefs Camo Design [SEP] $39.99 [SEP] B08P32KCTT [SEP] Hibye Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Wireless Support AUX TF USB [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B082G4HM4S [SEP] PopSockets: PopGrip with Swappable Top for Phones & Tablets - NFL - Oakland Raiders Logo [SEP] $15.02 [SEP] B082G4QXDW [SEP] PopSockets: PopGrip with Swappable Top for Phones & Tablets - NFL - Buffalo Bills Helmet [SEP] $15.46 [SEP] B08XZ85B5G [SEP] Strategic Printing Kansas City Chiefs Wireless Charging Station and Bluetooth Speaker [SEP] $54.99 [SEP] B01MTSTCNB [SEP] Skinit Decal Gaming Skin Compatible with Xbox One S Controller - Officially Licensed NFL Kansas City Chiefs Design [SEP] $16.99 [SEP] B075TJZ5RV [SEP] Skinit Decal Gaming Skin Compatible with Xbox One Elite Controller - Officially Licensed NFL Kansas City Chiefs Team Motto Design [SEP] $16.99 [SEP] B075TK5VZW [SEP] Skinit Decal Gaming Skin Compatible with Xbox One S Controller - Officially Licensed NFL Kansas City Chiefs Team Motto Design [SEP] $16.99 [SEP] B075VJS626 [SEP] Skinit Decal Gaming Skin Compatible with Xbox One Elite Controller - Officially Licensed NFL Kansas City Chiefs Design [SEP] $16.99 [SEP] B01N6EQ3CV [SEP] Skinit Decal Gaming Skin Compatible with Xbox One S Console and Controller Bundle - Officially Licensed NFL Kansas City Chiefs Design [SEP] $39.99 [SEP] B075833ZDW [SEP] Skinit Decal Gaming Skin Compatible with PS4 Pro Console and Controller Bundle - Officially Licensed NFL Kansas City Chiefs Camo Design [SEP] $39.99 [SEP] B08P32KCTT [SEP] Hibye Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Wireless Support AUX TF USB [SEP] $100.0\n\nRecent actions:\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b082g4hm4s]",
+              "3": "click[b082g4qxdw]",
+              "4": "click[b08xz85b5g]",
+              "5": "click[b01mtstcnb]",
+              "6": "click[b075tjz5rv]",
+              "7": "click[b075tk5vzw]",
+              "8": "click[b075vjs626]",
+              "9": "click[b01n6eq3cv]",
+              "10": "click[b075833zdw]",
+              "11": "click[b08p32kctt]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b2c5ac871e97c37ce62ab21df3a8ba8db38ce44c0e2b3131f2af64923bee7a30",
+      "attempts": [
+        {
+          "seconds": 0.3797745183110237,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37991563230752945,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.1973110268637009,
+              "1": 0.39195976458405396,
+              "2": 0.03954195335126632,
+              "3": 0.03470212954466502,
+              "4": 0.04562634856848328,
+              "5": 0.047241973943369105,
+              "6": 0.03919783991849147,
+              "7": 0.023195423250168785,
+              "8": 0.024889316688548414,
+              "9": 0.059715921167350576,
+              "10": 0.046564302895387925,
+              "11": 0.05005399922451422
+            },
+            "confidence": 0.3366833795462407
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8470,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3772928938269615,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5735570825636387
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B08Q1YWQQ9 [SEP] Nokia 225 | Unlocked | 4G Cell Phone | Black [SEP] $44.98 [SEP] B09FTG39V7 [SEP] Ear Buds Kids School - 7 Pack Classroom Wired Headphones Set Learning Kids Earphones Student chromebook Earbuds Bulk for Laptop audifonos iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $7.99 [SEP] B08KYDSHXV [SEP] FOCO Men’s NFL Team Logo Polo Short Sleeve Polyester Shirt [SEP] $43.45 to $49.99 [SEP] B099753MQ2 [SEP] Kansas City Defense Big Sac Retro Chief BBQ Pajamas Tank Top Tank Top [SEP] $21.95 [SEP] B092SL1NGY [SEP] Strategic Printing Kansas City Chiefs End Zone Pocket Bluetooth Speaker [SEP] $34.99 [SEP] B07WGC9G3P [SEP] Kansas City Heart | Kc Hearts I Love KC Letters Blue Vintage Tank Top [SEP] $17.95 [SEP] B082TFRDC4 [SEP] Susie's Smart Breakfast Cookie Mixed Box of 12 Breakfast Cookies, (3) Orange, Cranberry Nut; (3) Gingered Apple; (3) Banana Coconut; (3) Cocoa, 3.5 Ounce [SEP] $44.03 [SEP] B09ML73VBW [SEP] Military Grade Anti-Drop Universal Car Phone Holder Mount, Powerful Suction Cell Phone Holder Car, Magnetic Phone Holder for Car, Compatible Dashboard Phone Holder for iPhone & Android [SEP] $18.0",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B08Q1YWQQ9 [SEP] Nokia 225 | Unlocked | 4G Cell Phone | Black [SEP] $44.98 [SEP] B09FTG39V7 [SEP] Ear Buds Kids School - 7 Pack Classroom Wired Headphones Set Learning Kids Earphones Student chromebook Earbuds Bulk for Laptop audifonos iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $7.99 [SEP] B08KYDSHXV [SEP] FOCO Men’s NFL Team Logo Polo Short Sleeve Polyester Shirt [SEP] $43.45 to $49.99 [SEP] B099753MQ2 [SEP] Kansas City Defense Big Sac Retro Chief BBQ Pajamas Tank Top Tank Top [SEP] $21.95 [SEP] B092SL1NGY [SEP] Strategic Printing Kansas City Chiefs End Zone Pocket Bluetooth Speaker [SEP] $34.99 [SEP] B07WGC9G3P [SEP] Kansas City Heart | Kc Hearts I Love KC Letters Blue Vintage Tank Top [SEP] $17.95 [SEP] B082TFRDC4 [SEP] Susie's Smart Breakfast Cookie Mixed Box of 12 Breakfast Cookies, (3) Orange, Cranberry Nut; (3) Gingered Apple; (3) Banana Coconut; (3) Cocoa, 3.5 Ounce [SEP] $44.03 [SEP] B09ML73VBW [SEP] Military Grade Anti-Drop Universal Car Phone Holder Mount, Powerful Suction Cell Phone Holder Car, Magnetic Phone Holder for Car, Compatible Dashboard Phone Holder for iPhone & Android [SEP] $18.0\n\nRecent actions:\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09cd5rzr4]",
+              "4": "click[b08pyvwm7b]",
+              "5": "click[b08q1ywqq9]",
+              "6": "click[b09ftg39v7]",
+              "7": "click[b08kydshxv]",
+              "8": "click[b099753mq2]",
+              "9": "click[b092sl1ngy]",
+              "10": "click[b07wgc9g3p]",
+              "11": "click[b082tfrdc4]",
+              "12": "click[b09ml73vbw]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e3f89e9fdb884f39208fadaba6c93a54c1a3054d5955369537924a65b109a139",
+      "attempts": [
+        {
+          "seconds": 0.42063942179083824,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4207940213382244,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.1624529718976145,
+              "1": 0.1772951212484057,
+              "2": 0.20169121530719666,
+              "3": 0.038320354444542154,
+              "4": 0.038639830876784735,
+              "5": 0.04440125053646818,
+              "6": 0.031553294389045264,
+              "7": 0.06205158524672277,
+              "8": 0.04127252613458552,
+              "9": 0.05984734964782461,
+              "10": 0.0400813868521994,
+              "11": 0.032494458865151045,
+              "12": 0.06989865455345937
+            },
+            "confidence": 0.1351654832494631
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9533,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.41871362924575806,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.093082506209612
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09GW969LH [SEP] Nokia G50 5G | Android 11 | Unlocked Smartphone | US Version | 4/128GB | 6.82-Inch Screen | 48MP Triple Camera | Ocean Blue [SEP] $276.73 [SEP] B07NC74W9Y [SEP] NATIVE AMERICAN BIG CHIEF SKULL HEADDRESS YUTTA-HEY DESIGN T-Shirt [SEP] $15.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B08MWRCZL8 [SEP] Nokia 3.4 | Android 10 | Unlocked Smartphone | 2-Day Battery | US Version | 3/64GB | 6.39-Inch Screen | Triple Camera | Charcoal [SEP] $179.99 [SEP] B093RJBTP3 [SEP] Nokia G20 | Android 11 | Unlocked Smartphone | 3-Day Battery | Dual SIM | US Version | 4/128GB | 6.52-Inch Screen | 48MP Quad Camera | Glacier [SEP] $192.42 [SEP] B08STXNT4K [SEP] Nokia 5.4 | Android 10 | Unlocked Smartphone | 2-Day Battery | Dual SIM | US Version | 4/128GB | 6.39-Inch Screen | 48MP Quad Camera | Polar Night [SEP] $189.98 [SEP] B08SV6KJTT [SEP] Nokia 5.4 | Android 10 | Unlocked Smartphone | 2-Day Battery | Dual SIM | US Version | 4/128GB | 6.39-Inch Screen | 48MP Quad Camera | Dusk [SEP] $100.0 [SEP] B06W5VXDYG [SEP] Kansas City Chiefs Exclusive Team Logo Flats With Clutch Medium [SEP] $14.99 [SEP] B0939D9FR3 [SEP] Nokia 6300 4G | Unlocked | Dual SIM | WiFi Hotspot | Social Apps | Google Maps and Assistant | Cyan Green [SEP] $69.99 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09GW969LH [SEP] Nokia G50 5G | Android 11 | Unlocked Smartphone | US Version | 4/128GB | 6.82-Inch Screen | 48MP Triple Camera | Ocean Blue [SEP] $276.73 [SEP] B07NC74W9Y [SEP] NATIVE AMERICAN BIG CHIEF SKULL HEADDRESS YUTTA-HEY DESIGN T-Shirt [SEP] $15.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B08MWRCZL8 [SEP] Nokia 3.4 | Android 10 | Unlocked Smartphone | 2-Day Battery | US Version | 3/64GB | 6.39-Inch Screen | Triple Camera | Charcoal [SEP] $179.99 [SEP] B093RJBTP3 [SEP] Nokia G20 | Android 11 | Unlocked Smartphone | 3-Day Battery | Dual SIM | US Version | 4/128GB | 6.52-Inch Screen | 48MP Quad Camera | Glacier [SEP] $192.42 [SEP] B08STXNT4K [SEP] Nokia 5.4 | Android 10 | Unlocked Smartphone | 2-Day Battery | Dual SIM | US Version | 4/128GB | 6.39-Inch Screen | 48MP Quad Camera | Polar Night [SEP] $189.98 [SEP] B08SV6KJTT [SEP] Nokia 5.4 | Android 10 | Unlocked Smartphone | 2-Day Battery | Dual SIM | US Version | 4/128GB | 6.39-Inch Screen | 48MP Quad Camera | Dusk [SEP] $100.0 [SEP] B06W5VXDYG [SEP] Kansas City Chiefs Exclusive Team Logo Flats With Clutch Medium [SEP] $14.99 [SEP] B0939D9FR3 [SEP] Nokia 6300 4G | Unlocked | Dual SIM | WiFi Hotspot | Social Apps | Google Maps and Assistant | Cyan Green [SEP] $69.99 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99\n\nRecent actions:\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09gw969lh]",
+              "4": "click[b07nc74w9y]",
+              "5": "click[b09kcl5gk5]",
+              "6": "click[b08mwrczl8]",
+              "7": "click[b093rjbtp3]",
+              "8": "click[b08stxnt4k]",
+              "9": "click[b08sv6kjtt]",
+              "10": "click[b06w5vxdyg]",
+              "11": "click[b0939d9fr3]",
+              "12": "click[b09g3fpp9s]"
+            }
+          }
+        }
+      },
+      "request_sha256": "16a1d3d21a5bb5bb1232856f91af38e5a288374006082055d405564493b3616c",
+      "attempts": [
+        {
+          "seconds": 0.5111104771494865,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5112871266901493,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.18228323337682872,
+              "1": 0.18651450659056484,
+              "2": 0.2636595278393742,
+              "3": 0.02913056350465607,
+              "4": 0.045442945231071216,
+              "5": 0.037311469491611626,
+              "6": 0.03537634424157027,
+              "7": 0.02556913919607594,
+              "8": 0.022762670652272075,
+              "9": 0.02162256668934276,
+              "10": 0.06822194963841242,
+              "11": 0.03615276380398095,
+              "12": 0.0459523197442391
+            },
+            "confidence": 0.20229782182598868
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11690,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.5089462101459503,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.7024154141545296
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08PFVQ6ZK [SEP] Zelda Wireless Charger Sheikah Slate Phone Charger Magic Circle Charger 10W Quick Charging [SEP] $100.0 [SEP] B08NYJBX7V [SEP] KAYYELAMP 2-Lights 100 Lumens Multi-Function Battery Run Remote Control Cordless Wall Luminaire Lighting Fixture Wall Decor for Indoor Staircase Laundry-Easy to Install,Dimmable,Battery Not Included [SEP] $109.99 [SEP] B08P1HXBDK [SEP] KAYYELAMP 2-Pack 100 Lumens Multi-Function Led Remote Control Battery Run No Cord Black Bucket Lampshade Wall Sconce for Aisle Loft Wall Decor-Easy Installation, Dimmable Control,Battery Not Included [SEP] $139.99 [SEP] B08P3BQQ98 [SEP] KAYYELAMP 2-Lights 100 Lumens Multi-Function LED Battery Run Remote Control No Cord Rustic Vintage Wall Sconce Light Fixture For Indoor Staircase Laundry -Easy To Install,Dimmable,Battery Not Included [SEP] $119.99 [SEP] B08P3CLLCW [SEP] KAYYELAMP 2-Lights 100 Lumens Led Remote Control Battery Run Cordless Lamp Not Hardwired Retro Wall Sconce for Aisle Bedroom Wall Decor-Easy Installation, Dimmable Control,Battery Not Included [SEP] $108.99 [SEP] B09F6JRMC5 [SEP] Wireless Charging Touch Control Dimmable Table Lamp with USB Port&AC, Set of 2 Bedside Nightstand Lamps, Modern Square Desk Lamp for Bedroom Office [SEP] $78.99 [SEP] B08PCN88R7 [SEP] KAYYELAMP 2-Pack 100 Lumens Led Remote Control Battery Run Cordless Lamp Retro Wall Sconce Light Fixture for Bedroom Bathroom Loft Wall Decor- Easy Installation, Dimmable Control,Battery Not Included [SEP] $110.99 [SEP] B09P3WGNBT [SEP] Headphones Galaxy Earbuds for Samsung usbc Earphones USB c with mic Type c Ear Buds Wired audiofonos S21 s20 fe Note 90 Plus s21+ Folding Z Wired Original Black [SEP] $9.99 [SEP] B095RNNBWF [SEP] Chief Lover Kansas City Football RETRO Pajamas TOP KC BBQ Tank Top [SEP] $22.95 [SEP] B096LZ9WF3 [SEP] Strategic Printing Kansas City Chiefs End Zone Water Resistant Bluetooth Speaker, One Size [SEP] $49.99",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08PFVQ6ZK [SEP] Zelda Wireless Charger Sheikah Slate Phone Charger Magic Circle Charger 10W Quick Charging [SEP] $100.0 [SEP] B08NYJBX7V [SEP] KAYYELAMP 2-Lights 100 Lumens Multi-Function Battery Run Remote Control Cordless Wall Luminaire Lighting Fixture Wall Decor for Indoor Staircase Laundry-Easy to Install,Dimmable,Battery Not Included [SEP] $109.99 [SEP] B08P1HXBDK [SEP] KAYYELAMP 2-Pack 100 Lumens Multi-Function Led Remote Control Battery Run No Cord Black Bucket Lampshade Wall Sconce for Aisle Loft Wall Decor-Easy Installation, Dimmable Control,Battery Not Included [SEP] $139.99 [SEP] B08P3BQQ98 [SEP] KAYYELAMP 2-Lights 100 Lumens Multi-Function LED Battery Run Remote Control No Cord Rustic Vintage Wall Sconce Light Fixture For Indoor Staircase Laundry -Easy To Install,Dimmable,Battery Not Included [SEP] $119.99 [SEP] B08P3CLLCW [SEP] KAYYELAMP 2-Lights 100 Lumens Led Remote Control Battery Run Cordless Lamp Not Hardwired Retro Wall Sconce for Aisle Bedroom Wall Decor-Easy Installation, Dimmable Control,Battery Not Included [SEP] $108.99 [SEP] B09F6JRMC5 [SEP] Wireless Charging Touch Control Dimmable Table Lamp with USB Port&AC, Set of 2 Bedside Nightstand Lamps, Modern Square Desk Lamp for Bedroom Office [SEP] $78.99 [SEP] B08PCN88R7 [SEP] KAYYELAMP 2-Pack 100 Lumens Led Remote Control Battery Run Cordless Lamp Retro Wall Sconce Light Fixture for Bedroom Bathroom Loft Wall Decor- Easy Installation, Dimmable Control,Battery Not Included [SEP] $110.99 [SEP] B09P3WGNBT [SEP] Headphones Galaxy Earbuds for Samsung usbc Earphones USB c with mic Type c Ear Buds Wired audiofonos S21 s20 fe Note 90 Plus s21+ Folding Z Wired Original Black [SEP] $9.99 [SEP] B095RNNBWF [SEP] Chief Lover Kansas City Football RETRO Pajamas TOP KC BBQ Tank Top [SEP] $22.95 [SEP] B096LZ9WF3 [SEP] Strategic Printing Kansas City Chiefs End Zone Water Resistant Bluetooth Speaker, One Size [SEP] $49.99\n\nRecent actions:\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b08pfvq6zk]",
+              "4": "click[b08nyjbx7v]",
+              "5": "click[b08p1hxbdk]",
+              "6": "click[b08p3bqq98]",
+              "7": "click[b08p3cllcw]",
+              "8": "click[b09f6jrmc5]",
+              "9": "click[b08pcn88r7]",
+              "10": "click[b09p3wgnbt]",
+              "11": "click[b095rnnbwf]",
+              "12": "click[b096lz9wf3]"
+            }
+          }
+        }
+      },
+      "request_sha256": "284b3abcf610ec5202b6513959724d77863a279ead53a1b7367958f3b3cc2339",
+      "attempts": [
+        {
+          "seconds": 0.5039240270853043,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5040656290948391,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.16508075036215408,
+              "1": 0.17561047735783833,
+              "2": 0.18842873027044346,
+              "3": 0.032102545396708954,
+              "4": 0.014022929288174233,
+              "5": 0.06168586766087503,
+              "6": 0.016969291771236322,
+              "7": 0.012282934590465366,
+              "8": 0.04063050568463471,
+              "9": 0.03289372116355185,
+              "10": 0.06520862502497783,
+              "11": 0.09700109731637974,
+              "12": 0.09808252411256008
+            },
+            "confidence": 0.12079779112631374
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11600,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.49759480357170105,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.3180394545197487
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B09GML95TY [SEP] Workwox Car Phone Holder, Universal Dashboard Magnetic Phone Mount for Car, 360° Rotatable Hands Free Cell Phone Car Holder for GPS, Adjustable Super Strong Magnet for Samsung, iPhone and All Phones [SEP] $6.99 [SEP] B078MV4V6M [SEP] Susie's Smart Breakfast Cookie Healthy Omega3s and Protein Rich cocoa, 63 Ounce (Pack of 18) [SEP] $42.84 [SEP] B078MW6VWC [SEP] Susie's Smart Breakfast Cookie, Orange, Cranberry Nut, Healthy, Omega-3s and Protein Rich Soft Chewy Home-baked Cookie, 3.57 Ounce (Pack of 18) [SEP] $43.05 [SEP] B078MWKR3S [SEP] Susie's Smart Breakfast Cookie Gingered Apple Healthy Omega-3s and Protein Rich Soft Chewy, 3.57, Apple, 63 Oz (Pack of 18) [SEP] $52.71 [SEP] B073RGKMCV [SEP] Lemon - California Roll 24/7 Solar Powered Waterproof Portable Wireless Speaker - Blue [SEP] $100.0 [SEP] B09CV43625 [SEP] FOCO Men's NFL Team Logo Americana Button Up Shirt [SEP] $59.99 [SEP] B08T11PWR9 [SEP] KC Kansas City Powder Blue & Royal blue Kc Outline Kc Curved Tank Top [SEP] $18.95 [SEP] B00322ON1K [SEP] Canon FS300 Flash Memory Camcorder w/41x Advanced Zoom (Silver) (Discontinued by Manufacturer) [SEP] $100.0 [SEP] B09DQ9MMSJ [SEP] Kansas City Skylins Retro Chief KCMO BBQ Pajamas Tailgating Tank Top [SEP] $19.99",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B09GML95TY [SEP] Workwox Car Phone Holder, Universal Dashboard Magnetic Phone Mount for Car, 360° Rotatable Hands Free Cell Phone Car Holder for GPS, Adjustable Super Strong Magnet for Samsung, iPhone and All Phones [SEP] $6.99 [SEP] B078MV4V6M [SEP] Susie's Smart Breakfast Cookie Healthy Omega3s and Protein Rich cocoa, 63 Ounce (Pack of 18) [SEP] $42.84 [SEP] B078MW6VWC [SEP] Susie's Smart Breakfast Cookie, Orange, Cranberry Nut, Healthy, Omega-3s and Protein Rich Soft Chewy Home-baked Cookie, 3.57 Ounce (Pack of 18) [SEP] $43.05 [SEP] B078MWKR3S [SEP] Susie's Smart Breakfast Cookie Gingered Apple Healthy Omega-3s and Protein Rich Soft Chewy, 3.57, Apple, 63 Oz (Pack of 18) [SEP] $52.71 [SEP] B073RGKMCV [SEP] Lemon - California Roll 24/7 Solar Powered Waterproof Portable Wireless Speaker - Blue [SEP] $100.0 [SEP] B09CV43625 [SEP] FOCO Men's NFL Team Logo Americana Button Up Shirt [SEP] $59.99 [SEP] B08T11PWR9 [SEP] KC Kansas City Powder Blue & Royal blue Kc Outline Kc Curved Tank Top [SEP] $18.95 [SEP] B00322ON1K [SEP] Canon FS300 Flash Memory Camcorder w/41x Advanced Zoom (Silver) (Discontinued by Manufacturer) [SEP] $100.0 [SEP] B09DQ9MMSJ [SEP] Kansas City Skylins Retro Chief KCMO BBQ Pajamas Tailgating Tank Top [SEP] $19.99\n\nRecent actions:\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09r8s9t2k]",
+              "4": "click[b09gml95ty]",
+              "5": "click[b078mv4v6m]",
+              "6": "click[b078mw6vwc]",
+              "7": "click[b078mwkr3s]",
+              "8": "click[b073rgkmcv]",
+              "9": "click[b09cv43625]",
+              "10": "click[b08t11pwr9]",
+              "11": "click[b00322on1k]",
+              "12": "click[b09dq9mmsj]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e6662b4ed90e736f0fff05f3ba6383a81b1e3d9f9413ebd89de72fcb5a94982e",
+      "attempts": [
+        {
+          "seconds": 0.4593764953315258,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.45951342582702637,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.20537820511638752,
+              "1": 0.2301109894790236,
+              "2": 0.20407464650695434,
+              "3": 0.016453181507300484,
+              "4": 0.054404333154283675,
+              "5": 0.03166968186425776,
+              "6": 0.0388230613969909,
+              "7": 0.008649048568747524,
+              "8": 0.055757965745605056,
+              "9": 0.037389167031742734,
+              "10": 0.05391381457926832,
+              "11": 0.020939861169913136,
+              "12": 0.04243604387952482
+            },
+            "confidence": 0.1659535719356089
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10407,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4568520523607731,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[< prev]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.8747654259204865
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08PFVQ6ZK [SEP] Zelda Wireless Charger Sheikah Slate Phone Charger Magic Circle Charger 10W Quick Charging [SEP] $100.0 [SEP] B08NYJBX7V [SEP] KAYYELAMP 2-Lights 100 Lumens Multi-Function Battery Run Remote Control Cordless Wall Luminaire Lighting Fixture Wall Decor for Indoor Staircase Laundry-Easy to Install,Dimmable,Battery Not Included [SEP] $109.99 [SEP] B08P1HXBDK [SEP] KAYYELAMP 2-Pack 100 Lumens Multi-Function Led Remote Control Battery Run No Cord Black Bucket Lampshade Wall Sconce for Aisle Loft Wall Decor-Easy Installation, Dimmable Control,Battery Not Included [SEP] $139.99 [SEP] B08P3BQQ98 [SEP] KAYYELAMP 2-Lights 100 Lumens Multi-Function LED Battery Run Remote Control No Cord Rustic Vintage Wall Sconce Light Fixture For Indoor Staircase Laundry -Easy To Install,Dimmable,Battery Not Included [SEP] $119.99 [SEP] B08P3CLLCW [SEP] KAYYELAMP 2-Lights 100 Lumens Led Remote Control Battery Run Cordless Lamp Not Hardwired Retro Wall Sconce for Aisle Bedroom Wall Decor-Easy Installation, Dimmable Control,Battery Not Included [SEP] $108.99 [SEP] B09F6JRMC5 [SEP] Wireless Charging Touch Control Dimmable Table Lamp with USB Port&AC, Set of 2 Bedside Nightstand Lamps, Modern Square Desk Lamp for Bedroom Office [SEP] $78.99 [SEP] B08PCN88R7 [SEP] KAYYELAMP 2-Pack 100 Lumens Led Remote Control Battery Run Cordless Lamp Retro Wall Sconce Light Fixture for Bedroom Bathroom Loft Wall Decor- Easy Installation, Dimmable Control,Battery Not Included [SEP] $110.99 [SEP] B09P3WGNBT [SEP] Headphones Galaxy Earbuds for Samsung usbc Earphones USB c with mic Type c Ear Buds Wired audiofonos S21 s20 fe Note 90 Plus s21+ Folding Z Wired Original Black [SEP] $9.99 [SEP] B095RNNBWF [SEP] Chief Lover Kansas City Football RETRO Pajamas TOP KC BBQ Tank Top [SEP] $22.95 [SEP] B096LZ9WF3 [SEP] Strategic Printing Kansas City Chiefs End Zone Water Resistant Bluetooth Speaker, One Size [SEP] $49.99",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08PFVQ6ZK [SEP] Zelda Wireless Charger Sheikah Slate Phone Charger Magic Circle Charger 10W Quick Charging [SEP] $100.0 [SEP] B08NYJBX7V [SEP] KAYYELAMP 2-Lights 100 Lumens Multi-Function Battery Run Remote Control Cordless Wall Luminaire Lighting Fixture Wall Decor for Indoor Staircase Laundry-Easy to Install,Dimmable,Battery Not Included [SEP] $109.99 [SEP] B08P1HXBDK [SEP] KAYYELAMP 2-Pack 100 Lumens Multi-Function Led Remote Control Battery Run No Cord Black Bucket Lampshade Wall Sconce for Aisle Loft Wall Decor-Easy Installation, Dimmable Control,Battery Not Included [SEP] $139.99 [SEP] B08P3BQQ98 [SEP] KAYYELAMP 2-Lights 100 Lumens Multi-Function LED Battery Run Remote Control No Cord Rustic Vintage Wall Sconce Light Fixture For Indoor Staircase Laundry -Easy To Install,Dimmable,Battery Not Included [SEP] $119.99 [SEP] B08P3CLLCW [SEP] KAYYELAMP 2-Lights 100 Lumens Led Remote Control Battery Run Cordless Lamp Not Hardwired Retro Wall Sconce for Aisle Bedroom Wall Decor-Easy Installation, Dimmable Control,Battery Not Included [SEP] $108.99 [SEP] B09F6JRMC5 [SEP] Wireless Charging Touch Control Dimmable Table Lamp with USB Port&AC, Set of 2 Bedside Nightstand Lamps, Modern Square Desk Lamp for Bedroom Office [SEP] $78.99 [SEP] B08PCN88R7 [SEP] KAYYELAMP 2-Pack 100 Lumens Led Remote Control Battery Run Cordless Lamp Retro Wall Sconce Light Fixture for Bedroom Bathroom Loft Wall Decor- Easy Installation, Dimmable Control,Battery Not Included [SEP] $110.99 [SEP] B09P3WGNBT [SEP] Headphones Galaxy Earbuds for Samsung usbc Earphones USB c with mic Type c Ear Buds Wired audiofonos S21 s20 fe Note 90 Plus s21+ Folding Z Wired Original Black [SEP] $9.99 [SEP] B095RNNBWF [SEP] Chief Lover Kansas City Football RETRO Pajamas TOP KC BBQ Tank Top [SEP] $22.95 [SEP] B096LZ9WF3 [SEP] Strategic Printing Kansas City Chiefs End Zone Water Resistant Bluetooth Speaker, One Size [SEP] $49.99\n\nRecent actions:\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b08pfvq6zk]",
+              "4": "click[b08nyjbx7v]",
+              "5": "click[b08p1hxbdk]",
+              "6": "click[b08p3bqq98]",
+              "7": "click[b08p3cllcw]",
+              "8": "click[b09f6jrmc5]",
+              "9": "click[b08pcn88r7]",
+              "10": "click[b09p3wgnbt]",
+              "11": "click[b095rnnbwf]",
+              "12": "click[b096lz9wf3]"
+            }
+          }
+        }
+      },
+      "request_sha256": "aa93c70a924bbc82b2ff5e70dafc4f752030f1821b3feacb9eb16573e26c8209",
+      "attempts": [
+        {
+          "seconds": 0.5060577541589737,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5062120445072651,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.18120396497988306,
+              "1": 0.1574112483987359,
+              "2": 0.20010557025763945,
+              "3": 0.03158060723968049,
+              "4": 0.013813311709158461,
+              "5": 0.061684323853725395,
+              "6": 0.014912566291127615,
+              "7": 0.012752335631123405,
+              "8": 0.042201397494618056,
+              "9": 0.033923179039776284,
+              "10": 0.06363479555220404,
+              "11": 0.08776926694085511,
+              "12": 0.09900743261147267
+            },
+            "confidence": 0.13344770111244275
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 11743,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.5037962906062603,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.482370737940073
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B09GML95TY [SEP] Workwox Car Phone Holder, Universal Dashboard Magnetic Phone Mount for Car, 360° Rotatable Hands Free Cell Phone Car Holder for GPS, Adjustable Super Strong Magnet for Samsung, iPhone and All Phones [SEP] $6.99 [SEP] B078MV4V6M [SEP] Susie's Smart Breakfast Cookie Healthy Omega3s and Protein Rich cocoa, 63 Ounce (Pack of 18) [SEP] $42.84 [SEP] B078MW6VWC [SEP] Susie's Smart Breakfast Cookie, Orange, Cranberry Nut, Healthy, Omega-3s and Protein Rich Soft Chewy Home-baked Cookie, 3.57 Ounce (Pack of 18) [SEP] $43.05 [SEP] B078MWKR3S [SEP] Susie's Smart Breakfast Cookie Gingered Apple Healthy Omega-3s and Protein Rich Soft Chewy, 3.57, Apple, 63 Oz (Pack of 18) [SEP] $52.71 [SEP] B073RGKMCV [SEP] Lemon - California Roll 24/7 Solar Powered Waterproof Portable Wireless Speaker - Blue [SEP] $100.0 [SEP] B09CV43625 [SEP] FOCO Men's NFL Team Logo Americana Button Up Shirt [SEP] $59.99 [SEP] B08T11PWR9 [SEP] KC Kansas City Powder Blue & Royal blue Kc Outline Kc Curved Tank Top [SEP] $18.95 [SEP] B00322ON1K [SEP] Canon FS300 Flash Memory Camcorder w/41x Advanced Zoom (Silver) (Discontinued by Manufacturer) [SEP] $100.0 [SEP] B09DQ9MMSJ [SEP] Kansas City Skylins Retro Chief KCMO BBQ Pajamas Tailgating Tank Top [SEP] $19.99",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09R8S9T2K [SEP] King Mattress in A Box - 10 Inch Firm King Mattress Memory Foam, Gel Best King Size Mattress, Medium Firm Feel Mattress for Cool Sleep & Relieve Stress [SEP] $319.11 [SEP] B09GML95TY [SEP] Workwox Car Phone Holder, Universal Dashboard Magnetic Phone Mount for Car, 360° Rotatable Hands Free Cell Phone Car Holder for GPS, Adjustable Super Strong Magnet for Samsung, iPhone and All Phones [SEP] $6.99 [SEP] B078MV4V6M [SEP] Susie's Smart Breakfast Cookie Healthy Omega3s and Protein Rich cocoa, 63 Ounce (Pack of 18) [SEP] $42.84 [SEP] B078MW6VWC [SEP] Susie's Smart Breakfast Cookie, Orange, Cranberry Nut, Healthy, Omega-3s and Protein Rich Soft Chewy Home-baked Cookie, 3.57 Ounce (Pack of 18) [SEP] $43.05 [SEP] B078MWKR3S [SEP] Susie's Smart Breakfast Cookie Gingered Apple Healthy Omega-3s and Protein Rich Soft Chewy, 3.57, Apple, 63 Oz (Pack of 18) [SEP] $52.71 [SEP] B073RGKMCV [SEP] Lemon - California Roll 24/7 Solar Powered Waterproof Portable Wireless Speaker - Blue [SEP] $100.0 [SEP] B09CV43625 [SEP] FOCO Men's NFL Team Logo Americana Button Up Shirt [SEP] $59.99 [SEP] B08T11PWR9 [SEP] KC Kansas City Powder Blue & Royal blue Kc Outline Kc Curved Tank Top [SEP] $18.95 [SEP] B00322ON1K [SEP] Canon FS300 Flash Memory Camcorder w/41x Advanced Zoom (Silver) (Discontinued by Manufacturer) [SEP] $100.0 [SEP] B09DQ9MMSJ [SEP] Kansas City Skylins Retro Chief KCMO BBQ Pajamas Tailgating Tank Top [SEP] $19.99\n\nRecent actions:\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09r8s9t2k]",
+              "4": "click[b09gml95ty]",
+              "5": "click[b078mv4v6m]",
+              "6": "click[b078mw6vwc]",
+              "7": "click[b078mwkr3s]",
+              "8": "click[b073rgkmcv]",
+              "9": "click[b09cv43625]",
+              "10": "click[b08t11pwr9]",
+              "11": "click[b00322on1k]",
+              "12": "click[b09dq9mmsj]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a4c869a9c34d9f7653d569fcea92ef27927d9cf2a47c7f42ffc3bde7f0c35a9b",
+      "attempts": [
+        {
+          "seconds": 0.47590912505984306,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.47605206072330475,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.20955421009976574,
+              "1": 0.17300621263719354,
+              "2": 0.21808925658372114,
+              "3": 0.018180560245987958,
+              "4": 0.0587906512965926,
+              "5": 0.031850432766618565,
+              "6": 0.04343069197583676,
+              "7": 0.00904143012882021,
+              "8": 0.06197427738933335,
+              "9": 0.04357613654672557,
+              "10": 0.062360521995102905,
+              "11": 0.02232185637812833,
+              "12": 0.047823761956173425
+            },
+            "confidence": 0.1529300279656979
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10550,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4600859098136425,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.054813198745251
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "fbcdde1d7259b8ff38879bd47152024280dba753f8d373ba301632ecc939974e",
+      "attempts": [
+        {
+          "seconds": 0.07084904238581657,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07095635682344437,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3151587259973067,
+              "1": 0.27080335013809986,
+              "2": 0.4140379238645935
+            },
+            "confidence": 0.12105688579689024
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 888,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0687229186296463,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.206070754677057
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e4c33abe52138d82fd42ecb73c8fe7559c3f92fdb849ddca02acab5a9a1e19a2",
+      "attempts": [
+        {
+          "seconds": 0.07991128414869308,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.08000746741890907,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.313882267474974,
+              "1": 0.2823754036194083,
+              "2": 0.40374232890561773
+            },
+            "confidence": 0.10561349335842661
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 903,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06783059984445572,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.365086629986763
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5fdc06ae0c1f8c903ed21c3e61ff9b38345c14e33ab412c24f57eb0fba046591",
+      "attempts": [
+        {
+          "seconds": 0.07500597089529037,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07507039979100227,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33274459643031057,
+              "1": 0.2874171196622546,
+              "2": 0.3798382839074349
+            },
+            "confidence": 0.06975742586115237
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 918,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06803230196237564,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.51887346804142
+    },
+    {
+      "step": 11,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5dce69f8b7da19ae452f93a1c906fd3c89cfc24174e27208108533c228b2ec23",
+      "attempts": [
+        {
+          "seconds": 0.06812551617622375,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06821193918585777,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3430816324135578,
+              "1": 0.2755575701355624,
+              "2": 0.3813607974508798
+            },
+            "confidence": 0.07204119617631972
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 795,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06627419590950012,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.672852378338575
+    },
+    {
+      "step": 12,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "97af547acb3425359bcff5b4fa5b13804aa39dacfb313ab25e12dda0b299098a",
+      "attempts": [
+        {
+          "seconds": 0.06879051402211189,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06887636333703995,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33607728443805635,
+              "1": 0.28146822231458923,
+              "2": 0.3824544932473545
+            },
+            "confidence": 0.07368173987103173
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06688066571950912,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.82455150783062
+    },
+    {
+      "step": 13,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bbe47a136c0f0764c36ef142fba73543e6da7e68b1e32a399b67cab170e1eeae",
+      "attempts": [
+        {
+          "seconds": 0.0690268762409687,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.069117721170187,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.33523117721136414,
+              "1": 0.2538764154451077,
+              "2": 0.41089240734352817
+            },
+            "confidence": 0.11633861101529226
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0670044980943203,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.977866925299168
+    },
+    {
+      "step": 14,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f3d6d7e0e1fea11cdd956856c0b5fb3f0ce6554e04e390d02f78b60ba6e72d0d",
+      "attempts": [
+        {
+          "seconds": 0.06979085877537727,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06987420842051506,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.34420363752575756,
+              "1": 0.24740557454364945,
+              "2": 0.40839078793059297
+            },
+            "confidence": 0.11258618189588947
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06775929778814316,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.127461276948452
+    },
+    {
+      "step": 15,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b408bbc4605ac47fa8b819554e4d9eac3eda60e52cd116393654d21a057b8650",
+      "attempts": [
+        {
+          "seconds": 0.06950926408171654,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0695989727973938,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3530290934442989,
+              "1": 0.26195863619385734,
+              "2": 0.3850122703618438
+            },
+            "confidence": 0.07751840554276575
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06728794053196907,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.281837817281485
+    },
+    {
+      "step": 16,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7117965247601d26e764f2a49980269e316df7ad38619031f0105cb284736dcd",
+      "attempts": [
+        {
+          "seconds": 0.06718374416232109,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06726903840899467,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3388307586251185,
+              "1": 0.28425257184023583,
+              "2": 0.37691666953464564
+            },
+            "confidence": 0.06537500430196848
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 795,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06542931124567986,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.429668501019478
+    },
+    {
+      "step": 17,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2d3d63dbc8289dd3829466bc3102de1893ef0d73638c59dabe9904ca7930222c",
+      "attempts": [
+        {
+          "seconds": 0.06857043132185936,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06865116953849792,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3363752051013589,
+              "1": 0.28299072085321464,
+              "2": 0.3806340740454266
+            },
+            "confidence": 0.07095111106813991
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 795,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06673865392804146,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.582400713115931
+    },
+    {
+      "step": 18,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "561a175b02b1b16d1ffa4b1c43a9f01a1085b413ec2f58d0189f9c04c2c8b7e7",
+      "attempts": [
+        {
+          "seconds": 0.07498154789209366,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07504772767424583,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3364099578086944,
+              "1": 0.28026004996939885,
+              "2": 0.38332999222190683
+            },
+            "confidence": 0.0749949883328601
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 795,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06779953092336655,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.737981200218201
+    },
+    {
+      "step": 19,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "39137b54f2d5fdc075b30e9c0b25eaa464fd40ed1a24101f6b12690e0601d635",
+      "attempts": [
+        {
+          "seconds": 0.07156169041991234,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07166972383856773,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3325058188372387,
+              "1": 0.277788639810165,
+              "2": 0.3897055413525964
+            },
+            "confidence": 0.08455831202889459
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 795,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06970123946666718,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.903882440179586
+    },
+    {
+      "step": 20,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "70a89867d7183c2d6333aac41c8af8a64525ef6fd9ab11fedfd1f934487237ec",
+      "attempts": [
+        {
+          "seconds": 0.07965822517871857,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07976208254694939,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3262810184256561,
+              "1": 0.2801769051013747,
+              "2": 0.3935420764729693
+            },
+            "confidence": 0.09031311470945379
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 795,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06835583224892616,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.067070335149765
+    },
+    {
+      "step": 21,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b785056275472ef241c3af32dce8e9c1a901b1198d274a2bb61a47502857820f",
+      "attempts": [
+        {
+          "seconds": 0.07552212104201317,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0756145678460598,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.32710735857885376,
+              "1": 0.2838039405472104,
+              "2": 0.3890887008739359
+            },
+            "confidence": 0.08363305131090383
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 795,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06844602897763252,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.225414212793112
+    },
+    {
+      "step": 22,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b2cc93c50fa859288fe9a910dda8306488921d7e7b7757261c1c4a20c27c7cf0",
+      "attempts": [
+        {
+          "seconds": 0.07041530311107635,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07053421437740326,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.3692734367754172,
+              "1": 0.2965034364122189,
+              "2": 0.3342231268123639
+            },
+            "confidence": 0.0539101551631258
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 795,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06811372935771942,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.302366372197866
+    },
+    {
+      "step": 23,
+      "observation": "WebShop [SEP] Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.388126090168953
+    },
+    {
+      "step": 24,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B082G4HM4S [SEP] PopSockets: PopGrip with Swappable Top for Phones & Tablets - NFL - Oakland Raiders Logo [SEP] $15.02 [SEP] B082G4QXDW [SEP] PopSockets: PopGrip with Swappable Top for Phones & Tablets - NFL - Buffalo Bills Helmet [SEP] $15.46 [SEP] B08XZ85B5G [SEP] Strategic Printing Kansas City Chiefs Wireless Charging Station and Bluetooth Speaker [SEP] $54.99 [SEP] B01MTSTCNB [SEP] Skinit Decal Gaming Skin Compatible with Xbox One S Controller - Officially Licensed NFL Kansas City Chiefs Design [SEP] $16.99 [SEP] B075TJZ5RV [SEP] Skinit Decal Gaming Skin Compatible with Xbox One Elite Controller - Officially Licensed NFL Kansas City Chiefs Team Motto Design [SEP] $16.99 [SEP] B075TK5VZW [SEP] Skinit Decal Gaming Skin Compatible with Xbox One S Controller - Officially Licensed NFL Kansas City Chiefs Team Motto Design [SEP] $16.99 [SEP] B075VJS626 [SEP] Skinit Decal Gaming Skin Compatible with Xbox One Elite Controller - Officially Licensed NFL Kansas City Chiefs Design [SEP] $16.99 [SEP] B01N6EQ3CV [SEP] Skinit Decal Gaming Skin Compatible with Xbox One S Console and Controller Bundle - Officially Licensed NFL Kansas City Chiefs Design [SEP] $39.99 [SEP] B075833ZDW [SEP] Skinit Decal Gaming Skin Compatible with PS4 Pro Console and Controller Bundle - Officially Licensed NFL Kansas City Chiefs Camo Design [SEP] $39.99 [SEP] B08P32KCTT [SEP] Hibye Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Wireless Support AUX TF USB [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B082G4HM4S [SEP] PopSockets: PopGrip with Swappable Top for Phones & Tablets - NFL - Oakland Raiders Logo [SEP] $15.02 [SEP] B082G4QXDW [SEP] PopSockets: PopGrip with Swappable Top for Phones & Tablets - NFL - Buffalo Bills Helmet [SEP] $15.46 [SEP] B08XZ85B5G [SEP] Strategic Printing Kansas City Chiefs Wireless Charging Station and Bluetooth Speaker [SEP] $54.99 [SEP] B01MTSTCNB [SEP] Skinit Decal Gaming Skin Compatible with Xbox One S Controller - Officially Licensed NFL Kansas City Chiefs Design [SEP] $16.99 [SEP] B075TJZ5RV [SEP] Skinit Decal Gaming Skin Compatible with Xbox One Elite Controller - Officially Licensed NFL Kansas City Chiefs Team Motto Design [SEP] $16.99 [SEP] B075TK5VZW [SEP] Skinit Decal Gaming Skin Compatible with Xbox One S Controller - Officially Licensed NFL Kansas City Chiefs Team Motto Design [SEP] $16.99 [SEP] B075VJS626 [SEP] Skinit Decal Gaming Skin Compatible with Xbox One Elite Controller - Officially Licensed NFL Kansas City Chiefs Design [SEP] $16.99 [SEP] B01N6EQ3CV [SEP] Skinit Decal Gaming Skin Compatible with Xbox One S Console and Controller Bundle - Officially Licensed NFL Kansas City Chiefs Design [SEP] $39.99 [SEP] B075833ZDW [SEP] Skinit Decal Gaming Skin Compatible with PS4 Pro Console and Controller Bundle - Officially Licensed NFL Kansas City Chiefs Camo Design [SEP] $39.99 [SEP] B08P32KCTT [SEP] Hibye Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Wireless Support AUX TF USB [SEP] $100.0\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b082g4hm4s]",
+              "3": "click[b082g4qxdw]",
+              "4": "click[b08xz85b5g]",
+              "5": "click[b01mtstcnb]",
+              "6": "click[b075tjz5rv]",
+              "7": "click[b075tk5vzw]",
+              "8": "click[b075vjs626]",
+              "9": "click[b01n6eq3cv]",
+              "10": "click[b075833zdw]",
+              "11": "click[b08p32kctt]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5f6bfa536126f6656a43fbe5c75dc789609c1f3476ea66bee3001d2b6ec04059",
+      "attempts": [
+        {
+          "seconds": 0.4002911224961281,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.40044282376766205,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.16500896913925384,
+              "1": 0.40715829143671856,
+              "2": 0.04171647763998032,
+              "3": 0.03599596707018992,
+              "4": 0.048876167581305,
+              "5": 0.05130352050185517,
+              "6": 0.03466219296900507,
+              "7": 0.022965123244614645,
+              "8": 0.024808632929220434,
+              "9": 0.06048643479665988,
+              "10": 0.0483543128950521,
+              "11": 0.058663909796145136
+            },
+            "confidence": 0.3532635906582383
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9034,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.39803942292928696,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.891621869057417
+    },
+    {
+      "step": 25,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B08Q1YWQQ9 [SEP] Nokia 225 | Unlocked | 4G Cell Phone | Black [SEP] $44.98 [SEP] B09FTG39V7 [SEP] Ear Buds Kids School - 7 Pack Classroom Wired Headphones Set Learning Kids Earphones Student chromebook Earbuds Bulk for Laptop audifonos iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $7.99 [SEP] B08KYDSHXV [SEP] FOCO Men’s NFL Team Logo Polo Short Sleeve Polyester Shirt [SEP] $43.45 to $49.99 [SEP] B099753MQ2 [SEP] Kansas City Defense Big Sac Retro Chief BBQ Pajamas Tank Top Tank Top [SEP] $21.95 [SEP] B092SL1NGY [SEP] Strategic Printing Kansas City Chiefs End Zone Pocket Bluetooth Speaker [SEP] $34.99 [SEP] B07WGC9G3P [SEP] Kansas City Heart | Kc Hearts I Love KC Letters Blue Vintage Tank Top [SEP] $17.95 [SEP] B082TFRDC4 [SEP] Susie's Smart Breakfast Cookie Mixed Box of 12 Breakfast Cookies, (3) Orange, Cranberry Nut; (3) Gingered Apple; (3) Banana Coconut; (3) Cocoa, 3.5 Ounce [SEP] $44.03 [SEP] B09ML73VBW [SEP] Military Grade Anti-Drop Universal Car Phone Holder Mount, Powerful Suction Cell Phone Holder Car, Magnetic Phone Holder for Car, Compatible Dashboard Phone Holder for iPhone & Android [SEP] $18.0",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09CD5RZR4 [SEP] Abnana Retro Vinyl Record -Compatible Speaker Rotating Record Player Stress (Green) [SEP] $100.0 [SEP] B08PYVWM7B [SEP] WANGFUFU Retro Vinyl Record Bluetooth Speaker Rotating Record Player Stress Relief Bass Enhancement Loud Volume Speaker [SEP] $41.69 [SEP] B08Q1YWQQ9 [SEP] Nokia 225 | Unlocked | 4G Cell Phone | Black [SEP] $44.98 [SEP] B09FTG39V7 [SEP] Ear Buds Kids School - 7 Pack Classroom Wired Headphones Set Learning Kids Earphones Student chromebook Earbuds Bulk for Laptop audifonos iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $7.99 [SEP] B08KYDSHXV [SEP] FOCO Men’s NFL Team Logo Polo Short Sleeve Polyester Shirt [SEP] $43.45 to $49.99 [SEP] B099753MQ2 [SEP] Kansas City Defense Big Sac Retro Chief BBQ Pajamas Tank Top Tank Top [SEP] $21.95 [SEP] B092SL1NGY [SEP] Strategic Printing Kansas City Chiefs End Zone Pocket Bluetooth Speaker [SEP] $34.99 [SEP] B07WGC9G3P [SEP] Kansas City Heart | Kc Hearts I Love KC Letters Blue Vintage Tank Top [SEP] $17.95 [SEP] B082TFRDC4 [SEP] Susie's Smart Breakfast Cookie Mixed Box of 12 Breakfast Cookies, (3) Orange, Cranberry Nut; (3) Gingered Apple; (3) Banana Coconut; (3) Cocoa, 3.5 Ounce [SEP] $44.03 [SEP] B09ML73VBW [SEP] Military Grade Anti-Drop Universal Car Phone Holder Mount, Powerful Suction Cell Phone Holder Car, Magnetic Phone Holder for Car, Compatible Dashboard Phone Holder for iPhone & Android [SEP] $18.0\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09cd5rzr4]",
+              "4": "click[b08pyvwm7b]",
+              "5": "click[b08q1ywqq9]",
+              "6": "click[b09ftg39v7]",
+              "7": "click[b08kydshxv]",
+              "8": "click[b099753mq2]",
+              "9": "click[b092sl1ngy]",
+              "10": "click[b07wgc9g3p]",
+              "11": "click[b082tfrdc4]",
+              "12": "click[b09ml73vbw]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ee882ac12adae599d4cbbf348a0c802ca79b5910191d2f59837040c9e72032c6",
+      "attempts": [
+        {
+          "seconds": 0.4430919215083122,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.44325289130210876,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.11871733410395026,
+              "1": 0.1716444292048078,
+              "2": 0.24863673864372596,
+              "3": 0.034932229913780255,
+              "4": 0.03489262325035773,
+              "5": 0.039172236535176666,
+              "6": 0.03235848794517217,
+              "7": 0.05590167998306378,
+              "8": 0.04506012534460467,
+              "9": 0.07372802486859845,
+              "10": 0.04198348128879556,
+              "11": 0.031290820358462215,
+              "12": 0.0716817885595046
+            },
+            "confidence": 0.1860231335307031
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 10079,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.44104886800050735,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.433421775698662
+    },
+    {
+      "step": 26,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09GW969LH [SEP] Nokia G50 5G | Android 11 | Unlocked Smartphone | US Version | 4/128GB | 6.82-Inch Screen | 48MP Triple Camera | Ocean Blue [SEP] $276.73 [SEP] B07NC74W9Y [SEP] NATIVE AMERICAN BIG CHIEF SKULL HEADDRESS YUTTA-HEY DESIGN T-Shirt [SEP] $15.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B08MWRCZL8 [SEP] Nokia 3.4 | Android 10 | Unlocked Smartphone | 2-Day Battery | US Version | 3/64GB | 6.39-Inch Screen | Triple Camera | Charcoal [SEP] $179.99 [SEP] B093RJBTP3 [SEP] Nokia G20 | Android 11 | Unlocked Smartphone | 3-Day Battery | Dual SIM | US Version | 4/128GB | 6.52-Inch Screen | 48MP Quad Camera | Glacier [SEP] $192.42 [SEP] B08STXNT4K [SEP] Nokia 5.4 | Android 10 | Unlocked Smartphone | 2-Day Battery | Dual SIM | US Version | 4/128GB | 6.39-Inch Screen | 48MP Quad Camera | Polar Night [SEP] $189.98 [SEP] B08SV6KJTT [SEP] Nokia 5.4 | Android 10 | Unlocked Smartphone | 2-Day Battery | Dual SIM | US Version | 4/128GB | 6.39-Inch Screen | 48MP Quad Camera | Dusk [SEP] $100.0 [SEP] B06W5VXDYG [SEP] Kansas City Chiefs Exclusive Team Logo Flats With Clutch Medium [SEP] $14.99 [SEP] B0939D9FR3 [SEP] Nokia 6300 4G | Unlocked | Dual SIM | WiFi Hotspot | Social Apps | Google Maps and Assistant | Cyan Green [SEP] $69.99 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09GW969LH [SEP] Nokia G50 5G | Android 11 | Unlocked Smartphone | US Version | 4/128GB | 6.82-Inch Screen | 48MP Triple Camera | Ocean Blue [SEP] $276.73 [SEP] B07NC74W9Y [SEP] NATIVE AMERICAN BIG CHIEF SKULL HEADDRESS YUTTA-HEY DESIGN T-Shirt [SEP] $15.0 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B08MWRCZL8 [SEP] Nokia 3.4 | Android 10 | Unlocked Smartphone | 2-Day Battery | US Version | 3/64GB | 6.39-Inch Screen | Triple Camera | Charcoal [SEP] $179.99 [SEP] B093RJBTP3 [SEP] Nokia G20 | Android 11 | Unlocked Smartphone | 3-Day Battery | Dual SIM | US Version | 4/128GB | 6.52-Inch Screen | 48MP Quad Camera | Glacier [SEP] $192.42 [SEP] B08STXNT4K [SEP] Nokia 5.4 | Android 10 | Unlocked Smartphone | 2-Day Battery | Dual SIM | US Version | 4/128GB | 6.39-Inch Screen | 48MP Quad Camera | Polar Night [SEP] $189.98 [SEP] B08SV6KJTT [SEP] Nokia 5.4 | Android 10 | Unlocked Smartphone | 2-Day Battery | Dual SIM | US Version | 4/128GB | 6.39-Inch Screen | 48MP Quad Camera | Dusk [SEP] $100.0 [SEP] B06W5VXDYG [SEP] Kansas City Chiefs Exclusive Team Logo Flats With Clutch Medium [SEP] $14.99 [SEP] B0939D9FR3 [SEP] Nokia 6300 4G | Unlocked | Dual SIM | WiFi Hotspot | Social Apps | Google Maps and Assistant | Cyan Green [SEP] $69.99 [SEP] B09G3FPP9S [SEP] Earbuds Wired - 10 Pack Kid Headphones for School Classroom Ear Buds audifonos para niños chromebook Earphones Set Learning Student Bulk for Laptop iPhone Galaxy Gym Computer PL 3.5 Jack [SEP] $9.99\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09gw969lh]",
+              "4": "click[b07nc74w9y]",
+              "5": "click[b09kcl5gk5]",
+              "6": "click[b08mwrczl8]",
+              "7": "click[b093rjbtp3]",
+              "8": "click[b08stxnt4k]",
+              "9": "click[b08sv6kjtt]",
+              "10": "click[b06w5vxdyg]",
+              "11": "click[b0939d9fr3]",
+              "12": "click[b09g3fpp9s]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e94f57b4a38a49078a67d747fa3894aac38353cb9210833d7d94fa64eb5f8fec",
+      "attempts": [
+        {
+          "seconds": 0.5305239818990231,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5306950993835926,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.14527406395036838,
+              "1": 0.19247461435732252,
+              "2": 0.32340772430238096,
+              "3": 0.02931066371927359,
+              "4": 0.03990627860812367,
+              "5": 0.03413732224909913,
+              "6": 0.03669578819862404,
+              "7": 0.026511768484934542,
+              "8": 0.02477451196936236,
+              "9": 0.020287604294123275,
+              "10": 0.04944866674334745,
+              "11": 0.03497416160503027,
+              "12": 0.04279683151800992
+            },
+            "confidence": 0.2670250346609127
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 12171,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.5284807719290257,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.061234179884195
+    },
+    {
+      "step": 27,
+      "observation": "Instruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08PFVQ6ZK [SEP] Zelda Wireless Charger Sheikah Slate Phone Charger Magic Circle Charger 10W Quick Charging [SEP] $100.0 [SEP] B08NYJBX7V [SEP] KAYYELAMP 2-Lights 100 Lumens Multi-Function Battery Run Remote Control Cordless Wall Luminaire Lighting Fixture Wall Decor for Indoor Staircase Laundry-Easy to Install,Dimmable,Battery Not Included [SEP] $109.99 [SEP] B08P1HXBDK [SEP] KAYYELAMP 2-Pack 100 Lumens Multi-Function Led Remote Control Battery Run No Cord Black Bucket Lampshade Wall Sconce for Aisle Loft Wall Decor-Easy Installation, Dimmable Control,Battery Not Included [SEP] $139.99 [SEP] B08P3BQQ98 [SEP] KAYYELAMP 2-Lights 100 Lumens Multi-Function LED Battery Run Remote Control No Cord Rustic Vintage Wall Sconce Light Fixture For Indoor Staircase Laundry -Easy To Install,Dimmable,Battery Not Included [SEP] $119.99 [SEP] B08P3CLLCW [SEP] KAYYELAMP 2-Lights 100 Lumens Led Remote Control Battery Run Cordless Lamp Not Hardwired Retro Wall Sconce for Aisle Bedroom Wall Decor-Easy Installation, Dimmable Control,Battery Not Included [SEP] $108.99 [SEP] B09F6JRMC5 [SEP] Wireless Charging Touch Control Dimmable Table Lamp with USB Port&AC, Set of 2 Bedside Nightstand Lamps, Modern Square Desk Lamp for Bedroom Office [SEP] $78.99 [SEP] B08PCN88R7 [SEP] KAYYELAMP 2-Pack 100 Lumens Led Remote Control Battery Run Cordless Lamp Retro Wall Sconce Light Fixture for Bedroom Bathroom Loft Wall Decor- Easy Installation, Dimmable Control,Battery Not Included [SEP] $110.99 [SEP] B09P3WGNBT [SEP] Headphones Galaxy Earbuds for Samsung usbc Earphones USB c with mic Type c Ear Buds Wired audiofonos S21 s20 fe Note 90 Plus s21+ Folding Z Wired Original Black [SEP] $9.99 [SEP] B095RNNBWF [SEP] Chief Lover Kansas City Football RETRO Pajamas TOP KC BBQ Tank Top [SEP] $22.95 [SEP] B096LZ9WF3 [SEP] Strategic Printing Kansas City Chiefs End Zone Water Resistant Bluetooth Speaker, One Size [SEP] $49.99",
+      "request": {
+        "state": "Shopping instruction:\ni want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B08PFVQ6ZK [SEP] Zelda Wireless Charger Sheikah Slate Phone Charger Magic Circle Charger 10W Quick Charging [SEP] $100.0 [SEP] B08NYJBX7V [SEP] KAYYELAMP 2-Lights 100 Lumens Multi-Function Battery Run Remote Control Cordless Wall Luminaire Lighting Fixture Wall Decor for Indoor Staircase Laundry-Easy to Install,Dimmable,Battery Not Included [SEP] $109.99 [SEP] B08P1HXBDK [SEP] KAYYELAMP 2-Pack 100 Lumens Multi-Function Led Remote Control Battery Run No Cord Black Bucket Lampshade Wall Sconce for Aisle Loft Wall Decor-Easy Installation, Dimmable Control,Battery Not Included [SEP] $139.99 [SEP] B08P3BQQ98 [SEP] KAYYELAMP 2-Lights 100 Lumens Multi-Function LED Battery Run Remote Control No Cord Rustic Vintage Wall Sconce Light Fixture For Indoor Staircase Laundry -Easy To Install,Dimmable,Battery Not Included [SEP] $119.99 [SEP] B08P3CLLCW [SEP] KAYYELAMP 2-Lights 100 Lumens Led Remote Control Battery Run Cordless Lamp Not Hardwired Retro Wall Sconce for Aisle Bedroom Wall Decor-Easy Installation, Dimmable Control,Battery Not Included [SEP] $108.99 [SEP] B09F6JRMC5 [SEP] Wireless Charging Touch Control Dimmable Table Lamp with USB Port&AC, Set of 2 Bedside Nightstand Lamps, Modern Square Desk Lamp for Bedroom Office [SEP] $78.99 [SEP] B08PCN88R7 [SEP] KAYYELAMP 2-Pack 100 Lumens Led Remote Control Battery Run Cordless Lamp Retro Wall Sconce Light Fixture for Bedroom Bathroom Loft Wall Decor- Easy Installation, Dimmable Control,Battery Not Included [SEP] $110.99 [SEP] B09P3WGNBT [SEP] Headphones Galaxy Earbuds for Samsung usbc Earphones USB c with mic Type c Ear Buds Wired audiofonos S21 s20 fe Note 90 Plus s21+ Folding Z Wired Original Black [SEP] $9.99 [SEP] B095RNNBWF [SEP] Chief Lover Kansas City Football RETRO Pajamas TOP KC BBQ Tank Top [SEP] $22.95 [SEP] B096LZ9WF3 [SEP] Strategic Printing Kansas City Chiefs End Zone Water Resistant Bluetooth Speaker, One Size [SEP] $49.99\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i want something that will let me use my cell phone hands free and has the kansas city chiefs' logo on it. it should allow for wireless charging, and price lower than 50.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b08pfvq6zk]",
+              "4": "click[b08nyjbx7v]",
+              "5": "click[b08p1hxbdk]",
+              "6": "click[b08p3bqq98]",
+              "7": "click[b08p3cllcw]",
+              "8": "click[b09f6jrmc5]",
+              "9": "click[b08pcn88r7]",
+              "10": "click[b09p3wgnbt]",
+              "11": "click[b095rnnbwf]",
+              "12": "click[b096lz9wf3]"
+            }
+          }
+        }
+      },
+      "request_sha256": "9e35b06ffbb5674d44eefab1c83c00da4a104526f6fb1057a99ca7deb17bcd1c",
+      "attempts": [
+        {
+          "seconds": 0.5187245085835457,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.518881194293499,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.11294727533418732,
+              "1": 0.15391806394279584,
+              "2": 0.21165961518898221,
+              "3": 0.030457874669926305,
+              "4": 0.011401256287606631,
+              "5": 0.05932762686678212,
+              "6": 0.01423971666282584,
+              "7": 0.011024490105600296,
+              "8": 0.042801913461227435,
+              "9": 0.03145842028236056,
+              "10": 0.05468267708024925,
+              "11": 0.11897081035521224,
+              "12": 0.1471102597622439
+            },
+            "confidence": 0.14596458312139743
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 12016,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.5161144696176052,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.677980307489634
+    }
+  ]
+}

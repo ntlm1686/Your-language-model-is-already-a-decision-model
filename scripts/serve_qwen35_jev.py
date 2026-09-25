@@ -44,7 +44,35 @@ class Qwen35Scorer(QwenScorer):
 
     def score(self, record: dict) -> tuple[list[float], int, int, str]:
         n = len(record["options"])
-        if not self.batch_rotations or n > len(LETTERS):
+        if n > len(LETTERS) and self.batch_rotations:
+            state, question = render(record["state"]), render(record["question"])
+            encoded = [self._encode(
+                "Context:\n" + state + "\n\nQuestion: " + question + "\n"
+                "Proposed answer: " + option + "\n"
+                "Is this proposed answer correct? Answer Yes or No.\nAnswer:")
+                for option in record["options"]]
+            odds = []
+            # Bound memory while scoring all candidates with the same Yes/No
+            # prompt and log-odds rule used by the serial API fallback.
+            for start in range(0, n, 8):
+                chunk = encoded[start:start + 8]
+                lengths = [len(ids) for ids in chunk]
+                inputs = torch.full((len(chunk), max(lengths)), self.tokenizer.pad_token_id,
+                                    dtype=torch.long, device=self.device)
+                mask = torch.zeros_like(inputs)
+                for i, ids in enumerate(chunk):
+                    inputs[i, :len(ids)] = torch.tensor(ids, device=self.device)
+                    mask[i, :len(ids)] = 1
+                with torch.inference_mode():
+                    hidden = self.backbone(input_ids=inputs, attention_mask=mask,
+                                           use_cache=False, return_dict=True).last_hidden_state
+                    last = hidden[torch.arange(len(chunk), device=self.device),
+                                  torch.tensor(lengths, device=self.device) - 1]
+                    logits = self.head(last)[:, self.yes_no_ids].float()
+                    odds.extend((logits[:, 0] - logits[:, 1]).cpu().tolist())
+            torch.cuda.synchronize(self.device)
+            return softmax(odds), sum(map(len, encoded)), n, "batched_candidate_yes_no_log_odds"
+        if not self.batch_rotations:
             return super().score(record)
         state, question = render(record["state"]), render(record["question"])
         rotations = []

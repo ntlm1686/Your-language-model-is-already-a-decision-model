@@ -1,0 +1,154 @@
+{
+  "task_id": 260,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i'm looking for furniture to make my living room and dinning room so nice",
+  "instruction_sha256": "fe1832b2048da30242bea1905227311c724f4dc31096906421119d6b5881de49",
+  "reward": 0.6666666666666666,
+  "score": 66.66666666666666,
+  "success": false,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 0.7645481526851654,
+  "decision_seconds": 0.6563204862177372,
+  "input_tokens": 1746,
+  "output_tokens": 162,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Search",
+      "action": "search[i'm looking for furniture to make my living room and dinning room so nice]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.05158960074186325
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07X9C8Z6L [SEP] Set of 6 Computer PC Laptop Cart Desk Height Adjustable Table Rolling Portable Mobile Smartphone Notebook Over Sofa Bed Stand Office Living Room School Home Furniture - Oak/2302 [SEP] $424.5 [SEP] B09CPL8T81 [SEP] ZOSIMIO Modern Black Brass Kitchen Island Light Gold Chandelier Industrial Rectangular Dining Room Lighting Rustic Hanging Pendant Light for Living Room Bar Living Room (4-Light) [SEP] $99.99 [SEP] B09CPNLY3X [SEP] ZOSIMIO Modern Black Gold Kitchen Island Light Brass Chandelier Industrial Linear Dining Room Lighting Farmhouse Hanging Pendant Light for Living Room Bar Living Room (3-Light) [SEP] $84.99 [SEP] B07M7D9VXK [SEP] Asamour Funny Quote Saying Throw Pillow Covers Vintage Wood with Lettering Cotton Linen Decorative Cushion Cover Pillow Case Home Sofa Pillowcase 18x18 Inches (Trust Me, I'm a Gamer) [SEP] $10.99 [SEP] B0832PLNM1 [SEP] Reclaimed Pallet Wood Coffee Table [SEP] $320.0 [SEP] B07XNW9Z64 [SEP] Lika Black Farmhouse Chandeliers Industrial Pendant Lighting Metal Ceiling Light Fixture Hanging for Dinning Room Kitchen Island Living Room Bedroom Foyer (4-Light) [SEP] $54.89 [SEP] B07891FJ9G [SEP] Moroccan Pouf Ottoman Footstool (Leather) Genuine Hand-Stitched Seating | Living Room, Bedroom, Sitting Area (Unstuffed, Brown) [SEP] $65.0 [SEP] B07WHZXV99 [SEP] I'm Too Sexy For My Hair That's Why It Isn't There Bald Joke T-Shirt [SEP] $19.99 [SEP] B07T6P5XMQ [SEP] SEI Furniture Jaymes Metal & Glass 2-Tier, Console Table, Soft Gold [SEP] $115.37 [SEP] B09C4DPS2Z [SEP] Storage Sideboard Dining Buffet Server Cabinet, Buffet Server Cabinet Bedroom Chest of Drawers Living Room Unit Storage Sideboard Cabinet Storage Unit Hallway Bedroom, Villa Hotel Furniture Decor [SEP] $1565.25",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for furniture to make my living room and dinning room so nice\n\nCurrent page:\nInstruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07X9C8Z6L [SEP] Set of 6 Computer PC Laptop Cart Desk Height Adjustable Table Rolling Portable Mobile Smartphone Notebook Over Sofa Bed Stand Office Living Room School Home Furniture - Oak/2302 [SEP] $424.5 [SEP] B09CPL8T81 [SEP] ZOSIMIO Modern Black Brass Kitchen Island Light Gold Chandelier Industrial Rectangular Dining Room Lighting Rustic Hanging Pendant Light for Living Room Bar Living Room (4-Light) [SEP] $99.99 [SEP] B09CPNLY3X [SEP] ZOSIMIO Modern Black Gold Kitchen Island Light Brass Chandelier Industrial Linear Dining Room Lighting Farmhouse Hanging Pendant Light for Living Room Bar Living Room (3-Light) [SEP] $84.99 [SEP] B07M7D9VXK [SEP] Asamour Funny Quote Saying Throw Pillow Covers Vintage Wood with Lettering Cotton Linen Decorative Cushion Cover Pillow Case Home Sofa Pillowcase 18x18 Inches (Trust Me, I'm a Gamer) [SEP] $10.99 [SEP] B0832PLNM1 [SEP] Reclaimed Pallet Wood Coffee Table [SEP] $320.0 [SEP] B07XNW9Z64 [SEP] Lika Black Farmhouse Chandeliers Industrial Pendant Lighting Metal Ceiling Light Fixture Hanging for Dinning Room Kitchen Island Living Room Bedroom Foyer (4-Light) [SEP] $54.89 [SEP] B07891FJ9G [SEP] Moroccan Pouf Ottoman Footstool (Leather) Genuine Hand-Stitched Seating | Living Room, Bedroom, Sitting Area (Unstuffed, Brown) [SEP] $65.0 [SEP] B07WHZXV99 [SEP] I'm Too Sexy For My Hair That's Why It Isn't There Bald Joke T-Shirt [SEP] $19.99 [SEP] B07T6P5XMQ [SEP] SEI Furniture Jaymes Metal & Glass 2-Tier, Console Table, Soft Gold [SEP] $115.37 [SEP] B09C4DPS2Z [SEP] Storage Sideboard Dining Buffet Server Cabinet, Buffet Server Cabinet Bedroom Chest of Drawers Living Room Unit Storage Sideboard Cabinet Storage Unit Hallway Bedroom, Villa Hotel Furniture Decor [SEP] $1565.25\n\nRecent actions:\nsearch[i'm looking for furniture to make my living room and dinning room so nice]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07x9c8z6l]",
+              "3": "click[b09cpl8t81]",
+              "4": "click[b09cpnly3x]",
+              "5": "click[b07m7d9vxk]",
+              "6": "click[b0832plnm1]",
+              "7": "click[b07xnw9z64]",
+              "8": "click[b07891fj9g]",
+              "9": "click[b07whzxv99]",
+              "10": "click[b07t6p5xmq]",
+              "11": "click[b09c4dps2z]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "7e8bb51ecafa82d1c0665000e16148d6ab0a12044b1a45950895f5ae84450004",
+      "attempts": [
+        {
+          "seconds": 0.3317895047366619,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.33188582211732864,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "6",
+            "confidence": 0.49,
+            "probabilities": {
+              "4": 0.02,
+              "6": 0.52,
+              "3": 0.07,
+              "5": 0.01,
+              "1": 0.06,
+              "11": 0.06,
+              "2": 0.03,
+              "9": 0.0,
+              "7": 0.1,
+              "8": 0.04,
+              "10": 0.08,
+              "0": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1201,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b0832plnm1]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4049280807375908
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] < Prev [SEP] Reclaimed Pallet Wood Coffee Table [SEP] Price: $320.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for furniture to make my living room and dinning room so nice\n\nCurrent page:\nInstruction: [SEP] i'm looking for furniture to make my living room and dinning room so nice [SEP] Back to Search [SEP] < Prev [SEP] Reclaimed Pallet Wood Coffee Table [SEP] Price: $320.0 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm looking for furniture to make my living room and dinning room so nice]\nclick[b0832plnm1]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "3a2c072ab6135355128093394e60de1e6d4a153f76a5efe1c5736cdd444d5fe2",
+      "attempts": [
+        {
+          "seconds": 0.32434380054473877,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.32443466410040855,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.32,
+            "probabilities": {
+              "0": 0.25,
+              "2": 0.2,
+              "1": 0.03,
+              "3": 0.06,
+              "4": 0.01,
+              "5": 0.45
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 545,
+          "output_tokens": 59
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.6666666666666666,
+      "done": true,
+      "elapsed_seconds": 0.7645445019006729
+    }
+  ]
+}

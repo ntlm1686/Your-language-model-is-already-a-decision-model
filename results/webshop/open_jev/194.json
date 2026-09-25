@@ -1,0 +1,376 @@
+{
+  "task_id": 194,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i need a large sized coat with long sleeves, and price lower than 60.00 dollars",
+  "instruction_sha256": "c0916b6de52eaa5f916bb40ed969f744792046f3ddbd280c839cdae8a3db01b0",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 1.253325428813696,
+  "decision_seconds": 1.096899714320898,
+  "input_tokens": 23658,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i need a large sized coat with long sleeves, and price lower than 60.00 dollars [SEP] Search",
+      "action": "search[i need a large sized coat with long sleeves, and price lower than 60.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06239830702543259
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i need a large sized coat with long sleeves, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B078H1SNTT [SEP] ChefUniforms.com Men’s Classic Long Sleeve Chef Coat (XS-5X, 2 Colors) [SEP] $18.98 to $24.98 [SEP] B07ZCWFC3R [SEP] SSDXY Fringe Vest for Women Suede Faux Tassels Vest 70s Ethnic Winter Open-Front Sleeveless Vest Western Cowgir Tops [SEP] $11.09 to $20.99 [SEP] B07X6GDMLB [SEP] Men's Women Outdoor Hooded Jersey Sun Protection Tops Casual Windproof Ultra-Light Rainproof Windbreaker Jackets Top [SEP] $5.19 to $5.99 [SEP] B07VFYJPNX [SEP] Men's Asymmetrical 3/4 Rolled Up Sleeves Chef Coat (S-3X, 2 Colors) [SEP] $33.98 to $38.98 [SEP] B07JMFQPJ2 [SEP] Women’s 3/4 Sleeve Chef Coat with Mesh Side Panels (XS-3X, 4 Colors) [SEP] $24.98 to $27.98 [SEP] B07SXTZMBF [SEP] Men’s Traditional Chef Coat with Knotted Cloth Buttons (XS-3X, 3 Colors) [SEP] $28.98 to $32.98 [SEP] B07JMJXCBD [SEP] Men’s Chef Coat with Mesh Side Panels (S-3X, 6 Colors) [SEP] $21.98 to $26.98 [SEP] B078H1Z77C [SEP] ChefUniforms.com Men’s Classic Chef Coat (XS-5X, 2 Colors) [SEP] $18.98 to $23.98 [SEP] B07QDPDZTS [SEP] Men’s Chambray Chef Coat with Mesh Side Panels (XS-3X, 3 Colors) [SEP] $37.98 to $42.98 [SEP] B08Y66JJT3 [SEP] Men’s Asymmetrical Premium Denim Chef Coat with Mesh Side Panels (S-3X) [SEP] $42.98",
+      "request": {
+        "state": "Shopping instruction:\ni need a large sized coat with long sleeves, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a large sized coat with long sleeves, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B078H1SNTT [SEP] ChefUniforms.com Men’s Classic Long Sleeve Chef Coat (XS-5X, 2 Colors) [SEP] $18.98 to $24.98 [SEP] B07ZCWFC3R [SEP] SSDXY Fringe Vest for Women Suede Faux Tassels Vest 70s Ethnic Winter Open-Front Sleeveless Vest Western Cowgir Tops [SEP] $11.09 to $20.99 [SEP] B07X6GDMLB [SEP] Men's Women Outdoor Hooded Jersey Sun Protection Tops Casual Windproof Ultra-Light Rainproof Windbreaker Jackets Top [SEP] $5.19 to $5.99 [SEP] B07VFYJPNX [SEP] Men's Asymmetrical 3/4 Rolled Up Sleeves Chef Coat (S-3X, 2 Colors) [SEP] $33.98 to $38.98 [SEP] B07JMFQPJ2 [SEP] Women’s 3/4 Sleeve Chef Coat with Mesh Side Panels (XS-3X, 4 Colors) [SEP] $24.98 to $27.98 [SEP] B07SXTZMBF [SEP] Men’s Traditional Chef Coat with Knotted Cloth Buttons (XS-3X, 3 Colors) [SEP] $28.98 to $32.98 [SEP] B07JMJXCBD [SEP] Men’s Chef Coat with Mesh Side Panels (S-3X, 6 Colors) [SEP] $21.98 to $26.98 [SEP] B078H1Z77C [SEP] ChefUniforms.com Men’s Classic Chef Coat (XS-5X, 2 Colors) [SEP] $18.98 to $23.98 [SEP] B07QDPDZTS [SEP] Men’s Chambray Chef Coat with Mesh Side Panels (XS-3X, 3 Colors) [SEP] $37.98 to $42.98 [SEP] B08Y66JJT3 [SEP] Men’s Asymmetrical Premium Denim Chef Coat with Mesh Side Panels (S-3X) [SEP] $42.98\n\nRecent actions:\nsearch[i need a large sized coat with long sleeves, and price lower than 60.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b078h1sntt]",
+              "3": "click[b07zcwfc3r]",
+              "4": "click[b07x6gdmlb]",
+              "5": "click[b07vfyjpnx]",
+              "6": "click[b07jmfqpj2]",
+              "7": "click[b07sxtzmbf]",
+              "8": "click[b07jmjxcbd]",
+              "9": "click[b078h1z77c]",
+              "10": "click[b07qdpdzts]",
+              "11": "click[b08y66jjt3]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b7c9e9686f81b3264ef16fc2bffd446683ef4b4b7c0ffe50a33f7b6e7803f2f4",
+      "attempts": [
+        {
+          "seconds": 0.3805222250521183,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3806776590645313,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.012262265465384177,
+              "1": 0.02580250526010914,
+              "2": 0.2574691678014678,
+              "3": 0.0025393425417553016,
+              "4": 0.03246349533408044,
+              "5": 0.04480856435298497,
+              "6": 0.06295075677172207,
+              "7": 0.06749442088208613,
+              "8": 0.1703681927321876,
+              "9": 0.21108472754988541,
+              "10": 0.10126995555874672,
+              "11": 0.011486605749590236
+            },
+            "confidence": 0.18996636487432852
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8490,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.378259040415287,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b078h1sntt]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4678748622536659
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i need a large sized coat with long sleeves, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large big [SEP] color [SEP] white [SEP] pebble grey [SEP] black [SEP] ChefUniforms.com Men’s Classic Long Sleeve Chef Coat (XS-5X, 2 Colors) [SEP] Price: $18.98 to $24.98 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need a large sized coat with long sleeves, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a large sized coat with long sleeves, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large big [SEP] color [SEP] white [SEP] pebble grey [SEP] black [SEP] ChefUniforms.com Men’s Classic Long Sleeve Chef Coat (XS-5X, 2 Colors) [SEP] Price: $18.98 to $24.98 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need a large sized coat with long sleeves, and price lower than 60.00 dollars]\nclick[b078h1sntt]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[x-small]",
+              "7": "click[small]",
+              "8": "click[medium]",
+              "9": "click[large]",
+              "10": "click[x-large]",
+              "11": "click[xx-large]",
+              "12": "click[3x-large big]",
+              "13": "click[white]",
+              "14": "click[pebble grey]",
+              "15": "click[black]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7ec3cc58efeba9f020513051965588260f4090d4aa0b3533f84542d4d58233d1",
+      "attempts": [
+        {
+          "seconds": 0.23356840759515762,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.23369330540299416,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "9",
+            "probabilities": {
+              "0": 0.031210742650882074,
+              "1": 0.030421411489260367,
+              "2": 0.04564707956077222,
+              "3": 0.029113111896489567,
+              "4": 0.02628578095063388,
+              "5": 0.09280663162669947,
+              "6": 0.015994325510413635,
+              "7": 0.013964222562122257,
+              "8": 0.024627589614567423,
+              "9": 0.25376598686598795,
+              "10": 0.0729169402059333,
+              "11": 0.06158125006058014,
+              "12": 0.08331146688062681,
+              "13": 0.06620963810448109,
+              "14": 0.06643980047990541,
+              "15": 0.08570402154064449
+            },
+            "confidence": 0.2040170526570538
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 4976,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 16,
+          "inference_seconds": 0.23171117901802063,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[large]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.7195724658668041
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i need a large sized coat with long sleeves, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large big [SEP] color [SEP] white [SEP] pebble grey [SEP] black [SEP] ChefUniforms.com Men’s Classic Long Sleeve Chef Coat (XS-5X, 2 Colors) [SEP] Price: $18.98 to $24.98 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need a large sized coat with long sleeves, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a large sized coat with long sleeves, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large big [SEP] color [SEP] white [SEP] pebble grey [SEP] black [SEP] ChefUniforms.com Men’s Classic Long Sleeve Chef Coat (XS-5X, 2 Colors) [SEP] Price: $18.98 to $24.98 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need a large sized coat with long sleeves, and price lower than 60.00 dollars]\nclick[b078h1sntt]\nclick[large]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[x-small]",
+              "7": "click[small]",
+              "8": "click[medium]",
+              "9": "click[large]",
+              "10": "click[x-large]",
+              "11": "click[xx-large]",
+              "12": "click[3x-large big]",
+              "13": "click[white]",
+              "14": "click[pebble grey]",
+              "15": "click[black]"
+            }
+          }
+        }
+      },
+      "request_sha256": "249de48ed983ace416fd2b09bdb132866acbd3440c7b8bc02aab54caf5fc7272",
+      "attempts": [
+        {
+          "seconds": 0.23472736030817032,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.23484527692198753,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "15",
+            "probabilities": {
+              "0": 0.04231848958114491,
+              "1": 0.04259086108839309,
+              "2": 0.060861693024564865,
+              "3": 0.03793362988496598,
+              "4": 0.03678052568343295,
+              "5": 0.13936854747922922,
+              "6": 0.01493303446079204,
+              "7": 0.011589611668129208,
+              "8": 0.015791962409330465,
+              "9": 0.030715899563804536,
+              "10": 0.03294263639936916,
+              "11": 0.035176284198969496,
+              "12": 0.02924869180342676,
+              "13": 0.15819946360796336,
+              "14": 0.12846750952246114,
+              "15": 0.1830811596240226
+            },
+            "confidence": 0.1286199035989575
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 5056,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 16,
+          "inference_seconds": 0.2329624406993389,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[black]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9731938131153584
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i need a large sized coat with long sleeves, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large big [SEP] color [SEP] white [SEP] pebble grey [SEP] black [SEP] ChefUniforms.com Men’s Classic Long Sleeve Chef Coat (XS-5X, 2 Colors) [SEP] Price: $18.98 to $24.98 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni need a large sized coat with long sleeves, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i need a large sized coat with long sleeves, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] x-small [SEP] small [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large big [SEP] color [SEP] white [SEP] pebble grey [SEP] black [SEP] ChefUniforms.com Men’s Classic Long Sleeve Chef Coat (XS-5X, 2 Colors) [SEP] Price: $18.98 to $24.98 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i need a large sized coat with long sleeves, and price lower than 60.00 dollars]\nclick[b078h1sntt]\nclick[large]\nclick[black]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[x-small]",
+              "7": "click[small]",
+              "8": "click[medium]",
+              "9": "click[large]",
+              "10": "click[x-large]",
+              "11": "click[xx-large]",
+              "12": "click[3x-large big]",
+              "13": "click[white]",
+              "14": "click[pebble grey]",
+              "15": "click[black]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a4c2107c1b5fb2d51b95dd08fe1a2223fecefdfec67895adefea4fd16a6f8150",
+      "attempts": [
+        {
+          "seconds": 0.24756871163845062,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.24768347293138504,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.05797033158135838,
+              "1": 0.055940855607969436,
+              "2": 0.07678943512112357,
+              "3": 0.04849458981015801,
+              "4": 0.050705636534657504,
+              "5": 0.3191687192715335,
+              "6": 0.016276877928765424,
+              "7": 0.013997616867695777,
+              "8": 0.021302328547966733,
+              "9": 0.036394791380956394,
+              "10": 0.042848813933328796,
+              "11": 0.045097977591685615,
+              "12": 0.03779330590289854,
+              "13": 0.060323717572004956,
+              "14": 0.060459047769598755,
+              "15": 0.056435954578298614
+            },
+            "confidence": 0.2737799672229691
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 5136,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 16,
+          "inference_seconds": 0.2390674538910389,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.0,
+      "done": true,
+      "elapsed_seconds": 1.253321960568428
+    }
+  ]
+}

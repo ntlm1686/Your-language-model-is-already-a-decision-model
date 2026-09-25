@@ -1,0 +1,166 @@
+{
+  "task_id": 251,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i'm looking for a queen size bed with a box spring, and price lower than 590.00 dollars",
+  "instruction_sha256": "d7044002642068b0e6c546dfc3674ea6e2695c86db234a0464ef7e61c1a4ac59",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 0.8548026494681835,
+  "decision_seconds": 0.7364256046712399,
+  "input_tokens": 1929,
+  "output_tokens": 206,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i'm looking for a queen size bed with a box spring, and price lower than 590.00 dollars [SEP] Search",
+      "action": "search[i'm looking for a queen size bed with a box spring, and price lower than 590.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.04864009842276573
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i'm looking for a queen size bed with a box spring, and price lower than 590.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00LLQK6BK [SEP] TRIBECCA home Wrought Iron Bed Frame Dark Bronze Metal Queen Size USA Vintage Look Shabby Chic French Country (Queen) [SEP] $340.75 [SEP] B00ZJTV5NI [SEP] Best Price Mattress Price 7.5\" New Steel Box Spring/Mattress Foundation, Twin [SEP] $168.57 [SEP] B00HCZ0YGG [SEP] Best Price Mattress New Innovated Box Spring Metal Bed Frame, Queen [SEP] $132.96 [SEP] B07G9MRP9Z [SEP] ZINUS Upholstered Metal Box Spring with Wood Slats / 4 Inch Mattress Foundation / Easy Assembly / Fabric Paneled Design, King [SEP] $153.17 [SEP] B07G3LTMPK [SEP] ZINUS Florence Metal Platform Bed Frame / Mattress Foundation / No Box Spring Needed / Easy Assembly, White, Full [SEP] $171.65 [SEP] B07G3LX891 [SEP] ZINUS Florence Metal Platform Bed Frame / Mattress Foundation / No Box Spring Needed / Easy Assembly, White, Twin [SEP] $122.74 [SEP] B07WQF3QF9 [SEP] Box Spring Cover Queen Size, Alternates for Bed Skirt, Smooth and Elastic Woven Material Wrap Around 4 Sides of The Box Spring, Wrinkle & Fading Resistant, Washable, Dustproof, Black [SEP] $14.88 [SEP] B09P1RYKNN [SEP] Best Bed Frame, 7\" Adjustable Bed Frame from Twin to Queen, Black Metal Bed Frame - Solid Construction, Convenient, Affordable Price and Easy Assembly (Black) [SEP] $54.99 [SEP] B09NZX7568 [SEP] 12 Inch Queen Mattress, Hybrid Spring Mattress in a Box, Individual Pocket Springs with Comfy Foam, for Back Pain Relief & Cool Sleep, Durable Support and Pressure Relieving - Four Sizes [SEP] $363.99 [SEP] B07CVQ1V27 [SEP] Best Price Mattress 18 Inch Metal Platform Beds w/Heavy Duty Steel Slat Mattress Foundation (No Box Spring Needed), Queen, Black [SEP] $135.06",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a queen size bed with a box spring, and price lower than 590.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a queen size bed with a box spring, and price lower than 590.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00LLQK6BK [SEP] TRIBECCA home Wrought Iron Bed Frame Dark Bronze Metal Queen Size USA Vintage Look Shabby Chic French Country (Queen) [SEP] $340.75 [SEP] B00ZJTV5NI [SEP] Best Price Mattress Price 7.5\" New Steel Box Spring/Mattress Foundation, Twin [SEP] $168.57 [SEP] B00HCZ0YGG [SEP] Best Price Mattress New Innovated Box Spring Metal Bed Frame, Queen [SEP] $132.96 [SEP] B07G9MRP9Z [SEP] ZINUS Upholstered Metal Box Spring with Wood Slats / 4 Inch Mattress Foundation / Easy Assembly / Fabric Paneled Design, King [SEP] $153.17 [SEP] B07G3LTMPK [SEP] ZINUS Florence Metal Platform Bed Frame / Mattress Foundation / No Box Spring Needed / Easy Assembly, White, Full [SEP] $171.65 [SEP] B07G3LX891 [SEP] ZINUS Florence Metal Platform Bed Frame / Mattress Foundation / No Box Spring Needed / Easy Assembly, White, Twin [SEP] $122.74 [SEP] B07WQF3QF9 [SEP] Box Spring Cover Queen Size, Alternates for Bed Skirt, Smooth and Elastic Woven Material Wrap Around 4 Sides of The Box Spring, Wrinkle & Fading Resistant, Washable, Dustproof, Black [SEP] $14.88 [SEP] B09P1RYKNN [SEP] Best Bed Frame, 7\" Adjustable Bed Frame from Twin to Queen, Black Metal Bed Frame - Solid Construction, Convenient, Affordable Price and Easy Assembly (Black) [SEP] $54.99 [SEP] B09NZX7568 [SEP] 12 Inch Queen Mattress, Hybrid Spring Mattress in a Box, Individual Pocket Springs with Comfy Foam, for Back Pain Relief & Cool Sleep, Durable Support and Pressure Relieving - Four Sizes [SEP] $363.99 [SEP] B07CVQ1V27 [SEP] Best Price Mattress 18 Inch Metal Platform Beds w/Heavy Duty Steel Slat Mattress Foundation (No Box Spring Needed), Queen, Black [SEP] $135.06\n\nRecent actions:\nsearch[i'm looking for a queen size bed with a box spring, and price lower than 590.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b00llqk6bk]",
+              "3": "click[b00zjtv5ni]",
+              "4": "click[b00hcz0ygg]",
+              "5": "click[b07g9mrp9z]",
+              "6": "click[b07g3ltmpk]",
+              "7": "click[b07g3lx891]",
+              "8": "click[b07wqf3qf9]",
+              "9": "click[b09p1ryknn]",
+              "10": "click[b09nzx7568]",
+              "11": "click[b07cvq1v27]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "1b5ff9b8d01cf62c73205bd785dff27fa1e88a34a539de212dfc6f4057f640e7",
+      "attempts": [
+        {
+          "seconds": 0.3277541436254978,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.32784074917435646,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "4",
+            "confidence": 0.42,
+            "probabilities": {
+              "1": 0.03,
+              "9": 0.02,
+              "7": 0.0,
+              "5": 0.0,
+              "3": 0.0,
+              "10": 0.01,
+              "0": 0.01,
+              "2": 0.45,
+              "6": 0.0,
+              "4": 0.48,
+              "11": 0.0,
+              "8": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1221,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b00hcz0ygg]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.41052287444472313
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i'm looking for a queen size bed with a box spring, and price lower than 590.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] twin [SEP] twin xl [SEP] full [SEP] queen [SEP] king [SEP] california king [SEP] Best Price Mattress New Innovated Box Spring Metal Bed Frame, Queen [SEP] Price: $132.96 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni'm looking for a queen size bed with a box spring, and price lower than 590.00 dollars\n\nCurrent page:\nInstruction: [SEP] i'm looking for a queen size bed with a box spring, and price lower than 590.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] twin [SEP] twin xl [SEP] full [SEP] queen [SEP] king [SEP] california king [SEP] Best Price Mattress New Innovated Box Spring Metal Bed Frame, Queen [SEP] Price: $132.96 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i'm looking for a queen size bed with a box spring, and price lower than 590.00 dollars]\nclick[b00hcz0ygg]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[twin]",
+              "7": "click[twin xl]",
+              "8": "click[full]",
+              "9": "click[queen]",
+              "10": "click[king]",
+              "11": "click[california king]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "c05f68787322f4c831b57ae843bca032e7f12e07179540a13e6f3f7fd538e280",
+      "attempts": [
+        {
+          "seconds": 0.40849823877215385,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4085848554968834,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.78,
+            "probabilities": {
+              "2": 0.02,
+              "4": 0.0,
+              "10": 0.0,
+              "7": 0.0,
+              "6": 0.0,
+              "11": 0.0,
+              "3": 0.01,
+              "1": 0.0,
+              "5": 0.81,
+              "8": 0.0,
+              "9": 0.15,
+              "0": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 708,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 0.8548004105687141
+    }
+  ]
+}

@@ -1,0 +1,432 @@
+{
+  "task_id": 396,
+  "model": "jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars",
+  "instruction_sha256": "37aed0620ce528203c8bd467983edae5a48f8a3a3eb74f18c45b9e0a7fb6dd12",
+  "reward": 0.6,
+  "score": 60.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 8,
+  "elapsed_seconds": 2.593478310853243,
+  "decision_seconds": 2.2447750493884087,
+  "input_tokens": 6435,
+  "output_tokens": 546,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Search",
+      "action": "search[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.07032090425491333
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07B8B2V3Y [SEP] Splat | Lemon Drop | 1.5 oz. Foil Pack | 30 Wash | Temporary Yellow Hair Dye [SEP] $7.25 [SEP] B009S7DK4Y [SEP] Garnier Olia Permanent Hair Colour 5.3 Golden Brown [SEP] $12.99 [SEP] B00H4W383I [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 7GR Light Golden Red Hair Color, 1 Count [SEP] $100.0 [SEP] B08L8C9TF4 [SEP] Splat Midnight Rosetta Pink Semi-Permanent Hair Dye [SEP] $24.17 [SEP] B00H4W383S [SEP] Clairol Natural Instincts 38 Burgundy Black 1 Kit [SEP] $9.98 [SEP] B09KB7VCM1 [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CARAMEL BROWN) [SEP] $27.0 [SEP] B09KBND9ZF [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CLEAR (Shine Clear)) [SEP] $27.0 [SEP] B09KBP39GG [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (HONEYCOMB BLOND BLONDE) [SEP] $27.0 [SEP] B07HGD73QV [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 8 Medium Natural Blonde Hair Color, 3 Count [SEP] $22.18 [SEP] B07HGD9BVY [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 2RV Burgundy Black Hair Color, 3 Count [SEP] $29.99",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07B8B2V3Y [SEP] Splat | Lemon Drop | 1.5 oz. Foil Pack | 30 Wash | Temporary Yellow Hair Dye [SEP] $7.25 [SEP] B009S7DK4Y [SEP] Garnier Olia Permanent Hair Colour 5.3 Golden Brown [SEP] $12.99 [SEP] B00H4W383I [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 7GR Light Golden Red Hair Color, 1 Count [SEP] $100.0 [SEP] B08L8C9TF4 [SEP] Splat Midnight Rosetta Pink Semi-Permanent Hair Dye [SEP] $24.17 [SEP] B00H4W383S [SEP] Clairol Natural Instincts 38 Burgundy Black 1 Kit [SEP] $9.98 [SEP] B09KB7VCM1 [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CARAMEL BROWN) [SEP] $27.0 [SEP] B09KBND9ZF [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CLEAR (Shine Clear)) [SEP] $27.0 [SEP] B09KBP39GG [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (HONEYCOMB BLOND BLONDE) [SEP] $27.0 [SEP] B07HGD73QV [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 8 Medium Natural Blonde Hair Color, 3 Count [SEP] $22.18 [SEP] B07HGD9BVY [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 2RV Burgundy Black Hair Color, 3 Count [SEP] $29.99\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07b8b2v3y]",
+              "3": "click[b009s7dk4y]",
+              "4": "click[b00h4w383i]",
+              "5": "click[b08l8c9tf4]",
+              "6": "click[b00h4w383s]",
+              "7": "click[b09kb7vcm1]",
+              "8": "click[b09kbnd9zf]",
+              "9": "click[b09kbp39gg]",
+              "10": "click[b07hgd73qv]",
+              "11": "click[b07hgd9bvy]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "9e490de458978ecf5f3a11bcaf13cd0b8f8a913a0a7c77b411999b4974505a88",
+      "attempts": [
+        {
+          "seconds": 0.3492722399532795,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3494110368192196,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.6,
+            "probabilities": {
+              "3": 0.2,
+              "9": 0.0,
+              "8": 0.0,
+              "6": 0.01,
+              "0": 0.13,
+              "4": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "5": 0.0,
+              "7": 0.01,
+              "2": 0.0,
+              "1": 0.65
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1240,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.47282326221466064
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00153EZ02 [SEP] La Riche Directions Hair Dye Colour Semi Permanent - Alpine Green - 88 ml / 30 oz [SEP] $11.0 [SEP] B00O29VGLM [SEP] MANIC PANIC Blue Steel Hair Color Classic [SEP] $13.99 [SEP] B0962THZCM [SEP] Lunar Tides Hair Dye - Neon Dragonfruit Hot Pink Semi-Permanent Vegan Hair Color (4 fl oz / 118 ml) [SEP] $15.99 [SEP] B08CT5BD96 [SEP] Permanent Hair Dye Medium Blond 7 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTGS3KT [SEP] Permanent Hair Dye Platinum Blond 11 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTHMLF5 [SEP] Permanent Hair Dye Medium Chocolate Brown 5.07 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTK31T8 [SEP] Permanent Hair Dye Dark Blond Natural Ash 6.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTPRP83 [SEP] Permanent Hair Dye Light Blond Natural Ash 8.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTZXTNG [SEP] Permanent Hair Dye Red Blond Intense 7.66 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CV1FPTZ [SEP] Permanent Hair Dye Dark Intense Red 6.6 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00153EZ02 [SEP] La Riche Directions Hair Dye Colour Semi Permanent - Alpine Green - 88 ml / 30 oz [SEP] $11.0 [SEP] B00O29VGLM [SEP] MANIC PANIC Blue Steel Hair Color Classic [SEP] $13.99 [SEP] B0962THZCM [SEP] Lunar Tides Hair Dye - Neon Dragonfruit Hot Pink Semi-Permanent Vegan Hair Color (4 fl oz / 118 ml) [SEP] $15.99 [SEP] B08CT5BD96 [SEP] Permanent Hair Dye Medium Blond 7 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTGS3KT [SEP] Permanent Hair Dye Platinum Blond 11 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTHMLF5 [SEP] Permanent Hair Dye Medium Chocolate Brown 5.07 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTK31T8 [SEP] Permanent Hair Dye Dark Blond Natural Ash 6.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTPRP83 [SEP] Permanent Hair Dye Light Blond Natural Ash 8.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTZXTNG [SEP] Permanent Hair Dye Red Blond Intense 7.66 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CV1FPTZ [SEP] Permanent Hair Dye Dark Intense Red 6.6 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b00153ez02]",
+              "4": "click[b00o29vglm]",
+              "5": "click[b0962thzcm]",
+              "6": "click[b08ct5bd96]",
+              "7": "click[b08ctgs3kt]",
+              "8": "click[b08cthmlf5]",
+              "9": "click[b08ctk31t8]",
+              "10": "click[b08ctprp83]",
+              "11": "click[b08ctzxtng]",
+              "12": "click[b08cv1fptz]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "ae8872f89fb67f33beac02ac0cbfb90d3de90b3ddfc67d0003e3392df22b82b6",
+      "attempts": [
+        {
+          "seconds": 0.32423634454607964,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3244077116250992,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "confidence": 0.52,
+            "probabilities": {
+              "12": 0.0,
+              "7": 0.0,
+              "10": 0.0,
+              "8": 0.5700000000000001,
+              "5": 0.0,
+              "9": 0.0,
+              "3": 0.0,
+              "11": 0.0,
+              "2": 0.12,
+              "4": 0.0,
+              "1": 0.18,
+              "0": 0.13,
+              "6": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1304,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b08cthmlf5]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.8224003650248051
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Permanent Hair Dye Medium Chocolate Brown 5.07 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] Price: $9.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Permanent Hair Dye Medium Chocolate Brown 5.07 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] Price: $9.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[b08cthmlf5]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "45d1692bf206d4ec067997a7aafa4c98f2bab8a3fce8d9baa2b1c459c2e22eff",
+      "attempts": [
+        {
+          "seconds": 0.32421359047293663,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.32432664930820465,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "confidence": 0.33,
+            "probabilities": {
+              "5": 0.4,
+              "2": 0.01,
+              "3": 0.01,
+              "1": 0.14,
+              "0": 0.44,
+              "4": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 606,
+          "output_tokens": 59
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.1539549268782139
+    },
+    {
+      "step": 4,
+      "observation": "WebShop [SEP] Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Search",
+      "action": "search[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.2158007696270943
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07B8B2V3Y [SEP] Splat | Lemon Drop | 1.5 oz. Foil Pack | 30 Wash | Temporary Yellow Hair Dye [SEP] $7.25 [SEP] B009S7DK4Y [SEP] Garnier Olia Permanent Hair Colour 5.3 Golden Brown [SEP] $12.99 [SEP] B00H4W383I [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 7GR Light Golden Red Hair Color, 1 Count [SEP] $100.0 [SEP] B08L8C9TF4 [SEP] Splat Midnight Rosetta Pink Semi-Permanent Hair Dye [SEP] $24.17 [SEP] B00H4W383S [SEP] Clairol Natural Instincts 38 Burgundy Black 1 Kit [SEP] $9.98 [SEP] B09KB7VCM1 [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CARAMEL BROWN) [SEP] $27.0 [SEP] B09KBND9ZF [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CLEAR (Shine Clear)) [SEP] $27.0 [SEP] B09KBP39GG [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (HONEYCOMB BLOND BLONDE) [SEP] $27.0 [SEP] B07HGD73QV [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 8 Medium Natural Blonde Hair Color, 3 Count [SEP] $22.18 [SEP] B07HGD9BVY [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 2RV Burgundy Black Hair Color, 3 Count [SEP] $29.99",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B07B8B2V3Y [SEP] Splat | Lemon Drop | 1.5 oz. Foil Pack | 30 Wash | Temporary Yellow Hair Dye [SEP] $7.25 [SEP] B009S7DK4Y [SEP] Garnier Olia Permanent Hair Colour 5.3 Golden Brown [SEP] $12.99 [SEP] B00H4W383I [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 7GR Light Golden Red Hair Color, 1 Count [SEP] $100.0 [SEP] B08L8C9TF4 [SEP] Splat Midnight Rosetta Pink Semi-Permanent Hair Dye [SEP] $24.17 [SEP] B00H4W383S [SEP] Clairol Natural Instincts 38 Burgundy Black 1 Kit [SEP] $9.98 [SEP] B09KB7VCM1 [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CARAMEL BROWN) [SEP] $27.0 [SEP] B09KBND9ZF [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (CLEAR (Shine Clear)) [SEP] $27.0 [SEP] B09KBP39GG [SEP] unless SEBASTlAN CELLOPHANES, Hair Color Revitalizer with A3 Complex Conditioner, Deposit Only, Ammonia-Free, Peroxide-Free (w/ Sleek Heart Shaped Mirror) Haircolor Dye (HONEYCOMB BLOND BLONDE) [SEP] $27.0 [SEP] B07HGD73QV [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 8 Medium Natural Blonde Hair Color, 3 Count [SEP] $22.18 [SEP] B07HGD9BVY [SEP] Clairol Natural Instincts Semi-Permanent Hair Dye, 2RV Burgundy Black Hair Color, 3 Count [SEP] $29.99\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[b08cthmlf5]\nclick[back to search]\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b07b8b2v3y]",
+              "3": "click[b009s7dk4y]",
+              "4": "click[b00h4w383i]",
+              "5": "click[b08l8c9tf4]",
+              "6": "click[b00h4w383s]",
+              "7": "click[b09kb7vcm1]",
+              "8": "click[b09kbnd9zf]",
+              "9": "click[b09kbp39gg]",
+              "10": "click[b07hgd73qv]",
+              "11": "click[b07hgd9bvy]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "a84f6cb2f756b1f1b0c64f45bc428902dcc36535519010b949c1166e6aa209ec",
+      "attempts": [
+        {
+          "seconds": 0.36042988672852516,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.36053071171045303,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "confidence": 0.74,
+            "probabilities": {
+              "10": 0.0,
+              "9": 0.0,
+              "1": 0.77,
+              "2": 0.0,
+              "7": 0.02,
+              "0": 0.01,
+              "11": 0.01,
+              "4": 0.0,
+              "6": 0.02,
+              "3": 0.17,
+              "5": 0.0,
+              "8": 0.0
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1285,
+          "output_tokens": 103
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.6274263747036457
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00153EZ02 [SEP] La Riche Directions Hair Dye Colour Semi Permanent - Alpine Green - 88 ml / 30 oz [SEP] $11.0 [SEP] B00O29VGLM [SEP] MANIC PANIC Blue Steel Hair Color Classic [SEP] $13.99 [SEP] B0962THZCM [SEP] Lunar Tides Hair Dye - Neon Dragonfruit Hot Pink Semi-Permanent Vegan Hair Color (4 fl oz / 118 ml) [SEP] $15.99 [SEP] B08CT5BD96 [SEP] Permanent Hair Dye Medium Blond 7 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTGS3KT [SEP] Permanent Hair Dye Platinum Blond 11 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTHMLF5 [SEP] Permanent Hair Dye Medium Chocolate Brown 5.07 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTK31T8 [SEP] Permanent Hair Dye Dark Blond Natural Ash 6.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTPRP83 [SEP] Permanent Hair Dye Light Blond Natural Ash 8.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTZXTNG [SEP] Permanent Hair Dye Red Blond Intense 7.66 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CV1FPTZ [SEP] Permanent Hair Dye Dark Intense Red 6.6 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B00153EZ02 [SEP] La Riche Directions Hair Dye Colour Semi Permanent - Alpine Green - 88 ml / 30 oz [SEP] $11.0 [SEP] B00O29VGLM [SEP] MANIC PANIC Blue Steel Hair Color Classic [SEP] $13.99 [SEP] B0962THZCM [SEP] Lunar Tides Hair Dye - Neon Dragonfruit Hot Pink Semi-Permanent Vegan Hair Color (4 fl oz / 118 ml) [SEP] $15.99 [SEP] B08CT5BD96 [SEP] Permanent Hair Dye Medium Blond 7 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTGS3KT [SEP] Permanent Hair Dye Platinum Blond 11 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTHMLF5 [SEP] Permanent Hair Dye Medium Chocolate Brown 5.07 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTK31T8 [SEP] Permanent Hair Dye Dark Blond Natural Ash 6.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTPRP83 [SEP] Permanent Hair Dye Light Blond Natural Ash 8.1 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CTZXTNG [SEP] Permanent Hair Dye Red Blond Intense 7.66 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99 [SEP] B08CV1FPTZ [SEP] Permanent Hair Dye Dark Intense Red 6.6 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] $9.99\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[b08cthmlf5]\nclick[back to search]\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b00153ez02]",
+              "4": "click[b00o29vglm]",
+              "5": "click[b0962thzcm]",
+              "6": "click[b08ct5bd96]",
+              "7": "click[b08ctgs3kt]",
+              "8": "click[b08cthmlf5]",
+              "9": "click[b08ctk31t8]",
+              "10": "click[b08ctprp83]",
+              "11": "click[b08ctzxtng]",
+              "12": "click[b08cv1fptz]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "995ad43435ca695a0b3d232d44ea276c85a59b29d023b106dbf408338489c320",
+      "attempts": [
+        {
+          "seconds": 0.558793168514967,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.5588979125022888,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "8",
+            "confidence": 0.31,
+            "probabilities": {
+              "8": 0.37,
+              "7": 0.0,
+              "3": 0.0,
+              "10": 0.0,
+              "1": 0.37,
+              "5": 0.0,
+              "9": 0.01,
+              "12": 0.0,
+              "6": 0.0,
+              "2": 0.24,
+              "4": 0.0,
+              "11": 0.0,
+              "0": 0.01
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 1349,
+          "output_tokens": 111
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b08cthmlf5]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.2076041772961617
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Permanent Hair Dye Medium Chocolate Brown 5.07 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] Price: $9.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\nbuy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars\n\nCurrent page:\nInstruction: [SEP] buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] Permanent Hair Dye Medium Chocolate Brown 5.07 Kachita Spell 3.52 oz 100 mL Professional Hair Color Cream with Keratin and Argan Oil, 100% Gray Coverage [SEP] Price: $9.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[b08cthmlf5]\nclick[back to search]\nsearch[buy a one pack of permanent hair dye in espresso, and price lower than 30.00 dollars]\nclick[next >]\nclick[b08cthmlf5]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]"
+            }
+          }
+        },
+        "model": "jev-1.13.0"
+      },
+      "request_sha256": "23baea18c8e431faf405ed5609b054192ea779f658cb7fb70cfc794f3418d52a",
+      "attempts": [
+        {
+          "seconds": 0.32706423103809357,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3272010274231434,
+      "response": {
+        "model": "jev-1.13.0",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "confidence": 0.24,
+            "probabilities": {
+              "1": 0.31,
+              "0": 0.28,
+              "4": 0.01,
+              "3": 0.02,
+              "5": 0.36,
+              "2": 0.02
+            }
+          }
+        },
+        "usage": {
+          "input_tokens": 651,
+          "output_tokens": 59
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.6,
+      "done": true,
+      "elapsed_seconds": 2.593475930392742
+    }
+  ]
+}

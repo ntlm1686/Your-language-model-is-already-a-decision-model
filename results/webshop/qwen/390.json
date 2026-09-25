@@ -1,0 +1,246 @@
+{
+  "task_id": 390,
+  "model": "qwen",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for kernel season's popcorn season in 2.85 ounce packs of 6, and price lower than 50.00 dollars",
+  "instruction_sha256": "b3e2c217d11647f96a29c9e334db51f6a673a1d5784dd23212dcf7475325abc1",
+  "reward": 0.6666666666666666,
+  "score": 66.66666666666666,
+  "success": false,
+  "termination": "purchase",
+  "steps": 3,
+  "elapsed_seconds": 1.5955820195376873,
+  "decision_seconds": 1.4678329266607761,
+  "input_tokens": 38654,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for kernel season's popcorn season in 2.85 ounce packs of 6, and price lower than 50.00 dollars [SEP] Search",
+      "action": "search[i am looking for kernel season's popcorn season in 2.85 ounce packs of 6, and price lower than 50.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.04378601908683777
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for kernel season's popcorn season in 2.85 ounce packs of 6, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00W9LICGW [SEP] Kernel Season's, Popcorn Seasoning, Nacho Cheddar, 2.85 Ounce (Pack of 2) [SEP] $9.79 [SEP] B000ILMQL2 [SEP] Kernel Season's Popcorn Seasoning, Sour Cream & Onion, 2.6 ounce (Pack of 6) [SEP] $17.64 [SEP] B000ILLX3Y [SEP] Kernel Season's Popcorn Seasoning, Butter, 2.85 Ounce (Pack of 6) [SEP] $13.08 [SEP] B000NWNPAW [SEP] Kernel Season's Popcorn Seasoning, White Cheddar, 2.85-Ounce Shaker Single Pack [SEP] $100.0 [SEP] B000ILMQF8 [SEP] Kernel Season's Popcorn Seasoning, Nacho Cheddar, 2.85 Ounce (Pack of 6) [SEP] $14.34 [SEP] B000H226VW [SEP] Kernel Season's Popcorn Seasoning White Cheddar, 2.85 Ounce (Pack of 6) [SEP] $21.56 [SEP] B09NRW4XXZ [SEP] Popcorn Seasoning Variety Pack Bundle. Includes Four Bottles of Kernel Seasons Popcorn Seasoning and a BELLATAVO Recipe Card! One Each: Ranch, Butter, Nacho Cheddar and White Cheddar Popcorn Seasoning [SEP] $24.99 [SEP] B013OYORSO [SEP] Kernel Season's Popcorn Seasoning Variety Pack, Combo Pack [SEP] $100.0 [SEP] B077NJK2XJ [SEP] Kernel Seasons Popcorn Seasoning - Butter - Case of 6 - 2.85 oz. [SEP] $39.98 [SEP] B07JQDTV6X [SEP] Kernel Season's Popcorn Seasoning Variety of 3, Nacho Cheese, Parmesan & Garlic and White Cheddar [SEP] $23.0",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for kernel season's popcorn season in 2.85 ounce packs of 6, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for kernel season's popcorn season in 2.85 ounce packs of 6, and price lower than 50.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B00W9LICGW [SEP] Kernel Season's, Popcorn Seasoning, Nacho Cheddar, 2.85 Ounce (Pack of 2) [SEP] $9.79 [SEP] B000ILMQL2 [SEP] Kernel Season's Popcorn Seasoning, Sour Cream & Onion, 2.6 ounce (Pack of 6) [SEP] $17.64 [SEP] B000ILLX3Y [SEP] Kernel Season's Popcorn Seasoning, Butter, 2.85 Ounce (Pack of 6) [SEP] $13.08 [SEP] B000NWNPAW [SEP] Kernel Season's Popcorn Seasoning, White Cheddar, 2.85-Ounce Shaker Single Pack [SEP] $100.0 [SEP] B000ILMQF8 [SEP] Kernel Season's Popcorn Seasoning, Nacho Cheddar, 2.85 Ounce (Pack of 6) [SEP] $14.34 [SEP] B000H226VW [SEP] Kernel Season's Popcorn Seasoning White Cheddar, 2.85 Ounce (Pack of 6) [SEP] $21.56 [SEP] B09NRW4XXZ [SEP] Popcorn Seasoning Variety Pack Bundle. Includes Four Bottles of Kernel Seasons Popcorn Seasoning and a BELLATAVO Recipe Card! One Each: Ranch, Butter, Nacho Cheddar and White Cheddar Popcorn Seasoning [SEP] $24.99 [SEP] B013OYORSO [SEP] Kernel Season's Popcorn Seasoning Variety Pack, Combo Pack [SEP] $100.0 [SEP] B077NJK2XJ [SEP] Kernel Seasons Popcorn Seasoning - Butter - Case of 6 - 2.85 oz. [SEP] $39.98 [SEP] B07JQDTV6X [SEP] Kernel Season's Popcorn Seasoning Variety of 3, Nacho Cheese, Parmesan & Garlic and White Cheddar [SEP] $23.0\n\nRecent actions:\nsearch[i am looking for kernel season's popcorn season in 2.85 ounce packs of 6, and price lower than 50.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b00w9licgw]",
+              "3": "click[b000ilmql2]",
+              "4": "click[b000illx3y]",
+              "5": "click[b000nwnpaw]",
+              "6": "click[b000ilmqf8]",
+              "7": "click[b000h226vw]",
+              "8": "click[b09nrw4xxz]",
+              "9": "click[b013oyorso]",
+              "10": "click[b077njk2xj]",
+              "11": "click[b07jqdtv6x]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c422f818412030b83a998dff12837a67328c91b5dde9865a1a0a0c567c0eb73a",
+      "attempts": [
+        {
+          "seconds": 0.3651607595384121,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.365288183093071,
+      "response": {
+        "model": "qwen3.5-9b",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "4",
+            "probabilities": {
+              "0": 4.0135044570993654e-18,
+              "1": 4.3149229053072384e-17,
+              "2": 2.7132062187188736e-11,
+              "3": 1.3565177648403625e-10,
+              "4": 0.5774953311434624,
+              "5": 9.337246862344198e-14,
+              "6": 8.3924762310654e-09,
+              "7": 2.629730893123332e-11,
+              "8": 1.3132133212364044e-18,
+              "9": 3.465069077043446e-21,
+              "10": 0.4225046602747508,
+              "11": 1.3585610781819142e-13
+            },
+            "confidence": 0.5390858157928681
+          }
+        },
+        "usage": {
+          "input_tokens": 10212,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "batched_letter_logprob_rotations",
+          "inference_seconds": 0.3632316552102566,
+          "forward_passes": 12,
+          "max_length": 8192,
+          "probability_calibration": "none"
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[b000illx3y]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.4377896413207054
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for kernel season's popcorn season in 2.85 ounce packs of 6, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] flavor [SEP] bacon cheddar [SEP] birthday cake [SEP] buffalo wing [SEP] butter [SEP] caramel [SEP] caramel hot chocolate [SEP] cheddar-cheese [SEP] cheesy caramel corn [SEP] cheesy jalapeno [SEP] chili lime [SEP] dill pickle [SEP] frosted sugar cookie [SEP] kettle corn [SEP] kettle corn + white cheddar seasoning [SEP] kettle-corn [SEP] milk chocolate caramel [SEP] movie theater butter [SEP] nacho cheddar [SEP] onion [SEP] parmesan & garlic [SEP] parmesan garlic [SEP] popcorn salt [SEP] pumpkin spice [SEP] ranch [SEP] sour cream & onion [SEP] variety pack [SEP] white cheddar [SEP] size [SEP] 2.85 ounce (pack of 1) [SEP] 2.85 ounce (pack of 6) [SEP] 3 ounce (pack of 6) [SEP] 1 count [SEP] 3 ounce (pack of 1) [SEP] 2.8 ounce (pack of 6) [SEP] 2.4 ounce (pack of 1) [SEP] 3.5 ounce (pack of 6) [SEP] 2.6 ounce (pack of 1) [SEP] 3.75 ounce (pack of 6) [SEP] 2.7 ounce (pack of 6) [SEP] 2.6 ounce (pack of 6) [SEP] variety 1 [SEP] Kernel Season's Popcorn Seasoning, Butter, 2.85 Ounce (Pack of 6) [SEP] Price: $13.08 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for kernel season's popcorn season in 2.85 ounce packs of 6, and price lower than 50.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for kernel season's popcorn season in 2.85 ounce packs of 6, and price lower than 50.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] flavor [SEP] bacon cheddar [SEP] birthday cake [SEP] buffalo wing [SEP] butter [SEP] caramel [SEP] caramel hot chocolate [SEP] cheddar-cheese [SEP] cheesy caramel corn [SEP] cheesy jalapeno [SEP] chili lime [SEP] dill pickle [SEP] frosted sugar cookie [SEP] kettle corn [SEP] kettle corn + white cheddar seasoning [SEP] kettle-corn [SEP] milk chocolate caramel [SEP] movie theater butter [SEP] nacho cheddar [SEP] onion [SEP] parmesan & garlic [SEP] parmesan garlic [SEP] popcorn salt [SEP] pumpkin spice [SEP] ranch [SEP] sour cream & onion [SEP] variety pack [SEP] white cheddar [SEP] size [SEP] 2.85 ounce (pack of 1) [SEP] 2.85 ounce (pack of 6) [SEP] 3 ounce (pack of 6) [SEP] 1 count [SEP] 3 ounce (pack of 1) [SEP] 2.8 ounce (pack of 6) [SEP] 2.4 ounce (pack of 1) [SEP] 3.5 ounce (pack of 6) [SEP] 2.6 ounce (pack of 1) [SEP] 3.75 ounce (pack of 6) [SEP] 2.7 ounce (pack of 6) [SEP] 2.6 ounce (pack of 6) [SEP] variety 1 [SEP] Kernel Season's Popcorn Seasoning, Butter, 2.85 Ounce (Pack of 6) [SEP] Price: $13.08 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for kernel season's popcorn season in 2.85 ounce packs of 6, and price lower than 50.00 dollars]\nclick[b000illx3y]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[bacon cheddar]",
+              "7": "click[birthday cake]",
+              "8": "click[buffalo wing]",
+              "9": "click[butter]",
+              "10": "click[caramel]",
+              "11": "click[caramel hot chocolate]",
+              "12": "click[cheddar-cheese]",
+              "13": "click[cheesy caramel corn]",
+              "14": "click[cheesy jalapeno]",
+              "15": "click[chili lime]",
+              "16": "click[dill pickle]",
+              "17": "click[frosted sugar cookie]",
+              "18": "click[kettle corn]",
+              "19": "click[kettle corn + white cheddar seasoning]",
+              "20": "click[kettle-corn]",
+              "21": "click[milk chocolate caramel]",
+              "22": "click[movie theater butter]",
+              "23": "click[nacho cheddar]",
+              "24": "click[onion]",
+              "25": "click[parmesan & garlic]",
+              "26": "click[parmesan garlic]",
+              "27": "click[popcorn salt]",
+              "28": "click[pumpkin spice]",
+              "29": "click[ranch]",
+              "30": "click[sour cream & onion]",
+              "31": "click[variety pack]",
+              "32": "click[white cheddar]",
+              "33": "click[2.85 ounce (pack of 1)]",
+              "34": "click[2.85 ounce (pack of 6)]",
+              "35": "click[3 ounce (pack of 6)]",
+              "36": "click[1 count]",
+              "37": "click[3 ounce (pack of 1)]",
+              "38": "click[2.8 ounce (pack of 6)]",
+              "39": "click[2.4 ounce (pack of 1)]",
+              "40": "click[3.5 ounce (pack of 6)]",
+              "41": "click[2.6 ounce (pack of 1)]",
+              "42": "click[3.75 ounce (pack of 6)]",
+              "43": "click[2.7 ounce (pack of 6)]",
+              "44": "click[2.6 ounce (pack of 6)]",
+              "45": "click[variety 1]"
+            }
+          }
+        }
+      },
+      "request_sha256": "007bd7041562b94845499a7365ef561f181aba524affa4ca4cd3bebc3a75f8e7",
+      "attempts": [
+        {
+          "seconds": 1.1023583225905895,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.1025447435677052,
+      "response": {
+        "model": "qwen3.5-9b",
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.012841937890825692,
+              "1": 0.016489374651345555,
+              "2": 0.02718638272821693,
+              "3": 0.016489374651345555,
+              "4": 0.010318786985191328,
+              "5": 0.21383746411207827,
+              "6": 0.03490800641083116,
+              "7": 0.022538302899688542,
+              "8": 0.021172776157614256,
+              "9": 0.0652167418590534,
+              "10": 0.032793037219111344,
+              "11": 0.017552847947377954,
+              "12": 0.014551822055369394,
+              "13": 0.014551822055369394,
+              "14": 0.010646340445358693,
+              "15": 0.023991898550130775,
+              "16": 0.006873794020395507,
+              "17": 0.019278032070687925,
+              "18": 0.017552847947377954,
+              "19": 0.008826126231264048,
+              "20": 0.025539243065533637,
+              "21": 0.012063884206480989,
+              "22": 0.025539243065533637,
+              "23": 0.018684909378211552,
+              "24": 0.021172776157614256,
+              "25": 0.008826126231264048,
+              "26": 0.011332970411837425,
+              "27": 0.004724284934835325,
+              "28": 0.017552847947377954,
+              "29": 0.014551822055369394,
+              "30": 0.021172776157614256,
+              "31": 0.011332970411837425,
+              "32": 0.022538302899688542,
+              "33": 0.002865423658196126,
+              "34": 0.06942286033763878,
+              "35": 0.006873794020395507,
+              "36": 0.010001311285529392,
+              "37": 0.0020318896313292595,
+              "38": 0.009395362466890149,
+              "39": 0.0016326691860178034,
+              "40": 0.002865423658196126,
+              "41": 0.0013964959592991412,
+              "42": 0.0033500196548875917,
+              "43": 0.005523248662276675,
+              "44": 0.0044380549802372155,
+              "45": 0.05755357268727375
+            },
+            "confidence": 0.19636718553679114
+          }
+        },
+        "usage": {
+          "input_tokens": 28442,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "batched_candidate_yes_no_log_odds",
+          "inference_seconds": 1.1004920341074467,
+          "forward_passes": 46,
+          "max_length": 8192,
+          "probability_calibration": "none"
+        }
+      },
+      "choice_probability_gap": 0.0,
+      "action": "click[buy now]",
+      "reward": 0.6666666666666666,
+      "done": true,
+      "elapsed_seconds": 1.5955789349973202
+    }
+  ]
+}

@@ -1,0 +1,3531 @@
+{
+  "task_id": 334,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars",
+  "instruction_sha256": "d9793716d7ddbbecc6f9c2ecc677d39b4f257ac51c56d626220ceabd652645c6",
+  "reward": 0.0,
+  "score": 0.0,
+  "success": false,
+  "termination": "repeated_state_action",
+  "steps": 55,
+  "elapsed_seconds": 10.29327954724431,
+  "decision_seconds": 6.370181858539581,
+  "input_tokens": 103835,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06795994937419891
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B01LYPS9X4 [SEP] Philadelphia Candies Dark Chocolate Covered OREO® Cookies, 15 Ounce [SEP] $19.95 [SEP] B00FGINOZ4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO® Cookies, Valentine's Day Gift 8 Ounce [SEP] $14.99 [SEP] B00FGINMV0 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, St. Patrick's Day Gift Net Wt 8 oz [SEP] $14.95 [SEP] B016762N64 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Halloween Assortment (Cute Witch, Ghost, Pumpkin) 8 Ounce [SEP] $14.95 [SEP] B016762TF4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Dad Trophy Father's Day Gift 8 oz [SEP] $14.95 [SEP] B01676307A [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Happy Birthday Gift Net Wt 8 oz [SEP] $14.95 [SEP] B07ZBLT23F [SEP] It's a Boy Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B07ZBLD6D8 [SEP] It's a Boy \"Cookie Talk\" Oreo Tin - 16 Pieces [SEP] $39.99 [SEP] B07ZBLV5JL [SEP] It's a Girl Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B082VJSFJ2 [SEP] Kirkland Signature European Cookies with Belgian Chocolate, 49.4 Ounce - PACK OF 2 [SEP] $46.49",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B01LYPS9X4 [SEP] Philadelphia Candies Dark Chocolate Covered OREO® Cookies, 15 Ounce [SEP] $19.95 [SEP] B00FGINOZ4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO® Cookies, Valentine's Day Gift 8 Ounce [SEP] $14.99 [SEP] B00FGINMV0 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, St. Patrick's Day Gift Net Wt 8 oz [SEP] $14.95 [SEP] B016762N64 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Halloween Assortment (Cute Witch, Ghost, Pumpkin) 8 Ounce [SEP] $14.95 [SEP] B016762TF4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Dad Trophy Father's Day Gift 8 oz [SEP] $14.95 [SEP] B01676307A [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Happy Birthday Gift Net Wt 8 oz [SEP] $14.95 [SEP] B07ZBLT23F [SEP] It's a Boy Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B07ZBLD6D8 [SEP] It's a Boy \"Cookie Talk\" Oreo Tin - 16 Pieces [SEP] $39.99 [SEP] B07ZBLV5JL [SEP] It's a Girl Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B082VJSFJ2 [SEP] Kirkland Signature European Cookies with Belgian Chocolate, 49.4 Ounce - PACK OF 2 [SEP] $46.49\n\nRecent actions:\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b01lyps9x4]",
+              "3": "click[b00fginoz4]",
+              "4": "click[b00fginmv0]",
+              "5": "click[b016762n64]",
+              "6": "click[b016762tf4]",
+              "7": "click[b01676307a]",
+              "8": "click[b07zblt23f]",
+              "9": "click[b07zbld6d8]",
+              "10": "click[b07zblv5jl]",
+              "11": "click[b082vjsfj2]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a8a862bacd596350ec1ae406e0bc87f72b7f1900cba0a1b96e2af5cde8c5e988",
+      "attempts": [
+        {
+          "seconds": 0.3503424599766731,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3504750207066536,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.11574101554119427,
+              "1": 0.33874760723797015,
+              "2": 0.04979201095611086,
+              "3": 0.0344418524831936,
+              "4": 0.0284969605675228,
+              "5": 0.03546693834612242,
+              "6": 0.03536894975478475,
+              "7": 0.03420922633393959,
+              "8": 0.11726654091122608,
+              "9": 0.11932677891185432,
+              "10": 0.04710538327990289,
+              "11": 0.044036735676178135
+            },
+            "confidence": 0.27863375335051294
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 7821,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.3482866510748863,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5226237066090107
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07ZBL172C [SEP] It's a Boy COOKIE TALK Cookie Platter - 2LB [SEP] $69.99 [SEP] B07ZBL7G1L [SEP] It's a Boy Cookie Talk Cookie Platter - 1LB [SEP] $44.99 [SEP] B07ZBJFB3G [SEP] It's a Boy - COOKIE TALK Chocolate Covered Oreos - 6 Pack [SEP] $18.99 [SEP] B099DF4JB8 [SEP] Keebler Fudge Stripes Chocolate Fudge Strawberry Valentine's Day Cookies | Strawberry Shortbread Chocolate Covered Cookies for Party Snacks and Office Snacks, 9.7oz [SEP] $100.0 [SEP] B07NDMDNP5 [SEP] Stork German Candy - KNOPPERS Hazelnut Cream Chocolate 8 cookie wafers + RIESEN Chocolate caramel covered in Dark Chocolate Individually wrapped 3 2.65 oz bags [SEP] $21.5 [SEP] B097X415YY [SEP] Bauducco Wafer Cookies - Enriched with Chocolate - Crispy Wafers - 3 Creamy Layers - No Artificial Flavors, 34.92 oz (Pack of 6) [SEP] $100.0 [SEP] B084VCTNTN [SEP] It's a Boy - Supreme Cookie Platter -- 1 lb. [SEP] $45.49 [SEP] B08G53B2J9 [SEP] COOKIES GIFT BASKET - White Chocolate Blossom Cookie Gift Basket, Cookie Gift Box, Gourmet Cookies, Cookie Care package, Care package, [SEP] $100.0 [SEP] B083M93XYQ [SEP] Congratulations - \"Cookie Talk\" Chocolate Covered Graham Cracker - 6 Piece [SEP] $24.99 [SEP] B003JE8T02 [SEP] Gift Basket Village I Love You More Than Chocolate, Romantic Gift Basket - Men or Women Will Love the Plush Bear and Delicious Treats Bursting with Flavor [SEP] $139.5",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07ZBL172C [SEP] It's a Boy COOKIE TALK Cookie Platter - 2LB [SEP] $69.99 [SEP] B07ZBL7G1L [SEP] It's a Boy Cookie Talk Cookie Platter - 1LB [SEP] $44.99 [SEP] B07ZBJFB3G [SEP] It's a Boy - COOKIE TALK Chocolate Covered Oreos - 6 Pack [SEP] $18.99 [SEP] B099DF4JB8 [SEP] Keebler Fudge Stripes Chocolate Fudge Strawberry Valentine's Day Cookies | Strawberry Shortbread Chocolate Covered Cookies for Party Snacks and Office Snacks, 9.7oz [SEP] $100.0 [SEP] B07NDMDNP5 [SEP] Stork German Candy - KNOPPERS Hazelnut Cream Chocolate 8 cookie wafers + RIESEN Chocolate caramel covered in Dark Chocolate Individually wrapped 3 2.65 oz bags [SEP] $21.5 [SEP] B097X415YY [SEP] Bauducco Wafer Cookies - Enriched with Chocolate - Crispy Wafers - 3 Creamy Layers - No Artificial Flavors, 34.92 oz (Pack of 6) [SEP] $100.0 [SEP] B084VCTNTN [SEP] It's a Boy - Supreme Cookie Platter -- 1 lb. [SEP] $45.49 [SEP] B08G53B2J9 [SEP] COOKIES GIFT BASKET - White Chocolate Blossom Cookie Gift Basket, Cookie Gift Box, Gourmet Cookies, Cookie Care package, Care package, [SEP] $100.0 [SEP] B083M93XYQ [SEP] Congratulations - \"Cookie Talk\" Chocolate Covered Graham Cracker - 6 Piece [SEP] $24.99 [SEP] B003JE8T02 [SEP] Gift Basket Village I Love You More Than Chocolate, Romantic Gift Basket - Men or Women Will Love the Plush Bear and Delicious Treats Bursting with Flavor [SEP] $139.5\n\nRecent actions:\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07zbl172c]",
+              "4": "click[b07zbl7g1l]",
+              "5": "click[b07zbjfb3g]",
+              "6": "click[b099df4jb8]",
+              "7": "click[b07ndmdnp5]",
+              "8": "click[b097x415yy]",
+              "9": "click[b084vctntn]",
+              "10": "click[b08g53b2j9]",
+              "11": "click[b083m93xyq]",
+              "12": "click[b003je8t02]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ae93696384f7a3bb5bdec38992cf83b9bafbbf14b97ee3ed80be102336fa3b12",
+      "attempts": [
+        {
+          "seconds": 0.4190478213131428,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.41917678713798523,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.16831717390804604,
+              "1": 0.2244347933439254,
+              "2": 0.20966227528068124,
+              "3": 0.03490190649499312,
+              "4": 0.03888097152070049,
+              "5": 0.05939603777347447,
+              "6": 0.02718325927861432,
+              "7": 0.055854599885503356,
+              "8": 0.03987743744799031,
+              "9": 0.03542163659999069,
+              "10": 0.03258319919795588,
+              "11": 0.05096433218308641,
+              "12": 0.022522377085038386
+            },
+            "confidence": 0.15980435945591911
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9484,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.416754312813282,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[< prev]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.0190020687878132
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B01LYPS9X4 [SEP] Philadelphia Candies Dark Chocolate Covered OREO® Cookies, 15 Ounce [SEP] $19.95 [SEP] B00FGINOZ4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO® Cookies, Valentine's Day Gift 8 Ounce [SEP] $14.99 [SEP] B00FGINMV0 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, St. Patrick's Day Gift Net Wt 8 oz [SEP] $14.95 [SEP] B016762N64 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Halloween Assortment (Cute Witch, Ghost, Pumpkin) 8 Ounce [SEP] $14.95 [SEP] B016762TF4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Dad Trophy Father's Day Gift 8 oz [SEP] $14.95 [SEP] B01676307A [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Happy Birthday Gift Net Wt 8 oz [SEP] $14.95 [SEP] B07ZBLT23F [SEP] It's a Boy Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B07ZBLD6D8 [SEP] It's a Boy \"Cookie Talk\" Oreo Tin - 16 Pieces [SEP] $39.99 [SEP] B07ZBLV5JL [SEP] It's a Girl Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B082VJSFJ2 [SEP] Kirkland Signature European Cookies with Belgian Chocolate, 49.4 Ounce - PACK OF 2 [SEP] $46.49",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B01LYPS9X4 [SEP] Philadelphia Candies Dark Chocolate Covered OREO® Cookies, 15 Ounce [SEP] $19.95 [SEP] B00FGINOZ4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO® Cookies, Valentine's Day Gift 8 Ounce [SEP] $14.99 [SEP] B00FGINMV0 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, St. Patrick's Day Gift Net Wt 8 oz [SEP] $14.95 [SEP] B016762N64 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Halloween Assortment (Cute Witch, Ghost, Pumpkin) 8 Ounce [SEP] $14.95 [SEP] B016762TF4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Dad Trophy Father's Day Gift 8 oz [SEP] $14.95 [SEP] B01676307A [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Happy Birthday Gift Net Wt 8 oz [SEP] $14.95 [SEP] B07ZBLT23F [SEP] It's a Boy Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B07ZBLD6D8 [SEP] It's a Boy \"Cookie Talk\" Oreo Tin - 16 Pieces [SEP] $39.99 [SEP] B07ZBLV5JL [SEP] It's a Girl Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B082VJSFJ2 [SEP] Kirkland Signature European Cookies with Belgian Chocolate, 49.4 Ounce - PACK OF 2 [SEP] $46.49\n\nRecent actions:\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]\nclick[next >]\nclick[< prev]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b01lyps9x4]",
+              "3": "click[b00fginoz4]",
+              "4": "click[b00fginmv0]",
+              "5": "click[b016762n64]",
+              "6": "click[b016762tf4]",
+              "7": "click[b01676307a]",
+              "8": "click[b07zblt23f]",
+              "9": "click[b07zbld6d8]",
+              "10": "click[b07zblv5jl]",
+              "11": "click[b082vjsfj2]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f1789c27dfbd988ca70c144947f249f713bc5cba43a6f1f0b0e88bc4a2193230",
+      "attempts": [
+        {
+          "seconds": 0.36182863637804985,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.36196064203977585,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.2097059980842554,
+              "1": 0.2924323794007253,
+              "2": 0.042606107173689726,
+              "3": 0.03077058955956844,
+              "4": 0.024652692733836527,
+              "5": 0.03162710735962008,
+              "6": 0.032231530010719225,
+              "7": 0.03198569499889237,
+              "8": 0.08953957590026262,
+              "9": 0.1314324142542808,
+              "10": 0.04293775600959458,
+              "11": 0.04007815451455496
+            },
+            "confidence": 0.22810805025533673
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 7953,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.35380709543824196,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.4605116583406925
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07ZBL172C [SEP] It's a Boy COOKIE TALK Cookie Platter - 2LB [SEP] $69.99 [SEP] B07ZBL7G1L [SEP] It's a Boy Cookie Talk Cookie Platter - 1LB [SEP] $44.99 [SEP] B07ZBJFB3G [SEP] It's a Boy - COOKIE TALK Chocolate Covered Oreos - 6 Pack [SEP] $18.99 [SEP] B099DF4JB8 [SEP] Keebler Fudge Stripes Chocolate Fudge Strawberry Valentine's Day Cookies | Strawberry Shortbread Chocolate Covered Cookies for Party Snacks and Office Snacks, 9.7oz [SEP] $100.0 [SEP] B07NDMDNP5 [SEP] Stork German Candy - KNOPPERS Hazelnut Cream Chocolate 8 cookie wafers + RIESEN Chocolate caramel covered in Dark Chocolate Individually wrapped 3 2.65 oz bags [SEP] $21.5 [SEP] B097X415YY [SEP] Bauducco Wafer Cookies - Enriched with Chocolate - Crispy Wafers - 3 Creamy Layers - No Artificial Flavors, 34.92 oz (Pack of 6) [SEP] $100.0 [SEP] B084VCTNTN [SEP] It's a Boy - Supreme Cookie Platter -- 1 lb. [SEP] $45.49 [SEP] B08G53B2J9 [SEP] COOKIES GIFT BASKET - White Chocolate Blossom Cookie Gift Basket, Cookie Gift Box, Gourmet Cookies, Cookie Care package, Care package, [SEP] $100.0 [SEP] B083M93XYQ [SEP] Congratulations - \"Cookie Talk\" Chocolate Covered Graham Cracker - 6 Piece [SEP] $24.99 [SEP] B003JE8T02 [SEP] Gift Basket Village I Love You More Than Chocolate, Romantic Gift Basket - Men or Women Will Love the Plush Bear and Delicious Treats Bursting with Flavor [SEP] $139.5",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07ZBL172C [SEP] It's a Boy COOKIE TALK Cookie Platter - 2LB [SEP] $69.99 [SEP] B07ZBL7G1L [SEP] It's a Boy Cookie Talk Cookie Platter - 1LB [SEP] $44.99 [SEP] B07ZBJFB3G [SEP] It's a Boy - COOKIE TALK Chocolate Covered Oreos - 6 Pack [SEP] $18.99 [SEP] B099DF4JB8 [SEP] Keebler Fudge Stripes Chocolate Fudge Strawberry Valentine's Day Cookies | Strawberry Shortbread Chocolate Covered Cookies for Party Snacks and Office Snacks, 9.7oz [SEP] $100.0 [SEP] B07NDMDNP5 [SEP] Stork German Candy - KNOPPERS Hazelnut Cream Chocolate 8 cookie wafers + RIESEN Chocolate caramel covered in Dark Chocolate Individually wrapped 3 2.65 oz bags [SEP] $21.5 [SEP] B097X415YY [SEP] Bauducco Wafer Cookies - Enriched with Chocolate - Crispy Wafers - 3 Creamy Layers - No Artificial Flavors, 34.92 oz (Pack of 6) [SEP] $100.0 [SEP] B084VCTNTN [SEP] It's a Boy - Supreme Cookie Platter -- 1 lb. [SEP] $45.49 [SEP] B08G53B2J9 [SEP] COOKIES GIFT BASKET - White Chocolate Blossom Cookie Gift Basket, Cookie Gift Box, Gourmet Cookies, Cookie Care package, Care package, [SEP] $100.0 [SEP] B083M93XYQ [SEP] Congratulations - \"Cookie Talk\" Chocolate Covered Graham Cracker - 6 Piece [SEP] $24.99 [SEP] B003JE8T02 [SEP] Gift Basket Village I Love You More Than Chocolate, Romantic Gift Basket - Men or Women Will Love the Plush Bear and Delicious Treats Bursting with Flavor [SEP] $139.5\n\nRecent actions:\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]\nclick[next >]\nclick[< prev]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07zbl172c]",
+              "4": "click[b07zbl7g1l]",
+              "5": "click[b07zbjfb3g]",
+              "6": "click[b099df4jb8]",
+              "7": "click[b07ndmdnp5]",
+              "8": "click[b097x415yy]",
+              "9": "click[b084vctntn]",
+              "10": "click[b08g53b2j9]",
+              "11": "click[b083m93xyq]",
+              "12": "click[b003je8t02]"
+            }
+          }
+        }
+      },
+      "request_sha256": "751982280a8c1946dbb4366ab7990917840fc1d3da9c5d863c217e7a9b352cf4",
+      "attempts": [
+        {
+          "seconds": 0.4255255497992039,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4256497286260128,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.19382697408105332,
+              "1": 0.17918342965917503,
+              "2": 0.22337088038692635,
+              "3": 0.034125886735460645,
+              "4": 0.03794845150963626,
+              "5": 0.06478936181218357,
+              "6": 0.02579266245788146,
+              "7": 0.06115274980218351,
+              "8": 0.03833033961277822,
+              "9": 0.0345471001090865,
+              "10": 0.035028907496274,
+              "11": 0.04929094568114559,
+              "12": 0.022612310656215575
+            },
+            "confidence": 0.15865178708583688
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9627,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.42285074293613434,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.9720294773578644
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07ZBKXXXB [SEP] It's a Boy - Butter Chocolate Chip Cookies 1lb Tin [SEP] $39.99 [SEP] B084TTS64Q [SEP] College \"Cookie Talk\" Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B084TVHJ4R [SEP] Graduation \"Cookie Talk\" Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B082XHMJMT [SEP] I'm Sorry Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B083MWMFMJ [SEP] Get Well Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B083M9PBJW [SEP] Congratulations Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B07RDGRDM9 [SEP] Mother's Day - \"Cookie Talk\" Chocolate Covered Grahams - 6pc [SEP] $24.99 [SEP] B083N1ZMRP [SEP] Boss's Day Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B003D5JJEC [SEP] Walkers Shortbread Assorted Scottish Cookies, 8.8 Ounce (Pack of 3) [SEP] $100.0 [SEP] B09HZ5HFGD [SEP] Jumbo Milk Chocolate Coins Wrapped in Foil, Half Dollar Extra Large Novelty Candy for Stocking Stuffers, Faux Coin Chocolates Gift Set, 6.1 Ounces [SEP] $14.88",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07ZBKXXXB [SEP] It's a Boy - Butter Chocolate Chip Cookies 1lb Tin [SEP] $39.99 [SEP] B084TTS64Q [SEP] College \"Cookie Talk\" Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B084TVHJ4R [SEP] Graduation \"Cookie Talk\" Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B082XHMJMT [SEP] I'm Sorry Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B083MWMFMJ [SEP] Get Well Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B083M9PBJW [SEP] Congratulations Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B07RDGRDM9 [SEP] Mother's Day - \"Cookie Talk\" Chocolate Covered Grahams - 6pc [SEP] $24.99 [SEP] B083N1ZMRP [SEP] Boss's Day Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B003D5JJEC [SEP] Walkers Shortbread Assorted Scottish Cookies, 8.8 Ounce (Pack of 3) [SEP] $100.0 [SEP] B09HZ5HFGD [SEP] Jumbo Milk Chocolate Coins Wrapped in Foil, Half Dollar Extra Large Novelty Candy for Stocking Stuffers, Faux Coin Chocolates Gift Set, 6.1 Ounces [SEP] $14.88\n\nRecent actions:\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07zbkxxxb]",
+              "4": "click[b084tts64q]",
+              "5": "click[b084tvhj4r]",
+              "6": "click[b082xhmjmt]",
+              "7": "click[b083mwmfmj]",
+              "8": "click[b083m9pbjw]",
+              "9": "click[b07rdgrdm9]",
+              "10": "click[b083n1zmrp]",
+              "11": "click[b003d5jjec]",
+              "12": "click[b09hz5hfgd]"
+            }
+          }
+        }
+      },
+      "request_sha256": "fee017d2b9e7968c162cba4ee29e95d005b96e0d19d212b517b3cf069ec09ce7",
+      "attempts": [
+        {
+          "seconds": 0.3628680258989334,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3629910498857498,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.18730058641437544,
+              "1": 0.21340307939127187,
+              "2": 0.3099053483353692,
+              "3": 0.07690063870548877,
+              "4": 0.02506926069333765,
+              "5": 0.017099490543537942,
+              "6": 0.041075032280543836,
+              "7": 0.017750378491951303,
+              "8": 0.021932272346295596,
+              "9": 0.02487991087811106,
+              "10": 0.01750036029035332,
+              "11": 0.018792781751723518,
+              "12": 0.0283908598776405
+            },
+            "confidence": 0.2523974606966499
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8166,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.36110643297433853,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.4354949183762074
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07CHR4MB8 [SEP] Administrative Professionals Day - Chocolate Covered Graham Crackers - 12 piece [SEP] $34.99 [SEP] B0831T9YYD [SEP] I LOVE YOU Red Valentine Chocolate Dipped Oreo Cookies | Olde Naples Hand Decorated Cookies | Romantic Gift Basket 7pc Oreo Cookies Assortmentent [SEP] $14.95 [SEP] B08G564GLC [SEP] COOKIES GIFT BASKET - Almond Blossom Cookie Gift Basket, Cookie Gift Box, Gourmet Cookies, Cookie Care package, Care package, Cookies [SEP] $100.0 [SEP] B08G58HCRP [SEP] COOKIES GIFT BASKET - Mango Coconut Blossom Cookie Gift Basket, Cookie Gift Box, Gourmet Cookies, Cookie Care package, Care package, Cookies [SEP] $100.0 [SEP] B07Y7NH4BV [SEP] Halloween Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B07RDGRYZD [SEP] Mother's Day - \"COOKIE TALK\" Chocolate Covered Oreos - 12 PC [SEP] $34.99 [SEP] B07RWQN3Y7 [SEP] Father's Day - \"COOKIE TALK\" Chocolate Covered Oreos - 12 PC [SEP] $34.99 [SEP] B005DLEC46 [SEP] Walkers Shortbread Assorted Chocolate Shortbread Cookies, 14.1 Ounce Box [SEP] $15.55 [SEP] B081SNVCN4 [SEP] Andy Anand Premium Belgian White Chocolate Almonds in Gift Basket, All-Natural Gourmet Christmas Holiday Corporate Food Gifts with Greeting Card, Valentines,Anniversary, Birthday Corporate Gifts Baskets 1lbs [SEP] $24.84 [SEP] B099DJ9ZHF [SEP] Mother's Hugs and Kisses Valentine's Day Cookies, Limited Batch | Resealable Bag of Sugar Cookies Sprinkled and Iced, X's & O's for Valentines Day Gifts and Snacking | 9 oz [SEP] $100.0",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B07CHR4MB8 [SEP] Administrative Professionals Day - Chocolate Covered Graham Crackers - 12 piece [SEP] $34.99 [SEP] B0831T9YYD [SEP] I LOVE YOU Red Valentine Chocolate Dipped Oreo Cookies | Olde Naples Hand Decorated Cookies | Romantic Gift Basket 7pc Oreo Cookies Assortmentent [SEP] $14.95 [SEP] B08G564GLC [SEP] COOKIES GIFT BASKET - Almond Blossom Cookie Gift Basket, Cookie Gift Box, Gourmet Cookies, Cookie Care package, Care package, Cookies [SEP] $100.0 [SEP] B08G58HCRP [SEP] COOKIES GIFT BASKET - Mango Coconut Blossom Cookie Gift Basket, Cookie Gift Box, Gourmet Cookies, Cookie Care package, Care package, Cookies [SEP] $100.0 [SEP] B07Y7NH4BV [SEP] Halloween Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B07RDGRYZD [SEP] Mother's Day - \"COOKIE TALK\" Chocolate Covered Oreos - 12 PC [SEP] $34.99 [SEP] B07RWQN3Y7 [SEP] Father's Day - \"COOKIE TALK\" Chocolate Covered Oreos - 12 PC [SEP] $34.99 [SEP] B005DLEC46 [SEP] Walkers Shortbread Assorted Chocolate Shortbread Cookies, 14.1 Ounce Box [SEP] $15.55 [SEP] B081SNVCN4 [SEP] Andy Anand Premium Belgian White Chocolate Almonds in Gift Basket, All-Natural Gourmet Christmas Holiday Corporate Food Gifts with Greeting Card, Valentines,Anniversary, Birthday Corporate Gifts Baskets 1lbs [SEP] $24.84 [SEP] B099DJ9ZHF [SEP] Mother's Hugs and Kisses Valentine's Day Cookies, Limited Batch | Resealable Bag of Sugar Cookies Sprinkled and Iced, X's & O's for Valentines Day Gifts and Snacking | 9 oz [SEP] $100.0\n\nRecent actions:\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b07chr4mb8]",
+              "4": "click[b0831t9yyd]",
+              "5": "click[b08g564glc]",
+              "6": "click[b08g58hcrp]",
+              "7": "click[b07y7nh4bv]",
+              "8": "click[b07rdgryzd]",
+              "9": "click[b07rwqn3y7]",
+              "10": "click[b005dlec46]",
+              "11": "click[b081snvcn4]",
+              "12": "click[b099dj9zhf]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c073be3cf5d53a115d20209c6edb6d5432df45e64708561ea2de8b31118abcb7",
+      "attempts": [
+        {
+          "seconds": 0.4312223978340626,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.43133676052093506,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.19257979482560802,
+              "1": 0.22420001740535828,
+              "2": 0.250076930548946,
+              "3": 0.06154622899707895,
+              "4": 0.038917737235303645,
+              "5": 0.018151464218275654,
+              "6": 0.012019180124204281,
+              "7": 0.031025750268926094,
+              "8": 0.029383622259274544,
+              "9": 0.029240999855215676,
+              "10": 0.05191439244319609,
+              "11": 0.03885895669963894,
+              "12": 0.02208492511897398
+            },
+            "confidence": 0.1875833414280248
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9778,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.42908240109682083,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.9699624739587307
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B085R8TH84 [SEP] Back to School \"Cookie Talk\" Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B0851SRDVV [SEP] It's a Boy - CHOCOLATE CHIP BUTTER COOKIES, 1 LB.PLATTER [SEP] $39.99 [SEP] B0851T6QTM [SEP] It's a Boy - CHOCOLATE CHIP BUTTER COOKIES, 2 LB.PLATTER [SEP] $59.99 [SEP] B08NGMNPP1 [SEP] OREO Fudge Covered Chocolate Sandwich Cookies, Easter Cookies Gift Tin, 15.8 oz [SEP] $9.99 [SEP] B0851SLFVX [SEP] It's a Boy - CHOCOLATE CHIP BUTTER COOKIES, 12 / Bag [SEP] $29.99 [SEP] B01MRQOQQU [SEP] Philadelphia Candies Milk Chocolate Covered Nutter Butter Cookies, 28 Ounce Gift Box [SEP] $41.95 [SEP] B01N7BG4TV [SEP] Philadelphia Candies Dark Chocolate Covered Nutter Butter Cookies, 14 Ounce Gift Box [SEP] $21.95 [SEP] B07RVHP9DN [SEP] Andy Anand Chocolate Greek Yogurt Covered California Cranberries Wholesale Bulk, For Birthday, Valentine Day, Gourmet Christmas Holiday Food Gifts, Thanksgiving, Mothers Fathers Day, Weddings (1lbs) [SEP] $29.84 [SEP] B07RP89DMD [SEP] Andy Anand Vegan Dark Chocolate Covered California Ginger Wholesale Bulk, For Birthday, Valentine Day, Gourmet Christmas Holiday Food Gifts, Thanksgiving, Mothers Fathers Day, Weddings (2lbs) [SEP] $39.84 [SEP] B07MKS62DG [SEP] The Great Cookie 13-inch I Love You Cookie Cake (Chocolate Chip) [SEP] $34.95",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B085R8TH84 [SEP] Back to School \"Cookie Talk\" Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B0851SRDVV [SEP] It's a Boy - CHOCOLATE CHIP BUTTER COOKIES, 1 LB.PLATTER [SEP] $39.99 [SEP] B0851T6QTM [SEP] It's a Boy - CHOCOLATE CHIP BUTTER COOKIES, 2 LB.PLATTER [SEP] $59.99 [SEP] B08NGMNPP1 [SEP] OREO Fudge Covered Chocolate Sandwich Cookies, Easter Cookies Gift Tin, 15.8 oz [SEP] $9.99 [SEP] B0851SLFVX [SEP] It's a Boy - CHOCOLATE CHIP BUTTER COOKIES, 12 / Bag [SEP] $29.99 [SEP] B01MRQOQQU [SEP] Philadelphia Candies Milk Chocolate Covered Nutter Butter Cookies, 28 Ounce Gift Box [SEP] $41.95 [SEP] B01N7BG4TV [SEP] Philadelphia Candies Dark Chocolate Covered Nutter Butter Cookies, 14 Ounce Gift Box [SEP] $21.95 [SEP] B07RVHP9DN [SEP] Andy Anand Chocolate Greek Yogurt Covered California Cranberries Wholesale Bulk, For Birthday, Valentine Day, Gourmet Christmas Holiday Food Gifts, Thanksgiving, Mothers Fathers Day, Weddings (1lbs) [SEP] $29.84 [SEP] B07RP89DMD [SEP] Andy Anand Vegan Dark Chocolate Covered California Ginger Wholesale Bulk, For Birthday, Valentine Day, Gourmet Christmas Holiday Food Gifts, Thanksgiving, Mothers Fathers Day, Weddings (2lbs) [SEP] $39.84 [SEP] B07MKS62DG [SEP] The Great Cookie 13-inch I Love You Cookie Cake (Chocolate Chip) [SEP] $34.95\n\nRecent actions:\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b085r8th84]",
+              "4": "click[b0851srdvv]",
+              "5": "click[b0851t6qtm]",
+              "6": "click[b08ngmnpp1]",
+              "7": "click[b0851slfvx]",
+              "8": "click[b01mrqoqqu]",
+              "9": "click[b01n7bg4tv]",
+              "10": "click[b07rvhp9dn]",
+              "11": "click[b07rp89dmd]",
+              "12": "click[b07mks62dg]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e74c85f856a0a3c1895501335c2e7588f464fa853b41283da246a4bb2f3ac1df",
+      "attempts": [
+        {
+          "seconds": 0.41948352009058,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.41960304602980614,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.21151296393636618,
+              "1": 0.21663396496315013,
+              "2": 0.23306486193132805,
+              "3": 0.06147669517415424,
+              "4": 0.04054544044725744,
+              "5": 0.01565764896222085,
+              "6": 0.05173109094971592,
+              "7": 0.03816730809186252,
+              "8": 0.02508465795775554,
+              "9": 0.030121204012908284,
+              "10": 0.02209306560638369,
+              "11": 0.024745768249710916,
+              "12": 0.029165329717186148
+            },
+            "confidence": 0.1691536004256054
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9309,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4078863635659218,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.47177554666996
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a309b7553cfaa67f48d449a1483de43dd35e8b2b67bd4646de62a8df13752941",
+      "attempts": [
+        {
+          "seconds": 0.06752540171146393,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06761161610484123,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2656042376179476,
+              "1": 0.22499109758735347,
+              "2": 0.509404664794699
+            },
+            "confidence": 0.26410699719204855
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 798,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06566173583269119,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.623444639146328
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "62dccc3483bffcd15ce1b30320f856b40c03754cc8530fe96a1f88dd790f542c",
+      "attempts": [
+        {
+          "seconds": 0.06794019415974617,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06801891326904297,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2606663865397253,
+              "1": 0.23883414739827816,
+              "2": 0.5004994660619966
+            },
+            "confidence": 0.25074919909299487
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 813,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06602004542946815,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.7613306492567062
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f619cb8d41f82ca2bda8fd7c4b0f86d490893f477c915ca378525124bf3490aa",
+      "attempts": [
+        {
+          "seconds": 0.07247814908623695,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07254496216773987,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.27308654948338296,
+              "1": 0.24383020388422832,
+              "2": 0.48308324663238883
+            },
+            "confidence": 0.22462486994858308
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 828,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0657014399766922,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.895044632256031
+    },
+    {
+      "step": 11,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ceedbf68d47d1a0bc6da37a13d9d80ab9b2639b8108f4ed96a5b0be0a2d092cb",
+      "attempts": [
+        {
+          "seconds": 0.068167295306921,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06825077906250954,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2631125676092713,
+              "1": 0.21938339956313666,
+              "2": 0.517504032827592
+            },
+            "confidence": 0.2762560492413881
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06645163148641586,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.02735660225153
+    },
+    {
+      "step": 12,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[< prev]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "eb130ad66d5704c61c26b5b3f958a97da56f6327f31fc99efa56649bceee4a58",
+      "attempts": [
+        {
+          "seconds": 0.06744291633367538,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06751630455255508,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2808046835970486,
+              "1": 0.24872588979209762,
+              "2": 0.4704694266108538
+            },
+            "confidence": 0.20570413991628067
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 738,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06576436385512352,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.17297251150012
+    },
+    {
+      "step": 13,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "40bb270cb4c83b2869e8007e83757e09fa52d8a30a9b0577336f7da99cc74739",
+      "attempts": [
+        {
+          "seconds": 0.0724937915802002,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07257742434740067,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.25835242437748634,
+              "1": 0.25682126152456997,
+              "2": 0.4848263140979438
+            },
+            "confidence": 0.22723947114691553
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0645354874432087,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.31562265008688
+    },
+    {
+      "step": 14,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5e40a8a4dc86d8eddd820cf639ae6ea3ae99bb949dc314b2be3df735d02a0793",
+      "attempts": [
+        {
+          "seconds": 0.06897378712892532,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06907970458269119,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26034670451559055,
+              "1": 0.25885121817861395,
+              "2": 0.4808020773057955
+            },
+            "confidence": 0.22120311595869324
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06512659043073654,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.461551874876022
+    },
+    {
+      "step": 15,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "57e64be70ec11e65d11f27b220303443c07a0a1d4bd529d994fbf7a5c8f6f240",
+      "attempts": [
+        {
+          "seconds": 0.07605430483818054,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07612556219100952,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2570087692663438,
+              "1": 0.25117882953663656,
+              "2": 0.4918124011970197
+            },
+            "confidence": 0.23771860179552953
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06540853157639503,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.605585798621178
+    },
+    {
+      "step": 16,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1fd2d52a2fe6f3322ac65c8255fa68d205b1152d47d47614ec75026134611b56",
+      "attempts": [
+        {
+          "seconds": 0.06751936674118042,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0676010474562645,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2632495490579095,
+              "1": 0.25490609039401046,
+              "2": 0.48184436054808005
+            },
+            "confidence": 0.22276654082212008
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06575628742575645,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.74798446521163
+    },
+    {
+      "step": 17,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f81d18be7471e6ca8ef208403eca4a9764f0705c973897cb000620ed20c279eb",
+      "attempts": [
+        {
+          "seconds": 0.06688644737005234,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06696800515055656,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2692047869697413,
+              "1": 0.2500588869055156,
+              "2": 0.4807363261247431
+            },
+            "confidence": 0.22110448918711464
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06533313542604446,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.883394122123718
+    },
+    {
+      "step": 18,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7a4c6c0fe947f1ea4379bd574de65d5a84d05da3925375d390eb8d263ebb7ae4",
+      "attempts": [
+        {
+          "seconds": 0.072908416390419,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07298964634537697,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.25548212140075904,
+              "1": 0.24013546566399266,
+              "2": 0.5043824129352483
+            },
+            "confidence": 0.2565736194028725
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07085703685879707,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.033345468342304
+    },
+    {
+      "step": 19,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "4af2363beced66dbc8259918c9022ad2f9babaf5888aebd4e90af18a82684652",
+      "attempts": [
+        {
+          "seconds": 0.07297752797603607,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07305755093693733,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24401805328002532,
+              "1": 0.2402976570644244,
+              "2": 0.5156842896555504
+            },
+            "confidence": 0.27352643448332553
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07135245203971863,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.172016005963087
+    },
+    {
+      "step": 20,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e8bb5517ee53cc3cd70150f4fb5367152142deb4e14739590bdd5745c3c72dc3",
+      "attempts": [
+        {
+          "seconds": 0.07087766751646996,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07097519934177399,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.25049490927709694,
+              "1": 0.24120805938000672,
+              "2": 0.5082970313428964
+            },
+            "confidence": 0.2624455470143446
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06914433091878891,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.30887858569622
+    },
+    {
+      "step": 21,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bf72a7bd5d3116bebf53385b96bebb56257aca3c57c5897eab7964ee22489d98",
+      "attempts": [
+        {
+          "seconds": 0.07458638027310371,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07465757429599762,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.24835097775855583,
+              "1": 0.24979804439023617,
+              "2": 0.501850977851208
+            },
+            "confidence": 0.25277646677681204
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07125266641378403,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.449315942823887
+    },
+    {
+      "step": 22,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "60035db846fdbd3283c560a3c613707b1e12b0a713b4dba32f20c77736cf31bd",
+      "attempts": [
+        {
+          "seconds": 0.07661843672394753,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07668273150920868,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.27505304947673487,
+              "1": 0.2585813620805583,
+              "2": 0.4663655884427069
+            },
+            "confidence": 0.1995483826640604
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06984955444931984,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.5913835391402245
+    },
+    {
+      "step": 23,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 21 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 21 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b6bc7cbd3da3c7e30f5fd270a3b08f5caf2285b2927f70ca8866eb57719b2581",
+      "attempts": [
+        {
+          "seconds": 0.07309363409876823,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07316652312874794,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2665111693890884,
+              "1": 0.2646592265200969,
+              "2": 0.46882960409081476
+            },
+            "confidence": 0.20324440613622213
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07096701115369797,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.753752209246159
+    },
+    {
+      "step": 24,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 22 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 22 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "44eee8e9f960d6fe2093c89850bb064b3c9974720dc48be3a75dfed9574fc230",
+      "attempts": [
+        {
+          "seconds": 0.0777851939201355,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07786515727639198,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2676553545711887,
+              "1": 0.2592566402542023,
+              "2": 0.47308800517460897
+            },
+            "confidence": 0.20963200776191346
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07016020640730858,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.8977972492575645
+    },
+    {
+      "step": 25,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 23 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 23 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "288df43a457b7fcca1e0b27411d876d9f3de15dbbcf13dc8343ec4a4f2f7b2ca",
+      "attempts": [
+        {
+          "seconds": 0.07197423279285431,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07203704491257668,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2669284612633567,
+              "1": 0.2620086334358503,
+              "2": 0.47106290530079303
+            },
+            "confidence": 0.20659435795118955
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07022113725543022,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.040818113833666
+    },
+    {
+      "step": 26,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 24 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 24 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "79d30d5b94a14f613518985010636dd2af8dcad298d75b8934a558acce91d91d",
+      "attempts": [
+        {
+          "seconds": 0.07530166953802109,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07537667453289032,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26805054914138077,
+              "1": 0.26716405016986794,
+              "2": 0.4647854006887514
+            },
+            "confidence": 0.1971781010331271
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07367105782032013,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.179281730204821
+    },
+    {
+      "step": 27,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 25 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 25 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "27f0cd697d6e17e43f05203a768261fc4124f4e03145bf6ac51897f72066f484",
+      "attempts": [
+        {
+          "seconds": 0.06968458741903305,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0697539933025837,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.25840202303072624,
+              "1": 0.2600085663424761,
+              "2": 0.4815894106267977
+            },
+            "confidence": 0.22238411594019658
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0676903985440731,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.311711795628071
+    },
+    {
+      "step": 28,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 26 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 26 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "95ef29dc7582c38830851200efeb5bc708ccf70ba6a43c37b211e70ce224388f",
+      "attempts": [
+        {
+          "seconds": 0.06855874508619308,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0686468631029129,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26616425777361574,
+              "1": 0.25692638141519647,
+              "2": 0.4769093608111878
+            },
+            "confidence": 0.21536404121678168
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06624364107847214,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.442088454961777
+    },
+    {
+      "step": 29,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 27 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 27 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "45daf0acb312671b194d3141ffb5c02703aa5abd47b2b8ca4bda3daee0981f30",
+      "attempts": [
+        {
+          "seconds": 0.06758270785212517,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0676577165722847,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.25976499506226125,
+              "1": 0.255106270896554,
+              "2": 0.4851287340411848
+            },
+            "confidence": 0.22769310106177718
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0657859817147255,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.582113858312368
+    },
+    {
+      "step": 30,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 28 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 28 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "26e37908fecba8b3ee66b0c53caed50a60d3ca75033d0d8652ce1146e6f064f9",
+      "attempts": [
+        {
+          "seconds": 0.0668843686580658,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0669625774025917,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2584323517949548,
+              "1": 0.2604276727341476,
+              "2": 0.4811399754708977
+            },
+            "confidence": 0.22170996320634656
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06531478092074394,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.710630789399147
+    },
+    {
+      "step": 31,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 29 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 29 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6e17db6b0e572d1f5b048b4e032b9558de3bbb03bb0c266c63d5034999aac801",
+      "attempts": [
+        {
+          "seconds": 0.06721440702676773,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06731276959180832,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26015620735352635,
+              "1": 0.2697009242688062,
+              "2": 0.47014286837766744
+            },
+            "confidence": 0.20521430256650117
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06521817296743393,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.860038589686155
+    },
+    {
+      "step": 32,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 30 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 30 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "fe320b0e8e87a93d4ec97fe1ad82ac489c5aa0b0fa1bfc1abeaf9b497d47df24",
+      "attempts": [
+        {
+          "seconds": 0.06759077310562134,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06768031790852547,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2648543498695576,
+              "1": 0.2618253984092008,
+              "2": 0.4733202517212416
+            },
+            "confidence": 0.2099803775818624
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06596547737717628,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.9905674159526825
+    },
+    {
+      "step": 33,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 31 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 31 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "34940381941ccb2df1836755e1e2d9a532a0dc056e5b7b0a4246239210f3ade1",
+      "attempts": [
+        {
+          "seconds": 0.07052790373563766,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07060204818844795,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26805933627190226,
+              "1": 0.2674648145035004,
+              "2": 0.4644758492245974
+            },
+            "confidence": 0.1967137738368961
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06634070351719856,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.12409982085228
+    },
+    {
+      "step": 34,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 32 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 32 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bb2440607b5184de038f9af0cb6145ebcfa51a88af3c9c509e42b9697e279698",
+      "attempts": [
+        {
+          "seconds": 0.0705840066075325,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07068488374352455,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.27115724468435476,
+              "1": 0.2830957070313545,
+              "2": 0.4457470482842908
+            },
+            "confidence": 0.1686205724264362
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06846921518445015,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.258793339133263
+    },
+    {
+      "step": 35,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 33 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 33 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0f0c811c5ae9797306de16ae1ddc74d45b1478132b6510621b832d69c31c1839",
+      "attempts": [
+        {
+          "seconds": 0.07334348559379578,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07342099398374557,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26699452184700023,
+              "1": 0.2694879372026688,
+              "2": 0.463517540950331
+            },
+            "confidence": 0.19527631142549648
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0679752267897129,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.423362784087658
+    },
+    {
+      "step": 36,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 34 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 34 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f674d7749b1d48bb2f9b9232c31363be52b2f92d694d100abe38ea442488da3b",
+      "attempts": [
+        {
+          "seconds": 0.0731799528002739,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07329145818948746,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26951179677510884,
+              "1": 0.2780939309026429,
+              "2": 0.4523942723222482
+            },
+            "confidence": 0.17859140848337232
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06725725159049034,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.563525132834911
+    },
+    {
+      "step": 37,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 35 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 35 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a927c723a75159b3daf57af98fdc983b6f1a980bd42548c2f6edde732b839bda",
+      "attempts": [
+        {
+          "seconds": 0.06909964978694916,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06917871907353401,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.25176798712358284,
+              "1": 0.26921495962701,
+              "2": 0.47901705324940713
+            },
+            "confidence": 0.2185255798741107
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.067457165569067,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.69589663669467
+    },
+    {
+      "step": 38,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 36 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 36 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7329475c434c24ddbe21eefcceb764898af80519d1fb798976aa482d422bbd4b",
+      "attempts": [
+        {
+          "seconds": 0.07277298718690872,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07286039739847183,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2560364431372382,
+              "1": 0.26798694955534147,
+              "2": 0.4759766073074203
+            },
+            "confidence": 0.21396491096113046
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06717148423194885,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.830801136791706
+    },
+    {
+      "step": 39,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 37 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 37 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0af8cbbb9d33b8b2d89dd58879b157d94bcab6816fb79d78986db1ab12a0c74d",
+      "attempts": [
+        {
+          "seconds": 0.06760622933506966,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06767850369215012,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2569076557425967,
+              "1": 0.2781853814355527,
+              "2": 0.4649069628218507
+            },
+            "confidence": 0.19736044423277585
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06604154035449028,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.960190482437611
+    },
+    {
+      "step": 40,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 38 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 38 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "949442ac9c2f78fc4dc0bb6d919b085a7b97756114bfacbf293c5700a542db52",
+      "attempts": [
+        {
+          "seconds": 0.0709950253367424,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07107539102435112,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26542888054841673,
+              "1": 0.2740688113709051,
+              "2": 0.46050230808067816
+            },
+            "confidence": 0.19075346212101724
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06609874591231346,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.096280336380005
+    },
+    {
+      "step": 41,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 39 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 39 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d6b7ffc7214474a53edaa2e105c86301bab8f3242c2e41b68ef27518f5ccb372",
+      "attempts": [
+        {
+          "seconds": 0.07587224617600441,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07597427442669868,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26597001934153236,
+              "1": 0.29440041621276536,
+              "2": 0.4396295644457023
+            },
+            "confidence": 0.15944434666855342
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0663263127207756,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.236640643328428
+    },
+    {
+      "step": 42,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 40 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 40 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5a8e6c6c0682b73d3d1bc5224d5f69f8729c8615d86f9237692d9dd9ac7bb0a1",
+      "attempts": [
+        {
+          "seconds": 0.06912628933787346,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06922426074743271,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2912617273483105,
+              "1": 0.2839702859534048,
+              "2": 0.4247679866982846
+            },
+            "confidence": 0.13715198004742704
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06678296253085136,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.372563101351261
+    },
+    {
+      "step": 43,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 41 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 41 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6ed60b3d4cb9453983fa8fe4c73b6d50309bdec0193c1e3b7b8bd410188fdaf5",
+      "attempts": [
+        {
+          "seconds": 0.07281852141022682,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07291406020522118,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.28172347264849623,
+              "1": 0.27643544223578115,
+              "2": 0.4418410851157226
+            },
+            "confidence": 0.16276162767358393
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06600186228752136,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.509012434631586
+    },
+    {
+      "step": 44,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 42 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 42 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "df0dff60d4a2b0484afeb3a0c0614d0802ae3873be98d0515408067ad426ec91",
+      "attempts": [
+        {
+          "seconds": 0.0746661014854908,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07472484558820724,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26586542468952884,
+              "1": 0.2663477876680555,
+              "2": 0.46778678764241566
+            },
+            "confidence": 0.2016801814636235
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0662275068461895,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.646104231476784
+    },
+    {
+      "step": 45,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 43 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 43 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2321a2ce7cc3fb40b6514e2321965ac4a7ce4b60c8b563d17ea1040b971a71c2",
+      "attempts": [
+        {
+          "seconds": 0.06710147485136986,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06718504056334496,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.259893787813683,
+              "1": 0.2717692092066704,
+              "2": 0.46833700297964664
+            },
+            "confidence": 0.20250550446946997
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06508372351527214,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.804677411913872
+    },
+    {
+      "step": 46,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 44 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 44 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bfd1accd2ad179cee2276046c3237ac1d6f43e6c87d8f0d8e6186b22f6a53c1c",
+      "attempts": [
+        {
+          "seconds": 0.0679514892399311,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06803856790065765,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26301560035730626,
+              "1": 0.2730466145396208,
+              "2": 0.46393778510307293
+            },
+            "confidence": 0.1959066776546094
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06593034043908119,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.935312308371067
+    },
+    {
+      "step": 47,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 45 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 45 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "40abc653a22027f07f5986e5ac1b5cf45b04c95720417ad11c56433abf2e9025",
+      "attempts": [
+        {
+          "seconds": 0.07272171974182129,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07281424850225449,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2516761395190289,
+              "1": 0.2631228517869515,
+              "2": 0.4852010086940196
+            },
+            "confidence": 0.2278015130410294
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06592303141951561,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 9.071285612881184
+    },
+    {
+      "step": 48,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 46 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 46 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "90365fd786656677891ac1d758aba5a4270332fbb3bd811ebe03271de91c7a72",
+      "attempts": [
+        {
+          "seconds": 0.07651447132229805,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07660961523652077,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2593122206298117,
+              "1": 0.2649446405657296,
+              "2": 0.47574313880445873
+            },
+            "confidence": 0.2136147082066881
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07469923794269562,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 9.225884433835745
+    },
+    {
+      "step": 49,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 47 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 47 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "5438d77e486ce024840dcc573b33f07bfebfdba0e7b39180749df90a8df48c5f",
+      "attempts": [
+        {
+          "seconds": 0.08567434549331665,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.08575448393821716,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.26035665784068823,
+              "1": 0.27724176271602424,
+              "2": 0.46240157944328747
+            },
+            "confidence": 0.1936023691649312
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07210192829370499,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 9.385508108884096
+    },
+    {
+      "step": 50,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 48 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 48 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "98ffc896c5f34c1f4061c1152039db116f538661a473015fd67e3acb672ee665",
+      "attempts": [
+        {
+          "seconds": 0.07290339097380638,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07298201695084572,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2645494836480766,
+              "1": 0.2717623261407428,
+              "2": 0.4636881902111806
+            },
+            "confidence": 0.19553228531677086
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07131167128682137,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 9.520890913903713
+    },
+    {
+      "step": 51,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 49 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 49 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "10b56b5628169a0b21d7fac27971ff291ed38f38a9ad1c28d75f526701d0c651",
+      "attempts": [
+        {
+          "seconds": 0.07528500631451607,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.075377706438303,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3040107629088404,
+              "1": 0.311803865791712,
+              "2": 0.3841853712994476
+            },
+            "confidence": 0.07627805694917138
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07356870546936989,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 9.659789234399796
+    },
+    {
+      "step": 52,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 50 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 50 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a31c8e8a78c4c79bcbfb690b6df0775cfb2867fb4de64e40e2171d49fe38882a",
+      "attempts": [
+        {
+          "seconds": 0.07282048091292381,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07289980351924896,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.34879104974162345,
+              "1": 0.3163225941610574,
+              "2": 0.3348863560973192
+            },
+            "confidence": 0.023186574612435198
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 735,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07134596258401871,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 9.738660387694836
+    },
+    {
+      "step": 53,
+      "observation": "WebShop [SEP] Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Search",
+      "action": "search[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 9.8383772931993
+    },
+    {
+      "step": 54,
+      "observation": "Instruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B01LYPS9X4 [SEP] Philadelphia Candies Dark Chocolate Covered OREO® Cookies, 15 Ounce [SEP] $19.95 [SEP] B00FGINOZ4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO® Cookies, Valentine's Day Gift 8 Ounce [SEP] $14.99 [SEP] B00FGINMV0 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, St. Patrick's Day Gift Net Wt 8 oz [SEP] $14.95 [SEP] B016762N64 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Halloween Assortment (Cute Witch, Ghost, Pumpkin) 8 Ounce [SEP] $14.95 [SEP] B016762TF4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Dad Trophy Father's Day Gift 8 oz [SEP] $14.95 [SEP] B01676307A [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Happy Birthday Gift Net Wt 8 oz [SEP] $14.95 [SEP] B07ZBLT23F [SEP] It's a Boy Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B07ZBLD6D8 [SEP] It's a Boy \"Cookie Talk\" Oreo Tin - 16 Pieces [SEP] $39.99 [SEP] B07ZBLV5JL [SEP] It's a Girl Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B082VJSFJ2 [SEP] Kirkland Signature European Cookies with Belgian Chocolate, 49.4 Ounce - PACK OF 2 [SEP] $46.49",
+      "request": {
+        "state": "Shopping instruction:\ni would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars\n\nCurrent page:\nInstruction: [SEP] i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B01LYPS9X4 [SEP] Philadelphia Candies Dark Chocolate Covered OREO® Cookies, 15 Ounce [SEP] $19.95 [SEP] B00FGINOZ4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO® Cookies, Valentine's Day Gift 8 Ounce [SEP] $14.99 [SEP] B00FGINMV0 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, St. Patrick's Day Gift Net Wt 8 oz [SEP] $14.95 [SEP] B016762N64 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Halloween Assortment (Cute Witch, Ghost, Pumpkin) 8 Ounce [SEP] $14.95 [SEP] B016762TF4 [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Dad Trophy Father's Day Gift 8 oz [SEP] $14.95 [SEP] B01676307A [SEP] Philadelphia Candies Milk Chocolate Covered OREO Cookies, Happy Birthday Gift Net Wt 8 oz [SEP] $14.95 [SEP] B07ZBLT23F [SEP] It's a Boy Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B07ZBLD6D8 [SEP] It's a Boy \"Cookie Talk\" Oreo Tin - 16 Pieces [SEP] $39.99 [SEP] B07ZBLV5JL [SEP] It's a Girl Cookie Talk Chocolate Covered Oreo Trio [SEP] $9.29 [SEP] B082VJSFJ2 [SEP] Kirkland Signature European Cookies with Belgian Chocolate, 49.4 Ounce - PACK OF 2 [SEP] $46.49\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i would like a 15 ounce package of blue stork it's a boy gift chocolate covered cookies, and price lower than 40.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b01lyps9x4]",
+              "3": "click[b00fginoz4]",
+              "4": "click[b00fginmv0]",
+              "5": "click[b016762n64]",
+              "6": "click[b016762tf4]",
+              "7": "click[b01676307a]",
+              "8": "click[b07zblt23f]",
+              "9": "click[b07zbld6d8]",
+              "10": "click[b07zblv5jl]",
+              "11": "click[b082vjsfj2]"
+            }
+          }
+        }
+      },
+      "request_sha256": "9e80654a22e495a86bef6d370af4eacb67bb5c7c6337d5b453273a06915c9649",
+      "attempts": [
+        {
+          "seconds": 0.37443384528160095,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.37458084523677826,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.11488989018402904,
+              "1": 0.3248096399147798,
+              "2": 0.04657134367520831,
+              "3": 0.03451298971617121,
+              "4": 0.02982305729628389,
+              "5": 0.03501611763408926,
+              "6": 0.0384987892419064,
+              "7": 0.04139144492390155,
+              "8": 0.10337769220204401,
+              "9": 0.144375740977573,
+              "10": 0.045960919710262685,
+              "11": 0.04077237452375089
+            },
+            "confidence": 0.2634286980888507
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8385,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.37275727838277817,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 10.293273739516735
+    }
+  ]
+}

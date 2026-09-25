@@ -1,0 +1,508 @@
+{
+  "task_id": 428,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars",
+  "instruction_sha256": "e629703c6c663fd9a7a5bc3c3b5dba968606a63efa6bf775524913a228401d1a",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 4.315493285655975,
+  "decision_seconds": 4.057564578950405,
+  "input_tokens": 91818,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars [SEP] Search",
+      "action": "search[i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.13281025737524033
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B0962P6LCS [SEP] Ataiwee Women's Wide Width Ballet Flats. [SEP] $23.99 to $34.99 [SEP] B08P49GC3W [SEP] Ataiwee Women's Wide Width Flat Shoes - Comfortable Pointed LoaferSuede Ballet Flats. [SEP] $23.79 to $34.99 [SEP] B09J8L9GX3 [SEP] Ataiwee Women's Wide Width Flat Shoes - Round Suede Soft Anti-Slip Breathable Ballet Flats. [SEP] $29.99 to $34.99 [SEP] B07F23JYK4 [SEP] Clarks Women's Neenah Lark Ballet Flat [SEP] $33.65 to $177.12 [SEP] B011EWNZQ8 [SEP] Trotters Women's Liz Ballet Flat [SEP] $27.79 to $96.39 [SEP] B0002M3788 [SEP] LifeStride Women's Deja Vu Casual Flat Ballet [SEP] $20.99 to $113.63 [SEP] B079338JXR [SEP] SoftWalk Women's Sonoma Ballet Flat [SEP] $27.87 to $184.47 [SEP] B01HMZMYJU [SEP] Trotters Women's Monarch Slip-On Loafer [SEP] $27.45 to $199.1 [SEP] B07V2XQJ28 [SEP] Clarks Men's Brynn Ave Flat Sandal [SEP] $53.76 to $61.38 [SEP] B0783RF4MD [SEP] LifeStride Women's Indeed Casual Skimmer Ballet Flat [SEP] $31.85",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B0962P6LCS [SEP] Ataiwee Women's Wide Width Ballet Flats. [SEP] $23.99 to $34.99 [SEP] B08P49GC3W [SEP] Ataiwee Women's Wide Width Flat Shoes - Comfortable Pointed LoaferSuede Ballet Flats. [SEP] $23.79 to $34.99 [SEP] B09J8L9GX3 [SEP] Ataiwee Women's Wide Width Flat Shoes - Round Suede Soft Anti-Slip Breathable Ballet Flats. [SEP] $29.99 to $34.99 [SEP] B07F23JYK4 [SEP] Clarks Women's Neenah Lark Ballet Flat [SEP] $33.65 to $177.12 [SEP] B011EWNZQ8 [SEP] Trotters Women's Liz Ballet Flat [SEP] $27.79 to $96.39 [SEP] B0002M3788 [SEP] LifeStride Women's Deja Vu Casual Flat Ballet [SEP] $20.99 to $113.63 [SEP] B079338JXR [SEP] SoftWalk Women's Sonoma Ballet Flat [SEP] $27.87 to $184.47 [SEP] B01HMZMYJU [SEP] Trotters Women's Monarch Slip-On Loafer [SEP] $27.45 to $199.1 [SEP] B07V2XQJ28 [SEP] Clarks Men's Brynn Ave Flat Sandal [SEP] $53.76 to $61.38 [SEP] B0783RF4MD [SEP] LifeStride Women's Indeed Casual Skimmer Ballet Flat [SEP] $31.85\n\nRecent actions:\nsearch[i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b0962p6lcs]",
+              "3": "click[b08p49gc3w]",
+              "4": "click[b09j8l9gx3]",
+              "5": "click[b07f23jyk4]",
+              "6": "click[b011ewnzq8]",
+              "7": "click[b0002m3788]",
+              "8": "click[b079338jxr]",
+              "9": "click[b01hmzmyju]",
+              "10": "click[b07v2xqj28]",
+              "11": "click[b0783rf4md]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6193152ef550a9fe96a1a372d27ad1521288dec46c06533d6057d5cc8a88010a",
+      "attempts": [
+        {
+          "seconds": 0.40031861513853073,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4004256799817085,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.06296946754390254,
+              "1": 0.09925496020763976,
+              "2": 0.5326527257460947,
+              "3": 0.06330327223002097,
+              "4": 0.0800239984261906,
+              "5": 0.01757298304978858,
+              "6": 0.04103212393617009,
+              "7": 0.03312291471130646,
+              "8": 0.025944313476612267,
+              "9": 0.00969374229808243,
+              "10": 0.01003726186634828,
+              "11": 0.024392236507843446
+            },
+            "confidence": 0.4901666099048306
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8964,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.39852793887257576,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b0962p6lcs]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5606809519231319
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 6 wide [SEP] 6.5 wide [SEP] 7 wide [SEP] 7.5 wide [SEP] 8 wide [SEP] 8.5 wide [SEP] 9 wide [SEP] 9.5 wide [SEP] 10 wide [SEP] 10.5 wide [SEP] 11 wide [SEP] 12 wide [SEP] color [SEP] brown 5019-219m [SEP] grey 1905019-5 [SEP] black 5019-219m [SEP] light pink 1905019-5 [SEP] 05-4 light pink suede [SEP] tan 1905019-5 [SEP] 05-4 black suede [SEP] 05-4 tan suede [SEP] blue 1905019-5 [SEP] wine red 1905019-5 [SEP] wine red 5019-219m [SEP] 05-4 blue suede [SEP] 05-4 grey suede [SEP] light pink 5019-219m [SEP] black 1905019-5 [SEP] 05-4 wine red suede [SEP] 5019-4 blue [SEP] 5019-4 grey [SEP] 5019-4 light pink [SEP] black 5019-3 [SEP] Ataiwee Women's Wide Width Ballet Flats. [SEP] Price: $23.99 to $34.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 6 wide [SEP] 6.5 wide [SEP] 7 wide [SEP] 7.5 wide [SEP] 8 wide [SEP] 8.5 wide [SEP] 9 wide [SEP] 9.5 wide [SEP] 10 wide [SEP] 10.5 wide [SEP] 11 wide [SEP] 12 wide [SEP] color [SEP] brown 5019-219m [SEP] grey 1905019-5 [SEP] black 5019-219m [SEP] light pink 1905019-5 [SEP] 05-4 light pink suede [SEP] tan 1905019-5 [SEP] 05-4 black suede [SEP] 05-4 tan suede [SEP] blue 1905019-5 [SEP] wine red 1905019-5 [SEP] wine red 5019-219m [SEP] 05-4 blue suede [SEP] 05-4 grey suede [SEP] light pink 5019-219m [SEP] black 1905019-5 [SEP] 05-4 wine red suede [SEP] 5019-4 blue [SEP] 5019-4 grey [SEP] 5019-4 light pink [SEP] black 5019-3 [SEP] Ataiwee Women's Wide Width Ballet Flats. [SEP] Price: $23.99 to $34.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars]\nclick[b0962p6lcs]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[6 wide]",
+              "7": "click[6.5 wide]",
+              "8": "click[7 wide]",
+              "9": "click[7.5 wide]",
+              "10": "click[8 wide]",
+              "11": "click[8.5 wide]",
+              "12": "click[9 wide]",
+              "13": "click[9.5 wide]",
+              "14": "click[10 wide]",
+              "15": "click[10.5 wide]",
+              "16": "click[11 wide]",
+              "17": "click[12 wide]",
+              "18": "click[brown 5019-219m]",
+              "19": "click[grey 1905019-5]",
+              "20": "click[black 5019-219m]",
+              "21": "click[light pink 1905019-5]",
+              "22": "click[05-4 light pink suede]",
+              "23": "click[tan 1905019-5]",
+              "24": "click[05-4 black suede]",
+              "25": "click[05-4 tan suede]",
+              "26": "click[blue 1905019-5]",
+              "27": "click[wine red 1905019-5]",
+              "28": "click[wine red 5019-219m]",
+              "29": "click[05-4 blue suede]",
+              "30": "click[05-4 grey suede]",
+              "31": "click[light pink 5019-219m]",
+              "32": "click[black 1905019-5]",
+              "33": "click[05-4 wine red suede]",
+              "34": "click[5019-4 blue]",
+              "35": "click[5019-4 grey]",
+              "36": "click[5019-4 light pink]",
+              "37": "click[black 5019-3]"
+            }
+          }
+        }
+      },
+      "request_sha256": "752940d0eb866b7e73a22668647ed41be5f9592437f8712ceb03f67ea06862d9",
+      "attempts": [
+        {
+          "seconds": 1.2063482031226158,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.2064882144331932,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "12",
+            "probabilities": {
+              "0": 0.02020326179825068,
+              "1": 0.019145891920226116,
+              "2": 0.040370864799842504,
+              "3": 0.02385019428396698,
+              "4": 0.019131963909550655,
+              "5": 0.07874828491382638,
+              "6": 0.017505230209531552,
+              "7": 0.014203355191902956,
+              "8": 0.012336826205628634,
+              "9": 0.01192732908615488,
+              "10": 0.022932281958910707,
+              "11": 0.021611335691154154,
+              "12": 0.26456707956247033,
+              "13": 0.02450716875783551,
+              "14": 0.022043473303083327,
+              "15": 0.0181585669866901,
+              "16": 0.018456354276311066,
+              "17": 0.016460151048559732,
+              "18": 0.00409292046625837,
+              "19": 0.006077226888543696,
+              "20": 0.002993651434868836,
+              "21": 0.006556553893688105,
+              "22": 0.006511268027537999,
+              "23": 0.243444725547838,
+              "24": 0.0053025180307172,
+              "25": 0.01155240992850372,
+              "26": 0.003059350521551718,
+              "27": 0.0034499305424898785,
+              "28": 0.0027181830415782733,
+              "29": 0.004286873188605941,
+              "30": 0.006090943981426044,
+              "31": 0.003863211999837248,
+              "32": 0.0034820503703099576,
+              "33": 0.004316545157569412,
+              "34": 0.00397076478764344,
+              "35": 0.004356047885997439,
+              "36": 0.004515425052989822,
+              "37": 0.0031997853481486294
+            },
+            "confidence": 0.24469051414523973
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 27276,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 38,
+          "inference_seconds": 1.2023335099220276,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[9 wide]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.8007817082107067
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 6 wide [SEP] 6.5 wide [SEP] 7 wide [SEP] 7.5 wide [SEP] 8 wide [SEP] 8.5 wide [SEP] 9 wide [SEP] 9.5 wide [SEP] 10 wide [SEP] 10.5 wide [SEP] 11 wide [SEP] 12 wide [SEP] color [SEP] brown 5019-219m [SEP] grey 1905019-5 [SEP] black 5019-219m [SEP] light pink 1905019-5 [SEP] 05-4 light pink suede [SEP] tan 1905019-5 [SEP] 05-4 black suede [SEP] 05-4 tan suede [SEP] blue 1905019-5 [SEP] wine red 1905019-5 [SEP] wine red 5019-219m [SEP] 05-4 blue suede [SEP] 05-4 grey suede [SEP] light pink 5019-219m [SEP] black 1905019-5 [SEP] 05-4 wine red suede [SEP] 5019-4 blue [SEP] 5019-4 grey [SEP] 5019-4 light pink [SEP] black 5019-3 [SEP] Ataiwee Women's Wide Width Ballet Flats. [SEP] Price: $23.99 to $34.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 6 wide [SEP] 6.5 wide [SEP] 7 wide [SEP] 7.5 wide [SEP] 8 wide [SEP] 8.5 wide [SEP] 9 wide [SEP] 9.5 wide [SEP] 10 wide [SEP] 10.5 wide [SEP] 11 wide [SEP] 12 wide [SEP] color [SEP] brown 5019-219m [SEP] grey 1905019-5 [SEP] black 5019-219m [SEP] light pink 1905019-5 [SEP] 05-4 light pink suede [SEP] tan 1905019-5 [SEP] 05-4 black suede [SEP] 05-4 tan suede [SEP] blue 1905019-5 [SEP] wine red 1905019-5 [SEP] wine red 5019-219m [SEP] 05-4 blue suede [SEP] 05-4 grey suede [SEP] light pink 5019-219m [SEP] black 1905019-5 [SEP] 05-4 wine red suede [SEP] 5019-4 blue [SEP] 5019-4 grey [SEP] 5019-4 light pink [SEP] black 5019-3 [SEP] Ataiwee Women's Wide Width Ballet Flats. [SEP] Price: $23.99 to $34.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars]\nclick[b0962p6lcs]\nclick[9 wide]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[6 wide]",
+              "7": "click[6.5 wide]",
+              "8": "click[7 wide]",
+              "9": "click[7.5 wide]",
+              "10": "click[8 wide]",
+              "11": "click[8.5 wide]",
+              "12": "click[9 wide]",
+              "13": "click[9.5 wide]",
+              "14": "click[10 wide]",
+              "15": "click[10.5 wide]",
+              "16": "click[11 wide]",
+              "17": "click[12 wide]",
+              "18": "click[brown 5019-219m]",
+              "19": "click[grey 1905019-5]",
+              "20": "click[black 5019-219m]",
+              "21": "click[light pink 1905019-5]",
+              "22": "click[05-4 light pink suede]",
+              "23": "click[tan 1905019-5]",
+              "24": "click[05-4 black suede]",
+              "25": "click[05-4 tan suede]",
+              "26": "click[blue 1905019-5]",
+              "27": "click[wine red 1905019-5]",
+              "28": "click[wine red 5019-219m]",
+              "29": "click[05-4 blue suede]",
+              "30": "click[05-4 grey suede]",
+              "31": "click[light pink 5019-219m]",
+              "32": "click[black 1905019-5]",
+              "33": "click[05-4 wine red suede]",
+              "34": "click[5019-4 blue]",
+              "35": "click[5019-4 grey]",
+              "36": "click[5019-4 light pink]",
+              "37": "click[black 5019-3]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e2c88e68220421436e66c2b764b70d5941470ed82bb34c4f1e23f2da7b4554f3",
+      "attempts": [
+        {
+          "seconds": 1.20845877379179,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.2085831388831139,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "23",
+            "probabilities": {
+              "0": 0.021748933079576212,
+              "1": 0.022712373896210454,
+              "2": 0.052168860692293345,
+              "3": 0.029460172744663164,
+              "4": 0.02303678672773793,
+              "5": 0.10925235053011638,
+              "6": 0.01034169489158233,
+              "7": 0.006974848103283226,
+              "8": 0.007808122767253682,
+              "9": 0.0075146764142012875,
+              "10": 0.014498417025226699,
+              "11": 0.012139325552000197,
+              "12": 0.016960037182699766,
+              "13": 0.01783595505754371,
+              "14": 0.01729695036425376,
+              "15": 0.013698032928541746,
+              "16": 0.014678628131266646,
+              "17": 0.010652078973766962,
+              "18": 0.004416720191521828,
+              "19": 0.006793878271228699,
+              "20": 0.00335294078642745,
+              "21": 0.006380187177783542,
+              "22": 0.008602010202448416,
+              "23": 0.48592229138556314,
+              "24": 0.006322795849992094,
+              "25": 0.014738910850757089,
+              "26": 0.003459213664942429,
+              "27": 0.0032296955844721927,
+              "28": 0.003088063693778696,
+              "29": 0.005522428219175811,
+              "30": 0.006746417294089077,
+              "31": 0.003964195380678484,
+              "32": 0.00322516773540377,
+              "33": 0.005572158284000944,
+              "34": 0.0051364836342362805,
+              "35": 0.0057028372135547,
+              "36": 0.0056960948994818905,
+              "37": 0.0033492646182460817
+            },
+            "confidence": 0.4720282992608486
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 27504,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 38,
+          "inference_seconds": 1.206606861203909,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[tan 1905019-5]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.0365001931786537
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 6 wide [SEP] 6.5 wide [SEP] 7 wide [SEP] 7.5 wide [SEP] 8 wide [SEP] 8.5 wide [SEP] 9 wide [SEP] 9.5 wide [SEP] 10 wide [SEP] 10.5 wide [SEP] 11 wide [SEP] 12 wide [SEP] color [SEP] brown 5019-219m [SEP] grey 1905019-5 [SEP] black 5019-219m [SEP] light pink 1905019-5 [SEP] 05-4 light pink suede [SEP] tan 1905019-5 [SEP] 05-4 black suede [SEP] 05-4 tan suede [SEP] blue 1905019-5 [SEP] wine red 1905019-5 [SEP] wine red 5019-219m [SEP] 05-4 blue suede [SEP] 05-4 grey suede [SEP] light pink 5019-219m [SEP] black 1905019-5 [SEP] 05-4 wine red suede [SEP] 5019-4 blue [SEP] 5019-4 grey [SEP] 5019-4 light pink [SEP] black 5019-3 [SEP] Ataiwee Women's Wide Width Ballet Flats. [SEP] Price: $23.99 to $34.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 6 wide [SEP] 6.5 wide [SEP] 7 wide [SEP] 7.5 wide [SEP] 8 wide [SEP] 8.5 wide [SEP] 9 wide [SEP] 9.5 wide [SEP] 10 wide [SEP] 10.5 wide [SEP] 11 wide [SEP] 12 wide [SEP] color [SEP] brown 5019-219m [SEP] grey 1905019-5 [SEP] black 5019-219m [SEP] light pink 1905019-5 [SEP] 05-4 light pink suede [SEP] tan 1905019-5 [SEP] 05-4 black suede [SEP] 05-4 tan suede [SEP] blue 1905019-5 [SEP] wine red 1905019-5 [SEP] wine red 5019-219m [SEP] 05-4 blue suede [SEP] 05-4 grey suede [SEP] light pink 5019-219m [SEP] black 1905019-5 [SEP] 05-4 wine red suede [SEP] 5019-4 blue [SEP] 5019-4 grey [SEP] 5019-4 light pink [SEP] black 5019-3 [SEP] Ataiwee Women's Wide Width Ballet Flats. [SEP] Price: $23.99 to $34.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[i am looking for ataiwee women's wide width ballet flats which is well made of soft leather, flexible tpr out-sole, lightweight and comfortable. tan 1905019-5, 9 wide size preferable, and price lower than 60.00 dollars]\nclick[b0962p6lcs]\nclick[9 wide]\nclick[tan 1905019-5]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[6 wide]",
+              "7": "click[6.5 wide]",
+              "8": "click[7 wide]",
+              "9": "click[7.5 wide]",
+              "10": "click[8 wide]",
+              "11": "click[8.5 wide]",
+              "12": "click[9 wide]",
+              "13": "click[9.5 wide]",
+              "14": "click[10 wide]",
+              "15": "click[10.5 wide]",
+              "16": "click[11 wide]",
+              "17": "click[12 wide]",
+              "18": "click[brown 5019-219m]",
+              "19": "click[grey 1905019-5]",
+              "20": "click[black 5019-219m]",
+              "21": "click[light pink 1905019-5]",
+              "22": "click[05-4 light pink suede]",
+              "23": "click[tan 1905019-5]",
+              "24": "click[05-4 black suede]",
+              "25": "click[05-4 tan suede]",
+              "26": "click[blue 1905019-5]",
+              "27": "click[wine red 1905019-5]",
+              "28": "click[wine red 5019-219m]",
+              "29": "click[05-4 blue suede]",
+              "30": "click[05-4 grey suede]",
+              "31": "click[light pink 5019-219m]",
+              "32": "click[black 1905019-5]",
+              "33": "click[05-4 wine red suede]",
+              "34": "click[5019-4 blue]",
+              "35": "click[5019-4 grey]",
+              "36": "click[5019-4 light pink]",
+              "37": "click[black 5019-3]"
+            }
+          }
+        }
+      },
+      "request_sha256": "8e67af71069fd11273c306c296761f455ab0cba33777657f90ace54cc9765d91",
+      "attempts": [
+        {
+          "seconds": 1.24190316721797,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 1.2420675456523895,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.02820425531209135,
+              "1": 0.029146249969204115,
+              "2": 0.07005302330201896,
+              "3": 0.04446122023409567,
+              "4": 0.03977790785197414,
+              "5": 0.41334367540667066,
+              "6": 0.014354139277342554,
+              "7": 0.012270224062903278,
+              "8": 0.010559348620406665,
+              "9": 0.012642505240195646,
+              "10": 0.01949481133666585,
+              "11": 0.018415842377470668,
+              "12": 0.022431047202535033,
+              "13": 0.026150045909958813,
+              "14": 0.02602729251748973,
+              "15": 0.021635575245178066,
+              "16": 0.021799921520314583,
+              "17": 0.01784590863422381,
+              "18": 0.007886852028092008,
+              "19": 0.004995026784854714,
+              "20": 0.005319568682672994,
+              "21": 0.007159600682056524,
+              "22": 0.008874666641937994,
+              "23": 0.024749231407542104,
+              "24": 0.007510756647251267,
+              "25": 0.017264285873232414,
+              "26": 0.004395266174885448,
+              "27": 0.004178159769480317,
+              "28": 0.004213148730153162,
+              "29": 0.006526918648925495,
+              "30": 0.0077891862186662665,
+              "31": 0.0049631456227895296,
+              "32": 0.005384027126875275,
+              "33": 0.006395614390984888,
+              "34": 0.006348373806543401,
+              "35": 0.0058376232376480125,
+              "36": 0.006413367099987968,
+              "37": 0.005182186404680668
+            },
+            "confidence": 0.3974880990663103
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 28074,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 38,
+          "inference_seconds": 1.2286668233573437,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 4.315490562468767
+    }
+  ]
+}

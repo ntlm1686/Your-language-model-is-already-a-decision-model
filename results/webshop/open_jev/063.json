@@ -1,0 +1,3703 @@
+{
+  "task_id": 63,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars",
+  "instruction_sha256": "155566aa10e703f3ebfc029a503970d3440b97cce4c2228b8bed3f2640aee271",
+  "reward": 1.0,
+  "score": 100.0,
+  "success": true,
+  "termination": "purchase",
+  "steps": 55,
+  "elapsed_seconds": 11.622648883610964,
+  "decision_seconds": 8.235923316329718,
+  "input_tokens": 151055,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Search",
+      "action": "search[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.06568875163793564
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08SQHTMPR [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] $17.93 to $69.28 [SEP] B09B5TQWRT [SEP] HGWXX7 Capri Pants for Women Plus Size Cotton Wide Leg Pants Linen Summer Beach Harem Comfy Pants Print Cropped Trouser [SEP] $11.29 [SEP] B091GY58SC [SEP] Women's Linen Capri Pants Loose Cropped Wide Leg Pants Floral Comfy Elastic Waist Lightweight Trousers with Pockets [SEP] $16.15 to $20.39 [SEP] B096XYVQ9H [SEP] Wide Leg Pants for Women Paper Bag Belt Elastic High Waist Palazzo Long Trousers Casual Plus Size Pants with Pockets [SEP] $12.69 to $13.69 [SEP] B084R8D1S4 [SEP] Woman Within Women's Plus Size Convertible Length Cargo Pant [SEP] $26.04 to $33.25 [SEP] B09PFZHV78 [SEP] Gillberry Men's Classic Relaxed Vintage Denim Jeans Retro Men Stretch Retro Leg Comfort Bell Bottom Trousers Wide Leg [SEP] $32.29 [SEP] B09PBDFLLY [SEP] Women Yoga Short Pants Dolphin Running Athletic Shorts Sports Shorts Gym Dance Workout Shorts Sexy Tights [SEP] $4.48 [SEP] B09PBD4RY1 [SEP] Nyybw Women's High Rise Bermuda Shorts Lounge Athletic Casual Jersey Cotton Sweat Shorts with Pockets [SEP] $16.99 [SEP] B09PBF588W [SEP] Nyybw Workout Shorts for Women with Side Pockets High Waist Running Sports Biker Gym Shorts Yoga Tights [SEP] $11.49 [SEP] B09PBV2G93 [SEP] Gillberry Men's Flannel Pajamas Pants Pockets Bottoms Lounge Sleepwear Soft Jogger Pant Sweatpants for Men Red Black [SEP] $16.89",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08SQHTMPR [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] $17.93 to $69.28 [SEP] B09B5TQWRT [SEP] HGWXX7 Capri Pants for Women Plus Size Cotton Wide Leg Pants Linen Summer Beach Harem Comfy Pants Print Cropped Trouser [SEP] $11.29 [SEP] B091GY58SC [SEP] Women's Linen Capri Pants Loose Cropped Wide Leg Pants Floral Comfy Elastic Waist Lightweight Trousers with Pockets [SEP] $16.15 to $20.39 [SEP] B096XYVQ9H [SEP] Wide Leg Pants for Women Paper Bag Belt Elastic High Waist Palazzo Long Trousers Casual Plus Size Pants with Pockets [SEP] $12.69 to $13.69 [SEP] B084R8D1S4 [SEP] Woman Within Women's Plus Size Convertible Length Cargo Pant [SEP] $26.04 to $33.25 [SEP] B09PFZHV78 [SEP] Gillberry Men's Classic Relaxed Vintage Denim Jeans Retro Men Stretch Retro Leg Comfort Bell Bottom Trousers Wide Leg [SEP] $32.29 [SEP] B09PBDFLLY [SEP] Women Yoga Short Pants Dolphin Running Athletic Shorts Sports Shorts Gym Dance Workout Shorts Sexy Tights [SEP] $4.48 [SEP] B09PBD4RY1 [SEP] Nyybw Women's High Rise Bermuda Shorts Lounge Athletic Casual Jersey Cotton Sweat Shorts with Pockets [SEP] $16.99 [SEP] B09PBF588W [SEP] Nyybw Workout Shorts for Women with Side Pockets High Waist Running Sports Biker Gym Shorts Yoga Tights [SEP] $11.49 [SEP] B09PBV2G93 [SEP] Gillberry Men's Flannel Pajamas Pants Pockets Bottoms Lounge Sleepwear Soft Jogger Pant Sweatpants for Men Red Black [SEP] $16.89\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b08sqhtmpr]",
+              "3": "click[b09b5tqwrt]",
+              "4": "click[b091gy58sc]",
+              "5": "click[b096xyvq9h]",
+              "6": "click[b084r8d1s4]",
+              "7": "click[b09pfzhv78]",
+              "8": "click[b09pbdflly]",
+              "9": "click[b09pbd4ry1]",
+              "10": "click[b09pbf588w]",
+              "11": "click[b09pbv2g93]"
+            }
+          }
+        }
+      },
+      "request_sha256": "00e73816987855ef0337bd3faa3f917752328c3b853d9d1c123070013fccfd6f",
+      "attempts": [
+        {
+          "seconds": 0.37910084426403046,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.379239983856678,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.1012102052814932,
+              "1": 0.21126752702414733,
+              "2": 0.16018044896597908,
+              "3": 0.11388088341638371,
+              "4": 0.10244136949537481,
+              "5": 0.07688593859030825,
+              "6": 0.10079417392894982,
+              "7": 0.030634592148860405,
+              "8": 0.0485624371395152,
+              "9": 0.020550896714411578,
+              "10": 0.019479004871652546,
+              "11": 0.01411252242292398
+            },
+            "confidence": 0.13956457493543345
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8538,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.37713610008358955,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.5251568704843521
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09PLD195K [SEP] Gillberry Men's Cargo Shorts Summer Pocket Drawstring Sweatpants Men Short Cycling Running Outdoor Pants White Green [SEP] $11.19 [SEP] B09SPY7MC7 [SEP] Gillberry Men's Flannel Plaid Pajama Bottoms Soft Elastic Waistband Sleep Lounge Pant [SEP] $11.79 [SEP] B09BYXRYYJ [SEP] BEUU Women’s Comfy Casual Pajama Pants Floral Stretchy Drawstring Wide Leg Lounge Pants Cotton Linen Long Pants Trousers [SEP] $3.98 to $7.99 [SEP] B07GWHPXKW [SEP] Womens Denim Distressed Ripped Hole Stretch Slim Sexy Jeans Hip Lift Pants [SEP] $13.49 to $20.49 [SEP] B07DGKC4BR [SEP] Women’s Stretch Yoga Cargo Chef Pant (XS-3X) [SEP] $29.98 to $31.98 [SEP] B01MS4SM6R [SEP] Women Butt Lift 3 Button High Wide Waist Stretch Denim Bermuda Capri Shorts [SEP] $11.44 to $26.54 [SEP] B074K8L5DF [SEP] Lee Women's Plus-Size Relaxed-Fit Denim Capri Jean [SEP] $24.73 to $59.0 [SEP] B09QMNR8ST [SEP] Maternity Capri Leggings Over The Belly Pregnant Women Buttery Soft High Waisted Workout Joggers Yoga Pants Sweatpants [SEP] $4.49 to $11.99 [SEP] B008LWR854 [SEP] Dickies Women's Plus-Size Relaxed Straight Stretch Twill Pant [SEP] $27.99 to $43.28",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B099Z4T56C [SEP] Women's New Solid Color Sexy Fashion Long-sleeved Casual Top [SEP] $10.99 to $14.99 [SEP] B09PLD195K [SEP] Gillberry Men's Cargo Shorts Summer Pocket Drawstring Sweatpants Men Short Cycling Running Outdoor Pants White Green [SEP] $11.19 [SEP] B09SPY7MC7 [SEP] Gillberry Men's Flannel Plaid Pajama Bottoms Soft Elastic Waistband Sleep Lounge Pant [SEP] $11.79 [SEP] B09BYXRYYJ [SEP] BEUU Women’s Comfy Casual Pajama Pants Floral Stretchy Drawstring Wide Leg Lounge Pants Cotton Linen Long Pants Trousers [SEP] $3.98 to $7.99 [SEP] B07GWHPXKW [SEP] Womens Denim Distressed Ripped Hole Stretch Slim Sexy Jeans Hip Lift Pants [SEP] $13.49 to $20.49 [SEP] B07DGKC4BR [SEP] Women’s Stretch Yoga Cargo Chef Pant (XS-3X) [SEP] $29.98 to $31.98 [SEP] B01MS4SM6R [SEP] Women Butt Lift 3 Button High Wide Waist Stretch Denim Bermuda Capri Shorts [SEP] $11.44 to $26.54 [SEP] B074K8L5DF [SEP] Lee Women's Plus-Size Relaxed-Fit Denim Capri Jean [SEP] $24.73 to $59.0 [SEP] B09QMNR8ST [SEP] Maternity Capri Leggings Over The Belly Pregnant Women Buttery Soft High Waisted Workout Joggers Yoga Pants Sweatpants [SEP] $4.49 to $11.99 [SEP] B008LWR854 [SEP] Dickies Women's Plus-Size Relaxed Straight Stretch Twill Pant [SEP] $27.99 to $43.28\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b099z4t56c]",
+              "4": "click[b09pld195k]",
+              "5": "click[b09spy7mc7]",
+              "6": "click[b09byxryyj]",
+              "7": "click[b07gwhpxkw]",
+              "8": "click[b07dgkc4br]",
+              "9": "click[b01ms4sm6r]",
+              "10": "click[b074k8l5df]",
+              "11": "click[b09qmnr8st]",
+              "12": "click[b008lwr854]"
+            }
+          }
+        }
+      },
+      "request_sha256": "dbb8d3b2558d1e3bbd85e3ebbb8a0e732f9b714eceafd4ab6257a640fc1fad07",
+      "attempts": [
+        {
+          "seconds": 0.4086715057492256,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.40882230922579765,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.12141705136430259,
+              "1": 0.09896766361217525,
+              "2": 0.23923174512891557,
+              "3": 0.01746272283994616,
+              "4": 0.022594777909656284,
+              "5": 0.014029343479182211,
+              "6": 0.04543685158895684,
+              "7": 0.034195445432584896,
+              "8": 0.06781723922819174,
+              "9": 0.06967210897134364,
+              "10": 0.1133700756009283,
+              "11": 0.05412778791509821,
+              "12": 0.10167718692871837
+            },
+            "confidence": 0.1758343905563252
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9283,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4067065790295601,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.0147785805165768
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09QCSRJXS [SEP] Burband Womens Plus Size Stretch Drawstring Stretch Floral Print Jersey Capri Leggings High Rise Skinny Jeans Pants S-5XL [SEP] $9.54 [SEP] B09QCVFN44 [SEP] Burband Womens Flattering Shinny Pants Faux Leather Leggings Wet Look Metallic Waist Legging Pants Punk Hip Hop Trousers [SEP] $8.48 [SEP] B07DGQ1Y53 [SEP] Women’s Houndstooth Chef Pant (XS-3X, 2 Colors) [SEP] $28.98 to $31.98 [SEP] B09QS2QX2L [SEP] Realdo Womens Solid Color High Waist Exercise to Lift Buttocks Tight Athletic Pants Yoga Trousers with Pockets [SEP] $13.49 [SEP] B09PNLZ6DG [SEP] Gillberry Men's Swim Trunks, Mens Summer Shorts, Men Big and Tall Workout Shorts Biker Short Joggers Sweatpants Pockets [SEP] $9.79 to $14.79 [SEP] B093C86GX3 [SEP] MONISE Womens Plus Size Capri Pants Summer Casual Cotton Linen Loose Wide Leg Harem Pants Comfy Palazzo Yoga Work Trousers [SEP] $2.69 to $17.99 [SEP] B088PWVB7Y [SEP] ANTHONY RICHARDS Women's Contrast Stripe Sweatpants - Cotton Capris with Elastic Waist [SEP] $15.99 to $28.99 [SEP] B09STMX5JY [SEP] Women Yoga Shorts,Tummy Control Yoga Shorts Fashion Sexy Hollow Sweatpants High Waist Solid Color Bandage Fitness Shorts [SEP] $5.76 [SEP] B09SL5TVLX [SEP] Wide Leg Palazzo Pants for Women - Buttery Soft Printed High Waisted Cropped Capri Pants Casual Lounge Pants Trousers [SEP] $11.68 to $12.68 [SEP] B09QCS68WB [SEP] Burband Womens Skirted Leggings Capri Skirt Yoga Active Tights Pants Golf Tennis Workout Skort Sport Leggings with Pockets [SEP] $11.41",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09QCSRJXS [SEP] Burband Womens Plus Size Stretch Drawstring Stretch Floral Print Jersey Capri Leggings High Rise Skinny Jeans Pants S-5XL [SEP] $9.54 [SEP] B09QCVFN44 [SEP] Burband Womens Flattering Shinny Pants Faux Leather Leggings Wet Look Metallic Waist Legging Pants Punk Hip Hop Trousers [SEP] $8.48 [SEP] B07DGQ1Y53 [SEP] Women’s Houndstooth Chef Pant (XS-3X, 2 Colors) [SEP] $28.98 to $31.98 [SEP] B09QS2QX2L [SEP] Realdo Womens Solid Color High Waist Exercise to Lift Buttocks Tight Athletic Pants Yoga Trousers with Pockets [SEP] $13.49 [SEP] B09PNLZ6DG [SEP] Gillberry Men's Swim Trunks, Mens Summer Shorts, Men Big and Tall Workout Shorts Biker Short Joggers Sweatpants Pockets [SEP] $9.79 to $14.79 [SEP] B093C86GX3 [SEP] MONISE Womens Plus Size Capri Pants Summer Casual Cotton Linen Loose Wide Leg Harem Pants Comfy Palazzo Yoga Work Trousers [SEP] $2.69 to $17.99 [SEP] B088PWVB7Y [SEP] ANTHONY RICHARDS Women's Contrast Stripe Sweatpants - Cotton Capris with Elastic Waist [SEP] $15.99 to $28.99 [SEP] B09STMX5JY [SEP] Women Yoga Shorts,Tummy Control Yoga Shorts Fashion Sexy Hollow Sweatpants High Waist Solid Color Bandage Fitness Shorts [SEP] $5.76 [SEP] B09SL5TVLX [SEP] Wide Leg Palazzo Pants for Women - Buttery Soft Printed High Waisted Cropped Capri Pants Casual Lounge Pants Trousers [SEP] $11.68 to $12.68 [SEP] B09QCS68WB [SEP] Burband Womens Skirted Leggings Capri Skirt Yoga Active Tights Pants Golf Tennis Workout Skort Sport Leggings with Pockets [SEP] $11.41\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09qcsrjxs]",
+              "4": "click[b09qcvfn44]",
+              "5": "click[b07dgq1y53]",
+              "6": "click[b09qs2qx2l]",
+              "7": "click[b09pnlz6dg]",
+              "8": "click[b093c86gx3]",
+              "9": "click[b088pwvb7y]",
+              "10": "click[b09stmx5jy]",
+              "11": "click[b09sl5tvlx]",
+              "12": "click[b09qcs68wb]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1e1895b93d5d7881ff5006dfd99b98af9a7f217e88921d7e4a70ee503c0b828f",
+      "attempts": [
+        {
+          "seconds": 0.43210166320204735,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.43223762139678,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.14874307062143838,
+              "1": 0.1084173987079511,
+              "2": 0.28939379054242287,
+              "3": 0.03883525953483885,
+              "4": 0.023750699376201858,
+              "5": 0.032349342105409684,
+              "6": 0.03384169815271167,
+              "7": 0.03260273328301956,
+              "8": 0.0771590395628281,
+              "9": 0.056467508717699344,
+              "10": 0.02898695522170235,
+              "11": 0.0757785544480564,
+              "12": 0.053673949725719976
+            },
+            "confidence": 0.23017660642095808
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9869,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4300597421824932,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.5258502699434757
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B098L19BV3 [SEP] SLIM-SATION Women's Plus Size Pants [SEP] $46.78 to $76.11 [SEP] B09QCT1SLR [SEP] Burband Womens Stretch High Waisted Ripped Knee Denim Leggings Shaping Pull-on Butt Lift Skinny Jeans Plus Size Pants [SEP] $14.61 [SEP] B09QS3Z75M [SEP] Womens High Waisted Yoga Shorts Textured Anti-Cellulite Booty Workout Leggings Tights Butt Lift Running Hot Shorts [SEP] $9.99 [SEP] B08WRN4TB3 [SEP] GOGOBO Butt Lifting Leggings,Women's High Waist Yoga Pants Prints Bowknot Strap Tummy Control Leggings Workout Running Tights [SEP] $6.54 to $7.75 [SEP] B09SR76KXM [SEP] Merthy Womens Floral Printed Stretchy Cute Jeans Shorts Plus Size Mid Rise Distressed Hot Pants Skinny Bermuda Denim Short [SEP] $4.64 [SEP] B09SSTNDQV [SEP] Merthy Womens High Waist Bermuda Shorts Distressed Stretch Frayed Raw Hem Jeans Short Retro Ripped Plus Size Denim Trouser [SEP] $4.55 [SEP] B09QS643MZ [SEP] Realdo Women's Pure Color High-Waisted Straight-Barrel Small Feet Jeans Stretch Slim Denim Butt Lift Pencil Pants [SEP] $10.99 to $16.99 [SEP] B098JQZM9F [SEP] Women's High Rise Capris Elastic Waist Pull On Bermuda Pants Cropped Trousers Fashion Solid Color Sweatpants Shorts [SEP] $4.99 to $8.99 [SEP] B09SM5TF5S [SEP] GOGOBO Womens Leggings Women's High Waist Yoga Short Side Pocket Workout Tummy Control Bike Shorts Running Exercise Leggings [SEP] $5.91 [SEP] B09SQ39HT8 [SEP] GOGOBO Leggings for Women,Women's High Waist Yoga Short Side Pocket Workout Tummy Control Bike Shorts Running Sports Leggings [SEP] $5.87",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 4 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B098L19BV3 [SEP] SLIM-SATION Women's Plus Size Pants [SEP] $46.78 to $76.11 [SEP] B09QCT1SLR [SEP] Burband Womens Stretch High Waisted Ripped Knee Denim Leggings Shaping Pull-on Butt Lift Skinny Jeans Plus Size Pants [SEP] $14.61 [SEP] B09QS3Z75M [SEP] Womens High Waisted Yoga Shorts Textured Anti-Cellulite Booty Workout Leggings Tights Butt Lift Running Hot Shorts [SEP] $9.99 [SEP] B08WRN4TB3 [SEP] GOGOBO Butt Lifting Leggings,Women's High Waist Yoga Pants Prints Bowknot Strap Tummy Control Leggings Workout Running Tights [SEP] $6.54 to $7.75 [SEP] B09SR76KXM [SEP] Merthy Womens Floral Printed Stretchy Cute Jeans Shorts Plus Size Mid Rise Distressed Hot Pants Skinny Bermuda Denim Short [SEP] $4.64 [SEP] B09SSTNDQV [SEP] Merthy Womens High Waist Bermuda Shorts Distressed Stretch Frayed Raw Hem Jeans Short Retro Ripped Plus Size Denim Trouser [SEP] $4.55 [SEP] B09QS643MZ [SEP] Realdo Women's Pure Color High-Waisted Straight-Barrel Small Feet Jeans Stretch Slim Denim Butt Lift Pencil Pants [SEP] $10.99 to $16.99 [SEP] B098JQZM9F [SEP] Women's High Rise Capris Elastic Waist Pull On Bermuda Pants Cropped Trousers Fashion Solid Color Sweatpants Shorts [SEP] $4.99 to $8.99 [SEP] B09SM5TF5S [SEP] GOGOBO Womens Leggings Women's High Waist Yoga Short Side Pocket Workout Tummy Control Bike Shorts Running Exercise Leggings [SEP] $5.91 [SEP] B09SQ39HT8 [SEP] GOGOBO Leggings for Women,Women's High Waist Yoga Short Side Pocket Workout Tummy Control Bike Shorts Running Sports Leggings [SEP] $5.87\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b098l19bv3]",
+              "4": "click[b09qct1slr]",
+              "5": "click[b09qs3z75m]",
+              "6": "click[b08wrn4tb3]",
+              "7": "click[b09sr76kxm]",
+              "8": "click[b09sstndqv]",
+              "9": "click[b09qs643mz]",
+              "10": "click[b098jqzm9f]",
+              "11": "click[b09sm5tf5s]",
+              "12": "click[b09sq39ht8]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7261aa72321e1b44f922778b8c5a23fa058f71c405cefdeac8aad8ccce919161",
+      "attempts": [
+        {
+          "seconds": 0.4282173849642277,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4283844754099846,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.18907430399091513,
+              "1": 0.15153551910925214,
+              "2": 0.2882361873667754,
+              "3": 0.09553597770614544,
+              "4": 0.015784761967566032,
+              "5": 0.012441681882301426,
+              "6": 0.029484367187926058,
+              "7": 0.022975942615038738,
+              "8": 0.02888282579280787,
+              "9": 0.02894930611993725,
+              "10": 0.09763350696249741,
+              "11": 0.021443649300756092,
+              "12": 0.018021969998080832
+            },
+            "confidence": 0.22892253631400675
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9726,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4263179413974285,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.043871395289898
+    },
+    {
+      "step": 5,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B097RGT165 [SEP] ZERDOCEAN Women's Plus Size Active Yoga Lounge Indoor Capri Casual Comfy Relaxed Joggers Pants with Pockets Drawstring [SEP] $19.99 to $22.99 [SEP] B07VFY5PC7 [SEP] Men's Performance Stretch Jogger Chef Pant (2 Colors, S-3X) [SEP] $43.98 [SEP] B09SRK92T8 [SEP] Merthy Womens Stretchy Denim Bermuda Shorts Sexy Ripped Hole Rolled Hem Jean Shorts Distressed High Waisted Capris Pants [SEP] $8.29 [SEP] B09Q8TFSX2 [SEP] 2 Pack High Waisted Leggings for Women with Pockets, Womens Butt Lifting Tummy Control Yoga Pants Buttery Soft Leggings [SEP] $3.11 [SEP] B09QCT52JH [SEP] Burband Womens Jeans Drawstring Elastic Waist Sweatpants Active Wear Jogger Pants Sports Lounge Pants with Pockets [SEP] $16.27 [SEP] B09R75BGW3 [SEP] Burband Womens Stretchy Bermuda Shorts Jeans Fake Denim Leggings High Waist Butterfly Printed Jeggings Plus Size Biker Short [SEP] $5.27 [SEP] B09M8P4CQ1 [SEP] Burband Womens Elastic Shaping Hip Push Up Faux Leather Leggings High Waisted Stretch Tights PU Pleather Pant with Pockets [SEP] $22.34 [SEP] B09QCT98B5 [SEP] Burband Womens Faux Leather Leggings Pants PU Shaping Stretchy High Waisted Elastic Tights Sexy Scrunch Butt Lifting Jeans [SEP] $16.66 [SEP] B09QCTLR52 [SEP] Burband Womens Gradient Seamless Leggings with Pockets High Waist Tummy Control Yoga Pants Tye Die Ruched Booty Tights [SEP] $13.34 [SEP] B09QCTTY49 [SEP] Burband Womens V Cross Waist Yoga Designer Leggings High Waisted Tummy Control Workout Running Tights Athletic Yoga Pants [SEP] $10.06",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 5 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B097RGT165 [SEP] ZERDOCEAN Women's Plus Size Active Yoga Lounge Indoor Capri Casual Comfy Relaxed Joggers Pants with Pockets Drawstring [SEP] $19.99 to $22.99 [SEP] B07VFY5PC7 [SEP] Men's Performance Stretch Jogger Chef Pant (2 Colors, S-3X) [SEP] $43.98 [SEP] B09SRK92T8 [SEP] Merthy Womens Stretchy Denim Bermuda Shorts Sexy Ripped Hole Rolled Hem Jean Shorts Distressed High Waisted Capris Pants [SEP] $8.29 [SEP] B09Q8TFSX2 [SEP] 2 Pack High Waisted Leggings for Women with Pockets, Womens Butt Lifting Tummy Control Yoga Pants Buttery Soft Leggings [SEP] $3.11 [SEP] B09QCT52JH [SEP] Burband Womens Jeans Drawstring Elastic Waist Sweatpants Active Wear Jogger Pants Sports Lounge Pants with Pockets [SEP] $16.27 [SEP] B09R75BGW3 [SEP] Burband Womens Stretchy Bermuda Shorts Jeans Fake Denim Leggings High Waist Butterfly Printed Jeggings Plus Size Biker Short [SEP] $5.27 [SEP] B09M8P4CQ1 [SEP] Burband Womens Elastic Shaping Hip Push Up Faux Leather Leggings High Waisted Stretch Tights PU Pleather Pant with Pockets [SEP] $22.34 [SEP] B09QCT98B5 [SEP] Burband Womens Faux Leather Leggings Pants PU Shaping Stretchy High Waisted Elastic Tights Sexy Scrunch Butt Lifting Jeans [SEP] $16.66 [SEP] B09QCTLR52 [SEP] Burband Womens Gradient Seamless Leggings with Pockets High Waist Tummy Control Yoga Pants Tye Die Ruched Booty Tights [SEP] $13.34 [SEP] B09QCTTY49 [SEP] Burband Womens V Cross Waist Yoga Designer Leggings High Waisted Tummy Control Workout Running Tights Athletic Yoga Pants [SEP] $10.06\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b097rgt165]",
+              "4": "click[b07vfy5pc7]",
+              "5": "click[b09srk92t8]",
+              "6": "click[b09q8tfsx2]",
+              "7": "click[b09qct52jh]",
+              "8": "click[b09r75bgw3]",
+              "9": "click[b09m8p4cq1]",
+              "10": "click[b09qct98b5]",
+              "11": "click[b09qctlr52]",
+              "12": "click[b09qctty49]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7e2969c975628ee97828ac810a8c8258e6aca2c74f53890fc0a6084be90a199f",
+      "attempts": [
+        {
+          "seconds": 0.43089190497994423,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4310172460973263,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2110526275152086,
+              "1": 0.14075994847803727,
+              "2": 0.28071852278198567,
+              "3": 0.1312665670767802,
+              "4": 0.016628695038924786,
+              "5": 0.03378086728856508,
+              "6": 0.02768338306255419,
+              "7": 0.024451217220491882,
+              "8": 0.035659621462572434,
+              "9": 0.019632033195205314,
+              "10": 0.02393969144902864,
+              "11": 0.024338237095936906,
+              "12": 0.03008858833470893
+            },
+            "confidence": 0.22077839968048446
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9835,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4286782816052437,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.545062590390444
+    },
+    {
+      "step": 6,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 6 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "47844d62cf2f7ec98c80e7ee104bfb152f549b9962611cd95f78a950153ccd71",
+      "attempts": [
+        {
+          "seconds": 0.06667472049593925,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06677389517426491,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.27368725712925773,
+              "1": 0.2174294198453727,
+              "2": 0.5088833230253696
+            },
+            "confidence": 0.2633249845380545
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 801,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0647047758102417,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.6710565015673637
+    },
+    {
+      "step": 7,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 7 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bdbe180c8d7a39c7da66a27646c716342ca78174b0f05fbd28ca02895fd88be0",
+      "attempts": [
+        {
+          "seconds": 0.0673568919301033,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06744564697146416,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2786437606110152,
+              "1": 0.22315966188205943,
+              "2": 0.4981965775069253
+            },
+            "confidence": 0.24729486626038796
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 816,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06581712141633034,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.798579163849354
+    },
+    {
+      "step": 8,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 8 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "b331034e8b4547f363066eae433a441cc49d8177f0c81bd3e0faaa8bef5a39f2",
+      "attempts": [
+        {
+          "seconds": 0.07035517692565918,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0704389326274395,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.28986019824442105,
+              "1": 0.22201437288146833,
+              "2": 0.48812542887411065
+            },
+            "confidence": 0.23218814331116597
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 831,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06882816180586815,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 2.928194086998701
+    },
+    {
+      "step": 9,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 9 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "2bf13636bb4fc5f4c8c95963117bf1ad6a318b326a182a1eefa713e58e6ede20",
+      "attempts": [
+        {
+          "seconds": 0.06718328222632408,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06725579500198364,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2978223296297204,
+              "1": 0.2289027877871739,
+              "2": 0.4732748825831056
+            },
+            "confidence": 0.20991232387465844
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 846,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06571850180625916,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.0556913316249847
+    },
+    {
+      "step": 10,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 10 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "cc731e400fb90dfdd22a5461830c0ed555a6f96bc5d2f93a25837370f8cd4cfa",
+      "attempts": [
+        {
+          "seconds": 0.07464180886745453,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07473383098840714,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2985820757559907,
+              "1": 0.24277203033508749,
+              "2": 0.45864589390892174
+            },
+            "confidence": 0.1879688408633826
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 864,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0665278285741806,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.191907726228237
+    },
+    {
+      "step": 11,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 11 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "db04dd67c83b678d0b6ff78776200ac275ee794628f115d421cf104ce95a1f4c",
+      "attempts": [
+        {
+          "seconds": 0.069512989372015,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06959979236125946,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2806611518799086,
+              "1": 0.21924101605433058,
+              "2": 0.5000978320657609
+            },
+            "confidence": 0.2501467480986413
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0678018145263195,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.3226381726562977
+    },
+    {
+      "step": 12,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 12 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "74c50b1470b3d7c38028ce01bd13b9df4b4f69c5bee9deeb1bc932976465ea0f",
+      "attempts": [
+        {
+          "seconds": 0.06556737795472145,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06565071642398834,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2825912004229024,
+              "1": 0.22058225365668538,
+              "2": 0.49682654592041225
+            },
+            "confidence": 0.24523981888061838
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06400195509195328,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.4512504152953625
+    },
+    {
+      "step": 13,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 13 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "9517269d09ebd56b643685a788425929191ba5f83ae253caa5e38563b0c87776",
+      "attempts": [
+        {
+          "seconds": 0.06551266834139824,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06560355052351952,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2815801516290476,
+              "1": 0.21437148535107867,
+              "2": 0.5040483630198738
+            },
+            "confidence": 0.25607254452981065
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06398462504148483,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.5815302170813084
+    },
+    {
+      "step": 14,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 14 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3f92c2a3b1f549627bab33b5329b0cd7f06c6f47c2aaef39a9c8d9d28050567c",
+      "attempts": [
+        {
+          "seconds": 0.06615494564175606,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06623972579836845,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2837066232878655,
+              "1": 0.21937937501966254,
+              "2": 0.496914001692472
+            },
+            "confidence": 0.24537100253870803
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06438491493463516,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.707371924072504
+    },
+    {
+      "step": 15,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 15 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "32235177a819d0f30d3916f7ca4d6a0fbb6bf36ab23728d757336b9e01e45f26",
+      "attempts": [
+        {
+          "seconds": 0.07172535732388496,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0718129351735115,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.27712634791085256,
+              "1": 0.2158439927589927,
+              "2": 0.5070296593301548
+            },
+            "confidence": 0.26054448899523214
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06489604711532593,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.837920941412449
+    },
+    {
+      "step": 16,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 16 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ffc74230f6658cac53d4a15b0ff84f1c92abc17eb40568bf59d561bbed6d595f",
+      "attempts": [
+        {
+          "seconds": 0.06859360262751579,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0686606876552105,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.27740007514841913,
+              "1": 0.21484559702966396,
+              "2": 0.507754327821917
+            },
+            "confidence": 0.2616314917328755
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06352679803967476,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 3.9660224467515945
+    },
+    {
+      "step": 17,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 17 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f223b7f285b50b2a727398df54aeeb2be88ca89d0f5bc276f1ee980ac5fe4dc2",
+      "attempts": [
+        {
+          "seconds": 0.06674842536449432,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0668378472328186,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2689245795916319,
+              "1": 0.21152027710443,
+              "2": 0.519555143303938
+            },
+            "confidence": 0.27933271495590706
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06492726132273674,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.093045748770237
+    },
+    {
+      "step": 18,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 18 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3e3e7bf9b2deaee68b28902b030426a14825ce83c4b2f55e46c8223d0ae28695",
+      "attempts": [
+        {
+          "seconds": 0.0659460611641407,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06602215021848679,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.27276401687290047,
+              "1": 0.21184087046392622,
+              "2": 0.5153951126631733
+            },
+            "confidence": 0.2730926689947599
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0646253302693367,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.218688778579235
+    },
+    {
+      "step": 19,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 19 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "1afd444ec150fc738398044c046a8c86dc02873bb303d7cf593896cdadb1c927",
+      "attempts": [
+        {
+          "seconds": 0.06746210902929306,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06754155457019806,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2764875733583054,
+              "1": 0.21933757258163478,
+              "2": 0.5041748540600598
+            },
+            "confidence": 0.2562622810900897
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06583675742149353,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.347780387848616
+    },
+    {
+      "step": 20,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 20 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "6d2a7316f7d9ba1670c307a0c50c9a14c109c5a73f6f9096e41cab1cdb9eeb0f",
+      "attempts": [
+        {
+          "seconds": 0.06975889578461647,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06984483078122139,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.32136488881131875,
+              "1": 0.22744575442406523,
+              "2": 0.4511893567646161
+            },
+            "confidence": 0.17678403514692412
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06823238357901573,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.478176590055227
+    },
+    {
+      "step": 21,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 21 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 21 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "0ef5a1990eae76f694d09319403769c6db586d0d7a9f378a259fc72279589470",
+      "attempts": [
+        {
+          "seconds": 0.06785903498530388,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06794820725917816,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.316009506489975,
+              "1": 0.23188541435503227,
+              "2": 0.4521050791549928
+            },
+            "confidence": 0.17815761873248923
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0660659447312355,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.612082540988922
+    },
+    {
+      "step": 22,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 22 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 22 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "57c14171a825038d682113b8045e19b148456ae565e56d85b7fd7db66ffa6c2c",
+      "attempts": [
+        {
+          "seconds": 0.07526446133852005,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0753520093858242,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3077835381793757,
+              "1": 0.22814495363609816,
+              "2": 0.4640715081845262
+            },
+            "confidence": 0.1961072622767893
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0672672651708126,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.7493439838290215
+    },
+    {
+      "step": 23,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 23 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 23 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "fb5d88d1c7b61de6604973aa412ec7fccc2783837db75f17c4f1159b29fd4bfa",
+      "attempts": [
+        {
+          "seconds": 0.06854718551039696,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06863177195191383,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3037356060693492,
+              "1": 0.2236154775062759,
+              "2": 0.47264891642437495
+            },
+            "confidence": 0.20897337463656243
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06691187992691994,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 4.882063094526529
+    },
+    {
+      "step": 24,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 24 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 24 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e1a9431885b820ca7e439279a2007b170d6d8022bc131838948284d8c651d1bb",
+      "attempts": [
+        {
+          "seconds": 0.06847698614001274,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06856797263026237,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.30585597163912914,
+              "1": 0.23056028949622903,
+              "2": 0.46358373886464177
+            },
+            "confidence": 0.19537560829696266
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06673383340239525,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.014985851943493
+    },
+    {
+      "step": 25,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 25 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 25 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "7acc3999bead5d8b7983e9d9123df76b493fcdafd5f7e1e13e33bcfa70bf7ddf",
+      "attempts": [
+        {
+          "seconds": 0.07062416151165962,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07072167098522186,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29340720475486454,
+              "1": 0.22732069029625898,
+              "2": 0.47927210494887657
+            },
+            "confidence": 0.21890815742331485
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06902369856834412,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.148632798343897
+    },
+    {
+      "step": 26,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 26 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 26 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "167c174dab62abb23d5f766ca7d014ceb20f126ca050798aa9ad9f4c294478de",
+      "attempts": [
+        {
+          "seconds": 0.0686512216925621,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06874176114797592,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2993798931109679,
+              "1": 0.2257567658945696,
+              "2": 0.47486334099446253
+            },
+            "confidence": 0.2122950114916938
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06675007566809654,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.283226162195206
+    },
+    {
+      "step": 27,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 27 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 27 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "66a4e103899a511f80aab7a9b21d1fa318f72cdd647161bc9a4c1c096f39177c",
+      "attempts": [
+        {
+          "seconds": 0.06917354464530945,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06926584616303444,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29304598659139014,
+              "1": 0.22130944198451705,
+              "2": 0.48564457142409284
+            },
+            "confidence": 0.22846685713613926
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06739190593361855,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.41669325530529
+    },
+    {
+      "step": 28,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 28 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 28 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "eb145a8fdb0a75b8b48db9788ff53188c9d2cca3d2988c48409b28f1284bf506",
+      "attempts": [
+        {
+          "seconds": 0.06764077767729759,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06772619113326073,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2923973486707186,
+              "1": 0.2211929631146102,
+              "2": 0.48640968821467123
+            },
+            "confidence": 0.22961453232200685
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06580564752221107,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.550189279019833
+    },
+    {
+      "step": 29,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 29 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 29 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "757f0d7ee4bcdced7f665713fcd94327b3e71822f86817928c3b463589f5109f",
+      "attempts": [
+        {
+          "seconds": 0.06731414422392845,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0674007199704647,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2918291354540231,
+              "1": 0.22027436812677428,
+              "2": 0.4878964964192027
+            },
+            "confidence": 0.23184474462880403
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06542998924851418,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.688883021473885
+    },
+    {
+      "step": 30,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 30 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 30 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a0be0983e3b59b1e85c2353f909211c2f94c947421012529422d5385466dce53",
+      "attempts": [
+        {
+          "seconds": 0.06785975769162178,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06795360520482063,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29377374989104804,
+              "1": 0.22832614376678598,
+              "2": 0.47790010634216606
+            },
+            "confidence": 0.2168501595132491
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06588564440608025,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.822869773954153
+    },
+    {
+      "step": 31,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 31 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 31 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f81d42d8dbc43f4962386b437bd940434cb52955bcf4ae3626275854b9d45f9d",
+      "attempts": [
+        {
+          "seconds": 0.06775378063321114,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06787342578172684,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2997963606454648,
+              "1": 0.2303717612001376,
+              "2": 0.4698318781543977
+            },
+            "confidence": 0.20474781723159655
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06606324762105942,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 5.956748157739639
+    },
+    {
+      "step": 32,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 32 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 32 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "90dab489005315a6035ac31f1c7d147b407bfe750d6526d9db0aff076d853401",
+      "attempts": [
+        {
+          "seconds": 0.06697053462266922,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0671125203371048,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3051553338740168,
+              "1": 0.23267912803753185,
+              "2": 0.46216553808845134
+            },
+            "confidence": 0.19324830713267702
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06534669920802116,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.088431242853403
+    },
+    {
+      "step": 33,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 33 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 33 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3e0b5bc74cd24a6a14ee1bbf905175db93d8b8767e4a6d1711dbc545b67d5d5e",
+      "attempts": [
+        {
+          "seconds": 0.06708281487226486,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06717128679156303,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29751264921065224,
+              "1": 0.22821625829126643,
+              "2": 0.47427109249808136
+            },
+            "confidence": 0.21140663874712204
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06521298736333847,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.220807928591967
+    },
+    {
+      "step": 34,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 34 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 34 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bb165085ec1f9959113f92999343082d03c181187e6f47d1d201d944dde02e64",
+      "attempts": [
+        {
+          "seconds": 0.08040221780538559,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.08048133179545403,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3099242261191478,
+              "1": 0.23238674183824728,
+              "2": 0.45768903204260497
+            },
+            "confidence": 0.18653354806390746
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.07841713726520538,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.364047043025494
+    },
+    {
+      "step": 35,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 35 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 35 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "bce7e47868d5df61b6ff83a40c9ae15b811ccb06df8484abd62222e9b807230d",
+      "attempts": [
+        {
+          "seconds": 0.07127191126346588,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07136837393045425,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.28889316155242567,
+              "1": 0.21968595469544247,
+              "2": 0.49142088375213183
+            },
+            "confidence": 0.23713132562819775
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06957389041781425,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.502929471433163
+    },
+    {
+      "step": 36,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 36 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 36 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "653640f6cc966a81e37dde8f830907e5ba7d2e56e0f25816d45f26f3fc0a8975",
+      "attempts": [
+        {
+          "seconds": 0.06995729357004166,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07002020254731178,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2893437064031442,
+              "1": 0.22188173875495656,
+              "2": 0.48877455484189936
+            },
+            "confidence": 0.23316183226284903
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0681103952229023,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.639277033507824
+    },
+    {
+      "step": 37,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 37 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 37 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "688a06c12ef357b5fe2fc1180d288a1c6918d1f8d4babe1eba256353e4fc5040",
+      "attempts": [
+        {
+          "seconds": 0.07078702375292778,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0708501748740673,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2891918761445339,
+              "1": 0.2233286110766631,
+              "2": 0.487479512778803
+            },
+            "confidence": 0.23121926916820454
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06920748949050903,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.7749444879591465
+    },
+    {
+      "step": 38,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 38 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 38 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "be0eadd5af08e229b136e44a7035b137be12ba9cc8b85bff44c012a566512775",
+      "attempts": [
+        {
+          "seconds": 0.06923789903521538,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0693168081343174,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2897973519808457,
+              "1": 0.22215176901321113,
+              "2": 0.4880508790059432
+            },
+            "confidence": 0.23207631850891478
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06767568364739418,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 6.907917011529207
+    },
+    {
+      "step": 39,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 39 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 39 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c5b892c9f8847dfabbc8334a8b5e71c4c8eb71d6e6f0f27ddaf6f65b58ff7a81",
+      "attempts": [
+        {
+          "seconds": 0.07063369825482368,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07071065157651901,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29673437192222074,
+              "1": 0.22947077938821728,
+              "2": 0.47379484868956195
+            },
+            "confidence": 0.21069227303434293
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06898074597120285,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.052048213779926
+    },
+    {
+      "step": 40,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 40 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 40 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3e812b55dad3f92bbe379c74457ab9a08e0ab2be53a58e3633dad930a09d4662",
+      "attempts": [
+        {
+          "seconds": 0.07044711336493492,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.07053100690245628,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29765484780980306,
+              "1": 0.22684972561700031,
+              "2": 0.4754954265731966
+            },
+            "confidence": 0.2132431398597949
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06862165778875351,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.188790038228035
+    },
+    {
+      "step": 41,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 41 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 41 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "56848244cb2f02a4b5626776d39e011eb5e408e5e572159d1ff4a641f8189271",
+      "attempts": [
+        {
+          "seconds": 0.06895202025771141,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06905228272080421,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3020807974320216,
+              "1": 0.22767302046605584,
+              "2": 0.4702461821019226
+            },
+            "confidence": 0.2053692731528839
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06711922585964203,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.3188025914132595
+    },
+    {
+      "step": 42,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 42 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 42 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "11e39f197841094cac19d2b04336913ecd2f2758798553acbccf95d7293637e0",
+      "attempts": [
+        {
+          "seconds": 0.06836021691560745,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06843052804470062,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29863828829166045,
+              "1": 0.22736173327581324,
+              "2": 0.4739999784325263
+            },
+            "confidence": 0.21099996764878942
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06685525923967361,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.450406413525343
+    },
+    {
+      "step": 43,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 43 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 43 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "3f72e131d4959be2b06e6c9a97d52e3edcd2528e229c635b0b3ad95da92fc206",
+      "attempts": [
+        {
+          "seconds": 0.06816264614462852,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06823303177952766,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29577503102944974,
+              "1": 0.2295249039807864,
+              "2": 0.4747000649897639
+            },
+            "confidence": 0.21205009748464587
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06668075919151306,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.585370719432831
+    },
+    {
+      "step": 44,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 44 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 44 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e6bbe0e82d4661023873ea230f86a3713ad981517055820eabbccb32f31b5ab9",
+      "attempts": [
+        {
+          "seconds": 0.08269163966178894,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.08276369050145149,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29774163019150196,
+              "1": 0.23280564409930327,
+              "2": 0.4694527257091948
+            },
+            "confidence": 0.20417908856379216
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.0676191858947277,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.729515660554171
+    },
+    {
+      "step": 45,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 45 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 45 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "f675864285743fef68e2c502d0017580c1a9d68fe9746745303580a7390e2043",
+      "attempts": [
+        {
+          "seconds": 0.06944376602768898,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06951229646801949,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.29911625631600985,
+              "1": 0.23096559030074892,
+              "2": 0.4699181533832413
+            },
+            "confidence": 0.20487723007486192
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06799888610839844,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.859668157994747
+    },
+    {
+      "step": 46,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 46 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 46 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a37e9f4875e97af94037a396cc5b9dcfd260f3fb978a433c0b95deeb523bbb94",
+      "attempts": [
+        {
+          "seconds": 0.06745455786585808,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06752286851406097,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.2972704395412874,
+              "1": 0.2308796733422344,
+              "2": 0.4718498871164783
+            },
+            "confidence": 0.20777483067471744
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06602101400494576,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 7.987326540052891
+    },
+    {
+      "step": 47,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 47 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 47 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ed7cffb8e6223463f2d58a2d63d6d9cce8297071dc98a6a5394d7c0e3b890ca1",
+      "attempts": [
+        {
+          "seconds": 0.0681573934853077,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.0682266429066658,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.3036924114879631,
+              "1": 0.23609269276091124,
+              "2": 0.4602148957511256
+            },
+            "confidence": 0.19032234362668843
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06656309589743614,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.129689082503319
+    },
+    {
+      "step": 48,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 48 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 48 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "60a677f5354f9cc2389776f9162815e3801b057b4765965b4df1578280626de9",
+      "attempts": [
+        {
+          "seconds": 0.06785445660352707,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06793547794222832,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.30778384832978156,
+              "1": 0.23854321896682346,
+              "2": 0.45367293270339487
+            },
+            "confidence": 0.18050939905509247
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06601487100124359,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.259296964854002
+    },
+    {
+      "step": 49,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 49 (Total results: 50) [SEP] < Prev [SEP] Next >",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 49 (Total results: 50) [SEP] < Prev [SEP] Next >\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]"
+            }
+          }
+        }
+      },
+      "request_sha256": "a9aa4beff8dcf94f0667c4c56d7bdab945ca09cfcf0730a634da56259f57c312",
+      "attempts": [
+        {
+          "seconds": 0.06971267983317375,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.06979149207472801,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "0",
+            "probabilities": {
+              "0": 0.38250950910216547,
+              "1": 0.28915813569970955,
+              "2": 0.32833235519812504
+            },
+            "confidence": 0.07376426365324822
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 759,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 3,
+          "inference_seconds": 0.06812010332942009,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[back to search]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.335112042725086
+    },
+    {
+      "step": 50,
+      "observation": "WebShop [SEP] Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Search",
+      "action": "search[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.399369265884161
+    },
+    {
+      "step": 51,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08SQHTMPR [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] $17.93 to $69.28 [SEP] B09B5TQWRT [SEP] HGWXX7 Capri Pants for Women Plus Size Cotton Wide Leg Pants Linen Summer Beach Harem Comfy Pants Print Cropped Trouser [SEP] $11.29 [SEP] B091GY58SC [SEP] Women's Linen Capri Pants Loose Cropped Wide Leg Pants Floral Comfy Elastic Waist Lightweight Trousers with Pockets [SEP] $16.15 to $20.39 [SEP] B096XYVQ9H [SEP] Wide Leg Pants for Women Paper Bag Belt Elastic High Waist Palazzo Long Trousers Casual Plus Size Pants with Pockets [SEP] $12.69 to $13.69 [SEP] B084R8D1S4 [SEP] Woman Within Women's Plus Size Convertible Length Cargo Pant [SEP] $26.04 to $33.25 [SEP] B09PFZHV78 [SEP] Gillberry Men's Classic Relaxed Vintage Denim Jeans Retro Men Stretch Retro Leg Comfort Bell Bottom Trousers Wide Leg [SEP] $32.29 [SEP] B09PBDFLLY [SEP] Women Yoga Short Pants Dolphin Running Athletic Shorts Sports Shorts Gym Dance Workout Shorts Sexy Tights [SEP] $4.48 [SEP] B09PBD4RY1 [SEP] Nyybw Women's High Rise Bermuda Shorts Lounge Athletic Casual Jersey Cotton Sweat Shorts with Pockets [SEP] $16.99 [SEP] B09PBF588W [SEP] Nyybw Workout Shorts for Women with Side Pockets High Waist Running Sports Biker Gym Shorts Yoga Tights [SEP] $11.49 [SEP] B09PBV2G93 [SEP] Gillberry Men's Flannel Pajamas Pants Pockets Bottoms Lounge Sleepwear Soft Jogger Pant Sweatpants for Men Red Black [SEP] $16.89",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B08SQHTMPR [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] $17.93 to $69.28 [SEP] B09B5TQWRT [SEP] HGWXX7 Capri Pants for Women Plus Size Cotton Wide Leg Pants Linen Summer Beach Harem Comfy Pants Print Cropped Trouser [SEP] $11.29 [SEP] B091GY58SC [SEP] Women's Linen Capri Pants Loose Cropped Wide Leg Pants Floral Comfy Elastic Waist Lightweight Trousers with Pockets [SEP] $16.15 to $20.39 [SEP] B096XYVQ9H [SEP] Wide Leg Pants for Women Paper Bag Belt Elastic High Waist Palazzo Long Trousers Casual Plus Size Pants with Pockets [SEP] $12.69 to $13.69 [SEP] B084R8D1S4 [SEP] Woman Within Women's Plus Size Convertible Length Cargo Pant [SEP] $26.04 to $33.25 [SEP] B09PFZHV78 [SEP] Gillberry Men's Classic Relaxed Vintage Denim Jeans Retro Men Stretch Retro Leg Comfort Bell Bottom Trousers Wide Leg [SEP] $32.29 [SEP] B09PBDFLLY [SEP] Women Yoga Short Pants Dolphin Running Athletic Shorts Sports Shorts Gym Dance Workout Shorts Sexy Tights [SEP] $4.48 [SEP] B09PBD4RY1 [SEP] Nyybw Women's High Rise Bermuda Shorts Lounge Athletic Casual Jersey Cotton Sweat Shorts with Pockets [SEP] $16.99 [SEP] B09PBF588W [SEP] Nyybw Workout Shorts for Women with Side Pockets High Waist Running Sports Biker Gym Shorts Yoga Tights [SEP] $11.49 [SEP] B09PBV2G93 [SEP] Gillberry Men's Flannel Pajamas Pants Pockets Bottoms Lounge Sleepwear Soft Jogger Pant Sweatpants for Men Red Black [SEP] $16.89\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b08sqhtmpr]",
+              "3": "click[b09b5tqwrt]",
+              "4": "click[b091gy58sc]",
+              "5": "click[b096xyvq9h]",
+              "6": "click[b084r8d1s4]",
+              "7": "click[b09pfzhv78]",
+              "8": "click[b09pbdflly]",
+              "9": "click[b09pbd4ry1]",
+              "10": "click[b09pbf588w]",
+              "11": "click[b09pbv2g93]"
+            }
+          }
+        }
+      },
+      "request_sha256": "20bdcb777b29e62dac0594f9f1b6c85f8de1ea8fce7d028af4a6a633970674dd",
+      "attempts": [
+        {
+          "seconds": 0.40189895033836365,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.40201884135603905,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.06498229334301092,
+              "1": 0.18119141493577245,
+              "2": 0.21966345904829745,
+              "3": 0.13851390765099322,
+              "4": 0.09592451433163053,
+              "5": 0.07972519507195994,
+              "6": 0.10197490573721096,
+              "7": 0.02502198133382845,
+              "8": 0.04516026584369325,
+              "9": 0.017357094688227548,
+              "10": 0.017220466613363697,
+              "11": 0.013264501402011594
+            },
+            "confidence": 0.1487237735072335
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9102,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.40025176480412483,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b08sqhtmpr]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 8.832842160016298
+    },
+    {
+      "step": 52,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2 [SEP] 2 petite [SEP] 4 [SEP] 4 petite [SEP] 6 [SEP] 6 petite [SEP] 8 [SEP] 8 petite [SEP] 10 [SEP] 10 petite [SEP] 12 [SEP] 12 petite [SEP] 14 [SEP] 14 petite [SEP] 14 plus [SEP] 16 [SEP] 16 petite [SEP] 16 plus [SEP] 18 [SEP] 18 petite [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] color [SEP] deep lichen green [SEP] kahuna [SEP] rainy day [SEP] blue velvet [SEP] white [SEP] black [SEP] rose garden [SEP] stormy gray [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] Price: $17.93 to $69.28 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2 [SEP] 2 petite [SEP] 4 [SEP] 4 petite [SEP] 6 [SEP] 6 petite [SEP] 8 [SEP] 8 petite [SEP] 10 [SEP] 10 petite [SEP] 12 [SEP] 12 petite [SEP] 14 [SEP] 14 petite [SEP] 14 plus [SEP] 16 [SEP] 16 petite [SEP] 16 plus [SEP] 18 [SEP] 18 petite [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] color [SEP] deep lichen green [SEP] kahuna [SEP] rainy day [SEP] blue velvet [SEP] white [SEP] black [SEP] rose garden [SEP] stormy gray [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] Price: $17.93 to $69.28 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[b08sqhtmpr]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[2]",
+              "7": "click[2 petite]",
+              "8": "click[4]",
+              "9": "click[4 petite]",
+              "10": "click[6]",
+              "11": "click[6 petite]",
+              "12": "click[8]",
+              "13": "click[8 petite]",
+              "14": "click[10]",
+              "15": "click[10 petite]",
+              "16": "click[12]",
+              "17": "click[12 petite]",
+              "18": "click[14]",
+              "19": "click[14 petite]",
+              "20": "click[14 plus]",
+              "21": "click[16]",
+              "22": "click[16 petite]",
+              "23": "click[16 plus]",
+              "24": "click[18]",
+              "25": "click[18 petite]",
+              "26": "click[18 plus]",
+              "27": "click[20 plus]",
+              "28": "click[22 plus]",
+              "29": "click[24 plus]",
+              "30": "click[deep lichen green]",
+              "31": "click[kahuna]",
+              "32": "click[rainy day]",
+              "33": "click[blue velvet]",
+              "34": "click[white]",
+              "35": "click[black]",
+              "36": "click[rose garden]",
+              "37": "click[stormy gray]"
+            }
+          }
+        }
+      },
+      "request_sha256": "d2394b614c84ecb4b72f933321976ea243cb862a2deac632276a3ece29cdedfd",
+      "attempts": [
+        {
+          "seconds": 0.8973946832120419,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.8975984081625938,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "27",
+            "probabilities": {
+              "0": 0.022625348556900796,
+              "1": 0.026465925189346817,
+              "2": 0.04366938634780204,
+              "3": 0.02079435390217307,
+              "4": 0.023251339251146932,
+              "5": 0.1284284767800895,
+              "6": 0.029489847567677595,
+              "7": 0.009287832251083957,
+              "8": 0.02629052686722547,
+              "9": 0.009703847395676592,
+              "10": 0.025582027914863976,
+              "11": 0.010653244040812079,
+              "12": 0.026697931010755294,
+              "13": 0.011339954274508224,
+              "14": 0.022194046545756307,
+              "15": 0.011312800791588397,
+              "16": 0.020239622078895094,
+              "17": 0.00977047062332769,
+              "18": 0.018352380991755585,
+              "19": 0.008646854755886741,
+              "20": 0.01936266142117297,
+              "21": 0.017952058101638725,
+              "22": 0.008619690470520218,
+              "23": 0.020540938792890845,
+              "24": 0.020233817794305123,
+              "25": 0.009331606271144589,
+              "26": 0.02275621291398584,
+              "27": 0.15934710522891102,
+              "28": 0.03740333200851626,
+              "29": 0.037930117147193104,
+              "30": 0.01541367661642439,
+              "31": 0.07610427599156624,
+              "32": 0.014810129762513719,
+              "33": 0.006099797288833573,
+              "34": 0.0074555727800653705,
+              "35": 0.00759788553983879,
+              "36": 0.008959716888702852,
+              "37": 0.00528518784450427
+            },
+            "confidence": 0.13662675672158425
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 20251,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 38,
+          "inference_seconds": 0.8952985592186451,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[20 plus]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 9.75783595442772
+    },
+    {
+      "step": 53,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2 [SEP] 2 petite [SEP] 4 [SEP] 4 petite [SEP] 6 [SEP] 6 petite [SEP] 8 [SEP] 8 petite [SEP] 10 [SEP] 10 petite [SEP] 12 [SEP] 12 petite [SEP] 14 [SEP] 14 petite [SEP] 14 plus [SEP] 16 [SEP] 16 petite [SEP] 16 plus [SEP] 18 [SEP] 18 petite [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] color [SEP] deep lichen green [SEP] kahuna [SEP] rainy day [SEP] blue velvet [SEP] white [SEP] black [SEP] rose garden [SEP] stormy gray [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] Price: $17.93 to $69.28 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2 [SEP] 2 petite [SEP] 4 [SEP] 4 petite [SEP] 6 [SEP] 6 petite [SEP] 8 [SEP] 8 petite [SEP] 10 [SEP] 10 petite [SEP] 12 [SEP] 12 petite [SEP] 14 [SEP] 14 petite [SEP] 14 plus [SEP] 16 [SEP] 16 petite [SEP] 16 plus [SEP] 18 [SEP] 18 petite [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] color [SEP] deep lichen green [SEP] kahuna [SEP] rainy day [SEP] blue velvet [SEP] white [SEP] black [SEP] rose garden [SEP] stormy gray [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] Price: $17.93 to $69.28 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[b08sqhtmpr]\nclick[20 plus]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[2]",
+              "7": "click[2 petite]",
+              "8": "click[4]",
+              "9": "click[4 petite]",
+              "10": "click[6]",
+              "11": "click[6 petite]",
+              "12": "click[8]",
+              "13": "click[8 petite]",
+              "14": "click[10]",
+              "15": "click[10 petite]",
+              "16": "click[12]",
+              "17": "click[12 petite]",
+              "18": "click[14]",
+              "19": "click[14 petite]",
+              "20": "click[14 plus]",
+              "21": "click[16]",
+              "22": "click[16 petite]",
+              "23": "click[16 plus]",
+              "24": "click[18]",
+              "25": "click[18 petite]",
+              "26": "click[18 plus]",
+              "27": "click[20 plus]",
+              "28": "click[22 plus]",
+              "29": "click[24 plus]",
+              "30": "click[deep lichen green]",
+              "31": "click[kahuna]",
+              "32": "click[rainy day]",
+              "33": "click[blue velvet]",
+              "34": "click[white]",
+              "35": "click[black]",
+              "36": "click[rose garden]",
+              "37": "click[stormy gray]"
+            }
+          }
+        }
+      },
+      "request_sha256": "ba4b108cd041d5628d65b849293d406311dc4af24175526bbe9fe27ea601eda4",
+      "attempts": [
+        {
+          "seconds": 0.9018190875649452,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.901989508420229,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "31",
+            "probabilities": {
+              "0": 0.023545189218278896,
+              "1": 0.030203030082469225,
+              "2": 0.0471858666820104,
+              "3": 0.02369354479589471,
+              "4": 0.024133285139796862,
+              "5": 0.1353192352872335,
+              "6": 0.025651162842301036,
+              "7": 0.00863584108701636,
+              "8": 0.026912075914372863,
+              "9": 0.008297659801407653,
+              "10": 0.02311948298539225,
+              "11": 0.008345709867322845,
+              "12": 0.025072290111429765,
+              "13": 0.01003855513654721,
+              "14": 0.020310114528730664,
+              "15": 0.009178624950954952,
+              "16": 0.015509871511989508,
+              "17": 0.008018922431129404,
+              "18": 0.014742226647111546,
+              "19": 0.007363430481186618,
+              "20": 0.01555675514080513,
+              "21": 0.014634754577120684,
+              "22": 0.00814874502017311,
+              "23": 0.014605974085098068,
+              "24": 0.01628627898492942,
+              "25": 0.008506243068974203,
+              "26": 0.013835045653378075,
+              "27": 0.025650576074305032,
+              "28": 0.02412355944092094,
+              "29": 0.022348567756079133,
+              "30": 0.014522997896093156,
+              "31": 0.2712187070897686,
+              "32": 0.019260367753295347,
+              "33": 0.005993346253361905,
+              "34": 0.00822320638132747,
+              "35": 0.008040047157649121,
+              "36": 0.008629415624903068,
+              "37": 0.005139292539241214
+            },
+            "confidence": 0.25152191538949203
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 20327,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 38,
+          "inference_seconds": 0.899970781058073,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[kahuna]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 10.689809493720531
+    },
+    {
+      "step": 54,
+      "observation": "Instruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2 [SEP] 2 petite [SEP] 4 [SEP] 4 petite [SEP] 6 [SEP] 6 petite [SEP] 8 [SEP] 8 petite [SEP] 10 [SEP] 10 petite [SEP] 12 [SEP] 12 petite [SEP] 14 [SEP] 14 petite [SEP] 14 plus [SEP] 16 [SEP] 16 petite [SEP] 16 plus [SEP] 18 [SEP] 18 petite [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] color [SEP] deep lichen green [SEP] kahuna [SEP] rainy day [SEP] blue velvet [SEP] white [SEP] black [SEP] rose garden [SEP] stormy gray [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] Price: $17.93 to $69.28 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\ni am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars\n\nCurrent page:\nInstruction: [SEP] i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] size [SEP] 2 [SEP] 2 petite [SEP] 4 [SEP] 4 petite [SEP] 6 [SEP] 6 petite [SEP] 8 [SEP] 8 petite [SEP] 10 [SEP] 10 petite [SEP] 12 [SEP] 12 petite [SEP] 14 [SEP] 14 petite [SEP] 14 plus [SEP] 16 [SEP] 16 petite [SEP] 16 plus [SEP] 18 [SEP] 18 petite [SEP] 18 plus [SEP] 20 plus [SEP] 22 plus [SEP] 24 plus [SEP] color [SEP] deep lichen green [SEP] kahuna [SEP] rainy day [SEP] blue velvet [SEP] white [SEP] black [SEP] rose garden [SEP] stormy gray [SEP] Lee Women's Flex-to-go Mid Rise Cargo Capri Pant [SEP] Price: $17.93 to $69.28 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[next >]\nclick[back to search]\nsearch[i am looking for a kahuna colored capri pant that has a relaxed fit and is in a size 20 plus, and price lower than 80.00 dollars]\nclick[b08sqhtmpr]\nclick[20 plus]\nclick[kahuna]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[2]",
+              "7": "click[2 petite]",
+              "8": "click[4]",
+              "9": "click[4 petite]",
+              "10": "click[6]",
+              "11": "click[6 petite]",
+              "12": "click[8]",
+              "13": "click[8 petite]",
+              "14": "click[10]",
+              "15": "click[10 petite]",
+              "16": "click[12]",
+              "17": "click[12 petite]",
+              "18": "click[14]",
+              "19": "click[14 petite]",
+              "20": "click[14 plus]",
+              "21": "click[16]",
+              "22": "click[16 petite]",
+              "23": "click[16 plus]",
+              "24": "click[18]",
+              "25": "click[18 petite]",
+              "26": "click[18 plus]",
+              "27": "click[20 plus]",
+              "28": "click[22 plus]",
+              "29": "click[24 plus]",
+              "30": "click[deep lichen green]",
+              "31": "click[kahuna]",
+              "32": "click[rainy day]",
+              "33": "click[blue velvet]",
+              "34": "click[white]",
+              "35": "click[black]",
+              "36": "click[rose garden]",
+              "37": "click[stormy gray]"
+            }
+          }
+        }
+      },
+      "request_sha256": "44f170035ce6038ce1d40dd6531de2be9a9402f3545029f7c30bb12de18a1471",
+      "attempts": [
+        {
+          "seconds": 0.9007548801600933,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.9009391814470291,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.028857440609128506,
+              "1": 0.0398329754385444,
+              "2": 0.06011508934616709,
+              "3": 0.03143270724021622,
+              "4": 0.03195893206240389,
+              "5": 0.2517914520391462,
+              "6": 0.03198475474246649,
+              "7": 0.010699215757314568,
+              "8": 0.0320774070713474,
+              "9": 0.011538458279366224,
+              "10": 0.02708741910965033,
+              "11": 0.011213411810952768,
+              "12": 0.029981094870502874,
+              "13": 0.013285034518343316,
+              "14": 0.025175605714654277,
+              "15": 0.01172975916228521,
+              "16": 0.01915824459527681,
+              "17": 0.010305049841394812,
+              "18": 0.01716285271594854,
+              "19": 0.009572032258285118,
+              "20": 0.018532271677637335,
+              "21": 0.018788141680295443,
+              "22": 0.010026553134671094,
+              "23": 0.017567455500199374,
+              "24": 0.020505693303371555,
+              "25": 0.010770682650745794,
+              "26": 0.01742486091637333,
+              "27": 0.030029937298852925,
+              "28": 0.027336397923931936,
+              "29": 0.02676840246135422,
+              "30": 0.015164359557428593,
+              "31": 0.026478400497186104,
+              "32": 0.017552509191844024,
+              "33": 0.006364709544580745,
+              "34": 0.00953103008806172,
+              "35": 0.009702090595312646,
+              "36": 0.006768953825408628,
+              "37": 0.005728612969349463
+            },
+            "confidence": 0.2315695993915556
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 20365,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 38,
+          "inference_seconds": 0.898221280425787,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 1.0,
+      "done": true,
+      "elapsed_seconds": 11.622645691037178
+    }
+  ]
+}

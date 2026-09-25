@@ -1,0 +1,362 @@
+{
+  "task_id": 353,
+  "model": "open_jev",
+  "protocol_sha256": "aeef4f644713c6f80076e2d84ab45b7fba82226b9fa91e68ed0862b34e64e89a",
+  "instruction": "find a water resistant leather jacket, and price lower than 110.00 dollars",
+  "instruction_sha256": "5d721bafad5c445574be59ef56ee7beb796b816adcba723a1ecf8816609bee8a",
+  "reward": 0.5,
+  "score": 50.0,
+  "success": false,
+  "termination": "purchase",
+  "steps": 5,
+  "elapsed_seconds": 1.6505220010876656,
+  "decision_seconds": 1.4157927222549915,
+  "input_tokens": 31300,
+  "output_tokens": 0,
+  "trace": [
+    {
+      "step": 0,
+      "observation": "WebShop [SEP] Instruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Search",
+      "action": "search[find a water resistant leather jacket, and price lower than 110.00 dollars]",
+      "policy": "fixed_search",
+      "decision_seconds": 0.0,
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.04414808377623558
+    },
+    {
+      "step": 1,
+      "observation": "Instruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09G9JDZWS [SEP] Essentials Men's Water-Resistant Puffer Jacket Winter Down Jackets with Detachable Hat Full Zip Classic Thermal Outerwear [SEP] $20.71 to $25.99 [SEP] B00RKNWG34 [SEP] Townforst Women's Slip and Oil Resistant Non Slip Work Shoes Jess PU Leather Slip-On Flat [SEP] $18.98 to $34.98 [SEP] B09RGX2X2P [SEP] Men's Fashion Slim Fit Casual Loose Suit Slim Fit Single Breasted Jacket Blazer Floral Dress Shirt Turn Down Sport Coat [SEP] $25.99 [SEP] B08CSX61Z2 [SEP] Tommy Hilfiger Men's Water Resistant Ultra Loft Down Alternative Puffer Jacket [SEP] $63.33 to $169.75 [SEP] B091FT1YPM [SEP] The jacket Designer Men's Motorcycle Victory Lane Distressed Cowhide Leather Jacket [SEP] $199.99 [SEP] B00LV8PAPU [SEP] Nomad USA Motorcycle Leather jacket for Men [SEP] $79.99 [SEP] B006Z9YZ1K [SEP] Audioquest - Golden Gate Mini-to-Mini (3.0m) [SEP] $109.95 [SEP] B007NIQUIS [SEP] Betty Dain Premier Barber Jacket, Soft, Lightweight, Water Resistant Nylon Repels Hair, Zippered Front, Two Angled Lower Pockets with Zippered Bottoms, Angled Chest Pocket, Black, 3X [SEP] $22.59 [SEP] B007NIQWE0 [SEP] Betty Dain Premier Barber Jacket, Soft, Lightweight, Water Resistant Nylon Repels Hair, Zippered Front, Two Angled Lower Pockets with Zippered Bottoms, Angled Chest Pocket, Burgundy, XL [SEP] $22.05 [SEP] B09MTG5R84 [SEP] Men Suit Jacket Blazer Banquet Senior Suit Jacket Slim Fit Tuxedo Costume for Party,Wedding,Banquet,Prom [SEP] $22.65 to $37.99",
+      "request": {
+        "state": "Shopping instruction:\nfind a water resistant leather jacket, and price lower than 110.00 dollars\n\nCurrent page:\nInstruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] Page 1 (Total results: 50) [SEP] Next > [SEP] B09G9JDZWS [SEP] Essentials Men's Water-Resistant Puffer Jacket Winter Down Jackets with Detachable Hat Full Zip Classic Thermal Outerwear [SEP] $20.71 to $25.99 [SEP] B00RKNWG34 [SEP] Townforst Women's Slip and Oil Resistant Non Slip Work Shoes Jess PU Leather Slip-On Flat [SEP] $18.98 to $34.98 [SEP] B09RGX2X2P [SEP] Men's Fashion Slim Fit Casual Loose Suit Slim Fit Single Breasted Jacket Blazer Floral Dress Shirt Turn Down Sport Coat [SEP] $25.99 [SEP] B08CSX61Z2 [SEP] Tommy Hilfiger Men's Water Resistant Ultra Loft Down Alternative Puffer Jacket [SEP] $63.33 to $169.75 [SEP] B091FT1YPM [SEP] The jacket Designer Men's Motorcycle Victory Lane Distressed Cowhide Leather Jacket [SEP] $199.99 [SEP] B00LV8PAPU [SEP] Nomad USA Motorcycle Leather jacket for Men [SEP] $79.99 [SEP] B006Z9YZ1K [SEP] Audioquest - Golden Gate Mini-to-Mini (3.0m) [SEP] $109.95 [SEP] B007NIQUIS [SEP] Betty Dain Premier Barber Jacket, Soft, Lightweight, Water Resistant Nylon Repels Hair, Zippered Front, Two Angled Lower Pockets with Zippered Bottoms, Angled Chest Pocket, Black, 3X [SEP] $22.59 [SEP] B007NIQWE0 [SEP] Betty Dain Premier Barber Jacket, Soft, Lightweight, Water Resistant Nylon Repels Hair, Zippered Front, Two Angled Lower Pockets with Zippered Bottoms, Angled Chest Pocket, Burgundy, XL [SEP] $22.05 [SEP] B09MTG5R84 [SEP] Men Suit Jacket Blazer Banquet Senior Suit Jacket Slim Fit Tuxedo Costume for Party,Wedding,Banquet,Prom [SEP] $22.65 to $37.99\n\nRecent actions:\nsearch[find a water resistant leather jacket, and price lower than 110.00 dollars]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[next >]",
+              "2": "click[b09g9jdzws]",
+              "3": "click[b00rknwg34]",
+              "4": "click[b09rgx2x2p]",
+              "5": "click[b08csx61z2]",
+              "6": "click[b091ft1ypm]",
+              "7": "click[b00lv8papu]",
+              "8": "click[b006z9yz1k]",
+              "9": "click[b007niquis]",
+              "10": "click[b007niqwe0]",
+              "11": "click[b09mtg5r84]"
+            }
+          }
+        }
+      },
+      "request_sha256": "38a225f21965a316dc371c051e5ff76916cc2f6b16a06062c0a16392964040b6",
+      "attempts": [
+        {
+          "seconds": 0.37059535831213,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.3706940896809101,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "1",
+            "probabilities": {
+              "0": 0.10908510072988435,
+              "1": 0.2710213828018255,
+              "2": 0.0463317748551,
+              "3": 0.03966050215465429,
+              "4": 0.021616989122689,
+              "5": 0.2626756361307385,
+              "6": 0.03771301548676929,
+              "7": 0.09090860774686271,
+              "8": 0.02611015639702629,
+              "9": 0.03454551534612662,
+              "10": 0.030584838508968874,
+              "11": 0.029746480719354682
+            },
+            "confidence": 0.20475059942017326
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8226,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 12,
+          "inference_seconds": 0.36560269445180893,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.46977194026112556
+    },
+    {
+      "step": 2,
+      "observation": "Instruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01LBRNWPK [SEP] Townforst Sandy Slip Resistant Black Sunbrella Water Resistant Non Slip Waitress Shoes [SEP] $30.99 to $41.95 [SEP] B09MW3SPWX [SEP] Men's Blazer Floral Suit Jacket Stylish Blazer Tuxedo Welcome Banquet Senior Suit for Party,Wedding,Banquet,Prom [SEP] $19.65 to $37.99 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95 [SEP] B08Y66JJT3 [SEP] Men’s Asymmetrical Premium Denim Chef Coat with Mesh Side Panels (S-3X) [SEP] $42.98 [SEP] B001A76J5W [SEP] 5.11 Tactical Men's 3-in-1 Waterproof Work Parka, Insulated, TacTec System Compatible, Style 48001 [SEP] $249.99 to $411.15 [SEP] B0844ZHZD2 [SEP] Officially Licensed LIFEGUARD Mens and Womens Unisex Fit Zipper-up Windbreaker Water Resistant Rain Jacket with Hood [SEP] $29.99 [SEP] B09CB8JBY4 [SEP] CHEROKEE Men's Jacket – Water Resistant Quilted Bubble Puffer Windbreaker Jacket (S-XXL) [SEP] $29.99 to $39.99 [SEP] B0016HH2WA [SEP] A Size Above Plus Size Salon Stylist Jacket, Cut for Curves, Three-quarter Length Sleeves, Button Down Front, Two Lower Front Pockets, Lightweight, Water Resistant Nylon/Poly, Chocolate Brown, 1X [SEP] $40.95 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B09HTJ7WVB [SEP] Wool Turn-Down Pullover Sweaters for Men Stylish Appliques Knitwear Sweater [SEP] $19.99",
+      "request": {
+        "state": "Shopping instruction:\nfind a water resistant leather jacket, and price lower than 110.00 dollars\n\nCurrent page:\nInstruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] Page 2 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B01LBRNWPK [SEP] Townforst Sandy Slip Resistant Black Sunbrella Water Resistant Non Slip Waitress Shoes [SEP] $30.99 to $41.95 [SEP] B09MW3SPWX [SEP] Men's Blazer Floral Suit Jacket Stylish Blazer Tuxedo Welcome Banquet Senior Suit for Party,Wedding,Banquet,Prom [SEP] $19.65 to $37.99 [SEP] B00004RG7M [SEP] Toshiba W607 4-Head Hi-Fi VCR [SEP] $149.95 [SEP] B08Y66JJT3 [SEP] Men’s Asymmetrical Premium Denim Chef Coat with Mesh Side Panels (S-3X) [SEP] $42.98 [SEP] B001A76J5W [SEP] 5.11 Tactical Men's 3-in-1 Waterproof Work Parka, Insulated, TacTec System Compatible, Style 48001 [SEP] $249.99 to $411.15 [SEP] B0844ZHZD2 [SEP] Officially Licensed LIFEGUARD Mens and Womens Unisex Fit Zipper-up Windbreaker Water Resistant Rain Jacket with Hood [SEP] $29.99 [SEP] B09CB8JBY4 [SEP] CHEROKEE Men's Jacket – Water Resistant Quilted Bubble Puffer Windbreaker Jacket (S-XXL) [SEP] $29.99 to $39.99 [SEP] B0016HH2WA [SEP] A Size Above Plus Size Salon Stylist Jacket, Cut for Curves, Three-quarter Length Sleeves, Button Down Front, Two Lower Front Pockets, Lightweight, Water Resistant Nylon/Poly, Chocolate Brown, 1X [SEP] $40.95 [SEP] B09KCL5GK5 [SEP] Ear Buds for Laptop - 4 Pack Earphones with mic Wired Headphones and Microphone Sport Gym Running Workout Earbuds fits iPhone Android Kids Computer PL 3.5 Jack chromebook pc [SEP] $7.99 [SEP] B09HTJ7WVB [SEP] Wool Turn-Down Pullover Sweaters for Men Stylish Appliques Knitwear Sweater [SEP] $19.99\n\nRecent actions:\nsearch[find a water resistant leather jacket, and price lower than 110.00 dollars]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b01lbrnwpk]",
+              "4": "click[b09mw3spwx]",
+              "5": "click[b00004rg7m]",
+              "6": "click[b08y66jjt3]",
+              "7": "click[b001a76j5w]",
+              "8": "click[b0844zhzd2]",
+              "9": "click[b09cb8jby4]",
+              "10": "click[b0016hh2wa]",
+              "11": "click[b09kcl5gk5]",
+              "12": "click[b09htj7wvb]"
+            }
+          }
+        }
+      },
+      "request_sha256": "c1a60280ef375c2e1d8e80886a81006a13ee6748c3dd1b1b1db8fe142a1d9312",
+      "attempts": [
+        {
+          "seconds": 0.4299599677324295,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.4300779886543751,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "2",
+            "probabilities": {
+              "0": 0.1578105268928792,
+              "1": 0.16984147664607205,
+              "2": 0.2567266288854227,
+              "3": 0.02360458142055259,
+              "4": 0.02193277547309092,
+              "5": 0.020172982508343765,
+              "6": 0.04346847295752538,
+              "7": 0.02843283548719923,
+              "8": 0.0947195687727719,
+              "9": 0.08540644235459499,
+              "10": 0.055174076931212984,
+              "11": 0.017881468832300428,
+              "12": 0.024828162838034004
+            },
+            "confidence": 0.19478718129254124
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 9547,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.4209313690662384,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[next >]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 0.9618722312152386
+    },
+    {
+      "step": 3,
+      "observation": "Instruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09P8R8HV5 [SEP] Racer Retro Motorcycle Biker Leather Jacket for Men Vintage Brando Motorcycle Rider Classic Biker Jacket [SEP] $56.99 [SEP] B09MQR3Y9C [SEP] Mens Fashion Short Sleeve Henley Shirts Big and Tall Zipper Dual Tipped Collar Slim Fit Paisley Floral Dad Shirts [SEP] $1.99 to $9.99 [SEP] B09HKS5PNB [SEP] Men's Winter Warm Fleece Lapel Jacket Highneck Fur Liner Motorcycle Fur Leather Vintage Zipper Outwear Coat Tops [SEP] $51.79 [SEP] B07FV82R1H [SEP] Dockers Men's James Faux Leather Jacket [SEP] $50.5 to $79.99 [SEP] B07GDXCCT4 [SEP] Carhartt Men's Romeo 4'' Non-Safety Toe Slip On Boots [SEP] $44.99 [SEP] B09CTS62RS [SEP] Ergonomic Office Chair Executive High Back Computer Chair Swivel Home Desk Chair with Adjustable Lumbar Support and Padded Armrest(Brown) [SEP] $175.99 [SEP] B09P8DGHYJ [SEP] NEGJ Mens Thermal Leather Winter Sherpa Fleece Lined Jackets Coats Warm Fur Collar Long Trench Coats Big and Tall Outwears [SEP] $34.99 to $43.99 [SEP] B08X9DFBWK [SEP] Bill Goldberg HD Black Biker Leather jacket - Moto Leather Jacket [SEP] $99.49 to $116.97 [SEP] B09HKPNT4M [SEP] Men's Steampunk Vintage Tailcoat Jacket Gothic Victorian Frock Coat Uniform Winter Warm Costume Outwear Buttons Overcoat [SEP] $27.99 to $29.99 [SEP] B09HKRXGWB [SEP] Men Jacquard Single-Breasted Vest Gothic Steampunk Tuxedo Vest Retro Vest Sleeveless Jackets Stand Collar Punk Waistcoat [SEP] $17.99 to $19.39",
+      "request": {
+        "state": "Shopping instruction:\nfind a water resistant leather jacket, and price lower than 110.00 dollars\n\nCurrent page:\nInstruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] Page 3 (Total results: 50) [SEP] < Prev [SEP] Next > [SEP] B09P8R8HV5 [SEP] Racer Retro Motorcycle Biker Leather Jacket for Men Vintage Brando Motorcycle Rider Classic Biker Jacket [SEP] $56.99 [SEP] B09MQR3Y9C [SEP] Mens Fashion Short Sleeve Henley Shirts Big and Tall Zipper Dual Tipped Collar Slim Fit Paisley Floral Dad Shirts [SEP] $1.99 to $9.99 [SEP] B09HKS5PNB [SEP] Men's Winter Warm Fleece Lapel Jacket Highneck Fur Liner Motorcycle Fur Leather Vintage Zipper Outwear Coat Tops [SEP] $51.79 [SEP] B07FV82R1H [SEP] Dockers Men's James Faux Leather Jacket [SEP] $50.5 to $79.99 [SEP] B07GDXCCT4 [SEP] Carhartt Men's Romeo 4'' Non-Safety Toe Slip On Boots [SEP] $44.99 [SEP] B09CTS62RS [SEP] Ergonomic Office Chair Executive High Back Computer Chair Swivel Home Desk Chair with Adjustable Lumbar Support and Padded Armrest(Brown) [SEP] $175.99 [SEP] B09P8DGHYJ [SEP] NEGJ Mens Thermal Leather Winter Sherpa Fleece Lined Jackets Coats Warm Fur Collar Long Trench Coats Big and Tall Outwears [SEP] $34.99 to $43.99 [SEP] B08X9DFBWK [SEP] Bill Goldberg HD Black Biker Leather jacket - Moto Leather Jacket [SEP] $99.49 to $116.97 [SEP] B09HKPNT4M [SEP] Men's Steampunk Vintage Tailcoat Jacket Gothic Victorian Frock Coat Uniform Winter Warm Costume Outwear Buttons Overcoat [SEP] $27.99 to $29.99 [SEP] B09HKRXGWB [SEP] Men Jacquard Single-Breasted Vest Gothic Steampunk Tuxedo Vest Retro Vest Sleeveless Jackets Stand Collar Punk Waistcoat [SEP] $17.99 to $19.39\n\nRecent actions:\nsearch[find a water resistant leather jacket, and price lower than 110.00 dollars]\nclick[next >]\nclick[next >]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[next >]",
+              "3": "click[b09p8r8hv5]",
+              "4": "click[b09mqr3y9c]",
+              "5": "click[b09hks5pnb]",
+              "6": "click[b07fv82r1h]",
+              "7": "click[b07gdxcct4]",
+              "8": "click[b09cts62rs]",
+              "9": "click[b09p8dghyj]",
+              "10": "click[b08x9dfbwk]",
+              "11": "click[b09hkpnt4m]",
+              "12": "click[b09hkrxgwb]"
+            }
+          }
+        }
+      },
+      "request_sha256": "07c32add758b9c0d4f5d0585229427f46a28136be2851c174ae46c2b1e7804ce",
+      "attempts": [
+        {
+          "seconds": 0.3988342247903347,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.39893533661961555,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "3",
+            "probabilities": {
+              "0": 0.07256553506093211,
+              "1": 0.07196562219418351,
+              "2": 0.12272451939331964,
+              "3": 0.18643413668498218,
+              "4": 0.008666714280691008,
+              "5": 0.058007545194444586,
+              "6": 0.1643936772536842,
+              "7": 0.012069416524089062,
+              "8": 0.006329825314751605,
+              "9": 0.0964648301226917,
+              "10": 0.18194894886867125,
+              "11": 0.00682160688417125,
+              "12": 0.011607622223387975
+            },
+            "confidence": 0.11863698140873069
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 8998,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 13,
+          "inference_seconds": 0.39693477004766464,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[b09p8r8hv5]",
+      "reward": 0.0,
+      "done": false,
+      "elapsed_seconds": 1.3887769915163517
+    },
+    {
+      "step": 4,
+      "observation": "Instruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] coffee [SEP] red [SEP] size [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] Racer Retro Motorcycle Biker Leather Jacket for Men Vintage Brando Motorcycle Rider Classic Biker Jacket [SEP] Price: $56.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now",
+      "request": {
+        "state": "Shopping instruction:\nfind a water resistant leather jacket, and price lower than 110.00 dollars\n\nCurrent page:\nInstruction: [SEP] find a water resistant leather jacket, and price lower than 110.00 dollars [SEP] Back to Search [SEP] < Prev [SEP] color [SEP] black [SEP] coffee [SEP] red [SEP] size [SEP] medium [SEP] large [SEP] x-large [SEP] xx-large [SEP] 3x-large [SEP] 4x-large [SEP] Racer Retro Motorcycle Biker Leather Jacket for Men Vintage Brando Motorcycle Rider Classic Biker Jacket [SEP] Price: $56.99 [SEP] Rating: N.A. [SEP] Description [SEP] Features [SEP] Reviews [SEP] Buy Now\n\nRecent actions:\nsearch[find a water resistant leather jacket, and price lower than 110.00 dollars]\nclick[next >]\nclick[next >]\nclick[b09p8r8hv5]",
+        "questions": {
+          "action": {
+            "type": "choice",
+            "instructions": "Which next action best completes the shopping instruction? Inspect relevant products, select the requested options, and buy a matching product within the price limit. Avoid repeating actions that made no progress.",
+            "criteria": {
+              "0": "click[back to search]",
+              "1": "click[< prev]",
+              "2": "click[description]",
+              "3": "click[features]",
+              "4": "click[reviews]",
+              "5": "click[buy now]",
+              "6": "click[black]",
+              "7": "click[coffee]",
+              "8": "click[red]",
+              "9": "click[medium]",
+              "10": "click[large]",
+              "11": "click[x-large]",
+              "12": "click[xx-large]",
+              "13": "click[3x-large]",
+              "14": "click[4x-large]"
+            }
+          }
+        }
+      },
+      "request_sha256": "e92412d8981acb6f2fddde4df78b135727c94e5612a2ac4f30c019a6a75c804f",
+      "attempts": [
+        {
+          "seconds": 0.21597936004400253,
+          "status": 200
+        }
+      ],
+      "decision_seconds": 0.2160853073000908,
+      "response": {
+        "answers": {
+          "action": {
+            "type": "choice",
+            "choice": "5",
+            "probabilities": {
+              "0": 0.04619398526205792,
+              "1": 0.041007065151619095,
+              "2": 0.06329634698906282,
+              "3": 0.044881734521794885,
+              "4": 0.03805072237689628,
+              "5": 0.137402538380543,
+              "6": 0.09675470139743671,
+              "7": 0.050027411025041844,
+              "8": 0.06128223802926068,
+              "9": 0.10780037447738376,
+              "10": 0.08207633301155567,
+              "11": 0.05937041992176841,
+              "12": 0.06544227323859646,
+              "13": 0.046365306817932966,
+              "14": 0.06004854939904953
+            },
+            "confidence": 0.07578843397915322
+          }
+        },
+        "model": "Qwen/Qwen3.5-9B",
+        "usage": {
+          "input_tokens": 4529,
+          "output_tokens": 0
+        },
+        "metadata": {
+          "method": "lora_decision_head",
+          "temperature": 1.8969118766347646,
+          "candidate_sequences": 15,
+          "inference_seconds": 0.21434036269783974,
+          "prefix_cache": {
+            "enabled": false,
+            "mode": "independent_candidates"
+          },
+          "checkpoint_sha256": "9302c52feba99d079918755f2469f4f088266e9786327bab550248f3d83716d3",
+          "base_revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+          "max_length": 4096,
+          "code_commit": "3308a15ccd7eea1df7a37d6ddc39b023b801ba16"
+        }
+      },
+      "action": "click[buy now]",
+      "reward": 0.5,
+      "done": true,
+      "elapsed_seconds": 1.6505177915096283
+    }
+  ]
+}
