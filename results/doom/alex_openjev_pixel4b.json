@@ -1,0 +1,66 @@
+{
+  "args": {
+    "ckpt": "../qwen3.5-4b-nli-v2",
+    "episodes": 5,
+    "collect_episodes": 12,
+    "noise": 0.2,
+    "eps": 0.1,
+    "frame_skip": 4,
+    "seed": 0,
+    "out": "../../../results/doom/alex_openjev_pixel4b.json",
+    "video": "../../../results/doom/alex_openjev_pixel4b.mp4",
+    "video_nli": null,
+    "mode": "zeroshot",
+    "variants": [
+      "pixels"
+    ],
+    "calibrate": false,
+    "ft_epochs": 2,
+    "ft_lr": 0.0001
+  },
+  "results": {
+    "random": {
+      "mean_kills": 1.0,
+      "max_kills": 2,
+      "mean_reward": 0.0,
+      "mean_steps": 81.0,
+      "lat_ms": 0.0031068887556995393
+    },
+    "oracle": {
+      "mean_kills": 16.6,
+      "max_kills": 19,
+      "mean_reward": 15.6,
+      "mean_steps": 265.2,
+      "lat_ms": 0.0015989844538424087
+    },
+    "nli_pixels": {
+      "mean_kills": 9.4,
+      "max_kills": 14,
+      "mean_reward": 8.4,
+      "mean_steps": 176.6,
+      "lat_ms": 174.2382247324519,
+      "premise": "A first-person Doom screenshot, 320 pixels wide, the crosshair at x = 160: {img}",
+      "hypotheses": [
+        "The monster is at x < 100, on the left.",
+        "The monster is around x = 130, a little left of centre.",
+        "The monster is at x = 160, dead centre.",
+        "The monster is around x = 190, a little right of centre.",
+        "The monster is at x > 220, on the right.",
+        "There is no monster in the image."
+      ],
+      "action_map": [
+        0,
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      "action_dist": [
+        0.4,
+        0.26153846153846155,
+        0.3384615384615385
+      ]
+    }
+  }
+}

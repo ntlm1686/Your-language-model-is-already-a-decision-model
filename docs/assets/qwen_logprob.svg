@@ -1,70 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="735" viewBox="0 0 1200 735" role="img" aria-labelledby="title desc">
-  <title id="title">Qwen3-8B decision scoring with letter log probabilities</title>
-  <desc id="desc">Two semantic candidates are shown in both A and B positions. Each ordering uses one forward pass. The A and B next-token logits after Answer colon are normalized, aligned back to the semantic candidates, summed, and the candidate with the larger sum is selected.</desc>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M1 1 L9 5 L1 9Z" fill="#53657f"/>
-    </marker>
-    <style>
-      .bg { fill: #f5f7fb; }
-      .title { fill: #15233b; font: 700 30px Arial, sans-serif; }
-      .subtitle { fill: #53657f; font: 16px Arial, sans-serif; }
-      .section { fill: #172642; font: 700 18px Arial, sans-serif; }
-      .body { fill: #24354f; font: 16px Arial, sans-serif; }
-      .small { fill: #53657f; font: 14px Arial, sans-serif; }
-      .mono { fill: #172642; font: 15px 'DejaVu Sans Mono', monospace; }
-      .card { fill: #fff; stroke: #dbe3ee; stroke-width: 1.5; }
-      .blue { fill: #e7f1ff; }
-      .blue-text { fill: #1363ae; font: 700 15px Arial, sans-serif; }
-      .violet { fill: #eeeaff; }
-      .violet-text { fill: #6944b9; font: 700 15px Arial, sans-serif; }
-      .green { fill: #e4f7ec; }
-      .green-text { fill: #17834e; font: 700 17px Arial, sans-serif; }
-      .line { stroke: #53657f; stroke-width: 2; fill: none; marker-end: url(#arrow); }
-      .softline { stroke: #a8b6c9; stroke-width: 1.5; fill: none; }
-    </style>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
+<title id="title">Decision making from option-token probabilities</title>
+<desc id="desc">The input contains the state, question, options A B C, and ends at Answer colon. Qwen3.5-9B produces next-token logits over its vocabulary. Only the probabilities for the option tokens A B C are read; other example tokens are dashed and ignored. The selected option is A, use web search.</desc>
+<defs>
+<style>
+.bg{fill:#f6f8fc}.card{fill:#fff;stroke:#d8e1ed;stroke-width:2}.title{font:700 30px 'DejaVu Sans',sans-serif;fill:#14243e}.head{font:700 20px 'DejaVu Sans',sans-serif;fill:#172946}.body{font:17px 'DejaVu Sans',sans-serif;fill:#253a57}.small{font:15px 'DejaVu Sans',sans-serif;fill:#53657d}.mono{font:17px 'DejaVu Sans Mono',monospace;fill:#203551}.blue{fill:#e7f2ff;stroke:#9ec6f0;stroke-width:1.5}.purple{fill:#eee9ff;stroke:#baa4ee;stroke-width:2}.green{fill:#e5f7ee;stroke:#9cd5b7;stroke-width:1.5}.ignored{fill:#fafbfd;stroke:#b8c2ce;stroke-width:1.5;stroke-dasharray:7 5}.faded{font:16px 'DejaVu Sans Mono',monospace;fill:#929eae}.arrow{fill:none;stroke:#536a88;stroke-width:2.5;marker-end:url(#tip)}.selected{fill:none;stroke:#278b60;stroke-width:2.5;marker-end:url(#greenTip)}
+</style>
+<marker id="tip" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9Z" fill="#536a88"/></marker>
+<marker id="greenTip" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9Z" fill="#278b60"/></marker>
+</defs>
+<rect class="bg" width="1400" height="720"/>
+<text class="title" x="40" y="55">Choose an action from next-token probabilities</text>
+<text class="small" x="40" y="86">Illustrative example</text>
 
-  <rect class="bg" width="1200" height="735"/>
-  <text class="title" x="48" y="57">How a language model makes a decision</text>
-  <text class="subtitle" x="48" y="88">Illustrative two-option example · Qwen3-8B, thinking disabled · no answer is generated</text>
+<rect class="card" x="40" y="134" width="460" height="450" rx="16"/>
+<text class="head" x="64" y="173">1  Model input</text>
+<text class="mono" x="64" y="251">State:</text>
+<text class="mono" x="64" y="279">User asks for the weather</text>
+<text class="mono" x="64" y="307">in Paris right now.</text>
+<text class="mono" x="64" y="351">Question: What should we do?</text>
+<rect x="55" y="373" width="427" height="97" rx="12" fill="#fff8e8" stroke="#d99a32" stroke-width="2"/>
+<rect x="351" y="362" width="104" height="23" rx="6" fill="#fff8e8"/>
+<text class="small" x="369" y="379" style="fill:#946217;font-weight:700">Options</text>
+<text class="mono" x="64" y="395">A. Use web search</text>
+<text class="mono" x="64" y="425">B. Answer from memory</text>
+<text class="mono" x="64" y="455">C. Ask for the city</text>
+<rect class="blue" x="61" y="483" width="416" height="52" rx="9"/>
+<text class="mono" x="79" y="516">Answer:</text>
 
-  <rect class="card" x="48" y="122" width="1104" height="116" rx="16"/>
-  <text class="section" x="72" y="155">1  Define the decision</text>
-  <text class="body" x="72" y="187">State: “What is the weather in Paris right now?”</text>
-  <rect class="blue" x="610" y="156" width="210" height="40" rx="9"/>
-  <text class="blue-text" x="627" y="181">Use an external tool</text>
-  <rect class="violet" x="835" y="156" width="272" height="40" rx="9"/>
-  <text class="violet-text" x="852" y="181">Answer directly</text>
+<path class="arrow" d="M500 359 H549"/>
+<rect class="purple" x="555" y="270" width="240" height="180" rx="16"/>
+<text class="head" x="581" y="311">Qwen3.5-9B</text>
+<text class="body" x="581" y="350">Language model</text>
+<path class="arrow" d="M795 359 H843"/>
 
-  <path class="line" d="M600 238 V268"/>
-  <text class="small" x="515" y="261">Rotate option positions</text>
+<rect class="card" x="850" y="134" width="510" height="450" rx="16"/>
+<text class="head" x="874" y="173">2  Next-token probabilities</text>
+<rect class="blue" x="873" y="217" width="464" height="47" rx="8"/>
+<text class="mono" x="894" y="248">A</text><rect x="962" y="231" width="224" height="17" rx="4" fill="#428bd1"/><text class="mono" x="1264" y="248">56%</text>
+<rect class="blue" x="873" y="275" width="464" height="47" rx="8"/>
+<text class="mono" x="894" y="306">B</text><rect x="962" y="289" width="96" height="17" rx="4" fill="#428bd1"/><text class="mono" x="1264" y="306">24%</text>
+<rect class="blue" x="873" y="333" width="464" height="47" rx="8"/>
+<text class="mono" x="894" y="364">C</text><rect x="962" y="347" width="32" height="17" rx="4" fill="#428bd1"/><text class="mono" x="1264" y="364">8%</text>
+<rect class="ignored" x="873" y="402" width="464" height="43" rx="8"/>
+<text class="faded" x="894" y="429">The</text><text class="faded" x="1090" y="429">ignored</text><text class="faded" x="1264" y="429">5%</text>
+<rect class="ignored" x="873" y="458" width="464" height="43" rx="8"/>
+<text class="faded" x="894" y="485">I</text><text class="faded" x="1090" y="485">ignored</text><text class="faded" x="1264" y="485">3%</text>
+<rect class="ignored" x="873" y="514" width="464" height="43" rx="8"/>
+<text class="faded" x="894" y="541">… other tokens</text><text class="faded" x="1090" y="541">ignored</text><text class="faded" x="1264" y="541">4%</text>
 
-  <rect class="card" x="48" y="285" width="534" height="218" rx="16"/>
-  <text class="section" x="72" y="319">2a  Ordering 1 · one forward pass</text>
-  <text class="mono" x="72" y="355">A. Use an external tool</text>
-  <text class="mono" x="72" y="385">B. Answer directly</text>
-  <text class="mono" x="72" y="421">Answer: [next token]</text>
-  <rect class="blue" x="72" y="443" width="486" height="42" rx="8"/>
-  <text class="mono" x="86" y="470">log p(A) = −0.36    log p(B) = −1.20</text>
-
-  <rect class="card" x="618" y="285" width="534" height="218" rx="16"/>
-  <text class="section" x="642" y="319">2b  Ordering 2 · one forward pass</text>
-  <text class="mono" x="642" y="355">A. Answer directly</text>
-  <text class="mono" x="642" y="385">B. Use an external tool</text>
-  <text class="mono" x="642" y="421">Answer: [next token]</text>
-  <rect class="violet" x="642" y="443" width="486" height="42" rx="8"/>
-  <text class="mono" x="656" y="470">log p(A) = −0.92    log p(B) = −0.51</text>
-
-  <path class="line" d="M315 503 V538 H483 V554"/>
-  <path class="line" d="M885 503 V538 H718 V554"/>
-
-  <rect class="card" x="180" y="554" width="840" height="132" rx="16"/>
-  <text class="section" x="205" y="586">3  Align by meaning, sum log probabilities, choose the maximum</text>
-  <text class="mono" x="205" y="618">Use an external tool:  −0.36 (A) + −0.51 (B) = −0.87</text>
-  <text class="mono" x="205" y="648">Answer directly:      −1.20 (B) + −0.92 (A) = −2.12</text>
-  <rect class="green" x="813" y="606" width="184" height="51" rx="10"/>
-  <text class="green-text" x="832" y="638">Choose: use tool</text>
-
-  <text class="small" x="48" y="713">At each “Answer: ” position: log-softmax over the A/B letter logits only. Generalizes to N options with N cyclic rotations and N forward passes.</text>
+<path d="M1337 240 H1346 V356 H1337 M1337 298 H1346" fill="none" stroke="#278b60" stroke-width="2.5"/>
+<path class="selected" d="M1346 298 H1380 V655 H1364"/>
+<rect class="green" x="40" y="625" width="1320" height="62" rx="14"/>
+<text class="head" x="64" y="663">Keep A / B / C → 63.6% / 27.3% / 9.1% → Choose A: Use web search</text>
 </svg>

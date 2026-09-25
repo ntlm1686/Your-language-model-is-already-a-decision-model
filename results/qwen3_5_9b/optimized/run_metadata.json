@@ -1,0 +1,20 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "hardware": "4 x NVIDIA H100 80GB HBM3",
+  "workers": 4,
+  "gpus_per_worker": 1,
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "linear_attention_kernel": "fla.ops.gated_delta_rule.chunk",
+  "batching": "all prompt rotations for one decision",
+  "max_prompt_tokens": 32768,
+  "warmup": "one synthetic prompt per worker; real-item compilation included",
+  "timing_scope": "prompt construction, tokenization, GPU preparation, model forward, score aggregation; no HTTP",
+  "timing_statistic": "median of all per-item times",
+  "packages": {
+    "torch": "2.12.0",
+    "transformers": "5.10.2",
+    "flash-linear-attention": "0.5.2"
+  }
+}

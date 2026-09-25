@@ -32,6 +32,7 @@ OPEN_JEV_REVS = {
     "ZefanCai/Open-Jev-2B": "0c7aa498b1627be8da4acf34c863ff0ee0a92785",
     "ZefanCai/Open-Jev-9B": "47e966881e489511c0c7f5633a9e1960a676a551",
 }
+ALEX_OPENJEV_REV = "058a6c24911b46d908fbe23541390f8af3df3e4d"
 DEEPSWE_REPO = "kaitchup/DeepSWE1.1-trajectories-Qwen3.8-27B"
 DEEPSWE_REV = "e58b83310346104971fd17c42f9955e7cd5e3b25"
 WEBPRM_REPO = "ZYao720/WEBPRMBENCH"
@@ -119,7 +120,7 @@ def get_bfcl() -> None:
 
 def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("components", nargs="+", choices=("repos", "heads", "model", "qwen_tokenizer", "webprm", "deepswe", "phishing", "when2call", "metatool", "bfcl", "open_jev"))
+    p.add_argument("components", nargs="+", choices=("repos", "heads", "model", "qwen_tokenizer", "webprm", "deepswe", "phishing", "when2call", "metatool", "bfcl", "open_jev", "alex_doom"))
     args = p.parse_args()
     for component in args.components:
         if component == "repos":
@@ -156,6 +157,10 @@ def main() -> None:
                 size = repo.rsplit("-", 1)[-1].lower()
                 print(snapshot_download(repo_id=repo, revision=revision,
                                         local_dir=ROOT / "models" / f"open_jev_{size}"))
+        elif component == "alex_doom":
+            print(snapshot_download(repo_id="AlexWortega/openjev", revision=ALEX_OPENJEV_REV,
+                                    local_dir=ROOT / "external/alex_openjev",
+                                    allow_patterns=["code/*.py", "qwen3.5-4b-nli-v2/*"]))
 
 
 if __name__ == "__main__":

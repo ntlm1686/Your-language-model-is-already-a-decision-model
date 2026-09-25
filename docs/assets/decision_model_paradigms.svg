@@ -1,103 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="895" viewBox="0 0 1440 895" role="img" aria-labelledby="title desc">
-  <title id="title">Four architectures for scoring candidate actions</title>
-  <desc id="desc">Four side-by-side flow diagrams compare letter log probabilities, a joint state-action score head, separate contrastive state-action encoders, and RAM-inspired action queries with cross-attention over state features.</desc>
-  <defs>
-    <style>
-      .bg{fill:#f5f7fb}.title{font:700 30px Arial,sans-serif;fill:#15233b}.sub{font:16px Arial,sans-serif;fill:#53657f}.head{font:700 20px Arial,sans-serif;fill:#182a45}.small{font:14px Arial,sans-serif;fill:#53657f}.body{font:16px Arial,sans-serif;fill:#24354f}.mono{font:15px 'DejaVu Sans Mono',monospace;fill:#24354f}.card{fill:#fff;stroke:#dce4ee;stroke-width:1.5}.box{fill:#edf2f8;stroke:#d6dfeb;stroke-width:1}.blue{fill:#e7f1ff;stroke:#b9d8fa;stroke-width:1}.purple{fill:#f0eaff;stroke:#d6c4ff;stroke-width:1}.mint{fill:#e5f7ef;stroke:#bce7ce;stroke-width:1}.amber{fill:#fff3de;stroke:#f0d8a9;stroke-width:1}.arrow{fill:none;stroke:#637791;stroke-width:2.1;marker-end:url(#a)}.join{fill:none;stroke:#9baabd;stroke-width:2}.label{font:700 14px Arial,sans-serif;fill:#34506f}.num{font:700 17px Arial,sans-serif;fill:#fff}
-    </style>
-    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L8 4.5 L0 9Z" fill="#637791"/></marker>
-  </defs>
-  <rect class="bg" width="1440" height="895"/>
-  <text class="title" x="48" y="58">Where does the state meet the candidate action?</text>
-  <text class="sub" x="48" y="87">Four scoring interfaces · S = state · A₁…Aₙ = candidate actions · T = state features</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810" role="img" aria-labelledby="title desc">
+<title id="title">Possible decision model architectures</title>
+<desc id="desc">The language model scores next-token probabilities. CLM compares independent state and action vectors. Action tokens form the input sequence of a Transformer. Encoded state features enter its cross-attention layers from the side as keys and values; the updated action tokens produce action scores.</desc>
+<defs>
+<style>
+.bg{fill:#f6f8fc}.card{fill:#fff;stroke:#d8e1ed;stroke-width:2}.title{font:700 31px 'DejaVu Sans',sans-serif;fill:#14243e}.sub{font:16px 'DejaVu Sans',sans-serif;fill:#52637b}.head{font:700 21px 'DejaVu Sans',sans-serif;fill:#172946}.body{font:700 17px 'DejaVu Sans',sans-serif;fill:#203551}.small{font:15px 'DejaVu Sans',sans-serif;fill:#53657d}.mono{font:16px 'DejaVu Sans Mono',monospace;fill:#203551}.tag{font:700 14px 'DejaVu Sans',sans-serif;fill:#285d92}.blue{fill:#e7f2ff;stroke:#a8cbf2;stroke-width:1.5}.amber{fill:#fff3dc;stroke:#f0d198;stroke-width:1.5}.purple{fill:#eee9ff;stroke:#cabaf8;stroke-width:1.5}.mint{fill:#e5f7ee;stroke:#a8dfc2;stroke-width:1.5}.line{fill:none;stroke:#62758e;stroke-width:2.5;marker-end:url(#arrow)}.side{fill:none;stroke:#2b79c0;stroke-width:3;marker-end:url(#bluearrow)}.skip{fill:none;stroke:#d69229;stroke-width:2.5;marker-end:url(#arrow)}
+</style>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9Z" fill="#62758e"/></marker>
+<marker id="bluearrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9Z" fill="#2b79c0"/></marker>
+</defs>
+<rect class="bg" width="1440" height="810"/>
+<text class="title" x="40" y="53">Possible decision model architectures</text>
+<text class="sub" x="40" y="82">Decision model architectures mainly differ in how state and action are connected and interact within the network.</text>
 
-  <!-- 1: letter probabilities -->
-  <rect class="card" x="40" y="119" width="330" height="636" rx="16"/>
-  <circle cx="69" cy="153" r="18" fill="#377ec8"/><text class="num" x="64" y="159">1</text>
-  <text class="head" x="94" y="159">Letter log probabilities</text>
-  <text class="small" x="60" y="190">Our current Qwen3-8B baseline</text>
-  <rect class="blue" x="60" y="220" width="290" height="91" rx="10"/>
-  <text class="mono" x="75" y="249">State S</text><text class="mono" x="75" y="275">A. action 1  B. action 2</text><text class="mono" x="75" y="300">Answer: [next token]</text>
-  <path class="arrow" d="M205 311 V342"/>
-  <rect class="box" x="60" y="347" width="290" height="62" rx="10"/>
-  <text class="body" x="83" y="375">Language model</text><text class="small" x="83" y="396">one pass per ordering</text>
-  <path class="arrow" d="M205 409 V441"/>
-  <rect class="purple" x="60" y="446" width="290" height="58" rx="10"/>
-  <text class="body" x="77" y="471">A/B next-token logits</text><text class="small" x="77" y="492">log-softmax over letters</text>
-  <path class="arrow" d="M205 504 V536"/>
-  <rect class="mint" x="60" y="541" width="290" height="65" rx="10"/>
-  <text class="body" x="77" y="566">Rotate positions; sum</text><text class="small" x="77" y="591">scores by semantic action</text>
-  <text class="label" x="60" y="653">Training: LM next-token CE</text>
-  <text class="small" x="60" y="680">Task-specific training: none here</text>
-  <text class="small" x="60" y="710">Current cost: N full prompt passes</text>
+<rect class="card" x="40" y="116" width="440" height="650" rx="18"/>
+<text class="head" x="65" y="155">1  Next-token probabilities</text>
+<text class="small" x="65" y="183">Qwen3.5-9B · no decision training</text>
+<rect class="blue" x="65" y="218" width="390" height="95" rx="12"/>
+<text class="mono" x="84" y="247">State: S</text>
+<text class="mono" x="84" y="274">A. action 1   B. action 2</text>
+<text class="mono" x="84" y="300">Answer:</text>
+<path class="line" d="M260 313 V346"/>
+<rect class="purple" x="65" y="351" width="390" height="76" rx="12"/>
+<text class="body" x="84" y="380">Language model</text>
+<text class="small" x="84" y="406">Reads state and all actions together</text>
+<path class="line" d="M260 427 V459"/>
+<rect class="amber" x="65" y="464" width="390" height="74" rx="12"/>
+<text class="body" x="84" y="493">Next-token log probabilities</text>
+<text class="small" x="84" y="519">p(A), p(B), … at the answer position</text>
+<path class="line" d="M260 538 V571"/>
+<rect class="mint" x="65" y="576" width="390" height="72" rx="12"/>
+<text class="body" x="84" y="605">Align by action; choose maximum</text>
+<text class="small" x="84" y="630">Rotate option positions in our evaluation</text>
+<text class="tag" x="65" y="711">N prompt orders in our evaluation</text>
+<text class="small" x="65" y="735">No new scoring head</text>
 
-  <!-- 2: joint head -->
-  <rect class="card" x="383" y="119" width="330" height="636" rx="16"/>
-  <circle cx="412" cy="153" r="18" fill="#8a64cc"/><text class="num" x="407" y="159">2</text>
-  <text class="head" x="437" y="159">Joint score head</text>
-  <text class="small" x="403" y="190">A trained state-action scorer</text>
-  <rect class="blue" x="403" y="220" width="290" height="75" rx="10"/>
-  <text class="mono" x="420" y="248">[S; A₁…Aₙ]  or</text><text class="mono" x="420" y="277">[S; Aᵢ] per pair</text>
-  <path class="arrow" d="M548 295 V340"/>
-  <rect class="box" x="403" y="345" width="290" height="65" rx="10"/>
-  <text class="body" x="420" y="372">Joint encoder</text><text class="small" x="420" y="395">state and action interact</text>
-  <path class="arrow" d="M548 410 V443"/>
-  <rect class="purple" x="403" y="448" width="290" height="57" rx="10"/>
-  <text class="body" x="420" y="475">Trained scalar / class head</text><text class="small" x="420" y="495">one score per candidate</text>
-  <path class="arrow" d="M548 505 V537"/>
-  <rect class="mint" x="403" y="542" width="290" height="65" rx="10"/>
-  <text class="body" x="420" y="570">Choose highest score</text><text class="small" x="420" y="593">or threshold multiple actions</text>
-  <text class="label" x="403" y="653">Training: CE, BCE or ranking</text>
-  <text class="small" x="403" y="680">One joint pass or N pair passes</text>
-  <text class="small" x="403" y="710">No reusable final action score</text>
+<rect class="card" x="500" y="116" width="440" height="650" rx="18"/>
+<text class="head" x="525" y="155">2  Contrastive similarity</text>
+<text class="small" x="525" y="183">CLM · separate state/action encoders</text>
+<rect class="blue" x="525" y="218" width="170" height="60" rx="12"/>
+<text class="mono" x="551" y="254">State S</text>
+<rect class="amber" x="745" y="218" width="170" height="60" rx="12"/>
+<text class="mono" x="764" y="254">A₁…Aₙ</text>
+<path class="line" d="M610 278 V319"/>
+<path class="line" d="M830 278 V319"/>
+<rect class="blue" x="525" y="324" width="170" height="86" rx="12"/>
+<text class="body" x="545" y="356">State encoder</text>
+<text class="small" x="545" y="384">vector zₛ</text>
+<rect class="amber" x="745" y="324" width="170" height="86" rx="12"/>
+<text class="body" x="763" y="356">Action encoder</text>
+<text class="small" x="763" y="384">vectors zₐ₁…zₐₙ</text>
+<path class="line" d="M610 410 V453 H703 V464"/>
+<path class="line" d="M830 410 V453 H737 V464"/>
+<rect class="purple" x="555" y="470" width="330" height="78" rx="12"/>
+<text class="body" x="579" y="500">Cosine / dot product</text>
+<text class="small" x="579" y="527">Compare zₛ with each zₐ</text>
+<path class="line" d="M720 548 V581"/>
+<rect class="mint" x="555" y="586" width="330" height="62" rx="12"/>
+<text class="body" x="579" y="624">Choose top similarity</text>
+<text class="tag" x="525" y="711">Action vectors can be cached</text>
+<text class="small" x="525" y="735">State and action meet at vector comparison</text>
 
-  <!-- 3: CLM -->
-  <rect class="card" x="726" y="119" width="330" height="636" rx="16"/>
-  <circle cx="755" cy="153" r="18" fill="#238b70"/><text class="num" x="750" y="159">3</text>
-  <text class="head" x="780" y="159">Separate encoders</text>
-  <text class="small" x="746" y="190">CLM-style contrastive scoring</text>
-  <rect class="blue" x="746" y="220" width="130" height="61" rx="10"/>
-  <rect class="amber" x="906" y="220" width="130" height="61" rx="10"/>
-  <text class="mono" x="772" y="256">State S</text><text class="mono" x="927" y="256">A₁…Aₙ</text>
-  <path class="arrow" d="M811 281 V337"/><path class="arrow" d="M971 281 V337"/>
-  <rect class="box" x="746" y="342" width="130" height="72" rx="10"/>
-  <rect class="box" x="906" y="342" width="130" height="72" rx="10"/>
-  <text class="body" x="759" y="370">State</text><text class="small" x="759" y="396">encoder</text>
-  <text class="body" x="919" y="370">Action</text><text class="small" x="919" y="396">encoder</text>
-  <path class="join" d="M811 414 V452 H891"/><path class="join" d="M971 414 V452 H891"/><path class="arrow" d="M891 452 V468"/>
-  <rect class="purple" x="746" y="473" width="290" height="60" rx="10"/>
-  <text class="body" x="766" y="501">Scaled cosine / dot product</text><text class="small" x="766" y="521">compare projected vectors</text>
-  <path class="arrow" d="M891 533 V554"/>
-  <rect class="mint" x="746" y="559" width="290" height="48" rx="10"/>
-  <text class="body" x="766" y="589">Choose top similarity</text>
-  <text class="label" x="746" y="653">Training: contrastive InfoNCE</text>
-  <text class="small" x="746" y="680">Cache repeat action embeddings</text>
-  <text class="small" x="746" y="710">One new state + N dot products</text>
-
-  <!-- 4: RAM-inspired -->
-  <rect class="card" x="1069" y="119" width="330" height="636" rx="16"/>
-  <circle cx="1098" cy="153" r="18" fill="#ce9232"/><text class="num" x="1093" y="159">4</text>
-  <text class="head" x="1123" y="159">Action queries</text>
-  <text class="small" x="1089" y="190">RAM-inspired proposed adaptation</text>
-  <rect class="blue" x="1089" y="220" width="125" height="61" rx="10"/>
-  <rect class="amber" x="1244" y="220" width="135" height="61" rx="10"/>
-  <text class="mono" x="1111" y="256">State S</text><text class="mono" x="1262" y="256">Queries</text>
-  <path class="arrow" d="M1151 281 V337"/><path class="arrow" d="M1311 281 V337"/>
-  <rect class="box" x="1089" y="342" width="125" height="72" rx="10"/>
-  <rect class="box" x="1244" y="342" width="135" height="72" rx="10"/>
-  <text class="body" x="1102" y="369">State</text><text class="small" x="1102" y="392">features T</text>
-  <text class="body" x="1257" y="369">Action</text><text class="small" x="1257" y="392">embeddings</text>
-  <path class="join" d="M1151 414 V452 H1233"/><path class="join" d="M1311 414 V452 H1233"/><path class="arrow" d="M1233 452 V467"/>
-  <rect class="purple" x="1089" y="472" width="290" height="61" rx="10"/>
-  <text class="body" x="1107" y="500">Cross-attention</text><text class="small" x="1107" y="521">queries read state features</text>
-  <path class="arrow" d="M1234 533 V553"/>
-  <rect class="mint" x="1089" y="558" width="290" height="49" rx="10"/>
-  <text class="body" x="1107" y="588">Per-action classifier</text>
-  <text class="label" x="1089" y="653">Training: CE / multi-label loss</text>
-  <text class="small" x="1089" y="680">State encoded once; O(N × T)</text>
-  <text class="small" x="1089" y="710">RAM itself predicts image tags</text>
-
-  <rect class="amber" x="40" y="784" width="1359" height="77" rx="13"/>
-  <text class="head" x="62" y="815">Modality is an encoder and data choice</text>
-  <text class="body" x="62" y="843">A visual state is possible in any pattern with visual inputs and training; the released RAM is an image tagger, not an action model.</text>
+<rect class="card" x="960" y="116" width="440" height="650" rx="18"/>
+<text class="head" x="985" y="155">3  Action-token Transformer</text>
+<text class="small" x="985" y="183">State enters through cross-attention</text>
+<rect class="blue" x="985" y="218" width="151" height="65" rx="12"/>
+<text class="mono" x="1008" y="256">State S</text>
+<rect class="amber" x="1170" y="218" width="205" height="65" rx="12"/>
+<text class="body" x="1185" y="246">Action tokens</text>
+<text class="small" x="1185" y="271">Input: A₁, A₂, …, Aₙ</text>
+<path class="line" d="M1272 283 V334"/>
+<path class="side" d="M1060 283 V331"/>
+<rect class="blue" x="985" y="337" width="151" height="74" rx="12"/>
+<text class="body" x="998" y="366">State encoder</text>
+<text class="small" x="998" y="393">encode once</text>
+<path class="side" d="M1060 411 V453"/>
+<rect class="blue" x="985" y="459" width="151" height="63" rx="12"/>
+<text class="body" x="998" y="487">State features</text>
+<text class="small" x="998" y="509">keys K, values V</text>
+<rect x="1170" y="340" width="205" height="310" rx="14" fill="#f8f5ff" stroke="#aa92df" stroke-width="2"/>
+<text class="body" x="1185" y="368">Transformer × L</text>
+<path class="line" d="M1272 377 V396"/>
+<rect class="purple" x="1186" y="402" width="173" height="61" rx="9"/>
+<text class="body" x="1196" y="426">Cross-attention</text>
+<text class="small" x="1196" y="451">Q: action tokens</text>
+<path class="side" d="M1136 489 H1153 V437 H1182"/>
+<path class="skip" d="M1272 385 H1366 V492 H1296"/>
+<path class="line" d="M1272 463 V472"/>
+<circle cx="1272" cy="492" r="16" fill="#fff" stroke="#8e9db0" stroke-width="2"/>
+<text class="body" x="1265" y="498">+</text>
+<text class="small" x="1190" y="499">norm</text>
+<path class="line" d="M1272 508 V535"/>
+<rect class="purple" x="1186" y="541" width="173" height="49" rx="9"/>
+<text class="body" x="1200" y="572">Feed-forward</text>
+<path class="line" d="M1272 590 V609"/>
+<text class="small" x="1194" y="634">Residual + norm</text>
+<path class="line" d="M1272 650 V685"/>
+<rect class="mint" x="1170" y="691" width="205" height="51" rx="12"/>
+<text class="body" x="1185" y="722">Per-action scores</text>
+<text class="small" x="985" y="714">Proposed design;</text>
+<text class="small" x="985" y="737">requires training</text>
 </svg>

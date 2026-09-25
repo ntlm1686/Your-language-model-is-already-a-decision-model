@@ -96,14 +96,14 @@ Repeat with the 9B checkpoint on another GPU and port if desired. The extended-c
 
 Both released checkpoints were evaluated on every suite above. The [machine-readable summary](../results/open_jev_summary.json) is recomputed from the committed per-item JSONL files by `scripts/summarize_open_jev.py`. The Qwen/CLM/Jev baseline counts below are recounted on exactly the Open-Jev-eligible IDs for each row. Latency is the median localhost round trip for an eligible item, rounded to milliseconds.
 
-| Benchmark | Eligible / total | Qwen3-8B | CLM default 2K | Jev 1.13.0 | Open-Jev-2B (correct · p50) | Open-Jev-9B (correct · p50) |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| JevBench | 231/231 | 163 | 95 | 199 | 150 · 444 ms | 179 · 602 ms |
-| MetaTool Task1 | 1,040/1,040 | 842 | 518 | 802 | 692 · 222 ms | 792 · 293 ms |
-| When2Call | 599/600 | 306 | 200 | 439 | 235 · 600 ms | 451 · 790 ms |
-| BFCL v4 Multiple | 200/200 | 198 | 169 | 198 | 196 · 328 ms | 197 · 447 ms |
-| PhishNChips | 2,000/2,000 | 1,330 | 1,212 | 1,251 | 1,000 · 240 ms | 1,453 · 315 ms |
-| WebPRM sample | 93/120 | 53 | 19 | 54 | 43 · 1,153 ms | 47 · 1,527 ms |
-| WebPRM full | 842/1,141 | 528 | 152 | 580 | 421 · 1,182 ms | 472 · 1,527 ms |
+| Benchmark | Eligible / total | Qwen3-8B | CLM default 2K | Jev 1.13.0 | Open-Jev-2B correct | 2B p50 | Open-Jev-9B correct | 9B p50 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| JevBench | 231/231 | 163 | 95 | 199 | 150 | 444 ms | 179 | 602 ms |
+| MetaTool Task1 | 1,040/1,040 | 842 | 518 | 802 | 692 | 222 ms | 792 | 293 ms |
+| When2Call | 599/600 | 306 | 200 | 439 | 235 | 600 ms | 451 | 790 ms |
+| BFCL v4 Multiple | 200/200 | 198 | 169 | 198 | 196 | 328 ms | 197 | 447 ms |
+| PhishNChips | 2,000/2,000 | 1,330 | 1,212 | 1,251 | 1,000 | 240 ms | 1,453 | 315 ms |
+| WebPRM sample | 93/120 | 53 | 19 | 54 | 43 | 1,153 ms | 47 | 1,527 ms |
+| WebPRM full | 842/1,141 | 528 | 152 | 580 | 421 | 1,182 ms | 472 | 1,527 ms |
 
 At the official 4K cap, all 152 DeepSWE rotations for both checkpoints returned `too_long` (0/38 complete tasks eligible). At 8K, both evaluated all 38 tasks: 2B selected a successful trajectory for **24/38** tasks, p50 **1,530 ms per rotation**; 9B scored **23/38**, p50 **2,073 ms per rotation**. These 8K results are separate exploratory measurements. The Qwen, CLM, and Jev DeepSWE task scores in the main table use their own evaluation configurations and are not part of the 4K same-eligible comparison above.

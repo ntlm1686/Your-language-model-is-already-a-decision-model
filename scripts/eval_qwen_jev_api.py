@@ -32,14 +32,14 @@ def tasks() -> list[dict]:
     return rows
 
 
-def body_for(row: dict) -> dict:
+def body_for(row: dict, model_name: str = "qwen3-8b") -> dict:
     question = copy.deepcopy(row["question"])
     if question["type"] == "choice":
         criteria = question["criteria"]
         if set(criteria) != set(row["labels"]):
             raise ValueError(f"candidate labels differ from criteria on {row['id']}")
         question["criteria"] = {key: criteria[key] for key in row["labels"]}
-    return {"model": "qwen3-8b", "state": row["state"], "questions": {"decision": question}}
+    return {"model": model_name, "state": row["state"], "questions": {"decision": question}}
 
 
 def post(url: str, body: dict, timeout: float) -> tuple[int, dict, float]:
@@ -54,8 +54,8 @@ def post(url: str, body: dict, timeout: float) -> tuple[int, dict, float]:
         return error.code, json.loads(error.read()), time.perf_counter() - start
 
 
-def evaluate(row: dict, url: str, timeout: float) -> dict:
-    body = body_for(row)
+def evaluate(row: dict, url: str, timeout: float, model_name: str = "qwen3-8b") -> dict:
+    body = body_for(row, model_name)
     request_sha = hashlib.sha256(json.dumps(body, ensure_ascii=False, allow_nan=False).encode()).hexdigest()
     status, response, latency = post(url, body, timeout)
     result = {"id": row["id"], "type": row["question"]["type"],
@@ -66,7 +66,7 @@ def evaluate(row: dict, url: str, timeout: float) -> dict:
         return result
     if status != 200:
         raise RuntimeError(f"{row['id']}: HTTP {status}: {response}")
-    if response.get("model") != "qwen3-8b":
+    if response.get("model") != model_name:
         raise ValueError(f"{row['id']}: unexpected model {response.get('model')}")
     answers = response.get("answers", {})
     if set(answers) != {"decision"}:
@@ -111,6 +111,7 @@ def main() -> None:
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--limit", type=int)
     parser.add_argument("--timeout", type=float, default=180)
+    parser.add_argument("--model-name", default="qwen3-8b")
     args = parser.parse_args()
     rows = tasks()
     if args.limit is not None:
@@ -125,7 +126,7 @@ def main() -> None:
         row = by_id.get(record["id"])
         if row is None:
             raise ValueError(f"output contains unexpected ID {record['id']}")
-        digest = hashlib.sha256(json.dumps(body_for(row), ensure_ascii=False, allow_nan=False).encode()).hexdigest()
+        digest = hashlib.sha256(json.dumps(body_for(row, args.model_name), ensure_ascii=False, allow_nan=False).encode()).hexdigest()
         if record["request_sha256"] != digest:
             raise ValueError(f"request changed for resumed item {row['id']}")
     done = {record["id"] for record in existing}
@@ -134,7 +135,7 @@ def main() -> None:
         for i, row in enumerate(rows, 1):
             if row["id"] in done:
                 continue
-            record = evaluate(row, args.url, args.timeout)
+            record = evaluate(row, args.url, args.timeout, args.model_name)
             handle.write(json.dumps(record, ensure_ascii=False, allow_nan=False) + "\n")
             handle.flush()
             if i % 10 == 0 or i == len(rows):
